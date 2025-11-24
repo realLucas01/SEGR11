@@ -1,0 +1,38 @@
+
+Treffen am 24.11.2025
+
+Ort:      Mensa Matrix
+Beginn:   11:20 Uhr +
+Ende:     11:45 Uhr
+
+__Schriftführer:__
+Luca
+
+*Nächstes Treffen:* +
+
+__Teilnehmer:__
+
+- Marc
+- Domenik
+- Lucas
+- Luca
+
+== Bemerkungen
+Aufgabenverteilung
+
+|===
+|Aufgabe |Bearbeitender |Bemerkung
+|Lastenheft     |Lucas, Marc      |-
+|Firmen Portrait	| Luca		|-
+|Ausschreibung|	Domenik		|-
+|Tabellarischer Vergleich von Software(Aufgabe 4) | Long	| dies muss nicht bis zum 12.12 fertig sein    
+|===
+
+Für die Be- und Verarbeitung wird Gitlab, mitsamt der Integrierten Systeme: Tickets und Merge Requests verwendet.
+Hierbei ist es ratsam eine Anwendung für Git mit einer graphischen Oberfläche zu verwenden, z.B. GitHub Desktop.
+
+=== Aufgabenstellung
+Eine Spielesammlung, beginnend mit 4 gewinnt. Sollte der Aufwand nicht ausreichend sein, können zu einem späteren Zeitpunkt weitere Spiele hinzugefügt werden, wie Dame, TikTakTo, Sudoku, Three Cards Poker,...
+
+=== Kunde
+Eine Fluggesellschaft sucht ein Unternehmen um für ihre Maschinen eine interne IFE(Interflight Entertainment) Softwareplattform zu entwickeln.  
