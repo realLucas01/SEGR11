@@ -1,16 +1,17 @@
-== Gründungsjahr: 
+## Gründungsjahr: 
     2012
 
-== Gründer:
+
+## Gründer:
     Daniel Fischer: Informatiker, spezialisiert auf verteilte Systeme 
     Maya Lopez: Elektrotechnikerin, Schwerpunkt Embedded Avionik
     Lea Wagner: UX Spezialistin für multimodale Interfaces
 
-== Geschäftsführung:
+## Geschäftsführung:
     Maya Lopez, CEO
     Jens Obermann, CFO seit 2020
 
-== Mitarbeiter:
+## Mitarbeiter:
     71 Mitarbeiter aufgeteilt in:
     28 Software-, Hardware- und Systemintegration
     13 Kunden- und Technischersupport
@@ -18,12 +19,12 @@
     10 Geschäfts- und Verfaltungsfunktionen
     13 Betriebliche Infrastruktur und Qualitätssicherung
 
-== Firmensitz und weitere Standorte:
+## Firmensitz und weitere Standorte:
     Hauptsitz: Dresden
     Kundensupport: Frankfurt am Main
     Remote Teams: EU weit
 
-== wichtige Meilensteine:
+## wichtige Meilensteine:
     2013: Aufbau der ersten internen IFE Softwareplattform
     2014: Etablierung DO 178C konformer Entwicklungsprozesse
     2015: Kooperation mit Panasonic Avionics für Schnittstellenentwicklung
@@ -33,21 +34,21 @@
     2020: Pilotprojekt mit Elbe Flugzeugwerke für Wireless IFE
     2023: Erste Serienauslieferung des neuen Entertainment Framework für Mittelstreckenflotten
 
-== bedeutende Kooperation mit anderen Unternehmen:
+## bedeutende Kooperation mit anderen Unternehmen:
     Panasonic Avionics Corporation
     Thales InFlyt Experience AG
     Lufthansa Technik AG
     Elbe Flugzeugwerke GmbH
 
-== wichtige Kunden:
+## wichtige Kunden:
     Lufthansa AG
     Lufthansa Technik AG
     Scandinavian Airlines AG
 
-== Unternehmens Philosophie:
+## Unternehmens Philosophie:
     Wir entwickeln Unterhaltung, die die Flugzeit leichter, angenehmer und unterhaltsamer machen. Unsere Lösungen kombinieren robuste, luftfahrttaugliche Technologie mit intuitiver Bedienung und hochwertigen Inhalten. Somit können sich Passagiere entspannen, ablenken oder inspirieren lassen, egal wie lang oder wohin sie reisen.
 
-== Auszeichnugnen und Nominierungen:
+## Auszeichnugnen und Nominierungen:
     2015 Top 100 Innovator Award
     2016 Finalisten Lufthansa Technik EXPO Innovation Showcase Awards, ("Hands on Innovation")
     2019 Red Dot Award: Design Concept (Auszeichnungen)
