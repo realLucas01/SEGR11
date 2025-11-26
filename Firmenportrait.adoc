@@ -26,7 +26,7 @@
 == wichtige Meilensteine:
     2013: Aufbau der ersten internen IFE Softwareplattform
     2014: Etablierung DO 178C konformer Entwicklungsprozesse
-    2015: Kooperation mit Panaconic Avionics für Schnittstellenentwicklung
+    2015: Kooperation mit Panasonic Avionics für Schnittstellenentwicklung
     2017: Softwarekomponenten erfolgreich für Airbus A320 Familie adaptiert
     2018: Einführung eines modulbasierten Gamification Frameworks für Inflight Entertainment
     2019: Zusammenarbeit mit Lufthansa Technik für MRO- nahe Integrationstests
