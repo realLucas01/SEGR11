@@ -12,7 +12,7 @@ Maya Lopez, CEO
 Jens Obermann, CFO seit 2020
 
 ## Mitarbeiter 
-**71 Mitarbeiter aufgeteilt in **    
+**71 Mitarbeiter aufgeteilt in**    
 28 Software-, Hardware- und Systemintegration  
 13 Kunden- und Technischersupport  
 7  Produktmanagment und Design  
