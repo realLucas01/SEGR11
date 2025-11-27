@@ -1,3 +1,5 @@
+## Novaris Cabin Systems
+
 ## Gründungsjahr  
 2012
 
@@ -53,3 +55,4 @@ Wir entwickeln Unterhaltung, die die Flugzeit leichter, angenehmer und unterhalt
 2016 Finalisten Lufthansa Technik EXPO Innovation Showcase Awards, ("Hands on Innovation")  
 2019 Red Dot Award  Design Concept (Auszeichnungen)  
 2023 European Technology Award, ("Digital Transformation")  
+
