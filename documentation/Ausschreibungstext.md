@@ -1,10 +1,12 @@
-# Kommerzielles Angebotsdokument zur offentlichen Ausschreibung
+# Kommerzielles Angebotsdokument zur öffentlichen Ausschreibung
+Veröffentlichungsdatum: 10.12.2025
+---
 
 ## Produktüberblick
 Das **Inflight „4-Connect System“** ermöglicht Passagieren, während des Fluges das Spiel „4 Gewinnt“ lokal auf ihren Sitzmonitoren gegen ihre Sitznachbarn zu spielen. Die Prototyp-Software integriert sich nahtlos in bestehende Inflight-Entertainment-Systeme (Panasonic, Thales, Wireless IFE).
 
 ## Art der Vergabe (§ 3 VOL/A):
-Öffentliche Ausschreibung.
+- Öffentliche Ausschreibung.
 
 ## Angebote können abgegeben werden in:
 - schriftlicher Form (Unterzeichnet)
@@ -15,25 +17,26 @@ Das **Inflight „4-Connect System“** ermöglicht Passagieren, während des Fl
 - Keine Losweise vergabe.
 - Teilangebote sind nicht zulässig.
 
-## Leistungsumfang
+## Leistungsumfang:
 - Bereitstellung der funktionsreifen Software
 - Anpassbares UI/Branding für Airline-CI (Farbabstimmung, Logo)
 - Optional: zusätzliche Spiele
 
-## Technische Merkmale
+## Technische Merkmale:
 - DO-178C-konforme Entwicklungsprozesse
 - Keine Interaktion mit sicherheitsrelevanten Avioniksystemen
 - Kompatibel mit marktüblichen IFE-Schnittstellen (Keine zusätzliche Hardware nötig)
+- CPV-Code: 48980000-5 (Softwarepaket für multimediale Anwendungen)
 
-## Kostenmodell
+## Kostenmodell:
 - Einmalkosten: Integration, Branding, Tests
 - Laufende Kosten: Royalty
 - Support: SLA-Modelle mit unterschiedlichen Reaktionszeiten (wird individuell festgelegt)
 
-## Projektzeitraum
+## Projektzeitraum:
 - 8–16 Wochen für Integration, Testbetrieb und Abnahme
 
-## Vertragsrahmen
+## Vertragsrahmen:
 - Vertragssprache: Deutsch
 - Währung: Euro € (EUR)
 - Gerichtsstand: Dresden
@@ -43,7 +46,7 @@ Das **Inflight „4-Connect System“** ermöglicht Passagieren, während des Fl
 - Ausschlüsse: Leistungen außerhalb des definierten Leistungsumfangs sind nicht Bestandteil des Angebots und werden gesondert angeboten.
 
 ## Verfahrensfristen:
-- Angebotsfrist: bis 01.07.2026 (unvollständige oder verspätet Angebote können nicht berücksichtigt werden)
+- Angebotsfrist: bis 01.03.2026 (unvollständige oder verspätet Angebote können nicht berücksichtigt werden)
 - Bindefrist: 60 Tage nach Angebotseingang
 - Zuschlagsfrist: 60 Tage nach ablauf der Bindefrist
   
@@ -52,15 +55,15 @@ Das **Inflight „4-Connect System“** ermöglicht Passagieren, während des Fl
 - 70% bei Abnahme
 - diese sind binnen 30 Tagen zu zahlen
 
-## Referenzen & Auszeichnungen
+## Referenzen & Auszeichnungen:
 - Kunden: Lufthansa, Scandinavian Airlines
 - Kooperationen: Panasonic Avionics, Thales, Lufthansa Technik  
 - Awards: Top 100 Innovator, Red Dot Award, European Technology Award
 
 ## Unterlagen zur Eignungsprüfung:
-1. Nachweis der Leistungsfähigkeit des Unternehmens in Form von Prospekten, Mustern, Fotografien, Zeichnungen usw. für die zu erbringende Leistung in deutscher Sprache,
-2. Referenzen über die mit Buchstabe d) vergleichbaren Leistungen,
-3. aktuelle Erklärungen über die Zahlung von Steuern, Bonitätsnachweis, Abgaben und Beiträgen zur gesetzlichen Sozialversicherung (Unbedenklichkeitserklärung)
+- Nachweis der Leistungsfähigkeit des Unternehmens in Form von Prospekten, Mustern, Fotografien, Zeichnungen usw. für die zu erbringende Leistung in deutscher Sprache,
+- Referenzen über die mit Buchstabe d) vergleichbaren Leistungen,
+- aktuelle Erklärungen über die Zahlung von Steuern, Bonitätsnachweis, Abgaben und Beiträgen zur gesetzlichen Sozialversicherung (Unbedenklichkeitserklärung)
 
 
 ---
