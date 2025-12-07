@@ -27,9 +27,17 @@ Friedrich-List-Platz 1, 01069 Dresden
    - [Technische Einschränkungen](#53-technische-einschränkungen)
    - [Projektplan und Projektmanagement](#54-projektplan-und-projektmanagement)
    - [Angebotserstellung](#55-angebotserstellung)
-7. [Anforderungen](#6-anforderungen)  
-8. [Lieferumfang](#7-lieferumfang)  
-9. [Glossar](#8-glossar)  
+6. [Anforderungen](#6-anforderungen)
+7. [Lieferumfang](#7-lieferumfang)
+   - [Prototyp](#71-prototyp)
+   - [Release](#72-release)
+   - [Wiederverwendbare Komponenten](#73-wiederverwendbare-komponenten)
+   - [Funktionstest](#74-funktionstest)
+   - [Inbetriebnahme und Abnahme](#75-inbetriebnahme-und-abnahme)
+   - [Schulung](#76-schulung)
+   - [Support und Wartung](#77-support-und-wartung)
+   - [Dokumentation](#78-dokumentation)
+8. [Glossar](#8-glossar)  
 
 ---
 
@@ -151,17 +159,41 @@ Das Angebot dient als Grundlage für die Beauftragung und die anschließende Ums
 ---
 
 ## 7 Lieferumfang
-- Prototyp  
-- Beta-Version  
-- Release (inkl. Repository)  
-- Wiederverwendbare Komponenten  
-- Funktionstest  
-- Inbetriebnahme, Abnahme  
-- Monitoring  
-- Schulung  
-- Support  
-- Wartung  
-- Anwender- und Entwicklerdokumentation  
+
+### 7.1 Prototyp
+Im Rahmen des Prototyps wird die grundlegende Menüführung einschließlich Sprachunterstützung und Designkonzept implementiert. Das erste Spiel („4 Gewinnt“) wird in einem statischen Ausgangszustand bereitgestellt, jedoch ohne funktionale Spiellogik. Ziel des Prototyps ist die Überprüfung der Navigationsstruktur, der Bedienbarkeit sowie des visuellen Auftretens.
+
+### 7.2 Release
+Das finale Release umfasst die vollständig implementierte Softwareversion inklusive aller vereinbarten Funktionen.
+Zum Lieferumfang gehört ein versioniertes Repository mit Quellcode, Build-Anweisungen, Konfigurationsdateien sowie sämtlichen für den Betrieb erforderlichen Ressourcen. Die Bereitstellung erfolgt in einer für die bestehende IFE-Hardware lauffähigen Form.
+
+### 7.3 Wiederverwendbare Komponenten
+Die Menüführung wird modular aufgebaut, sodass sie für zukünftige Spiele innerhalb des IFE-Systems wiederverwendet werden kann. Dies beinhaltet insbesondere Navigationselemente, UI-Komponenten, Sprachlogik und Layoutstrukturen.
+
+### 7.4 Funktionstest
+Vor Abschluss des Projekts wird ein Funktionstest durchgeführt, der folgende Punkte umfasst:
+- Prüfung aller implementierten Funktionen gemäß Anforderungen des Lastenhefts
+- Validierung der Kompatibilität mit der bestehenden IFE-Hardware
+- Test der Benutzerführung und Bedienbarkeit
+- Erstellung einer Testdokumentation einschließlich Fehlerprotokollen
+
+### 7.5 Inbetriebnahme und Abnahme
+Die Inbetriebnahme erfolgt auf der vorgesehenen IFE-Hardware unter Begleitung des Auftragnehmers.
+Die Abnahme erfolgt durch den Auftraggeber anhand der in diesem Lastenheft definierten Kriterien. Identifizierte Abweichungen werden dokumentiert und in enger Abstimmung nachbearbeitet.
+
+### 7.6 Schulung
+Sollte eine Schulung erforderlich sein, wird der Auftragnehmer eine entsprechende Einweisung für das zuständige Personal durchführen. Diese kann sowohl die Bedienung als auch technische Grundlagen oder Administrationsaufgaben umfassen.
+
+### 7.7 Support und Wartung
+Der Auftragnehmer verpflichtet sich Support- und Wartungsleistungen bereitzustellen. Dazu gehören Fehlerbehebungen, kleinere Anpassungen und nötige Performanceoptimierungen unmittelbar nach Release/Deployment.
+
+### 7.8 Dokumentation
+Der Auftragnehmer liefert eine Anwenderdokumentation sowie eine technische Entwicklerdokumentation.
+Diese beinhalten insbesondere:
+- Beschreibung der Menüführung und Bedienlogik
+- Hinweise zur Integration zusätzlicher Spiele
+- technische Schnittstellen- und Architekturinformationen
+- Anleitungen zu Build-, Test- und Deployment-Prozessen
 
 ---
 
