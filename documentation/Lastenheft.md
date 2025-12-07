@@ -21,10 +21,15 @@ Friedrich-List-Platz 1, 01069 Dresden
    - [Produktumgebung](#43-produktumgebung)  
    - [Schnittstellen](#44-schnittstellen)  
    - [Benutzerschnittstelle](#45-benutzerschnittstelle)  
-5. [Projektbedingungen](#5-projektbedingungen)  
-6. [Anforderungen](#6-anforderungen)  
-7. [Lieferumfang](#7-lieferumfang)  
-8. [Glossar](#8-glossar)  
+5. [Projektbedingungen](#5-projektbedingungen)
+   - [Zeitlicher Rahmen](#51-rahmen)
+   - [Auftragswert](#52-auftragswert)
+   - [Technische Einschränkungen](#53-einschraenkungen)
+   - [Projektplan und Projektmanagement](#54-plan_und_management)
+   - [Angebotserstellung](#55-angebot)
+7. [Anforderungen](#6-anforderungen)  
+8. [Lieferumfang](#7-lieferumfang)  
+9. [Glossar](#8-glossar)  
 
 ---
 
@@ -80,19 +85,49 @@ Ausgabe in englischer Sprache. Spätere Erweiterung möglich.
 ## 5 Projektbedingungen
 
 ### 5.1 Zeitlicher Rahmen
-Die Leistung ist bis zum Beginn des WS2019/20 zu erbringen.
+Die geforderte Lestung ist innerhalb einer Gesamtdauer von 12 Wochen zu erbringen. Innerhalb dieses Zeitraums sind sämtliche Projektphasen – Analyse, Konzeption, Implementierung, Integration, Test sowie Abnahme – durchzuführen.
+
+Nach 8 Wochen ist ein funktionsfähiger Prototyp bereitzustellen, der dem Auftraggeber im Rahmen eines Abstimmungsmeetings vorgestellt wird. Der detaillierte Meilensteinplan wird im Zuge der Projektinitialisierung finalisiert und bedarf der gemeinsamen Abstimmung zwischen Auftraggeber und Auftragnehmer.
 
 ### 5.2 Auftragswert
-Maximal 100.000 Euro.
+Der maximale Auftragswert für die Umsetzung des Projekts beträgt 130.000 €. Dieser Betrag umfasst sämtliche projektbezogenen Leistungen, einschließlich Planung, Entwicklung, Qualitätssicherung, Dokumentation, Schulung (falls erforderlich) sowie projektbegleitende Managementaufwände. Eine Überschreitung des festgelegten Auftragswertes ist ausgeschlossen, sofern keine zusätzlichen, schriftlich freigegebenen Leistungsumfänge durch den Auftraggeber beauftragt werden.
 
 ### 5.3 Technische Einschränkungen
-Nutzung der Laborarbeitsplätze.
+Die im Rahmen des Projekts zu entwickelnde Software hat den technischen und betrieblichen Rahmenbedingungen des bestehenden Inflight-Entertainment-Systems zu entsprechen. Hierzu zählen insbesondere:
+
+- Kompatibilität mit der vorhandenen IFE-Hardware und den eingesetzten Betriebssystemen
+- Ressourceneffizienz hinsichtlich Speicherbedarf, Prozessorlast und Energieverbrauch
+- Offline-Funktionalität, da während des Flugbetriebs keine stabile Internetverbindung gewährleistet werden kann
+- Einhaltung sicherheitsrelevanter Vorgaben, Richtlinien und Zertifizierungsanforderungen gemäß IFE- und luftfahrtspezifischen Standards
+- Konformität mit bestehenden UI/UX-Richtlinien sowie der Designarchitektur des IFE-Systems
+- Unterstützung mehrerer Sprachen entsprechend der internationalen Ausrichtung des Systems
+
+Um die fachgerechte Umsetzung der oben genannten Punkte sicherzustellen wird vom Auftraggeber ein Dev-Kit zur Verfügung gestellt.
+
+Weitere technische Rahmenbedingungen können im Zuge der detaillierten Anforderungsabstimmung präzisiert werden.
 
 ### 5.4 Projektplan und Projektmanagement
-Vorgehensmodell und Projektplan sind mit dem Auftraggeber abzustimmen.
+Der Auftragnehmer verpflichtet sich zur Erstellung eines strukturierten Projektplans, der alle wesentlichen Phasen und Meilensteine beschreibt. Das anzuwendende Vorgehensmodell (z. B. klassisch, hybrid oder agil) wird zu Projektbeginn gemeinsam mit dem Auftraggeber verbindlich festgelegt.
+
+Das Projektmanagement umfasst insbesondere:
+- regelmäßige Statusberichte sowie Dokumentation relevanter Arbeitspakete und Änderungen
+
+- Identifikation und Bewertung projektrelevanter Risiken sowie Umsetzung geeigneter Gegenmaßnahmen
+
+- kontinuierliche Qualitätssicherungsmaßnahmen über alle Projektphasen hinweg
+
+- transparente Kommunikation über Abweichungen hinsichtlich Zeit, Kosten oder Qualität
+
+Ziel ist eine strukturierte, nachvollziehbare und planbare Projektdurchführung.
 
 ### 5.5 Angebotserstellung
-Mit dem Angebot ist eine Kalkulation einzureichen.
+Auf Grundlage der in diesem Lastenheft definierten Anforderungen erstellt der Auftragnehmer ein verbindliches Angebot. Dieses enthält:
+- eine detaillierte Leistungsbeschreibung
+- eine Aufschlüsselung der Kosten im Rahmen des maximalen Auftragswerts
+- Angaben zur geplanten Projektdauer entsprechend des vereinbarten Zeitrahmens
+- Darstellung der Zahlungsbedingungen und vertraglichen Modalitäten
+
+Das Angebot dient als Grundlage für die Beauftragung und die anschließende Umsetzung des Projekts.
 
 ---
 
