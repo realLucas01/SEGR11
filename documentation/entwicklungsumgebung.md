@@ -1,15 +1,5 @@
-## Versionierung – Vergleich
 
-| Kriterium                 | Git                                      | Mercurial (hg)                          | Subversion (SVN)                          |
-|---------------------------|------------------------------------------|-----------------------------------------|-------------------------------------------|
-| Kosten / Lizenz           | kostenlos, Open Source                   | kostenlos, Open Source                  | kostenlos, Open Source                    |
-| Integration mit GitLab    | **sehr gut**, direkt unterstützt         | nur über Umwege/Bridges                 | nur über Spiegel-Repos                    |
-| Einarbeitungsaufwand      | mittel (Branches, Merge, etc.)           | etwas einfacher als Git                 | einfach, aber weniger flexibel            |
-| Offline-Arbeit            | vollständig möglich                      | vollständig möglich                     | eingeschränkt (zentrales Repo nötig)      |
-| Eignung für Studium       | **sehr gut**, viele Beispiele/Tutorials  | okay, aber wenig Material               | eher nur für Legacy-Szenarien             |
-| Eignung für unser Projekt | **empfohlen**                            | nicht notwendig                         | eher ungeeignet                           |
-
-## Versionierung – Vergleich
+## Versionierung –
 
 | Kriterium                 | Git                                      | Mercurial (hg)                          | Subversion (SVN)                          |
 |---------------------------|------------------------------------------|-----------------------------------------|-------------------------------------------|
@@ -23,7 +13,7 @@
 | Eignung für unser Projekt | **empfohlen**                            | nicht notwendig                         | eher ungeeignet                           |
 
 
-### UML-Tool – Vergleich
+### UML-Tool 
 
 | Kriterium                    | Papyrus (Eclipse-Plugin)                  | Visual Paradigm Community Edition       | StarUML                            |
 |-----------------------------|-------------------------------------------|-----------------------------------------|------------------------------------|
@@ -36,7 +26,7 @@
 | Eignung für Laborrechner    | Sehr gut, da Eclipse meist schon installiert ist | Muss extra installiert werden          | Muss extra installiert werden      |
 | Eignung für unser Projekt   | **empfohlen**                             | geeignet, aber Lizenz & Overkill       | eher ungeeignet                    |
 
-## Build-Tool – Vergleich
+## Build-Tool 
 
 | Kriterium                    | Maven                                      | Gradle                                     | Ant                                     |
 |-----------------------------|--------------------------------------------|-------------------------------------------|-----------------------------------------|
