@@ -48,45 +48,92 @@ Ziel dieses Projekts ist es, den Passagieren ein attraktives, intuitives und abw
 
 Dieses Lastenheft beschreibt aus Sicht des Auftraggebers die grundlegenden Anforderungen, Erwartungen und Rahmenbedingungen, die für die Planung, Entwicklung und Implementierung der neuen Spiele-Sektion maßgeblich sind. Es bildet damit die verbindliche Grundlage für die anschließende Erstellung des Pflichtenhefts durch den Auftragnehmer.
 
+---
+
 ## 2 Ausgangssituation (Ist-Zustand)
-Derzeit existiert kein exemplarisches System [...].
+Das bestehende Inflight-Entertainment-System (IFE) des Auftraggebers Novaris Cabin Systems bietet Passagieren bisher nur klassische Medieninhalte wie Filme, Musik und Informationsseiten. Interaktive Spiele sind zwar vorgesehen, jedoch fehlt bislang ein eigenes, integriertes Multiplayer-Minispiel.
+
+Im Rahmen der öffentlichen Ausschreibung wurde der Bedarf an einer modernen, leicht verständlichen und stabilen Spielapplikation identifiziert, die ohne Netzwerkverbindung auf Sitzmonitoren genutzt werden kann. 
+Das in der Ausschreibung spezifizierte „4-Connect System“ soll diese Lücke schließen und Passagieren ermöglichen, während des Fluges ein unterhaltsames 4-Gewinnt-Spiel zu nutzen. Die Anwendung muss dabei zuverlässig funktionieren, CI-anpassbar sein und sich nahtlos in bestehende IFE-Infrastrukturen integrieren lassen.  
+
+Aktuell existiert jedoch kein funktionsfähiger Prototyp, keine spezifische technische Implementierung und keine dokumentierten Anforderungen für ein solches System. Dieses Lastenheft definiert daher erstmals die fachlichen Rahmenbedingungen für die anschließende technische Umsetzung.
+  
+---
 
 ## 3 Soll-Konzept
 
 ### 3.1 Anwendungsbereich
-Das System hat nur beispielhaften Charakter [...].
+Das System dient der passagierseitigen Unterhaltung während des Fluges.  
+Es wird als Applikation innerhalb des bestehenden Inflight-Entertainment-Systems ausgeführt und ist vollständig offline nutzbar. Die Anwendung soll auf allen Sitzmonitoren lauffähig sein, unabhängig von Netzwerk- oder Flugzeugtyp.
 
 ### 3.2 Systemidee
-Eine einfache Java-Konsolenanwendung [...].
+Die Idee des Systems besteht darin, ein digitales 4-Gewinnt-Spiel („4-Connect“) bereitzustellen, das sowohl Passagier-gegen-Passagier (abwechselnde Eingabe am selben Monitor) als auch optional Passagier-gegen-KI unterstützt.
+
+Die Anwendung wird über Touch- oder Tastensteuerung bedient, benötigt nur geringe Ressourcen und lässt sich optisch an die Corporate Identity verschiedener Airlines anpassen (z. B. Farben, Logo, UI-Elemente).  
+Dies entspricht den in der Ausschreibung definierten Anforderungen an Branding-Fähigkeit und Plattformkompatibilität.  
 
 ### 3.3 Ziele
-Der Softwareentwicklungsprozess soll anhand des Systems veranschaulicht werden.
+- Bereitstellung eines leicht verständlichen, intuitiven Unterhaltungsspiels  
+- Erhöhung des Nutzungskomforts und der Attraktivität des IFE-Systems  
+- Minimale Integrationsanforderungen für Airlines  
+- Hohe Stabilität und zuverlässige Funktion im Offline-Betrieb  
+- Möglichkeit zur CI-Anpassung für Airline-Branding  
+- Grundlage schaffen für zukünftige Erweiterungen (weitere Spiele)
 
 ### 3.4 Zielgruppen
-| Anforderungsbeitragende | Anforderungen |
-|-------------------------|---------------|
-| Studierende | Der Softwareentwicklungsprozess soll veranschaulicht werden. |
-| Nutzer | Ausgabe „hello world“, Exit-Code, Hilfetext. |
-| Hochschulmitarbeiter | Analyse objektorientiert, UML2, Java-Implementierung. |
+| Anforderungsbeitragende | Anforderungen / Interessen |
+|-------------------------|----------------------------|
+| **Passagiere** | Einfach bedienbares, unterhaltsames Spiel während des Flugs |
+| **Airlines** | CI-Anpassbarkeit, Stabilität, Integration ohne Hardwareänderungen |
+| **Novaris Cabin Systems** | Erweiterung des IFE-Portfolios, Mehrwert für Kunden |
+| **Technik- & Integrationspartner** | Kompatibilität mit IFE-Schnittstellen (Panasonic, Thales, Wireless IFE) |
+| **Entwicklerteam** | Klare Anforderungen für Implementierung und Test |
 
 ---
 
 ## 4 Projektgegenstand
 
 ### 4.1 Problemdomäne
-Das Projekt ist selbstreferenziell [...].
+Das Projekt bewegt sich im Bereich der digitalen Bordunterhaltung.  
+Passagiere verbringen oft mehrere Stunden ohne stabile Internetverbindung und benötigen leicht zugängliche, ressourcenschonende Entertainment-Angebote.  
+4-Gewinnt ist als einfaches, bekanntes Spiel optimal geeignet, um ohne Erklärungsaufwand genutzt zu werden.
+
+Die Applikation ist ausschließlich im Non-Safety-Bereich angesiedelt und besitzt keinerlei Verbindung zu avionischen Systemen.  
+Dies entspricht den sicherheitstechnischen Anforderungen der Airline-Industrie.  
 
 ### 4.2 Prozesse
-Der Prozess des Software Engineerings soll veranschaulicht werden.
+Die Software unterstützt keine geschäftlichen oder betrieblichen Prozesse, sondern dient ausschließlich der Unterhaltung.  
+Jedoch muss ihre Entwicklung bestimmten aviation-üblichen Qualitätsstandards entsprechen (z. B. stabiler Betrieb, definiertes Fehlerverhalten).
+
+Im Hintergrund laufen klassische SE-Prozesse:
+- Analyse  
+- Design  
+- Implementierung  
+- Integration in IFE-Umgebung  
+- Test und Validierung  
 
 ### 4.3 Produktumgebung
-Java-Konsolenanwendung, Ausführung auf Laborrechnern [...].
+- Ausführung auf IFE-Sitzmonitoren verschiedener Hersteller  
+- Eingabe über Touchscreen oder physische Bedienelemente  
+- Keine Internetverbindung erforderlich  
+- Ressourcenbegrenzte Umgebung (begrenzter RAM/CPU)  
+- UI muss Airline-CI-tauglich sein  
+- Kompatibilität mit marktüblichen IFE-Systemen: Panasonic, Thales, Wireless IFE  
 
 ### 4.4 Schnittstellen
-Keine Schnittstellen zu Drittanbietern. Keine Datenspeicherung.
+- **IFE-Launcher API**: Starten und Beenden der Anwendung  
+- **Ressourcen-/UI-Framework API** der jeweiligen Plattform  
+- **Logging API** (non-critical)  
+- Keine externen Netzwerk- oder Datenbankschnittstellen  
+- Keine Anbindung an sicherheitsrelevante Avioniksysteme  
 
 ### 4.5 Benutzerschnittstelle
-Ausgabe in englischer Sprache. Spätere Erweiterung möglich.
+- 2D-Spielbrett (7×6 Raster)  
+- Touch-/Tastenbedienung  
+- Menüstruktur (Start, Spielmodi, Hilfe, Neustart)  
+- Klare Farbgebung, hoher Kontrast  
+- Optische CI-Anpassung je Airline (Logo, Farben)  
+- Optionale Anzeige der Spielregeln  
 
 ---
 
@@ -144,17 +191,31 @@ Das Angebot dient als Grundlage für die Beauftragung und die anschließende Ums
 ### 6.1 Funktionale Anforderungen
 | ID | Beschreibung |
 |----|--------------|
-| F1 | Ausgabe von „hello world“. |
-| F2 | Ausgabe eines Hilfetextes. |
+| F1 | Das System stellt ein Startmenü mit Modusauswahl bereit. |
+| F2 | Ein 7×6-Spielbrett wird dargestellt. |
+| F3 | Passagiere können abwechselnd Spielsteine setzen (PvP). |
+| F4 | Das System erkennt Gewinne (horizontal, vertikal, diagonal). |
+| F5 | Das System erkennt ein Unentschieden bei vollem Spielfeld. |
+| F6 | Ein einfaches KI-Gegnerverhalten kann aktiviert werden (optional). |
+| F7 | Ein Hilfebildschirm zeigt Regeln und Steuerung. |
+| F8 | Spielneustart ist jederzeit möglich. |
+| F9 | Die Applikation kehrt korrekt zum IFE-Hauptmenü zurück. |
+| F10 | Das System unterstützt Airline-Branding (anpassbare UI-Assets). |
+| F11 | Die Anwendung funktioniert vollständig offline. |
 
 ### 6.2 Nicht-funktionale Anforderungen
-| ID | Beschreibung |
-|----|--------------|
-| NF1 | Nutzung in der Konsole. |
-| NF2 | Ausgabe erfolgt unmittelbar. |
-| NF3 | Internationale Ausgabe vorgesehen. |
-| NF4 | Keine Sicherheitsanforderungen. |
-| NF5 | Keine Normanforderungen. |
+| ID | Kategorie | Beschreibung |
+|----|-----------|--------------|
+| NF1 | Performance | Reaktionszeit unter 150 ms pro Eingabe |
+| NF2 | Stabilität | Kein Absturz, auch bei schneller Eingabe |
+| NF3 | Ressourcen | Speicherverbrauch und CPU-Last müssen gering bleiben |
+| NF4 | Usability | Große Touchflächen, intuitive Bedienung |
+| NF5 | Internationalisierung | Englische UI als Standard, weitere Sprachen optional |
+| NF6 | Sicherheit | Keine Speicherung personenbezogener Daten |
+| NF7 | Kompatibilität | Funktion auf marktüblichen IFE-Systemen |
+| NF8 | Branding | Austauschbare UI-Assets gemäß Airline-CI |
+| NF9 | Barrierearmut | Ausreichende Farbkontraste, klare Hervorhebungen |
+| NF10 | Offline-Betrieb | Keine Netzwerkverbindung erforderlich |
 
 ---
 
