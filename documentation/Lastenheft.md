@@ -93,12 +93,12 @@ Ausgabe in englischer Sprache. Spätere Erweiterung möglich.
 ## 5 Projektbedingungen
 
 ### 5.1 Zeitlicher Rahmen
-Die geforderte Lestung ist innerhalb einer Gesamtdauer von 12 Wochen zu erbringen. Innerhalb dieses Zeitraums sind sämtliche Projektphasen – Analyse, Konzeption, Implementierung, Integration, Test sowie Abnahme – durchzuführen.
+Die geforderte Leistung ist innerhalb einer Gesamtdauer von 12 Wochen zu erbringen. Innerhalb dieses Zeitraums sind sämtliche Projektphasen – Analyse, Konzeption, Implementierung, Integration, Test sowie Abnahme – durchzuführen.
 
 Nach 8 Wochen ist ein funktionsfähiger Prototyp bereitzustellen, der dem Auftraggeber im Rahmen eines Abstimmungsmeetings vorgestellt wird. Der detaillierte Meilensteinplan wird im Zuge der Projektinitialisierung finalisiert und bedarf der gemeinsamen Abstimmung zwischen Auftraggeber und Auftragnehmer.
 
 ### 5.2 Auftragswert
-Der maximale Auftragswert für die Umsetzung des Projekts beträgt 130.000 €. Dieser Betrag umfasst sämtliche projektbezogenen Leistungen, einschließlich Planung, Entwicklung, Qualitätssicherung, Dokumentation, Schulung (falls erforderlich) sowie projektbegleitende Managementaufwände. Eine Überschreitung des festgelegten Auftragswertes ist ausgeschlossen, sofern keine zusätzlichen, schriftlich freigegebenen Leistungsumfänge durch den Auftraggeber beauftragt werden.
+Der maximale Auftragswert für die Umsetzung des Projekts beträgt 200.000 €. Dieser Betrag umfasst sämtliche projektbezogenen Leistungen, einschließlich Planung, Entwicklung, Qualitätssicherung, Dokumentation, Schulung (falls erforderlich) sowie projektbegleitende Managementaufwände. Eine Überschreitung des festgelegten Auftragswertes ist ausgeschlossen, sofern keine zusätzlichen, schriftlich freigegebenen Leistungsumfänge durch den Auftraggeber beauftragt werden.
 
 ### 5.3 Technische Einschränkungen
 Die im Rahmen des Projekts zu entwickelnde Software hat den technischen und betrieblichen Rahmenbedingungen des bestehenden Inflight-Entertainment-Systems zu entsprechen. Hierzu zählen insbesondere:
@@ -161,7 +161,7 @@ Das Angebot dient als Grundlage für die Beauftragung und die anschließende Ums
 ## 7 Lieferumfang
 
 ### 7.1 Prototyp
-Im Rahmen des Prototyps wird die grundlegende Menüführung einschließlich Sprachunterstützung und Designkonzept implementiert. Das erste Spiel („4 Gewinnt“) wird in einem statischen Ausgangszustand bereitgestellt, jedoch ohne funktionale Spiellogik. Ziel des Prototyps ist die Überprüfung der Navigationsstruktur, der Bedienbarkeit sowie des visuellen Auftretens.
+Im Rahmen des Prototyps wird die grundlegende Menüführung einschließlich unterstützung mehrer Sprachen und das Designkonzept implementiert. Das erste Spiel („4 Gewinnt“) wird in einem statischen Ausgangszustand bereitgestellt, jedoch ohne funktionale Spiellogik. Ziel des Prototyps ist die Überprüfung der Navigationsstruktur, der Bedienbarkeit sowie des visuellen Auftretens.
 
 ### 7.2 Release
 Das finale Release umfasst die vollständig implementierte Softwareversion inklusive aller vereinbarten Funktionen.
