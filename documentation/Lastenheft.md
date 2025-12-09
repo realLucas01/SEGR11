@@ -45,6 +45,7 @@ Friedrich-List-Platz 1, 01069 Dresden
 Um den steigenden Ansprüchen der Passagiere an moderne Bordunterhaltung gerecht zu werden, soll das bestehende Inflight-Entertainment-System (IFE) unseres Unternehmens um eine eigene Spiele-Sektion erweitert werden. Der Markt zeigt deutlich, dass interaktive Inhalte zunehmend an Bedeutung gewinnen und einen wesentlichen Beitrag zur Verbesserung des Reiseerlebnisses leisten.
 
 Ziel dieses Projekts ist es, den Passagieren ein attraktives, intuitives und abwechslungsreiches Spieleangebot bereitzustellen, das sowohl technisch zuverlässig funktioniert als auch optimal in die bestehende IFE-Umgebung integriert werden kann.
+--Satz trennen.
 
 Dieses Lastenheft beschreibt aus Sicht des Auftraggebers die grundlegenden Anforderungen, Erwartungen und Rahmenbedingungen, die für die Planung, Entwicklung und Implementierung der neuen Spiele-Sektion maßgeblich sind. Es bildet damit die verbindliche Grundlage für die anschließende Erstellung des Pflichtenhefts durch den Auftragnehmer.
 
@@ -98,7 +99,7 @@ Die geforderte Leistung ist innerhalb einer Gesamtdauer von 12 Wochen zu erbring
 Nach 8 Wochen ist ein funktionsfähiger Prototyp bereitzustellen, der dem Auftraggeber im Rahmen eines Abstimmungsmeetings vorgestellt wird. Der detaillierte Meilensteinplan wird im Zuge der Projektinitialisierung finalisiert und bedarf der gemeinsamen Abstimmung zwischen Auftraggeber und Auftragnehmer.
 
 ### 5.2 Auftragswert
-Der maximale Auftragswert für die Umsetzung des Projekts beträgt 200.000 €. Dieser Betrag umfasst sämtliche projektbezogenen Leistungen, einschließlich Planung, Entwicklung, Qualitätssicherung, Dokumentation, Schulung (falls erforderlich) sowie projektbegleitende Managementaufwände. Eine Überschreitung des festgelegten Auftragswertes ist ausgeschlossen, sofern keine zusätzlichen, schriftlich freigegebenen Leistungsumfänge durch den Auftraggeber beauftragt werden.
+Der maximale Auftragswert für die Umsetzung des Projekts beträgt 270.000 €. Dieser Betrag umfasst sämtliche projektbezogenen Leistungen, einschließlich Planung, Entwicklung, Qualitätssicherung, Dokumentation, Schulung (falls erforderlich) sowie projektbegleitende Managementaufwände. Eine Überschreitung des festgelegten Auftragswertes ist ausgeschlossen, sofern keine zusätzlichen, schriftlich freigegebenen Leistungsumfänge durch den Auftraggeber beauftragt werden.
 
 ### 5.3 Technische Einschränkungen
 Die im Rahmen des Projekts zu entwickelnde Software hat den technischen und betrieblichen Rahmenbedingungen des bestehenden Inflight-Entertainment-Systems zu entsprechen. Hierzu zählen insbesondere:
@@ -115,7 +116,7 @@ Um die fachgerechte Umsetzung der oben genannten Punkte sicherzustellen wird vom
 Weitere technische Rahmenbedingungen können im Zuge der detaillierten Anforderungsabstimmung präzisiert werden.
 
 ### 5.4 Projektplan und Projektmanagement
-Der Auftragnehmer verpflichtet sich zur Erstellung eines strukturierten Projektplans, der alle wesentlichen Phasen und Meilensteine beschreibt. Das anzuwendende Vorgehensmodell (z. B. klassisch, hybrid oder agil) wird zu Projektbeginn gemeinsam mit dem Auftraggeber verbindlich festgelegt.
+Der Auftragnehmer verpflichtet sich zur Erstellung eines strukturierten Projektplans, der alle wesentlichen Phasen und Meilensteine beschreibt. Das anzuwendende Vorgehensmodell wird zu Projektbeginn gemeinsam mit dem Auftraggeber verbindlich festgelegt.
 
 Das Projektmanagement umfasst insbesondere:
 - regelmäßige Statusberichte sowie Dokumentation relevanter Arbeitspakete und Änderungen
