@@ -198,7 +198,28 @@ Diese beinhalten insbesondere:
 ---
 
 ## 8 Glossar
-**AG** – Auftraggeber  
-**Praktika** – Betreute Doppelstunde  
-**SE** – Software Engineering  
-**WS2019/20** – Wintersemester 2019/2020  
+# 8 Glossar
+
+| Begriff | Einfache Erklärung |
+|--------|--------------------|
+| **Abnahme** | Offizielle Bestätigung, dass das Produkt den Vereinbarungen entspricht. |
+| **Applikation** | Ein Programm, das auf einem Gerät ausgeführt wird. Hier: die Spielsoftware. |
+| **Barrierearmut** | Gestaltung, die für alle gut bedienbar ist, z. B. durch starke Kontraste. |
+| **Benutzerschnittstelle (UI)** | Sichtbare Oberfläche der App (Menüs, Buttons, Spielbrett). |
+| **Branding** | Anpassung der Gestaltung an die CI einer Airline. |
+| **Build** | Prozess, der aus Quellcode eine lauffähige Software erzeugt. |
+| **Computergegner / Bot** | Eine einfache künstliche Intelligenz, die als Gegner im Spiel agiert. |
+| **Corporate Identity (CI)** | Das feste Erscheinungsbild einer Airline, z. B. Farben, Logos. |
+| **Dev-Kit (Development Kit)** | Paket aus Hard-/Software zum Entwickeln und Testen auf dem IFE-System. |
+| **4-Gewinnt** | Einfaches Spiel: Zwei Spieler versuchen, vier Steine in einer Reihe zu platzieren. |
+| **IFE (Inflight-Entertainment-System)** | Unterhaltungssystem im Flugzeug für Filme, Musik, Infos und Spiele. |
+| **Integration** | Einbindung der Software in das bestehende IFE-System. |
+| **Modularität / modulare Komponenten** | Einzelteile der Software, die wiederverwendet werden können. |
+| **Produktivbetrieb** | Der tatsächliche Einsatz der Software im Flugzeug. |
+| **Prototyp** | Erste Testversion zum Ausprobieren von Design und Bedienung. |
+| **Release** | Die fertige, ausgelieferte Softwareversion. |
+| **Repository** | Speicherort für Quellcode mit Versionsverwaltung (z. B. Git). |
+| **Ressourcenverbrauch** | Benötigter Speicher, Rechenleistung oder Energie. |
+| **Schnittstelle (Interface)** | Verbindungspunkt zwischen Systemen, über den Daten/Kommandos ausgetauscht werden. |
+| **Test / Validierung** | Prüfung, ob die Software korrekt, stabil und nach Anforderungen funktioniert. |
+| **UX (User Experience)** | Nutzererfahrung – wie einfach und angenehm etwas zu bedienen ist. |
