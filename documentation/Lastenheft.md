@@ -28,6 +28,8 @@ Friedrich-List-Platz 1, 01069 Dresden
    - [Projektplan und Projektmanagement](#54-projektplan-und-projektmanagement)
    - [Angebotserstellung](#55-angebotserstellung)
 6. [Anforderungen](#6-anforderungen)
+   - [Funktionale Anforderungen](#61-funktionale-anforderungen)
+   - [Nicht-funktionale Anforderungen](#62-nicht-funktionale-anforderungen)
 7. [Lieferumfang](#7-lieferumfang)
    - [Prototyp](#71-prototyp)
    - [Release](#72-release)
