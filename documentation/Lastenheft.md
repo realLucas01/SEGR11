@@ -200,9 +200,8 @@ Diese beinhalten insbesondere:
 ---
 
 ## 8 Glossar
-# 8 Glossar
 
-| Begriff | Einfache Erklärung |
+| Begriff | Bedeutung |
 |--------|--------------------|
 | **Abnahme** | Offizielle Bestätigung, dass das Produkt den Vereinbarungen entspricht. |
 | **Applikation** | Ein Programm, das auf einem Gerät ausgeführt wird. Hier: die Spielsoftware. |
