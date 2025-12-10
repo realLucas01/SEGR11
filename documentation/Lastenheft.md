@@ -28,6 +28,8 @@ Friedrich-List-Platz 1, 01069 Dresden
    - [Projektplan und Projektmanagement](#54-projektplan-und-projektmanagement)
    - [Angebotserstellung](#55-angebotserstellung)
 6. [Anforderungen](#6-anforderungen)
+   - [Funktionale Anforderungen](#61-funktionale-anforderungen)
+   - [Nicht-funktionale Anforderungen](#62-nicht-funktionale-anforderungen)
 7. [Lieferumfang](#7-lieferumfang)
    - [Prototyp](#71-prototyp)
    - [Release](#72-release)
@@ -98,7 +100,7 @@ Die geforderte Leistung ist innerhalb einer Gesamtdauer von 12 Wochen zu erbring
 Nach 8 Wochen ist ein funktionsfähiger Prototyp bereitzustellen, der dem Auftraggeber im Rahmen eines Abstimmungsmeetings vorgestellt wird. Der detaillierte Meilensteinplan wird im Zuge der Projektinitialisierung finalisiert und bedarf der gemeinsamen Abstimmung zwischen Auftraggeber und Auftragnehmer.
 
 ### 5.2 Auftragswert
-Der maximale Auftragswert für die Umsetzung des Projekts beträgt 200.000 €. Dieser Betrag umfasst sämtliche projektbezogenen Leistungen, einschließlich Planung, Entwicklung, Qualitätssicherung, Dokumentation, Schulung (falls erforderlich) sowie projektbegleitende Managementaufwände. Eine Überschreitung des festgelegten Auftragswertes ist ausgeschlossen, sofern keine zusätzlichen, schriftlich freigegebenen Leistungsumfänge durch den Auftraggeber beauftragt werden.
+Der maximale Auftragswert für die Umsetzung des Projekts beträgt 270.000 €. Dieser Betrag umfasst sämtliche projektbezogenen Leistungen, einschließlich Planung, Entwicklung, Qualitätssicherung, Dokumentation, Schulung (falls erforderlich) sowie projektbegleitende Managementaufwände. Eine Überschreitung des festgelegten Auftragswertes ist ausgeschlossen, sofern keine zusätzlichen, schriftlich freigegebenen Leistungsumfänge durch den Auftraggeber beauftragt werden.
 
 ### 5.3 Technische Einschränkungen
 Die im Rahmen des Projekts zu entwickelnde Software hat den technischen und betrieblichen Rahmenbedingungen des bestehenden Inflight-Entertainment-Systems zu entsprechen. Hierzu zählen insbesondere:
@@ -115,7 +117,7 @@ Um die fachgerechte Umsetzung der oben genannten Punkte sicherzustellen wird vom
 Weitere technische Rahmenbedingungen können im Zuge der detaillierten Anforderungsabstimmung präzisiert werden.
 
 ### 5.4 Projektplan und Projektmanagement
-Der Auftragnehmer verpflichtet sich zur Erstellung eines strukturierten Projektplans, der alle wesentlichen Phasen und Meilensteine beschreibt. Das anzuwendende Vorgehensmodell (z. B. klassisch, hybrid oder agil) wird zu Projektbeginn gemeinsam mit dem Auftraggeber verbindlich festgelegt.
+Der Auftragnehmer verpflichtet sich zur Erstellung eines strukturierten Projektplans, der alle wesentlichen Phasen und Meilensteine beschreibt. Das anzuwendende Vorgehensmodell wird zu Projektbeginn gemeinsam mit dem Auftraggeber verbindlich festgelegt.
 
 Das Projektmanagement umfasst insbesondere:
 - regelmäßige Statusberichte sowie Dokumentation relevanter Arbeitspakete und Änderungen
@@ -198,7 +200,27 @@ Diese beinhalten insbesondere:
 ---
 
 ## 8 Glossar
-**AG** – Auftraggeber  
-**Praktika** – Betreute Doppelstunde  
-**SE** – Software Engineering  
-**WS2019/20** – Wintersemester 2019/2020  
+
+| Begriff | Bedeutung |
+|--------|--------------------|
+| **Abnahme** | Offizielle Bestätigung, dass das Produkt den Vereinbarungen entspricht. |
+| **Applikation** | Ein Programm, das auf einem Gerät ausgeführt wird. Hier: die Spielsoftware. |
+| **Barrierearmut** | Gestaltung, die für alle gut bedienbar ist, z. B. durch starke Kontraste. |
+| **Benutzerschnittstelle (UI)** | Sichtbare Oberfläche der App (Menüs, Buttons, Spielbrett). |
+| **Branding** | Anpassung der Gestaltung an die CI einer Airline. |
+| **Build** | Prozess, der aus Quellcode eine lauffähige Software erzeugt. |
+| **Computergegner / Bot** | Eine einfache künstliche Intelligenz, die als Gegner im Spiel agiert. |
+| **Corporate Identity (CI)** | Das feste Erscheinungsbild einer Airline, z. B. Farben, Logos. |
+| **Dev-Kit (Development Kit)** | Paket aus Hard-/Software zum Entwickeln und Testen auf dem IFE-System. |
+| **4-Gewinnt** | Einfaches Spiel: Zwei Spieler versuchen, vier Steine in einer Reihe zu platzieren. |
+| **IFE (Inflight-Entertainment-System)** | Unterhaltungssystem im Flugzeug für Filme, Musik, Infos und Spiele. |
+| **Integration** | Einbindung der Software in das bestehende IFE-System. |
+| **Modularität / modulare Komponenten** | Einzelteile der Software, die wiederverwendet werden können. |
+| **Produktivbetrieb** | Der tatsächliche Einsatz der Software im Flugzeug. |
+| **Prototyp** | Erste Testversion zum Ausprobieren von Design und Bedienung. |
+| **Release** | Die fertige, ausgelieferte Softwareversion. |
+| **Repository** | Speicherort für Quellcode mit Versionsverwaltung (z. B. Git). |
+| **Ressourcenverbrauch** | Benötigter Speicher, Rechenleistung oder Energie. |
+| **Schnittstelle (Interface)** | Verbindungspunkt zwischen Systemen, über den Daten/Kommandos ausgetauscht werden. |
+| **Test / Validierung** | Prüfung, ob die Software korrekt, stabil und nach Anforderungen funktioniert. |
+| **UX (User Experience)** | Nutzererfahrung – wie einfach und angenehm etwas zu bedienen ist. |
