@@ -38,7 +38,7 @@ Der Auftraggeber beabsichtigt die Beschaffung einer Softwarelösung zur Bereitst
 
 
 ## Projektzeitraum:
-- Abnahme bis 16 Wochen nach Auftragsannahme
+- Abnahme bis 12 Wochen nach Auftragsannahme
 
 
 ## Angebote können abgegeben werden in:
