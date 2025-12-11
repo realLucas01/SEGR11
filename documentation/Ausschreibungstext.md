@@ -3,7 +3,7 @@ Veröffentlichungsdatum: 10.12.2025
 ---
 
 ## Zielsetzung
-Der Auftraggeber beabsichtigt die Beschaffung einer Softwarelösung zur Bereitstellung eines lokal spielbaren „4-Gewinnt“-Mehrspielerspiels für Passagiere in bestehenden Inflight-Entertainment-Systemen (IFE). Ziel ist die Erweiterung des Passagiererlebnisses durch ein interaktives, leichtgewichtiges und betriebssicheres Spielangebot.
+Der Auftraggeber beabsichtigt die Beschaffung einer Softwarelösung zur Bereitstellung eines lokal auf den Sitzmonitoren spielbaren „4-Gewinnt“ Spiels für Passagiere in bestehenden Inflight-Entertainment-Systemen (IFE). Ziel ist die Erweiterung des Passagiererlebnisses durch ein interaktives, leichtgewichtiges und betriebssicheres Spielangebot.
 
 ## Art der Vergabe (§ 3 VOL/A):
 - Öffentliche Ausschreibung
