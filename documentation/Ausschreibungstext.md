@@ -9,20 +9,20 @@ Der Auftraggeber beabsichtigt die Beschaffung einer Softwarelösung zur Bereitst
 - Öffentliche Ausschreibung
 
 ## Loseaufteilung:
-- Keine Losweise vergabe
+- Keine losweise vergabe
 - Teilangebote sind nicht zulässig
 
 
 ## Der Auftragnehmer hat folgende Leistungen zu erbringen:
-- Lieferung einer betriebsreifen & getesteten Software
-- Nahtlose Integration in unser IFE-System
-- CI-Konforme Anpassung unseres Farbschemas und Logos
+- Lieferung einer Betriebsreifen & getesteten Software
+- Nahtlose Integration in das IFE-System des Auftraggebers
+- CI-Konforme Anpassung der Farbpalette und Logos des Auftraggebers
 
 
 ## Die Software hat folgendes zu erfüllen:
 - Umsetzung luftfahrtspezifischer Entwicklungsstandards DO-178C
 - Kompatibilität mit unserem IFE-System
-- Softwarepaket für multimediale Anwendungen (48980000-5)
+- Klassifizierung gemäß 48980000-5 (Softwarepaket für multimediale Anwendungen)
 
   
 ## Verfahrensfristen:
@@ -32,13 +32,8 @@ Der Auftraggeber beabsichtigt die Beschaffung einer Softwarelösung zur Bereitst
   
 
 ## Bieter haben mit ihrem Angebot folgende Unterlagen zur Eignungsprüfung einzureichen:
-- Nachweis der Leistungsfähigkeit des Unternehmens in Form von Prospekten, Mustern, Fotografien, Zeichnungen usw. für die zu erbringende Leistung in deutscher Sprache,
+- Nachweis der Leistungsfähigkeit des Unternehmens in Form von Mustern, Fotografien, Technischen-Zeichnungen usw. für die zu erbringende Leistung in deutscher Sprache,
 - aktuelle Erklärungen über die Zahlung von Steuern, Bonitätsnachweis(e), Abgaben und Beiträgen zur gesetzlichen Sozialversicherung (Unbedenklichkeitserklärung)
-
-
-## Loseaufteilung:
-- Keine Losweise vergabe
-- Teilangebote sind nicht zulässig
 
 
 ## Angebote können abgegeben werden in:
