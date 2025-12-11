@@ -16,14 +16,14 @@ Der Auftraggeber beabsichtigt die Beschaffung einer Softwarelösung zur Bereitst
 ## Der Auftragnehmer hat folgende Leistungen zu erbringen:
 - Lieferung einer Betriebsreifen & getesteten Software
 - Nahtlose Integration in das IFE-System des Auftraggebers
-- CI-Konforme Anpassung der Farbpalette und Logos des Auftraggebers
+- CI-Konforme Anpassung der Farbpalette und Logo des Auftraggebers
 
 
 ## Die Software hat folgendes zu erfüllen:
 - Umsetzung luftfahrtspezifischer Entwicklungsstandards DO-178C
 - Kompatibilität mit unserem IFE-System
 - Klassifizierung gemäß 48980000-5 (Softwarepaket für multimediale Anwendungen)
-- Klassifitierung gemäß 72230000-6 (Entwicklung von kundenspezifischer Software)
+- Klassifizierung gemäß 72230000-6 (Entwicklung von kundenspezifischer Software)
 
   
 ## Verfahrensfristen:
