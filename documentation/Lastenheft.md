@@ -19,7 +19,8 @@ Friedrich-List-Platz 1, 01069 Dresden
    - [Problemdomäne](#41-problemdomäne)  
    - [Prozesse](#42-prozesse)  
    - [Produktumgebung](#43-produktumgebung)  
-   - [Benutzerschnittstelle](#44-benutzerschnittstelle)  
+   - [Schnittstellen](#44-schnittstellen)
+   - [Benutzerschnittstelle](#45-benutzerschnittstelle)
 5. [Projektbedingungen](#5-projektbedingungen)
    - [Zeitlicher Rahmen](#51-zeitlicher-rahmen)
    - [Auftragswert](#52-auftragswert)
@@ -50,7 +51,7 @@ Dieses Lastenheft beschreibt aus Sicht des Auftraggebers die grundlegenden Anfor
 ---
 
 ## 2 Ausgangssituation (Ist-Zustand)
-Das bestehende Inflight-Entertainment-System (IFE) des Auftraggebers Novaris Cabin Systems bietet Passagieren bisher nur klassische Medieninhalte wie Filme, Musik und Informationsseiten. Interaktive Spiele sind zwar vorgesehen, jedoch fehlt bislang ein eigenes, integriertes Multiplayer-Minispiel.
+Das bestehende Inflight-Entertainment-System (IFE) des Auftraggebers bietet Passagieren bisher nur klassische Medieninhalte wie Filme, Musik und Informationsseiten. Interaktive Spiele sind zwar vorgesehen, jedoch fehlt bislang ein eigenes, integriertes Minispiel.
 
 Im Rahmen der öffentlichen Ausschreibung wurde der Bedarf an einer modernen, leicht verständlichen und stabilen Spielapplikation identifiziert, die ohne Netzwerkverbindung auf Sitzmonitoren genutzt werden kann. 
 Das in der Ausschreibung spezifizierte „4-Connect System“ soll diese Lücke schließen und Passagieren ermöglichen, während des Fluges ein unterhaltsames 4-Gewinnt-Spiel zu nutzen. Die Anwendung muss dabei zuverlässig funktionieren, CI-anpassbar sein und sich nahtlos in bestehende IFE-Infrastrukturen integrieren lassen.  
@@ -63,7 +64,7 @@ Aktuell existiert jedoch kein funktionsfähiger Prototyp, keine spezifische tech
 
 ### 3.1 Anwendungsbereich
 Das System dient der passagierseitigen Unterhaltung während des Fluges.  
-Es wird als Applikation innerhalb des bestehenden Inflight-Entertainment-Systems von Novaris ausgeführt und ist vollständig offline nutzbar. Die Anwendung soll auf allen von Novaris bereitgestellten Sitzmonitoren lauffähig sein.
+Es wird als Applikation innerhalb des bestehenden Inflight-Entertainment-Systems des Auftraggebers ausgeführt und ist vollständig offline nutzbar. Die Anwendung soll auf der vom Auftraggeber vertriebenen Hardware lauffähig sein.
 
 ### 3.2 Systemidee
 Die Software ermöglicht ein 4-Gewinnt-Spiel („4-Connect“) direkt auf einem einzigen Sitzmonitor. Zwei Passagiere spielen dabei abwechselnd auf demselben Bildschirm gegeneinander.
@@ -103,7 +104,7 @@ Dies entspricht den sicherheitstechnischen Anforderungen der Airline-Industrie.
 
 ### 4.2 Prozesse
 Die Software unterstützt keine geschäftlichen oder betrieblichen Abläufe, sondern dient ausschließlich der passagierseitigen Unterhaltung innerhalb des IFE-Systems.  
-Für ihre Entwicklung werden die etablierten Entwicklungs- und Qualitätsprozesse von Novaris angewendet, um eine konsistente Vorgehensweise, klare Dokumentation und einen stabilen Betrieb im produktiven Einsatz sicherzustellen.
+Für ihre Entwicklung werden die etablierten Entwicklungs- und Qualitätsprozesse des Auftraggebers angewendet, um eine konsistente Vorgehensweise, klare Dokumentation und einen stabilen Betrieb im produktiven Einsatz sicherzustellen.
 
 Im Hintergrund laufen klassische SE-Prozesse:
 - Analyse  
@@ -113,17 +114,59 @@ Im Hintergrund laufen klassische SE-Prozesse:
 - Test und Validierung  
 
 ### 4.3 Produktumgebung
-- Ausführung auf den IFE-Sitzmonitoren des Herstellers Novaris  
+- Ausführung auf der IFE-Hardware des Herstellers  
 - Eingabe über Touchscreen oder physische Bedienelemente  
-- Keine Internetverbindung erforderlich  
+- Keine Internetverbindung erforderlich
 
-### 4.4 Benutzerschnittstelle
-- 2D-Spielbrett  
-- Touch-/Mausbedienung  
-- Menüstruktur  
-- Klare Farbgebung, hoher Kontrast  
-- Optische CI-Anpassung je Airline  
-- Optionale Anzeige der Spielregeln  
+### 4.3 Produktumgebung
+Das Softwaresystem wird innerhalb der bestehenden IFE-Infrastruktur des Herstellers betrieben.  
+Die Produktumgebung umfasst:
+
+- **Hardware:**  
+  Die Anwendung läuft auf der vom Hersteller bereitgestellten IFE-Hardware, bestehend aus Touchpanels oder optionalen physischen Eingabegeräten.
+
+- **Softwarebasis:**  
+  Das System nutzt die vorhandene, vom Hersteller vorgegebene Softwareumgebung des IFE-Systems. Diese umfasst ein fest definiertes Betriebssystem sowie die für Anwendungen bereitgestellten Laufzeitkomponenten. Die Umgebung ist offline-orientiert und ermöglicht keine externe Kommunikation.
+
+- **Entwicklungsumgebung:**  
+  Für die Entwicklung steht ein Dev-Kit des Auftraggebers zur Verfügung, das einen IFE-Simulator sowie die zugehörige technische Dokumentation umfasst. Die Anwendung wird in Java umgesetzt.
+
+- **Betriebsumgebung:**  
+  Die Software wird vollständig offline betrieben. Während des Flugbetriebs besteht keine Netzwerkverbindung. Die Anwendung muss daher autonom funktionieren und darf sich nicht auf externe Server oder Datenquellen verlassen.
+
+- **Organisatorische Rahmenbedingungen:**  
+  Die Anwendung soll die internen UI-/UX-Richtlinien des Herstellers berücksichtigen und in bestehende Navigations- und Bedienkonzepte integrierbar sein.
+
+### 4.4 Schnittstellen
+Die Anwendung ist in das bestehende Inflight-Entertainment-System eingebettet und nutzt die dort bereitgestellten Mechanismen zum Starten und Beenden der Software. Darüber hinaus erfolgt keine Kommunikation mit externen Systemen oder Diensten.
+
+Es werden keine dauerhaften Daten gespeichert. Die Anwendung verwaltet ausschließlich temporäre Informationen, die nur während der aktiven Nutzung benötigt werden und beim Beenden vollständig verworfen werden.
+
+Eine Interaktion mit sicherheitsrelevanten Systemen des Flugzeugs findet nicht statt.
+
+### 4.5 Benutzerschnittstelle
+Die Benutzerschnittstelle orientiert sich an den bestehenden UI-/UX-Richtlinien des Herstellers und soll eine klare, intuitive und barrierearme Bedienung gewährleisten. Sie umfasst:
+
+- **Spieloberfläche:**  
+  Ein übersichtlich gestaltetes 2D-Spielbrett, das die aktuelle Spielsituation klar darstellt und deutlich erkennbare Spielsteine verwendet.
+
+- **Bedienung:**  
+  Touch-optimierte Eingabeelemente bzw. Mausbedienung in der Entwicklungsumgebung, mit klaren Rückmeldungen bei Interaktionen.
+
+- **Menüstruktur:**  
+  Eine einfache und verständliche Navigation für Spielstart, Moduswahl, Regelanzeige und Rücksprung zum Hauptmenü.
+
+- **Gestaltung & Farben:**  
+  Eine klare Farbgebung mit hohem Kontrast zur guten Erkennbarkeit, unabhängig von Umgebungslicht und Blickwinkel.
+
+- **CI-Anpassung:**  
+  Austauschbare visuelle Elemente (z. B. Farben, Logo) zur Anpassung an die Corporate Identity der jeweiligen Airline.
+
+- **Informationselemente:**  
+  Eine optionale Anzeige der Spielregeln sowie kurze Hinweise zur Bedienung.
+
+- **Konsistenz:**  
+  Ein einheitliches Layout und wiederverwendbare UI-Komponenten, die sich harmonisch in das übrige IFE-Design einfügen.
 
 ---
 
@@ -195,27 +238,14 @@ Das Angebot dient als Grundlage für die Beauftragung und die anschließende Ums
 | F12  | Das System unterstützt Airline-Branding. |
 
 ### 6.2 Nicht-funktionale Anforderungen
-| ID | Kategorie | Beschreibung |
-|----|-----------|--------------|
-| NF1 | Performance | Eingaben sollen flüssig und reaktionsschnell verarbeitet werden. |
-| NF2 | Stabilität | Kein Absturz, auch bei schneller Eingabe |
-| NF3 | Ressourcen | Speicherverbrauch und CPU-Last müssen gering bleiben |
-| NF4 | Usability | Große Touchflächen, intuitive Bedienung |
-| NF5 | Internationalisierung | Englische UI als Standard, weitere Sprachen optional |
-| NF6 | Sicherheit | Keine Speicherung personenbezogener Daten |
-| NF7 | Kompatibilität | Funktion auf marktüblichen IFE-Systemen |
-| NF8 | Branding | Austauschbare UI-Assets gemäß Airline-CI |
-| NF9 | Barrierearmut | Ausreichende Farbkontraste, klare Hervorhebungen |
-| NF10 | Offline-Betrieb | Keine Netzwerkverbindung erforderlich |
-
-### 6.2 Nicht-funktionale Anforderungen
 | ID   | Kategorie            | Beschreibung |
 |------|----------------------|--------------|
 | NF1  | Performance          | Eingaben sollen flüssig und reaktionsschnell verarbeitet werden. |
 | NF2  | Stabilität           | Die Anwendung soll zuverlässig laufen und auch bei schneller Eingabe nicht abstürzen. |
+| NF3  | Ressourcen           | Speicherverbrauch und CPU-Last müssen gering bleiben. |
 | NF3  | Usability            | Die Bedienung soll über große, gut erkennbare Touchflächen intuitiv möglich sein. |
 | NF4  | Internationalisierung| Die Benutzeroberfläche soll in mehreren Sprachen verfügbar sein. |
-| NF5  | Kompatibilität       | Die Anwendung soll auf den von Novaris bereitgestellten IFE-Sitzmonitoren lauffähig sein. |
+| NF5  | Kompatibilität       | Die Anwendung soll auf der vom Auftraggeber bereitgestellten IFE-Hardware lauffähig sein. |
 | NF6  | Datensicherheit      | Es werden keine personenbezogenen Daten erfasst, gespeichert oder übertragen. |
 | NF7  | Branding             | Die Benutzeroberfläche soll durch austauschbare UI-Assets gemäß der Airline-CI anpassbar sein. |
 | NF8  | Barrierearmut        | Die Gestaltung soll ausreichende Farbkontraste und klar erkennbare Elemente verwenden. |
