@@ -114,19 +114,14 @@ Im Hintergrund laufen klassische SE-Prozesse:
 - Test und Validierung  
 
 ### 4.3 Produktumgebung
-- Ausführung auf der IFE-Hardware des Herstellers  
-- Eingabe über Touchscreen oder physische Bedienelemente  
-- Keine Internetverbindung erforderlich
-
-### 4.3 Produktumgebung
-Das Softwaresystem wird innerhalb der bestehenden IFE-Infrastruktur des Herstellers betrieben.  
+Das Softwaresystem wird innerhalb der bestehenden IFE-Infrastruktur des Auftraggebers betrieben.  
 Die Produktumgebung umfasst:
 
 - **Hardware:**  
-  Die Anwendung läuft auf der vom Hersteller bereitgestellten IFE-Hardware, bestehend aus Touchpanels oder optionalen physischen Eingabegeräten.
+  Die Anwendung läuft auf der vom Auftraggeber bereitgestellten IFE-Hardware, bestehend aus Touchpanels oder optionalen physischen Eingabegeräten.
 
 - **Softwarebasis:**  
-  Das System nutzt die vorhandene, vom Hersteller vorgegebene Softwareumgebung des IFE-Systems. Diese umfasst ein fest definiertes Betriebssystem sowie die für Anwendungen bereitgestellten Laufzeitkomponenten. Die Umgebung ist offline-orientiert und ermöglicht keine externe Kommunikation.
+  Das System nutzt die vorhandene, vom Auftraggeber vorgegebene Softwareumgebung des IFE-Systems. Diese umfasst ein fest definiertes Betriebssystem sowie die für Anwendungen bereitgestellten Laufzeitkomponenten. Die Umgebung ist offline-orientiert und ermöglicht keine externe Kommunikation.
 
 - **Entwicklungsumgebung:**  
   Für die Entwicklung steht ein Dev-Kit des Auftraggebers zur Verfügung, das einen IFE-Simulator sowie die zugehörige technische Dokumentation umfasst. Die Anwendung wird in Java umgesetzt.
@@ -135,7 +130,7 @@ Die Produktumgebung umfasst:
   Die Software wird vollständig offline betrieben. Während des Flugbetriebs besteht keine Netzwerkverbindung. Die Anwendung muss daher autonom funktionieren und darf sich nicht auf externe Server oder Datenquellen verlassen.
 
 - **Organisatorische Rahmenbedingungen:**  
-  Die Anwendung soll die internen UI-/UX-Richtlinien des Herstellers berücksichtigen und in bestehende Navigations- und Bedienkonzepte integrierbar sein.
+  Die Anwendung soll die internen UI-/UX-Richtlinien des Auftraggebers berücksichtigen und in bestehende Navigations- und Bedienkonzepte integrierbar sein.
 
 ### 4.4 Schnittstellen
 Die Anwendung ist in das bestehende Inflight-Entertainment-System eingebettet und nutzt die dort bereitgestellten Mechanismen zum Starten und Beenden der Software. Darüber hinaus erfolgt keine Kommunikation mit externen Systemen oder Diensten.
@@ -145,13 +140,13 @@ Es werden keine dauerhaften Daten gespeichert. Die Anwendung verwaltet ausschlie
 Eine Interaktion mit sicherheitsrelevanten Systemen des Flugzeugs findet nicht statt.
 
 ### 4.5 Benutzerschnittstelle
-Die Benutzerschnittstelle orientiert sich an den bestehenden UI-/UX-Richtlinien des Herstellers und soll eine klare, intuitive und barrierearme Bedienung gewährleisten. Sie umfasst:
+Die Benutzerschnittstelle orientiert sich an den bestehenden UI-/UX-Richtlinien des Auftraggebers und soll eine klare, intuitive und barrierearme Bedienung gewährleisten. Sie umfasst:
 
 - **Spieloberfläche:**  
   Ein übersichtlich gestaltetes 2D-Spielbrett, das die aktuelle Spielsituation klar darstellt und deutlich erkennbare Spielsteine verwendet.
 
 - **Bedienung:**  
-  Touch-optimierte Eingabeelemente bzw. Mausbedienung in der Entwicklungsumgebung, mit klaren Rückmeldungen bei Interaktionen.
+  Touch-optimierte Eingabeelemente bzw. Mausbedienung, mit klaren Rückmeldungen bei Interaktionen.
 
 - **Menüstruktur:**  
   Eine einfache und verständliche Navigation für Spielstart, Moduswahl, Regelanzeige und Rücksprung zum Hauptmenü.
@@ -243,13 +238,13 @@ Das Angebot dient als Grundlage für die Beauftragung und die anschließende Ums
 | NF1  | Performance          | Eingaben sollen flüssig und reaktionsschnell verarbeitet werden. |
 | NF2  | Stabilität           | Die Anwendung soll zuverlässig laufen und auch bei schneller Eingabe nicht abstürzen. |
 | NF3  | Ressourcen           | Speicherverbrauch und CPU-Last müssen gering bleiben. |
-| NF3  | Usability            | Die Bedienung soll über große, gut erkennbare Touchflächen intuitiv möglich sein. |
-| NF4  | Internationalisierung| Die Benutzeroberfläche soll in mehreren Sprachen verfügbar sein. |
-| NF5  | Kompatibilität       | Die Anwendung soll auf der vom Auftraggeber bereitgestellten IFE-Hardware lauffähig sein. |
-| NF6  | Datensicherheit      | Es werden keine personenbezogenen Daten erfasst, gespeichert oder übertragen. |
-| NF7  | Branding             | Die Benutzeroberfläche soll durch austauschbare UI-Assets gemäß der Airline-CI anpassbar sein. |
-| NF8  | Barrierearmut        | Die Gestaltung soll ausreichende Farbkontraste und klar erkennbare Elemente verwenden. |
-| NF9  | Offline-Betrieb      | Die Anwendung muss vollständig ohne Netzwerkverbindung funktionieren. |
+| NF4  | Usability            | Die Bedienung soll über große, gut erkennbare Touchflächen intuitiv möglich sein. |
+| NF5  | Internationalisierung| Die Benutzeroberfläche soll in mehreren Sprachen verfügbar sein. |
+| NF6  | Kompatibilität       | Die Anwendung soll auf der vom Auftraggeber bereitgestellten IFE-Hardware lauffähig sein. |
+| NF7  | Datensicherheit      | Es werden keine personenbezogenen Daten erfasst, gespeichert oder übertragen. |
+| NF8  | Branding             | Die Benutzeroberfläche soll durch austauschbare UI-Assets gemäß der Airline-CI anpassbar sein. |
+| NF9  | Barrierearmut        | Die Gestaltung soll ausreichende Farbkontraste und klar erkennbare Elemente verwenden. |
+| NF10  | Offline-Betrieb      | Die Anwendung muss vollständig ohne Netzwerkverbindung funktionieren. |
 
 ---
 
