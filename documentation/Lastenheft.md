@@ -1,9 +1,12 @@
 # Lastenheft  
-## Entwicklung einer Hello-world-Anwendung in Java  
-**Stand:** 14.11.2024  
-**Auftraggeber:** Hochschule für Technik und Wirtschaft Dresden  
-Friedrich-List-Platz 1, 01069 Dresden  
-**Ansprechpartner:** Prof. Dr.-Ing. habil. Dirk Müller  
+## Entwicklung des Inflight "4-Connect" Sytems
+**Stand:** 10.12.2025  
+
+**Auftraggeber:** Novaris Cabin Systems GmbH  
+Friedrich-List-Platz 1
+01069 Dresden  
+**Ansprechpartner*in:** Lea Wagner  
+**E-Mail:** lwagner@novaris-cabinystems.de
 
 ---
 
