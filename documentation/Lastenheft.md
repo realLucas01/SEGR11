@@ -1,5 +1,5 @@
 # Lastenheft  
-## Entwicklung des Inflight "4-Connect" Sytems
+## Entwicklung einer Entertainment-Erweiterung speziell für IFE
 **Stand:** 10.12.2025  
 
 **Auftraggeber:** Novaris Cabin Systems GmbH  
