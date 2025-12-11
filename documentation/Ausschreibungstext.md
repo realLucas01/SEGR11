@@ -23,6 +23,7 @@ Der Auftraggeber beabsichtigt die Beschaffung einer Softwarelösung zur Bereitst
 - Umsetzung luftfahrtspezifischer Entwicklungsstandards DO-178C
 - Kompatibilität mit unserem IFE-System
 - Klassifizierung gemäß 48980000-5 (Softwarepaket für multimediale Anwendungen)
+- Klassifitierung gemäß 72230000-6 (Entwicklung von kundenspezifischer Software)
 
   
 ## Verfahrensfristen:
