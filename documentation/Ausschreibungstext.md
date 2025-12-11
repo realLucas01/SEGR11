@@ -37,6 +37,11 @@ Der Auftraggeber beabsichtigt die Beschaffung einer Softwarelösung zur Bereitst
 - aktuelle Erklärungen über die Zahlung von Steuern, Bonitätsnachweis(e), Abgaben und Beiträgen zur gesetzlichen Sozialversicherung (Unbedenklichkeitserklärung)
 
 
+
+## Projektzeitraum:
+- Abnahme bis 16 Wochen nach Auftragsannahme
+
+
 ## Angebote können abgegeben werden in:
 - schriftlich (Unterzeichnet)
 - elektronisch per E-Mail in Textform (Unterzeichnet)
