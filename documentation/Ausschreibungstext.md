@@ -27,7 +27,7 @@ Der Auftraggeber beabsichtigt die Beschaffung einer Softwarelösung zur Bereitst
   
 ## Verfahrensfristen:
 - Angebotsfrist: bis 01.03.2026 (unvollständige oder verspätet Angebote können nicht berücksichtigt werden)
-- Bindefrist: 60 Tage nach ablauf der Angbeotsfrist
+- Bindefrist: 60 Tage nach Ablauf der Angebotsfrist
 - Zuschlagsfrist: 60 Tage nach Ablauf der Bindefrist
   
 
