@@ -10,7 +10,7 @@ Der Auftraggeber beabsichtigt, eine Softwarelösung für ein lokal spielbares �
 - Gegenstand dieser Ausschreibung ist die Lieferung, Anpassung und technische Integration einer betriebsbereiten IFE-Spielsoftware („4-Connect System“) einschließlich CI-konformem Branding
 - Die Software soll folgende Anforderungen erfüllen:
 1. Lokales Spiel („4 Gewinnt“) auf den Sitzmonitoren
-2. Kompatibilität mit marktgängigen IFE-Systemen (z. B. Panasonic, Thales, Wireless IFE)
+2. Kompatibilität mit eigenem IFE System 
 3. Berücksichtigung luftfahrtspezifischer Entwicklungsstandards (z. B. DO-178C-konforme Prozesse)
 4. Anpassbare User Interface gemäß Corporate Design des Auftraggebers
 Optional können ergänzende Spielmodule angeboten werden.
@@ -32,7 +32,7 @@ Die Vergabe erfolgt als öffentliche Ausschreibung gemäß VOL/A
 - Nachweise über Erfahrung in der Entwicklung von IFE-Software oder vergleichbaren interaktiven Systemen
 - Referenzen (mindestens ein vergleichbares Projekt aus Luftfahrt, Embedded- oder Multimedia-Bereich)
 - Eigenerklärungen zu Steuern, Sozialabgaben und Bonität
-- Technische Beschreibung der angebotenen Software inkl. Schnittstellen, Systemvoraussetzungen und Testverfahren
+- Technische Beschreibung der angebotenen Software inkl. (Schnittstellen), Systemvoraussetzungen und Testverfahren
 
 **6. Fristen** <br/>
 Angebotsfrist: 01.02.2026, 15:00 Uhr <br/>
