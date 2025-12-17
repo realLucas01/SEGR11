@@ -1,4 +1,5 @@
-TODOs:
+Habe ich von: https://sevdesk.de/ratgeber/buchhaltung-finanzen/angebot/angebot-schreiben/#:~:text=Einleitung%20mit%20Bezug%20auf%20den,den%20Gepflogenheiten%20deiner%20Branche%20anpassen.
+
 
 Allgemeines Angebotsanschreiben ohne individuelle Anrede
 
@@ -12,7 +13,7 @@ Genaue Bezeichnung der Softwareleistung (Art der Software, Funktionsumfang, Abgr
 
 Preisangaben: Nettopreis, Umsatzsteuer, Bruttopreis, ggf. freibleibendes Angebot
 
-Leistungsumfang und Menge (z. B. Lizenzen, Nutzer)
+Leistungsumfang und Menge (z. B. Lizenzen, Nutzer, Module, Stundenkontingente)
 
 Angebotsgültigkeit
 
