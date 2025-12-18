@@ -1,6 +1,8 @@
 Habe ich von: https://sevdesk.de/ratgeber/buchhaltung-finanzen/angebot/angebot-schreiben/#:~:text=Einleitung%20mit%20Bezug%20auf%20den,den%20Gepflogenheiten%20deiner%20Branche%20anpassen.
 
 
+Titel
+
 Allgemeines Angebotsanschreiben ohne individuelle Anrede
 
 Angebotsdatum
@@ -26,3 +28,5 @@ Abschluss mit allgemeiner Grußformel
 Zahlungsbedingungen inkl. Zahlungsziel und ggf. Skonto
 
 Verweis auf die Allgemeinen Geschäftsbedingungen (AGB) des Anbieters
+
+Verweis aufs Pflichten Heft?
