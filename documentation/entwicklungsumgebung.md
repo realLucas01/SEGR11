@@ -1,5 +1,5 @@
 
-## Versionierung –
+## Versionierung 
 
 | Kriterium                 | Git                                      | Mercurial (hg)                          | Subversion (SVN)                          |
 |---------------------------|------------------------------------------|-----------------------------------------|-------------------------------------------|
@@ -13,7 +13,7 @@
 | Eignung für unser Projekt | **empfohlen**                            | nicht notwendig                         | eher ungeeignet                           |
 
 
-### UML-Tool 
+## UML-Tool 
 
 | Kriterium                    | Papyrus (Eclipse-Plugin)                  | Visual Paradigm Community Edition       | StarUML                            |
 |-----------------------------|-------------------------------------------|-----------------------------------------|------------------------------------|
