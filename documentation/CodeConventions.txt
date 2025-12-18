@@ -1,0 +1,11 @@
+Entscheidungen:
+
+unique Commits Namen auf Englisch , Beschreibung freigegeben
+
+Funktionsnamen + Variablen: Englisch
+Kommentare: deutsch
+
+Funktionsnamenformatierung + variablen: camelCase
+
+
+ 
