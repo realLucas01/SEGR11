@@ -7,5 +7,7 @@ Funktionsnamen + Variablen: Englisch
 
 Kommentare: deutsch
 
-Funktionsnamen- und Variablenformatierung: camelCase
+Funktionsnamen- und Variablenformatierung: lower camelCase
+Klassennamen- und Packagenamenformatierung: upper CamelCase
  
+
