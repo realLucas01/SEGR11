@@ -1,0 +1,13 @@
+Entscheidungen:
+
+Commit Namen: unique/ einzigartig und auf Englisch
+Commit Beschreibung: ist jedem Freigestellt
+
+Funktionsnamen + Variablen: Englisch
+
+Kommentare: deutsch
+
+Funktionsnamen- und Variablenformatierung: lower camelCase
+Klassennamen- und Packagenamenformatierung: upper CamelCase
+ 
+
