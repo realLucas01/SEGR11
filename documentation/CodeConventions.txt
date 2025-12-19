@@ -1,11 +1,11 @@
 Entscheidungen:
 
-unique Commits Namen auf Englisch , Beschreibung freigegeben
+Commit Namen: unique/ einzigartig und auf Englisch
+Commit Beschreibung: ist jedem Freigestellt
 
 Funktionsnamen + Variablen: Englisch
+
 Kommentare: deutsch
 
-Funktionsnamenformatierung + variablen: camelCase
-
-
+Funktionsnamen- und Variablenformatierung: camelCase
  
