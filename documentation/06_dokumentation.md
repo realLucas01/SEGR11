@@ -1,8 +1,9 @@
 # 6 Dokumentation
 
-Ziel der Dokumentation ist es, **Nutzung**, **Integration/Installation** sowie **Wartung/Weiterentwicklung** der Applikation „4-Connect“ im Umfeld des Inflight-Entertainment-Systems (IFE) nachvollziehbar zu beschreiben. Die Dokumentation wird so erstellt, dass sie **offline verfügbar**, **leicht verständlich** und für die jeweiligen Zielgruppen (Passagier/Anwender, Airline/Integration, Entwicklerteam) geeignet ist.
+Ziel der Dokumentation ist es, die Nutzung, Integration/Installation sowie Wartung und Weiterentwicklung der Applikation „4-Connect“ im Umfeld des Inflight-Entertainment-Systems (IFE) nachvollziehbar zu beschreiben. Die Dokumentation wird so erstellt, dass sie offline verfügbar ist und strukturiert sowie vollständig für die jeweiligen Zielgruppen aufbereitet wird.
 
-Alle Dokumente werden als **PDF** im Release bereitgestellt und zusätzlich **teilweise** im Repository als **Markdown** versioniert. Die Entwicklerdokumentation enthält **optional** HTML-Ausgaben (z. B. **Javadoc**).
+Alle Dokumente werden als PDF im Release bereitgestellt. Die Inhalte werden im Repository zusätzlich in Markdown gepflegt. Für die Entwicklerdokumentation wird eine API-Dokumentation als HTML-Ausgabe (Javadoc) erstellt und im Release abgelegt.
+
 
 ---
 
@@ -10,17 +11,18 @@ Alle Dokumente werden als **PDF** im Release bereitgestellt und zusätzlich **te
 
 **Zielgruppe:** Passagiere (Endanwender).
 
-**Inhalte (Mindestumfang):**
-- Kurze Beschreibung des Spiels „4-Connect“ und Ziel des Spiels
-- Start/Navigation im IFE: Hauptmenü → Spielauswahl → Moduswahl (**Zwei Spieler** / **Gegen Computer**)
-- Bedienung (Touch/Maus), Spielzug ausführen, Hinweise/Feedback
-- Spielende: Gewinn/Unentschieden, Neustart eines laufenden Spiels
-- Sprache umstellen (Mehrsprachigkeit)
-- Hilfe/Regelanzeige (entspricht der In-App-Regelansicht)
-- Barrierearme Bedienhinweise (z. B. Kontrast/Erkennbarkeit)
+**Inhalte:**
+- Beschreibung des Spiels „4-Connect“ und Spielziel
+- Start und Navigation im IFE: Hauptmenü, Spielauswahl und Moduswahl für zwei Spieler sowie gegen Computer
+- Bedienung über Touch oder Maus, Ausführen eines Spielzugs sowie Hinweise und Feedback während des Spiels
+- Spielende mit Gewinn oder Unentschieden und Neustart eines laufenden Spiels
+- Umstellen der Sprache
+- Anzeige von Hilfe und Regeln innerhalb der Anwendung
+- Hinweise zur Bedienbarkeit, insbesondere Erkennbarkeit und Kontrast
+
 
 **Form & Ablage:**
-- PDF: `TODO (finaler Dateiname/Pfad im Release)`
+- PDF: PDF im Release (Dateiname und Pfad werden im Release-Verzeichnis festgelegt)
 
 ---
 
@@ -28,19 +30,18 @@ Alle Dokumente werden als **PDF** im Release bereitgestellt und zusätzlich **te
 
 **Zielgruppe:** Airline-/IFE-Administratoren bzw. Integrations-/Deployment-Verantwortliche.
 
-**Inhalte (Mindestumfang):**
-- Systemvoraussetzungen (IFE-Umgebung, Offline-Betrieb; keine externen Dienste)
-- Installation/Deployment des JAR in der vorgesehenen IFE-Struktur (inkl. Start-/Rücksprungmechanismus ins IFE-Menü)
-- Konfiguration:
-  - Einbindung/Wechsel von **Branding-Assets** (Logos/Farben/UI-Assets)
-  - Sprachpakete / Ressourcen
-- Update/Release-Prozess (Austausch der JAR + Assets, Versionskennzeichnung)
-- Logging/Fehlerdiagnose (wo Logs liegen / wie Fehlermeldungen aussehen)
-- Datenschutz/Sicherheit: keine personenbezogenen Daten, keine Persistenz, keine externe Kommunikation
-- Deinstallation/Rollback (Rückkehr zu vorheriger Version)
+**Inhalte:**
+- Systemvoraussetzungen der IFE-Umgebung und Betrieb ohne externe Dienste
+- Installation und Deployment des JAR in der vorgesehenen IFE-Struktur sowie Start- und Rücksprungmechanismus in das IFE-Menü
+- Konfiguration von Branding-Assets wie Logos, Farben und UI-Assets
+- Verwaltung von Sprachressourcen und Sprachpaketen
+- Update- und Release-Prozess durch Austausch des JAR und der Assets sowie Versionskennzeichnung
+- Logging und Fehlerdiagnose mit Beschreibung der Ablageorte und typischer Fehlermeldungen
+- Datenschutz und Sicherheit mit dem Grundsatz, dass keine personenbezogenen Daten verarbeitet, gespeichert oder extern übertragen werden
+- Deinstallation und Rollback durch Rückkehr zu einer vorherigen Version
 
 **Form & Ablage:**
-- PDF: `TODO (finaler Dateiname/Pfad im Release)`
+- PDF: - PDF im Release (Dateiname und Pfad werden im Release-Verzeichnis festgelegt)
 
 ---
 
@@ -48,25 +49,20 @@ Alle Dokumente werden als **PDF** im Release bereitgestellt und zusätzlich **te
 
 **Zielgruppe:** Entwicklerteam (Weiterentwicklung, Bugfixing, Erweiterung).
 
-**Inhalte (Mindestumfang):**
-- Projektüberblick & Architektur
-- Build & Run (Build-Tool, Kommandos, JAR-Erzeugung/Release)
-- Tests (Teststrategie, Ausführung, Teststruktur)
-- Erweiterbarkeit (neue Spiele, i18n, Branding)
-- Coding Standards (Verweis auf Code Conventions)
-- UML-Artefakte + Ablageort
-- API-Doku/Kommentierung (z. B. Javadoc)
-
-> **TEAM-NOTE:** Bitte echte Tools/Pfade bescheid geben, sobald final:
-> - Build: (Maven/Gradle) + Kommandos + Datei (`pom.xml`/`build.gradle`)
-> - Tests: (JUnit 5?) + Pfad (`src/test/java`)
-> - UML: Tool + Pfad (Quellen/Exports)
-> - API-Doku: (Javadoc?) + Output-Pfad
+**Inhalte:**
+- Projektüberblick und Architektur, inklusive Module, Schichten und Verantwortlichkeiten
+- Build und Ausführung, inklusive Build-Tool, Build-Kommandos, Erzeugung des JAR und Ablage im Release
+- Testkonzept und Testausführung, inklusive Struktur der Tests im Repository
+- Erweiterbarkeit, insbesondere Integration neuer Spiele in die Menüführung, Internationalisierung über String-Ressourcen und Branding über austauschbare Assets
+- Coding Standards und Konventionen mit Verweis auf die im Repository festgelegten Code Conventions
+- UML-Artefakte, darunter Use-Case-Diagramm, Klassendiagramm und weitere Diagramme, inklusive Ablageort im Repository
+- API-Dokumentation als Javadoc-HTML-Ausgabe
 
 **Form & Ablage:**
-- PDF: `final/entwicklerdoku.pdf` *(Release)*
-- (optional) API-Doku: `final/entwicklerdoku/javadoc/`
-- (optional) UML-Exports: `final/entwicklerdoku/UML/`
+- PDF im Release: `final/entwicklerdoku.pdf`
+- Javadoc-HTML im Release: `final/entwicklerdoku/javadoc/`
+- UML-Exporte im Release: `final/entwicklerdoku/UML/` (PDF/PNG)
+
 
 ---
 
@@ -74,12 +70,12 @@ Alle Dokumente werden als **PDF** im Release bereitgestellt und zusätzlich **te
 
 Die folgenden Dokumente sind Bestandteil des Repositories und werden im Release mit ausgeliefert bzw. referenziert:
 
-- Lastenheft des Auftraggebers (Anforderungen & Rahmenbedingungen)
-- Tool-/Entwicklungsumgebungsfestlegung (Versionierung, UML-Tool, Build-Tool, Tests, Dokumentation, Coding Style etc.)
-- Firmenporträt (Kontext Auftraggeber)
-- Projektbegleitender Bericht / Protokolle (Fortschritt, Entscheidungen, Nachweise)
-- UML-Modelle/Diagramme (Quellen + Exporte)
-- Build-/Deployment-Anweisungen (z. B. README/BUILD.md)
-- Code Conventions (Styleguide + ggf. Checkstyle-Konfiguration, falls genutzt)
+- Lastenheft des Auftraggebers
+- Entwicklungsumgebung und Toolfestlegung
+- Firmenporträt
+- Projektbegleitender Bericht und Protokolle
+- UML-Modelle und Diagramme
+- Build- und Deployment-Anweisungen
+- Code Conventions
 
 **Hinweis:** Die Ablagestruktur orientiert sich an der geforderten Release-/Repository-Abgabeform des Praktikums.
