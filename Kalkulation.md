@@ -27,7 +27,7 @@ Gameplay-Implementierungen:
 
 
 Botgegner & Schwierigkeitsstufen:
-- KI-Konzept
+- Bot-Konzept
 - Bot-Grundlogik
 - Schwierigkeitsstufen (Einfach, Mittel, Schwer)
 - Balance
@@ -57,7 +57,7 @@ Stabilisierung & Integration:
 
 Testphase und Feinschliff:
 - Funktionstests
-- KI/Bot Feintuning
+- Bot Feintuning
 - Bugfixes //nicht nur hier sondern eigentlich laufender prozess
 - Abnahmevorbereitung
 
@@ -68,8 +68,9 @@ Dokumentation & Abnahme:
 - Technische Dokumentation //Bedienungsanleitung
 - Integrations/Installationshinweise
 - Übergabe der Abnahmeversion
+- Die Ausarbeitung der Technischen Dokumentation erfolgt parallel zur Entwicklung der Software
 
-  Circa: idk
+  Circa: 20h
 
 
 Anmerkung: Bugfixes finden kontinuirlich auf dem Dev-Kit des AG statt und werden nicht explizit erwähnt.
