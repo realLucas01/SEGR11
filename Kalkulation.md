@@ -1,17 +1,17 @@
 Kalkulation in Stunden 
 
-Projektzeitraum: 12-16 Wochen //oder wieviel wir hatten 16 Wochen oder?
+Projektzeitraum: 16 Wochen
 
-Konzeption & Abstimmung:
+Konzeption:
 - Spielidee finalisieren
 - IFE-Rahmenbedingungen
 - Bedienkonzept
 - Modusdefinitionen (PvP, PvE)
-  -
+
   Circa: 10h
 
 
-Prototyp & Spielkern
+Prototyp & Spielkern:
 - Technisches Grundgerüst
 - Input Abstraktion (2 Spieler/Bot)
 - UI Framework
@@ -22,7 +22,6 @@ Prototyp & Spielkern
 Gameplay-Implementierungen:
 - Zwei Spieler Logik (ein Bildschirm)
 - Rundenverwaltung (Neustart, Gegnerauswahl, Abbruch)
-- Fehlerbehandlung??
 
   Circa: 50h
 
@@ -36,9 +35,9 @@ Botgegner & Schwierigkeitsstufen:
   Circa: 60h
 
 
-UI/UX Nutzerführun:
-- Start- & Modusauswahl (PvP, Pve)
-- SChwierigkeitauswahl
+UI/UX Nutzerführung:
+- Start- & Modusauswahl (PvP, PvE)
+- Schwierigkeitauswahl
 - In-Game UI
 - Endscreen (Gewinner Bild)
 - Touch Optimierung
@@ -48,9 +47,8 @@ UI/UX Nutzerführun:
 
 
 Stabilisierung & Integration:
-- Performance-Optimierung!!!!! //sehr wichtig, lieblingswort vom Jensi Schönthier (nicht)
-- TEST AUF DEMO KIT DES AG!!!!!
-- Dauerlast-lauf Test
+- Performance-Optimierung
+- Langzeitbetrieb und Stabilitätsprüfung (Speicher, Zustände, Performance)
 - Neustart und Fehlerverhalten
 - Anpassung an evtl. IFE-Systemvorgaben
 
@@ -62,9 +60,8 @@ Testphase und Feinschliff:
 - KI/Bot Feintuning
 - Bugfixes //nicht nur hier sondern eigentlich laufender prozess
 - Abnahmevorbereitung
-- TEST AUF DEMO KIT DES AG!!!!!
 
-  Circa: 20-40h //sehr offen weil wir massive Probleme feststellen könnten
+  Circa: 20-40h //sehr offen weil man größere Probleme feststellen könnte
 
 
 Dokumentation & Abnahme:
@@ -75,4 +72,4 @@ Dokumentation & Abnahme:
   Circa: idk
 
 
-Anmerkung: Bugfixes finden kontinuirlich statt nur bei Stabiliserung & Integration wird das nochmal sehr intensiv gemacht und denen eine besondere beachtung gegeben.
+Anmerkung: Bugfixes finden kontinuirlich auf dem Dev-Kit des AG statt und werden nicht explizit erwähnt.
