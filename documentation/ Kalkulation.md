@@ -40,7 +40,6 @@ UI/UX Nutzerführung:
 - Schwierigkeitauswahl
 - In-Game UI
 - Endscreen (Gewinner Bild)
-- Touch Optimierung
 - Airline CI Design (Logo, Farbe)
 
   Circa: 35h
