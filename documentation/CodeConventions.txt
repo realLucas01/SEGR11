@@ -9,5 +9,7 @@ Kommentare: deutsch
 
 Funktionsnamen- und Variablenformatierung: lower camelCase
 Klassennamen- und Packagenamenformatierung: upper CamelCase
- 
+
+Bitte achtet darauf das eure MR immer korrekt und vollständig ausgefüllt sind und mindestens ein Issue entweder einbinden, so das es geschlossen wird(z.B. Keyword "closes #Issuenummer" oder rechts über "Developement" das/die richtigen Wählen). Oder, falls das Issue durch die MR noch nicht fertig ist und nicht geschlossen werden soll, wie z.B. in diesem Fall hier, dann bitte wenigstens auf das Issue referenzieren per "#Issuenummer"(am besten in der Beschreibung).
+
 
