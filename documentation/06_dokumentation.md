@@ -2,29 +2,24 @@
 
 Ziel der Dokumentation ist es, die Nutzung, Integration/Installation sowie Wartung und Weiterentwicklung der Applikation „4-Connect“ im Umfeld des Inflight-Entertainment-Systems (IFE) nachvollziehbar zu beschreiben. Die Dokumentation wird so erstellt, dass sie offline verfügbar ist und strukturiert sowie vollständig für die jeweiligen Zielgruppen aufbereitet wird.
 
-Alle Dokumente werden als PDF im Release bereitgestellt. Die Inhalte werden im Repository zusätzlich in Markdown gepflegt. Für die Entwicklerdokumentation wird eine API-Dokumentation als HTML-Ausgabe (Javadoc) erstellt und im Release abgelegt.
+Die Dokumentationsartefakte werden in folgenden Formaten bereitgestellt:
+- Inhaltliche Dokumente: PDF
+- README: Markdown
+- API-Dokumentation: HTML (Javadoc)
+- Diagramme/UML-Exporte: PDF und/oder SVG
 
 
 ---
 
 ## 6.1 Anwenderdokumentation
 
-**Zielgruppe:** Passagiere (Endanwender).
+Eine separate Anwenderdokumentation für Passagiere wird nicht erstellt, da die Bedienung sowie Spielregeln und Abläufe vollständig innerhalb der Anwendung vermittelt werden.
 
-**Inhalte:**
-- Beschreibung des Spiels „4-Connect“ und Spielziel
-- Start und Navigation im IFE: Hauptmenü, Spielauswahl und Moduswahl für zwei Spieler sowie gegen Computer
-- Bedienung über Touch oder Maus, Ausführen eines Spielzugs sowie Hinweise und Feedback während des Spiels
-- Spielende mit Gewinn oder Unentschieden und Neustart eines laufenden Spiels
-- Umstellen der Sprache
-- Anzeige von Hilfe und Regeln innerhalb der Anwendung
-- Hinweise zur Bedienbarkeit, insbesondere Erkennbarkeit und Kontrast
+Stattdessen wird für die Demo eine kurze README bereitgestellt, die ausschließlich den Start und die Inbetriebnahme der Anwendung beschreibt.
 
+**Zielgruppe:** Abnahme-/Testpersonal (AG) sowie Projektbeteiligte für den Demo-Betrieb  
 
-**Form & Ablage:**
-- PDF: PDF im Release (Dateiname und Pfad werden im Release-Verzeichnis festgelegt)
-
----
+**Form** README als Markdown
 
 ## 6.2 Administratorendokumentation
 
@@ -36,12 +31,12 @@ Alle Dokumente werden als PDF im Release bereitgestellt. Die Inhalte werden im R
 - Konfiguration von Branding-Assets wie Logos, Farben und UI-Assets
 - Verwaltung von Sprachressourcen und Sprachpaketen
 - Update- und Release-Prozess durch Austausch des JAR und der Assets sowie Versionskennzeichnung
-- Logging und Fehlerdiagnose mit Beschreibung der Ablageorte und typischer Fehlermeldungen
+- Logging und Fehlerdiagnose 
 - Datenschutz und Sicherheit mit dem Grundsatz, dass keine personenbezogenen Daten verarbeitet, gespeichert oder extern übertragen werden
 - Deinstallation und Rollback durch Rückkehr zu einer vorherigen Version
 
-**Form & Ablage:**
-- PDF: - PDF im Release (Dateiname und Pfad werden im Release-Verzeichnis festgelegt)
+**Form**
+- PDF
 
 ---
 
@@ -51,18 +46,17 @@ Alle Dokumente werden als PDF im Release bereitgestellt. Die Inhalte werden im R
 
 **Inhalte:**
 - Projektüberblick und Architektur, inklusive Module, Schichten und Verantwortlichkeiten
-- Build und Ausführung, inklusive Build-Tool, Build-Kommandos, Erzeugung des JAR und Ablage im Release
+- Build und Ausführung, inklusive Build-Tool, Build-Kommandos, Erzeugung des JAR
 - Testkonzept und Testausführung, inklusive Struktur der Tests im Repository
 - Erweiterbarkeit, insbesondere Integration neuer Spiele in die Menüführung, Internationalisierung über String-Ressourcen und Branding über austauschbare Assets
 - Coding Standards und Konventionen mit Verweis auf die im Repository festgelegten Code Conventions
-- UML-Artefakte, darunter Use-Case-Diagramm, Klassendiagramm und weitere Diagramme, inklusive Ablageort im Repository
+- UML-Artefakte, darunter Use-Case-Diagramm, Klassendiagramm und weitere Diagramme,
 - API-Dokumentation als Javadoc-HTML-Ausgabe
 
-**Form & Ablage:**
-- PDF im Release: `final/entwicklerdoku.pdf`
-- Javadoc-HTML im Release: `final/entwicklerdoku/javadoc/`
-- UML-Exporte im Release: `final/entwicklerdoku/UML/` (PDF/PNG)
-
+**Form**
+- PDF
+- HTML (Javadoc)
+- PDF/SVG (UML-Exporte)
 
 ---
 
@@ -70,12 +64,11 @@ Alle Dokumente werden als PDF im Release bereitgestellt. Die Inhalte werden im R
 
 Die folgenden Dokumente sind Bestandteil des Repositories und werden im Release mit ausgeliefert bzw. referenziert:
 
-- Lastenheft des Auftraggebers
+- Lastenheft des AG
 - Entwicklungsumgebung und Toolfestlegung
-- Firmenporträt
+- Firmenporträt AG
+- Firmenporträt AN
 - Projektbegleitender Bericht und Protokolle
 - UML-Modelle und Diagramme
 - Build- und Deployment-Anweisungen
 - Code Conventions
-
-**Hinweis:** Die Ablagestruktur orientiert sich an der geforderten Release-/Repository-Abgabeform des Praktikums.
