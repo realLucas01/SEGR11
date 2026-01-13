@@ -84,24 +84,111 @@
 ### 3.1 Funktionale Anforderungen
 
 #### 3.1.1 Beschreibung der funktionalen Anforderungen mit Rollen innerhalb der Geschäftsprozesse
+Im exemplarischen Prozess "FourConnect spielen", interagiert ein Nutzer über die grafische Benutzerschnittstelle mit der Anwendung. Die Benutzereingaben werden durch Controller verarbeitet, welche die Spiellogik des GameCore verwenden. Der Fluggast wählt ein Spiel, konfiguriert den Spielmodus, führt Spielaktionen aus und kann optional die Spielhilfe aufrufen.
+
+Muss Kriterien:
+|AF Nr|Name|Beschreibung|    
+|AF-01|Spiel starten/auswählen|Der Fluggast wählt aus der, ihm vorliegendem Spielesammlung ein Spiel aus. Das ausgewählte Spiel wird anschließend gestartet und angezeigt.|
+|AF-02|Spielmodus wählen|Der Fluggast wählt zwischen den Spielmodi: "Spieler gegen Spieler" oder "Spieler gegen Bot".|
+|AF-03|Spielstein setzten|Der Fluggast wählt ein Feld oder eine Reihe im Spielfeld aus, der Spielstein dieses Spielers fällt daraufhin von oben in die Reihe und bleibt auf dem niedrigstem freiem Platz liegen.|
+|AF-04|Neue Runde starten|Nach dem Abschluss eines Spieles ist es dem Fluggast möglich eine neue Runde zu starten durch einen Knopfdruck. |
+|AF-05|Spielhilfe aufrufen|Vor, im Laufe oder nach Beendigung des Spieles, ist es dem Fluggast möglich eine Spielhilfe, mit den Grundlegenden Regeln des Spieles aufzurufen.|
+
+Kann Kriterien
+|KF Nr|Name|Beschreibung|    
+|KF-01| Localization| Dem Fluggast ist es möglich, über ein seperates Menü zwischen einer Auswahl an Sprachen auszuwählen|
+|KF-02| CI-UI-Anpassung| Den Flugbetreibern ist es möglich die Farben der Spielsteine anzupassen.
+
 
 #### 3.1.2 Aktivitäten mit Benutzerschnittstelle (UI)
+
+|Anwendungsfall ID| AF-01|
+|AF Name| Spiel starten/auswählen   |
+|Akteur| Fluggast    |
+|Vorbedingungen| Anwendung ist gestartet, Spielmenü wird angezeigt    |
+|Auslösendes Ereignis| Auswahl eines Spieles  |
+|Nachbedingung Erfolg| Anzeige der Spielmodus Wahl |
+|Nachbedingung Fehlschlag| Spiel konnte nicht initialisiert werden, Verbleib im Hauptmenü  |
+|Ablauf| Auswahl des Spieles im Hauptmenü    |
+|Benutzerschnittstelle| |
+
+|Anwendungsfall ID| AF-02|
+|AF Name| Spielmodus wählen  |
+|Akteur| Fluggast    |
+|Vorbedingungen| Das Spiel "4Connect" wird ausgewählt    |
+|Auslösendes Ereignis| Auswahl eines Spielmodus |
+|Nachbedingung Erfolg| Spiel wird initialisiert, Spielansicht wird angezeigt  |
+|Nachbedingung Fehlschlag| Spiel konnte nicht initialisiert werden, Rückkehr zum Hauptmenü  |
+|Ablauf| - Auswahl des Spieles im Hauptmenü  
+    - Auswahl des Spielmodus( Zwei Spieler oder Bot)
+    - Initialisierung des Spieles
+    - Anzeige der Spielansicht    |
+|Benutzerschnittstelle| |
+
+
+|Anwendungsfall ID| AF-03|
+|AF Name| Spielstein setzen   |
+|Akteur| Fluggast   |
+|Vorbedingungen| Spielansicht geöffnet, Spielstand = laufend   |
+|Auslösendes Ereignis| Auswahl einer Spalte durch den Fluggast  |
+|Nachbedingung Erfolg| Spielstein platziert, Spielfeld aktualisiert, Spielerwechsel  |
+|Nachbedingung Fehlschlag| Ungültige oder volle Spalte, kein Zustandswechsel  |
+|Ablauf| - Auswahl einer Spalte  
+    - Übergabe der Eingabe an den Controller  
+    - Platzierung des Spielsteins  
+    - Prüfung auf Spielende (Sieg/Unentschieden)  
+    - Spielerwechsel      |
+|Benutzerschnittstelle| |
+
+|Anwendungsfall ID| AF-04|
+|AF Name| Neue Runde starten   |
+|Akteur| Fluggast   |
+|Vorbedingungen| Spielrunde ist beendet    |
+|Auslösendes Ereignis| Bestätigung des "Neue Runde" Schaltstelle |
+|Nachbedingung Erfolg| Neue Runde startet mit leerem Spielfeld  |
+|Nachbedingung Fehlschlag| Neue Runde konnte nicht gestartet werden  |
+|Ablauf| - Anzeige des Endzustands
+    - Bestätigung der Schaltfläche "Neue Runde"    |
+|Benutzerschnittstelle| |
+
+|Anwendungsfall ID| AF-05|
+|AF Name| Spielhilfe aufrufen   |
+|Akteur| Fluggast    |
+|Vorbedingungen| Spiel oder Hauptmenü ist geöffnet    |
+|Auslösendes Ereignis| Auswahl "Spielhilfe"  |
+|Nachbedingung Erfolg| Spielhilfe mit Regeln wird angezeigt  |
+|Nachbedingung Fehlschlag| Spielhilfe kann nicht angezeigt werden  |
+|Ablauf| - Auswahl der Spielhilfe
+    - Anzeige der grundlegenden Spielregeln      |
+|Benutzerschnittstelle| |
 
 #### 3.1.3 Fachliches Klassendiagramm (Domain Model) / Produktdaten
 
 ### 3.2 Nichtfunktionale Anforderungen
 
 #### 3.2.1 Benutzbarkeit
+**NF-B1 Benutzung**
+Die Anwendung soll Ausschließlich über eien grafische Benutzoberfläche bedient werden. Alle Funktionen müssen über eindeutig beschriftete Bedienelemente erreichbar sein. Die Bedienung soll zudem ohne zusätzliche Schulung möglich sein.
 
 #### 3.2.2 Zuverlässigkeit
+**NF-Z1 Zuverlässiger Betrieb**
+Die Anwendung muss während der Nutzung stabil laufen. Ungültige Benutzereingaben dürfen nicht zum Absturz der Anwendung führen. Auch Fehlerhalfte Spielzüge müsse abgefangen werden.
 
 #### 3.2.3 Effizienz
+**NF-E1 Effizienz**
+Die Verarbeitung von Benutzereingaben und die Aktualisierung der Benutzoberfläche sollen unmittelbar erfolgen. Spielzüge müssen ohne wahrnehmbare Verzögerung dargestellt werden. Menüwechsel und Anzeigen müssen direkt erfolgen.
 
 #### 3.2.4 Softwarewartung
+**NF-W1 Softwarewartung**
+Die Anwendung soll so aufgebaut sein, dass zukünftige Erweiterungen mit geringem Aufwand möglich sind. Erweiterungen an den Sprachen und des Designs sollen ohne grundlegende Änderungen an der Spiellogik möglich sein. Erweiterungen an der Spielesammlung, soll die Logik der anderen Spiele nicht beeinträchtigen oder verändern.
 
 #### 3.2.5 Sicherheit
+**NF-S1 Sicherheit**
+Für die Anwendung liegen keine besinderen Sicherheitsanforderungen vor. Es werden zudem keine personenbezogenen Daten dauerhaft gespeichert. Für die Fluggäste ist keine besondere Authentifizierung oder Autorisierung erforderlich.
 
 #### 3.2.6 Normen
+**NF-N1 Normen** 
+Die Anwendungen ist als Unterhaltungssoftware für Fluggäste konzipiert und ist nicht Bestandteil sicherheitskritischer Flugzeugsysteme. Es besteht keinerlei Anbindung an Flugsteuerungs-, Navigations- oder Kommunikationssysteme. Die Anwenung muss sonst keine gesetzliche Vorgaben erfüllen.
 
 
 ## 4 Testung
