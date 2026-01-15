@@ -5,8 +5,8 @@
 
 Anbieter: 
 Gervithrall System GmbH
-Friedrich-List-Platz 1,
-01069 Dresden
+Perlickstraße 1, 
+04103 Leipzig
 
 
 Angebotsdatum: 26.01.2026
