@@ -43,7 +43,8 @@ Der Leistungsumfang umfasst:
 
 ## 3. Technische Rahmenbedingungen
 
-- Lokale Ausführung auf dem Sitzmonitor  
+- Lokale Ausführung auf dem Sitzmonitor
+- DO-178C konforme entwicklung
 - Keine externe Server- oder Netzwerkverbindung erforderlich  
 - Kompatibel mit gängigen IFE-Systemarchitekturen (nach Abstimmung)  
 - Bereitstellung als
@@ -85,7 +86,7 @@ Nicht enthalten (optional buchbar):
 
 - 33,3 % Anzahlung bei Auftragserteilung
 - 66,7 % Restzahlung nach Abnahme
-- Zahlungsziel: 14 Tage Werktage nach Erteilung/Abnahme
+- Zahlungsziel: 14 Werktage nach Bereitstellung
 
 ---
 
@@ -117,4 +118,5 @@ Nicht enthalten (optional buchbar):
 
 ---
 
+Gervithrall
 Dresden den 26.01.2026
