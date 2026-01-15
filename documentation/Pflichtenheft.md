@@ -53,12 +53,50 @@
 
 ## 1 Zielbestimmung
 
+Ziel dieses Projekts ist die Konzeption und Umsetzung einer offlinefähigen Spieleapplikation zur Erweiterung eines bestehenden Inflight-Entertainment-Systems. Die Applikation soll Passagieren während des Fluges ein leicht verständliches und unterhaltsames Spielangebot bereitstellen und sich dabei nahtlos in die vorhandene Systemlandschaft integrieren.
+
+Im Rahmen dieses Pflichtenhefts werden die funktionalen und nicht-funktionalen Eigenschaften des zu entwickelnden Produkts konkretisiert. Die Zielbestimmung dient als verbindliche Grundlage für Entwicklung, Test, Abnahme und Übergabe des Systems.
+
 ### 1.1 Muss-Kriterien
+| ID  | Muss-Kriterium                                                                                                                             |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| MK-IO-01 | Die Bedienung erfolgt über Touch- oder Maussteuerung. |
+| MK-IO-02 | Wiederverwendbare UI- und Navigationskomponenten müssenn bereitgestellt werden. |
+| MK-IO-03 | Es gibt einen Auswahlbildschirm für die Modusauswahl(Bot/1v1). |
+| MK-IO-04  | Es gibt einen Endbildschirm um den Ausgang des Spiels anzuzeigen. |
+| MK-IO-05  | Die Anwendung muss eine verständliche Darstellung der Spielregeln bereitstellen. |
+| MK-IMPL-01  | Die Anwendung muss in der Programmiersprache Java implementiert und auf der vom Auftraggeber bereitgestellten IFE-Hardware lauffähig sein. |
+| MK-IMPL-02  | Die Nutzung der Anwendung muss vollständig offline möglich sein. |
+| MK-IMPL-03  | Es ist möglich das Spiel 4-Gewinnt zu spielen. |
+| MK-IMPL-04  | Das System muss einen Mehrspielermodus für zwei Passagiere auf einem gemeinsamen Sitzmonitor bereitstellen. |
+| MK-IMPL-05  | Das System muss einen Einzelspielermodus gegen einen Computergegner unterstützen. |
+| MK-IMPL-06  | Spielzüge müssen regelkonform verarbeitet und umgesetzt werden. |
+| MK-IMPL-07  | Das System muss erkennen wann ein Spieler gewonnen hat. |
+| MK-IMPL-08  | Das System muss erkennen wenn keine weiteren Spielzüge mehr möglich sind und das Spiel als "Unentschieden" beenden. |
+| MK-IMPL-09  | Ein laufendes Spiel muss jederzeit neu gestartet werden können. |
+| MK-IMPL-10 | Die Anwendung muss jederzeit korrekt in das IFE-Hauptmenü zurückkehren können. |
+| MK-SYS-01 | Es dürfen keine personenbezogenen Daten erfasst, gespeichert oder übertragen werden. |
+| MK-SYS-02 | Die Architektur ist modular aufgebaut, damit zukünftige Erweiterungen um weitere Spiele mit geringem Aufwand möglich sind. |
+
+
 
 ### 1.2 Kann-Kriterien
+| ID | Kann-Kriterium                                                                                                                   |
+| -- | -------------------------------------------------------------------------------------------------------------------------------- |
+| KK-IO-01  | Die Sprache der Benutzeroberfläche kann an verschiedene Sprachen angepasst werden. |
+| KK-IO-02 | Die Benutzeroberfläche kann an die Corporate Identity verschiedener Airlines angepasst werden (z. B. Farben, Logos, UI-Assets). |
+| KK-IO-03 | Visuelles Feedback oder einfache Animationen bei Spielzügen können implementiert werden. |
+| KK-IMPL-01 | Der Computergegner kann optional in unterschiedlichen Schwierigkeitsstufen angeboten werden. |
+
 
 ### 1.3 Abgrenzungskriterien
-
+| ID | Abgrenzung                                                                                            |
+| -- | ----------------------------------------------------------------------------------------------------- |
+| AK-SYS-01 | Funktionen, die eine Netzwerk- oder Internetverbindung erfordern sind nicht Bestandteil des Systems. |
+| AK-SYS-02 | Es erfolgt keine Anbindung an sicherheitskritische oder avionische Systeme. |
+| AK-SYS-03 | Die Speicherung von Spielständen, Statistiken oder Nutzerdaten ist ausgeschlossen. |
+| AK-IMPL-01 | Eine Mehrspielerfunktion über mehrere Sitzplätze hinweg wird nicht umgesetzt. |
+| AK-IO-01 | Werbung oder Monetarisierung sind nicht vorgesehen. |
 
 ## 2 Produkteinsatz
 
