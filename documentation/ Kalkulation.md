@@ -83,3 +83,7 @@ Dokumentation & Abnahme:
 
 
 Anmerkung: Bugfixes finden kontinuirlich auf dem Dev-Kit des AG statt und werden nicht explizit erwähnt.
+
+
+
+Gewinn/Risikoaufschlag: 60.000€
