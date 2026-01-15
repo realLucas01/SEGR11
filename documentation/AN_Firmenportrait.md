@@ -21,7 +21,7 @@ Nina Hartmann, Technische Leitung
 
 
 ## Firmensitz und weitere Standorte 
-Hauptsitz: Leipzig    
+Hauptsitz: Perlickstraße 1, Leipzig    
 
 ## wichtige Meilensteine 
 2019    Unternehmungsgründung  
