@@ -95,6 +95,7 @@ Muss Kriterien:
 |AF-03 |Spielstein setzten |Der Fluggast wählt ein Feld oder eine Reihe im Spielfeld aus, der Spielstein dieses Spielers fällt daraufhin von oben in die Reihe und bleibt auf dem niedrigstem freiem Platz liegen. |
 |AF-04 |Neue Runde starten |Nach dem Abschluss eines Spieles ist es dem Fluggast möglich eine neue Runde zu starten durch einen Knopfdruck. |
 |AF-05 |Spielhilfe aufrufen |Vor, im Laufe oder nach Beendigung des Spieles, ist es dem Fluggast möglich eine Spielhilfe, mit den Grundlegenden Regeln des Spieles aufzurufen. |
+|AF-06 |Spielfeld zurücksetzten|Im Laufe des Spieles, ist es dem Fluggast möglich das Spielfeld zu seinem Ausgangszustand zurückzusetzten.| 
 
 Kann Kriterien:  
 |KF Nr|Name|Beschreibung| 
@@ -159,6 +160,17 @@ Kann Kriterien:
 |Nachbedingung Erfolg| Spielhilfe mit Regeln wird angezeigt  |
 |Nachbedingung Fehlschlag| Spielhilfe kann nicht angezeigt werden  |
 |Ablauf| - Auswahl der Spielhilfe <br/>- Anzeige der grundlegenden Spielregeln      |
+|Benutzerschnittstelle| |  
+
+|Anwendungsfall ID| AF-06|
+|-----|-------------|
+|AF Name| Spielfeld zurücksetzten   |
+|Akteur| Fluggast    |
+|Vorbedingungen| Ein Spiel ist in Betrieb    |
+|Auslösendes Ereignis| Auswahl Schaltfläche "Zurücksetzten"  |
+|Nachbedingung Erfolg| Das Spielfeld wird zurückgesetzt auf seinen Ausgangszustand  |
+|Nachbedingung Fehlschlag| Spielfeld wird nicht zurückgesetzt  |
+|Ablauf| - Auswahl der Schaltfläche "Zurücksetzten" <br/>- Übergabe an den GameController <br/>- Spielfläche wird von den Spielsteinen geleert <br/>- Anzeige des neuen leeren Spielfeldes       |
 |Benutzerschnittstelle| |  
 
 #### 3.1.3 Fachliches Klassendiagramm (Domain Model) / Produktdaten
