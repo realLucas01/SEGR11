@@ -61,9 +61,9 @@ Im Rahmen dieses Pflichtenhefts werden die funktionalen und nicht-funktionalen E
 | ID  | Name | Beschreibung |
 | :-- | :--: | :-- |
 | MK100 | Eingabe | Die Bedienung erfolgt über Touch- oder Maussteuerung. |
-| MK101 | UI-Aufbau | Wiederverwendbare UI- und Navigationskomponenten müssenn bereitgestellt werden. |
-| MK102 | Modusauswahl | Es gibt einen Auswahlbildschirm für die Modusauswahl(Bot/1v1). |
-| MK103 | End-Screen | Es gibt einen Endbildschirm um den Ausgang des Spiels anzuzeigen. |
+| MK101 | UI-Aufbau | Wiederverwendbare UI- und Navigationskomponenten müssen bereitgestellt werden. |
+| MK102 | Gegnerauswahl | Es gibt einen Auswahlbildschirm für die Modusauswahl(Bot/1v1). |
+| MK103 | End-Screen | Es gibt einen Endbildschirm, um den Ausgang des Spiels anzuzeigen. |
 | MK104 | Spielregeln | Die Anwendung muss eine verständliche Darstellung der Spielregeln bereitstellen. |
 | MK201 | Programmiersprache | Die Anwendung muss in der Programmiersprache Java implementiert und auf der vom Auftraggeber bereitgestellten IFE-Hardware lauffähig sein. |
 | MK202 | Offlinezwang | Die Nutzung der Anwendung muss vollständig offline möglich sein. |
@@ -71,10 +71,10 @@ Im Rahmen dieses Pflichtenhefts werden die funktionalen und nicht-funktionalen E
 | MK204 | Multiplayer | Das System muss einen Mehrspielermodus für zwei Passagiere auf einem gemeinsamen Sitzmonitor bereitstellen. |
 | MK205 | Singleplayer | Das System muss einen Einzelspielermodus gegen einen Bot unterstützen. |
 | MK206 | Spielzüge | Spielzüge müssen regelkonform verarbeitet und umgesetzt werden. |
-| MK207 | Win-Condition | Das System muss erkennen wann ein Spieler gewonnen hat. |
-| MK208 | Unentschieden | Das System muss erkennen wenn keine weiteren Spielzüge mehr möglich sind und das Spiel als "Unentschieden" beenden. |
+| MK207 | Win-Condition | Das System muss erkennen, wenn ein Spieler gewonnen hat. |
+| MK208 | Unentschieden | Das System muss erkennen, wenn keine weiteren Spielzüge mehr möglich sind und das Spiel als "Unentschieden" beenden. |
 | MK209 | Neustart | Ein laufendes Spiel muss jederzeit neu gestartet werden können. |
-| MK210 | Rückkehr |Die Anwendung muss jederzeit korrekt in das IFE-Hauptmenü zurückkehren können. |
+| MK210 | Rückkehr | Die Anwendung muss jederzeit korrekt in das IFE-Hauptmenü zurückkehren können. |
 | MK300 | Datenverarbeitung | Es dürfen keine personenbezogenen Daten erfasst, gespeichert oder übertragen werden. |
 | MK301 | Modularität | Die Architektur ist modular aufgebaut, damit zukünftige Erweiterungen um weitere Spiele mit geringem Aufwand möglich sind. |
 
