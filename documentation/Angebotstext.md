@@ -8,6 +8,12 @@ Gervithrall System GmbH
 Perlickstraße 1, 
 04103 Leipzig
 
+Ansprechpartner:
+Lucas Rumann
+E-Mail: lucasr@gervithrall@systems.de
+Telefon: 0351 6482642
+
+
 
 Angebotsdatum: 26.01.2026
 Angebotsnummer: ANG-0032
@@ -45,8 +51,8 @@ Der Leistungsumfang umfasst:
 
 - Lokale Ausführung auf dem Sitzmonitor
 - DO-178C konforme entwicklung
-- Keine externe Server- oder Netzwerkverbindung erforderlich  
-- Kompatibel mit gängigen IFE-Systemarchitekturen (nach Abstimmung)  
+- Keine externe Server- oder Netzwerkverbindung erforderlich
+– Vollständige Kompatibilität mit den aktuellen IFE-Systemarchitekturen des AG
 - Bereitstellung als
   - ausführbares Modul oder
   - integrierbare Applikation gemäß Systemvorgaben  
@@ -77,7 +83,7 @@ Im Preis enthalten:
 Nicht enthalten (optional buchbar):
 
 - Anpassungen für weitere IFE-Systeme
-- Zusätzliche Spielmodi (Botgegner)
+- Zusätzliche Schwie (Botgegner)
 - Wartung, Updates oder Erweiterungen nach Projektabschluss
 
 ---
