@@ -67,9 +67,9 @@ Im Rahmen dieses Pflichtenhefts werden die funktionalen und nicht-funktionalen E
 | MK104 | Spielregeln | Die Anwendung muss eine verständliche Darstellung der Spielregeln bereitstellen. |
 | MK201 | Programmiersprache | Die Anwendung muss in der Programmiersprache Java implementiert und auf der vom Auftraggeber bereitgestellten IFE-Hardware lauffähig sein. |
 | MK202 | Offlinezwang | Die Nutzung der Anwendung muss vollständig offline möglich sein. |
-| MK203 | Testspiel | Es ist möglich das Spiel 4-Gewinnt zu spielen. |
+| MK203 | Muster Spiel | Es ist möglich das Spiel 4-Gewinnt zu spielen. |
 | MK204 | Multiplayer | Das System muss einen Mehrspielermodus für zwei Passagiere auf einem gemeinsamen Sitzmonitor bereitstellen. |
-| MK205 | Singleplayer | Das System muss einen Einzelspielermodus gegen einen Computergegner unterstützen. |
+| MK205 | Singleplayer | Das System muss einen Einzelspielermodus gegen einen Bot unterstützen. |
 | MK206 | Spielzüge | Spielzüge müssen regelkonform verarbeitet und umgesetzt werden. |
 | MK207 | Win-Condition | Das System muss erkennen wann ein Spieler gewonnen hat. |
 | MK208 | Unentschieden | Das System muss erkennen wenn keine weiteren Spielzüge mehr möglich sind und das Spiel als "Unentschieden" beenden. |
@@ -81,22 +81,22 @@ Im Rahmen dieses Pflichtenhefts werden die funktionalen und nicht-funktionalen E
 
 
 ### 1.2 Kann-Kriterien
-| ID | Kann-Kriterium                                                                                                                   |
-| -- | -------------------------------------------------------------------------------------------------------------------------------- |
-| KK-IO-01  | Die Sprache der Benutzeroberfläche kann an verschiedene Sprachen angepasst werden. |
-| KK-IO-02 | Die Benutzeroberfläche kann an die Corporate Identity verschiedener Airlines angepasst werden (z. B. Farben, Logos, UI-Assets). |
-| KK-IO-03 | Visuelles Feedback oder einfache Animationen bei Spielzügen können implementiert werden. |
-| KK-IMPL-01 | Der Computergegner kann optional in unterschiedlichen Schwierigkeitsstufen angeboten werden. |
+| ID  | Name | Beschreibung |
+| :-- | :--: | :-- |
+| KK100 | Anzeigesprache | Die Sprache der Benutzeroberfläche kann an verschiedene Sprachen angepasst werden. |
+| KK101 | CI-Anpassung | Die Benutzeroberfläche kann an die Corporate Identity verschiedener Airlines angepasst werden (z. B. Farben, Logos, UI-Assets). |
+| KK102 | Animationen | Visuelles Feedback oder einfache Animationen bei Spielzügen können implementiert werden. |
+| KK200 | Schwierigkeitsstufen | Der Computergegner kann optional in unterschiedlichen Schwierigkeitsstufen angeboten werden. |
 
 
 ### 1.3 Abgrenzungskriterien
-| ID | Abgrenzung                                                                                            |
-| -- | ----------------------------------------------------------------------------------------------------- |
-| AK-SYS-01 | Funktionen, die eine Netzwerk- oder Internetverbindung erfordern sind nicht Bestandteil des Systems. |
-| AK-SYS-02 | Es erfolgt keine Anbindung an sicherheitskritische oder avionische Systeme. |
-| AK-SYS-03 | Die Speicherung von Spielständen, Statistiken oder Nutzerdaten ist ausgeschlossen. |
-| AK-IMPL-01 | Eine Mehrspielerfunktion über mehrere Sitzplätze hinweg wird nicht umgesetzt. |
-| AK-IO-01 | Werbung oder Monetarisierung sind nicht vorgesehen. |
+| ID  | Name | Beschreibung |
+| :-- | :--: | :-- |
+| AK100 | Werbung | Werbung oder Monetarisierung sind nicht vorgesehen. |
+| AK200 | Netzwerk Multiplayer | Eine Mehrspielerfunktion über mehrere Sitzplätze hinweg wird nicht umgesetzt. |
+| AK300 | Internetverbindung | Funktionen, die eine Netzwerk- oder Internetverbindung erfordern sind nicht Bestandteil des Systems. |
+| AK301 | Sicherheit | Es erfolgt keine Anbindung an sicherheitskritische oder avionische Systeme. |
+| AK302 | Datenspeicherung | Die Speicherung von Spielständen, Statistiken oder Nutzerdaten ist ausgeschlossen. |
 
 ## 2 Produkteinsatz
 
