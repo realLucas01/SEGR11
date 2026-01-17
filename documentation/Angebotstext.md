@@ -83,7 +83,7 @@ Im Preis enthalten:
 Nicht enthalten (optional buchbar):
 
 - Anpassungen für weitere IFE-Systeme
-- Zusätzliche Schwie (Botgegner)
+- Zusätzliche Schwierigkeitsstufen (Botgegner)
 - Wartung, Updates oder Erweiterungen nach Projektabschluss
 
 ---
