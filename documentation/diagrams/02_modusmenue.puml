@@ -1,0 +1,15 @@
+@startuml
+title 4-Connect - Modusmenue (Wireframe)
+salt
+{
+  {+
+    {^ "4-Connect - Modus" }
+    { "Bitte Modus waehlen:" }
+    {[ Zwei Spieler ]}
+    {[ Gegen Bot ]}
+    { }
+    {[ Hilfe ]}
+    {[ Zurueck ]}
+  }
+}
+@enduml

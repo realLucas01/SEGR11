@@ -1,0 +1,38 @@
+@startuml
+title 4-Connect UI - Screenflow
+
+skinparam linetype ortho
+skinparam defaultFontName Monospaced
+top to bottom direction
+
+skinparam nodesep 300
+skinparam ranksep 100
+skinparam padding 5
+
+' --- States mit festen Labels (gleiche Breite durch Monospace + Spaces) ---
+state "     Hauptmenue     " as Hauptmenue
+state "     Modusmenue     " as Modusmenue
+state "    Spielansicht    " as Spiel
+state "   Hilfe / Regeln   " as Hilfe
+state "      Ergebnis      " as Ergebnis
+
+[*] --> Hauptmenue : Start
+
+Hauptmenue --> Modusmenue : Spiel auswaehlen\n(AF-01)
+
+Modusmenue --> Spiel : Zwei Spieler\n(AF-02)
+Modusmenue --> Spiel : Gegen Bot\n(AF-02)
+Modusmenue --> Hauptmenue : Zurueck
+
+Spiel --> Hilfe : Hilfe\n(AF-05)
+Hilfe --> Spiel : Zurueck
+
+Spiel --> Spiel : Spielzug\n(AF-03)
+Spiel --> Spiel : Neue Runde\n(AF-04)
+
+Spiel --> Ergebnis : Spielende\n(Sieg/Unentschieden)
+Ergebnis --> Spiel : Neue Runde\n(AF-04)
+Ergebnis --> Hauptmenue : Beenden
+
+Spiel --> Hauptmenue : Beenden
+@enduml

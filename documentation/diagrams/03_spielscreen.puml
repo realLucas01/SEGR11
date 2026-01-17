@@ -1,0 +1,19 @@
+@startuml
+title 4-Connect - Spielansicht (Wireframe)
+salt
+{
+  {+
+    {^ "4-Connect" | [ Hilfe ] | [ Sprache ] }
+    { "Modus: <Zwei Spieler / Bot>" }
+    { "Am Zug: <Spieler 1 / Spieler 2 / Bot>" }
+    { }
+    { "Spielfeld (2D)" }
+    { "-----------------------------" }
+    { "Spaltenauswahl durch Antippen" }
+    { }
+    {
+      [ Neue Runde ] | [ Beenden ]
+    }
+  }
+}
+@enduml

@@ -1,0 +1,47 @@
+@startuml
+title 4-Connect - Aktivitaetsdiagramm Spielrunde
+
+start
+:Spiel im Hauptmenue auswaehlen (AF-01);
+:Spielmodus waehlen (AF-02);
+:Spielansicht anzeigen;
+
+while (Spiel aktiv?) is (ja)
+  if (Hilfe-Icon gedrueckt?) then (ja)
+    :Hilfe anzeigen (AF-05);
+    :Zurueck zur Spielansicht;
+  endif
+
+  if (Sprach-Icon gedrueckt?) then (ja)
+    :Sprache auswaehlen;
+    :Zurueck zur Spielansicht;
+  endif
+
+  if (Neue Runde gedrueckt?) then (ja)
+    :Spielzustand zuruecksetzen (AF-04);
+    :Spielansicht anzeigen;
+  else (nein)
+    :Spielzug ausfuehren (AF-03);
+
+    if (Gewinn erkannt?) then (ja)
+      :Ergebnisbildschirm anzeigen\n("Spieler 1 gewinnt" / "Spieler 2 gewinnt");
+      break
+    else (nein)
+      if (Unentschieden erkannt?) then (ja)
+        :Ergebnisbildschirm anzeigen\n("Unentschieden");
+        break
+      endif
+    endif
+  endif
+endwhile (nein)
+
+if (Neue Runde im Ergebnis?) then (ja)
+  :Spielzustand zuruecksetzen (AF-04);
+  :Spielansicht anzeigen;
+  stop
+else (Zurueck zum Hauptmenue)
+  :Hauptmenue anzeigen;
+  stop
+endif
+
+@enduml

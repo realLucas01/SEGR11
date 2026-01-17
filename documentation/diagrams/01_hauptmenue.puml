@@ -1,0 +1,14 @@
+@startuml
+title 4-Connect - Hauptmenue (Wireframe)
+
+salt
+{
+  {+
+    {^ "Hauptmenue" }
+    { "Spielauswahl" }
+    {[ 4-Connect starten ]}
+    { }
+    {[ Beenden ]}
+  }
+}
+@enduml

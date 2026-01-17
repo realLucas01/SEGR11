@@ -1,0 +1,14 @@
+@startuml
+title 4-Connect - Ergebnis (Wireframe)
+salt
+{
+  {+
+    {^ "Ergebnis" }
+    { "Spielende:" }
+    { "<Spieler 1 gewinnt / Spieler 2 gewinnt / Unentschieden>" }
+    { }
+    {[ Neue Runde ]}
+    {[ Zurueck zum Hauptmenue ]}
+  }
+}
+@enduml
