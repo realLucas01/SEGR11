@@ -3,13 +3,20 @@
 
 ---
 
-Anbieter (Auftragnehmer): 
-[Name des Unternehmens / Entwicklers]  
-[Adresse]  
-[Kontaktinformationen]
+Anbieter: 
+Gervithrall System GmbH
+Perlickstraße 1, 
+04103 Leipzig
 
-Angebotsdatum: TT.MM.JJJJ  
-Angebotsnummer: ANG-XXXX
+Ansprechpartner:
+Lucas Rumann
+E-Mail: lucasr@gervithrall@systems.de
+Telefon: 0351 6482642
+
+
+
+Angebotsdatum: 26.01.2026
+Angebotsnummer: ANG-0032
 
 ---
 
@@ -28,26 +35,26 @@ Der Leistungsumfang umfasst:
 
 - Entwicklung eines lokal ausführbaren Spiels für Inflight-Entertainment-Systeme  
 - Zwei-Spieler-Gameplay an einem Bildschirm
-- Oder Einspieler-Gameplay gegen einen Bot
+- Einspieler-Gameplay gegen einen Bot
 - Intuitive Bedienung über
-  - Touchscreen oder 
+  - Touchscreen oder
   - vorhandene Sitz-Controller (systemabhängig)  
 - Optimierte Performance für
   - begrenzte Hardware-Ressourcen  
   - lange Laufzeiten ohne Neustart  
 - Vollständige Offline-Funktionalität 
-- Airline-taugliches, altersneutrales Spieldesign  
-- Saubere Trennung von Spiel-Logik und Benutzeroberfläche für einfache Wartung  
+- Saubere Trennung der Spiel-Logik und der Benutzeroberfläche
 
 ---
 
 ## 3. Technische Rahmenbedingungen
 
-- Lokale Ausführung auf dem Sitzmonitor  
-- Keine externe Server- oder Netzwerkverbindung erforderlich  
-- Kompatibel mit gängigen IFE-Systemarchitekturen (nach Abstimmung)  
-- Bereitstellung als  
-  - ausführbares Modul oder  
+- Lokale Ausführung auf dem Sitzmonitor
+- DO-178C konforme entwicklung
+- Keine externe Server- oder Netzwerkverbindung erforderlich
+– Vollständige Kompatibilität mit den aktuellen IFE-Systemarchitekturen des AG
+- Bereitstellung als
+  - ausführbares Modul oder
   - integrierbare Applikation gemäß Systemvorgaben  
 
 ---
@@ -62,7 +69,7 @@ Der Leistungsumfang umfasst:
 
 ## 5. Vergütung
 
-Projektpreis (netto): EUR [Betrag]  
+Projektpreis (netto): ab 250.000 €, abhängig vom finalen Funktionsumfang gemäß Pflichtenheft
 zzgl. gesetzlicher Umsatzsteuer
 
 Im Preis enthalten:
@@ -70,27 +77,28 @@ Im Preis enthalten:
 - Konzeption  
 - Entwicklung  
 - Testphase  
-- Übergabe der finalen Version  
+- Übergabe der finalen Version
+- Ein-Monatige Supportphase
 
 Nicht enthalten (optional buchbar):
 
-- Anpassungen für weitere IFE-Systeme  
-- Zusätzliche Spielmodi  
-- Wartung, Updates oder Erweiterungen nach Projektabschluss  
+- Anpassungen für weitere IFE-Systeme
+- Zusätzliche Schwierigkeitsstufen (Botgegner)
+- Wartung, Updates oder Erweiterungen nach Projektabschluss
 
 ---
 
 ## 6. Zahlungsbedingungen
 
-- 33,3 % Anzahlung bei Auftragserteilung  
-- 66,7 % Restzahlung nach Abnahme  
-- Zahlungsziel: 14 Tage netto
+- 33,3 % Anzahlung bei Auftragserteilung
+- 66,7 % Restzahlung nach Abnahme
+- Zahlungsziel: 14 Werktage nach Bereitstellung
 
 ---
 
 ## 7. Projektlaufzeit
 
-- Geschätzte Entwicklungsdauer: ca. [X] Wochen nach Auftragserteilung  
+- Geschätzte Entwicklungsdauer: ca. 12 Wochen nach Auftragserteilung  
 - Ein verbindlicher Liefertermin wird nach finaler Spezifikation festgelegt
 
 ---
@@ -108,6 +116,13 @@ Nicht enthalten (optional buchbar):
 
 ---
 
-**Ort, Datum**
+## 10. Haftung
 
-**Unterschrift Auftragnehmer**
+- Keine Haftung für indirekte Schäden
+- Keine Haftung für Systemausfälle außerhalb der Applikation
+- Haftung begrenzt auf Auftragswert
+
+---
+
+Gervithrall
+Dresden den 26.01.2026

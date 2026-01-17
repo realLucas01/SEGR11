@@ -1,4 +1,14 @@
-Kalkulation in Stunden 
+Kalkulation in Stunden aufgeteilt auf Arbeitnehmer
+
+Rollenverteilung der Mitarbeitenden:
+Lucas Rumann: Projekt Manager
+Luca Matteo Tauscher: Senior Software Engineer
+Domenik Schütz: Finances & Software Engineer
+Truong Tan Long Nguyen: Junior UX Engineer
+Marc Müller: Designer
+
+
+
 
 Projektzeitraum: 16 Wochen
 
@@ -73,3 +83,7 @@ Dokumentation & Abnahme:
 
 
 Anmerkung: Bugfixes finden kontinuirlich auf dem Dev-Kit des AG statt und werden nicht explizit erwähnt.
+
+
+
+Gewinn/Risikoaufschlag: 60.000€
