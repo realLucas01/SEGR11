@@ -1,12 +1,12 @@
 # 6 Dokumentation
 
-Ziel der Dokumentation ist es, die Nutzung, Integration/Installation sowie Wartung und Weiterentwicklung der Applikation „4-Connect“ im Umfeld des Inflight-Entertainment-Systems (IFE) nachvollziehbar zu beschreiben. Die Dokumentation wird so erstellt, dass sie offline verfügbar ist und strukturiert sowie vollständig für die jeweiligen Zielgruppen aufbereitet wird.
+Ziel der Dokumentation ist es, die Nutzung, Integration/Installation sowie Wartung und Weiterentwicklung der Applikation „4-Connect“ im Umfeld des Inflight-Entertainment-Systems (IFE) nachvollziehbar zu beschreiben. Die Dokumentation wird so erstellt, dass sie offline verfügbar ist und strukturiert sowie vollständig für die jeweiligen Zielgruppen aufbereitet ist.
 
 Die Dokumentationsartefakte werden in folgenden Formaten bereitgestellt:
 - Inhaltliche Dokumente: PDF
 - README: Markdown
 - API-Dokumentation: HTML (Javadoc)
-- Diagramme/UML-Exporte: PDF und/oder SVG
+- Diagramme / UML-Exporte: PDF und/oder SVG
 
 
 ---
@@ -19,7 +19,7 @@ Stattdessen wird für die Demo eine kurze README bereitgestellt, die ausschließ
 
 **Zielgruppe:** Abnahme-/Testpersonal (AG) sowie Projektbeteiligte für den Demo-Betrieb  
 
-**Form** README als Markdown
+**Form:** README als Markdown
 
 ## 6.2 Administratorendokumentation
 
@@ -27,11 +27,11 @@ Stattdessen wird für die Demo eine kurze README bereitgestellt, die ausschließ
 
 **Inhalte:**
 - Systemvoraussetzungen der IFE-Umgebung und Betrieb ohne externe Dienste
-- Installation und Deployment des JAR in der vorgesehenen IFE-Struktur sowie Start- und Rücksprungmechanismus in das IFE-Menü
+- Installation und Deployment des JAR in der vorgesehenen IFE-Struktur sowie Start- und Rücksprungmechanismus zum IFE-Menü
 - Konfiguration von Branding-Assets wie Logos, Farben und UI-Assets
 - Verwaltung von Sprachressourcen und Sprachpaketen
 - Update- und Release-Prozess durch Austausch des JAR und der Assets sowie Versionskennzeichnung
-- Logging und Fehlerdiagnose 
+- Logging und Fehlerdiagnose
 - Datenschutz und Sicherheit mit dem Grundsatz, dass keine personenbezogenen Daten verarbeitet, gespeichert oder extern übertragen werden
 - Deinstallation und Rollback durch Rückkehr zu einer vorherigen Version
 
@@ -68,7 +68,7 @@ Die folgenden Dokumente sind Bestandteil des Repositories und werden im Release 
 - Entwicklungsumgebung und Toolfestlegung
 - Firmenporträt AG
 - Firmenporträt AN
-- Projektbegleitender Bericht und Protokolle
+- projektbegleitender Bericht und Protokolle
 - UML-Modelle und Diagramme
-- Build- und Deployment-Anweisungen
+- Build- und Deploymentanweisungen
 - Code Conventions
