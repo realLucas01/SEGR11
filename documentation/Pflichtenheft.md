@@ -96,6 +96,7 @@ Muss Kriterien:
 |AF-04 |Neue Runde starten |Nach dem Abschluss eines Spiels ist es dem Fluggast möglich eine neue Runde zu starten durch einen Knopfdruck. |
 |AF-05 |Spielhilfe aufrufen |Vor, im Laufe oder nach Beendigung des Spieles, ist es dem Fluggast möglich eine Spielhilfe, mit den Grundlegenden Regeln des Spieles aufzurufen. |
 |AF-06 |Spielfeld zurücksetzen |Im Laufe des Spieles, ist es dem Fluggast möglich das Spielfeld zu seinem Ausgangszustand zurückzusetzen.| 
+|AF-07 |Rückkehr zur Spielesammlung |Im Laufe eines Spieles oder nach Beendigung einer Runde, ist es dem Fluggast möglich zur Spielesammlung zurückzukehren.|
 
 Kann Kriterien:  
 |KF Nr|Name|Beschreibung| 
@@ -191,8 +192,19 @@ Die Wireframes skizzieren die grundlegende Anordnung und Funktion der Bedienelem
 |Auslösendes Ereignis| Auswahl Schaltfläche "Zurücksetzen"  |
 |Nachbedingung Erfolg| Das Spielfeld wird zurückgesetzt auf seinen Ausgangszustand  |
 |Nachbedingung Fehlschlag| Spielfeld wird nicht zurückgesetzt  |
-|Ablauf| - Auswahl der Schaltfläche "Zurücksetzen" <br/>- Übergabe an den GameController <br/>- Spielfläche wird von den Spielsteinen geleert <br/>- Anzeige des neuen leeren Spielfeldes       |
+|Ablauf| - Auswahl der Schaltfläche "Zurücksetzen" <br/>- Spielfläche wird von den Spielsteinen geleert <br/>- Anzeige des neuen leeren Spielfeldes       |
 |Benutzerschnittstelle| |  
+
+|Anwendungsfall ID| AF-07|
+|-----|-------------|
+|AF Name| Rückkehr zur Spielesammlung   |
+|Akteur| Fluggast    |
+|Vorbedingungen| - Ein Spiel ist in Betrieb <brb/> - Ein Spiel ist beendet     |
+|Auslösendes Ereignis| Auswahl Schaltfläche "Spielesammlung"  |
+|Nachbedingung Erfolg| Die vorhandene Spielesammlung wird angezeigt |
+|Nachbedingung Fehlschlag| Das aktuelle Spiel wird weiter angezeigt  |
+|Ablauf| - Auswahl der Schaltfläche "Spielesammlung" <br/>- Anzeige der Spielesammlung  |
+|Benutzerschnittstelle| | 
 
 Nach dem Ende einer Spielrunde wird das Spielergebnis auf einem separaten Ergebnisbildschirm angezeigt. Von dort aus kann eine neue Runde gestartet oder zum Hauptmenü zurückgekehrt werden.
 **Abbildung:** Wireframe – Ergebnisbildschirm  
