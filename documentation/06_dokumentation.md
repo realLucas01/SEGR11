@@ -26,14 +26,12 @@ Stattdessen wird für die Demo eine kurze README bereitgestellt, die ausschließ
 **Zielgruppe:** Airline-/IFE-Administratoren bzw. Integrations-/Deployment-Verantwortliche.
 
 **Inhalte:**
-- Systemvoraussetzungen der IFE-Umgebung und Betrieb ohne externe Dienste
-- Installation und Deployment des JAR in der vorgesehenen IFE-Struktur sowie Start- und Rücksprungmechanismus zum IFE-Menü
-- Konfiguration von Branding-Assets wie Logos, Farben und UI-Assets
-- Verwaltung von Sprachressourcen und Sprachpaketen
-- Update- und Release-Prozess durch Austausch des JAR und der Assets sowie Versionskennzeichnung
-- Logging und Fehlerdiagnose
-- Datenschutz und Sicherheit mit dem Grundsatz, dass keine personenbezogenen Daten verarbeitet, gespeichert oder extern übertragen werden
-- Deinstallation und Rollback durch Rückkehr zu einer vorherigen Version
+- Systemvoraussetzungen / Offline-Betrieb:Es wird lediglich eine lokale Java-Runtime benötigt; es werden keine externen Dienste vorausgesetzt.
+- Installation / Deployment: Die Auslieferung erfolgt als JAR-Datei die in der vorgesehenen IFE-Ordnerstruktur abgelegt wird; der Start erfolgt über den vorgesehenen IFE-Startmechanismus.
+- Rücksprung zum IFE-Menü: Der Rücksprung erfolgt über eine in der Anwendung bereitgestellte Navigation (z. B. „Zurück“-Button), die zurück in das übergeordnete IFE-Menü führt.
+- Update / Release: Ein Update erfolgt durch Austausch der JAR-Datei; die Version ist im Dateinamen und/oder in der Anwendung ersichtlich.
+- Fehlerausgabe : Laufzeitfehler werden als Meldung ausgegeben (z. B. Konsole/Standardausgabe); ein separates Logging-/Monitoring-System ist nicht vorgesehen.
+- Datenschutz / Sicherheit: Es werden keine personenbezogenen Daten verarbeitet, gespeichert oder extern übertragen.
 
 **Form**
 - PDF
@@ -47,7 +45,7 @@ Stattdessen wird für die Demo eine kurze README bereitgestellt, die ausschließ
 **Inhalte:**
 - Projektüberblick und Architektur, inklusive Module, Schichten und Verantwortlichkeiten
 - Build und Ausführung, inklusive Build-Tool, Build-Kommandos, Erzeugung des JAR
-- Testkonzept und Testausführung, inklusive Struktur der Tests im Repository
+- Teststrategie und Testausführung: dokumentierte manuelle Tests
 - Erweiterbarkeit, insbesondere Integration neuer Spiele in die Menüführung, Internationalisierung über String-Ressourcen und Branding über austauschbare Assets
 - Coding Standards und Konventionen mit Verweis auf die im Repository festgelegten Code Conventions
 - UML-Artefakte, darunter Use-Case-Diagramm, Klassendiagramm und weitere Diagramme,
