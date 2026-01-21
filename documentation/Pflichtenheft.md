@@ -221,7 +221,7 @@ Die Wireframes skizzieren die grundlegende Anordnung und Funktion der Bedienelem
 
 Das Aktivitätsdiagramm stellt den Ablauf einer Spielrunde einschließlich optionaler Aktionen (Spielhilfe, Sprachwahl) sowie der Behandlung von Spielende und Neustart dar.
 **Abbildung:** Aktivitätsdiagramm – Spielrunde  
-![Aktivitätsdiagramm Spielrunde](diagrams/06_activity_spielrunde.svg)
+![Aktivitätsdiagramm Spielrunde](diagrams/activity_spielrunde.svg)
 
 #### 3.1.3 Fachliches Klassendiagramm (Domain Model) / Produktdaten
 
