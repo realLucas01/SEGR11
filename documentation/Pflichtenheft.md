@@ -154,7 +154,7 @@ Die Wireframes skizzieren die grundlegende Anordnung und Funktion der Bedienelem
 |Benutzerschnittstelle| |  
 
 **Abbildung:** Wireframe – Spielansicht  
-![Spielansicht](diagrams/03_spielscreen.svg)
+![Spielansicht](diagrams/03-06-07_spielscreen.svg)
 
 **Abbildung:** Wireframe – Sprachauswahl (über Sprach-Icon)  
 ![Sprachauswahl](diagrams/03a_sprachauswahl.svg)
@@ -170,6 +170,9 @@ Die Wireframes skizzieren die grundlegende Anordnung und Funktion der Bedienelem
 |Ablauf| - Anzeige des Endzustands <br/>- Bestätigung der Schaltfläche "Neue Runde"    |
 |Benutzerschnittstelle| |  
 
+**Abbildung:** Wireframe – Neue Runde starten  
+![Neue Runde](diagrams/04-07_ergebnis.svg)
+
 |Anwendungsfall ID| AF-05|
 |-----|-------------|
 |AF Name| Spielhilfe aufrufen   |
@@ -182,7 +185,7 @@ Die Wireframes skizzieren die grundlegende Anordnung und Funktion der Bedienelem
 |Benutzerschnittstelle| |  
 
 **Abbildung:** Wireframe – Hilfe / Regeln  
-![Hilfe](diagrams/04_hilfe.svg)
+![Hilfe](diagrams/05_hilfe.svg)
 
 |Anwendungsfall ID| AF-06|
 |-----|-------------|
@@ -195,11 +198,8 @@ Die Wireframes skizzieren die grundlegende Anordnung und Funktion der Bedienelem
 |Ablauf| - Auswahl der Schaltfläche "Zurücksetzen" <br/>- Spielfläche wird von den Spielsteinen geleert <br/>- Anzeige des neuen leeren Spielfeldes       |
 |Benutzerschnittstelle| |  
 
-
-
-Nach dem Ende einer Spielrunde wird das Spielergebnis auf einem separaten Ergebnisbildschirm angezeigt. Von dort aus kann eine neue Runde gestartet oder zum Hauptmenü zurückgekehrt werden.
-**Abbildung:** Wireframe – Ergebnisbildschirm  
-![Ergebnis](diagrams/05_ergebnis.svg)
+**Abbildung:** Wireframe – Spielansicht  
+![Spielansicht](diagrams/03-06-07_spielscreen.svg)
 
 |Anwendungsfall ID| AF-07|
 |-----|-------------|
@@ -211,6 +211,13 @@ Nach dem Ende einer Spielrunde wird das Spielergebnis auf einem separaten Ergebn
 |Nachbedingung Fehlschlag| Das aktuelle Spiel wird weiter angezeigt  |
 |Ablauf| - Auswahl der Schaltfläche "Spielesammlung" <br/>- Anzeige der Spielesammlung  |
 |Benutzerschnittstelle| | 
+
+**Abbildung:** Wireframe – Spielansicht  
+![Spielansicht](diagrams/03-06-07_spielscreen.svg)
+
+**Abbildung:** Wireframe – Ergebnisbildschirm  
+![Ergebnis](diagrams/04-07_ergebnis.svg)
+
 
 Das Aktivitätsdiagramm stellt den Ablauf einer Spielrunde einschließlich optionaler Aktionen (Spielhilfe, Sprachwahl) sowie der Behandlung von Spielende und Neustart dar.
 **Abbildung:** Aktivitätsdiagramm – Spielrunde  
