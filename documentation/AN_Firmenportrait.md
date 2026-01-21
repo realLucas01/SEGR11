@@ -21,7 +21,7 @@ Nina Hartmann, Technische Leitung
 
 
 ## Firmensitz und weitere Standorte 
-Hauptsitz: Perlickstraße 1, Leipzig    
+Hauptsitz: Perlickstraße 1, 04103 Leipzig    
 
 ## wichtige Meilensteine 
 2019    Unternehmensgründung  
@@ -33,7 +33,7 @@ Entwicklungskooperation mit dem Industriepartner smapOne im Bereich modularer So
 Projektbezogene Kooperation mit der Hochschule für Technik, Wirtschaft und Kultur Leipzig im Bereich Softwarearchitektur  
 
 ## wichtige Kunden 
-Industripartner aus dem Umfeld eingebetteter Softwaresysteme  
+Industriepartner aus dem Umfeld eingebetteter Softwaresysteme  
 Novaris Cabin Systems  
 
 
