@@ -151,7 +151,7 @@ Die Versionierung erfolgt über Git. Änderungen werden über Feature-Branches e
 
 ## 7.6 Kommunikation und Projektdokumentation
 
-Das Team stimmt sich regelmäßig ab und dokumentiert Fortschritt, Entscheidungen, Risiken und Änderungen in Protokollen oder im Projektbericht. Der Projektstatus ist jederzeit über Board, Issues und Milestones nachvollziehbar.
+Das Team stimmt sich regelmäßig ab und dokumentiert Fortschritt, Entscheidungen, Risiken und Änderungen in Protokollen oder im Projektbericht. Der Projektstatus ist jederzeit über Issues und Milestones nachvollziehbar.
 
 ---
 
