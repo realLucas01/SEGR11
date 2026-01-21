@@ -1,7 +1,7 @@
 Kalkulation in Stunden aufgeteilt auf Arbeitnehmer
 
 Rollenverteilung der Mitarbeitenden:
-Lucas Rumann: Projekt Manager
+Lucas Rumann: Projekt Manager <br/>
 Luca Matteo Tauscher: Senior Software Engineer
 Domenik Schütz: Finances & Software Engineer
 Truong Tan Long Nguyen: Junior UX Engineer
