@@ -8,13 +8,20 @@ Das Vorgehen ist so gewählt, dass frühzeitig lauffähige Zwischenstände entst
 
 ## 7.1 Vorgehensmodell
 
-Die Entwicklung erfolgt **iterativ und inkrementell**. Anforderungen, Anpassungen und Fehler werden als Aufgaben erfasst, priorisiert und in überschaubaren Teilschritten umgesetzt. Jede Iteration umfasst dabei typischerweise:
+Die Entwicklung erfolgt iterativ und inkrementell. Anforderungen, Anpassungen und Fehler werden als Aufgaben erfasst, priorisiert und in überschaubaren Teilschritten umgesetzt. Jede Iteration umfasst dabei typischerweise:
 
-- **Planung** (Aufgabenabgrenzung, Priorisierung, Definition „fertig“)
-- **Implementierung** (Umsetzung in Feature-Branches)
-- **Review** (z. B. über Merge-/Pull-Requests)
-- **Test** (insbesondere auf der Zielumgebung/Dev-Kit)
-- **Dokumentationspflege** (fortlaufend, nicht ausschließlich am Projektende)
+- **Planung**
+  - Aufgabenabgrenzung
+  - Priorisierung
+  - Definition „fertig“
+- **Implementierung**
+  - Umsetzung in Feature-Branches
+- **Review**
+  - Prüfung über Merge-/Pull-Requests
+- **Test**
+  - insbesondere auf der Zielumgebung/Dev-Kit
+- **Dokumentationspflege**
+  - fortlaufend, nicht ausschließlich am Projektende
 
 Dieses Vorgehen ermöglicht es, Änderungen kontrolliert einzuarbeiten und die Anwendung früh im vorgesehenen IFE-Kontext zu validieren.
 
@@ -25,27 +32,34 @@ Die Umsetzung wird in Arbeitspakete gegliedert, die sich an der Kalkulation und 
 
 - **Konzeption**
   - Finalisierung Spielidee und Regeln
-  - Berücksichtigung IFE-Rahmenbedingungen (Offline-Betrieb, Eingabe über Touch/Maus)
+ - Berücksichtigung IFE-Rahmenbedingungen
+    - Offline-Betrieb
+    - Eingabe über Touch/Maus
   - Definition der Spielmodi (PvP / PvE) und grundlegendes Bedienkonzept
 
 - **Prototyp & Spielkern**
   - Technisches Grundgerüst und Projektstruktur
-  - Trennung von Spiellogik und UI (nachvollziehbare Zuständigkeiten)
+  - Trennung von Spiellogik und UI
   - Grundlegende UI-Struktur sowie Eingabe-/Zustandsverwaltung
 
 - **Gameplay-Implementierung**
   - Regelkonforme Verarbeitung von Spielzügen
   - Gewinn-/Unentschieden-Erkennung
-  - Rundenverwaltung (z. B. Neustart, Abbruch, Rückkehr zur Spielesammlung)
+  - Rundenverwaltung
+    - Neustart
+    - Abbruch
+    - Rückkehr zur Spielesammlung
 
 - **Botgegner und optionale Erweiterungen**
   - Implementierung einer Bot-Grundlogik für den Einzelspielermodus
-  - **Schwierigkeitsstufen** werden als optionale Erweiterung betrachtet (falls im Rahmen sinnvoll umsetzbar)
+  - Schwierigkeitsstufen werden als optionale Erweiterung betrachtet
 
 - **UI/UX Nutzerführung**
   - Start- und Modusauswahl
-  - In-Game UI (Spielbrett, Bedienelemente)
-  - Ergebnisdarstellung (Endscreen)
+  - In-Game UI
+    - Spielbrett
+    - Bedienelemente
+  - Ergebnisdarstellung
 
 
 - **Stabilisierung & Integration**
@@ -55,19 +69,22 @@ Die Umsetzung wird in Arbeitspakete gegliedert, die sich an der Kalkulation und 
   - Fehlerbehandlung im Sinne einer stabilen Laufzeit
 
 - **Testphase, Feinschliff & Dokumentation**
-  - Funktionstests, Regressionstests und Fehlerkorrekturen (Bugfixes erfolgen fortlaufend)
-  - Finalisierung der Dokumentationsartefakte (Admin-/Dev-Doku, ggf. UML, Javadoc)
-
+  - Funktionstests, Regressionstests und Fehlerkorrekturen
+  - Bugfixes erfolgen fortlaufend
+  - Finalisierung der Dokumentationsartefakte
+    - Admin-/Dev-Doku
+    - ggf. UML
+    - Javadoc
 ---
 
 ## 7.3 Meilensteine und Zeitplan
 
-Die folgenden Meilensteine beschreiben den geplanten Ablauf über 16 Wochen. Zeiträume sind als Orientierung zu verstehen; Verschiebungen durch technische Randbedingungen oder notwendige Stabilisierung sind möglich.
+Die folgenden Meilensteine beschreiben den geplanten Ablauf über 16 Wochen. Zeiträume sind als Orientierung zu verstehen. Verschiebungen durch technische Randbedingungen oder notwendige Stabilisierung sind möglich.
 
 ### M0.5 Projektstart und Setup (Woche 1)
 - Repository-/Build-Grundlage und Arbeitsorganisation
 - Erste technische Validierung auf der Zielumgebung/Dev-Kit
-- Initiale Aufgabenstruktur (Backlog)
+- Initiale Aufgabenstruktur 
 
 **Ergebnis:** lauffähiges Grundgerüst und initiale Planung.
 
@@ -77,8 +94,11 @@ Die folgenden Meilensteine beschreiben den geplanten Ablauf über 16 Wochen. Zei
 
 **Ergebnis:** belastbare Grundlage für Umsetzung und UI-Struktur.
 
-### M2 Spielkern spielbar (Woche 4–7)
-- Grundlegender Spielablauf (Zuglogik, Sieg/Unentschieden)
+### M2 Spielkern funktional (Woche 4–7)
+- Grundlegender Spielablauf 
+   - Zuglogik
+   - Sieg
+   - Unentschieden
 - UI-Grundlayout inkl. Eingabe (Touch/Maus)
 - Neustart/Abbruch und Rückkehr zur Spielesammlung
 
@@ -92,7 +112,7 @@ Die folgenden Meilensteine beschreiben den geplanten Ablauf über 16 Wochen. Zei
 **Ergebnis:** geplanter Funktionsumfang ist in einem konsolidierten Stand umgesetzt.
 
 ### M4 Stabilisierung, Integration und Abnahmevorbereitung (Woche 12–15)
-- Stabilitäts- und Belastungsprüfung (z. B. schnelle Eingaben, lange Laufzeit)
+- Stabilitäts- und Belastungsprüfung 
 - Fehlerkorrekturen und UI-Feinschliff
 - Dokumentationsfinalisierung und Abnahmecheck
 
@@ -112,9 +132,12 @@ Die folgenden Meilensteine beschreiben den geplanten Ablauf über 16 Wochen. Zei
 
 Die Qualitätssicherung erfolgt begleitend während der Entwicklung durch:
 
-- Reviews der Änderungen (z. B. Merge-/Pull-Requests) zur Sicherstellung von Lesbarkeit und Korrektheit
-- Manuelle, dokumentierte Tests der zentralen Anwendungsfälle (insbesondere UI- und Spielabläufe)
-- Tests auf der Zielumgebung/Dev-Kit, um IFE-spezifisches Verhalten (Start/Beenden, Eingaben, Offline-Betrieb) zuverlässig zu prüfen
+- Reviews der Änderungen zur Sicherstellung von Lesbarkeit und Korrektheit
+- Manuelle, dokumentierte Tests der zentralen Anwendungsfälle
+- Tests auf der Zielumgebung/Dev-Kit, um IFE-spezifisches Verhalten zuverlässig zu prüfen
+  - Start/Beenden
+  - Eingaben
+  - Offline-Betrieb
 
 ---
 
@@ -138,5 +161,5 @@ Das Team stimmt sich regelmäßig ab und dokumentiert Fortschritt, Entscheidunge
 |------|------------|---------------|
 | Unklare oder sich ändernde IFE-Rahmenbedingungen | Nacharbeit, Verzögerungen | frühe Tests auf Dev-Kit, iterative Umsetzung, Scope-Kontrolle |
 | Performance- oder Ressourcenlimits | Instabilität, schlechte Bedienbarkeit | einfache UI, effiziente Logik, frühzeitige Stabilisierung |
-| Bot-Implementierung aufwändiger als geplant | Funktionsumfang/Timing gefährdet | Bot zunächst als Grundlogik umsetzen, optionale Erweiterungen (z. B. Schwierigkeitsstufen) nachrangig behandeln |
+| Bot-Implementierung aufwändiger als geplant | Funktionsumfang/Timing gefährdet | Bot zunächst als Grundlogik umsetzen, optionale Erweiterungen  nachrangig behandeln |
 | Späte Änderungen an UI/Assets | Mehraufwand kurz vor Abgabe | Ressourcenstruktur früh festlegen, Platzhalter nutzen, schrittweise Integration |
