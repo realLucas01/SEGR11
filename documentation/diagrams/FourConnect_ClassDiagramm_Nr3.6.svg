@@ -1,0 +1,7327 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Created with Software Ideas Modeler (https://www.softwareideas.net)-->
+
+<svg
+   width="1495px"
+   height="1609px"
+   version="1.1"
+   id="svg790"
+   sodipodi:docname="FourConnect_ClassDiagramm_Nr3.6.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs790">
+    <defs
+       id="defs75">
+      <clipPath
+         id="cp1">
+        <path
+           d="M 210 41.82617 L 56 41.82617  56 10  210 10  210 41.82617 z M 775 462 L 56 462  56 41.82617  775 41.82617  775 462 z "
+           id="path1" />
+      </clipPath>
+      <clipPath
+         id="cp2"
+         clip-rule="evenodd">
+        <path
+           d="M -30000 -30000 L 30000 -30000  30000 30000  -30000 30000 z M 210 41.82617 L 56 41.82617  56 10  210 10  210 41.82617 z M 775 462 L 56 462  56 41.82617  775 41.82617  775 462 z "
+           id="path2" />
+      </clipPath>
+      <clipPath
+         id="cp3">
+        <path
+           d="M 54 8 L 773 8  773 460  54 460 z "
+           id="path3" />
+      </clipPath>
+      <clipPath
+         id="cp4"
+         clip-path="cp2">
+        <path
+           d="M 250 108.82617 L 96 108.82617  96 77  250 77  250 108.82617 z M 754 438 L 96 438  96 108.82617  754 108.82617  754 438 z "
+           id="path4" />
+      </clipPath>
+      <clipPath
+         id="cp5"
+         clip-rule="evenodd">
+        <path
+           d="M -30000 -30000 L 30000 -30000  30000 30000  -30000 30000 z M 250 108.82617 L 96 108.82617  96 77  250 77  250 108.82617 z M 754 438 L 96 438  96 108.82617  754 108.82617  754 438 z "
+           id="path5" />
+      </clipPath>
+      <clipPath
+         id="cp6">
+        <path
+           d="M 94 75 L 752 75  752 436  94 436 z "
+           id="path6" />
+      </clipPath>
+      <clipPath
+         id="cp7"
+         clip-path="cp5">
+        <path
+           d="M 133 123 L 306 123  306 218.5  133 218.5 z "
+           id="path7" />
+      </clipPath>
+      <clipPath
+         id="cp8"
+         clip-rule="evenodd">
+        <path
+           d="M -30000 -30000 L 30000 -30000  30000 30000  -30000 30000 z M 133 123 L 306 123  306 218.5  133 218.5 z "
+           id="path8" />
+      </clipPath>
+      <clipPath
+         id="cp9">
+        <path
+           d="M 130 120 L 305 120  305 218  130 218 z "
+           id="path9" />
+      </clipPath>
+      <clipPath
+         id="cp10"
+         clip-path="cp8">
+        <path
+           d="M 111 284 L 402 284  402 380  111 380 z "
+           id="path10" />
+      </clipPath>
+      <clipPath
+         id="cp11"
+         clip-rule="evenodd">
+        <path
+           d="M -30000 -30000 L 30000 -30000  30000 30000  -30000 30000 z M 111 284 L 402 284  402 380  111 380 z "
+           id="path11" />
+      </clipPath>
+      <clipPath
+         id="cp12">
+        <path
+           d="M 108 281 L 401 281  401 379  108 379 z "
+           id="path12" />
+      </clipPath>
+      <clipPath
+         id="cp13"
+         clip-path="cp11">
+        <path
+           d="M 346 123 L 513 123  513 251  346 251 z "
+           id="path13" />
+      </clipPath>
+      <clipPath
+         id="cp14"
+         clip-rule="evenodd">
+        <path
+           d="M -30000 -30000 L 30000 -30000  30000 30000  -30000 30000 z M 346 123 L 513 123  513 251  346 251 z "
+           id="path14" />
+      </clipPath>
+      <clipPath
+         id="cp15">
+        <path
+           d="M 343 120 L 512 120  512 250  343 250 z "
+           id="path15" />
+      </clipPath>
+      <clipPath
+         id="cp16"
+         clip-path="cp14">
+        <path
+           d="M 569 142.5 L 712 142.5  712 198.5  569 198.5 z "
+           id="path16" />
+      </clipPath>
+      <clipPath
+         id="cp17"
+         clip-rule="evenodd">
+        <path
+           d="M -30000 -30000 L 30000 -30000  30000 30000  -30000 30000 z M 569 142.5 L 712 142.5  712 198.5  569 198.5 z "
+           id="path17" />
+      </clipPath>
+      <clipPath
+         id="cp18">
+        <path
+           d="M 566 140 L 711 140  711 198  566 198 z "
+           id="path18" />
+      </clipPath>
+      <clipPath
+         id="cp19"
+         clip-path="cp17">
+        <path
+           d="M 438 284 L 729 284  729 399  438 399 z "
+           id="path19" />
+      </clipPath>
+      <clipPath
+         id="cp20"
+         clip-rule="evenodd">
+        <path
+           d="M -30000 -30000 L 30000 -30000  30000 30000  -30000 30000 z M 438 284 L 729 284  729 399  438 399 z "
+           id="path20" />
+      </clipPath>
+      <clipPath
+         id="cp21">
+        <path
+           d="M 435 281 L 728 281  728 398  435 398 z "
+           id="path21" />
+      </clipPath>
+      <clipPath
+         id="cp22"
+         clip-path="cp20">
+        <path
+           d="M 986 108.82617 L 832 108.82617  832 77  986 77  986 108.82617 z M 1477 258 L 832 258  832 108.82617  1477 108.82617  1477 258 z "
+           id="path22" />
+      </clipPath>
+      <clipPath
+         id="cp23"
+         clip-rule="evenodd">
+        <path
+           d="M -30000 -30000 L 30000 -30000  30000 30000  -30000 30000 z M 986 108.82617 L 832 108.82617  832 77  986 77  986 108.82617 z M 1477 258 L 832 258  832 108.82617  1477 108.82617  1477 258 z "
+           id="path23" />
+      </clipPath>
+      <clipPath
+         id="cp24">
+        <path
+           d="M 830 75 L 1475 75  1475 256  830 256 z "
+           id="path24" />
+      </clipPath>
+      <clipPath
+         id="cp25"
+         clip-path="cp23">
+        <path
+           d="M 866 142.5 L 1083 142.5  1083 218.5  866 218.5 z "
+           id="path25" />
+      </clipPath>
+      <clipPath
+         id="cp26"
+         clip-rule="evenodd">
+        <path
+           d="M -30000 -30000 L 30000 -30000  30000 30000  -30000 30000 z M 866 142.5 L 1083 142.5  1083 218.5  866 218.5 z "
+           id="path26" />
+      </clipPath>
+      <clipPath
+         id="cp27">
+        <path
+           d="M 863 140 L 1082 140  1082 218  863 218 z "
+           id="path27" />
+      </clipPath>
+      <clipPath
+         id="cp28"
+         clip-path="cp26">
+        <path
+           d="M 1160 142.5 L 1432 142.5  1432 238  1160 238 z "
+           id="path28" />
+      </clipPath>
+      <clipPath
+         id="cp29"
+         clip-rule="evenodd">
+        <path
+           d="M -30000 -30000 L 30000 -30000  30000 30000  -30000 30000 z M 1160 142.5 L 1432 142.5  1432 238  1160 238 z "
+           id="path29" />
+      </clipPath>
+      <clipPath
+         id="cp30">
+        <path
+           d="M 1157 140 L 1431 140  1431 238  1157 238 z "
+           id="path30" />
+      </clipPath>
+      <clipPath
+         id="cp31"
+         clip-path="cp29">
+        <path
+           d="M 163.99998 566.8262 L 10 566.8262  10 535  163.99998 535  163.99998 566.8262 z M 624 1170 L 10 1170  10 566.8262  624 566.8262  624 1170 z "
+           id="path31" />
+      </clipPath>
+      <clipPath
+         id="cp32"
+         clip-rule="evenodd">
+        <path
+           d="M -30000 -30000 L 30000 -30000  30000 30000  -30000 30000 z M 163.99998 566.8262 L 10 566.8262  10 535  163.99998 535  163.99998 566.8262 z M 624 1170 L 10 1170  10 566.8262  624 566.8262  624 1170 z "
+           id="path32" />
+      </clipPath>
+      <clipPath
+         id="cp33">
+        <path
+           d="M 8 533 L 622 533  622 1168  8 1168 z "
+           id="path33" />
+      </clipPath>
+      <clipPath
+         id="cp34"
+         clip-path="cp32">
+        <path
+           d="M 56 591 L 317 591  317 706  56 706 z "
+           id="path34" />
+      </clipPath>
+      <clipPath
+         id="cp35"
+         clip-rule="evenodd">
+        <path
+           d="M -30000 -30000 L 30000 -30000  30000 30000  -30000 30000 z M 56 591 L 317 591  317 706  56 706 z "
+           id="path35" />
+      </clipPath>
+      <clipPath
+         id="cp36">
+        <path
+           d="M 53 588 L 316 588  316 705  53 705 z "
+           id="path36" />
+      </clipPath>
+      <clipPath
+         id="cp37"
+         clip-path="cp35">
+        <path
+           d="M 50 844 L 193 844  193 972  50 972 z "
+           id="path37" />
+      </clipPath>
+      <clipPath
+         id="cp38"
+         clip-rule="evenodd">
+        <path
+           d="M -30000 -30000 L 30000 -30000  30000 30000  -30000 30000 z M 50 844 L 193 844  193 972  50 972 z "
+           id="path38" />
+      </clipPath>
+      <clipPath
+         id="cp39">
+        <path
+           d="M 47 841 L 192 841  192 971  47 971 z "
+           id="path39" />
+      </clipPath>
+      <clipPath
+         id="cp40"
+         clip-path="cp38">
+        <path
+           d="M 259 861 L 402 861  402 1021  259 1021 z "
+           id="path40" />
+      </clipPath>
+      <clipPath
+         id="cp41"
+         clip-rule="evenodd">
+        <path
+           d="M -30000 -30000 L 30000 -30000  30000 30000  -30000 30000 z M 259 861 L 402 861  402 1021  259 1021 z "
+           id="path41" />
+      </clipPath>
+      <clipPath
+         id="cp42">
+        <path
+           d="M 256 858 L 401 858  401 1020  256 1020 z "
+           id="path42" />
+      </clipPath>
+      <clipPath
+         id="cp43"
+         clip-path="cp41">
+        <path
+           d="M 215 1048 L 456 1048  456 1145  215 1145 z "
+           id="path43" />
+      </clipPath>
+      <clipPath
+         id="cp44"
+         clip-rule="evenodd">
+        <path
+           d="M -30000 -30000 L 30000 -30000  30000 30000  -30000 30000 z M 215 1048 L 456 1048  456 1145  215 1145 z "
+           id="path44" />
+      </clipPath>
+      <clipPath
+         id="cp45">
+        <path
+           d="M 212 1045 L 455 1045  455 1144  212 1144 z "
+           id="path45" />
+      </clipPath>
+      <clipPath
+         id="cp46"
+         clip-path="cp44">
+        <path
+           d="M 402 670 L 563 670  563 813  402 813 z "
+           id="path46" />
+      </clipPath>
+      <clipPath
+         id="cp47"
+         clip-rule="evenodd">
+        <path
+           d="M -30000 -30000 L 30000 -30000  30000 30000  -30000 30000 z M 402 670 L 563 670  563 813  402 813 z "
+           id="path47" />
+      </clipPath>
+      <clipPath
+         id="cp48">
+        <path
+           d="M 399 667 L 562 667  562 812  399 812 z "
+           id="path48" />
+      </clipPath>
+      <clipPath
+         id="cp49"
+         clip-path="cp47">
+        <path
+           d="M 794 599.8262 L 640 599.8262  640 568  794 568  794 599.8262 z M 1432 1591 L 640 1591  640 599.8262  1432 599.8262  1432 1591 z "
+           id="path49" />
+      </clipPath>
+      <clipPath
+         id="cp50"
+         clip-rule="evenodd">
+        <path
+           d="M -30000 -30000 L 30000 -30000  30000 30000  -30000 30000 z M 794 599.8262 L 640 599.8262  640 568  794 568  794 599.8262 z M 1432 1591 L 640 1591  640 599.8262  1432 599.8262  1432 1591 z "
+           id="path50" />
+      </clipPath>
+      <clipPath
+         id="cp51">
+        <path
+           d="M 638 566 L 1430 566  1430 1589  638 1589 z "
+           id="path51" />
+      </clipPath>
+      <clipPath
+         id="cp52"
+         clip-path="cp50">
+        <path
+           d="M 723 642 L 866 642  866 698  723 698 z "
+           id="path52" />
+      </clipPath>
+      <clipPath
+         id="cp53"
+         clip-rule="evenodd">
+        <path
+           d="M -30000 -30000 L 30000 -30000  30000 30000  -30000 30000 z M 723 642 L 866 642  866 698  723 698 z "
+           id="path53" />
+      </clipPath>
+      <clipPath
+         id="cp54">
+        <path
+           d="M 720 639 L 865 639  865 697  720 697 z "
+           id="path54" />
+      </clipPath>
+      <clipPath
+         id="cp55"
+         clip-path="cp53">
+        <path
+           d="M 655 758.9131 L 1072 758.9131  1072 1006.9131  655 1006.9131 z "
+           id="path55" />
+      </clipPath>
+      <clipPath
+         id="cp56"
+         clip-rule="evenodd">
+        <path
+           d="M -30000 -30000 L 30000 -30000  30000 30000  -30000 30000 z M 655 758.9131 L 1072 758.9131  1072 1006.9131  655 1006.9131 z "
+           id="path56" />
+      </clipPath>
+      <clipPath
+         id="cp57">
+        <path
+           d="M 652 756 L 1071 756  1071 1006  652 1006 z "
+           id="path57" />
+      </clipPath>
+      <clipPath
+         id="cp58"
+         clip-path="cp56">
+        <path
+           d="M 655 1048 L 1114 1048  1114 1218  655 1218 z "
+           id="path58" />
+      </clipPath>
+      <clipPath
+         id="cp59"
+         clip-rule="evenodd">
+        <path
+           d="M -30000 -30000 L 30000 -30000  30000 30000  -30000 30000 z M 655 1048 L 1114 1048  1114 1218  655 1218 z "
+           id="path59" />
+      </clipPath>
+      <clipPath
+         id="cp60">
+        <path
+           d="M 652 1045 L 1113 1045  1113 1217  652 1217 z "
+           id="path60" />
+      </clipPath>
+      <clipPath
+         id="cp61"
+         clip-path="cp59">
+        <path
+           d="M 1217 1060 L 1377 1060  1377 1175  1217 1175 z "
+           id="path61" />
+      </clipPath>
+      <clipPath
+         id="cp62"
+         clip-rule="evenodd">
+        <path
+           d="M -30000 -30000 L 30000 -30000  30000 30000  -30000 30000 z M 1217 1060 L 1377 1060  1377 1175  1217 1175 z "
+           id="path62" />
+      </clipPath>
+      <clipPath
+         id="cp63">
+        <path
+           d="M 1214 1057 L 1376 1057  1376 1174  1214 1174 z "
+           id="path63" />
+      </clipPath>
+      <clipPath
+         id="cp64"
+         clip-path="cp62">
+        <path
+           d="M 1217 758.9131 L 1360 758.9131  1360 873.9131  1217 873.9131 z "
+           id="path64" />
+      </clipPath>
+      <clipPath
+         id="cp65"
+         clip-rule="evenodd">
+        <path
+           d="M -30000 -30000 L 30000 -30000  30000 30000  -30000 30000 z M 1217 758.9131 L 1360 758.9131  1360 873.9131  1217 873.9131 z "
+           id="path65" />
+      </clipPath>
+      <clipPath
+         id="cp66">
+        <path
+           d="M 1214 756 L 1359 756  1359 873  1214 873 z "
+           id="path66" />
+      </clipPath>
+      <clipPath
+         id="cp67"
+         clip-path="cp65">
+        <path
+           d="M 655 1259.0869 L 872 1259.0869  872 1398.0869  655 1398.0869 z "
+           id="path67" />
+      </clipPath>
+      <clipPath
+         id="cp68"
+         clip-rule="evenodd">
+        <path
+           d="M -30000 -30000 L 30000 -30000  30000 30000  -30000 30000 z M 655 1259.0869 L 872 1259.0869  872 1398.0869  655 1398.0869 z "
+           id="path68" />
+      </clipPath>
+      <clipPath
+         id="cp69">
+        <path
+           d="M 652 1256 L 871 1256  871 1397  652 1397 z "
+           id="path69" />
+      </clipPath>
+      <clipPath
+         id="cp70"
+         clip-path="cp68">
+        <path
+           d="M 655 1439.1738 L 798 1439.1738  798 1507.1738  655 1507.1738 z "
+           id="path70" />
+      </clipPath>
+      <clipPath
+         id="cp71"
+         clip-rule="evenodd">
+        <path
+           d="M -30000 -30000 L 30000 -30000  30000 30000  -30000 30000 z M 655 1439.1738 L 798 1439.1738  798 1507.1738  655 1507.1738 z "
+           id="path71" />
+      </clipPath>
+      <clipPath
+         id="cp72">
+        <path
+           d="M 652 1436 L 797 1436  797 1506  652 1506 z "
+           id="path72" />
+      </clipPath>
+      <clipPath
+         id="cp73"
+         clip-path="cp71">
+        <path
+           d="M 1217 911.9131 L 1360 911.9131  1360 1006.9131  1217 1006.9131 z "
+           id="path73" />
+      </clipPath>
+      <clipPath
+         id="cp74"
+         clip-rule="evenodd">
+        <path
+           d="M -30000 -30000 L 30000 -30000  30000 30000  -30000 30000 z M 1217 911.9131 L 1360 911.9131  1360 1006.9131  1217 1006.9131 z "
+           id="path74" />
+      </clipPath>
+      <clipPath
+         id="cp75">
+        <path
+           d="M 1214 909 L 1359 909  1359 1006  1214 1006 z "
+           id="path75" />
+      </clipPath>
+    </defs>
+  </defs>
+  <sodipodi:namedview
+     id="namedview790"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.50528278"
+     inkscape:cx="748.09594"
+     inkscape:cy="804.5"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="" />
+  <desc
+     id="desc1" />
+  <g
+     id="">
+    <g
+       clip-path="url(#)"
+       id="g75" />
+    <g
+       clip-path="url(#cp1)"
+       id="g76">
+      <rect
+         x="55"
+         y="9"
+         width="721"
+         height="454"
+         fill="rgba(85,85,85,0.227)"
+         id="rect75" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g77" />
+    <g
+       clip-path="url(#cp2)"
+       id="g84">
+      <path
+         fill="none"
+         d="M 210,41.82617 H 56 V 10 H 210 Z M 775,462 H 56 V 41.82617 h 719 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="16px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path77" />
+      <path
+         fill="none"
+         d="M 210,41.82617 H 56 V 10 H 210 Z M 775,462 H 56 V 41.82617 h 719 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="14px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path78" />
+      <path
+         fill="none"
+         d="M 210,41.82617 H 56 V 10 H 210 Z M 775,462 H 56 V 41.82617 h 719 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="12px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path79" />
+      <path
+         fill="none"
+         d="M 210,41.82617 H 56 V 10 H 210 Z M 775,462 H 56 V 41.82617 h 719 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="10px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path80" />
+      <path
+         fill="none"
+         d="M 210,41.82617 H 56 V 10 H 210 Z M 775,462 H 56 V 41.82617 h 719 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="8px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path81" />
+      <path
+         fill="none"
+         d="M 210,41.82617 H 56 V 10 H 210 Z M 775,462 H 56 V 41.82617 h 719 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="6px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path82" />
+      <path
+         fill="none"
+         d="M 210,41.82617 H 56 V 10 H 210 Z M 775,462 H 56 V 41.82617 h 719 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="4px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path83" />
+      <path
+         fill="none"
+         d="M 210,41.82617 H 56 V 10 H 210 Z M 775,462 H 56 V 41.82617 h 719 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path84" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g88">
+      <path
+         d="M 208,39.82617 H 54 V 8 h 154 z"
+         fill="#f2f2f2"
+         id="path85" />
+      <path
+         fill="none"
+         d="M 208,39.82617 H 54 V 8 h 154 z"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path86" />
+      <path
+         d="M 773,460 H 54 V 39.82617 h 719 z"
+         fill="#f2f2f2"
+         id="path87" />
+      <path
+         fill="none"
+         d="M 773,460 H 54 V 39.82617 h 719 z"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path88" />
+      <text
+         x="124"
+         y="32.621094"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text88">UI</text>
+    </g>
+    <g
+       clip-path="url(#cp3)"
+       id="g89" />
+    <g
+       clip-path="url(#)"
+       id="g90" />
+    <g
+       clip-path="url(#)"
+       id="g91" />
+    <g
+       clip-path="url(#)"
+       id="g92" />
+    <g
+       clip-path="url(#cp4)"
+       id="g93">
+      <rect
+         x="95"
+         y="76"
+         width="660"
+         height="363"
+         fill="rgba(85,85,85,0.227)"
+         id="rect92" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g94" />
+    <g
+       clip-path="url(#cp5)"
+       id="g101">
+      <path
+         fill="none"
+         d="M 250,108.82617 H 96 V 77 H 250 Z M 754,438 H 96 V 108.82617 h 658 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="16px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path94" />
+      <path
+         fill="none"
+         d="M 250,108.82617 H 96 V 77 H 250 Z M 754,438 H 96 V 108.82617 h 658 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="14px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path95" />
+      <path
+         fill="none"
+         d="M 250,108.82617 H 96 V 77 H 250 Z M 754,438 H 96 V 108.82617 h 658 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="12px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path96" />
+      <path
+         fill="none"
+         d="M 250,108.82617 H 96 V 77 H 250 Z M 754,438 H 96 V 108.82617 h 658 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="10px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path97" />
+      <path
+         fill="none"
+         d="M 250,108.82617 H 96 V 77 H 250 Z M 754,438 H 96 V 108.82617 h 658 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="8px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path98" />
+      <path
+         fill="none"
+         d="M 250,108.82617 H 96 V 77 H 250 Z M 754,438 H 96 V 108.82617 h 658 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="6px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path99" />
+      <path
+         fill="none"
+         d="M 250,108.82617 H 96 V 77 H 250 Z M 754,438 H 96 V 108.82617 h 658 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="4px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path100" />
+      <path
+         fill="none"
+         d="M 250,108.82617 H 96 V 77 H 250 Z M 754,438 H 96 V 108.82617 h 658 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path101" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g105">
+      <path
+         d="M 248,106.82617 H 94 V 75 h 154 z"
+         fill="#f2f2f2"
+         id="path102" />
+      <path
+         fill="none"
+         d="M 248,106.82617 H 94 V 75 h 154 z"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path103" />
+      <path
+         d="M 752,436 H 94 V 106.82617 h 658 z"
+         fill="#f2f2f2"
+         id="path104" />
+      <path
+         fill="none"
+         d="M 752,436 H 94 V 106.82617 h 658 z"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path105" />
+      <text
+         x="137"
+         y="99.621094"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text105">controller</text>
+    </g>
+    <g
+       clip-path="url(#cp6)"
+       id="g106" />
+    <g
+       clip-path="url(#)"
+       id="g107" />
+    <g
+       clip-path="url(#)"
+       id="g108" />
+    <g
+       clip-path="url(#)"
+       id="g109" />
+    <g
+       clip-path="url(#cp7)"
+       id="g110">
+      <rect
+         x="132"
+         y="122"
+         width="175"
+         height="98"
+         fill="rgba(85,85,85,0.227)"
+         id="rect109" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g111" />
+    <g
+       clip-path="url(#cp8)"
+       id="g118">
+      <path
+         fill="none"
+         d="m 133,123 h 173 v 95.5 H 133 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="16px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path111" />
+      <path
+         fill="none"
+         d="m 133,123 h 173 v 95.5 H 133 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="14px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path112" />
+      <path
+         fill="none"
+         d="m 133,123 h 173 v 95.5 H 133 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="12px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path113" />
+      <path
+         fill="none"
+         d="m 133,123 h 173 v 95.5 H 133 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="10px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path114" />
+      <path
+         fill="none"
+         d="m 133,123 h 173 v 95.5 H 133 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="8px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path115" />
+      <path
+         fill="none"
+         d="m 133,123 h 173 v 95.5 H 133 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="6px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path116" />
+      <path
+         fill="none"
+         d="m 133,123 h 173 v 95.5 H 133 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="4px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path117" />
+      <path
+         fill="none"
+         d="m 133,123 h 173 v 95.5 H 133 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path118" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g119">
+      <rect
+         x="131"
+         y="121"
+         width="173"
+         height="96"
+         fill="#f2f2f2"
+         id="rect118" />
+      <rect
+         x="131"
+         y="121"
+         width="173"
+         height="96"
+         fill="none"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="rect119" />
+    </g>
+    <g
+       clip-path="url(#cp9)"
+       id="g134">
+      <text
+         x="164"
+         y="143.62109"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text119">Game</text>
+      <text
+         x="203"
+         y="143.62109"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text120">Controller</text>
+      <line
+         x1="131"
+         y1="149"
+         x2="304"
+         y2="149"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="line120" />
+      <text
+         x="136"
+         y="168.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text121">- game</text>
+      <text
+         x="173"
+         y="168.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text122">: IG</text>
+      <text
+         x="190"
+         y="168.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text123">ame</text>
+      <line
+         x1="131"
+         y1="174"
+         x2="304"
+         y2="174"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="line123" />
+      <text
+         x="136"
+         y="193.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text124">+ restart</text>
+      <text
+         x="180"
+         y="193.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text125">Game</text>
+      <text
+         x="213"
+         y="193.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text126">(</text>
+      <text
+         x="217"
+         y="193.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text127">)</text>
+      <text
+         x="221"
+         y="193.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text128">: void</text>
+      <text
+         x="136"
+         y="212.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text129">+ back</text>
+      <text
+         x="172"
+         y="212.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text130">To</text>
+      <text
+         x="184"
+         y="212.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text131">Menu</text>
+      <text
+         x="218"
+         y="212.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text132">(</text>
+      <text
+         x="222"
+         y="212.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text133">)</text>
+      <text
+         x="226"
+         y="212.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text134">: void</text>
+      <line
+         x1="131"
+         y1="218"
+         x2="304"
+         y2="218"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="line134" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g135" />
+    <g
+       clip-path="url(#)"
+       id="g136" />
+    <g
+       clip-path="url(#)"
+       id="g137" />
+    <g
+       clip-path="url(#cp10)"
+       id="g138">
+      <rect
+         x="110"
+         y="283"
+         width="293"
+         height="98"
+         fill="rgba(85,85,85,0.227)"
+         id="rect137" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g139" />
+    <g
+       clip-path="url(#cp11)"
+       id="g146">
+      <path
+         fill="none"
+         d="m 111,284 h 291 v 96 H 111 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="16px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path139" />
+      <path
+         fill="none"
+         d="m 111,284 h 291 v 96 H 111 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="14px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path140" />
+      <path
+         fill="none"
+         d="m 111,284 h 291 v 96 H 111 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="12px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path141" />
+      <path
+         fill="none"
+         d="m 111,284 h 291 v 96 H 111 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="10px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path142" />
+      <path
+         fill="none"
+         d="m 111,284 h 291 v 96 H 111 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="8px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path143" />
+      <path
+         fill="none"
+         d="m 111,284 h 291 v 96 H 111 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="6px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path144" />
+      <path
+         fill="none"
+         d="m 111,284 h 291 v 96 H 111 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="4px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path145" />
+      <path
+         fill="none"
+         d="m 111,284 h 291 v 96 H 111 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path146" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g147">
+      <rect
+         x="109"
+         y="282"
+         width="291"
+         height="96"
+         fill="#f2f2f2"
+         id="rect146" />
+      <rect
+         x="109"
+         y="282"
+         width="291"
+         height="96"
+         fill="none"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="rect147" />
+    </g>
+    <g
+       clip-path="url(#cp12)"
+       id="g162">
+      <text
+         x="158"
+         y="304.62109"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text147">Four</text>
+      <text
+         x="189"
+         y="304.62109"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text148">Connectgame</text>
+      <text
+         x="283"
+         y="304.62109"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text149">Controller</text>
+      <line
+         x1="109"
+         y1="310"
+         x2="400"
+         y2="310"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="line149" />
+      <line
+         x1="109"
+         y1="316"
+         x2="400"
+         y2="316"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="line150" />
+      <text
+         x="114"
+         y="335.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text150">+ handle</text>
+      <text
+         x="161"
+         y="335.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text151">Column</text>
+      <text
+         x="202"
+         y="335.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text152">Input</text>
+      <text
+         x="233"
+         y="335.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text153">(column</text>
+      <text
+         x="280"
+         y="335.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text154">: Integer</text>
+      <text
+         x="324"
+         y="335.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text155">)</text>
+      <text
+         x="328"
+         y="335.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text156">: void</text>
+      <text
+         x="114"
+         y="354.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text157">+ handle</text>
+      <text
+         x="161"
+         y="354.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text158">Play</text>
+      <text
+         x="183"
+         y="354.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text159">Mode</text>
+      <text
+         x="217"
+         y="354.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text160">(player</text>
+      <text
+         x="256"
+         y="354.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text161">: Player</text>
+      <text
+         x="294"
+         y="354.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text162">)</text>
+      <line
+         x1="109"
+         y1="360"
+         x2="400"
+         y2="360"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="line162" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g163" />
+    <g
+       clip-path="url(#)"
+       id="g164" />
+    <g
+       clip-path="url(#)"
+       id="g165" />
+    <g
+       clip-path="url(#cp13)"
+       id="g166">
+      <rect
+         x="345"
+         y="122"
+         width="169"
+         height="130"
+         fill="rgba(85,85,85,0.227)"
+         id="rect165" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g167" />
+    <g
+       clip-path="url(#cp14)"
+       id="g174">
+      <path
+         fill="none"
+         d="M 346,123 H 513 V 251 H 346 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="16px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path167" />
+      <path
+         fill="none"
+         d="M 346,123 H 513 V 251 H 346 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="14px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path168" />
+      <path
+         fill="none"
+         d="M 346,123 H 513 V 251 H 346 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="12px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path169" />
+      <path
+         fill="none"
+         d="M 346,123 H 513 V 251 H 346 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="10px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path170" />
+      <path
+         fill="none"
+         d="M 346,123 H 513 V 251 H 346 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="8px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path171" />
+      <path
+         fill="none"
+         d="M 346,123 H 513 V 251 H 346 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="6px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path172" />
+      <path
+         fill="none"
+         d="M 346,123 H 513 V 251 H 346 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="4px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path173" />
+      <path
+         fill="none"
+         d="M 346,123 H 513 V 251 H 346 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path174" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g175">
+      <rect
+         x="344"
+         y="121"
+         width="167"
+         height="128"
+         fill="#f2f2f2"
+         id="rect174" />
+      <rect
+         x="344"
+         y="121"
+         width="167"
+         height="128"
+         fill="none"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="rect175" />
+    </g>
+    <g
+       clip-path="url(#cp15)"
+       id="g198">
+      <text
+         x="356"
+         y="143.62109"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text175">Main</text>
+      <text
+         x="390"
+         y="143.62109"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text176">Menu</text>
+      <text
+         x="429"
+         y="143.62109"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text177">Controller</text>
+      <line
+         x1="344"
+         y1="149"
+         x2="511"
+         y2="149"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="line177" />
+      <line
+         x1="344"
+         y1="155"
+         x2="511"
+         y2="155"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="line178" />
+      <text
+         x="349"
+         y="174.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text178">+ start</text>
+      <text
+         x="383"
+         y="174.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text179">Game</text>
+      <text
+         x="416"
+         y="174.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text180">(</text>
+      <text
+         x="420"
+         y="174.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text181">)</text>
+      <text
+         x="424"
+         y="174.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text182">: void</text>
+      <text
+         x="349"
+         y="193.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text183">+ open</text>
+      <text
+         x="387"
+         y="193.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text184">Setting</text>
+      <text
+         x="427"
+         y="193.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text185">(</text>
+      <text
+         x="431"
+         y="193.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text186">)</text>
+      <text
+         x="435"
+         y="193.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text187">: void</text>
+      <text
+         x="349"
+         y="212.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text188">+ exit</text>
+      <text
+         x="382"
+         y="212.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text189">(</text>
+      <text
+         x="386"
+         y="212.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text190">)</text>
+      <text
+         x="390"
+         y="212.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text191">: void</text>
+      <text
+         x="349"
+         y="240.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text192">+ back</text>
+      <text
+         x="385"
+         y="240.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text193">To</text>
+      <text
+         x="397"
+         y="240.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text194">Main</text>
+      <text
+         x="424"
+         y="240.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text195">Menu</text>
+      <text
+         x="458"
+         y="240.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text196">(</text>
+      <text
+         x="462"
+         y="240.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text197">)</text>
+      <text
+         x="466"
+         y="240.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text198">: void</text>
+      <line
+         x1="344"
+         y1="255"
+         x2="511"
+         y2="255"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="line198" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g199" />
+    <g
+       clip-path="url(#)"
+       id="g200" />
+    <g
+       clip-path="url(#)"
+       id="g201" />
+    <g
+       clip-path="url(#cp16)"
+       id="g202">
+      <rect
+         x="568"
+         y="142"
+         width="145"
+         height="58"
+         fill="rgba(85,85,85,0.227)"
+         id="rect201" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g203" />
+    <g
+       clip-path="url(#cp17)"
+       id="g210">
+      <path
+         fill="none"
+         d="m 569,142.5 h 143 v 56 H 569 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="16px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path203" />
+      <path
+         fill="none"
+         d="m 569,142.5 h 143 v 56 H 569 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="14px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path204" />
+      <path
+         fill="none"
+         d="m 569,142.5 h 143 v 56 H 569 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="12px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path205" />
+      <path
+         fill="none"
+         d="m 569,142.5 h 143 v 56 H 569 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="10px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path206" />
+      <path
+         fill="none"
+         d="m 569,142.5 h 143 v 56 H 569 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="8px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path207" />
+      <path
+         fill="none"
+         d="m 569,142.5 h 143 v 56 H 569 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="6px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path208" />
+      <path
+         fill="none"
+         d="m 569,142.5 h 143 v 56 H 569 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="4px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path209" />
+      <path
+         fill="none"
+         d="m 569,142.5 h 143 v 56 H 569 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path210" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g211">
+      <rect
+         x="567"
+         y="141"
+         width="143"
+         height="56"
+         fill="#f2f2f2"
+         id="rect210" />
+      <rect
+         x="567"
+         y="141"
+         width="143"
+         height="56"
+         fill="none"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="rect211" />
+    </g>
+    <g
+       clip-path="url(#cp18)"
+       id="g217">
+      <text
+         x="588"
+         y="162.62109"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text211">Help</text>
+      <text
+         x="620"
+         y="162.62109"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text212">Controller</text>
+      <line
+         x1="567"
+         y1="168"
+         x2="710"
+         y2="168"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="line212" />
+      <line
+         x1="567"
+         y1="174"
+         x2="710"
+         y2="174"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="line213" />
+      <text
+         x="572"
+         y="193.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text213">+ open</text>
+      <text
+         x="610"
+         y="193.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text214">Rules</text>
+      <text
+         x="641"
+         y="193.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text215">(</text>
+      <text
+         x="645"
+         y="193.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text216">)</text>
+      <text
+         x="649"
+         y="193.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text217">: void</text>
+      <line
+         x1="567"
+         y1="199"
+         x2="710"
+         y2="199"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="line217" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g218" />
+    <g
+       clip-path="url(#)"
+       id="g219" />
+    <g
+       clip-path="url(#)"
+       id="g220" />
+    <g
+       clip-path="url(#cp19)"
+       id="g221">
+      <rect
+         x="437"
+         y="283"
+         width="293"
+         height="117"
+         fill="rgba(85,85,85,0.227)"
+         id="rect220" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g222" />
+    <g
+       clip-path="url(#cp20)"
+       id="g229">
+      <path
+         fill="none"
+         d="M 438,284 H 729 V 399 H 438 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="16px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path222" />
+      <path
+         fill="none"
+         d="M 438,284 H 729 V 399 H 438 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="14px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path223" />
+      <path
+         fill="none"
+         d="M 438,284 H 729 V 399 H 438 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="12px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path224" />
+      <path
+         fill="none"
+         d="M 438,284 H 729 V 399 H 438 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="10px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path225" />
+      <path
+         fill="none"
+         d="M 438,284 H 729 V 399 H 438 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="8px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path226" />
+      <path
+         fill="none"
+         d="M 438,284 H 729 V 399 H 438 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="6px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path227" />
+      <path
+         fill="none"
+         d="M 438,284 H 729 V 399 H 438 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="4px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path228" />
+      <path
+         fill="none"
+         d="M 438,284 H 729 V 399 H 438 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path229" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g230">
+      <rect
+         x="436"
+         y="282"
+         width="291"
+         height="115"
+         fill="#f2f2f2"
+         id="rect229" />
+      <rect
+         x="436"
+         y="282"
+         width="291"
+         height="115"
+         fill="none"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="rect230" />
+    </g>
+    <g
+       clip-path="url(#cp21)"
+       id="g253">
+      <text
+         x="520"
+         y="304.62109"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text230">Settings</text>
+      <text
+         x="574"
+         y="304.62109"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text231">Controller</text>
+      <line
+         x1="436"
+         y1="310"
+         x2="727"
+         y2="310"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="line231" />
+      <text
+         x="441"
+         y="329.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text232">- localization</text>
+      <text
+         x="509"
+         y="329.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text233">Service</text>
+      <text
+         x="546"
+         y="329.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text234">: Localization</text>
+      <text
+         x="615"
+         y="329.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text235">Service</text>
+      <text
+         x="441"
+         y="348.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text236">- branding</text>
+      <text
+         x="497"
+         y="348.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text237">Service</text>
+      <text
+         x="534"
+         y="348.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text238">: Branding</text>
+      <text
+         x="588"
+         y="348.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text239">Service</text>
+      <line
+         x1="436"
+         y1="354"
+         x2="727"
+         y2="354"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="line239" />
+      <text
+         x="441"
+         y="373.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text240">+ cange</text>
+      <text
+         x="484"
+         y="373.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text241">Language</text>
+      <text
+         x="539"
+         y="373.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text242">(language</text>
+      <text
+         x="592"
+         y="373.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text243">Code</text>
+      <text
+         x="622"
+         y="373.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text244">: String</text>
+      <text
+         x="659"
+         y="373.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text245">)</text>
+      <text
+         x="664"
+         y="373.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text246">: void</text>
+      <text
+         x="441"
+         y="392.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text247">+ change</text>
+      <text
+         x="491"
+         y="392.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text248">Theme</text>
+      <text
+         x="529"
+         y="392.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text249">(theme</text>
+      <text
+         x="566"
+         y="392.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text250">Id</text>
+      <text
+         x="579"
+         y="392.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text251">: String</text>
+      <text
+         x="616"
+         y="392.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text252">)</text>
+      <text
+         x="620"
+         y="392.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text253">: void</text>
+      <line
+         x1="436"
+         y1="398"
+         x2="727"
+         y2="398"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="line253" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g254" />
+    <g
+       clip-path="url(#)"
+       id="g255" />
+    <g
+       clip-path="url(#)"
+       id="g256">
+      <polyline
+         points="248,282 217,217 "
+         fill="none"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="polyline255" />
+      <polygon
+         points="231,232 217,217 220,237 "
+         fill="#f2f2f2"
+         id="polygon255" />
+      <polygon
+         fill="none"
+         points="231,232 217,217 220,237 "
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="polygon256" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g257" />
+    <g
+       clip-path="url(#)"
+       id="g258" />
+    <g
+       clip-path="url(#cp22)"
+       id="g259">
+      <rect
+         x="831"
+         y="76"
+         width="647"
+         height="183"
+         fill="rgba(85,85,85,0.227)"
+         id="rect258" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g260" />
+    <g
+       clip-path="url(#cp23)"
+       id="g267">
+      <path
+         fill="none"
+         d="M 986,108.82617 H 832 V 77 H 986 Z M 1477,258 H 832 V 108.82617 h 645 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="16px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path260" />
+      <path
+         fill="none"
+         d="M 986,108.82617 H 832 V 77 H 986 Z M 1477,258 H 832 V 108.82617 h 645 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="14px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path261" />
+      <path
+         fill="none"
+         d="M 986,108.82617 H 832 V 77 H 986 Z M 1477,258 H 832 V 108.82617 h 645 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="12px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path262" />
+      <path
+         fill="none"
+         d="M 986,108.82617 H 832 V 77 H 986 Z M 1477,258 H 832 V 108.82617 h 645 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="10px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path263" />
+      <path
+         fill="none"
+         d="M 986,108.82617 H 832 V 77 H 986 Z M 1477,258 H 832 V 108.82617 h 645 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="8px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path264" />
+      <path
+         fill="none"
+         d="M 986,108.82617 H 832 V 77 H 986 Z M 1477,258 H 832 V 108.82617 h 645 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="6px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path265" />
+      <path
+         fill="none"
+         d="M 986,108.82617 H 832 V 77 H 986 Z M 1477,258 H 832 V 108.82617 h 645 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="4px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path266" />
+      <path
+         fill="none"
+         d="M 986,108.82617 H 832 V 77 H 986 Z M 1477,258 H 832 V 108.82617 h 645 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path267" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g271">
+      <path
+         d="M 984,106.82617 H 830 V 75 h 154 z"
+         fill="#f2f2f2"
+         id="path268" />
+      <path
+         fill="none"
+         d="M 984,106.82617 H 830 V 75 h 154 z"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path269" />
+      <path
+         d="M 1475,256 H 830 V 106.82617 h 645 z"
+         fill="#f2f2f2"
+         id="path270" />
+      <path
+         fill="none"
+         d="M 1475,256 H 830 V 106.82617 h 645 z"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path271" />
+      <text
+         x="860"
+         y="99.621094"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text271">infrastructure</text>
+    </g>
+    <g
+       clip-path="url(#cp24)"
+       id="g272" />
+    <g
+       clip-path="url(#)"
+       id="g273" />
+    <g
+       clip-path="url(#)"
+       id="g274" />
+    <g
+       clip-path="url(#)"
+       id="g275" />
+    <g
+       clip-path="url(#cp25)"
+       id="g276">
+      <rect
+         x="865"
+         y="142"
+         width="219"
+         height="78"
+         fill="rgba(85,85,85,0.227)"
+         id="rect275" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g277" />
+    <g
+       clip-path="url(#cp26)"
+       id="g284">
+      <path
+         fill="none"
+         d="m 866,142.5 h 217 v 76 H 866 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="16px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path277" />
+      <path
+         fill="none"
+         d="m 866,142.5 h 217 v 76 H 866 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="14px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path278" />
+      <path
+         fill="none"
+         d="m 866,142.5 h 217 v 76 H 866 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="12px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path279" />
+      <path
+         fill="none"
+         d="m 866,142.5 h 217 v 76 H 866 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="10px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path280" />
+      <path
+         fill="none"
+         d="m 866,142.5 h 217 v 76 H 866 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="8px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path281" />
+      <path
+         fill="none"
+         d="m 866,142.5 h 217 v 76 H 866 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="6px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path282" />
+      <path
+         fill="none"
+         d="m 866,142.5 h 217 v 76 H 866 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="4px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path283" />
+      <path
+         fill="none"
+         d="m 866,142.5 h 217 v 76 H 866 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path284" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g285">
+      <rect
+         x="864"
+         y="141"
+         width="217"
+         height="76"
+         fill="#f2f2f2"
+         id="rect284" />
+      <rect
+         x="864"
+         y="141"
+         width="217"
+         height="76"
+         fill="none"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="rect285" />
+    </g>
+    <g
+       clip-path="url(#cp27)"
+       id="g293">
+      <text
+         x="916"
+         y="162.62109"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text285">Branding</text>
+      <text
+         x="979"
+         y="162.62109"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text286">Service</text>
+      <line
+         x1="864"
+         y1="168"
+         x2="1081"
+         y2="168"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="line286" />
+      <line
+         x1="864"
+         y1="174"
+         x2="1081"
+         y2="174"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="line287" />
+      <text
+         x="869"
+         y="202.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text287">+ set</text>
+      <text
+         x="895"
+         y="202.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text288">Theme</text>
+      <text
+         x="933"
+         y="202.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text289">(theme</text>
+      <text
+         x="970"
+         y="202.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text290">Id</text>
+      <text
+         x="983"
+         y="202.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text291">: String</text>
+      <text
+         x="1020"
+         y="202.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text292">)</text>
+      <text
+         x="1024"
+         y="202.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text293">: void</text>
+      <line
+         x1="864"
+         y1="217"
+         x2="1081"
+         y2="217"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="line293" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g294" />
+    <g
+       clip-path="url(#)"
+       id="g295" />
+    <g
+       clip-path="url(#)"
+       id="g296" />
+    <g
+       clip-path="url(#cp28)"
+       id="g297">
+      <rect
+         x="1159"
+         y="142"
+         width="274"
+         height="98"
+         fill="rgba(85,85,85,0.227)"
+         id="rect296" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g298" />
+    <g
+       clip-path="url(#cp29)"
+       id="g305">
+      <path
+         fill="none"
+         d="m 1160,142.5 h 272 V 238 h -272 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="16px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path298" />
+      <path
+         fill="none"
+         d="m 1160,142.5 h 272 V 238 h -272 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="14px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path299" />
+      <path
+         fill="none"
+         d="m 1160,142.5 h 272 V 238 h -272 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="12px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path300" />
+      <path
+         fill="none"
+         d="m 1160,142.5 h 272 V 238 h -272 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="10px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path301" />
+      <path
+         fill="none"
+         d="m 1160,142.5 h 272 V 238 h -272 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="8px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path302" />
+      <path
+         fill="none"
+         d="m 1160,142.5 h 272 V 238 h -272 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="6px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path303" />
+      <path
+         fill="none"
+         d="m 1160,142.5 h 272 V 238 h -272 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="4px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path304" />
+      <path
+         fill="none"
+         d="m 1160,142.5 h 272 V 238 h -272 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path305" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g306">
+      <rect
+         x="1158"
+         y="141"
+         width="272"
+         height="96"
+         fill="#f2f2f2"
+         id="rect305" />
+      <rect
+         x="1158"
+         y="141"
+         width="272"
+         height="96"
+         fill="none"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="rect306" />
+    </g>
+    <g
+       clip-path="url(#cp30)"
+       id="g320">
+      <text
+         x="1226"
+         y="162.62109"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text306">Localiziation</text>
+      <text
+         x="1311"
+         y="162.62109"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text307">Service</text>
+      <line
+         x1="1158"
+         y1="168"
+         x2="1430"
+         y2="168"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="line307" />
+      <line
+         x1="1158"
+         y1="174"
+         x2="1430"
+         y2="174"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="line308" />
+      <text
+         x="1163"
+         y="202.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text308">+ set</text>
+      <text
+         x="1189"
+         y="202.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text309">Language</text>
+      <text
+         x="1244"
+         y="202.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text310">(language</text>
+      <text
+         x="1297"
+         y="202.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text311">Code</text>
+      <text
+         x="1327"
+         y="202.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text312">: String</text>
+      <text
+         x="1364"
+         y="202.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text313">)</text>
+      <text
+         x="1368"
+         y="202.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text314">: void</text>
+      <text
+         x="1163"
+         y="230.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text315">+ get</text>
+      <text
+         x="1191"
+         y="230.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text316">Text</text>
+      <text
+         x="1215"
+         y="230.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text317">(key</text>
+      <text
+         x="1240"
+         y="230.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text318">: String</text>
+      <text
+         x="1277"
+         y="230.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text319">)</text>
+      <text
+         x="1281"
+         y="230.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text320">: String</text>
+      <line
+         x1="1158"
+         y1="236"
+         x2="1430"
+         y2="236"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="line320" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g321" />
+    <g
+       clip-path="url(#)"
+       id="g322" />
+    <g
+       clip-path="url(#)"
+       id="g323">
+      <polyline
+         points="713,282 864,196 "
+         fill="none"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="polyline322" />
+      <polyline
+         points="844,200 864,196 851,211 "
+         fill="none"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="polyline323" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g324" />
+    <g
+       clip-path="url(#)"
+       id="g325">
+      <polyline
+         points="727,341 1158,217 "
+         fill="none"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="polyline324" />
+      <polyline
+         points="1138,216 1158,217 1141,228 "
+         fill="none"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="polyline325" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g326" />
+    <g
+       clip-path="url(#)"
+       id="g327" />
+    <g
+       clip-path="url(#cp31)"
+       id="g328">
+      <rect
+         x="9"
+         y="534"
+         width="616"
+         height="637"
+         fill="rgba(85,85,85,0.227)"
+         id="rect327" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g329" />
+    <g
+       clip-path="url(#cp32)"
+       id="g336">
+      <path
+         fill="none"
+         d="M 163.99998,566.8262 H 10 V 535 H 163.99998 Z M 624,1170 H 10 V 566.8262 h 614 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="16px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path329" />
+      <path
+         fill="none"
+         d="M 163.99998,566.8262 H 10 V 535 H 163.99998 Z M 624,1170 H 10 V 566.8262 h 614 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="14px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path330" />
+      <path
+         fill="none"
+         d="M 163.99998,566.8262 H 10 V 535 H 163.99998 Z M 624,1170 H 10 V 566.8262 h 614 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="12px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path331" />
+      <path
+         fill="none"
+         d="M 163.99998,566.8262 H 10 V 535 H 163.99998 Z M 624,1170 H 10 V 566.8262 h 614 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="10px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path332" />
+      <path
+         fill="none"
+         d="M 163.99998,566.8262 H 10 V 535 H 163.99998 Z M 624,1170 H 10 V 566.8262 h 614 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="8px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path333" />
+      <path
+         fill="none"
+         d="M 163.99998,566.8262 H 10 V 535 H 163.99998 Z M 624,1170 H 10 V 566.8262 h 614 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="6px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path334" />
+      <path
+         fill="none"
+         d="M 163.99998,566.8262 H 10 V 535 H 163.99998 Z M 624,1170 H 10 V 566.8262 h 614 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="4px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path335" />
+      <path
+         fill="none"
+         d="M 163.99998,566.8262 H 10 V 535 H 163.99998 Z M 624,1170 H 10 V 566.8262 h 614 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path336" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g341">
+      <path
+         d="M 162,564.8262 H 8 V 533 h 154 z"
+         fill="#f2f2f2"
+         id="path337" />
+      <path
+         fill="none"
+         d="M 162,564.8262 H 8 V 533 h 154 z"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path338" />
+      <path
+         d="M 622,1168 H 8 V 564.8262 h 614 z"
+         fill="#f2f2f2"
+         id="path339" />
+      <path
+         fill="none"
+         d="M 622,1168 H 8 V 564.8262 h 614 z"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path340" />
+      <text
+         x="50"
+         y="557.62109"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text340">Game</text>
+      <text
+         x="89"
+         y="557.62109"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text341">Core</text>
+    </g>
+    <g
+       clip-path="url(#cp33)"
+       id="g342" />
+    <g
+       clip-path="url(#)"
+       id="g343" />
+    <g
+       clip-path="url(#)"
+       id="g344" />
+    <g
+       clip-path="url(#)"
+       id="g345" />
+    <g
+       clip-path="url(#cp34)"
+       id="g346">
+      <rect
+         x="55"
+         y="590"
+         width="263"
+         height="117"
+         fill="rgba(85,85,85,0.227)"
+         id="rect345" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g347" />
+    <g
+       clip-path="url(#cp35)"
+       id="g354">
+      <path
+         fill="none"
+         d="M 56,591 H 317 V 706 H 56 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="16px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path347" />
+      <path
+         fill="none"
+         d="M 56,591 H 317 V 706 H 56 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="14px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path348" />
+      <path
+         fill="none"
+         d="M 56,591 H 317 V 706 H 56 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="12px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path349" />
+      <path
+         fill="none"
+         d="M 56,591 H 317 V 706 H 56 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="10px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path350" />
+      <path
+         fill="none"
+         d="M 56,591 H 317 V 706 H 56 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="8px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path351" />
+      <path
+         fill="none"
+         d="M 56,591 H 317 V 706 H 56 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="6px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path352" />
+      <path
+         fill="none"
+         d="M 56,591 H 317 V 706 H 56 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="4px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path353" />
+      <path
+         fill="none"
+         d="M 56,591 H 317 V 706 H 56 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path354" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g355">
+      <rect
+         x="54"
+         y="589"
+         width="261"
+         height="115"
+         fill="#f2f2f2"
+         id="rect354" />
+      <rect
+         x="54"
+         y="589"
+         width="261"
+         height="115"
+         fill="none"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="rect355" />
+    </g>
+    <g
+       clip-path="url(#cp36)"
+       id="g375">
+      <text
+         x="158"
+         y="607.63086"
+         font-family="'Segoe UI'"
+         font-size="11px"
+         font-style="italic"
+         fill="#555555"
+         id="text355">«interface</text>
+      <text
+         x="205"
+         y="607.63086"
+         font-family="'Segoe UI'"
+         font-size="11px"
+         font-style="italic"
+         fill="#555555"
+         id="text356">»</text>
+      <text
+         x="158"
+         y="629.62109"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text357">IR</text>
+      <text
+         x="171"
+         y="629.62109"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text358">ule</text>
+      <text
+         x="192"
+         y="629.62109"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text359">Set</text>
+      <line
+         x1="54"
+         y1="635"
+         x2="315"
+         y2="635"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="line359" />
+      <line
+         x1="54"
+         y1="641"
+         x2="315"
+         y2="641"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="line360" />
+      <text
+         x="59"
+         y="660.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text360">+ check</text>
+      <text
+         x="101"
+         y="660.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text361">Win</text>
+      <text
+         x="125"
+         y="660.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text362">(board</text>
+      <text
+         x="163"
+         y="660.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text363">: IP</text>
+      <text
+         x="179"
+         y="660.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text364">lay</text>
+      <text
+         x="194"
+         y="660.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text365">Area</text>
+      <text
+         x="218"
+         y="660.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text366">)</text>
+      <text
+         x="222"
+         y="660.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text367">: Boolean</text>
+      <text
+         x="59"
+         y="679.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text368">+ is</text>
+      <text
+         x="78"
+         y="679.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text369">Draw</text>
+      <text
+         x="108"
+         y="679.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text370">(board</text>
+      <text
+         x="146"
+         y="679.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text371">: IP</text>
+      <text
+         x="162"
+         y="679.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text372">lay</text>
+      <text
+         x="177"
+         y="679.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text373">Area</text>
+      <text
+         x="201"
+         y="679.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text374">)</text>
+      <text
+         x="205"
+         y="679.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text375">: Boolean</text>
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g376" />
+    <g
+       clip-path="url(#)"
+       id="g377" />
+    <g
+       clip-path="url(#)"
+       id="g378" />
+    <g
+       clip-path="url(#cp37)"
+       id="g379">
+      <rect
+         x="49"
+         y="843"
+         width="145"
+         height="130"
+         fill="rgba(85,85,85,0.227)"
+         id="rect378" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g380" />
+    <g
+       clip-path="url(#cp38)"
+       id="g387">
+      <path
+         fill="none"
+         d="M 50,844 H 193 V 972 H 50 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="16px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path380" />
+      <path
+         fill="none"
+         d="M 50,844 H 193 V 972 H 50 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="14px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path381" />
+      <path
+         fill="none"
+         d="M 50,844 H 193 V 972 H 50 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="12px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path382" />
+      <path
+         fill="none"
+         d="M 50,844 H 193 V 972 H 50 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="10px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path383" />
+      <path
+         fill="none"
+         d="M 50,844 H 193 V 972 H 50 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="8px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path384" />
+      <path
+         fill="none"
+         d="M 50,844 H 193 V 972 H 50 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="6px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path385" />
+      <path
+         fill="none"
+         d="M 50,844 H 193 V 972 H 50 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="4px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path386" />
+      <path
+         fill="none"
+         d="M 50,844 H 193 V 972 H 50 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path387" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g388">
+      <rect
+         x="48"
+         y="842"
+         width="143"
+         height="128"
+         fill="#f2f2f2"
+         id="rect387" />
+      <rect
+         x="48"
+         y="842"
+         width="143"
+         height="128"
+         fill="none"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="rect388" />
+    </g>
+    <g
+       clip-path="url(#cp39)"
+       id="g396">
+      <text
+         x="83"
+         y="860.63086"
+         font-family="'Segoe UI'"
+         font-size="11px"
+         font-style="italic"
+         fill="#555555"
+         id="text388">«enumeration</text>
+      <text
+         x="150"
+         y="860.63086"
+         font-family="'Segoe UI'"
+         font-size="11px"
+         font-style="italic"
+         fill="#555555"
+         id="text389">»</text>
+      <text
+         x="83"
+         y="882.62109"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text390">Game</text>
+      <text
+         x="122"
+         y="882.62109"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text391">State</text>
+      <line
+         x1="48"
+         y1="888"
+         x2="191"
+         y2="888"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="line391" />
+      <text
+         x="53"
+         y="907.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text392">Not</text>
+      <text
+         x="73"
+         y="907.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text393">Started</text>
+      <text
+         x="53"
+         y="926.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text394">Running</text>
+      <text
+         x="53"
+         y="945.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text395">Paused</text>
+      <text
+         x="53"
+         y="964.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text396">Finished</text>
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g397" />
+    <g
+       clip-path="url(#)"
+       id="g398" />
+    <g
+       clip-path="url(#)"
+       id="g399" />
+    <g
+       clip-path="url(#cp40)"
+       id="g400">
+      <rect
+         x="258"
+         y="860"
+         width="145"
+         height="162"
+         fill="rgba(85,85,85,0.227)"
+         id="rect399" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g401" />
+    <g
+       clip-path="url(#cp41)"
+       id="g408">
+      <path
+         fill="none"
+         d="m 259,861 h 143 v 160 H 259 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="16px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path401" />
+      <path
+         fill="none"
+         d="m 259,861 h 143 v 160 H 259 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="14px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path402" />
+      <path
+         fill="none"
+         d="m 259,861 h 143 v 160 H 259 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="12px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path403" />
+      <path
+         fill="none"
+         d="m 259,861 h 143 v 160 H 259 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="10px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path404" />
+      <path
+         fill="none"
+         d="m 259,861 h 143 v 160 H 259 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="8px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path405" />
+      <path
+         fill="none"
+         d="m 259,861 h 143 v 160 H 259 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="6px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path406" />
+      <path
+         fill="none"
+         d="m 259,861 h 143 v 160 H 259 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="4px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path407" />
+      <path
+         fill="none"
+         d="m 259,861 h 143 v 160 H 259 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path408" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g409">
+      <rect
+         x="257"
+         y="859"
+         width="143"
+         height="160"
+         fill="#f2f2f2"
+         id="rect408" />
+      <rect
+         x="257"
+         y="859"
+         width="143"
+         height="160"
+         fill="none"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="rect409" />
+    </g>
+    <g
+       clip-path="url(#cp42)"
+       id="g422">
+      <text
+         x="302"
+         y="877.63086"
+         font-family="'Segoe UI'"
+         font-size="11px"
+         font-style="italic"
+         fill="#555555"
+         id="text409">«interface</text>
+      <text
+         x="349"
+         y="877.63086"
+         font-family="'Segoe UI'"
+         font-size="11px"
+         font-style="italic"
+         fill="#555555"
+         id="text410">»</text>
+      <text
+         x="296"
+         y="899.62109"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text411">IP</text>
+      <text
+         x="309"
+         y="899.62109"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text412">lay</text>
+      <text
+         x="329"
+         y="899.62109"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text413">Area</text>
+      <line
+         x1="257"
+         y1="905"
+         x2="400"
+         y2="905"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="line413" />
+      <line
+         x1="257"
+         y1="911"
+         x2="400"
+         y2="911"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="line414" />
+      <text
+         x="262"
+         y="930.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text414">+ is</text>
+      <text
+         x="281"
+         y="930.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text415">Full</text>
+      <text
+         x="303"
+         y="930.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text416">(</text>
+      <text
+         x="307"
+         y="930.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text417">)</text>
+      <text
+         x="311"
+         y="930.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text418">: Boolean</text>
+      <text
+         x="262"
+         y="949.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text419">+ clear</text>
+      <text
+         x="301"
+         y="949.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text420">(</text>
+      <text
+         x="305"
+         y="949.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text421">)</text>
+      <text
+         x="309"
+         y="949.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text422">: Boolean</text>
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g423" />
+    <g
+       clip-path="url(#)"
+       id="g424" />
+    <g
+       clip-path="url(#)"
+       id="g425" />
+    <g
+       clip-path="url(#cp43)"
+       id="g426">
+      <rect
+         x="214"
+         y="1047"
+         width="243"
+         height="99"
+         fill="rgba(85,85,85,0.227)"
+         id="rect425" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g427" />
+    <g
+       clip-path="url(#cp44)"
+       id="g434">
+      <path
+         fill="none"
+         d="m 215,1048 h 241 v 97 H 215 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="16px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path427" />
+      <path
+         fill="none"
+         d="m 215,1048 h 241 v 97 H 215 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="14px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path428" />
+      <path
+         fill="none"
+         d="m 215,1048 h 241 v 97 H 215 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="12px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path429" />
+      <path
+         fill="none"
+         d="m 215,1048 h 241 v 97 H 215 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="10px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path430" />
+      <path
+         fill="none"
+         d="m 215,1048 h 241 v 97 H 215 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="8px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path431" />
+      <path
+         fill="none"
+         d="m 215,1048 h 241 v 97 H 215 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="6px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path432" />
+      <path
+         fill="none"
+         d="m 215,1048 h 241 v 97 H 215 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="4px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path433" />
+      <path
+         fill="none"
+         d="m 215,1048 h 241 v 97 H 215 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path434" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g435">
+      <rect
+         x="213"
+         y="1046"
+         width="241"
+         height="97"
+         fill="#f2f2f2"
+         id="rect434" />
+      <rect
+         x="213"
+         y="1046"
+         width="241"
+         height="97"
+         fill="none"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="rect435" />
+    </g>
+    <g
+       clip-path="url(#cp45)"
+       id="g447">
+      <text
+         x="307"
+         y="1064.6309"
+         font-family="'Segoe UI'"
+         font-size="11px"
+         font-style="italic"
+         fill="#555555"
+         id="text435">«interface</text>
+      <text
+         x="354"
+         y="1064.6309"
+         font-family="'Segoe UI'"
+         font-size="11px"
+         font-style="italic"
+         fill="#555555"
+         id="text436">»</text>
+      <text
+         x="285"
+         y="1086.6211"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text437">IM</text>
+      <text
+         x="302"
+         y="1086.6211"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text438">ove</text>
+      <text
+         x="327"
+         y="1086.6211"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text439">Strategy</text>
+      <line
+         x1="213"
+         y1="1092"
+         x2="454"
+         y2="1092"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="line439" />
+      <line
+         x1="213"
+         y1="1098"
+         x2="454"
+         y2="1098"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="line440" />
+      <text
+         x="218"
+         y="1126.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text440">+ choose</text>
+      <text
+         x="267"
+         y="1126.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text441">Move</text>
+      <text
+         x="300"
+         y="1126.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text442">(board</text>
+      <text
+         x="338"
+         y="1126.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text443">: IP</text>
+      <text
+         x="354"
+         y="1126.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text444">lay</text>
+      <text
+         x="369"
+         y="1126.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text445">Area</text>
+      <text
+         x="393"
+         y="1126.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text446">)</text>
+      <text
+         x="397"
+         y="1126.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text447">: void</text>
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g448" />
+    <g
+       clip-path="url(#)"
+       id="g449" />
+    <g
+       clip-path="url(#)"
+       id="g450" />
+    <g
+       clip-path="url(#cp46)"
+       id="g451">
+      <rect
+         x="401"
+         y="669"
+         width="163"
+         height="145"
+         fill="rgba(85,85,85,0.227)"
+         id="rect450" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g452" />
+    <g
+       clip-path="url(#cp47)"
+       id="g459">
+      <path
+         fill="none"
+         d="M 402,670 H 563 V 813 H 402 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="16px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path452" />
+      <path
+         fill="none"
+         d="M 402,670 H 563 V 813 H 402 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="14px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path453" />
+      <path
+         fill="none"
+         d="M 402,670 H 563 V 813 H 402 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="12px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path454" />
+      <path
+         fill="none"
+         d="M 402,670 H 563 V 813 H 402 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="10px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path455" />
+      <path
+         fill="none"
+         d="M 402,670 H 563 V 813 H 402 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="8px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path456" />
+      <path
+         fill="none"
+         d="M 402,670 H 563 V 813 H 402 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="6px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path457" />
+      <path
+         fill="none"
+         d="M 402,670 H 563 V 813 H 402 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="4px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path458" />
+      <path
+         fill="none"
+         d="M 402,670 H 563 V 813 H 402 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path459" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g460">
+      <rect
+         x="400"
+         y="668"
+         width="161"
+         height="143"
+         fill="#f2f2f2"
+         id="rect459" />
+      <rect
+         x="400"
+         y="668"
+         width="161"
+         height="143"
+         fill="none"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="rect460" />
+    </g>
+    <g
+       clip-path="url(#cp48)"
+       id="g485">
+      <text
+         x="454"
+         y="686.63086"
+         font-family="'Segoe UI'"
+         font-size="11px"
+         font-style="italic"
+         fill="#555555"
+         id="text460">«interface</text>
+      <text
+         x="501"
+         y="686.63086"
+         font-family="'Segoe UI'"
+         font-size="11px"
+         font-style="italic"
+         fill="#555555"
+         id="text461">»</text>
+      <text
+         x="459"
+         y="708.62109"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text462">IG</text>
+      <text
+         x="473"
+         y="708.62109"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text463">ame</text>
+      <line
+         x1="400"
+         y1="714"
+         x2="561"
+         y2="714"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="line463" />
+      <line
+         x1="400"
+         y1="720"
+         x2="561"
+         y2="720"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="line464" />
+      <text
+         x="405"
+         y="739.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text464">+ set</text>
+      <text
+         x="431"
+         y="739.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text465">Status</text>
+      <text
+         x="466"
+         y="739.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text466">(</text>
+      <text
+         x="470"
+         y="739.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text467">)</text>
+      <text
+         x="474"
+         y="739.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text468">: void</text>
+      <text
+         x="405"
+         y="758.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text469">+ restart</text>
+      <text
+         x="452"
+         y="758.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text470">(</text>
+      <text
+         x="456"
+         y="758.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text471">)</text>
+      <text
+         x="460"
+         y="758.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text472">: void</text>
+      <text
+         x="405"
+         y="777.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text473">+ get</text>
+      <text
+         x="433"
+         y="777.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text474">Status</text>
+      <text
+         x="468"
+         y="777.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text475">(</text>
+      <text
+         x="472"
+         y="777.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text476">)</text>
+      <text
+         x="476"
+         y="777.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text477">: Game</text>
+      <text
+         x="512"
+         y="777.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text478">State</text>
+      <text
+         x="405"
+         y="796.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text479">+ get</text>
+      <text
+         x="433"
+         y="796.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text480">Board</text>
+      <text
+         x="467"
+         y="796.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text481">(</text>
+      <text
+         x="471"
+         y="796.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text482">)</text>
+      <text
+         x="475"
+         y="796.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text483">: IP</text>
+      <text
+         x="491"
+         y="796.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text484">lay</text>
+      <text
+         x="506"
+         y="796.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text485">Area</text>
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g486" />
+    <g
+       clip-path="url(#)"
+       id="g487" />
+    <g
+       clip-path="url(#)"
+       id="g488" />
+    <g
+       clip-path="url(#cp49)"
+       id="g489">
+      <rect
+         x="639"
+         y="567"
+         width="794"
+         height="1025"
+         fill="rgba(85,85,85,0.227)"
+         id="rect488" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g490" />
+    <g
+       clip-path="url(#cp50)"
+       id="g497">
+      <path
+         fill="none"
+         d="M 794,599.8262 H 640 V 568 H 794 Z M 1432,1591 H 640 V 599.8262 h 792 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="16px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path490" />
+      <path
+         fill="none"
+         d="M 794,599.8262 H 640 V 568 H 794 Z M 1432,1591 H 640 V 599.8262 h 792 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="14px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path491" />
+      <path
+         fill="none"
+         d="M 794,599.8262 H 640 V 568 H 794 Z M 1432,1591 H 640 V 599.8262 h 792 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="12px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path492" />
+      <path
+         fill="none"
+         d="M 794,599.8262 H 640 V 568 H 794 Z M 1432,1591 H 640 V 599.8262 h 792 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="10px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path493" />
+      <path
+         fill="none"
+         d="M 794,599.8262 H 640 V 568 H 794 Z M 1432,1591 H 640 V 599.8262 h 792 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="8px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path494" />
+      <path
+         fill="none"
+         d="M 794,599.8262 H 640 V 568 H 794 Z M 1432,1591 H 640 V 599.8262 h 792 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="6px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path495" />
+      <path
+         fill="none"
+         d="M 794,599.8262 H 640 V 568 H 794 Z M 1432,1591 H 640 V 599.8262 h 792 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="4px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path496" />
+      <path
+         fill="none"
+         d="M 794,599.8262 H 640 V 568 H 794 Z M 1432,1591 H 640 V 599.8262 h 792 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path497" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g502">
+      <path
+         d="M 792,597.8262 H 638 V 566 h 154 z"
+         fill="#f2f2f2"
+         id="path498" />
+      <path
+         fill="none"
+         d="M 792,597.8262 H 638 V 566 h 154 z"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path499" />
+      <path
+         d="M 1430,1589 H 638 V 597.8262 h 792 z"
+         fill="#f2f2f2"
+         id="path500" />
+      <path
+         fill="none"
+         d="M 1430,1589 H 638 V 597.8262 h 792 z"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path501" />
+      <text
+         x="682"
+         y="590.62109"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text501">Package</text>
+      <text
+         x="739"
+         y="590.62109"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text502">5</text>
+    </g>
+    <g
+       clip-path="url(#cp51)"
+       id="g503" />
+    <g
+       clip-path="url(#)"
+       id="g504" />
+    <g
+       clip-path="url(#)"
+       id="g505" />
+    <g
+       clip-path="url(#)"
+       id="g506" />
+    <g
+       clip-path="url(#cp52)"
+       id="g507">
+      <rect
+         x="722"
+         y="641"
+         width="145"
+         height="58"
+         fill="rgba(85,85,85,0.227)"
+         id="rect506" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g508" />
+    <g
+       clip-path="url(#cp53)"
+       id="g515">
+      <path
+         fill="none"
+         d="m 723,642 h 143 v 56 H 723 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="16px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path508" />
+      <path
+         fill="none"
+         d="m 723,642 h 143 v 56 H 723 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="14px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path509" />
+      <path
+         fill="none"
+         d="m 723,642 h 143 v 56 H 723 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="12px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path510" />
+      <path
+         fill="none"
+         d="m 723,642 h 143 v 56 H 723 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="10px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path511" />
+      <path
+         fill="none"
+         d="m 723,642 h 143 v 56 H 723 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="8px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path512" />
+      <path
+         fill="none"
+         d="m 723,642 h 143 v 56 H 723 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="6px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path513" />
+      <path
+         fill="none"
+         d="m 723,642 h 143 v 56 H 723 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="4px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path514" />
+      <path
+         fill="none"
+         d="m 723,642 h 143 v 56 H 723 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path515" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g516">
+      <rect
+         x="721"
+         y="640"
+         width="143"
+         height="56"
+         fill="#f2f2f2"
+         id="rect515" />
+      <rect
+         x="721"
+         y="640"
+         width="143"
+         height="56"
+         fill="none"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="rect516" />
+    </g>
+    <g
+       clip-path="url(#cp54)"
+       id="g520">
+      <text
+         x="731"
+         y="662.62109"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text516">Four</text>
+      <text
+         x="762"
+         y="662.62109"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text517">Connect</text>
+      <text
+         x="818"
+         y="662.62109"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text518">Rules</text>
+      <line
+         x1="721"
+         y1="668"
+         x2="864"
+         y2="668"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="line518" />
+      <line
+         x1="721"
+         y1="674"
+         x2="864"
+         y2="674"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="line519" />
+      <line
+         x1="721"
+         y1="680"
+         x2="864"
+         y2="680"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="line520" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g521" />
+    <g
+       clip-path="url(#)"
+       id="g522" />
+    <g
+       clip-path="url(#)"
+       id="g523" />
+    <g
+       clip-path="url(#cp55)"
+       id="g524">
+      <rect
+         x="654"
+         y="758"
+         width="419"
+         height="250"
+         fill="rgba(85,85,85,0.227)"
+         id="rect523" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g525" />
+    <g
+       clip-path="url(#cp56)"
+       id="g532">
+      <path
+         fill="none"
+         d="m 655,758.9131 h 417 v 248 H 655 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="16px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path525" />
+      <path
+         fill="none"
+         d="m 655,758.9131 h 417 v 248 H 655 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="14px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path526" />
+      <path
+         fill="none"
+         d="m 655,758.9131 h 417 v 248 H 655 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="12px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path527" />
+      <path
+         fill="none"
+         d="m 655,758.9131 h 417 v 248 H 655 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="10px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path528" />
+      <path
+         fill="none"
+         d="m 655,758.9131 h 417 v 248 H 655 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="8px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path529" />
+      <path
+         fill="none"
+         d="m 655,758.9131 h 417 v 248 H 655 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="6px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path530" />
+      <path
+         fill="none"
+         d="m 655,758.9131 h 417 v 248 H 655 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="4px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path531" />
+      <path
+         fill="none"
+         d="m 655,758.9131 h 417 v 248 H 655 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path532" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g533">
+      <rect
+         x="653"
+         y="757"
+         width="417"
+         height="248"
+         fill="#f2f2f2"
+         id="rect532" />
+      <rect
+         x="653"
+         y="757"
+         width="417"
+         height="248"
+         fill="none"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="rect533" />
+    </g>
+    <g
+       clip-path="url(#cp57)"
+       id="g592">
+      <text
+         x="798"
+         y="779.62109"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text533">Four</text>
+      <text
+         x="829"
+         y="779.62109"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text534">Connect</text>
+      <text
+         x="885"
+         y="779.62109"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text535">Game</text>
+      <line
+         x1="653"
+         y1="785"
+         x2="1070"
+         y2="785"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="line535" />
+      <text
+         x="658"
+         y="804.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text536">- state</text>
+      <text
+         x="691"
+         y="804.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text537">: Game</text>
+      <text
+         x="727"
+         y="804.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text538">State</text>
+      <text
+         x="658"
+         y="823.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text539">- players</text>
+      <text
+         x="703"
+         y="823.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text540">: List&lt;</text>
+      <text
+         x="735"
+         y="823.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text541">Four</text>
+      <text
+         x="759"
+         y="823.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text542">Connect</text>
+      <text
+         x="803"
+         y="823.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text543">Player&gt;</text>
+      <text
+         x="658"
+         y="842.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text544">- current</text>
+      <text
+         x="704"
+         y="842.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text545">Player</text>
+      <text
+         x="736"
+         y="842.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text546">Index</text>
+      <text
+         x="765"
+         y="842.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text547">: Integer</text>
+      <text
+         x="658"
+         y="861.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text548">- rules</text>
+      <text
+         x="691"
+         y="861.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text549">: Four</text>
+      <text
+         x="721"
+         y="861.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text550">Connect</text>
+      <text
+         x="765"
+         y="861.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text551">Rules</text>
+      <text
+         x="658"
+         y="880.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text552">- game</text>
+      <text
+         x="695"
+         y="880.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text553">Board</text>
+      <text
+         x="726"
+         y="880.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text554">: Four</text>
+      <text
+         x="756"
+         y="880.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text555">Connect</text>
+      <text
+         x="800"
+         y="880.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text556">Game</text>
+      <text
+         x="830"
+         y="880.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text557">Board</text>
+      <text
+         x="658"
+         y="899.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text558">- New</text>
+      <text
+         x="690"
+         y="899.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text559">Attribute</text>
+      <text
+         x="737"
+         y="899.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text560">6</text>
+      <line
+         x1="653"
+         y1="905"
+         x2="1070"
+         y2="905"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="line560" />
+      <text
+         x="658"
+         y="933.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text561">+ drop</text>
+      <text
+         x="695"
+         y="933.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text562">Disc</text>
+      <text
+         x="720"
+         y="933.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text563">(column</text>
+      <text
+         x="767"
+         y="933.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text564">: Integer</text>
+      <text
+         x="810"
+         y="933.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text565">, current</text>
+      <text
+         x="854"
+         y="933.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text566">Player</text>
+      <text
+         x="889"
+         y="933.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text567">: Four</text>
+      <text
+         x="919"
+         y="933.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text568">Connect</text>
+      <text
+         x="963"
+         y="933.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text569">Player</text>
+      <text
+         x="995"
+         y="933.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text570">)</text>
+      <text
+         x="999"
+         y="933.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text571">: Integer</text>
+      <text
+         x="658"
+         y="961.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text572">+ player</text>
+      <text
+         x="701"
+         y="961.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text573">Turn</text>
+      <text
+         x="728"
+         y="961.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text574">(current</text>
+      <text
+         x="770"
+         y="961.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text575">Player</text>
+      <text
+         x="805"
+         y="961.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text576">: Four</text>
+      <text
+         x="835"
+         y="961.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text577">Connect</text>
+      <text
+         x="880"
+         y="961.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text578">Player</text>
+      <text
+         x="912"
+         y="961.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text579">)</text>
+      <text
+         x="916"
+         y="961.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text580">: Integer</text>
+      <text
+         x="658"
+         y="989.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text581">+ init</text>
+      <text
+         x="687"
+         y="989.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text582">Four</text>
+      <text
+         x="711"
+         y="989.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text583">Connect</text>
+      <text
+         x="755"
+         y="989.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text584">Game</text>
+      <text
+         x="788"
+         y="989.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text585">(player</text>
+      <text
+         x="824"
+         y="989.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text586">One</text>
+      <text
+         x="849"
+         y="989.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text587">: Player</text>
+      <text
+         x="887"
+         y="989.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text588">, player</text>
+      <text
+         x="926"
+         y="989.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text589">Two</text>
+      <text
+         x="950"
+         y="989.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text590">: Player</text>
+      <text
+         x="988"
+         y="989.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text591">)</text>
+      <text
+         x="992"
+         y="989.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text592">: Integer</text>
+      <line
+         x1="653"
+         y1="1004"
+         x2="1070"
+         y2="1004"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="line592" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g593" />
+    <g
+       clip-path="url(#)"
+       id="g594" />
+    <g
+       clip-path="url(#)"
+       id="g595" />
+    <g
+       clip-path="url(#cp58)"
+       id="g596">
+      <rect
+         x="654"
+         y="1047"
+         width="461"
+         height="172"
+         fill="rgba(85,85,85,0.227)"
+         id="rect595" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g597" />
+    <g
+       clip-path="url(#cp59)"
+       id="g604">
+      <path
+         fill="none"
+         d="m 655,1048 h 459 v 170 H 655 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="16px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path597" />
+      <path
+         fill="none"
+         d="m 655,1048 h 459 v 170 H 655 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="14px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path598" />
+      <path
+         fill="none"
+         d="m 655,1048 h 459 v 170 H 655 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="12px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path599" />
+      <path
+         fill="none"
+         d="m 655,1048 h 459 v 170 H 655 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="10px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path600" />
+      <path
+         fill="none"
+         d="m 655,1048 h 459 v 170 H 655 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="8px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path601" />
+      <path
+         fill="none"
+         d="m 655,1048 h 459 v 170 H 655 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="6px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path602" />
+      <path
+         fill="none"
+         d="m 655,1048 h 459 v 170 H 655 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="4px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path603" />
+      <path
+         fill="none"
+         d="m 655,1048 h 459 v 170 H 655 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path604" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g605">
+      <rect
+         x="653"
+         y="1046"
+         width="459"
+         height="170"
+         fill="#f2f2f2"
+         id="rect604" />
+      <rect
+         x="653"
+         y="1046"
+         width="459"
+         height="170"
+         fill="none"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="rect605" />
+    </g>
+    <g
+       clip-path="url(#cp60)"
+       id="g644">
+      <text
+         x="799"
+         y="1068.6211"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text605">Four</text>
+      <text
+         x="830"
+         y="1068.6211"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text606">Connect</text>
+      <text
+         x="886"
+         y="1068.6211"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text607">Game</text>
+      <text
+         x="925"
+         y="1068.6211"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text608">Board</text>
+      <line
+         x1="653"
+         y1="1074"
+         x2="1112"
+         y2="1074"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="line608" />
+      <text
+         x="658"
+         y="1093.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text609">- rows</text>
+      <text
+         x="691"
+         y="1093.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text610">: Integer</text>
+      <text
+         x="658"
+         y="1112.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text611">- cells</text>
+      <text
+         x="689"
+         y="1112.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text612">: Map</text>
+      <text
+         x="658"
+         y="1131.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text613">- columns</text>
+      <text
+         x="711"
+         y="1131.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text614">: Integer</text>
+      <line
+         x1="653"
+         y1="1137"
+         x2="1112"
+         y2="1137"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="line614" />
+      <text
+         x="658"
+         y="1156.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text615">+ get</text>
+      <text
+         x="686"
+         y="1156.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text616">Rows</text>
+      <text
+         x="717"
+         y="1156.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text617">(</text>
+      <text
+         x="721"
+         y="1156.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text618">)</text>
+      <text
+         x="725"
+         y="1156.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text619">: Map</text>
+      <text
+         x="658"
+         y="1175.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text620">+ get</text>
+      <text
+         x="686"
+         y="1175.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text621">Columns</text>
+      <text
+         x="735"
+         y="1175.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text622">(</text>
+      <text
+         x="739"
+         y="1175.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text623">)</text>
+      <text
+         x="743"
+         y="1175.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text624">: Map</text>
+      <text
+         x="658"
+         y="1194.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text625">+ get</text>
+      <text
+         x="686"
+         y="1194.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text626">Cell</text>
+      <text
+         x="708"
+         y="1194.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text627">(cell</text>
+      <text
+         x="733"
+         y="1194.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text628">: Position</text>
+      <text
+         x="782"
+         y="1194.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text629">)</text>
+      <text
+         x="786"
+         y="1194.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text630">: Four</text>
+      <text
+         x="816"
+         y="1194.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text631">Connect</text>
+      <text
+         x="860"
+         y="1194.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text632">Player</text>
+      <text
+         x="658"
+         y="1213.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text633">+ set</text>
+      <text
+         x="685"
+         y="1213.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text634">Cell</text>
+      <text
+         x="704"
+         y="1213.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text635">Value</text>
+      <text
+         x="735"
+         y="1213.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text636">(cell</text>
+      <text
+         x="760"
+         y="1213.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text637">: Position</text>
+      <text
+         x="809"
+         y="1213.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text638">, current</text>
+      <text
+         x="853"
+         y="1213.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text639">Player</text>
+      <text
+         x="888"
+         y="1213.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text640">: Four</text>
+      <text
+         x="918"
+         y="1213.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text641">Connect</text>
+      <text
+         x="962"
+         y="1213.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text642">Player</text>
+      <text
+         x="994"
+         y="1213.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text643">)</text>
+      <text
+         x="998"
+         y="1213.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text644">: Integer</text>
+      <line
+         x1="653"
+         y1="1219"
+         x2="1112"
+         y2="1219"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="line644" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g645" />
+    <g
+       clip-path="url(#)"
+       id="g646" />
+    <g
+       clip-path="url(#)"
+       id="g647" />
+    <g
+       clip-path="url(#cp61)"
+       id="g648">
+      <rect
+         x="1216"
+         y="1059"
+         width="162"
+         height="117"
+         fill="rgba(85,85,85,0.227)"
+         id="rect647" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g649" />
+    <g
+       clip-path="url(#cp62)"
+       id="g656">
+      <path
+         fill="none"
+         d="m 1217,1060 h 160 v 115 h -160 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="16px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path649" />
+      <path
+         fill="none"
+         d="m 1217,1060 h 160 v 115 h -160 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="14px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path650" />
+      <path
+         fill="none"
+         d="m 1217,1060 h 160 v 115 h -160 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="12px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path651" />
+      <path
+         fill="none"
+         d="m 1217,1060 h 160 v 115 h -160 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="10px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path652" />
+      <path
+         fill="none"
+         d="m 1217,1060 h 160 v 115 h -160 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="8px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path653" />
+      <path
+         fill="none"
+         d="m 1217,1060 h 160 v 115 h -160 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="6px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path654" />
+      <path
+         fill="none"
+         d="m 1217,1060 h 160 v 115 h -160 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="4px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path655" />
+      <path
+         fill="none"
+         d="m 1217,1060 h 160 v 115 h -160 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path656" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g657">
+      <rect
+         x="1215"
+         y="1058"
+         width="160"
+         height="115"
+         fill="#f2f2f2"
+         id="rect656" />
+      <rect
+         x="1215"
+         y="1058"
+         width="160"
+         height="115"
+         fill="none"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="rect657" />
+    </g>
+    <g
+       clip-path="url(#cp63)"
+       id="g671">
+      <text
+         x="1267"
+         y="1080.6211"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text657">Position</text>
+      <line
+         x1="1215"
+         y1="1086"
+         x2="1375"
+         y2="1086"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="line657" />
+      <text
+         x="1220"
+         y="1105.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text658">- x</text>
+      <text
+         x="1234"
+         y="1105.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text659">: Integer</text>
+      <text
+         x="1220"
+         y="1124.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text660">- y</text>
+      <text
+         x="1234"
+         y="1124.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text661">: Integer</text>
+      <line
+         x1="1215"
+         y1="1130"
+         x2="1375"
+         y2="1130"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="line661" />
+      <text
+         x="1220"
+         y="1149.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text662">+ get</text>
+      <text
+         x="1248"
+         y="1149.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text663">X</text>
+      <text
+         x="1258"
+         y="1149.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text664">(</text>
+      <text
+         x="1262"
+         y="1149.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text665">)</text>
+      <text
+         x="1266"
+         y="1149.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text666">: Integer</text>
+      <text
+         x="1220"
+         y="1168.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text667">+ get</text>
+      <text
+         x="1248"
+         y="1168.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text668">Y</text>
+      <text
+         x="1258"
+         y="1168.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text669">(</text>
+      <text
+         x="1262"
+         y="1168.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text670">)</text>
+      <text
+         x="1266"
+         y="1168.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text671">: Integer</text>
+      <line
+         x1="1215"
+         y1="1174"
+         x2="1375"
+         y2="1174"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="line671" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g672" />
+    <g
+       clip-path="url(#)"
+       id="g673" />
+    <g
+       clip-path="url(#)"
+       id="g674" />
+    <g
+       clip-path="url(#cp64)"
+       id="g675">
+      <rect
+         x="1216"
+         y="758"
+         width="145"
+         height="117"
+         fill="rgba(85,85,85,0.227)"
+         id="rect674" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g676" />
+    <g
+       clip-path="url(#cp65)"
+       id="g683">
+      <path
+         fill="none"
+         d="m 1217,758.9131 h 143 v 115 h -143 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="16px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path676" />
+      <path
+         fill="none"
+         d="m 1217,758.9131 h 143 v 115 h -143 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="14px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path677" />
+      <path
+         fill="none"
+         d="m 1217,758.9131 h 143 v 115 h -143 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="12px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path678" />
+      <path
+         fill="none"
+         d="m 1217,758.9131 h 143 v 115 h -143 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="10px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path679" />
+      <path
+         fill="none"
+         d="m 1217,758.9131 h 143 v 115 h -143 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="8px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path680" />
+      <path
+         fill="none"
+         d="m 1217,758.9131 h 143 v 115 h -143 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="6px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path681" />
+      <path
+         fill="none"
+         d="m 1217,758.9131 h 143 v 115 h -143 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="4px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path682" />
+      <path
+         fill="none"
+         d="m 1217,758.9131 h 143 v 115 h -143 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path683" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g684">
+      <rect
+         x="1215"
+         y="757"
+         width="143"
+         height="115"
+         fill="#f2f2f2"
+         id="rect683" />
+      <rect
+         x="1215"
+         y="757"
+         width="143"
+         height="115"
+         fill="none"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="rect684" />
+    </g>
+    <g
+       clip-path="url(#cp66)"
+       id="g689">
+      <text
+         x="1250"
+         y="775.63086"
+         font-family="'Segoe UI'"
+         font-size="11px"
+         font-style="italic"
+         fill="#555555"
+         id="text684">«enumeration</text>
+      <text
+         x="1317"
+         y="775.63086"
+         font-family="'Segoe UI'"
+         font-size="11px"
+         font-style="italic"
+         fill="#555555"
+         id="text685">»</text>
+      <text
+         x="1265"
+         y="797.62109"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text686">Player</text>
+      <line
+         x1="1215"
+         y1="803"
+         x2="1358"
+         y2="803"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="line686" />
+      <text
+         x="1220"
+         y="822.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text687">Human</text>
+      <text
+         x="1220"
+         y="841.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text688">Bot</text>
+      <text
+         x="1220"
+         y="860.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text689">None</text>
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g690" />
+    <g
+       clip-path="url(#)"
+       id="g691" />
+    <g
+       clip-path="url(#)"
+       id="g692" />
+    <g
+       clip-path="url(#cp67)"
+       id="g693">
+      <rect
+         x="654"
+         y="1258"
+         width="219"
+         height="141"
+         fill="rgba(85,85,85,0.227)"
+         id="rect692" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g694" />
+    <g
+       clip-path="url(#cp68)"
+       id="g701">
+      <path
+         fill="none"
+         d="m 655,1259.0869 h 217 v 139 H 655 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="16px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path694" />
+      <path
+         fill="none"
+         d="m 655,1259.0869 h 217 v 139 H 655 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="14px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path695" />
+      <path
+         fill="none"
+         d="m 655,1259.0869 h 217 v 139 H 655 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="12px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path696" />
+      <path
+         fill="none"
+         d="m 655,1259.0869 h 217 v 139 H 655 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="10px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path697" />
+      <path
+         fill="none"
+         d="m 655,1259.0869 h 217 v 139 H 655 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="8px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path698" />
+      <path
+         fill="none"
+         d="m 655,1259.0869 h 217 v 139 H 655 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="6px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path699" />
+      <path
+         fill="none"
+         d="m 655,1259.0869 h 217 v 139 H 655 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="4px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path700" />
+      <path
+         fill="none"
+         d="m 655,1259.0869 h 217 v 139 H 655 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path701" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g702">
+      <rect
+         x="653"
+         y="1257"
+         width="217"
+         height="139"
+         fill="#f2f2f2"
+         id="rect701" />
+      <rect
+         x="653"
+         y="1257"
+         width="217"
+         height="139"
+         fill="none"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="rect702" />
+    </g>
+    <g
+       clip-path="url(#cp69)"
+       id="g724">
+      <text
+         x="697"
+         y="1279.6211"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text702">Four</text>
+      <text
+         x="728"
+         y="1279.6211"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text703">Connect</text>
+      <text
+         x="784"
+         y="1279.6211"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text704">Player</text>
+      <line
+         x1="653"
+         y1="1285"
+         x2="870"
+         y2="1285"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="line704" />
+      <text
+         x="658"
+         y="1304.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text705">- type</text>
+      <text
+         x="689"
+         y="1304.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text706">: Player</text>
+      <text
+         x="658"
+         y="1323.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text707">- strategy</text>
+      <text
+         x="708"
+         y="1323.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text708">: IM</text>
+      <text
+         x="728"
+         y="1323.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text709">ove</text>
+      <text
+         x="747"
+         y="1323.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text710">Strategy</text>
+      <text
+         x="658"
+         y="1342.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text711">- colour</text>
+      <text
+         x="700"
+         y="1342.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text712">: String</text>
+      <line
+         x1="653"
+         y1="1348"
+         x2="870"
+         y2="1348"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="line712" />
+      <text
+         x="658"
+         y="1367.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text713">+ get</text>
+      <text
+         x="686"
+         y="1367.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text714">Name</text>
+      <text
+         x="720"
+         y="1367.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text715">(</text>
+      <text
+         x="724"
+         y="1367.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text716">)</text>
+      <text
+         x="728"
+         y="1367.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text717">: String</text>
+      <text
+         x="658"
+         y="1386.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text718">+ get</text>
+      <text
+         x="686"
+         y="1386.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text719">Strategy</text>
+      <text
+         x="732"
+         y="1386.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text720">(</text>
+      <text
+         x="736"
+         y="1386.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text721">)</text>
+      <text
+         x="740"
+         y="1386.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text722">: IM</text>
+      <text
+         x="760"
+         y="1386.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text723">ove</text>
+      <text
+         x="779"
+         y="1386.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text724">Strategy</text>
+      <line
+         x1="653"
+         y1="1392"
+         x2="870"
+         y2="1392"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="line724" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g725" />
+    <g
+       clip-path="url(#)"
+       id="g726" />
+    <g
+       clip-path="url(#)"
+       id="g727" />
+    <g
+       clip-path="url(#cp70)"
+       id="g728">
+      <rect
+         x="654"
+         y="1438"
+         width="145"
+         height="70"
+         fill="rgba(85,85,85,0.227)"
+         id="rect727" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g729" />
+    <g
+       clip-path="url(#cp71)"
+       id="g736">
+      <path
+         fill="none"
+         d="m 655,1439.1738 h 143 v 68 H 655 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="16px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path729" />
+      <path
+         fill="none"
+         d="m 655,1439.1738 h 143 v 68 H 655 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="14px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path730" />
+      <path
+         fill="none"
+         d="m 655,1439.1738 h 143 v 68 H 655 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="12px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path731" />
+      <path
+         fill="none"
+         d="m 655,1439.1738 h 143 v 68 H 655 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="10px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path732" />
+      <path
+         fill="none"
+         d="m 655,1439.1738 h 143 v 68 H 655 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="8px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path733" />
+      <path
+         fill="none"
+         d="m 655,1439.1738 h 143 v 68 H 655 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="6px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path734" />
+      <path
+         fill="none"
+         d="m 655,1439.1738 h 143 v 68 H 655 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="4px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path735" />
+      <path
+         fill="none"
+         d="m 655,1439.1738 h 143 v 68 H 655 Z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path736" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g737">
+      <rect
+         x="653"
+         y="1437"
+         width="143"
+         height="68"
+         fill="#f2f2f2"
+         id="rect736" />
+      <rect
+         x="653"
+         y="1437"
+         width="143"
+         height="68"
+         fill="none"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="rect737" />
+    </g>
+    <g
+       clip-path="url(#cp72)"
+       id="g742">
+      <text
+         x="670"
+         y="1460.6211"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text737">Four</text>
+      <text
+         x="701"
+         y="1460.6211"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text738">Connect</text>
+      <text
+         x="757"
+         y="1460.6211"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text739">Bot</text>
+      <text
+         x="696"
+         y="1479.6211"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text740">Strategy</text>
+      <line
+         x1="653"
+         y1="1485"
+         x2="796"
+         y2="1485"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="line740" />
+      <line
+         x1="653"
+         y1="1491"
+         x2="796"
+         y2="1491"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="line741" />
+      <line
+         x1="653"
+         y1="1497"
+         x2="796"
+         y2="1497"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="line742" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g743" />
+    <g
+       clip-path="url(#)"
+       id="g744" />
+    <g
+       clip-path="url(#)"
+       id="g745" />
+    <g
+       clip-path="url(#cp73)"
+       id="g746">
+      <rect
+         x="1216"
+         y="911"
+         width="145"
+         height="97"
+         fill="rgba(85,85,85,0.227)"
+         id="rect745" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g747" />
+    <g
+       clip-path="url(#cp74)"
+       id="g754">
+      <path
+         fill="none"
+         d="m 1217,911.9131 h 143 v 95 h -143 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="16px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path747" />
+      <path
+         fill="none"
+         d="m 1217,911.9131 h 143 v 95 h -143 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="14px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path748" />
+      <path
+         fill="none"
+         d="m 1217,911.9131 h 143 v 95 h -143 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="12px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path749" />
+      <path
+         fill="none"
+         d="m 1217,911.9131 h 143 v 95 h -143 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="10px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path750" />
+      <path
+         fill="none"
+         d="m 1217,911.9131 h 143 v 95 h -143 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="8px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path751" />
+      <path
+         fill="none"
+         d="m 1217,911.9131 h 143 v 95 h -143 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="6px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path752" />
+      <path
+         fill="none"
+         d="m 1217,911.9131 h 143 v 95 h -143 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="4px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path753" />
+      <path
+         fill="none"
+         d="m 1217,911.9131 h 143 v 95 h -143 z"
+         stroke="rgba(85,85,85,0.031)"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path754" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g755">
+      <rect
+         x="1215"
+         y="910"
+         width="143"
+         height="95"
+         fill="#f2f2f2"
+         id="rect754" />
+      <rect
+         x="1215"
+         y="910"
+         width="143"
+         height="95"
+         fill="none"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="rect755" />
+    </g>
+    <g
+       clip-path="url(#cp75)"
+       id="g761">
+      <text
+         x="1250"
+         y="928.63086"
+         font-family="'Segoe UI'"
+         font-size="11px"
+         font-style="italic"
+         fill="#555555"
+         id="text755">«enumeration</text>
+      <text
+         x="1317"
+         y="928.63086"
+         font-family="'Segoe UI'"
+         font-size="11px"
+         font-style="italic"
+         fill="#555555"
+         id="text756">»</text>
+      <text
+         x="1248"
+         y="950.62109"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text757">Game</text>
+      <text
+         x="1287"
+         y="950.62109"
+         font-family="'Segoe UI'"
+         font-size="14px"
+         font-weight="bold"
+         fill="#555555"
+         id="text758">Mode</text>
+      <line
+         x1="1215"
+         y1="956"
+         x2="1358"
+         y2="956"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="line758" />
+      <text
+         x="1220"
+         y="975.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text759">Two</text>
+      <text
+         x="1241"
+         y="975.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text760">Player</text>
+      <text
+         x="1220"
+         y="994.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text761">Bot</text>
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g762" />
+    <g
+       clip-path="url(#)"
+       id="g763" />
+    <g
+       clip-path="url(#)"
+       id="g764">
+      <polyline
+         points="819,757 792,696 "
+         fill="none"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="polyline763" />
+      <polygon
+         points="807,730 809,746 819,757 817,742 "
+         fill="#555555"
+         id="polygon763" />
+      <polygon
+         fill="none"
+         points="807,730 809,746 819,757 817,742 "
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="polygon764" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g765" />
+    <g
+       clip-path="url(#)"
+       id="g766">
+      <polyline
+         points="830,1005 830,1046 "
+         fill="none"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="polyline765" />
+      <polygon
+         points="830,1035 835,1019 830,1005 825,1019 "
+         fill="#555555"
+         id="polygon765" />
+      <polygon
+         fill="none"
+         points="830,1035 835,1019 830,1005 825,1019 "
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="polygon766" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g767" />
+    <g
+       clip-path="url(#)"
+       id="g769">
+      <polyline
+         points="1070,984 1167,982 1167,1295 870,1297 "
+         fill="none"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="polyline767" />
+      <polygon
+         points="1100,983 1084,979 1070,984 1084,988 "
+         fill="#555555"
+         id="polygon767" />
+      <polygon
+         fill="none"
+         points="1100,983 1084,979 1070,984 1084,988 "
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="polygon768" />
+      <text
+         x="1070"
+         y="973.96094"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text768">​1</text>
+      <text
+         x="870"
+         y="1317.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text769">​2</text>
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g770" />
+    <g
+       clip-path="url(#)"
+       id="g771">
+      <polyline
+         points="828,696 1112,696 1112,1019 1112,1046 "
+         fill="none"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dasharray="3.5, 3"
+         stroke-dashoffset="0"
+         stroke-linejoin="miter"
+         stroke-miterlimit="10"
+         id="polyline770" />
+      <polyline
+         points="1118,1027 1112,1046 1106,1027 "
+         fill="none"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="polyline771" />
+      <text
+         x="1095"
+         y="757.63086"
+         font-family="'Segoe UI'"
+         font-size="11px"
+         font-style="italic"
+         fill="#555555"
+         id="text771">​«use​»</text>
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g772" />
+    <g
+       clip-path="url(#)"
+       id="g773">
+      <polyline
+         points="1112,1128 1215,1128 "
+         fill="none"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="polyline772" />
+      <text
+         x="1112"
+         y="1118.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text772">​1</text>
+      <text
+         x="1165"
+         y="1118.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text773">​*</text>
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g774" />
+    <g
+       clip-path="url(#)"
+       id="g775">
+      <polyline
+         points="454,1143 653,1327 "
+         fill="none"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="polyline774" />
+      <polygon
+         points="476,1163 468,1149 454,1143 461,1156 "
+         fill="#f2f2f2"
+         id="polygon774" />
+      <polygon
+         fill="none"
+         points="476,1163 468,1149 454,1143 461,1156 "
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="polygon775" />
+      <text
+         x="603"
+         y="1332.9609"
+         font-family="'Segoe UI'"
+         font-size="12px"
+         fill="#555555"
+         id="text775">​0​.​.​1</text>
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g776" />
+    <g
+       clip-path="url(#)"
+       id="g777">
+      <polyline
+         points="653,1453 357,1143 "
+         fill="none"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="polyline776" />
+      <polygon
+         points="375,1152 357,1143 366,1161 "
+         fill="#f2f2f2"
+         id="polygon776" />
+      <polygon
+         fill="none"
+         points="375,1152 357,1143 366,1161 "
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="polygon777" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g778" />
+    <g
+       clip-path="url(#)"
+       id="g779">
+      <polyline
+         points="653,1083 400,939 "
+         fill="none"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="polyline778" />
+      <polygon
+         points="420,943 400,939 413,954 "
+         fill="#f2f2f2"
+         id="polygon778" />
+      <polygon
+         fill="none"
+         points="420,943 400,939 413,954 "
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="polygon779" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g780" />
+    <g
+       clip-path="url(#)"
+       id="g781">
+      <polyline
+         points="653,837 561,793 "
+         fill="none"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="polyline780" />
+      <polygon
+         points="581,796 561,793 575,807 "
+         fill="#f2f2f2"
+         id="polygon780" />
+      <polygon
+         fill="none"
+         points="581,796 561,793 575,807 "
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="polygon781" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g782" />
+    <g
+       clip-path="url(#)"
+       id="g783">
+      <polyline
+         points="721,646 315,623 "
+         fill="none"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="polyline782" />
+      <polygon
+         points="334,618 315,623 334,630 "
+         fill="#f2f2f2"
+         id="polygon782" />
+      <polygon
+         fill="none"
+         points="334,618 315,623 334,630 "
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="polygon783" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g784" />
+    <g
+       clip-path="url(#)"
+       id="g785">
+      <polyline
+         points="400,811 328,859 "
+         fill="none"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="polyline784" />
+      <polygon
+         points="375,828 391,823 400,811 386,815 "
+         fill="#555555"
+         id="polygon784" />
+      <polygon
+         fill="none"
+         points="375,828 391,823 400,811 386,815 "
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="polygon785" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g786" />
+    <g
+       clip-path="url(#)"
+       id="g787">
+      <polyline
+         points="400,739 315,704 "
+         fill="none"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="polyline786" />
+      <polygon
+         points="372,728 385,738 400,739 389,729 "
+         fill="#555555"
+         id="polygon786" />
+      <polygon
+         fill="none"
+         points="372,728 385,738 400,739 389,729 "
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="polygon787" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g788" />
+    <g
+       clip-path="url(#)"
+       id="g789">
+      <polyline
+         points="321,1046 328,1019 "
+         fill="none"
+         stroke="#555555"
+         stroke-width="2px"
+         stroke-dashoffset="0"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="polyline788" />
+    </g>
+    <g
+       clip-path="url(#)"
+       id="g790" />
+  </g>
+</svg>
