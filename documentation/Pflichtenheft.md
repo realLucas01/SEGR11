@@ -127,25 +127,176 @@ Die Software ist für den Dauerbetrieb innerhalb des IFE-Systems ausgelegt und m
 
 ### 3.1 Funktionale Anforderungen
 
-#### 3.1.1 Beschreibung der funktionalen Anforderungen mit Rollen innerhalb der Geschäftsprozesse
+#### 3.1.1 Beschreibung der funktionalen Anforderungen mit Rollen innerhalb der Geschäftsprozesse  
+ 
+Im exemplarischen Prozess "FourConnect spielen" interagiert ein Nutzer über die grafische Benutzerschnittstelle mit der Anwendung. Die Benutzereingaben werden durch Controller verarbeitet, welche die Spiellogik des GameCore verwenden. Der Fluggast wählt ein Spiel, konfiguriert den Spielmodus, führt Spielaktionen aus und kann optional die Spielhilfe aufrufen.
+
+Muss Kriterien:  
+|AF Nr |Name |Beschreibung |    
+|------|-----|-------------|
+|AF-01 |Spiel starten/auswählen |Der Fluggast wählt aus der ihm vorliegendem Spielesammlung ein Spiel aus. Das ausgewählte Spiel wird anschließend gestartet und angezeigt. |
+|AF-02 |Spielmodus wählen |Der Fluggast wählt zwischen den Spielmodi: "Spieler gegen Spieler" oder "Spieler gegen Bot". |
+|AF-03 |Spielstein setzen |Der Fluggast wählt ein Feld oder eine Reihe im Spielfeld aus, der Spielstein dieses Spielers fällt daraufhin von oben in die Reihe und bleibt auf dem niedrigsten freien Platz liegen. |
+|AF-04 |Neue Runde starten |Nach dem Abschluss eines Spiels ist es dem Fluggast möglich eine neue Runde zu starten durch einen Knopfdruck. |
+|AF-05 |Spielhilfe aufrufen |Vor, im Laufe oder nach Beendigung des Spieles, ist es dem Fluggast möglich eine Spielhilfe, mit den Grundlegenden Regeln des Spieles aufzurufen. |
+|AF-06 |Spielfeld zurücksetzen |Im Laufe des Spieles, ist es dem Fluggast möglich das Spielfeld zu seinem Ausgangszustand zurückzusetzen.| 
+|AF-07 |Rückkehr zur Spielesammlung |Im Laufe eines Spieles oder nach Beendigung einer Runde, ist es dem Fluggast möglich zur Spielesammlung zurückzukehren.|
+
+Kann Kriterien:  
+|KF Nr|Name|Beschreibung| 
+|------|-----|-------------|
+|KF-01| Localization| Dem Fluggast ist es möglich, über ein separates Menü zwischen einer Auswahl an Sprachen zu wählen|
+|KF-02| CI-UI-Anpassung| Den Flugbetreibern ist es möglich, die Farben der Spielsteine anzupassen.
+
 
 #### 3.1.2 Aktivitäten mit Benutzerschnittstelle (UI)
 
+Die folgenden UI-Diagramme dienen der Veranschaulichung der Benutzerinteraktion.  
+Der Screenflow zeigt die Navigation zwischen den einzelnen Bildschirmen.  
+Die Wireframes skizzieren die grundlegende Anordnung und Funktion der Bedienelemente (Low-Fidelity) und definieren das Bedienkonzept, ohne ein finales Design festzulegen.
+
+**Abbildung:** Screenflow der Benutzeroberfläche  
+![Screenflow](diagrams/screenflow_v2.svg)
+
+|Anwendungsfall ID | AF-01|
+|-------|-------------|
+|AF Name| Spiel starten/auswählen   |
+|Akteur| Fluggast    |
+|Vorbedingungen| Anwendung ist gestartet, Spielmenü wird angezeigt    |
+|Auslösendes Ereignis| Auswahl eines Spieles  |
+|Nachbedingung Erfolg| Anzeige der Spielmoduswahl |
+|Nachbedingung Fehlschlag| Spiel konnte nicht initialisiert werden, Verbleib im Hauptmenü  |
+|Ablauf| Auswahl des Spieles im Hauptmenü    |
+|Benutzerschnittstelle| |  
+
+**Abbildung:** Wireframe – Hauptmenü  
+![Hauptmenü](diagrams/01_hauptmenue.svg)
+
+|Anwendungsfall ID| AF-02|
+|------|-------------|
+|AF Name| Spielmodus wählen  |
+|Akteur| Fluggast    |
+|Vorbedingungen| Das Spiel "4Connect" wurde ausgewählt |
+|Auslösendes Ereignis| Auswahl eines Spielmodus |
+|Nachbedingung Erfolg| Spiel wird initialisiert, Spielansicht wird angezeigt  |
+|Nachbedingung Fehlschlag| Spiel konnte nicht initialisiert werden, Rückkehr zum Hauptmenü  |
+|Ablauf | - Auswahl des Spieles im Hauptmenü   <br/>- Auswahl des Spielmodus (Zwei Spieler oder Bot) <br/>- Initialisierung des Spieles <br/> - Anzeige der Spielansicht |
+|Benutzerschnittstelle| |  
+
+**Abbildung:** Wireframe – Modusmenü  
+![Modusmenü](diagrams/02_modusmenue.svg)
+
+|Anwendungsfall ID| AF-03|  
+|-----|-------------|
+|AF Name| Spielstein setzen   |
+|Akteur| Fluggast   |
+|Vorbedingungen| Spielansicht geöffnet, Spielstand = laufend   |
+|Auslösendes Ereignis| Auswahl einer Spalte durch den Fluggast  |
+|Nachbedingung Erfolg| Spielstein platziert, Spielfeld aktualisiert, Spielerwechsel  |
+|Nachbedingung Fehlschlag| Ungültige oder volle Spalte, kein Zustandswechsel  |
+|Ablauf| - Auswahl einer Spalte  <br/>- Übergabe der Eingabe an den Controller  <br/>- Platzierung des Spielsteins  <br/>- Prüfung auf Spielende (Sieg/Unentschieden)  <br/>- Spielerwechsel      |
+|Benutzerschnittstelle| |  
+
+**Abbildung:** Wireframe – Spielansicht  
+![Spielansicht](diagrams/03-06-07_spielscreen.svg)
+
+**Abbildung:** Wireframe – Sprachauswahl (über Sprach-Icon)  
+![Sprachauswahl](diagrams/03a_sprachauswahl.svg)
+
+|Anwendungsfall ID| AF-04|
+|------|-------------|
+|AF Name| Neue Runde starten   |
+|Akteur| Fluggast   |
+|Vorbedingungen| Spielrunde ist beendet    |
+|Auslösendes Ereignis| Bestätigung der Schaltstelle "Neue Runde" |
+|Nachbedingung Erfolg| Neue Runde startet mit leerem Spielfeld  |
+|Nachbedingung Fehlschlag| Neue Runde konnte nicht gestartet werden  |
+|Ablauf| - Anzeige des Endzustands <br/>- Bestätigung der Schaltfläche "Neue Runde"    |
+|Benutzerschnittstelle| |  
+
+**Abbildung:** Wireframe – Neue Runde starten  
+![Neue Runde](diagrams/04-07_ergebnis.svg)
+
+|Anwendungsfall ID| AF-05|
+|-----|-------------|
+|AF Name| Spielhilfe aufrufen   |
+|Akteur| Fluggast    |
+|Vorbedingungen| Spiel oder Hauptmenü ist geöffnet    |
+|Auslösendes Ereignis| Auswahl "Spielhilfe"  |
+|Nachbedingung Erfolg| Spielhilfe mit Regeln wird angezeigt  |
+|Nachbedingung Fehlschlag| Spielhilfe kann nicht angezeigt werden  |
+|Ablauf| - Auswahl der Spielhilfe <br/>- Anzeige der grundlegenden Spielregeln      |
+|Benutzerschnittstelle| |  
+
+**Abbildung:** Wireframe – Hilfe / Regeln  
+![Hilfe](diagrams/05_hilfe.svg)
+
+|Anwendungsfall ID| AF-06|
+|-----|-------------|
+|AF Name| Spielfeld zurücksetzen   |
+|Akteur| Fluggast    |
+|Vorbedingungen| Ein Spiel ist in Betrieb    |
+|Auslösendes Ereignis| Auswahl Schaltfläche "Zurücksetzen"  |
+|Nachbedingung Erfolg| Das Spielfeld wird zurückgesetzt auf seinen Ausgangszustand  |
+|Nachbedingung Fehlschlag| Spielfeld wird nicht zurückgesetzt  |
+|Ablauf| - Auswahl der Schaltfläche "Zurücksetzen" <br/>- Spielfläche wird von den Spielsteinen geleert <br/>- Anzeige des neuen leeren Spielfeldes       |
+|Benutzerschnittstelle| |  
+
+**Abbildung:** Wireframe – Spielansicht  
+![Spielansicht](diagrams/03-06-07_spielscreen.svg)
+
+|Anwendungsfall ID| AF-07|
+|-----|-------------|
+|AF Name| Rückkehr zur Spielesammlung   |
+|Akteur| Fluggast    |
+|Vorbedingungen| - Ein Spiel ist in Betrieb <brb/> - Ein Spiel ist beendet     |
+|Auslösendes Ereignis| Auswahl Schaltfläche "Spielesammlung"  |
+|Nachbedingung Erfolg| Die vorhandene Spielesammlung wird angezeigt |
+|Nachbedingung Fehlschlag| Das aktuelle Spiel wird weiter angezeigt  |
+|Ablauf| - Auswahl der Schaltfläche "Spielesammlung" <br/>- Anzeige der Spielesammlung  |
+|Benutzerschnittstelle| | 
+
+**Abbildung:** Wireframe – Spielansicht  
+![Spielansicht](diagrams/03-06-07_spielscreen.svg)
+
+**Abbildung:** Wireframe – Ergebnisbildschirm  
+![Ergebnis](diagrams/04-07_ergebnis.svg)
+
+
+Das Aktivitätsdiagramm stellt den Ablauf einer Spielrunde einschließlich optionaler Aktionen (Spielhilfe, Sprachwahl) sowie der Behandlung von Spielende und Neustart dar.
+**Abbildung:** Aktivitätsdiagramm – Spielrunde  
+![Aktivitätsdiagramm Spielrunde](diagrams/activity_spielrunde.svg)
+
 #### 3.1.3 Fachliches Klassendiagramm (Domain Model) / Produktdaten
+
+**Abbildung:** Klassendiagramm
+![Klassendiagramm](diagrams/FourConnect_Nr3.6.svg)
 
 ### 3.2 Nichtfunktionale Anforderungen
 
 #### 3.2.1 Benutzbarkeit
+**NF-B1 Benutzung**  
+Die Anwendung soll ausschließlich über eine grafische Benutzeroberfläche bedient werden. Alle Funktionen müssen über eindeutig beschriftete Bedienelemente erreichbar sein. Die Bedienung soll zudem ohne zusätzliche Schulung möglich sein.
 
 #### 3.2.2 Zuverlässigkeit
+**NF-Z1 Zuverlässiger Betrieb**  
+Die Anwendung muss während der Nutzung stabil laufen. Ungültige Benutzereingaben dürfen nicht zum Absturz der Anwendung führen. Auch fehlerhalfte Spielzüge müssen abgefangen werden.
 
 #### 3.2.3 Effizienz
+**NF-E1 Effizienz**  
+Die Verarbeitung von Benutzereingaben und die Aktualisierung der Benutzoberfläche sollen unmittelbar erfolgen. Spielzüge müssen ohne wahrnehmbare Verzögerung dargestellt werden. Menüwechsel und Anzeigen müssen direkt erfolgen.
 
 #### 3.2.4 Softwarewartung
+**NF-W1 Softwarewartung**  
+Die Anwendung soll so aufgebaut sein, dass zukünftige Erweiterungen mit geringem Aufwand möglich sind. Erweiterungen an den Sprachen und des Designs sollen ohne grundlegende Änderungen an der Spiellogik möglich sein. Erweiterungen an der Spielesammlung sollen die Logik der anderen Spiele nicht beeinträchtigen oder verändern.
 
 #### 3.2.5 Sicherheit
+**NF-S1 Sicherheit**  
+Für die Anwendung liegen keine besonderen Sicherheitsanforderungen vor. Es werden zudem keine personenbezogenen Daten dauerhaft gespeichert. Für die Fluggäste ist keine besondere Authentifizierung oder Autorisierung erforderlich.
 
 #### 3.2.6 Normen
+**NF-N1 Normen**   
+Die Anwendung ist als Unterhaltungssoftware für Fluggäste konzipiert und ist nicht Bestandteil sicherheitskritischer Flugzeugsysteme. Es besteht keinerlei Anbindung an Flugsteuerungs-, Navigations- oder Kommunikationssysteme. Die Anwendung muss sonst keine gesetzlichen Vorgaben erfüllen.
 
 
 ## 4 Testung
