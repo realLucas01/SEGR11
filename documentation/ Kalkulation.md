@@ -82,7 +82,7 @@ Projektzeitraum: 16 Wochen
 
 ## Stabilisierung & Integration:
 **Hauptverantwortlich:** Projekt Manager 
-**Unterstützend:** Senior Software Engineer, Finances & SE
+**Unterstützend:** Senior SE, Finances & SE
 - Performance-Optimierung
 - Langzeitbetrieb und Stabilitätsprüfung (Speicher, Zustände, Performance)
 - Neustart und Fehlerverhalten
@@ -93,14 +93,14 @@ Projektzeitraum: 16 Wochen
 
 
 ## Testphase & Feinschliff:
-**Hauptverantwortlich:** Senior Software Engineer  
+**Hauptverantwortlich:** Senior SE  
 **Unterstützend:** Junior UX Engineer
 - Funktionstests
 - Bot Feintuning
-- Bugfixes //nicht nur hier sondern eigentlich laufender prozess
+- Bugfixes
 - Abnahmevorbereitung
 
-  Circa: 20-40h //sehr offen weil man größere Probleme feststellen könnte
+  Circa: 20-40h
   Kosten: ~3300€ - 6000€
 
 
