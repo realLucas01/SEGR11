@@ -195,6 +195,12 @@ Die Wireframes skizzieren die grundlegende Anordnung und Funktion der Bedienelem
 |Ablauf| - Auswahl der Schaltfläche "Zurücksetzen" <br/>- Spielfläche wird von den Spielsteinen geleert <br/>- Anzeige des neuen leeren Spielfeldes       |
 |Benutzerschnittstelle| |  
 
+
+
+Nach dem Ende einer Spielrunde wird das Spielergebnis auf einem separaten Ergebnisbildschirm angezeigt. Von dort aus kann eine neue Runde gestartet oder zum Hauptmenü zurückgekehrt werden.
+**Abbildung:** Wireframe – Ergebnisbildschirm  
+![Ergebnis](diagrams/05_ergebnis.svg)
+
 |Anwendungsfall ID| AF-07|
 |-----|-------------|
 |AF Name| Rückkehr zur Spielesammlung   |
@@ -205,10 +211,6 @@ Die Wireframes skizzieren die grundlegende Anordnung und Funktion der Bedienelem
 |Nachbedingung Fehlschlag| Das aktuelle Spiel wird weiter angezeigt  |
 |Ablauf| - Auswahl der Schaltfläche "Spielesammlung" <br/>- Anzeige der Spielesammlung  |
 |Benutzerschnittstelle| | 
-
-Nach dem Ende einer Spielrunde wird das Spielergebnis auf einem separaten Ergebnisbildschirm angezeigt. Von dort aus kann eine neue Runde gestartet oder zum Hauptmenü zurückgekehrt werden.
-**Abbildung:** Wireframe – Ergebnisbildschirm  
-![Ergebnis](diagrams/05_ergebnis.svg)
 
 Das Aktivitätsdiagramm stellt den Ablauf einer Spielrunde einschließlich optionaler Aktionen (Spielhilfe, Sprachwahl) sowie der Behandlung von Spielende und Neustart dar.
 **Abbildung:** Aktivitätsdiagramm – Spielrunde  
