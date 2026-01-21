@@ -107,7 +107,7 @@ Projektzeitraum: 16 Wochen
 ## Dokumentation & Abnahme:
 **Hauptverantwortlich:** Projekt Manager,  Finances & SE
 **Unterstützend:** Senior SE, Designer
-- Technische Dokumentation //Bedienungsanleitung
+- Technische Dokumentation
 - Integrations/Installationshinweise
 - Übergabe der Abnahmeversion
 - Die Ausarbeitung der Technischen Dokumentation erfolgt parallel zur Entwicklung der Software
