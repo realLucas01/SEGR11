@@ -4,19 +4,19 @@
 ---
 
 Anbieter: 
-Gervithrall System GmbH
-Perlickstraße 1, 
-04103 Leipzig
+Gervithrall System GmbH  
+Perlickstraße 1,  
+04103 Leipzig  
 
 Ansprechpartner:
-Lucas Rumann
-E-Mail: lucasr@gervithrall@systems.de
-Telefon: 0351 6482642
+Lucas Rumann  
+E-Mail: lucasr@gervithrall-systems.de  
+Telefon: 0351 6482642  
 
 
 
-Angebotsdatum: 26.01.2026
-Angebotsnummer: ANG-0032
+Angebotsdatum: 26.01.2026  
+Angebotsnummer: ANG-0032  
 
 ---
 
