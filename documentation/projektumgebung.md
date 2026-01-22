@@ -31,7 +31,7 @@ Die folgenden Werkzeuge werden im Projekt eingesetzt.
 
 | Bereich | Werkzeug | Version / Stand |
 |--------|----------|-----------------|
-| Programmiersprache / JDK | Java (JDK) | Java 21 (LTS) 21.0.x |
+| Programmiersprache / JDK | Java (JDK) | Java 21 LTS 21.0.x |
 | Ziel-Runtime (IFE) | Java Runtime | Java 21 LTS |
 | UI-Framework | JavaFX | 21.0.2 |
 | UI-Designer | SceneBuilder | 21.0.0 |
