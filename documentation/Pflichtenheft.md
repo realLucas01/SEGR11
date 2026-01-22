@@ -157,13 +157,6 @@ Muss Kriterien:
 |AF-06 |Spielfeld zurücksetzen |Im Laufe des Spieles, ist es dem Fluggast möglich das Spielfeld zu seinem Ausgangszustand zurückzusetzen.| 
 |AF-07 |Rückkehr zur Spielesammlung |Im Laufe eines Spieles oder nach Beendigung einer Runde, ist es dem Fluggast möglich zur Spielesammlung zurückzukehren.|
 
-Kann Kriterien:  
-|KF Nr|Name|Beschreibung| 
-|------|-----|-------------|
-|KF-01| Localization| Dem Fluggast ist es möglich, über ein separates Menü zwischen einer Auswahl an Sprachen zu wählen|
-|KF-02| CI-UI-Anpassung| Den Flugbetreibern ist es möglich, die Farben der Spielsteine anzupassen.
-
-
 #### 3.1.2 Aktivitäten mit Benutzerschnittstelle (UI)
 
 Die folgenden UI-Diagramme dienen der Veranschaulichung der Benutzerinteraktion.  
@@ -214,9 +207,6 @@ Die Wireframes skizzieren die grundlegende Anordnung und Funktion der Bedienelem
 
 **Abbildung:** Wireframe – Spielansicht  
 ![Spielansicht](diagrams/03-06-07_spielscreen.svg)
-
-**Abbildung:** Wireframe – Sprachauswahl (über Sprach-Icon)  
-![Sprachauswahl](diagrams/03a_sprachauswahl.svg)
 
 |Anwendungsfall ID| AF-04|
 |------|-------------|
