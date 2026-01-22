@@ -21,6 +21,8 @@ Arbeitsaufwand: 1500h (275h skaliert auf 1500h (realistisch))
 Projektzeitraum: 16 Wochen
 
 
+Anmerkung zu den Kosten: Real werden diese höher sein da Skalierungsfaktor circa 4x-5x (von 275h auf 1500h) deshalb auch die "abweichende" Kalkulation ganz unten.
+
 
 ## Konzeption:
 **Hauptverantwortlich:** Projekt Manager, Finances & SE
