@@ -285,7 +285,7 @@ Das Aktivitätsdiagramm stellt den Ablauf einer Spielrunde einschließlich optio
 #### 3.1.3 Fachliches Klassendiagramm (Domain Model) / Produktdaten
 
 **Abbildung:** Klassendiagramm
-![Klassendiagramm](diagrams/FourConnect_Nr3.6.svg)
+![Klassendiagramm](diagrams/FourConnect_ClassDiagramm_Nr3.6.svg)
 
 ### 3.2 Nichtfunktionale Anforderungen
 
