@@ -7,6 +7,8 @@ Dieses Kapitel beschreibt die Entwicklungsumgebung und die eingesetzten Werkzeug
 ## 8.1 Zielumgebung (IFE) und Rahmenbedingungen
 Die Anwendung wird innerhalb des bestehenden IFE betrieben. Der Betrieb erfolgt vollständig offline; externe Dienste und Netzwerkanbindungen werden nicht vorausgesetzt.
 
+An die Hardware und Orgware der Zielumgebung bestehen keine besonderen Anforderungen über die vorhandene IFE-Standardumgebung hinaus (z. B. Sitzmonitor/Touch bzw. Maus-/Remote-Bedienung). Die Anwendung ist ressourcenschonend ausgelegt und nutzt keine zusätzliche Peripherie.
+
 Die Anwendung läuft in der vom IFE vorgegebenen Java 21-LTS Runtime.
 ---
 
@@ -37,6 +39,7 @@ Die folgenden Werkzeuge werden im Projekt eingesetzt.
 | UI-Designer | SceneBuilder | 21.0.0 |
 | IDE | Eclipse IDE for Enterprise Java and Web Developers | 2025-09 |
 | IDE | IntelliJ IDEA | 2025.2.6.x |
+| IDE | Visual Studio Code | 1.108.1 |
 
 ### 8.3.2 Versionsverwaltung und Kollaboration
 
@@ -50,7 +53,6 @@ Die folgenden Werkzeuge werden im Projekt eingesetzt.
 
 | Bereich | Werkzeug | Version / Stand |
 |--------|----------|-----------------|
-| Editor (Diagramme/Docs) | Visual Studio Code | 1.108.1|
 | Diagramme (PlantUML) | PlantUML Extension (VS Code) | 2.18.1|
 | Modellierung/UML | Software Ideas Modeler | 15 |
 | Code-Konvention | Oracle Java Code Conventions | Vorgabe |
