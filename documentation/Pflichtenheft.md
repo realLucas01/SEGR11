@@ -1,3 +1,22 @@
+## Entwicklung einer Entertainment-Erweiterung speziell für IFE
+**Stand:** 21.01.2025  
+
+**Auftraggeber:** Novaris Cabin Systems GmbH  
+Friedrich-List-Platz 1   
+01069 Dresden  
+**Ansprechpartner*in:** Lea Wagner  
+**E-Mail:** lwagner@novaris-cabinystems.de   
+**Telefon:** 0351 4620   
+
+**Auftragnehmer:** Gervithrall Systems GmbH   
+Perlickstraße 1   
+04103 Leipzig   
+**Ansprechpartner*in:** Lucas Rumann   
+**E-Mail:** lucasr@gervithrall-systems.de   
+**Telefon:** 0351 6482642   
+
+---
+
 # Inhaltsverzeichnis
 
 1. [Zielbestimmung](#1-zielbestimmung)  
@@ -9,15 +28,13 @@
    2.1 [Anwendungsbereich](#21-anwendungsbereich)  
    2.2 [Zielgruppen](#22-zielgruppen)  
    2.3 [Produktumgebung](#23-produktumgebung)  
-   &nbsp;&nbsp;&nbsp;&nbsp;2.3.1 [Architektur](#231-architektur)  
-   &nbsp;&nbsp;&nbsp;&nbsp;2.3.2 [Technologie](#232-technologie)  
-   &nbsp;&nbsp;&nbsp;&nbsp;2.3.3 [Komponenten](#233-komponenten)  
-   &nbsp;&nbsp;&nbsp;&nbsp;2.3.4 [Schnittstellen](#234-schnittstellen)  
+   &nbsp;&nbsp;&nbsp;&nbsp;2.3.1 [Technologie](#231-technologie)  
+   &nbsp;&nbsp;&nbsp;&nbsp;2.3.2 [Schnittstellen](#232-schnittstellen)  
    2.4 [Betriebsbedingungen](#24-betriebsbedingungen)  
 
 3. [Produktfunktionen / Anforderungen](#3-produktfunktionen--anforderungen)  
    3.1 [Funktionale Anforderungen](#31-funktionale-anforderungen)  
-   &nbsp;&nbsp;&nbsp;&nbsp;3.1.1 [Beschreibung der FA mit Rollen innerhalb der Geschäftsprozesse](#311-beschreibung-der-fa-mit-rollen-innerhalb-der-geschäftsprozesse)  
+   &nbsp;&nbsp;&nbsp;&nbsp;3.1.1 [Beschreibung der FA mit Rollen innerhalb der Geschäftsprozesse](#311-beschreibung-der-funktionalen-anforderungen-mit-rollen-innerhalb-der-geschäftsprozesse)  
    &nbsp;&nbsp;&nbsp;&nbsp;3.1.2 [Aktivitäten mit Benutzerschnittstelle (UI)](#312-aktivitäten-mit-benutzerschnittstelle-ui)  
    &nbsp;&nbsp;&nbsp;&nbsp;3.1.3 [Fachliches Klassendiagramm (Domain Model) / Produktdaten](#313-fachliches-klassendiagramm-domain-model--produktdaten)  
    3.2 [Nichtfunktionale Anforderungen](#32-nichtfunktionale-anforderungen)  
@@ -44,12 +61,7 @@
 
 9. [Glossar](#9-glossar)
 
-
-
-
-
-
-# Projektdokumentation
+---
 
 ## 1 Zielbestimmung
 
@@ -98,6 +110,8 @@ Im Rahmen dieses Pflichtenhefts werden die funktionalen und nicht-funktionalen E
 | AK301 | Sicherheit | Es erfolgt keine Anbindung an sicherheitskritische oder avionische Systeme. |
 | AK302 | Datenspeicherung | Die Speicherung von Spielständen, Statistiken oder Nutzerdaten ist ausgeschlossen. |
 
+---
+
 ## 2 Produkteinsatz
 
 ### 2.1 Anwendungsbereich
@@ -122,6 +136,7 @@ Der Betrieb der Anwendung erfolgt vollständig offline und auf den Sitzmonitoren
 
 Die Software ist für den Dauerbetrieb innerhalb des IFE-Systems ausgelegt und muss auch bei wiederholter oder schneller Benutzereingabe zuverlässig reagieren. Darüber hinaus ist zu berücksichtigen, dass die Nutzung unter den im Flugbetrieb stark wechselnden Lichtverhältnissen und aus unterschiedlichen Blickwinkeln erfolgt. Die Benutzeroberfläche muss daher gut erkennbar und kontrastreich gestaltet sein.
 
+---
 
 ## 3 Produktfunktionen / Anforderungen
 
@@ -298,11 +313,13 @@ Für die Anwendung liegen keine besonderen Sicherheitsanforderungen vor. Es werd
 **NF-N1 Normen**   
 Die Anwendung ist als Unterhaltungssoftware für Fluggäste konzipiert und ist nicht Bestandteil sicherheitskritischer Flugzeugsysteme. Es besteht keinerlei Anbindung an Flugsteuerungs-, Navigations- oder Kommunikationssysteme. Die Anwendung muss sonst keine gesetzlichen Vorgaben erfüllen.
 
+---
 
 ## 4 Testung
 
 Zur Sicherstellung der Qualität wird das System kontinuierlich auf dem bereitgestellten Dev-Kit getestet. Die Testaktivitäten umfassen Funktionstests zur Überprüfung aller spezifizierten Anforderungen, Usability-Tests zur Bewertung der Bedienbarkeit über Touch-Eingaben sowie Stabilitäts- und Belastungstests bei wiederholter und schneller Eingabe. Dabei auftretende Fehler werden je nach schwere umgehend behoben oder Dokumentiert.
 
+---
 
 ## 5 Monitoring / Support bei Übergabe oder ähnliche Leistungen
 
@@ -310,23 +327,83 @@ Im Rahmen der Übergabe wird ein zeitlich, auf einen Monat begrenzter, Support b
 
 Nach erfolgreicher Übergabe werden aller relevanten Dokumente und Ressourcen einschließlich Quellcode, Build-Anweisungen und Dokumentation an den Auftraggeber übergeben. Ein dauerhaftes Monitoring oder ein langfristiger Betriebssupport wird nicht Bereitgestellt.
 
+---
 
 ## 6 Dokumentation
 
+Ziel der Dokumentation ist es, die Nutzung, Integration/Installation sowie Wartung und Weiterentwicklung der Applikation „4-Connect“ im Umfeld des Inflight-Entertainment-Systems (IFE) nachvollziehbar zu beschreiben. Die Dokumentation wird so erstellt, dass sie offline verfügbar ist und strukturiert sowie vollständig für die jeweiligen Zielgruppen aufbereitet ist.
+
+Die Dokumentationsartefakte werden in folgenden Formaten bereitgestellt:
+- Inhaltliche Dokumente: PDF
+- README: Markdown
+- API-Dokumentation: HTML (Javadoc)
+- Diagramme / UML-Exporte: PDF und/oder SVG
+
 ### 6.1 Anwenderdokumentation
+
+Eine separate Anwenderdokumentation für Passagiere wird nicht erstellt, da die Bedienung sowie Spielregeln und Abläufe vollständig innerhalb der Anwendung vermittelt werden.
+
+Stattdessen wird für die Demo eine kurze README bereitgestellt, die ausschließlich den Start und die Inbetriebnahme der Anwendung beschreibt.
+
+**Zielgruppe:** Abnahme-/Testpersonal (AG) sowie Projektbeteiligte für den Demo-Betrieb  
+
+**Form:** README als Markdown
 
 ### 6.2 Administratorendokumentation
 
+**Zielgruppe:** Airline-/IFE-Administratoren bzw. Integrations-/Deployment-Verantwortliche.
+
+**Inhalte:**
+- Systemvoraussetzungen / Offline-Betrieb: Es wird lediglich eine lokale Java-Runtime benötigt; es werden keine externen Dienste vorausgesetzt.
+- Installation / Deployment: Die Auslieferung erfolgt als JAR-Datei die in der vorgesehenen IFE-Ordnerstruktur abgelegt wird; der Start erfolgt über den vorgesehenen IFE-Startmechanismus.
+- Rücksprung zum IFE-Menü: Der Rücksprung erfolgt über eine in der Anwendung bereitgestellte Navigation (z. B. „Zurück“-Button), die zurück in das übergeordnete IFE-Menü führt.
+- Update / Release: Ein Update erfolgt durch Austausch der JAR-Datei; die Version ist im Dateinamen und/oder in der Anwendung ersichtlich.
+- Fehlerausgabe: Laufzeitfehler werden als Meldung ausgegeben (z. B. Konsole/Standardausgabe); ein separates Logging-/Monitoring-System ist nicht vorgesehen.
+- Datenschutz / Sicherheit: Es werden keine personenbezogenen Daten verarbeitet, gespeichert oder extern übertragen.
+
+**Form**
+- PDF
+
 ### 6.3 Entwicklerdokumentation
+
+**Zielgruppe:** Entwicklerteam (Weiterentwicklung, Bugfixing, Erweiterung).
+
+**Inhalte:**
+- Projektüberblick und Architektur, inklusive Module, Schichten und Verantwortlichkeiten
+- Build und Ausführung, inklusive Build-Tool, Build-Kommandos, Erzeugung des JAR
+- Teststrategie und Testausführung: dokumentierte manuelle Tests
+- Erweiterbarkeit, insbesondere Integration neuer Spiele in die Menüführung, Internationalisierung über String-Ressourcen und Branding über austauschbare Assets
+- Coding Standards und Konventionen mit Verweis auf die im Repository festgelegten Code Conventions
+- UML-Artefakte, darunter Use-Case-Diagramm, Klassendiagramm und weitere Diagramme,
+- API-Dokumentation als Javadoc-HTML-Ausgabe
+
+**Form**
+- PDF
+- HTML (Javadoc)
+- PDF/SVG (UML-Exporte)
 
 ### 6.4 Weitere referenzierte Dokumente
 
+Die folgenden Dokumente sind Bestandteil des Repositories und werden im Release mit ausgeliefert bzw. referenziert:
+
+- Lastenheft des AG
+- Entwicklungsumgebung und Toolfestlegung
+- Firmenporträt AG
+- Firmenporträt AN
+- projektbegleitender Bericht und Protokolle
+- UML-Modelle und Diagramme
+- Build- und Deploymentanweisungen
+- Code Conventions
+
+---
 
 ## 7 Vorgehen
 
+---
 
 ## 8 Entwicklungsumgebung
 
+---
 
 ## 9 Glossar
 
