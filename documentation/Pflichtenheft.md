@@ -387,9 +387,6 @@ Stattdessen wird für die Demo eine kurze README bereitgestellt, die ausschließ
 Die folgenden Dokumente sind Bestandteil des Repositories und werden im Release mit ausgeliefert bzw. referenziert:
 
 - Lastenheft des AG
-- Entwicklungsumgebung und Toolfestlegung
-- Firmenporträt AG
-- Firmenporträt AN
 - projektbegleitender Bericht und Protokolle
 - UML-Modelle und Diagramme
 - Build- und Deploymentanweisungen
