@@ -394,11 +394,295 @@ Die folgenden Dokumente sind Bestandteil des Repositories und werden im Release 
 
 ---
 
-## 7 Vorgehen
+# 7 Vorgehen
+
+Dieses Kapitel beschreibt das Vorgehen zur Umsetzung der Entertainment-Erweiterung „4-Connect“ für das Inflight-Entertainment-System.
+Der geplante Projektzeitraum beträgt 16 Wochen.
+Das Vorgehen ist so gewählt, dass frühzeitig lauffähige Zwischenstände entstehen und Risiken früh erkannt werden.
 
 ---
 
-## 8 Entwicklungsumgebung
+## 7.1 Vorgehensmodell
+
+Die Entwicklung erfolgt iterativ und inkrementell in Sprints, kurzen, zeitlich abgegrenzten Arbeitszyklen. Ziel jedes Sprints ist ein stabiler, lauffähiger Zwischenstand.
+
+Anforderungen, Anpassungen und Fehler werden als Aufgaben erfasst, priorisiert und in überschaubaren Teilschritten umgesetzt. Ein Sprint umfasst typischerweise:
+
+- Planung zu Sprintbeginn
+  - Aufgabenabgrenzung
+  - Priorisierung
+  - Definition „fertig“
+- Implementierung während des Sprints
+  - Umsetzung in Feature-Branches
+- Review nach Umsetzung
+  - Prüfung über Merge-/Pull-Requests
+- Test zur Absicherung
+  - insbesondere auf der Zielumgebung/Dev-Kit
+- Dokumentationspflege begleitend
+  - fortlaufend, nicht ausschließlich am Projektende
+
+---
+
+## 7.2 Arbeitspakete und Ablauf
+Die Umsetzung wird in Arbeitspakete gegliedert, die sich an der Kalkulation und den Anforderungen orientieren. Die folgenden Pakete dienen als Struktur für Planung und Umsetzung:
+
+- **Konzeption**
+  - Finalisierung Spielidee und Regeln
+ - Berücksichtigung IFE-Rahmenbedingungen
+    - Offline-Betrieb
+    - Eingabe über Touch/Maus
+  - Definition der Spielmodi (PvP / PvE) und grundlegendes Bedienkonzept
+
+- **Prototyp & Spielkern**
+  - Technisches Grundgerüst und Projektstruktur
+  - Trennung von Spiellogik und UI
+  - Grundlegende UI-Struktur sowie Eingabe-/Zustandsverwaltung
+
+- **Gameplay-Implementierung**
+  - Regelkonforme Verarbeitung von Spielzügen
+  - Gewinn-/Unentschieden-Erkennung
+  - Rundenverwaltung
+    - Neustart
+    - Abbruch
+    - Rückkehr zur Spielesammlung
+
+- **Botgegner und optionale Erweiterungen**
+  - Implementierung einer Bot-Grundlogik für den Einzelspielermodus
+  - Schwierigkeitsstufen werden als optionale Erweiterung betrachtet
+
+- **UI/UX Nutzerführung**
+  - Start- und Modusauswahl
+  - In-Game UI
+    - Spielbrett
+    - Bedienelemente
+  - Ergebnisdarstellung
+
+
+- **Stabilisierung & Integration**
+  - Prüfung von Performance und Stabilität auf der Zielumgebung
+  - Robustheit bei wiederholter/fehlerhafter Eingabe
+  - Packaging als JAR-Datei und Einbindung in die vorgesehene IFE-Start-/Beendenavigation
+  - Fehlerbehandlung im Sinne einer stabilen Laufzeit
+
+- **Testphase, Feinschliff & Dokumentation**
+  - Funktionstests, Regressionstests und Fehlerkorrekturen
+  - Bugfixes erfolgen fortlaufend
+  - Finalisierung der Dokumentationsartefakte
+    - Admin-/Dev-Doku
+    - ggf. UML
+    - Javadoc
+---
+
+## 7.3 Meilensteine und Zeitplan
+
+Die folgenden Meilensteine beschreiben den geplanten Ablauf über 16 Wochen. Zeiträume sind als Orientierung zu verstehen. Verschiebungen durch technische Randbedingungen oder notwendige Stabilisierung sind möglich. Die Meilensteine werden durch mehrere Sprints erreicht.
+
+### M0.5 Projektstart und Setup (Woche 1)
+- Repository-/Build-Grundlage und Arbeitsorganisation
+- Erste technische Validierung auf der Zielumgebung/Dev-Kit
+- Initiale Aufgabenstruktur 
+
+**Ergebnis:** lauffähiges Grundgerüst und initiale Planung.
+
+### M1 Konzeption abgeschlossen (Woche 2–3)
+- Spielregeln, Screenflow und Bedienkonzept abgestimmt
+- Definition der Modus- und Zustandslogik
+
+**Ergebnis:** belastbare Grundlage für Umsetzung und UI-Struktur.
+
+### M2 Spielkern funktional (Woche 4–7)
+- Grundlegender Spielablauf 
+   - Zuglogik
+   - Sieg
+   - Unentschieden
+- UI-Grundlayout inkl. Eingabe (Touch/Maus)
+- Neustart/Abbruch und Rückkehr zur Spielesammlung
+
+**Ergebnis:** „4-Connect“ ist spielbar und technisch integrierbar.
+
+### M3 Funktionsumfang vervollständigt (Woche 8–11)
+- Moduswahl (PvP / PvE)
+- Bot-Grundlogik für Einzelspieler
+- UI-Flows vollständig (Menü, Spiel, Ergebnis)
+
+**Ergebnis:** geplanter Funktionsumfang ist in einem konsolidierten Stand umgesetzt.
+
+### M4 Stabilisierung, Integration und Abnahmevorbereitung (Woche 12–15)
+- Stabilitäts- und Belastungsprüfung 
+- Fehlerkorrekturen und UI-Feinschliff
+- Dokumentationsfinalisierung und Abnahmecheck
+
+**Ergebnis:** Release-Kandidat mit geprüfter Auslieferungsstruktur.
+
+### M5 Release/Abgabe (Woche 16)
+- Finales JAR-Paket und vollständige Abgabeunterlagen
+- Abschließende Prüfung der Start-/Beendenavigation und Offline-Fähigkeit
+
+**Ergebnis:** finale Abgabeversion.
+
+
+
+---
+
+## 7.4 Qualitätssicherung und Tests
+
+Die Qualitätssicherung erfolgt begleitend während der Entwicklung durch:
+
+- Reviews der Änderungen zur Sicherstellung von Lesbarkeit und Korrektheit
+- Manuelle, dokumentierte Tests der zentralen Anwendungsfälle
+- Tests auf der Zielumgebung/Dev-Kit, um IFE-spezifisches Verhalten zuverlässig zu prüfen
+  - Start/Beenden
+  - Eingaben
+  - Offline-Betrieb
+
+---
+
+## 7.5 Konfigurations- und Änderungsmanagement
+
+Die Versionierung erfolgt über Git. Änderungen werden über Feature-Branches entwickelt und über Pull Requests in den stabilen Hauptzweig integriert. Anforderungen, Anpassungen und Fehler werden als Issues dokumentiert und priorisiert. Releases werden versioniert und mit Release-Notes versehen.
+
+Änderungen an UI, Branding oder Sprachumfang werden als Issue erfasst, hinsichtlich Aufwand und Auswirkungen bewertet und anschließend in die Planung aufgenommen.
+
+---
+
+## 7.6 Kommunikation und Projektdokumentation
+
+Das Team stimmt sich regelmäßig ab und dokumentiert Fortschritt, Entscheidungen, Risiken und Änderungen in Protokollen oder im Projektbericht. Der Projektstatus ist jederzeit über Issues und Milestones nachvollziehbar.
+
+---
+
+## 7.7 Risiken und Gegenmaßnahmen
+
+| Risiko | Auswirkung | Gegenmaßnahme |
+|------|------------|---------------|
+| Unklare oder sich ändernde IFE-Rahmenbedingungen | Nacharbeit, Verzögerungen | frühe Tests auf Dev-Kit, iterative Umsetzung, Scope-Kontrolle |
+| Performance- oder Ressourcenlimits | Instabilität, schlechte Bedienbarkeit | einfache UI, effiziente Logik, frühzeitige Stabilisierung |
+| Bot-Implementierung aufwändiger als geplant | Funktionsumfang/Timing gefährdet | Bot zunächst als Grundlogik umsetzen, optionale Erweiterungen  nachrangig behandeln |
+| Späte Änderungen an UI/Assets | Mehraufwand kurz vor Abgabe | Ressourcenstruktur früh festlegen, Platzhalter nutzen, schrittweise Integration |
+---
+
+# 8 Entwicklungsumgebung
+
+Dieses Kapitel beschreibt die Entwicklungsumgebung und die eingesetzten Werkzeuge, sodass Entwicklung, Build und Übergabe der Applikation „4-Connect“ nachvollziehbar und reproduzierbar erfolgen können. Die Auslieferung erfolgt als lauffähiges Artefakt für den Offline-Betrieb im Inflight-Entertainment-System (IFE).
+
+---
+
+## 8.1 Zielumgebung (IFE) und Rahmenbedingungen
+Die Anwendung wird innerhalb des bestehenden IFE betrieben. Der Betrieb erfolgt vollständig offline; externe Dienste und Netzwerkanbindungen werden nicht vorausgesetzt.
+
+An die Hardware und Orgware der Zielumgebung bestehen keine besonderen Anforderungen über die vorhandene IFE-Standardumgebung hinaus (z. B. Sitzmonitor/Touch bzw. Maus-/Remote-Bedienung). Die Anwendung ist ressourcenschonend ausgelegt und nutzt keine zusätzliche Peripherie.
+
+Die Anwendung läuft in der vom IFE vorgegebenen Java 21-LTS Runtime.
+---
+
+## 8.2 Entwicklungsumgebung
+
+Die Entwicklung erfolgt auf den Entwicklungsrechnern des Projektteams. Für die Implementierung werden folgende IDEs verwendet:
+
+- Eclipse IDE for Enterprise Java and Web Developers (2025-09)
+- IntelliJ IDEA (2025.2.6.x)
+
+Für UI/UX und grafische Artefakte kommen zusätzlich spezialisierte Werkzeuge zum Einsatz (siehe Abschnitt 8.3).
+
+Zur Qualitätssicherung wird die Anwendung zusätzlich auf der Zielumgebung bzw. dem bereitgestellten Dev-Kit geprüft.
+
+---
+
+## 8.3 Tooling- und Versionsübersicht
+
+Die folgenden Werkzeuge werden im Projekt eingesetzt. 
+
+### 8.3.1 Implementierung und Laufzeit
+
+| Bereich | Werkzeug | Version / Stand |
+|--------|----------|-----------------|
+| Programmiersprache / JDK | Java (JDK) | Java 21 LTS 21.0.x |
+| Ziel-Runtime (IFE) | Java Runtime | Java 21 LTS |
+| UI-Framework | JavaFX | 21.0.2 |
+| UI-Designer | SceneBuilder | 21.0.0 |
+| IDE | Eclipse IDE for Enterprise Java and Web Developers | 2025-09 |
+| IDE | IntelliJ IDEA | 2025.2.6.x |
+| IDE | Visual Studio Code | 1.108.1 |
+
+### 8.3.2 Versionsverwaltung und Kollaboration
+
+| Bereich | Werkzeug | Version / Stand |
+|--------|----------|-----------------|
+| Versionsverwaltung | Git | Git (lokal) |
+| Hosting/Collaboration | GitHub | Repository auf GitHub |
+| Kommunikation | Discord + persönliche Meetings | projektintern |
+
+### 8.3.3 Diagramme, Modellierung und Doku-Tools
+
+| Bereich | Werkzeug | Version / Stand |
+|--------|----------|-----------------|
+| Diagramme (PlantUML) | PlantUML Extension (VS Code) | 2.18.1|
+| Modellierung/UML | Software Ideas Modeler | 15 |
+| Code-Konvention | Oracle Java Code Conventions | Vorgabe |
+
+### 8.3.4 UI/UX, Prototyping und Layout 
+
+| Bereich | Werkzeug | Version / Stand |
+|--------|----------|-----------------|
+| UI-Grafiken & Icons | Adobe Illustrator (Creative Cloud) | Illustrator 30 |
+| Wireframes & Prototypen | Adobe XD (Creative Cloud) | XD 58 |
+| Dokumentation/Layout Abgabe | Adobe InDesign (Creative Cloud) | InDesign 21.1 |
+
+### 8.3.5 Build/Obfuscation
+
+| Bereich | Werkzeug | Version / Stand |
+|--------|----------|-----------------|
+| Build-Tool | Maven | 3.9.12 |
+| Obfuscation | ProGuard | 7.8.2 |
+
+---
+
+
+## 8.4 Modellierung, Diagramme und Ablageorte
+
+Alle Diagramm-Artefakte werden versioniert im Repository abgelegt unter:
+
+- `documentation/diagrams/`
+
+### 8.4.1 Export-Dateien (SVG)
+
+Beispiele für vorhandene Exporte:
+
+- `documentation/diagrams/4C_transparent.svg`
+- `documentation/diagrams/FourConnect_Nr2.svg`
+- `documentation/diagrams/FourConnect_Nr3.svg`
+- `documentation/diagrams/FourConnect_Nr3.2.svg`
+- `documentation/diagrams/FourConnect_Nr3.3.svg`
+- `documentation/diagrams/FourConnect_Nr3.4.svg`
+- `documentation/diagrams/FourConnect_Nr3.5.svg`
+- `documentation/diagrams/FourConnect_Nr3.6.svg`
+
+### 8.4.2 Quelldateien
+
+- Modell-/UML-Quelldatei: `documentation/diagrams/PL.mdj` bearbeitet mit Software Ideas Modeler 15
+- Textbasierte Diagramme: PlantUML-Quellen werden im Repository versioniert und über VS Code (1.108.1) mit PlantUML Extension (2.18.1) gepflegt. Exporte erfolgen als SVG.
+
+---
+
+## 8.5 Build, Tests und Dokumentation
+
+### 8.5.1 Build / Auslieferung
+Die Auslieferung erfolgt als ausführbares JAR für den Offline-Betrieb. Ein verbindliches Build-Tool Maven wird im nächsten Meilenstein eingeführt; die zugehörigen Build-Kommandos und der Artefaktpfad werden dann in diesem Kapitel ergänzt.
+### 8.5.2 Tests
+Die Qualitätssicherung erfolgt begleitend während der Entwicklung durch:
+- Reviews der Änderungen über Pull Requests,
+- manuelle, dokumentierte Tests der zentralen Anwendungsfälle,
+- Tests auf der Zielumgebung bzw. dem Dev-Kit zur Prüfung von Start/Beenden, Eingaben und Offline-Betrieb.
+### 8.5.3 Projektdokumentation
+Die Projektdokumentation wird im Repository gepflegt. Zusätzlich kann eine API-Dokumentation als Javadoc erzeugt werden (Tool `javadoc` aus JDK 21).
+
+
+
+---
+
+## 8.6 Konventionen und Qualitätssicherung
+
+Für die Codebasis gelten die Oracle Java Code Conventions als Stilrichtlinie. Die Einhaltung wird durch Reviews unterstützt. Änderungen werden nachvollziehbar über GitHub mit Commits, Pull Requests und Issues geführt.
 
 ---
 
