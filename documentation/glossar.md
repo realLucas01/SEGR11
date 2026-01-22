@@ -11,6 +11,7 @@ Dieses Glossar fasst die im Pflichtenheft verwendeten zentralen Fachbegriffe, Ab
 | Dev-Kit | Bereitgestellte Test- und Entwicklungsumgebung zur Validierung von IFE-spezifischem Verhalten. |
 | Offline-Betrieb | Betrieb ohne externe Dienste oder Netzwerk, sodass alle benötigten Ressourcen lokal verfügbar sind. |
 | Fluggast | Primärer Endnutzer der Anwendung im IFE. |
+| SE | Abkürzung für Software Engineer, zuständig für die Implementierung der Anwendung sowie Bugfixing. |
 | Spielesammlung | Menü und Übersicht im IFE, aus der ein Spiel ausgewählt und gestartet wird. |
 | Spielmodus | Betriebsart des Spiels, zum Beispiel Spieler gegen Spieler oder Spieler gegen Bot. |
 | Bot | Computergesteuerter Gegenspieler im Einzelspielermodus. |
