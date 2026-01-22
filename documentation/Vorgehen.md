@@ -8,22 +8,22 @@ Das Vorgehen ist so gewählt, dass frühzeitig lauffähige Zwischenstände entst
 
 ## 7.1 Vorgehensmodell
 
-Die Entwicklung erfolgt iterativ und inkrementell. Anforderungen, Anpassungen und Fehler werden als Aufgaben erfasst, priorisiert und in überschaubaren Teilschritten umgesetzt. Jede Iteration umfasst dabei typischerweise:
+Die Entwicklung erfolgt iterativ und inkrementell in Sprints, kurzen, zeitlich abgegrenzten Arbeitszyklen. Ziel jedes Sprints ist ein stabiler, lauffähiger Zwischenstand.
 
-- **Planung**
+Anforderungen, Anpassungen und Fehler werden als Aufgaben erfasst, priorisiert und in überschaubaren Teilschritten umgesetzt. Ein Sprint umfasst typischerweise:
+
+- Planung zu Sprintbeginn
   - Aufgabenabgrenzung
   - Priorisierung
   - Definition „fertig“
-- **Implementierung**
+- Implementierung während des Sprints
   - Umsetzung in Feature-Branches
-- **Review**
+- Review nach Umsetzung
   - Prüfung über Merge-/Pull-Requests
-- **Test**
+- Test zur Absicherung
   - insbesondere auf der Zielumgebung/Dev-Kit
-- **Dokumentationspflege**
+- Dokumentationspflege begleitend
   - fortlaufend, nicht ausschließlich am Projektende
-
-Dieses Vorgehen ermöglicht es, Änderungen kontrolliert einzuarbeiten und die Anwendung früh im vorgesehenen IFE-Kontext zu validieren.
 
 ---
 
@@ -79,7 +79,7 @@ Die Umsetzung wird in Arbeitspakete gegliedert, die sich an der Kalkulation und 
 
 ## 7.3 Meilensteine und Zeitplan
 
-Die folgenden Meilensteine beschreiben den geplanten Ablauf über 16 Wochen. Zeiträume sind als Orientierung zu verstehen. Verschiebungen durch technische Randbedingungen oder notwendige Stabilisierung sind möglich.
+Die folgenden Meilensteine beschreiben den geplanten Ablauf über 16 Wochen. Zeiträume sind als Orientierung zu verstehen. Verschiebungen durch technische Randbedingungen oder notwendige Stabilisierung sind möglich. Die Meilensteine werden durch mehrere Sprints erreicht.
 
 ### M0.5 Projektstart und Setup (Woche 1)
 - Repository-/Build-Grundlage und Arbeitsorganisation
