@@ -2,6 +2,8 @@
 
 ## Rollenverteilung der Mitarbeitenden
 
+
+Gehalt: Steuer, Brutto, Netto!!
 | Name | Rolle | Interner Stundensatz* | Jahresgehalt (brutto) |
 |---|---|---:|---:|
 | Lucas Rumann | Projekt Manager | 130 € / h | 95.000 € |
