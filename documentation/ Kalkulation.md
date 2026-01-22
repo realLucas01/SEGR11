@@ -2,13 +2,14 @@
 
 ## Rollenverteilung der Mitarbeitenden
 
-| Name | Rolle | Interner Stundensatz* | Jahresgehalt (brutto) |
-|---|---|---:|---:|
-| Lucas Rumann | Projekt Manager | 130 € / h | 95.000 € |
-| Luca Matteo Tauscher | Senior Software Engineer | 120 € / h | 90.000 € |
-| Domenik Schütz | Finances & Software Engineer | 120 € / h | 90.000 € |
-| Truong Tan Long Nguyen | Junior UX Engineer | 90 € / h | 60.000 € |
-| Marc Müller | Designer | 90 € / h | 60.000 € |
+| Name | Rolle | Interner Stundensatz* | Jahresgehalt (brutto) | Abgaben & Steuern (≈) | Jahresgehalt (netto) |
+|---|---|---:|---:|---:|---:|
+| Lucas Rumann | Projekt Manager | 130 € / h | 95.000 € | ~42.000 € | ~53.000 € |
+| Luca Matteo Tauscher | Senior Software Engineer | 120 € / h | 90.000 € | ~39.000 € | ~51.000 € |
+| Domenik Schütz | Finances & Software Engineer | 120 € / h | 90.000 € | ~39.000 € | ~51.000 € |
+| Truong Tan Long Nguyen | Junior UX Engineer | 90 € / h | 60.000 € | ~24.000 € | ~36.000 € |
+| Marc Müller | Designer | 90 € / h | 60.000 € | ~24.000 € | ~36.000 € |
+
 
 **Hinweis: Die internen Stundensätze basieren auf Vollkostenkalkulation 
 (Bruttogehalt, Arbeitgeberanteile, Infrastruktur, Verwaltung, Ausfallzeiten).*
