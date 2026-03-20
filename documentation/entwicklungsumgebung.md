@@ -124,14 +124,20 @@
 
 ## Kollaborationstools 
 
-| Kriterium                 | GitLab                                         | Discord                                   | E-Mail                                  |
+| Kriterium                 | GitHub                                         | Discord                                   | Miro                                  |
 |---------------------------|-----------------------------------------------|-------------------------------------------|-----------------------------------------|
-| Hauptzweck               | Versionsverwaltung, Issues, Wiki, Reviews     | Chat/Sprachkanäle, schnelle Abstimmung    | formelle Nachrichten, offizielle Infos  |
-| Kosten / Lizenz           | kostenlos (Hochschul- / GitLab-Instanz)      | kostenlos (Basisfunktionen)               | kostenlos (über Hochschul-/Privat-Account) |
-| Zusammenarbeit im Team    | **sehr gut**, alles projektbezogen im Repo    | sehr gut, aber eher „chaotisch“           | begrenzt, Antworten verteilen sich über Threads |
-| Nachvollziehbarkeit       | hoch (Issues, Commits, Merge Requests, Wiki)  | mittel (viel Chat, schwer zu durchsuchen) | niedrig–mittel (Mails gehen verloren)   |
-| Integration mit Code      | **sehr hoch** (Git, CI/CD, Code-Reviews)      | keine direkte Integration, nur Links      | keine direkte Integration               |
-| Typische Nutzung          | Aufgabenplanung, Bugtracking, Doku, Reviews   | Absprachen, Meetings, spontane Fragen     | Infos von Dozenten, Ankündigungen       |
-| Einarbeitungsaufwand      | mittel, aber sinnvoll für Softwareprojekte    | gering, wie „Gaming-/Gruppenchat“         | sehr gering                              |
-| Eignung für unser Projekt | **zentrales Projekt-Tool**                    | gut als Ergänzung für schnellen Austausch | nur ergänzend für „offizielle“ Kommunikation |
+| Hauptzweck               | Versionsverwaltung, Issues, Wiki, Reviews     | Chat/Sprachkanäle, schnelle Abstimmung    | Planung  |
+| Kosten / Lizenz           | kostenlos (Hochschul- / GitLab-Instanz)      | kostenlos                | kostenlos über Hochschulaccount |
+| Zusammenarbeit im Team    | **sehr gut**, alles projektbezogen im Repo    | sehr gut, einheitlicher Kommunikationskanal          | Gut, klare Definitionen |
+Bewertung
+|Nachvollziehbarkeit|10|5|7
+|Struktur & Orga|8|5|10
+|Kommunikation|6|10|2
+|Integration|10|1|4
+|Benutzerfreundlichkeit|7|10|8
+|Projekt Eignung|10|9|3
+|Zuverlässigkeit|10|8|?
+|Datenschutz/Sicherheit|10|4|4
+|Effizienz|8|10|2
+
 
