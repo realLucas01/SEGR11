@@ -28,14 +28,16 @@
 
 ## Build-Tool 
 
-| Kriterium                    | Maven                                      | Gradle                                     | Ant                                     |
+| Kriterium                    | Ant  |					Maven 	|			Gradle 	| 
 |-----------------------------|--------------------------------------------|-------------------------------------------|-----------------------------------------|
-| Projektstruktur             | Klare Standardstruktur (konventionsbasiert)| Flexibel, Struktur frei definierbar       | Keine Vorgaben, alles selbst definieren |
-| Integration in IDE          | Sehr gut (Eclipse, IntelliJ, VS Code)      | Sehr gut                                   | Gut, aber weniger komfortabel           |
-| Abhängigkeiten (Dependencies)| Sehr einfach, riesiges zentrales Repo     | Ebenfalls sehr gut, kompatibel zu Maven   | Möglich, aber aufwendiger               |
-| Einarbeitungsaufwand        | Mittel, aber viele Beispiele/Tutorials     | Etwas höher wegen DSL                     | Relativ hoch, da alles von Hand         |
-| Typische Nutzung heute      | Standard in sehr vielen Java-Projekten     | Häufig in moderneren Projekten            | Vor allem in älteren/Legacy-Projekten   |
-| Eignung für unser Projekt   | **empfohlen**                              | geeignet, aber etwas zu viel für dem Amfanh   | eher ungeeignet                         |
+| Konfigurationsaufwand |	2    |		 			9	|			7	|
+| Build Performance |		5	|				7	|			10	|
+| Dependency Management |	3			 |		9	|			10  	|							
+| Lesbarkeit und Wartbarkeit  |	4			 |		7	|			8	|							
+| Standardisierung |		4 |					10	|			9	|
+| Skalierbarkeit |		4	 |				7	|			10	|
+|**Gesamtpunkte** |	 		22 / 60	|				49 / 60		|		54 / 60				|
+
 
 ## UI-Prototyping-Tool 
 
