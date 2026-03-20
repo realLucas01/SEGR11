@@ -53,14 +53,18 @@
 
 | Kriterium                 | IntelliJ IDEA Community                  | Eclipse IDE                             | VS Code (+ Java-Extensions)               |
 |---------------------------|------------------------------------------|-----------------------------------------|-------------------------------------------|
-| Kosten / Lizenz           | kostenlos (Community Edition)            | kostenlos, Open Source                  | kostenlos, Open Source                    |
-| Java-Unterstützung        | **sehr gut**, viele Komfortfeatures      | sehr gut, seit Jahren Java-Standard     | gut, über Extensions                      |
-| Bedienbarkeit / Lernaufwand | intuitiv, moderne Oberfläche          | etwas unübersichtlicher, viele Menüs    | leicht, aber Java-Setup etwas aufwendiger |
-| Refactoring / Komfort     | sehr starke Refactoring-Tools, Inspektionen | gut, viele Funktionen über Plugins   | okay, weniger mächtige Refactorings       |
-| Integration mit Build-/VCS | sehr gute Maven/Gradle/Git-Integration | gute Maven/Gradle/Git-Unterstützung     | Git gut, Build-Tools über Extensions      |
-| Performance               | flüssig, braucht aber etwas mehr RAM     | kann träge sein bei vielen Plugins      | leichtgewichtig, startet schnell          |
-| Eignung für Einsteiger    | gut, wenn man sich kurz einarbeitet      | okay, aber etwas „alt“ in der Bedienung | gut, vor allem wenn man VS Code schon kennt |
-| Eignung für unser Projekt | **empfohlen**                            | geeignet, v.a. wenn an der Hochschule genutzt | geeignet, wenn Team lieber VS Code nutzt |
+|Kosten/ Lizens             |		Kostenlos unter Community Edition      |		Kostenlos, Open Source               |		Kostenlos		|
+|Code Intelligence          |		10	                                   |					7	                             |				7			|
+|Navigation                 |			9	                                   |					7	|				8			|
+|Performance |			7	 |					7	|				9			|
+|Plugin Erweiterbarkeit |	8	 |					7	|				10			|
+|Built in Features |		9	 |					7	|				4			|
+|Debuggin und Testing |	 	10	 |					8	|				6			|
+|Scene Builder und JavaFX Integration | 9        	|			8	|				4			|	 
+| **Gesamtpunkte** |	 		62 / 70	|					51/ 70	|				48 / 70			|
+
+
+Da dieses Projekt in dessen Umfang überschaulich ist und auch die Zeitspanne eine sehr geringe, steht es den einzelnen Entwicklern frei zur Auswahl welche IDE diese verwenden. Ein forcierter Wechsel, und der somit eingehenden Eingewöhnung in neue Entwicklungstools könnte zu einer Verzögerung im Zeitplan führen. 
 
 
 ## Test-Automatisierung 
