@@ -128,8 +128,7 @@
 |---------------------------|-----------------------------------------------|-------------------------------------------|-----------------------------------------|
 | Hauptzweck               | Versionsverwaltung, Issues, Wiki, Reviews     | Chat/Sprachkanäle, schnelle Abstimmung    | Planung  |
 | Kosten / Lizenz           | kostenlos      | kostenlos                | kostenlos über Hochschulaccount |
-| Zusammenarbeit im Team    | sehr gut, alles projektbezogen im Repo    | sehr gut, einheitlicher Kommunikationskanal          | Ok, klare Definitionen |
-Bewertung
+| Zusammenarbeit im Team    |8|10|4|
 |Nachvollziehbarkeit|10|5|7
 |Struktur & Orga|8|4|10
 |Kommunikation|6|10|2
@@ -138,6 +137,6 @@ Bewertung
 |Zuverlässigkeit|10|8|6
 |Datenschutz/Sicherheit|10|4|4
 |Effizienz|8|10|2
-|Gesamt|69/80|52/80|43/80
+|Gesamt|77/90|62/90|47/90
 
 
