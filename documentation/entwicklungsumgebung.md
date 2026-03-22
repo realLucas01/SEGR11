@@ -127,17 +127,17 @@
 | Kriterium                 | GitHub                                         | Discord                                   | Miro                                  |
 |---------------------------|-----------------------------------------------|-------------------------------------------|-----------------------------------------|
 | Hauptzweck               | Versionsverwaltung, Issues, Wiki, Reviews     | Chat/Sprachkanäle, schnelle Abstimmung    | Planung  |
-| Kosten / Lizenz           | kostenlos (Hochschul- / GitLab-Instanz)      | kostenlos                | kostenlos über Hochschulaccount |
-| Zusammenarbeit im Team    | **sehr gut**, alles projektbezogen im Repo    | sehr gut, einheitlicher Kommunikationskanal          | Gut, klare Definitionen |
+| Kosten / Lizenz           | kostenlos      | kostenlos                | kostenlos über Hochschulaccount |
+| Zusammenarbeit im Team    | sehr gut, alles projektbezogen im Repo    | sehr gut, einheitlicher Kommunikationskanal          | Ok, klare Definitionen |
 Bewertung
 |Nachvollziehbarkeit|10|5|7
-|Struktur & Orga|8|5|10
+|Struktur & Orga|8|4|10
 |Kommunikation|6|10|2
 |Integration|10|1|4
 |Benutzerfreundlichkeit|7|10|8
-|Projekt Eignung|10|9|3
-|Zuverlässigkeit|10|8|?
+|Zuverlässigkeit|10|8|6
 |Datenschutz/Sicherheit|10|4|4
 |Effizienz|8|10|2
+|Gesamt|69/80|52/80|43/80
 
 
