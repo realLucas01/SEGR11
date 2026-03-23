@@ -90,14 +90,14 @@
 
 | Kriterium                 | Javadoc                                  | Markdown im Repository                 | GitLab-Wiki                               |
 |---------------------------|-------------------------------------------|----------------------------------------|-------------------------------------------|
-| Kosten / Lizenz           | kostenlos, Teil des JDK                  | kostenlos, nur Git-Repo nötig          | kostenlos, in GitLab integriert           |
-| Einsatzbereich            | API-/Code-Dokumentation (Klassen, Methoden) | Projekt-/Architektur-/Prozessdoku   | Projekt-/Architektur-/Prozessdoku im Web  |
-| Erstellung                | Kommentare im Java-Code + Generierung    | `.md`-Dateien im Repo schreiben        | Seiten direkt im Browser bearbeiten       |
-| Integration mit Code/Repo | sehr hoch (direkt aus Java)              | hoch (liegt im selben Repo wie der Code) | hoch (an Repo gekoppelt, Versionsverlauf) |
-| Strukturierung / Navigation | Paket-/Klassenhierarchie automatisch   | eigene Ordner/Links/TOC nötig         | Seitenstruktur, Menü, Links zwischen Seiten |
-| Einarbeitungsaufwand      | gering–mittel (Javadoc-Tags lernen)      | gering (Markdown ist sehr einfach)     | gering (Editor im Browser, Markdown/HTML) |
-| Ausgabe / Darstellung     | HTML-Seiten, technisch, Entwicklerfokus  | schön auf GitHub/GitLab gerendert      | Web-Seiten mit Navigation, gut lesbar     |
-| Eignung für unser Projekt | **sehr gut für API-Doku**                | **sehr gut für Pflichtenheft/Architektur** | gut für zusätzliche, lesbare Projektseite |
+|Kosten|Keine (teil des JDK)|Keine, im GitLab|Keine|
+|Integration in Entwicklungsprozess|10|9|8|
+|Struktur & Navigation|7|7|9|
+|Lesbarkeit/ Darstellung|7|8|9|
+|Kollaboration|6|8|9|
+|Nachvollziehbarkeit/ Versionierung|8|9|9|
+|Aktualität/ Wartbarkeit der Dokumentation|9 (automatisch aus Code gen.)|7 (manuell, kann schnell veralten)|7 (ebenfalls)|
+|Gesamt/ Eignung|47/60|48/60|51/60|
 
 ## Obfuscator 
 
