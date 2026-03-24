@@ -131,11 +131,11 @@
 |Nachvollziehbarkeit|10, Projektbezogen im Repo|5, Chats teilw. ohne zusammenhang|7, Übersichtlich am Board fetsgehalten
 |Struktur & Orga|10, Glasklare Strukturierung|4, Eher schlecht da konv. Chat|10, Top Organisation möglich
 |Kommunikation|6, Teilweise gehen rückm. verloren, etwas unübersichtlich bei z.B. vielen Pull-Requests|10, Einfache, schnelle Chats, auch Anrufe möglich|2, Keine Benachrichtigung, kein richtiger Chat(verlauf), bei vielen Elementen tendenz zu unübersichtlichkeit
-|Integration|10, Direkt im Repo|1, Keine Integration, nur über Links und Screeshots möglich|4, 
-|Benutzerfreundlichkeit|7|10, Sehr einfache Bedienung, wie ein Messenger|8
+|Integration|10, Direkt im Repo|1, Keine Integration, nur über Links und Screeshots möglich|4, Teilweise Integration über erstellten Plan möglich, sonst: Links, Screenshots
+|Benutzerfreundlichkeit|7, Konzept muss verstanden werden, einarbeitung gut|10, Sehr einfache Bedienung, wie ein Messenger|8, Einfache bedienung wie eine große Tafel
 |Zuverlässigkeit|10, Professionelle Infrastruktur hohe Uptime, Rollbacks möglich|8, Hohe Uptime, indirekter Informationsverlust|6, (un)absichtliches überschreiben möglich
 |Datenschutz/Sicherheit|10, Fein einstellbare Zugriffsrechte, Privates Repo, Audit Log, Branch-Review System, jede änderung sichtbar, individuelle features vorhanden 2FA etc. |4, Keine End to End Encryption bei normalen Chats, Zugriff über invite Links (missbrauch möglich),  |4, Weitergabe von Zugriffslink so wie u.a. Passwort möglich
-|Effizienz|8|10, Sehr schneller austausch möglich, einfache bedienung|2 
+|Effizienz|8, Projektbezogenes Tracking, gute Struktur|10, Sehr schneller austausch möglich, einfache bedienung|2, Manuelle Pflege, hoher Aufwand
 |Gesamt|71/80|52/80|43/80
 
 Unsere Entscheidung: GitHub für Nachvollziehbare, spezifisch bezogene Kommunikation und Discord für kurze Abstimmungen oder andere/generelle fragen/diskussionen. Miro bietet für uns keinen Mehrwert da die Rahmenbedingunen schon stehen und der Aufwand zur Erstellung eines Boards nicht gerechtfertig ist.
