@@ -39,15 +39,19 @@
 
 ## UI-Prototyping-Tool 
 
-| Kriterium                 | Figma                                      | Balsamiq                                 | Pencil Project                          |
-|---------------------------|--------------------------------------------|------------------------------------------|-----------------------------------------|
-| Kosten / Lizenz           | kostenloser Free-Plan                      | kostenpflichtig (Testversion verfügbar)  | kostenlos, Open Source                  |
-| Zugriff / Installation    | im Browser, optional Desktop-App           | Desktop-App                              | Desktop-App                             |
-| Zusammenarbeit im Team    | **sehr gut**, Echtzeit-Kollaboration       | kaum, eher Einzelarbeit                  | keine/kaum Teamfunktionen               |
-| Bedienbarkeit             | leicht, moderne Oberfläche                 | sehr einfach, aber stark reduziert       | okay, etwas altmodisch                  |
-| Funktionsumfang           | viele Komponenten, klickbare Prototypen    | einfache Wireframes, wenig Details       | einfache Mockups, weniger Komfort       |
-| Export in Doku (PNG/PDF)  | sehr gut                                   | gut                                      | gut                                     |
-| Eignung für unser Projekt | **empfohlen** (Team + Browser + flexibel)  | möglich, aber weniger Team-geeignet      | möglich, wenn Open Source/offline wichtig |
+| Kriterium                 | Figma | Balsamiq | Adobe XD |
+|---------------------------|------:|---------:|---------:|
+| Kosten / Lizenz           | 9     | 5        | 7        |
+| Zugriff / Installation    | 10    | 7        | 8        |
+| Zusammenarbeit im Team    | 10    | 4        | 8        |
+| Bedienbarkeit             | 9     | 9        | 9        |
+| Funktionsumfang           | 10    | 6        | 9        |
+| Export / Dokumentation    | 9     | 8        | 9        |
+| Performance / Stabilität  | 9     | 8        | 9        |
+| Eignung für Projekt       | 10    | 6        | 9        |
+| **Gesamtbewertung**       | **9.5** | **6.6**  | **8.5**  |
+
+Obwohl Adobe XD nicht die höchste Gesamtbewertung erzielt, wird es im Projekt eingesetzt, da bereits Erfahrung im Team mit der Software besteht und sie Teil der vorhandenen Adobe Creative Cloud ist.
 
 ## IDE / Editor 
 
