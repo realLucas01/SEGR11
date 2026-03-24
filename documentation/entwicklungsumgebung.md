@@ -15,16 +15,19 @@
 
 ## UML-Tool 
 
-| Kriterium                    | Papyrus (Eclipse-Plugin)                  | Visual Paradigm Community Edition       | StarUML                            |
-|-----------------------------|-------------------------------------------|-----------------------------------------|------------------------------------|
-| Kosten / Lizenz             | Open Source, kostenlos                    | Kostenlose Community-Edition, sonst lizenzpflichtig | Kostenpflichtig (Testversion gratis) |
-| Plattformen                 | Läuft überall, wo Eclipse läuft (Win/Linux an der HTW) | Win / macOS / Linux                    | Win / macOS / Linux                |
-| UML2-Unterstützung          | Volle UML2-Unterstützung                  | Volle UML2-Unterstützung               | Gute UML-Unterstützung             |
-| Code-Generierung nach Java  | Möglich über Eclipse-Plugins / Profile   | Integrierte Code-Generierung sehr komfortabel | Teilweise über Erweiterungen       |
-| Integration in IDE          | Direkt in Eclipse eingebunden            | Eigene IDE, kann mit Eclipse/IntelliJ zusammen genutzt werden | Eigenständiges Tool, keine enge IDE-Integration |
-| Bedienbarkeit / Lernaufwand | Oberfläche etwas „oldschool“, aber okay  | Sehr komfortable UI, viele Assistenten  | Moderne UI, relativ leicht bedienbar |
-| Eignung für Laborrechner    | Sehr gut, da Eclipse meist schon installiert ist | Muss extra installiert werden          | Muss extra installiert werden      |
-| Eignung für unser Projekt   | **empfohlen**                             | geeignet, aber Lizenz & Overkill       | eher ungeeignet                    |
+| Kriterium                    | Papyrus (Eclipse) | Visual Paradigm CE | StarUML | PlantUML |
+|-----------------------------|------------------:|-------------------:|--------:|---------:|
+| Kosten / Lizenz             | 10                | 8                  | 5       | 10       |
+| Plattformen                 | 9                 | 9                  | 9       | 10       |
+| UML2-Unterstützung          | 10                | 10                 | 8       | 8        |
+| Code-Generierung (Java)     | 7                 | 10                 | 6       | 4        |
+| Integration in IDE          | 10                | 8                  | 6       | 9        |
+| Bedienbarkeit               | 6                 | 9                  | 8       | 7        |
+| Eignung Laborrechner        | 10                | 7                  | 7       | 10       |
+| Eignung für Projekt         | 9                 | 8                  | 6       | 10       |
+| **Gesamtbewertung**         | **8.9**           | **8.6**            | **6.9** | **8.5**  |
+
+PlantUML wird im Projekt eingesetzt, da es eine schnelle, textbasierte Erstellung von Diagrammen ermöglicht, sich gut in Visual Studio Code und Eclipse integrieren lässt und besonders effizient für Versionierung über Git geeignet ist.
 
 ## Build-Tool 
 
