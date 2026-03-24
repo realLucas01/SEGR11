@@ -96,8 +96,11 @@
 |Lesbarkeit/ Darstellung|7: HTML Seiten, weniger für Leser ohne hintergrund|8: Markdown, gut Lesbar|9: Website mit Nav., für Team gut lesbar|
 |Kollaboration|6: Zusammenarbeit nur indirekt über Code, nicht parallel|8: Zusammenarbeit über Git (e.g. branches) flexibel|9: Direkt im Browser editierbar, parallel möglich|
 |Nachvollziehbarkeit/ Versionierung|8: Jede Änderung durch commits sichtbar|9: Änderungen im Repo nachvollziehbar|9: Versionshistorie der Wiki-Seiten vorhanden|
-|Aktualität/ Wartbarkeit der Dokumentation|9: (automatisch aus Code gen.)|7: (manuell, kann schnell veralten)|7: (ebenfalls)|
+|Aktualität/ Wartbarkeit der Dokumentation|9: automatisch|7: manuell, kann schnell veralten|7: manuell, kann schnell veralten|
 |Gesamt/ Eignung|47/60|48/60|51/60|
+
+Für unser Projekt haben wir uns aufgrund der Aufgabenstellung, für Javadoc als primäres und einziges Dokumentationstool entschieden.
+Markdown oder ein Wiki hätten flexiblere Möglichkeiten für allgemeine Projektdokumentation geboten, waren aber für unsere spezifischen Anforderungen nicht nötig und wären zusätzlich mit Aufwand verbunden.
 
 ## Obfuscator 
 
