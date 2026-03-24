@@ -33,7 +33,7 @@
 | Konfigurationsaufwand |	2: Extrem hoch, die Schritte Kompilieren, Kopieren und Löschen müssen manuell definiert werden.    |		 			9: Sehr gering, mit minimalem manuellem Setup 	|			7: Moderat, die DSL benötigt mehr Einarbeitung als Mavens XML Standard	|
 | Build Performance |		5: Langsam	|				7: Solide, parallele Builds oft komplex zu konfigurieren	|			10: Überragend, mit sehr effizienten Build Cache	|
 | Dependency Management |	3	: Ursprünglich nicht vorhanden, kann umständlich nachgerüstet werden 		 |		9: Exellent, das Maven Repository ist der Industriestandard	|			10: Hochmodern, Unterstützt Maven und Ivy Repositories mit einer besseren Konfliktlösung  	|							
-| Lesbarkeit und Wartbarkeit  |	4: XML Dateien wachsen bei größeren Projekten start und sind schwer zu Pflegen			 |		7: Gut lesbar durch strukturiertes XML, kann bei vielen Plugins leicht unübersichtlich werden	|			8:Sehr kompakt und leserlich, erfordert allerdings Verständnis der Skriptsprache	|							
+| Lesbarkeit und Wartbarkeit  |	4: XML Dateien wachsen bei größeren Projekten start und sind schwer zu Pflegen			 |		7: Gut lesbar durch strukturiertes XML, kann bei vielen Plugins leicht unübersichtlich werden	|			8: Sehr kompakt und leserlich, erfordert allerdings Verständnis der Skriptsprache	|							
 | Standardisierung |		4: Kaum Standards |					10: Goldstandard, Jedes Projekt folgt der gleichen Struktur	|			9: Stark standardisiert, erlaubt allerdings einige Freiheiten	|
 | Skalierbarkeit |		4: Stößt bei Multi Modul Projekten schnell an Grenzen 	 |				7: Gut für große Projekte, kann aber auch bei vielen Modulen in der Performance einbrechen	|			10: Speziell für riesige Projekte entwickelt	|
 |**Gesamtpunkte** |	 		22 / 60	|				49 / 60		|		54 / 60				|
