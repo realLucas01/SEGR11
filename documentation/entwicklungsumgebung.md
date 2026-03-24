@@ -30,13 +30,15 @@
 
 | Kriterium                    | Ant  |					Maven 	|			Gradle 	| 
 |-----------------------------|--------------------------------------------|-------------------------------------------|-----------------------------------------|
-| Konfigurationsaufwand |	2    |		 			9	|			7	|
-| Build Performance |		5	|				7	|			10	|
-| Dependency Management |	3			 |		9	|			10  	|							
-| Lesbarkeit und Wartbarkeit  |	4			 |		7	|			8	|							
-| Standardisierung |		4 |					10	|			9	|
-| Skalierbarkeit |		4	 |				7	|			10	|
+| Konfigurationsaufwand |	2: Extrem hoch, die Schritte Kompilieren, Kopieren und Löschen müssen manuell definiert werden.    |		 			9: Sehr gering, mit minimalem manuellem Setup 	|			7: Moderat, die DSL benötigt mehr Einarbeitung als Mavens XML Standard	|
+| Build Performance |		5: Langsam	|				7: Solide, parallele Builds oft komplex zu konfigurieren	|			10: Überragend, mit sehr effizienten Build Cache	|
+| Dependency Management |	3	: Ursprünglich nicht vorhanden, kann umständlich nachgerüstet werden 		 |		9: Exellent, das Maven Repository ist der Industriestandard	|			10: Hochmodern, Unterstützt Maven und Ivy Repositories mit einer besseren Konfliktlösung  	|							
+| Lesbarkeit und Wartbarkeit  |	4: XML Dateien wachsen bei größeren Projekten start und sind schwer zu Pflegen			 |		7: Gut lesbar durch strukturiertes XML, kann bei vielen Plugins leicht unübersichtlich werden	|			8:Sehr kompakt und leserlich, erfordert allerdings Verständnis der Skriptsprache	|							
+| Standardisierung |		4: Kaum Standards |					10: Goldstandard, Jedes Projekt folgt der gleichen Struktur	|			9: Stark standardisiert, erlaubt allerdings einige Freiheiten	|
+| Skalierbarkeit |		4: Stößt bei Multi Modul Projekten schnell an Grenzen 	 |				7: Gut für große Projekte, kann aber auch bei vielen Modulen in der Performance einbrechen	|			10: Speziell für riesige Projekte entwickelt	|
 |**Gesamtpunkte** |	 		22 / 60	|				49 / 60		|		54 / 60				|
+
+Auch wenn Gradle mit einem knappen Vorsprung Maven schlägt, fällt die interne Wahl auf Maven für dieses Projekt. Dies ist nach wievor die sicherste Wahl mit seiner Standard Struktur für unserer geplantes Projekt.
 
 
 ## UI-Prototyping-Tool 
@@ -55,18 +57,17 @@
 
 | Kriterium                 | IntelliJ IDEA Community                  | Eclipse IDE                             | VS Code (+ Java-Extensions)               |
 |---------------------------|------------------------------------------|-----------------------------------------|-------------------------------------------|
-|Kosten/ Lizens             |		Kostenlos unter Community Edition      |		Kostenlos, Open Source               |		Kostenlos		|
-|Code Intelligence          |		10	                                   |					7	                             |				7			|
-|Navigation                 |			9	                                   |					7	|				8			|
-|Performance |			7	 |					7	|				9			|
-|Plugin Erweiterbarkeit |	8	 |					7	|				10			|
-|Built in Features |		9	 |					7	|				4			|
-|Debuggin und Testing |	 	10	 |					8	|				6			|
-|Scene Builder und JavaFX Integration | 9        	|			8	|				4			|	 
+|Kosten/ Lizenz             |		Kostenlos unter Community Edition      |		Kostenlos, Open Source               |		Kostenlos		|
+|Code Intelligence          |		10:  Branchenführende Analyse und vorausschauende Autovollständigung	                                   |					7:	Solide Assistenz, aber oft etwas weniger intuitiv als IntelliJ                             |				7: Gut durch "Language Support" Plugins, aber weniger tiefgreifend			|
+|Navigation                 |			9: Sehr starke Suchfunktionen "Search Everywhere"	                                   |				7: Klassische Projeektstruktur, Suchfunktonen sind funktional 	|				8: Sehr schnell und effizent  			|
+|Performance |			7: Hoher RAM Verbrauch, benötigt bei großen Projekten stärkere Hardware |					7: Bei vielen installierten Plugins steigende instabilität und Hardwareanforderungen	|				9: Sehr leichtgewichtigt und schnell startend, bei steigender Anzahl installierter Plugins, ebenfalls Performance Einbrüche			|
+|Plugin Erweiterbarkeit |	8: Qualitativ und hochwertige Plugins	 |					7: Riesiges Ökosystem, Plugins allerdings oft veraltet oder nicht weitergeführt	|				10: Eine riesige Auswahl für alles mitsamt einer sehr einfachen Installation 			|
+|Built in Features |		9: Standardmäßig geliefert mitsamt GUI für Git und Build Tools	 |					7: Viele Funktionen enthalten, aber oft unter Untermenüs begraben	|				4: Minimalistisch, die meisten gewünschten Funktionen müssen per Plugin nachträglich installiert werden			|
+|Debuggin und Testing |	 	10: Erstklassiger Debugger und exellente JUnit Integration	 |					8: Sehr mächtiger Debugger	|				6: Grundfunktionen vorhanden, aber weniger Komfort bei komplexeren Projekten			|
+|Scene Builder und JavaFX Integration | 9: Hervorragende Integration mitsamt einer einfachen Einbindung        	|			8: Gute Unterstützung und Anbindung. 	|				4: Erfordert viel manuelle KOnfiguration, sowie kein visueller Editor			|	 
 | **Gesamtpunkte** |	 		62 / 70	|					51/ 70	|				48 / 70			|
 
-
-Da dieses Projekt in dessen Umfang überschaulich ist und auch die Zeitspanne eine sehr geringe, steht es den einzelnen Entwicklern frei zur Auswahl welche IDE diese verwenden. Ein forcierter Wechsel, und der somit eingehenden Eingewöhnung in neue Entwicklungstools könnte zu einer Verzögerung im Zeitplan führen. 
+Da es sich hierbei um ein projekt überschaulicher Größe handelt, mitsamt einem enggenähtem Zeitablauf, steht es den einzelnen Entwicklern frei zur Auswahl welche IDE diese verwenden. Ein forcierter Wechsel, und der somit eingehenden Eingewöhnung in neue Entwicklungstools würde zu einer Verzögerung im Zeitplan führen. 
 
 
 ## Test-Automatisierung 
