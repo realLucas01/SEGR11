@@ -88,15 +88,15 @@
 
 ## Dokumentationstools 
 
-| Kriterium                 | Javadoc                                  | Markdown im Repository                 | GitLab-Wiki                               |
+| Kriterium                 | Javadoc                                  | Markdown im Repository                 | GitHub-Wiki                               |
 |---------------------------|-------------------------------------------|----------------------------------------|-------------------------------------------|
-|Kosten|Keine (teil des JDK)|Keine, im GitLab|Keine|
-|Integration in Entwicklungsprozess|10|9|8|
-|Struktur & Navigation|7|7|9|
-|Lesbarkeit/ Darstellung|7|8|9|
-|Kollaboration|6|8|9|
-|Nachvollziehbarkeit/ Versionierung|8|9|9|
-|Aktualität/ Wartbarkeit der Dokumentation|9 (automatisch aus Code gen.)|7 (manuell, kann schnell veralten)|7 (ebenfalls)|
+|Kosten|Keine (teil des JDK)|Keine, im GitHub|Keine|
+|Integration in Entwicklungsprozess|10: Direkt aus Java Code generierbar|9: Im selben Repo wie Code, gute referenz|8: Web-basiert, an Repo gekoppelt.|
+|Struktur & Navigation|7: Klassenhierarchie automatisch|7: Eigene Links/Ordner nötig, flexibler gestaltbar|9: Seitenstruktur und Menü, verlinkung zwischen Seiten einfach|
+|Lesbarkeit/ Darstellung|7: HTML Seiten, weniger für Leser ohne hintergrund|8: Markdown, gut Lesbar|9: Website mit Nav., für Team gut lesbar|
+|Kollaboration|6: Zusammenarbeit nur indirekt über Code, nicht parallel|8: Zusammenarbeit über Git (e.g. branches) flexibel|9: Direkt im Browser editierbar, parallel möglich|
+|Nachvollziehbarkeit/ Versionierung|8: Jede Änderung durch commits sichtbar|9: Änderungen im Repo nachvollziehbar|9: Versionshistorie der Wiki-Seiten vorhanden|
+|Aktualität/ Wartbarkeit der Dokumentation|9: (automatisch aus Code gen.)|7: (manuell, kann schnell veralten)|7: (ebenfalls)|
 |Gesamt/ Eignung|47/60|48/60|51/60|
 
 ## Obfuscator 
