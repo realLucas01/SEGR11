@@ -12,7 +12,7 @@
 | Tools und Integration | 10: Sehr viele Tools, IDE-Integrationen und Plattformen (z. B. GitHub) | 7: Gute Integration, aber weniger modern und umfangreich | 6: Aufgrund geringer Verbreitung weniger Tools und Integrationen verfügbar |
 | Gesamt | 50/60 | 41/60 | 41/60 |
 
-**Fazit:** Unsere Wahl fällt aufgrund der technischen Leistungsfähigkeit auf Git. Unteranderem weil das Team mit Git auch bereits eingearbeitet ist, und uns somit die Einstiegshürden nicht weiter interessieren.
+**Fazit:** Unsere Wahl fällt aufgrund der technischen Leistungsfähigkeit auf Git. Unter anderem weil das Team mit Git auch bereits eingearbeitet ist, und uns somit die Einstiegshürden nicht weiter interessieren.
 
 ## UML-Tool 
 
