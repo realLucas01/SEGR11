@@ -97,7 +97,7 @@
 |Kollaboration|6: Zusammenarbeit nur indirekt über Code, nicht parallel|8: Zusammenarbeit über Git (e.g. branches) flexibel|9: Direkt im Browser editierbar, parallel möglich|
 |Nachvollziehbarkeit/Versionierung|8: Jede Änderung durch Commits sichtbar|9: Änderungen im Repo nachvollziehbar|9: Versionshistorie der Wiki-Seiten vorhanden|
 |Aktualität/Wartbarkeit der Dokumentation|9: automatisch gepflegt|7: manuell, kann schnell veralten|7: manuell, kann schnell veralten|
-|Gesamt|47/60|48/60|51/60|
+|**Gesamt**|**47/60**|**48/60**|**51/60**|
 
 Fazit: Für unser Projekt haben wir uns aufgrund der Anforderungen für Javadoc als primäres Dokumentationstool entschieden. Ergänzend nutzen wir Markdown für die Entwicklerdokumentation. Ein Wiki hätte zwar flexiblere Möglichkeiten für die allgemeine Projektdokumentation geboten, war jedoch für unsere spezifischen Anforderungen nicht notwendig und mit zusätzlichem Aufwand verbunden.
 
