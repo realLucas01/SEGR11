@@ -13,21 +13,19 @@
 | Eignung für unser Projekt | **empfohlen**                            | nicht notwendig                         | eher ungeeignet                           |
 
 
-## UML-Tool 
+## UML-Tool
 
-| Kriterium                    | Papyrus (Eclipse) | Visual Paradigm CE | StarUML | PlantUML |
-|-----------------------------|------------------:|-------------------:|--------:|---------:|
-| Kosten / Lizenz             | 10                | 8                  | 5       | 10       |
-| Plattformen                 | 9                 | 9                  | 9       | 10       |
-| UML2-Unterstützung          | 10                | 10                 | 8       | 8        |
-| Code-Generierung (Java)     | 7                 | 10                 | 6       | 4        |
-| Integration in IDE          | 10                | 8                  | 6       | 9        |
-| Bedienbarkeit               | 6                 | 9                  | 8       | 7        |
-| Eignung Laborrechner        | 10                | 7                  | 7       | 10       |
-| Eignung für Projekt         | 9                 | 8                  | 6       | 10       |
-| **Gesamtbewertung**         | **8.9**           | **8.6**            | **6.9** | **8.5**  |
+| Kriterium                   | Papyrus (Eclipse-Plugin)                      | StarUML                                | PlantUML                                |
+|-----------------------------|-----------------------------------------------|----------------------------------------|-----------------------------------------|
+| Kosten / Lizenz             | kostenlos, Open Source (10/10)                | kostenpflichtig (5/10)                 | kostenlos, Open Source (10/10)          |
+| Plattformen                 | Eclipse-basiert (9/10)                        | Win / macOS / Linux (9/10)             | plattformunabhängig (10/10)             |
+| UML2-Unterstützung          | vollständig (10/10)                           | gut (8/10)                             | gut (8/10)                              |
+| Code-Generierung nach Java  | möglich über Eclipse-Plugins (7/10)           | eingeschränkt (6/10)                   | kaum vorhanden (4/10)                   |
+| Integration in IDE          | direkt in Eclipse (10/10)                     | eigenständig (6/10)                    | sehr gut mit VS Code (9/10)             |
+| Bedienbarkeit / Lernaufwand | etwas komplex (6/10)                          | modern, einfach (8/10)                 | textbasiert, mittel (7/10)              |
+| **Gesamt**                  | **52/60**                                     | **42/60**                              | **48/60**
 
-PlantUML wird im Projekt eingesetzt, da es eine schnelle, textbasierte Erstellung von Diagrammen ermöglicht, sich gut in Visual Studio Code und Eclipse integrieren lässt und besonders effizient für Versionierung über Git geeignet ist.
+**Fazit:** PlantUML wird im Projekt eingesetzt, da es eine schnelle, textbasierte Erstellung von Diagrammen ermöglicht, sich gut in Visual Studio Code und Eclipse integrieren lässt und besonders effizient für Versionierung über Git geeignet ist.
 
 ## Build-Tool 
 
@@ -55,6 +53,20 @@ PlantUML wird im Projekt eingesetzt, da es eine schnelle, textbasierte Erstellun
 | **Gesamtbewertung**       | **9.5** | **6.6**  | **8.5**  |
 
 Obwohl Adobe XD nicht die höchste Gesamtbewertung erzielt, wird es im Projekt eingesetzt, da bereits Erfahrung im Team mit der Software besteht und sie Teil der vorhandenen Adobe Creative Cloud ist.
+
+## UI-Prototyping-Tool (Bewertung)
+
+| Kriterium                 | Figma                                      | Balsamiq                                 | Adobe XD                                 |
+|---------------------------|--------------------------------------------|------------------------------------------|-------------------------------------------|
+| Kosten / Lizenz           | kostenloser Free-Plan (9/10)               | kostenpflichtig (5/10)                   | Teil der Adobe CC (7/10)                  |
+| Zugriff / Installation    | Browser + Desktop-App (10/10)              | Desktop-App (7/10)                       | Desktop-App (8/10)                        |
+| Zusammenarbeit im Team    | **sehr gut**, Echtzeit (10/10)             | kaum vorhanden (4/10)                    | gut, Cloud-basiert (8/10)                 |
+| Bedienbarkeit             | modern, intuitiv (9/10)                    | sehr einfach (9/10)                      | sehr intuitiv (9/10)                      |
+| Funktionsumfang           | sehr umfangreich (10/10)                   | stark reduziert (6/10)                   | umfangreich (9/10)                        |
+| Export in Doku (PNG/PDF)  | sehr gut (9/10)                            | gut (8/10)                               | sehr gut (9/10)                           |
+| Performance / Stabilität  | stabil (9/10)                              | stabil (8/10)                            | stabil (9/10)                             |
+| **Gesamt**                | **9.5** | **6.6**  | **8.5**  |
+
 
 ## IDE / Editor 
 
