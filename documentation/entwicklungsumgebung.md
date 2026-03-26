@@ -10,7 +10,7 @@
 | Branching und Merging | 10: Sehr leistungsfähig und flexibel bei Branches und Merges | 5: Branching möglich, aber umständlich und fehleranfälliger | 8: Gute Unterstützung, aber etwas weniger flexibel als Git |
 | Lernkurve | 5: Steile Lernkurve, viele Konzepte müssen verstanden werden, für Einsteiger sehr unübersichtlich/komplex | 8: Schnell erlernbar durch einfache Struktur | 7: Leichter als Git, aber trotzdem gewisse Komplexität |
 | Tools und Integration | 10: Sehr viele Tools, IDE-Integrationen und Plattformen (z. B. GitHub) | 7: Gute Integration, aber weniger modern und umfangreich | 6: Aufgrund geringer Verbreitung weniger Tools und Integrationen verfügbar |
-| Gesamt | 50/60 | 41/60 | 41/60 |
+| **Gesamt** | **50/60** | **41/60** | **41/60** |
 
 **Fazit:** Unsere Wahl fällt aufgrund der technischen Leistungsfähigkeit auf Git. Unter anderem weil das Team mit Git auch bereits eingearbeitet ist, und uns somit die Einstiegshürden nicht weiter interessieren.
 
@@ -123,7 +123,7 @@
 | Tool-Unterstützung | 9: Gute Integration in viele Tools | 6: Weniger direkte Tool-Unterstützung | 10: Stark auf automatische Formatierung ausgelegt |
 | Flexibilität | 6: Relativ strikt | 7: Mehr Spielraum | 5: Sehr strikt durch festen Formatter |
 | Konsistenz im Code | 10: Sehr einheitlicher Code | 7: Abhängig vom Team da nur grundlegendere Regeln | 10: Konsistenz wird automatisch erzwungen |
-| Gesamt | 59/70 | 50/70 | 57/70 |
+| **Gesamt** | **59/70** | **50/70** | **57/70** |
 
 **Fazit:** Aufgrund dessen das wir eine Basis für ein modular erweiterbares Programm erstellen haben wir uns für den Google Java Style Guide entschieden. Dieser ist modern, weitverbreitet und erzeugt aufgrund strikterer Regeln sehr einheitlichen Code.
 
