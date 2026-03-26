@@ -99,7 +99,7 @@
 |Aktualität/Wartbarkeit der Dokumentation|9: automatisch gepflegt|7: manuell, kann schnell veralten|7: manuell, kann schnell veralten|
 |Gesamt|47/60|48/60|51/60|
 
-Für unser Projekt haben wir uns aufgrund der Aufgabenstellung für Javadoc als primäres Dokumentationstool entschieden. Ergänzend nutzen wir Markdown für die Entwicklerdokumentation. Ein Wiki hätte zwar flexiblere Möglichkeiten für die allgemeine Projektdokumentation geboten, war jedoch für unsere spezifischen Anforderungen nicht notwendig und mit zusätzlichem Aufwand verbunden.
+Fazit: Für unser Projekt haben wir uns aufgrund der Aufgabenstellung für Javadoc als primäres Dokumentationstool entschieden. Ergänzend nutzen wir Markdown für die Entwicklerdokumentation. Ein Wiki hätte zwar flexiblere Möglichkeiten für die allgemeine Projektdokumentation geboten, war jedoch für unsere spezifischen Anforderungen nicht notwendig und mit zusätzlichem Aufwand verbunden.
 
 ## Obfuscator 
 
