@@ -73,7 +73,7 @@
 | Wartbarkeit und Lesbarkeit | 10: Sehr klare Strukturierung durch moderne Annotationen | 7: Solide, kann bei großen Suites unübersichtlich werden | 9: Ermöglicht lesbare Tests durch eine flüssige Schnittstelle |
 | Build-Integration | 10: Nahtlose Integration in Maven und gängige Pipelines | 8: Gute Integration mit etwas mehr Konfigurationsaufwand | 9: Problemlos in bestehende Build-Prozesse integrierbar |
 | Eignung für Projekt | 10: Uneingeschränkt empfohlen als Haupt-Framework | 4: Möglich, aber für dieses Projekt nicht nötig | 7: Sinnvoll, aber als Standalone-Lösung ungeeignet |
-| **Gesamtpunktzahl** | **59 / 60** | **38 / 60** | **50 / 60** |
+| **Gesamt** | **59 / 60** | **38 / 60** | **50 / 60** |
 
 Unsere Wahl fällt als etablierter Branchenstandard klar auf JUnit 5. Das Framework ermöglicht unserem erfahrenen Team sofortige und strukturierte Tests der Spiellogik ohne jegliche Einarbeitungshürden.
 
@@ -89,7 +89,7 @@ Unsere Wahl fällt als etablierter Branchenstandard klar auf JUnit 5. Das Framew
 | Architektonischer Nutzen | 10: Starkes Sparring-Tool für komplexe Logik | 5: Limitiert auf reine Code-Vervollständigung | 5: Limitiert auf reine Code-Vervollständigung |
 | Fehleranalyse | 10: Exzellent für Stacktraces und tiefe Fehlerbehebung | 6: Hilft primär bei lokalen Syntaxfehlern im Code | 5: Kaum Unterstützung bei komplexen Laufzeitfehlern |
 | Eignung für Projekt | 10: Unverzichtbar für konzeptionelle Lösungsansätze | 6: Optional als reine Tipphilfe | 7: Optional bei starkem Fokus auf Privacy |
-| **Gesamtpunktzahl** | **51 / 60** | **40 / 60** | **44 / 60** |
+| **Gesamt** | **51 / 60** | **40 / 60** | **44 / 60** |
 
 Unsere Wahl fällt aufgrund der analytischen Tiefe und der vielfältigen Anwendung eindeutig auf ChatGPT. Wir benötigen fundierte Unterstützung für komplexe Architekturfragen, Systemdokumentation und tiefgreifende Fehleranalyse.
 
@@ -110,17 +110,20 @@ Unsere Wahl fällt aufgrund der analytischen Tiefe und der vielfältigen Anwendu
 | Ausgabe / Darstellung     | HTML-Seiten, technisch, Entwicklerfokus  | schön auf GitHub/GitLab gerendert      | Web-Seiten mit Navigation, gut lesbar     |
 | Eignung für unser Projekt | **sehr gut für API-Doku**                | **sehr gut für Pflichtenheft/Architektur** | gut für zusätzliche, lesbare Projektseite |
 
-## Obfuscator 
+### Obfuscator
 
-| Kriterium                 | ProGuard                                   | yGuard                                    | DashO                                      |
-|---------------------------|--------------------------------------------|-------------------------------------------|--------------------------------------------|
-| Kosten / Lizenz           | kostenlos, Open Source                     | kostenlos, Open Source                    | kommerziell, kostenpflichtig               |
-| Integration in Build-Tool | gut (Plugins/Config für Maven, Gradle, Ant)| gut (v.a. Ant/Maven-Integration)         | sehr gut, eigene GUI + Build-Integration   |
-| Funktionsumfang           | Obfuscation, Shrinking, Optimierung        | Obfuscation, teilweise Shrinking          | umfangreiche Obfuscation + Analyse-Features|
-| Konfigurationsaufwand     | mittel – Konfig-Datei nötig                | mittel – Konfig über Build-Skripte        | eher gering – viele Assistenten            |
-| Verbreitung / Bekanntheit | **sehr hoch**, Standard im Open-Source-Bereich | bekannt, aber weniger verbreitet        | v.a. in professionellen Projekten           |
-| Dokumentation / Beispiele | viele Beispiele & Tutorials im Netz        | solide Doku, weniger Community            | gute Hersteller-Doku, aber hinter Lizenz   |
-| Eignung für unser Projekt | **empfohlen**                              | möglich, aber nicht nötig                 | nicht sinnvoll wegen Kosten                 |
+| Kriterium | ProGuard | yGuard | DashO |
+| :--- | :--- | :--- | :--- |
+| Build-Integration | 10: Hervorragende und nahtlose Integration in unser Maven Setup | 8: Solide Integration primär über Ant und Maven Plugins | 9: Sehr gut durch eigene GUI und Build-Integration |
+| Funktionsumfang und Optimierung | 10: Exzellente Obfuscation kombiniert mit starkem Shrinking | 7: Beschränkt auf grundlegende Obfuscation und rudimentäres Shrinking | 10: Sehr umfangreiche Features inklusive tiefgehender Analyse |
+| Konfigurationsaufwand | 8: Moderat durch gut strukturierte Konfigurationsdateien | 7: Moderat durch Konfiguration direkt über Build-Skripte | 9: Eher gering dank nützlicher Assistenten |
+| Verbreitung und Standard | 10: Der unangefochtene Industrie-Standard für Java-Projekte | 6: Bekannt, aber wesentlich weniger verbreitet in der Industrie | 8: Primär in stark kommerzialisierten Großprojekten vertreten |
+| Dokumentation und Community | 10: Überragende Community mit unzähligen Best Practices im Netz | 6: Solide Herstellerdokumentation bei sehr kleiner Community | 7: Gute Herstellerdokumentation liegt oft hinter Registrierungsschranken |
+| Code-Sicherheit und Schutz | 9: Bietet hohe Sicherheit für unsere klassische Java-Architektur | 6: Solider Basisschutz ohne erweiterte Sicherheitsmechanismen | 10: Höchste Sicherheitsstandards für extrem kritische Software |
+| Eignung für Projekt | 10: Uneingeschränkt empfohlen und exakt passend für unsere Architektur | 4: Möglich, bietet aber gegenüber ProGuard keinerlei Vorteile | 2: Kommerzieller Overkill für den geplanten Einsatzbereich |
+| **Gesamt** | **67 / 70** | **44 / 70** | **55 / 70** |
+
+Unsere Wahl fällt aufgrund der nahtlosen Build-Integration und der hohen technischen Leistungsfähigkeit eindeutig auf ProGuard.
 
 ## Code Conventions / Coding Style 
 | Kriterium                 | Google Java Style Guide                    | Oracle Java Code Conventions                | Checkstyle                                  |
