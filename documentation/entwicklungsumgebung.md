@@ -36,7 +36,7 @@
 | Lesbarkeit und Wartbarkeit  | 4: XML-Dateien wachsen bei größeren Projekten stark und sind schwer zu pflegen        |    7: Gut lesbar durch strukturiertes XML, kann bei vielen Plugins leicht unübersichtlich werden  |        8: Sehr kompakt und leserlich, erfordert allerdings Verständnis der Skriptsprache  |
 | Standardisierung |       4: Kaum Standards |                10: Goldstandard,  jedes Projekt folgt der gleichen Struktur    |        9: Stark standardisiert, erlaubt allerdings einige Freiheiten  |
 | Skalierbarkeit |     4: Stößt bei Multi-Modul Projekten schnell an Grenzen   |          7: Gut für große Projekte, kann aber auch bei vielen Modulen in der Performance einbrechen |        10: Speziell für riesige Projekte entwickelt   |
-|**Gesamt** |         22 / 60    |           49 / 60       |     54 / 60             |
+|**Gesamt** |         **22 / 60**    |           **49 / 60**       |    **54 / 60**             |
 
 Fazit: Auch wenn Gradle mit einem knappen Vorsprung Maven schlägt, fällt die interne Wahl auf Maven für dieses Projekt. Dies ist nach wie vor die sicherste Wahl mit seiner Standardstruktur für unser geplantes Projekt.
 
@@ -65,7 +65,7 @@ Fazit: Auch wenn Gradle mit einem knappen Vorsprung Maven schlägt, fällt die i
 |Built-in Features |       9: Standardmäßig geliefert mitsamt GUI für Git und Build Tools  |             7: Viele Funktionen enthalten, aber oft in Untermenüs begraben |           4: Minimalistisch, die meisten gewünschten Funktionen müssen per Plugin nachträglich installiert werden          |
 | Debugging und Testing |    10: Erstklassiger Debugger und exzellente JUnit-Integration  |             8: Sehr mächtiger Debugger |           6: Grundfunktionen vorhanden, aber weniger Komfort bei komplexeren Projekten         |
 |Scene Builder und JavaFX-Integration | 9: Hervorragende Integration mitsamt einer einfachen Einbindung         |        8: Gute Unterstützung und Anbindung    |           4: Erfordert viel manuelle Konfiguration, sowie keinen visuellen Editor        |
-| **Gesamt** |        62 / 70    |              51 / 70    |           48 / 70          |
+| **Gesamt** |        **62 / 70**    |              **51 / 70**    |           **48 / 70**          |
 
 Fazit: Da es sich hierbei um ein Projekt überschaubarer Größe handelt, mitsamt einem eng genähten Zeitablauf, steht es den einzelnen Entwicklern frei, welche IDE sie verwenden. Ein forcierter Wechsel, und die somit einhergehende Eingewöhnung in neue Entwicklungstools würden zu einer Verzögerung im Zeitplan führen.
 
