@@ -30,13 +30,13 @@
 
 | Kriterium                    | Ant  |             Maven  |        Gradle     |
 |-----------------------------|--------------------------------------------|-------------------------------------------|-----------------------------------------|
-| Konfigurationsaufwand |   2: Extrem hoch, die Schritte Kompilieren, Kopieren und Löschen müssen manuell definiert werden.    |               9: Sehr gering, mit minimalem manuellem Setup  |        7: Moderat, die DSL benötigt mehr Einarbeitung als Mavens XML Standard |
-| Build Performance |      5: Langsam |           7: Solide, parallele Builds oft komplex zu konfigurieren   |        10: Überragend, mit sehr effizientem Build Cache   |
-| Dependency Management |   3  : Ursprünglich nicht vorhanden, kann umständlich nachgerüstet werden       |    9: Excellent, das Maven-Repository ist der Industriestandard   |        10: Hochmodern, unterstützt Maven und Ivy Repositories mit einer besseren Konfliktlösung   |
-| Lesbarkeit und Wartbarkeit  | 4: XML-Dateien wachsen bei größeren Projekten stark und sind schwer zu pflegen        |    7: Gut lesbar durch strukturiertes XML, kann bei vielen Plugins leicht unübersichtlich werden  |        8: Sehr kompakt und leserlich, erfordert allerdings Verständnis der Skriptsprache  |
-| Standardisierung |       4: Kaum Standards |                10: Goldstandard,  jedes Projekt folgt der gleichen Struktur    |        9: Stark standardisiert, erlaubt allerdings einige Freiheiten  |
-| Skalierbarkeit |     4: Stößt bei Multi-Modul Projekten schnell an Grenzen   |          7: Gut für große Projekte, kann aber auch bei vielen Modulen in der Performance einbrechen |        10: Speziell für riesige Projekte entwickelt   |
-|**Gesamt** |         **22 / 60**    |           **49 / 60**       |    **54 / 60**             |
+| Konfigurationsaufwand (x1.8) |   2: Extrem hoch, die Schritte Kompilieren, Kopieren und Löschen müssen manuell definiert werden.    |               9: Sehr gering, mit minimalem manuellem Setup  |        7: Moderat, die DSL benötigt mehr Einarbeitung als Mavens XML Standard |
+| Build Performance (x1.5) |      5: Langsam |           7: Solide, parallele Builds oft komplex zu konfigurieren   |        10: Überragend, mit sehr effizientem Build Cache   |
+| Dependency Management (x1.2) |   3  : Ursprünglich nicht vorhanden, kann umständlich nachgerüstet werden       |    9: Excellent, das Maven-Repository ist der Industriestandard   |        10: Hochmodern, unterstützt Maven und Ivy Repositories mit einer besseren Konfliktlösung   |
+| Lesbarkeit und Wartbarkeit (x1.4)  | 4: XML-Dateien wachsen bei größeren Projekten stark und sind schwer zu pflegen        |    7: Gut lesbar durch strukturiertes XML, kann bei vielen Plugins leicht unübersichtlich werden  |        8: Sehr kompakt und leserlich, erfordert allerdings Verständnis der Skriptsprache  |
+| Standardisierung (x1.0) |       4: Kaum Standards |                10: Goldstandard,  jedes Projekt folgt der gleichen Struktur    |        9: Stark standardisiert, erlaubt allerdings einige Freiheiten  |
+| Skalierbarkeit (x0.8) |     4: Stößt bei Multi-Modul Projekten schnell an Grenzen   |          7: Gut für große Projekte, kann aber auch bei vielen Modulen in der Performance einbrechen |        10: Speziell für riesige Projekte entwickelt   |
+|**Gesamt** |         **27.5 / 77 = 35.7%**    |           **62.9 / 77 = 81.7%**       |    **67.8 / 77 = 88,1%**             |
 
 **Fazit:** Auch wenn Gradle mit einem knappen Vorsprung Maven schlägt, fällt die interne Wahl auf Maven für dieses Projekt. Dies ist nach wie vor die sicherste Wahl mit seiner Standardstruktur für unser geplantes Projekt.
 
@@ -58,14 +58,14 @@
 | Kriterium                 | IntelliJ IDEA Community                  | Eclipse IDE                             | VS Code (+ Java-Extensions)               |
 |---------------------------|------------------------------------------|-----------------------------------------|-------------------------------------------|
 |Kosten / Lizenz             |     Kostenlos unter Community Edition      |      Kostenlos, Open Source               |    Kostenlos     |
-|Code Intelligence          |      10: Branchenführende Analyse und vorausschauende Autovervollständigung                                       |               7: Solide Assistenz, aber oft etwas weniger intuitiv als IntelliJ                             |            7: Gut durch "Language Support" Plugins, aber weniger tiefgreifend       |
-|Navigation                 |         9: Sehr starke Suchfunktionen "Search Everywhere"                                     |            7: Klassische Projektstruktur, Suchfunktonen sind funktional   |           8: Sehr schnell und effizent         |
-|Performance |        7: Hoher RAM Verbrauch, benötigt bei großen Projekten stärkere Hardware |              7: Bei vielen installierten Plugins steigende instabilität und Hardwareanforderungen   |           9: Sehr leichtgewichtig und schnell startend, bei steigender Anzahl installierter Plugins, ebenfalls Performance Einbrüche         |
-|Plugin-Erweiterbarkeit |   8: Qualitativ und hochwertige Plugins   |             7: Riesiges Ökosystem, Plugins allerdings oft veraltet oder nicht weitergeführt    |           10: Eine riesige Auswahl für alles mitsamt einer sehr einfachen Installation         |
-|Built-in Features |       9: Standardmäßig geliefert mitsamt GUI für Git und Build Tools  |             7: Viele Funktionen enthalten, aber oft in Untermenüs begraben |           4: Minimalistisch, die meisten gewünschten Funktionen müssen per Plugin nachträglich installiert werden          |
-| Debugging und Testing |    10: Erstklassiger Debugger und exzellente JUnit-Integration  |             8: Sehr mächtiger Debugger |           6: Grundfunktionen vorhanden, aber weniger Komfort bei komplexeren Projekten         |
-|Scene Builder und JavaFX-Integration | 9: Hervorragende Integration mitsamt einer einfachen Einbindung         |        8: Gute Unterstützung und Anbindung    |           4: Erfordert viel manuelle Konfiguration, sowie keinen visuellen Editor        |
-| **Gesamt** |        **62 / 70**    |              **51 / 70**    |           **48 / 70**          |
+|Code Intelligence (x2.0)          |      10: Branchenführende Analyse und vorausschauende Autovervollständigung                                       |               7: Solide Assistenz, aber oft etwas weniger intuitiv als IntelliJ                             |            7: Gut durch "Language Support" Plugins, aber weniger tiefgreifend       |
+|Navigation (x1.2)                 |         9: Sehr starke Suchfunktionen "Search Everywhere"                                     |            7: Klassische Projektstruktur, Suchfunktonen sind funktional   |           8: Sehr schnell und effizent         |
+|Performance (x1.5) |        7: Hoher RAM Verbrauch, benötigt bei großen Projekten stärkere Hardware |              7: Bei vielen installierten Plugins steigende instabilität und Hardwareanforderungen   |           9: Sehr leichtgewichtig und schnell startend, bei steigender Anzahl installierter Plugins, ebenfalls Performance Einbrüche         |
+|Plugin-Erweiterbarkeit (x1.3) |   8: Qualitativ und hochwertige Plugins   |             7: Riesiges Ökosystem, Plugins allerdings oft veraltet oder nicht weitergeführt    |           10: Eine riesige Auswahl für alles mitsamt einer sehr einfachen Installation         |
+|Built-in Features (x1.5) |       9: Standardmäßig geliefert mitsamt GUI für Git und Build Tools  |             7: Viele Funktionen enthalten, aber oft in Untermenüs begraben |           4: Minimalistisch, die meisten gewünschten Funktionen müssen per Plugin nachträglich installiert werden          |
+| Debugging und Testing (x1.8) |    10: Erstklassiger Debugger und exzellente JUnit-Integration  |             8: Sehr mächtiger Debugger |           6: Grundfunktionen vorhanden, aber weniger Komfort bei komplexeren Projekten         |
+|Scene Builder und JavaFX-Integration (x1.2) | 9: Hervorragende Integration mitsamt einer einfachen Einbindung         |        8: Gute Unterstützung und Anbindung    |           4: Erfordert viel manuelle Konfiguration, sowie keinen visuellen Editor        |
+| **Gesamt** |        **94 / 105 = 89,5%**    |              **76,5 / 105 = 72,9%**    |           **71.7 / 105 = 68,3%**          |
 
 **Fazit:** Da es sich hierbei um ein Projekt überschaubarer Größe handelt, mitsamt einem eng genähten Zeitablauf, steht es den einzelnen Entwicklern frei, welche IDE sie verwenden. Ein forcierter Wechsel, und die somit einhergehende Eingewöhnung in neue Entwicklungstools würden zu einer Verzögerung im Zeitplan führen.
 
