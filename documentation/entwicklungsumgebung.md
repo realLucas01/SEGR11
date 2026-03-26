@@ -136,7 +136,7 @@
 |Zuverlässigkeit|10: Professionelle Infrastruktur mit sehr hoher Uptime, Rollbacks möglich|8: Hohe Uptime, indirekter Informationsverlust|6: (Un)absichtliches überschreiben möglich, hohe Uptime (laut Recherche)
 |Datenschutz/Sicherheit|10: Fein einstellbare Zugriffsrechte, Privates Repo, Audit Log, Branch-Review System, jede Änderung sichtbar, individuelle Features vorhanden, 2FA etc. |4: Keine End to End Encryption bei normalen Chats, Zugriff über invite Links (missbrauch möglich)|4: Weitergabe von Zugriffslink sowie u.a. Passwort möglich
 |Effizienz|8: Projektbezogenes Tracking, gute Struktur|10: Sehr schneller Austausch möglich, einfache Bedienung|2: Manuelle Pflege, hoher Aufwand
-|Gesamt|71/80|52/80|43/80
+|**Gesamt**|**71/80**|**52/80**|**43/80**
 
 Fazit: GitHub für Nachvollziehbare, spezifisch bezogene Kommunikation, Discord für kurze Abstimmungen oder andere/generelle Fragen/Diskussionen und Anrufe. Miro bietet für uns keinen Mehrwert, da die Rahmenbedingungen schon stehen und der Aufwand zur Erstellung eines Boards nicht gerechtfertigt ist.
 
