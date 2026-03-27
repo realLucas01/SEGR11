@@ -125,7 +125,7 @@
 | Konsistenz im Code | 10: Sehr einheitlicher Code | 7: Abhängig vom Team da nur grundlegendere Regeln | 10: Konsistenz wird automatisch erzwungen |
 | **Gesamt** | **59/70** | **50/70** | **57/70** |
 
-**Fazit:** Aufgrund dessen das wir eine Basis für ein modular erweiterbares Programm erstellen haben wir uns für den Google Java Style Guide entschieden. Dieser ist modern, weitverbreitet und erzeugt aufgrund strikterer Regeln sehr einheitlichen Code.
+**Fazit:** Aufgrund dessen, dass wir eine Basis für ein modular erweiterbares Programm erstellen, haben wir uns für den Google Java Style Guide entschieden. Dieser ist modern, weitverbreitet und erzeugt aufgrund strikterer Regeln sehr einheitlichen Code.
 
 ## Kollaborationstools 
 
