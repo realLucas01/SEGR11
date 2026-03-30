@@ -124,14 +124,20 @@
 
 ## Kollaborationstools 
 
-| Kriterium                 | GitLab                                         | Discord                                   | E-Mail                                  |
+| Kriterium                 | GitHub                                         | Discord                                   | Miro                                  |
 |---------------------------|-----------------------------------------------|-------------------------------------------|-----------------------------------------|
-| Hauptzweck               | Versionsverwaltung, Issues, Wiki, Reviews     | Chat/Sprachkanäle, schnelle Abstimmung    | formelle Nachrichten, offizielle Infos  |
-| Kosten / Lizenz           | kostenlos (Hochschul- / GitLab-Instanz)      | kostenlos (Basisfunktionen)               | kostenlos (über Hochschul-/Privat-Account) |
-| Zusammenarbeit im Team    | **sehr gut**, alles projektbezogen im Repo    | sehr gut, aber eher „chaotisch“           | begrenzt, Antworten verteilen sich über Threads |
-| Nachvollziehbarkeit       | hoch (Issues, Commits, Merge Requests, Wiki)  | mittel (viel Chat, schwer zu durchsuchen) | niedrig–mittel (Mails gehen verloren)   |
-| Integration mit Code      | **sehr hoch** (Git, CI/CD, Code-Reviews)      | keine direkte Integration, nur Links      | keine direkte Integration               |
-| Typische Nutzung          | Aufgabenplanung, Bugtracking, Doku, Reviews   | Absprachen, Meetings, spontane Fragen     | Infos von Dozenten, Ankündigungen       |
-| Einarbeitungsaufwand      | mittel, aber sinnvoll für Softwareprojekte    | gering, wie „Gaming-/Gruppenchat“         | sehr gering                              |
-| Eignung für unser Projekt | **zentrales Projekt-Tool**                    | gut als Ergänzung für schnellen Austausch | nur ergänzend für „offizielle“ Kommunikation |
+| Hauptzweck               | Versionsverwaltung, Issues, Wiki, Reviews     | Chat/Sprachkanäle, schnelle Abstimmung    | Planung  |
+| Kosten / Lizenz           | keine      | keine                | keine über Hochschulaccount |
+|Nachvollziehbarkeit|10: Projektbezogen im Repo|5: Chats teilweise ohne Zusammenhang|7: Übersichtlich am Board festgehalten
+|Struktur & Orga|10: Glasklare Strukturierung|4: Eher schlecht durch konventionellen Chat|10: Top Organisation möglich
+|Kommunikation|6: Teilweise gehen Rückmeldungen verloren, etwas unübersichtlich bei z.B. vielen Pull-Requests|10: Einfache, schnelle Chats, auch Anrufe möglich|2: Keine Benachrichtigung, kein richtiger Chat(verlauf), bei vielen Elementen Tendenz zu Unübersichtlichkeit
+|Integration|10: Direkt im Repo|1: Keine Integration, nur über Links und Screeshots möglich|4: Teilweise Integration über erstellten Plan möglich, sonst: Links, Screenshots
+|Benutzerfreundlichkeit|7: Konzept muss verstanden werden, Einarbeitung gut|10: Sehr einfache Bedienung, wie ein Messenger|8: Einfache Bedienung wie eine große Tafel
+|Zuverlässigkeit|10: Professionelle Infrastruktur mit sehr hoher Uptime, Rollbacks möglich|8: Hohe Uptime, indirekter Informationsverlust|6: (Un)absichtliches überschreiben möglich, hohe Uptime (laut Recherche)
+|Datenschutz/Sicherheit|10: Fein einstellbare Zugriffsrechte, Privates Repo, Audit Log, Branch-Review System, jede Änderung sichtbar, individuelle Features vorhanden, 2FA etc. |4: Keine End to End Encryption bei normalen Chats, Zugriff über invite Links (missbrauch möglich)|4: Weitergabe von Zugriffslink sowie u.a. Passwort möglich
+|Effizienz|8: Projektbezogenes Tracking, gute Struktur|10: Sehr schneller Austausch möglich, einfache Bedienung|2: Manuelle Pflege, hoher Aufwand
+|**Gesamt**|**71/80**|**52/80**|**43/80**
+
+**Fazit:** GitHub für Nachvollziehbare, spezifisch bezogene Kommunikation, Discord für kurze Abstimmungen oder andere/generelle Fragen/Diskussionen und Anrufe. Miro bietet für uns keinen Mehrwert, da die Rahmenbedingungen schon stehen und der Aufwand zur Erstellung eines Boards nicht gerechtfertigt ist.
+
 
