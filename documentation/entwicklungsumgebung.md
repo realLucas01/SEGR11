@@ -90,16 +90,16 @@
 
 | Kriterium                 | Javadoc                                  | Markdown im Repository                 | GitHub-Wiki                               |
 |---------------------------|-------------------------------------------|----------------------------------------|-------------------------------------------|
-|Kosten|Keine (Teil des JDK)|Keine, in GitHub|Keine|
-|Integration in Entwicklungsprozess|10: Direkt aus Java-Code generierbar|9: Im selben Repo wie Code, gute Referenz|8: Web-basiert, an Repo gekoppelt|
-|Struktur & Navigation|7: Klassenhierarchie automatisch|7: Eigene Links/Ordner nötig, flexibler gestaltbar|9: Seitenstruktur und Menü, Verlinkung zwischen Seiten einfach|
-|Lesbarkeit/Darstellung|7: HTML-Seiten, weniger für Leser/Nutzer ohne technischen Hintergrund|8: Markdown, gut lesbar|9: Website mit Navigation, für Team gut lesbar|
-|Kollaboration|6: Zusammenarbeit nur indirekt über Code, nicht parallel|8: Zusammenarbeit über Git (e.g. branches) flexibel|9: Direkt im Browser editierbar, parallel möglich|
-|Nachvollziehbarkeit/Versionierung|8: Jede Änderung durch Commits sichtbar|9: Änderungen im Repo nachvollziehbar|9: Versionshistorie der Wiki-Seiten vorhanden|
-|Aktualität/Wartbarkeit der Dokumentation|9: automatisch gepflegt|7: manuell, kann schnell veralten|7: manuell, kann schnell veralten|
-|**Gesamt**|**47/60**|**48/60**|**51/60**|
+|Kosten (x1.0)|Keine (Teil des JDK)|Keine, in GitHub|Keine|
+|Integration im Entwicklungsprozess (x1.5)|10: Direkt aus Java-Code generierbar|9: Im selben Repo wie Code, gute Referenz|8: Web-basiert, an Repo gekoppelt|
+|Struktur & Navigation (x1.25)|7: Klassenhierarchie automatisch|7: Eigene Links/Ordner nötig, flexibler gestaltbar|9: Seitenstruktur und Menü, Verlinkung zwischen Seiten einfach|
+|Lesbarkeit/Darstellung (x1.25)|7: HTML-Seiten, weniger für Leser/Nutzer ohne technischen Hintergrund|8: Markdown, gut lesbar|9: Website mit Navigation, für Team gut lesbar|
+|Kollaboration (x2)|6: Zusammenarbeit nur indirekt über Code, nicht parallel|8: Zusammenarbeit über Git (e.g. branches) flexibel|9: Direkt im Browser editierbar, parallel möglich|
+|Nachvollziehbarkeit/Versionierung (x1.25)|8: Jede Änderung durch Commits sichtbar|9: Änderungen im Repo nachvollziehbar|9: Versionshistorie der Wiki-Seiten vorhanden|
+|Aktualität/Wartbarkeit der Dokumentation (x1.5)|9: automatisch gepflegt|7: manuell, kann schnell veralten|7: manuell, kann schnell veralten|
+|**Gesamt**|**78 / 107.4 = 72.6%**|**79 / 107.5 = 73.5%**|**84.25 / 107.5 = 78.4%**|
 
-Fazit: Für unser Projekt haben wir uns aufgrund der Anforderungen für Javadoc als primäres Dokumentationstool entschieden. Ergänzend nutzen wir Markdown für die Entwicklerdokumentation. Ein Wiki hätte zwar flexiblere Möglichkeiten für die allgemeine Projektdokumentation geboten, war jedoch für unsere spezifischen Anforderungen nicht notwendig und mit zusätzlichem Aufwand verbunden.
+**Fazit:** Für unser Projekt haben wir uns aufgrund der Anforderungen für Javadoc als primäres Dokumentationstool entschieden. Ergänzend nutzen wir Markdown für die Entwicklerdokumentation. Wiki nutzen wir für Team-, Firmen- oder Ablaufinterne Vorgänge.
 
 ## Obfuscator 
 
