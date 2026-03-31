@@ -98,16 +98,18 @@
 
 ## Dokumentationstools 
 
-| Kriterium                 | Javadoc                                  | Markdown im Repository                 | GitLab-Wiki                               |
+| Kriterium                 | Javadoc                                  | Markdown im Repository                 | GitHub-Wiki                               |
 |---------------------------|-------------------------------------------|----------------------------------------|-------------------------------------------|
-| Kosten / Lizenz           | kostenlos, Teil des JDK                  | kostenlos, nur Git-Repo nötig          | kostenlos, in GitLab integriert           |
-| Einsatzbereich            | API-/Code-Dokumentation (Klassen, Methoden) | Projekt-/Architektur-/Prozessdoku   | Projekt-/Architektur-/Prozessdoku im Web  |
-| Erstellung                | Kommentare im Java-Code + Generierung    | `.md`-Dateien im Repo schreiben        | Seiten direkt im Browser bearbeiten       |
-| Integration mit Code/Repo | sehr hoch (direkt aus Java)              | hoch (liegt im selben Repo wie der Code) | hoch (an Repo gekoppelt, Versionsverlauf) |
-| Strukturierung / Navigation | Paket-/Klassenhierarchie automatisch   | eigene Ordner/Links/TOC nötig         | Seitenstruktur, Menü, Links zwischen Seiten |
-| Einarbeitungsaufwand      | gering–mittel (Javadoc-Tags lernen)      | gering (Markdown ist sehr einfach)     | gering (Editor im Browser, Markdown/HTML) |
-| Ausgabe / Darstellung     | HTML-Seiten, technisch, Entwicklerfokus  | schön auf GitHub/GitLab gerendert      | Web-Seiten mit Navigation, gut lesbar     |
-| Eignung für unser Projekt | **sehr gut für API-Doku**                | **sehr gut für Pflichtenheft/Architektur** | gut für zusätzliche, lesbare Projektseite |
+|Kosten (x1.0)|Keine (Teil des JDK)|Keine, in GitHub|Keine|
+|Integration im Entwicklungsprozess (x1.5)|10: Direkt aus Java-Code generierbar|9: Im selben Repo wie Code, gute Referenz|8: Web-basiert, an Repo gekoppelt|
+|Struktur & Navigation (x1.25)|7: Klassenhierarchie automatisch|7: Eigene Links/Ordner nötig, flexibler gestaltbar|9: Seitenstruktur und Menü, Verlinkung zwischen Seiten einfach|
+|Lesbarkeit/Darstellung (x1.25)|7: HTML-Seiten, weniger für Leser/Nutzer ohne technischen Hintergrund|8: Markdown, gut lesbar|9: Website mit Navigation, für Team gut lesbar|
+|Kollaboration (x2.0)|6: Zusammenarbeit nur indirekt über Code, nicht parallel|8: Zusammenarbeit über Git (e.g. branches) flexibel|9: Direkt im Browser editierbar, parallel möglich|
+|Nachvollziehbarkeit/Versionierung (x1.25)|8: Jede Änderung durch Commits sichtbar|9: Änderungen im Repo nachvollziehbar|9: Versionshistorie der Wiki-Seiten vorhanden|
+|Aktualität/Wartbarkeit der Dokumentation (x1.5)|9: automatisch gepflegt|7: manuell, kann schnell veralten|7: manuell, kann schnell veralten|
+|**Gesamt**|**78 / 107.4 = 72.6%**|**79 / 107.5 = 73.5%**|**84.3 / 107.5 = 78.4%**|
+
+**Fazit:** Für unser Projekt haben wir uns aufgrund der Anforderungen für Javadoc als primäres Dokumentationstool entschieden. Ergänzend nutzen wir Markdown für die Entwicklerdokumentation. Das Wiki von GitHub nutzen wir für Team-, Firmen- oder Ablaufinterne Vorgänge.
 
 ## Obfuscator 
 
