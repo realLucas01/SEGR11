@@ -97,9 +97,9 @@
 |Kollaboration (x2.0)|6: Zusammenarbeit nur indirekt über Code, nicht parallel|8: Zusammenarbeit über Git (e.g. branches) flexibel|9: Direkt im Browser editierbar, parallel möglich|
 |Nachvollziehbarkeit/Versionierung (x1.25)|8: Jede Änderung durch Commits sichtbar|9: Änderungen im Repo nachvollziehbar|9: Versionshistorie der Wiki-Seiten vorhanden|
 |Aktualität/Wartbarkeit der Dokumentation (x1.5)|9: automatisch gepflegt|7: manuell, kann schnell veralten|7: manuell, kann schnell veralten|
-|**Gesamt**|**78 / 107.4 = 72.6%**|**79 / 107.5 = 73.5%**|**84.25 / 107.5 = 78.4%**|
+|**Gesamt**|**78 / 107.4 = 72.6%**|**79 / 107.5 = 73.5%**|**84.3 / 107.5 = 78.4%**|
 
-**Fazit:** Für unser Projekt haben wir uns aufgrund der Anforderungen für Javadoc als primäres Dokumentationstool entschieden. Ergänzend nutzen wir Markdown für die Entwicklerdokumentation. Wiki nutzen wir für Team-, Firmen- oder Ablaufinterne Vorgänge.
+**Fazit:** Für unser Projekt haben wir uns aufgrund der Anforderungen für Javadoc als primäres Dokumentationstool entschieden. Ergänzend nutzen wir Markdown für die Entwicklerdokumentation. Das Wiki von GitHub nutzen wir für Team-, Firmen- oder Ablaufinterne Vorgänge.
 
 ## Obfuscator 
 
