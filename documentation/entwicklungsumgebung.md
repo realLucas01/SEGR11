@@ -63,7 +63,7 @@
 | Eignung für unser Projekt | **empfohlen**                            | geeignet, v.a. wenn an der Hochschule genutzt | geeignet, wenn Team lieber VS Code nutzt |
 
 
-### Test-Automatisierung
+##Test-Automatisierung
 
 | Kriterium | JUnit 5 | TestNG | Mockito |
 | :--- | :--- | :--- | :--- |
@@ -75,11 +75,11 @@
 | Eignung für Projekt | 10: Uneingeschränkt empfohlen als Haupt-Framework | 4: Möglich, aber für dieses Projekt nicht nötig | 7: Sinnvoll, aber als Standalone-Lösung ungeeignet |
 | **Gesamt** | **59 / 60** | **38 / 60** | **50 / 60** |
 
-Fazit: Unsere Wahl fällt als etablierter Branchenstandard klar auf JUnit 5. Das Framework ermöglicht unserem erfahrenen Team sofortige und strukturierte Tests der Spiellogik ohne jegliche Einarbeitungshürden.
+**Fazit**: Unsere Wahl fällt als etablierter Branchenstandard klar auf JUnit 5. Das Framework ermöglicht unserem erfahrenen Team sofortige und strukturierte Tests der Spiellogik ohne jegliche Einarbeitungshürden.
 
 ---
 
-### KI-Tools
+## KI-Tools
 
 | Kriterium | ChatGPT Browser | GitHub Copilot | Tabnine |
 | :--- | :--- | :--- | :--- |
@@ -91,7 +91,7 @@ Fazit: Unsere Wahl fällt als etablierter Branchenstandard klar auf JUnit 5. Das
 | Eignung für Projekt | 10: Unverzichtbar für konzeptionelle Lösungsansätze | 6: Optional als reine Tipphilfe | 7: Optional bei starkem Fokus auf Privacy |
 | **Gesamt** | **51 / 60** | **40 / 60** | **44 / 60** |
 
-Fazit: Unsere Wahl fällt aufgrund der analytischen Tiefe und der vielfältigen Anwendung eindeutig auf ChatGPT. Wir benötigen fundierte Unterstützung für komplexe Architekturfragen, Systemdokumentation und tiefgreifende Fehleranalyse.
+**Fazit**: Unsere Wahl fällt aufgrund der analytischen Tiefe und der vielfältigen Anwendung eindeutig auf ChatGPT. Wir benötigen fundierte Unterstützung für komplexe Architekturfragen, Systemdokumentation und tiefgreifende Fehleranalyse.
 
 ---
 
@@ -110,7 +110,7 @@ Fazit: Unsere Wahl fällt aufgrund der analytischen Tiefe und der vielfältigen 
 | Ausgabe / Darstellung     | HTML-Seiten, technisch, Entwicklerfokus  | schön auf GitHub/GitLab gerendert      | Web-Seiten mit Navigation, gut lesbar     |
 | Eignung für unser Projekt | **sehr gut für API-Doku**                | **sehr gut für Pflichtenheft/Architektur** | gut für zusätzliche, lesbare Projektseite |
 
-### Obfuscator
+## Obfuscator
 
 | Kriterium | ProGuard | yGuard | DashO |
 | :--- | :--- | :--- | :--- |
@@ -123,7 +123,7 @@ Fazit: Unsere Wahl fällt aufgrund der analytischen Tiefe und der vielfältigen 
 | Eignung für Projekt | 10: Uneingeschränkt empfohlen und exakt passend für unsere Architektur | 4: Möglich, bietet aber gegenüber ProGuard keinerlei Vorteile | 2: Kommerzieller Overkill für den geplanten Einsatzbereich |
 | **Gesamt** | **67 / 70** | **44 / 70** | **55 / 70** |
 
-Fazit: Unsere Wahl fällt aufgrund der nahtlosen Build-Integration und der hohen technischen Leistungsfähigkeit eindeutig auf ProGuard.
+**Fazit**: Unsere Wahl fällt aufgrund der nahtlosen Build-Integration und der hohen technischen Leistungsfähigkeit eindeutig auf ProGuard.
 
 ## Code Conventions / Coding Style 
 | Kriterium                 | Google Java Style Guide                    | Oracle Java Code Conventions                | Checkstyle                                  |
