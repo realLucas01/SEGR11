@@ -128,16 +128,16 @@
 |---------------------------|-----------------------------------------------|-------------------------------------------|-----------------------------------------|
 | Hauptzweck               | Versionsverwaltung, Issues, Wiki, Reviews     | Chat/Sprachkanäle, schnelle Abstimmung    | Planung  |
 | Kosten / Lizenz           | keine      | keine                | keine über Hochschulaccount |
-|Nachvollziehbarkeit|10: Projektbezogen im Repo|5: Chats teilweise ohne Zusammenhang|7: Übersichtlich am Board festgehalten
-|Struktur & Orga|10: Glasklare Strukturierung|4: Eher schlecht durch konventionellen Chat|10: Top Organisation möglich
-|Kommunikation|6: Teilweise gehen Rückmeldungen verloren, etwas unübersichtlich bei z.B. vielen Pull-Requests|10: Einfache, schnelle Chats, auch Anrufe möglich|2: Keine Benachrichtigung, kein richtiger Chat(verlauf), bei vielen Elementen Tendenz zu Unübersichtlichkeit
-|Integration|10: Direkt im Repo|1: Keine Integration, nur über Links und Screeshots möglich|4: Teilweise Integration über erstellten Plan möglich, sonst: Links, Screenshots
-|Benutzerfreundlichkeit|7: Konzept muss verstanden werden, Einarbeitung gut|10: Sehr einfache Bedienung, wie ein Messenger|8: Einfache Bedienung wie eine große Tafel
-|Zuverlässigkeit|10: Professionelle Infrastruktur mit sehr hoher Uptime, Rollbacks möglich|8: Hohe Uptime, indirekter Informationsverlust|6: (Un)absichtliches überschreiben möglich, hohe Uptime (laut Recherche)
-|Datenschutz/Sicherheit|10: Fein einstellbare Zugriffsrechte, Privates Repo, Audit Log, Branch-Review System, jede Änderung sichtbar, individuelle Features vorhanden, 2FA etc. |4: Keine End to End Encryption bei normalen Chats, Zugriff über invite Links (missbrauch möglich)|4: Weitergabe von Zugriffslink sowie u.a. Passwort möglich
-|Effizienz|8: Projektbezogenes Tracking, gute Struktur|10: Sehr schneller Austausch möglich, einfache Bedienung|2: Manuelle Pflege, hoher Aufwand
-|**Gesamt**|**71/80**|**52/80**|**43/80**
+|Nachvollziehbarkeit (x1.5)|10: Projektbezogen im Repo|5: Chats teilweise ohne Zusammenhang|7: Übersichtlich am Board festgehalten
+|Struktur & Orga (1.75)|10: Glasklare Strukturierung|4: Eher schlecht durch konventionellen Chat|10: Top Organisation möglich
+|Kommunikation (x2.0)|6: Teilweise gehen Rückmeldungen verloren, etwas unübersichtlich bei z.B. vielen Pull-Requests|10: Einfache, schnelle Chats, auch Anrufe möglich|2: Keine Benachrichtigung, kein richtiger Chat(verlauf), bei vielen Elementen Tendenz zu Unübersichtlichkeit
+|Integration (x1.0)|10: Direkt im Repo|1: Keine Integration, nur über Links und Screenshots möglich|4: Teilweise Integration über erstellten Plan möglich, sonst: Links, Screenshots
+|Benutzerfreundlichkeit (x0.75)|7: Konzept muss verstanden werden, Einarbeitung gut|10: Sehr einfache Bedienung, wie ein Messenger|8: Einfache Bedienung wie eine große Tafel
+|Zuverlässigkeit (x1.5)|10: Professionelle Infrastruktur mit sehr hoher Uptime, Rollbacks möglich|8: Hohe Uptime, indirekter Informationsverlust|6: (Un)absichtliches Überschreiben möglich, hohe Uptime (laut Recherche)
+|Datenschutz/Sicherheit (x1.5)|10: Fein einstellbare Zugriffsrechte, Privates Repo, Audit Log, Branch-Review System, jede Änderung sichtbar, individuelle Features vorhanden, 2FA etc. |4: Keine End to End Encryption bei normalen Chats, Zugriff über Invite-links (missbrauch möglich)|4: Weitergabe von Zugriffslink sowie u.a. Passwort möglich
+|Effizienz (x1.25)|8: Projektbezogenes Tracking, gute Struktur|10: Sehr schneller Austausch möglich, einfache Bedienung|2: Manuelle Pflege, hoher Aufwand
+|**Gesamt**|**99.75 / 112.5 = 88.7%**|**73.5 / 112.5 = 65.3%**|**59.5 / 112.5 = 52.9%**
 
-**Fazit:** GitHub für Nachvollziehbare, spezifisch bezogene Kommunikation, Discord für kurze Abstimmungen oder andere/generelle Fragen/Diskussionen und Anrufe. Miro bietet für uns keinen Mehrwert, da die Rahmenbedingungen schon stehen und der Aufwand zur Erstellung eines Boards nicht gerechtfertigt ist.
+**Fazit:** GitHub für nachvollziehbare, spezifisch bezogene Kommunikation, Discord für kurze Abstimmungen oder andere/generelle Fragen/Diskussionen und Anrufe. Miro bietet für uns keinen Mehrwert, da die Rahmenbedingungen schon stehen und der Aufwand zur Erstellung eines Boards nicht gerechtfertigt ist.
 
 
