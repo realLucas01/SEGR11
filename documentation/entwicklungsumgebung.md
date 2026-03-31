@@ -26,16 +26,20 @@
 | Eignung für Laborrechner    | Sehr gut, da Eclipse meist schon installiert ist | Muss extra installiert werden          | Muss extra installiert werden      |
 | Eignung für unser Projekt   | **empfohlen**                             | geeignet, aber Lizenz & Overkill       | eher ungeeignet                    |
 
-## Build-Tool 
+## Build-Tool
 
-| Kriterium                    | Maven                                      | Gradle                                     | Ant                                     |
+| Kriterium                    | Ant  |             Maven  |        Gradle     |
 |-----------------------------|--------------------------------------------|-------------------------------------------|-----------------------------------------|
-| Projektstruktur             | Klare Standardstruktur (konventionsbasiert)| Flexibel, Struktur frei definierbar       | Keine Vorgaben, alles selbst definieren |
-| Integration in IDE          | Sehr gut (Eclipse, IntelliJ, VS Code)      | Sehr gut                                   | Gut, aber weniger komfortabel           |
-| Abhängigkeiten (Dependencies)| Sehr einfach, riesiges zentrales Repo     | Ebenfalls sehr gut, kompatibel zu Maven   | Möglich, aber aufwendiger               |
-| Einarbeitungsaufwand        | Mittel, aber viele Beispiele/Tutorials     | Etwas höher wegen DSL                     | Relativ hoch, da alles von Hand         |
-| Typische Nutzung heute      | Standard in sehr vielen Java-Projekten     | Häufig in moderneren Projekten            | Vor allem in älteren/Legacy-Projekten   |
-| Eignung für unser Projekt   | **empfohlen**                              | geeignet, aber etwas zu viel für dem Amfanh   | eher ungeeignet                         |
+| Konfigurationsaufwand (x1.75) |   2: Extrem hoch, die Schritte Kompilieren, Kopieren und Löschen müssen manuell definiert werden.    |               9: Sehr gering, mit minimalem manuellem Setup  |        7: Moderat, die DSL benötigt mehr Einarbeitung als Mavens XML Standard |
+| Build Performance (x1.5) |      5: Langsam |           7: Solide, parallele Builds oft komplex zu konfigurieren   |        10: Überragend, mit sehr effizientem Build Cache   |
+| Dependency Management (x1.25) |   3: Ursprünglich nicht vorhanden, kann umständlich nachgerüstet werden       |    9: Exzellent, das Maven-Repository ist der Industriestandard   |        10: Hochmodern, unterstützt Maven und Ivy Repositories mit einer besseren Konfliktlösung   |
+| Lesbarkeit und Wartbarkeit (x1.5)  | 4: XML-Dateien wachsen bei größeren Projekten stark und sind schwer zu pflegen        |    7: Gut lesbar durch strukturiertes XML, kann bei vielen Plugins leicht unübersichtlich werden  |        8: Sehr kompakt und leserlich, erfordert allerdings Verständnis der Skriptsprache  |
+| Standardisierung (x1.0) |       4: Kaum Standards |                10: Goldstandard,  jedes Projekt folgt der gleichen Struktur    |        9: Stark standardisiert, erlaubt allerdings einige Freiheiten  |
+| Skalierbarkeit (x0.75) |     4: Stößt bei Multi-Modul Projekten schnell an Grenzen   |          7: Gut für große Projekte, kann aber auch bei vielen Modulen in der Performance einbrechen |        10: Speziell für riesige Projekte entwickelt   |
+|**Gesamt** |         **27.75 / 77.5 = 35.8%**    |           **63.25 / 77.5 = 81.6%**       |    **68.25 / 77.5 = 88.1%**             |
+
+**Fazit:** Auch wenn Gradle mit einem knappen Vorsprung Maven schlägt, fällt die interne Wahl für dieses Projekt auf Maven. Dies ist nach wie vor die sicherste Wahl mit seiner Standardstruktur für unser geplantes Projekt.
+
 
 ## UI-Prototyping-Tool 
 
@@ -49,18 +53,23 @@
 | Export in Doku (PNG/PDF)  | sehr gut                                   | gut                                      | gut                                     |
 | Eignung für unser Projekt | **empfohlen** (Team + Browser + flexibel)  | möglich, aber weniger Team-geeignet      | möglich, wenn Open Source/offline wichtig |
 
-## IDE / Editor 
+
+## IDE / Editor
 
 | Kriterium                 | IntelliJ IDEA Community                  | Eclipse IDE                             | VS Code (+ Java-Extensions)               |
 |---------------------------|------------------------------------------|-----------------------------------------|-------------------------------------------|
-| Kosten / Lizenz           | kostenlos (Community Edition)            | kostenlos, Open Source                  | kostenlos, Open Source                    |
-| Java-Unterstützung        | **sehr gut**, viele Komfortfeatures      | sehr gut, seit Jahren Java-Standard     | gut, über Extensions                      |
-| Bedienbarkeit / Lernaufwand | intuitiv, moderne Oberfläche          | etwas unübersichtlicher, viele Menüs    | leicht, aber Java-Setup etwas aufwendiger |
-| Refactoring / Komfort     | sehr starke Refactoring-Tools, Inspektionen | gut, viele Funktionen über Plugins   | okay, weniger mächtige Refactorings       |
-| Integration mit Build-/VCS | sehr gute Maven/Gradle/Git-Integration | gute Maven/Gradle/Git-Unterstützung     | Git gut, Build-Tools über Extensions      |
-| Performance               | flüssig, braucht aber etwas mehr RAM     | kann träge sein bei vielen Plugins      | leichtgewichtig, startet schnell          |
-| Eignung für Einsteiger    | gut, wenn man sich kurz einarbeitet      | okay, aber etwas „alt“ in der Bedienung | gut, vor allem wenn man VS Code schon kennt |
-| Eignung für unser Projekt | **empfohlen**                            | geeignet, v.a. wenn an der Hochschule genutzt | geeignet, wenn Team lieber VS Code nutzt |
+|Kosten / Lizenz             |     Kostenlos unter Community Edition      |      Kostenlos, Open Source               |    Kostenlos     |
+|Code Intelligence (x2.0)          |      10: Branchenführende Analyse und vorausschauende Autovervollständigung                                       |               7: Solide Assistenz, aber oft etwas weniger intuitiv als IntelliJ                             |            7: Gut durch "Language Support" Plugins, aber weniger tiefgreifend       |
+|Navigation (x1.25)                 |         9: Sehr starke Suchfunktionen "Search Everywhere"                                     |            7: Klassische Projektstruktur, Suchfunktonen sind funktional   |           8: Sehr schnell und effizient         |
+|Performance (x1.5) |        7: Hoher RAM Verbrauch, benötigt bei großen Projekten stärkere Hardware |              7: Bei vielen installierten Plugins steigende Instabilität und Hardwareanforderungen   |           9: Sehr leichtgewichtig und schnell startend, bei steigender Anzahl installierter Plugins ebenfalls Performance Einbrüche         |
+|Plugin-Erweiterbarkeit (x1.25) |   8: Qualitativ und hochwertige Plugins   |             7: Riesiges Ökosystem, Plugins allerdings oft veraltet oder nicht weitergeführt    |           10: Eine riesige Auswahl für alles mitsamt einer sehr einfachen Installation         |
+|Built-in Features (x1.5) |       9: Standardmäßig geliefert mitsamt GUI für Git und Build Tools  |             7: Viele Funktionen enthalten, aber oft in Untermenüs begraben |           4: Minimalistisch, die meisten gewünschten Funktionen müssen per Plugin nachträglich installiert werden          |
+| Debugging und Testing (x1.75) |    10: Erstklassiger Debugger und exzellente JUnit-Integration  |             8: Sehr mächtiger Debugger |           6: Grundfunktionen vorhanden, aber weniger Komfort bei komplexeren Projekten         |
+|Scene Builder und JavaFX-Integration (x1.25) | 9: Hervorragende Integration mitsamt einer einfachen Einbindung         |        8: Gute Unterstützung und Anbindung    |           4: Erfordert viel manuelle Konfiguration, sowie keinen visuellen Editor        |
+| **Gesamt** |        **94 / 105 = 89.5%**    |              **76.5 / 105 = 72.9%**    |           **71.7 / 105 = 68.3%**          |
+
+**Fazit:** Da es sich hierbei um ein Projekt überschaubarer Größe handelt, mitsamt einem eng genähten Zeitablauf, steht es den einzelnen Entwicklern frei, welche IDE sie verwenden. Ein forcierter Wechsel, und die somit einhergehende Eingewöhnung in neue Entwicklungstools würden zu einer Verzögerung im Zeitplan führen.
+
 
 
 ## Test-Automatisierung 
