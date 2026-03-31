@@ -73,28 +73,39 @@
 
 
 
-## Test-Automatisierung 
+## Test-Automatisierung
 
-| Kriterium                 | JUnit 5                                 | TestNG                                  | Mockito                                  |
-|---------------------------|-----------------------------------------|-----------------------------------------|------------------------------------------|
-| Kosten / Lizenz           | kostenlos, Open Source                  | kostenlos, Open Source                  | kostenlos, Open Source                   |
-| Verbreitung / Standard    | **De-facto-Standard** im Java-Bereich   | verbreitet, aber deutlich weniger als JUnit | weit verbreitet als Ergänzung zu JUnit/TestNG |
-| Einarbeitungsaufwand      | gering–mittel, viele Beispiele im Netz  | mittel, andere Denkweise als JUnit      | gering, wenn man JUnit kennt             |
-| Typischer Einsatz         | Unit- und Integrationstests             | komplexere Test-Szenarien, Legacy-Projekte | saubere Unit-Tests ohne echte Abhängigkeiten |
-| Eignung für unser Projekt | **empfohlen als Haupt-Framework**       | möglich, aber nicht nötig               | sinnvoll **zusätzlich** zu JUnit, optional |
+| Kriterium | JUnit 5 | TestNG | Mockito |
+| :--- | :--- | :--- | :--- |
+| Verbreitung und Standard (x1.0) | 10: De-facto-Standard im Java-Bereich | 6: Verbreitet, aber deutlich weniger als JUnit | 9: Weit verbreitet als Ergänzung zu JUnit |
+| Einarbeitungsaufwand (x1.5) | 9: Gering bis mittel, viele Best Practices im Netz etabliert | 7: Mittel, erfordert teilweise andere Denkweise | 8: Gering, sofern man Architektur pattern kennt |
+| Typischer Einsatz (x2.0) | 10: Ideal für Unit- und Integrationstests der Spiellogik | 6: Eher für komplexe Test-Szenarien und Legacy-Projekte | 8: Gut für saubere Unit-Tests wie zum Beispiel Mocking |
+| Wartbarkeit und Lesbarkeit (x1.5) | 10: Sehr klare Strukturierung durch moderne Annotationen | 7: Solide, kann bei großen Suites unübersichtlich werden | 9: Ermöglicht lesbare Tests durch eine flüssige Schnittstelle |
+| Build-Integration (x1.25) | 10: Nahtlose Integration in Maven und gängige Pipelines | 8: Gute Integration mit etwas mehr Konfigurationsaufwand | 9: Problemlos in bestehende Build-Prozesse integrierbar |
+| Eignung für Projekt (x2.0) | 10: Uneingeschränkt empfohlen als Haupt-Framework | 4: Möglich, aber für dieses Projekt nicht nötig | 7: Sinnvoll, aber als Standalone-Lösung ungeeignet |
+| **Gesamt** | **91 / 92.5 = 98.4%** | **57 / 92.5 = 61.6%** | **75.75 / 92.5 = 81.9%** |
 
-## KI-Tools 
+**Fazit**: Unsere Wahl fällt als etablierter Branchenstandard klar auf JUnit 5. Das Framework ermöglicht unserem erfahrenen Team sofortige und strukturierte Tests der Spiellogik ohne jegliche Einarbeitungshürden.
 
-| Kriterium                 | ChatGPT (Browser / App)                          | GitHub Copilot                               | Tabnine                                      |
-|---------------------------|--------------------------------------------------|----------------------------------------------|----------------------------------------------|
-| Kosten / Lizenz           | Free-Variante, bezahlte Plus-/Team-Pläne        | kostenpflichtig (Abo, teilweise Education)   | Free-Variante + kostenpflichtige Pläne       |
-| Integration               | im Browser/App, kein IDE-Plugin nötig           | direkt in IDE (z.B. IntelliJ, VS Code)       | direkt in IDE (z.B. IntelliJ, VS Code)       |
-| Typische Nutzung          | Erklärungen, Code-Beispiele, Reviews, Textdoku  | Code-Vervollständigung während des Tippens   | Code-Vervollständigung, teils lokal          |
-| Abhängigkeit von Internet | ja, benötigt in der Regel Online-Zugriff        | ja                                           | teils lokal, teils Cloud                     |
-| Datenschutz / Code-Upload | Code wird an den Dienst gesendet (je nach Plan) | Code wird an den Dienst gesendet             | Fokus teils auf lokalem Modell (Plan-abhängig) |
-| Einarbeitungsaufwand      | gering, Chat-Oberfläche                         | gering, arbeitet „einfach im Hintergrund“    | gering, ähnliches Prinzip wie Copilot        |
-| Nutzen fürs Lernen        | **sehr hoch** (Erklärungen, Feedback, Beispiele)| mittel – eher Produktivitäts-Booster         | mittel – vor allem Code-Vervollständigung    |
-| Eignung für unser Projekt | **empfohlen** als Hilfe beim Lernen & Erklären  | optional, falls jemand eine Lizenz hat       | optional, wenn Fokus auf Privacy/Lokalität   |
+---
+
+## KI-Tools
+
+| Kriterium | ChatGPT Browser | GitHub Copilot | Tabnine |
+| :--- | :--- | :--- | :--- |
+| Integration (x1.25) | 7: Nur im Browser, kein direktes IDE-Plugin | 10: Hervorragend, direkt in der IDE | 10: Hervorragend, direkt in der IDE |
+| Datenschutz und Internet (x1.5) | 4: Online-Zugriff zwingend, Code wird gesendet | 4: Online-Zugriff zwingend, Code wird gesendet | 8: Besserer Datenschutz durch teils lokales Modell |
+| Einarbeitungsaufwand (x1.0) | 10: Sehr intuitiv dank einfacher Chat-Oberfläche | 9: Gering, arbeitet einfach im Hintergrund | 9: Gering, ähnliches Prinzip wie Copilot |
+| Architektonischer Nutzen (x2.0) | 10: Starkes Sparring-Tool für komplexe Logik | 5: Limitiert auf reine Code-Vervollständigung | 5: Limitiert auf reine Code-Vervollständigung |
+| Fehleranalyse (x1.75) | 10: Exzellent für Stacktraces und tiefe Fehlerbehebung | 6: Hilft primär bei lokalen Syntaxfehlern im Code | 5: Kaum Unterstützung bei komplexen Laufzeitfehlern |
+| Eignung für Projekt (x2.0) | 10: Unverzichtbar für konzeptionelle Lösungsansätze | 6: Optional als reine Tipphilfe | 7: Optional bei starkem Fokus auf Privacy |
+| **Gesamt** | **82.25 / 95 = 86.6%** | **60 / 95 = 63.2%** | **66.25 / 95 = 69.7%** |
+
+**Fazit**: Unsere Wahl fällt aufgrund der analytischen Tiefe und der vielfältigen Anwendung eindeutig auf ChatGPT. Wir benötigen fundierte Unterstützung für komplexe Architekturfragen, Systemdokumentation und tiefgreifende Fehleranalyse.
+
+---
+
+
 
 ## Dokumentationstools 
 
@@ -111,17 +122,20 @@
 
 **Fazit:** Für unser Projekt haben wir uns aufgrund der Anforderungen für Javadoc als primäres Dokumentationstool entschieden. Ergänzend nutzen wir Markdown für die Entwicklerdokumentation. Das Wiki von GitHub nutzen wir für Team-, Firmen- oder Ablaufinterne Vorgänge.
 
-## Obfuscator 
+## Obfuscator
 
-| Kriterium                 | ProGuard                                   | yGuard                                    | DashO                                      |
-|---------------------------|--------------------------------------------|-------------------------------------------|--------------------------------------------|
-| Kosten / Lizenz           | kostenlos, Open Source                     | kostenlos, Open Source                    | kommerziell, kostenpflichtig               |
-| Integration in Build-Tool | gut (Plugins/Config für Maven, Gradle, Ant)| gut (v.a. Ant/Maven-Integration)         | sehr gut, eigene GUI + Build-Integration   |
-| Funktionsumfang           | Obfuscation, Shrinking, Optimierung        | Obfuscation, teilweise Shrinking          | umfangreiche Obfuscation + Analyse-Features|
-| Konfigurationsaufwand     | mittel – Konfig-Datei nötig                | mittel – Konfig über Build-Skripte        | eher gering – viele Assistenten            |
-| Verbreitung / Bekanntheit | **sehr hoch**, Standard im Open-Source-Bereich | bekannt, aber weniger verbreitet        | v.a. in professionellen Projekten           |
-| Dokumentation / Beispiele | viele Beispiele & Tutorials im Netz        | solide Doku, weniger Community            | gute Hersteller-Doku, aber hinter Lizenz   |
-| Eignung für unser Projekt | **empfohlen**                              | möglich, aber nicht nötig                 | nicht sinnvoll wegen Kosten                 |
+| Kriterium | ProGuard | yGuard | DashO |
+| :--- | :--- | :--- | :--- |
+| Build-Integration (x1.5) | 10: Hervorragende und nahtlose Integration in unser Maven Setup | 8: Solide Integration primär über Ant und Maven Plugins | 9: Sehr gut durch eigene GUI und Build-Integration |
+| Funktionsumfang und Optimierung (x1.25) | 10: Exzellente Obfuscation kombiniert mit starkem Shrinking | 7: Beschränkt auf grundlegende Obfuscation und rudimentäres Shrinking | 10: Sehr umfangreiche Features inklusive tiefgehender Analyse |
+| Konfigurationsaufwand (x1.0) | 8: Moderat durch gut strukturierte Konfigurationsdateien | 7: Moderat durch Konfiguration direkt über Build-Skripte | 9: Eher gering dank nützlicher Assistenten |
+| Verbreitung und Standard (x1.0) | 10: Der unangefochtene Industrie-Standard für Java-Projekte | 6: Bekannt, aber wesentlich weniger verbreitet in der Industrie | 8: Primär in stark kommerzialisierten Großprojekten vertreten |
+| Dokumentation und Community (x1.25) | 10: Überragende Community mit unzähligen Best Practices im Netz | 6: Solide Herstellerdokumentation bei sehr kleiner Community | 7: Gute Herstellerdokumentation liegt oft hinter Registrierungsschranken |
+| Code-Sicherheit und Schutz (x2.0) | 9: Bietet hohe Sicherheit für unsere klassische Java-Architektur | 6: Solider Basisschutz ohne erweiterte Sicherheitsmechanismen | 10: Höchste Sicherheitsstandards für extrem kritische Software |
+| Eignung für Projekt (x2.0) | 10: Uneingeschränkt empfohlen und exakt passend für unsere Architektur | 4: Möglich, bietet aber gegenüber ProGuard keinerlei Vorteile | 2: Kommerzieller Overkill für den geplanten Einsatzbereich |
+| **Gesamt** | **96 / 100 = 96.0%** | **61.25 / 100 = 61.3%** | **75.75 / 100 = 75.8%** |
+
+**Fazit**: Unsere Wahl fällt aufgrund der nahtlosen Build-Integration und der hohen technischen Leistungsfähigkeit eindeutig auf ProGuard.
 
 ## Code Conventions / Coding Style 
 | Kriterium                 | Google Java Style Guide                    | Oracle Java Code Conventions                | Spring Java Format                                  |
