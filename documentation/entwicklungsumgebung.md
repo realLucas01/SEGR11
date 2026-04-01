@@ -24,7 +24,7 @@
 | Integration in IDE (x1.5)           | 10: Direkt in Eclipse integriert    | 6: Eigenständiges Tool                    | 9: Sehr gut mit VS Code integrierbar       |
 | Bedienbarkeit (x1.0)                | 6: Etwas komplex und altmodisch     | 8: Moderne und intuitive Oberfläche       | 7: Textbasiert, erfordert Eingewöhnung     |
 | Wartbarkeit / Versionierung (x1.25) | 7: Eingeschränkt über Eclipse       | 6: Schwer versionierbar                   | 10: Perfekt für Git geeignet (textbasiert) |
-| **Gesamt**                          | **71.5 / 82.5 = 86.7%**             | **56.25 / 82.5 = 68.2%**                  | **70.5 / 82.5 = 85.5%**                    |
+| **Gesamt**                          | **71.5 / 82.5 = 86.7%**             | **56.3 / 82.5 = 68.2%**                  | **70.5 / 82.5 = 85.5%**                    |
 
 **Fazit:** PlantUML wird im Projekt bevorzugt eingesetzt, da es eine sehr gute Integration in den bestehenden Entwicklungsworkflow bietet, besonders effizient für Versionierung über Git ist und eine schnelle, reproduzierbare Erstellung von UML-Diagrammen ermöglicht.
 
@@ -50,7 +50,7 @@
 | Funktionsumfang (x1.5)        | 10: Sehr umfangreich               | 6: Stark reduziert          | 9: Umfangreich                   |
 | Export / Dokumentation (x1.0) | 9: Sehr guter Export               | 8: Gute Exportmöglichkeiten | 9: Sehr guter Export             |
 | Performance (x1.0)            | 9: Stabil und performant           | 8: Stabil                   | 9: Stabil                        |
-| **Gesamt**                    | **78.25 / 82.5 = 94.8%**           | **53.25 / 82.5 = 64.5%**    | **69.25 / 82.5 = 83.9%**         |
+| **Gesamt**                    | **78.3 / 82.5 = 94.8%**           | **53.3 / 82.5 = 64.5%**    | **69.3 / 82.5 = 83.9%**         |
 
 **Fazit:** Obwohl Figma die höchste Gesamtbewertung erzielt, wird im Projekt Adobe XD eingesetzt, da bereits umfangreiche Erfahrung im Team vorhanden ist und es Teil der bestehenden Adobe Creative Cloud ist.
 
