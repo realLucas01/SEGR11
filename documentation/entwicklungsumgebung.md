@@ -17,13 +17,13 @@
 
 | Kriterium (Gewichtung)             | Papyrus (Eclipse-Plugin)            | StarUML                                   | PlantUML                                   |
 |------------------------------------|-------------------------------------|-------------------------------------------|--------------------------------------------|
-| Kosten / Lizenz (1.25)             | 10: Kostenlos und Open Source       | 5: Kostenpflichtig, Testversion verfügbar | 10: Kostenlos und Open Source              |
-| Plattformen (1.0)                  | 9: Läuft überall mit Eclipse        | 9: Win / macOS / Linux                    | 10: Plattformunabhängig                    |
-| UML2-Unterstützung (1.5)           | 10: Vollständige UML2-Unterstützung | 8: Gute UML-Unterstützung                 | 8: Gute UML-Unterstützung                  |
-| Code-Generierung (0.75)            | 7: Möglich über Plugins             | 6: Eingeschränkt                          | 4: Kaum vorhanden                          |
-| Integration in IDE (1.5)           | 10: Direkt in Eclipse integriert    | 6: Eigenständiges Tool                    | 9: Sehr gut mit VS Code integrierbar       |
-| Bedienbarkeit (1.0)                | 6: Etwas komplex und altmodisch     | 8: Moderne und intuitive Oberfläche       | 7: Textbasiert, erfordert Eingewöhnung     |
-| Wartbarkeit / Versionierung (1.25) | 7: Eingeschränkt über Eclipse       | 6: Schwer versionierbar                   | 10: Perfekt für Git geeignet (textbasiert) |
+| Kosten / Lizenz (x1.25)             | 10: Kostenlos und Open Source       | 5: Kostenpflichtig, Testversion verfügbar | 10: Kostenlos und Open Source              |
+| Plattformen (x1.0)                  | 9: Läuft überall mit Eclipse        | 9: Win / macOS / Linux                    | 10: Plattformunabhängig                    |
+| UML2-Unterstützung (x1.5)           | 10: Vollständige UML2-Unterstützung | 8: Gute UML-Unterstützung                 | 8: Gute UML-Unterstützung                  |
+| Code-Generierung (x0.75)            | 7: Möglich über Plugins             | 6: Eingeschränkt                          | 4: Kaum vorhanden                          |
+| Integration in IDE (x1.5)           | 10: Direkt in Eclipse integriert    | 6: Eigenständiges Tool                    | 9: Sehr gut mit VS Code integrierbar       |
+| Bedienbarkeit (x1.0)                | 6: Etwas komplex und altmodisch     | 8: Moderne und intuitive Oberfläche       | 7: Textbasiert, erfordert Eingewöhnung     |
+| Wartbarkeit / Versionierung (x1.25) | 7: Eingeschränkt über Eclipse       | 6: Schwer versionierbar                   | 10: Perfekt für Git geeignet (textbasiert) |
 | **Gesamt**                         | **79.5 / 87.5 = 90.9%**             | **56.25 / 87.5 = 64.3%**                  | **81.5 / 87.5 = 93.1%**                    |
 
 **Fazit:** PlantUML wird im Projekt bevorzugt eingesetzt, da es eine sehr gute Integration in den bestehenden Entwicklungsworkflow bietet, besonders effizient für Versionierung über Git ist und eine schnelle, reproduzierbare Erstellung von UML-Diagrammen ermöglicht.
@@ -43,13 +43,13 @@
 
 | Kriterium (Gewichtung)       | Figma                              | Balsamiq                    | Adobe XD                         |
 |------------------------------|------------------------------------|-----------------------------|----------------------------------|
-| Kosten / Lizenz (1.25)       | 9: Kostenloser Free-Plan verfügbar | 5: Kostenpflichtig          | 7: Teil der Adobe Creative Cloud |
-| Zugriff / Installation (1.0) | 10: Browser + Desktop-App          | 7: Nur Desktop              | 8: Desktop + Cloud-Anbindung     |
-| Zusammenarbeit (1.5)         | 10: Echtzeit-Kollaboration         | 4: Kaum vorhanden           | 8: Gute Cloud-Zusammenarbeit     |
-| Bedienbarkeit (1.0)          | 9: Intuitiv und modern             | 9: Sehr einfach             | 9: Sehr intuitiv                 |
-| Funktionsumfang (1.5)        | 10: Sehr umfangreich               | 6: Stark reduziert          | 9: Umfangreich                   |
-| Export / Dokumentation (1.0) | 9: Sehr guter Export               | 8: Gute Exportmöglichkeiten | 9: Sehr guter Export             |
-| Performance (1.0)            | 9: Stabil und performant           | 8: Stabil                   | 9: Stabil                        |
+| Kosten / Lizenz (x1.25)       | 9: Kostenloser Free-Plan verfügbar | 5: Kostenpflichtig          | 7: Teil der Adobe Creative Cloud |
+| Zugriff / Installation (x1.0) | 10: Browser + Desktop-App          | 7: Nur Desktop              | 8: Desktop + Cloud-Anbindung     |
+| Zusammenarbeit (x1.5)         | 10: Echtzeit-Kollaboration         | 4: Kaum vorhanden           | 8: Gute Cloud-Zusammenarbeit     |
+| Bedienbarkeit (x1.0)          | 9: Intuitiv und modern             | 9: Sehr einfach             | 9: Sehr intuitiv                 |
+| Funktionsumfang (x1.5)        | 10: Sehr umfangreich               | 6: Stark reduziert          | 9: Umfangreich                   |
+| Export / Dokumentation (x1.0) | 9: Sehr guter Export               | 8: Gute Exportmöglichkeiten | 9: Sehr guter Export             |
+| Performance (x1.0)            | 9: Stabil und performant           | 8: Stabil                   | 9: Stabil                        |
 | **Gesamt**                   | **87.25 / 87.5 = 99.7%**           | **54.5 / 87.5 = 62.3%**     | **77.25 / 87.5 = 88.3%**         |
 
 **Fazit:** Obwohl Figma die höchste Gesamtbewertung erzielt, wird im Projekt Adobe XD eingesetzt, da bereits umfangreiche Erfahrung im Team vorhanden ist und es Teil der bestehenden Adobe Creative Cloud ist.
