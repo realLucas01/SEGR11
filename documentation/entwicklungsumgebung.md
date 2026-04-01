@@ -1,3 +1,22 @@
+## Entscheidung zur Entwicklungsumgebung und genutzten Tools für die Erstellung der Entertainment-Erweiterung für IFE
+**Stand:** 31.03.2026  
+
+**Auftraggeber:** Novaris Cabin Systems GmbH  
+Friedrich-List-Platz 1   
+01069 Dresden  
+**Ansprechpartner*in:** Lea Wagner  
+**E-Mail:** lwagner@novaris-cabinystems.de   
+**Telefon:** 0351 4620   
+
+**Auftragnehmer:** Gervithrall Systems GmbH   
+Perlickstraße 1   
+04103 Leipzig   
+**Ansprechpartner*in:** Lucas Rumann   
+**E-Mail:** lucasr@gervithrall-systems.de   
+**Telefon:** 0351 6482642   
+
+
+
 
 ## Versionierung 
 
@@ -10,7 +29,7 @@
 | Branching und Merging (x1.5) | 10: Sehr leistungsfähig und flexibel bei Branches und Merges | 5: Branching möglich, aber umständlich und fehleranfälliger | 8: Gute Unterstützung, aber etwas weniger flexibel als Git |
 | Lernkurve (x0.5) | 5: Steile Lernkurve, viele Konzepte müssen verstanden werden, für Einsteiger sehr unübersichtlich/komplex | 8: Schnell erlernbar durch einfache Struktur | 7: Leichter als Git, aber trotzdem gewisse Komplexität |
 | Tools und Integration (x1.25) | 10: Sehr viele Tools, IDE-Integrationen und Plattformen (z. B. GitHub) | 7: Gute Integration, aber weniger modern und umfangreich | 6: Aufgrund geringer Verbreitung weniger Tools und Integrationen verfügbar |
-| **Gesamt** | **60.3 / 67.5 = 89.3%** | **43.8 / 67.5 = 64.8%** | **47.3 / 67.5 = 70%** |
+| **Gesamt** | **60.25 / 67.5 = 89.3%** | **43.75 / 67.5 = 64.8%** | **47.25 / 67.5 = 70%** |
 
 **Fazit:** Unsere Wahl fällt aufgrund der technischen Leistungsfähigkeit auf Git. Unter anderem da das Team mit Git bereits eingearbeitet ist, und somit die Einstiegshürden für uns keine Rolle mehr spielen.
 
@@ -72,22 +91,19 @@
 **Fazit:** Da es sich hierbei um ein Projekt überschaubarer Größe handelt, mitsamt einem eng genähten Zeitablauf, steht es den einzelnen Entwicklern frei, welche IDE sie verwenden. Ein forcierter Wechsel, und die somit einhergehende Eingewöhnung in neue Entwicklungstools würden zu einer Verzögerung im Zeitplan führen.
 
 
-
 ## Test-Automatisierung
 
 | Kriterium | JUnit 5 | TestNG | Mockito |
 | :--- | :--- | :--- | :--- |
 | Verbreitung und Standard (x1.0) | 10: De-facto-Standard im Java-Bereich | 6: Verbreitet, aber deutlich weniger als JUnit | 9: Weit verbreitet als Ergänzung zu JUnit |
-| Einarbeitungsaufwand (x1.5) | 9: Gering bis mittel, viele Best Practices im Netz etabliert | 7: Mittel, erfordert teilweise andere Denkweise | 8: Gering, sofern man Architektur pattern kennt |
+| Einarbeitungsaufwand (x1.5) | 9: Gering bis mittel, viele Best Practices im Netz etabliert | 7: Mittel, erfordert teilweise andere Denkweise | 8: Gering, sofern man Architektur-Pattern kennt |
 | Typischer Einsatz (x2.0) | 10: Ideal für Unit- und Integrationstests der Spiellogik | 6: Eher für komplexe Test-Szenarien und Legacy-Projekte | 8: Gut für saubere Unit-Tests wie zum Beispiel Mocking |
 | Wartbarkeit und Lesbarkeit (x1.5) | 10: Sehr klare Strukturierung durch moderne Annotationen | 7: Solide, kann bei großen Suites unübersichtlich werden | 9: Ermöglicht lesbare Tests durch eine flüssige Schnittstelle |
 | Build-Integration (x1.25) | 10: Nahtlose Integration in Maven und gängige Pipelines | 8: Gute Integration mit etwas mehr Konfigurationsaufwand | 9: Problemlos in bestehende Build-Prozesse integrierbar |
-| Eignung für Projekt (x2.0) | 10: Uneingeschränkt empfohlen als Haupt-Framework | 4: Möglich, aber für dieses Projekt nicht nötig | 7: Sinnvoll, aber als Standalone-Lösung ungeeignet |
+| Eignung für Projekt (x2.0) | 10: Uneingeschränkt empfohlen als Haupt-Framework | 4: Möglich, aber für dieses Projekt nicht nötig | 7: Sinnvoll, aber als Stand-alone-Lösung ungeeignet |
 | **Gesamt** | **91 / 92.5 = 98.4%** | **57 / 92.5 = 61.6%** | **75.75 / 92.5 = 81.9%** |
 
 **Fazit**: Unsere Wahl fällt als etablierter Branchenstandard klar auf JUnit 5. Das Framework ermöglicht unserem erfahrenen Team sofortige und strukturierte Tests der Spiellogik ohne jegliche Einarbeitungshürden.
-
----
 
 ## KI-Tools
 
@@ -96,16 +112,12 @@
 | Integration (x1.25) | 7: Nur im Browser, kein direktes IDE-Plugin | 10: Hervorragend, direkt in der IDE | 10: Hervorragend, direkt in der IDE |
 | Datenschutz und Internet (x1.5) | 4: Online-Zugriff zwingend, Code wird gesendet | 4: Online-Zugriff zwingend, Code wird gesendet | 8: Besserer Datenschutz durch teils lokales Modell |
 | Einarbeitungsaufwand (x1.0) | 10: Sehr intuitiv dank einfacher Chat-Oberfläche | 9: Gering, arbeitet einfach im Hintergrund | 9: Gering, ähnliches Prinzip wie Copilot |
-| Architektonischer Nutzen (x2.0) | 10: Starkes Sparring-Tool für komplexe Logik | 5: Limitiert auf reine Code-Vervollständigung | 5: Limitiert auf reine Code-Vervollständigung |
+| architektonischer Nutzen (x2.0) | 10: Starkes Sparring-Tool für komplexe Logik | 5: Limitiert auf reine Code-Vervollständigung | 5: Limitiert auf reine Code-Vervollständigung |
 | Fehleranalyse (x1.75) | 10: Exzellent für Stacktraces und tiefe Fehlerbehebung | 6: Hilft primär bei lokalen Syntaxfehlern im Code | 5: Kaum Unterstützung bei komplexen Laufzeitfehlern |
 | Eignung für Projekt (x2.0) | 10: Unverzichtbar für konzeptionelle Lösungsansätze | 6: Optional als reine Tipphilfe | 7: Optional bei starkem Fokus auf Privacy |
 | **Gesamt** | **82.25 / 95 = 86.6%** | **60 / 95 = 63.2%** | **66.25 / 95 = 69.7%** |
 
 **Fazit**: Unsere Wahl fällt aufgrund der analytischen Tiefe und der vielfältigen Anwendung eindeutig auf ChatGPT. Wir benötigen fundierte Unterstützung für komplexe Architekturfragen, Systemdokumentation und tiefgreifende Fehleranalyse.
-
----
-
-
 
 ## Dokumentationstools 
 
@@ -118,7 +130,7 @@
 |Kollaboration (x2.0)|6: Zusammenarbeit nur indirekt über Code, nicht parallel|8: Zusammenarbeit über Git (e.g. branches) flexibel|9: Direkt im Browser editierbar, parallel möglich|
 |Nachvollziehbarkeit/Versionierung (x1.25)|8: Jede Änderung durch Commits sichtbar|9: Änderungen im Repo nachvollziehbar|9: Versionshistorie der Wiki-Seiten vorhanden|
 |Aktualität/Wartbarkeit der Dokumentation (x1.5)|9: automatisch gepflegt|7: manuell, kann schnell veralten|7: manuell, kann schnell veralten|
-|**Gesamt**|**78 / 107.4 = 72.6%**|**79 / 107.5 = 73.5%**|**84.3 / 107.5 = 78.4%**|
+|**Gesamt**|**78 / 107.4 = 72.6%**|**79 / 107.5 = 73.5%**|**84.25 / 107.5 = 78.4%**|
 
 **Fazit:** Für unser Projekt haben wir uns aufgrund der Anforderungen für Javadoc als primäres Dokumentationstool entschieden. Ergänzend nutzen wir Markdown für die Entwicklerdokumentation. Das Wiki von GitHub nutzen wir für Team-, Firmen- oder Ablaufinterne Vorgänge.
 
@@ -148,7 +160,7 @@
 | Tool-Unterstützung (x1.25) | 9: Gute Integration in viele Tools | 6: Weniger direkte Tool-Unterstützung | 10: Stark auf automatische Formatierung ausgelegt |
 | Flexibilität (x1.0) | 6: Relativ strikt | 7: Mehr Spielraum | 5: Sehr strikt durch festen Formatter |
 | Konsistenz im Code (x1.5) | 10: Sehr einheitlicher Code | 7: Abhängig vom Team da nur grundlegendere Regeln | 10: Konsistenz wird automatisch erzwungen |
-| **Gesamt** | **70.8 / 82.5 = 85.8%** | **58.3 / 82.5 = 70.1%** | **68.3 / 82.5 = 82.7%** |
+| **Gesamt** | **70.75 / 82.5 = 85.8%** | **58.25 / 82.5 = 70.1%** | **68.25 / 82.5 = 82.7%** |
 
 **Fazit:** Aufgrund dessen, dass wir eine Basis für ein modular erweiterbares Programm erstellen, haben wir uns für den Google Java Style Guide entschieden. Dieser ist modern, weitverbreitet und erzeugt aufgrund strikterer Regeln sehr einheitlichen Code.
 
@@ -160,13 +172,13 @@
 | Kosten / Lizenz           | keine      | keine                | keine über Hochschulaccount |
 |Nachvollziehbarkeit (x1.5)|10: Projektbezogen im Repo|5: Chats teilweise ohne Zusammenhang|7: Übersichtlich am Board festgehalten
 |Struktur & Orga (1.75)|10: Glasklare Strukturierung|4: Eher schlecht durch konventionellen Chat|10: Top Organisation möglich
-|Kommunikation (x2.0)|6: Teilweise gehen Rückmeldungen verloren, etwas unübersichtlich bei z.B. vielen Pull-Requests|10: Einfache, schnelle Chats, auch Anrufe möglich|2: Keine Benachrichtigung, kein richtiger Chat(verlauf), bei vielen Elementen Tendenz zu Unübersichtlichkeit
+|Kommunikation (x2.0)|6: Teilweise gehen Rückmeldungen verloren, etwas unübersichtlich bei z.B. vielen Pull Requests|10: Einfache, schnelle Chats, auch Anrufe möglich|2: Keine Benachrichtigung, kein richtiger Chat(verlauf), bei vielen Elementen Tendenz zu Unübersichtlichkeit
 |Integration (x1.0)|10: Direkt im Repo|1: Keine Integration, nur über Links und Screenshots möglich|4: Teilweise Integration über erstellten Plan möglich, sonst: Links, Screenshots
 |Benutzerfreundlichkeit (x0.75)|7: Konzept muss verstanden werden, Einarbeitung gut|10: Sehr einfache Bedienung, wie ein Messenger|8: Einfache Bedienung wie eine große Tafel
 |Zuverlässigkeit (x1.5)|10: Professionelle Infrastruktur mit sehr hoher Uptime, Rollbacks möglich|8: Hohe Uptime, indirekter Informationsverlust|6: (Un)absichtliches Überschreiben möglich, hohe Uptime (laut Recherche)
-|Datenschutz/Sicherheit (x1.5)|10: Fein einstellbare Zugriffsrechte, Privates Repo, Audit Log, Branch-Review System, jede Änderung sichtbar, individuelle Features vorhanden, 2FA etc. |4: Keine End to End Encryption bei normalen Chats, Zugriff über Invite-links (missbrauch möglich)|4: Weitergabe von Zugriffslink sowie u.a. Passwort möglich
+|Datenschutz/Sicherheit (x1.5)|10: Fein einstellbare Zugriffsrechte, privates Repo, Audit Log, Branch-Review System, jede Änderung sichtbar, individuelle Features vorhanden, 2FA etc. |4: Keine End to End Encryption bei normalen Chats, Zugriff über Invite-links (missbrauch möglich)|4: Weitergabe von Zugriffslink sowie u.a. Passwort möglich
 |Effizienz (x1.25)|8: Projektbezogenes Tracking, gute Struktur|10: Sehr schneller Austausch möglich, einfache Bedienung|2: Manuelle Pflege, hoher Aufwand
-|**Gesamt**|**99.8 / 112.5 = 88.7%**|**73.5 / 112.5 = 65.3%**|**59.5 / 112.5 = 52.9%**
+|**Gesamt**|**99.75 / 112.5 = 88.7%**|**73.5 / 112.5 = 65.3%**|**59.5 / 112.5 = 52.9%**
 
 **Fazit:** GitHub für nachvollziehbare, spezifisch bezogene Kommunikation, Discord für kurze Abstimmungen oder andere/generelle Fragen/Diskussionen und Anrufe. Miro bietet für uns keinen Mehrwert, da die Rahmenbedingungen schon stehen und der Aufwand zur Erstellung eines Boards nicht gerechtfertigt ist.
 
