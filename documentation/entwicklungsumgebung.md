@@ -33,18 +33,20 @@ Perlickstraße 1
 
 **Fazit:** Unsere Wahl fällt aufgrund der technischen Leistungsfähigkeit auf Git. Unter anderem da das Team mit Git bereits eingearbeitet ist, und somit die Einstiegshürden für uns keine Rolle mehr spielen.
 
-## UML-Tool 
+## UML-Tool
 
-| Kriterium                    | Papyrus (Eclipse-Plugin)                  | Visual Paradigm Community Edition       | StarUML                            |
-|-----------------------------|-------------------------------------------|-----------------------------------------|------------------------------------|
-| Kosten / Lizenz             | Open Source, kostenlos                    | Kostenlose Community-Edition, sonst lizenzpflichtig | Kostenpflichtig (Testversion gratis) |
-| Plattformen                 | Läuft überall, wo Eclipse läuft (Win/Linux an der HTW) | Win / macOS / Linux                    | Win / macOS / Linux                |
-| UML2-Unterstützung          | Volle UML2-Unterstützung                  | Volle UML2-Unterstützung               | Gute UML-Unterstützung             |
-| Code-Generierung nach Java  | Möglich über Eclipse-Plugins / Profile   | Integrierte Code-Generierung sehr komfortabel | Teilweise über Erweiterungen       |
-| Integration in IDE          | Direkt in Eclipse eingebunden            | Eigene IDE, kann mit Eclipse/IntelliJ zusammen genutzt werden | Eigenständiges Tool, keine enge IDE-Integration |
-| Bedienbarkeit / Lernaufwand | Oberfläche etwas „oldschool“, aber okay  | Sehr komfortable UI, viele Assistenten  | Moderne UI, relativ leicht bedienbar |
-| Eignung für Laborrechner    | Sehr gut, da Eclipse meist schon installiert ist | Muss extra installiert werden          | Muss extra installiert werden      |
-| Eignung für unser Projekt   | **empfohlen**                             | geeignet, aber Lizenz & Overkill       | eher ungeeignet                    |
+| Kriterium (Gewichtung)              | Papyrus (Eclipse-Plugin)            | StarUML                                   | PlantUML                                   |
+|-------------------------------------|-------------------------------------|-------------------------------------------|--------------------------------------------|
+| Kosten / Lizenz (x1.25)             | 10: Kostenlos und Open Source       | 5: Kostenpflichtig, Testversion verfügbar | 10: Kostenlos und Open Source              |
+| Plattformen (x1.0)                  | 9: Läuft überall mit Eclipse        | 9: Win / macOS / Linux                    | 10: Plattformunabhängig                    |
+| UML2-Unterstützung (x1.5)           | 10: Vollständige UML2-Unterstützung | 8: Gute UML-Unterstützung                 | 8: Gute UML-Unterstützung                  |
+| Code-Generierung (x0.75)            | 7: Möglich über Plugins             | 6: Eingeschränkt                          | 4: Kaum vorhanden                          |
+| Integration in IDE (x1.5)           | 10: Direkt in Eclipse integriert    | 6: Eigenständiges Tool                    | 9: Sehr gut mit VS Code integrierbar       |
+| Bedienbarkeit (x1.0)                | 6: Etwas komplex und altmodisch     | 8: Moderne und intuitive Oberfläche       | 7: Textbasiert, erfordert Eingewöhnung     |
+| Wartbarkeit / Versionierung (x1.25) | 7: Eingeschränkt über Eclipse       | 6: Schwer versionierbar                   | 10: Perfekt für Git geeignet (textbasiert) |
+| **Gesamt**                          | **71.5 / 82.5 = 86.7%**             | **56.3 / 82.5 = 68.2%**                  | **70.5 / 82.5 = 85.5%**                    |
+
+**Fazit:** PlantUML wird im Projekt bevorzugt eingesetzt, da es eine sehr gute Integration in den bestehenden Entwicklungsworkflow bietet, besonders effizient für Versionierung über Git ist und eine schnelle, reproduzierbare Erstellung von UML-Diagrammen ermöglicht.
 
 ## Build-Tool
 
@@ -61,17 +63,20 @@ Perlickstraße 1
 **Fazit:** Auch wenn Gradle mit einem knappen Vorsprung Maven schlägt, fällt die interne Wahl für dieses Projekt auf Maven. Dies ist nach wie vor die sicherste Wahl mit seiner Standardstruktur für unser geplantes Projekt.
 
 
-## UI-Prototyping-Tool 
+## UI-Prototyping-Tool
 
-| Kriterium                 | Figma                                      | Balsamiq                                 | Pencil Project                          |
-|---------------------------|--------------------------------------------|------------------------------------------|-----------------------------------------|
-| Kosten / Lizenz           | kostenloser Free-Plan                      | kostenpflichtig (Testversion verfügbar)  | kostenlos, Open Source                  |
-| Zugriff / Installation    | im Browser, optional Desktop-App           | Desktop-App                              | Desktop-App                             |
-| Zusammenarbeit im Team    | **sehr gut**, Echtzeit-Kollaboration       | kaum, eher Einzelarbeit                  | keine/kaum Teamfunktionen               |
-| Bedienbarkeit             | leicht, moderne Oberfläche                 | sehr einfach, aber stark reduziert       | okay, etwas altmodisch                  |
-| Funktionsumfang           | viele Komponenten, klickbare Prototypen    | einfache Wireframes, wenig Details       | einfache Mockups, weniger Komfort       |
-| Export in Doku (PNG/PDF)  | sehr gut                                   | gut                                      | gut                                     |
-| Eignung für unser Projekt | **empfohlen** (Team + Browser + flexibel)  | möglich, aber weniger Team-geeignet      | möglich, wenn Open Source/offline wichtig |
+| Kriterium (Gewichtung)        | Figma                              | Balsamiq                    | Adobe XD                         |
+|-------------------------------|------------------------------------|-----------------------------|----------------------------------|
+| Kosten / Lizenz (x1.25)       | 9: Kostenloser Free-Plan verfügbar | 5: Kostenpflichtig          | 7: Teil der Adobe Creative Cloud |
+| Zugriff / Installation (x1.0) | 10: Browser + Desktop-App          | 7: Nur Desktop              | 8: Desktop + Cloud-Anbindung     |
+| Zusammenarbeit (x1.5)         | 10: Echtzeit-Kollaboration         | 4: Kaum vorhanden           | 8: Gute Cloud-Zusammenarbeit     |
+| Bedienbarkeit (x1.0)          | 9: Intuitiv und modern             | 9: Sehr einfach             | 9: Sehr intuitiv                 |
+| Funktionsumfang (x1.5)        | 10: Sehr umfangreich               | 6: Stark reduziert          | 9: Umfangreich                   |
+| Export / Dokumentation (x1.0) | 9: Sehr guter Export               | 8: Gute Exportmöglichkeiten | 9: Sehr guter Export             |
+| Performance (x1.0)            | 9: Stabil und performant           | 8: Stabil                   | 9: Stabil                        |
+| **Gesamt**                    | **78.3 / 82.5 = 94.8%**           | **53.3 / 82.5 = 64.5%**    | **69.3 / 82.5 = 83.9%**         |
+
+**Fazit:** Obwohl Figma die höchste Gesamtbewertung erzielt, wird im Projekt Adobe XD eingesetzt, da bereits umfangreiche Erfahrung im Team vorhanden ist und es Teil der bestehenden Adobe Creative Cloud ist.
 
 
 ## IDE / Editor
