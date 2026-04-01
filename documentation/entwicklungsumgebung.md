@@ -123,14 +123,14 @@ Perlickstraße 1
 
 | Kriterium                 | Javadoc                                  | Markdown im Repository                 | GitHub-Wiki                               |
 |---------------------------|-------------------------------------------|----------------------------------------|-------------------------------------------|
-|Kosten (x1.0)|Keine (Teil des JDK)|Keine, in GitHub|Keine|
+|Kosten|Keine (Teil des JDK)|Keine, in GitHub|Keine|
 |Integration im Entwicklungsprozess (x1.5)|10: Direkt aus Java-Code generierbar|9: Im selben Repo wie Code, gute Referenz|8: Web-basiert, an Repo gekoppelt|
 |Struktur & Navigation (x1.25)|7: Klassenhierarchie automatisch|7: Eigene Links/Ordner nötig, flexibler gestaltbar|9: Seitenstruktur und Menü, Verlinkung zwischen Seiten einfach|
 |Lesbarkeit/Darstellung (x1.25)|7: HTML-Seiten, weniger für Leser/Nutzer ohne technischen Hintergrund|8: Markdown, gut lesbar|9: Website mit Navigation, für Team gut lesbar|
 |Kollaboration (x2.0)|6: Zusammenarbeit nur indirekt über Code, nicht parallel|8: Zusammenarbeit über Git (e.g. branches) flexibel|9: Direkt im Browser editierbar, parallel möglich|
 |Nachvollziehbarkeit/Versionierung (x1.25)|8: Jede Änderung durch Commits sichtbar|9: Änderungen im Repo nachvollziehbar|9: Versionshistorie der Wiki-Seiten vorhanden|
 |Aktualität/Wartbarkeit der Dokumentation (x1.5)|9: automatisch gepflegt|7: manuell, kann schnell veralten|7: manuell, kann schnell veralten|
-|**Gesamt**|**78 / 107.4 = 72.6%**|**79 / 107.5 = 73.5%**|**84.25 / 107.5 = 78.4%**|
+|**Gesamt**|**68 / 87.5 = 77.7%**|**70 / 87.5 = 80.0%**|**74.3 / 87.5 = 84.9%**|
 
 **Fazit:** Für unser Projekt haben wir uns aufgrund der Anforderungen für Javadoc als primäres Dokumentationstool entschieden. Ergänzend nutzen wir Markdown für die Entwicklerdokumentation. Das Wiki von GitHub nutzen wir für Team-, Firmen- oder Ablaufinterne Vorgänge.
 
