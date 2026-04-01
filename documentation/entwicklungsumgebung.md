@@ -22,7 +22,6 @@ Perlickstraße 1
 
 | Kriterium                 | Git                                      | Subversion (SVN)                          |  Mercurial (hg)                         |
 |---------------------------|------------------------------------------|-----------------------------------------|-------------------------------------------|
-| Kosten           | kostenlos, Open Source                   | kostenlos, Open Source                  | kostenlos, Open Source                    |
 |Benutzerfreundlichkeit (x0.75) | 6: Viele Befehle und komplexe Konzepte machen den Einstieg schwierig | 8: Einfaches, zentrales System, leicht verständlich für Anfänger | 7: Ähnlich wie Git, aber mit klarerer und einfacherer Bedienung |
 | Performance und Architektur (x1.75) | 9: Sehr schnell, da lokal bzw. dezentral gearbeitet wird, und damit auch sehr robust | 6: Langsamer, da viele Aktionen über den Server laufen, von dem man Abhängig ist | 8: Ebenfalls schnell durch dezentrale und unabhängige Struktur |
 | Verbreitung (x1.0) | 10: Globaler Standard, riesige Community und viele Ressourcen | 7: Noch verbreitet, aber zunehmend durch Git ersetzt | 5: Deutlich kleinere Community und weniger verbreitet als Git oder SVN |
@@ -35,7 +34,7 @@ Perlickstraße 1
 
 ## UML-Tool
 
-| Kriterium (Gewichtung)              | Papyrus (Eclipse-Plugin)            | StarUML                                   | PlantUML                                   |
+| Kriterium             | Papyrus (Eclipse-Plugin)            | StarUML                                   | PlantUML                                   |
 |-------------------------------------|-------------------------------------|-------------------------------------------|--------------------------------------------|
 | Kosten / Lizenz (x1.25)             | 10: Kostenlos und Open Source       | 5: Kostenpflichtig, Testversion verfügbar | 10: Kostenlos und Open Source              |
 | Plattformen (x1.0)                  | 9: Läuft überall mit Eclipse        | 9: Win / macOS / Linux                    | 10: Plattformunabhängig                    |
@@ -44,7 +43,7 @@ Perlickstraße 1
 | Integration in IDE (x1.5)           | 10: Direkt in Eclipse integriert    | 6: Eigenständiges Tool                    | 9: Sehr gut mit VS Code integrierbar       |
 | Bedienbarkeit (x1.0)                | 6: Etwas komplex und altmodisch     | 8: Moderne und intuitive Oberfläche       | 7: Textbasiert, erfordert Eingewöhnung     |
 | Wartbarkeit / Versionierung (x1.25) | 7: Eingeschränkt über Eclipse       | 6: Schwer versionierbar                   | 10: Perfekt für Git geeignet (textbasiert) |
-| **Gesamt**                          | **71.5 / 82.5 = 86.7%**             | **56.3 / 82.5 = 68.2%**                  | **70.5 / 82.5 = 85.5%**                    |
+| **Gesamt**                          | **71.5 / 82.5 = 86.7%**             | **56.25 / 82.5 = 68.2%**                  | **70.5 / 82.5 = 85.5%**                    |
 
 **Fazit:** PlantUML wird im Projekt bevorzugt eingesetzt, da es eine sehr gute Integration in den bestehenden Entwicklungsworkflow bietet, besonders effizient für Versionierung über Git ist und eine schnelle, reproduzierbare Erstellung von UML-Diagrammen ermöglicht.
 
@@ -65,7 +64,7 @@ Perlickstraße 1
 
 ## UI-Prototyping-Tool
 
-| Kriterium (Gewichtung)        | Figma                              | Balsamiq                    | Adobe XD                         |
+| Kriterium        | Figma                              | Balsamiq                    | Adobe XD                         |
 |-------------------------------|------------------------------------|-----------------------------|----------------------------------|
 | Kosten / Lizenz (x1.25)       | 9: Kostenloser Free-Plan verfügbar | 5: Kostenpflichtig          | 7: Teil der Adobe Creative Cloud |
 | Zugriff / Installation (x1.0) | 10: Browser + Desktop-App          | 7: Nur Desktop              | 8: Desktop + Cloud-Anbindung     |
@@ -74,7 +73,7 @@ Perlickstraße 1
 | Funktionsumfang (x1.5)        | 10: Sehr umfangreich               | 6: Stark reduziert          | 9: Umfangreich                   |
 | Export / Dokumentation (x1.0) | 9: Sehr guter Export               | 8: Gute Exportmöglichkeiten | 9: Sehr guter Export             |
 | Performance (x1.0)            | 9: Stabil und performant           | 8: Stabil                   | 9: Stabil                        |
-| **Gesamt**                    | **78.3 / 82.5 = 94.8%**           | **53.3 / 82.5 = 64.5%**    | **69.3 / 82.5 = 83.9%**         |
+| **Gesamt**                    | **78.25 / 82.5 = 94.8%**           | **53.25 / 82.5 = 64.5%**    | **69.25 / 82.5 = 83.9%**         |
 
 **Fazit:** Obwohl Figma die höchste Gesamtbewertung erzielt, wird im Projekt Adobe XD eingesetzt, da bereits umfangreiche Erfahrung im Team vorhanden ist und es Teil der bestehenden Adobe Creative Cloud ist.
 
@@ -91,7 +90,7 @@ Perlickstraße 1
 |Built-in Features (x1.5) |       9: Standardmäßig geliefert mitsamt GUI für Git und Build Tools  |             7: Viele Funktionen enthalten, aber oft in Untermenüs begraben |           4: Minimalistisch, die meisten gewünschten Funktionen müssen per Plugin nachträglich installiert werden          |
 | Debugging und Testing (x1.75) |    10: Erstklassiger Debugger und exzellente JUnit-Integration  |             8: Sehr mächtiger Debugger |           6: Grundfunktionen vorhanden, aber weniger Komfort bei komplexeren Projekten         |
 |Scene Builder und JavaFX-Integration (x1.25) | 9: Hervorragende Integration mitsamt einer einfachen Einbindung         |        8: Gute Unterstützung und Anbindung    |           4: Erfordert viel manuelle Konfiguration, sowie keinen visuellen Editor        |
-| **Gesamt** |        **94 / 105 = 89.5%**    |              **76.5 / 105 = 72.9%**    |           **71.7 / 105 = 68.3%**          |
+| **Gesamt** |        **94 / 105 = 89.5%**    |              **76.5 / 105 = 72.9%**    |           **71.5 / 105 = 68.3%**          |
 
 **Fazit:** Da es sich hierbei um ein Projekt überschaubarer Größe handelt, mitsamt einem eng genähten Zeitablauf, steht es den einzelnen Entwicklern frei, welche IDE sie verwenden. Ein forcierter Wechsel, und die somit einhergehende Eingewöhnung in neue Entwicklungstools würden zu einer Verzögerung im Zeitplan führen.
 
@@ -127,7 +126,7 @@ Perlickstraße 1
 ## Dokumentationstools 
 
 | Kriterium                 | Javadoc                                  | Markdown im Repository                 | GitHub-Wiki                               |
-|---------------------------|-------------------------------------------|----------------------------------------|-------------------------------------------|
+|:---|:---|:---|:---|
 |Kosten|Keine (Teil des JDK)|Keine, in GitHub|Keine|
 |Integration im Entwicklungsprozess (x1.5)|10: Direkt aus Java-Code generierbar|9: Im selben Repo wie Code, gute Referenz|8: Web-basiert, an Repo gekoppelt|
 |Struktur & Navigation (x1.25)|7: Klassenhierarchie automatisch|7: Eigene Links/Ordner nötig, flexibler gestaltbar|9: Seitenstruktur und Menü, Verlinkung zwischen Seiten einfach|
@@ -135,7 +134,7 @@ Perlickstraße 1
 |Kollaboration (x2.0)|6: Zusammenarbeit nur indirekt über Code, nicht parallel|8: Zusammenarbeit über Git (e.g. branches) flexibel|9: Direkt im Browser editierbar, parallel möglich|
 |Nachvollziehbarkeit/Versionierung (x1.25)|8: Jede Änderung durch Commits sichtbar|9: Änderungen im Repo nachvollziehbar|9: Versionshistorie der Wiki-Seiten vorhanden|
 |Aktualität/Wartbarkeit der Dokumentation (x1.5)|9: automatisch gepflegt|7: manuell, kann schnell veralten|7: manuell, kann schnell veralten|
-|**Gesamt**|**68 / 87.5 = 77.7%**|**70 / 87.5 = 80.0%**|**74.3 / 87.5 = 84.9%**|
+|**Gesamt**|**68 / 87.5 = 77.7%**|**70 / 87.5 = 80.0%**|**74.25 / 87.5 = 84.9%**|
 
 **Fazit:** Für unser Projekt haben wir uns aufgrund der Anforderungen für Javadoc als primäres Dokumentationstool entschieden. Ergänzend nutzen wir Markdown für die Entwicklerdokumentation. Das Wiki von GitHub nutzen wir für Team-, Firmen- oder Ablaufinterne Vorgänge.
 
@@ -157,7 +156,6 @@ Perlickstraße 1
 ## Code Conventions / Coding Style 
 | Kriterium                 | Google Java Style Guide                    | Oracle Java Code Conventions                | Spring Java Format                                  |
 |---------------------------|--------------------------------------------|---------------------------------------------|---------------------------------------------|
-| Kosten | kostenlos, öffentlich zugänglich | kostenlos, öffentlich zugänglich | kostenlos, öffentlich zugänglich |
 | Lesbarkeit (x1.25) | 9: Sehr klare und moderne Struktur für gut lesbaren Code | 8: Verständlich, aber teilweise veraltet | 9: Einheitliche Formatierung sorgt für sehr gute Lesbarkeit |
 | Detailgrad (x1.5) | 9: Sehr detailliert und umfassend | 6: Eher grundlegende Regeln | 7: Fokus eher auf Formatierung als auf komplette Richtlinien |
 | Verständlichkeit/Einstieg (x1.0) | 7: Viele Regeln, aber relativ gut dokumentiert | 9: Einfach und leicht verständlich, viele Code-Beispiele | 8: Einfach nutzbar durch automatische Formatierung |
