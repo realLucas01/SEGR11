@@ -1,5 +1,19 @@
 package SEG11.IFE_Entertainment.FourConnect;
 
+/**
+ * Das enum Player.
+ */
 public enum Player {
-    HUMAN, BOT, NONE;
+    /**
+     * Menschlicher Spieler
+     */
+    HUMAN,
+    /**
+     * Bot Spieler
+     */
+    BOT,
+    /**
+     * Leerer Spieler, zum init des Spielfeldes
+     */
+    NONE;
 }

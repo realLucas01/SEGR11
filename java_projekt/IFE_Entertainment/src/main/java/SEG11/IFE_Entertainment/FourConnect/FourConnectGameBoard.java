@@ -10,24 +10,36 @@ public class FourConnectGameBoard {
     private Map<Position,FourConnectPlayer> cells;
 
     //todo Standardkonstruktor
+
+    /**
+     * Standardkonstruktor
+     */
     public FourConnectGameBoard(){
 
     }
 
 
-
+    /**
+     *
+     * @return die Anzahl an Zeilen
+     */
     public Integer getRows() {
         return rows;
     }
 
+
+    /**
+     *
+     * @return Anzahl der Spalten
+     */
     public Integer getColumns() {
         return columns;
     }
 
     /**
-     * erhält eine bestimmte Zelle und gibt den Besitzter dieser Zelle zurück
+     * erhält eine bestimmte Zelle und gibt den Besitzer dieser Zelle zurück
      * @param cell
-     * @return
+     * @return den Spieler der Zelle
      */
     public FourConnectPlayer getCellOwner(Position cell){
         //todo
@@ -38,7 +50,7 @@ public class FourConnectGameBoard {
      * wird in dropDisc() aufgerufen und erhält die ermittelte Zelle, diese Zelle wird nun dem Spieler zugewiesen
      * @param cell
      * @param currentPlayer
-     * @return
+     * @return Integer Wert, ob die Operation erfolgreich war
      */
     public Integer setCellValue(Position cell, FourConnectPlayer currentPlayer){
         //todo
