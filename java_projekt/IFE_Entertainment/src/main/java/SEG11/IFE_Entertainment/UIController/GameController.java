@@ -2,13 +2,8 @@ package SEG11.IFE_Entertainment.UIController;
 
 import java.io.IOException;
 
-import SEG11.IFE_Entertainment.App;
-import javafx.fxml.FXML;
-
-public class GameController {
-
-    @FXML
-    private void switchToMainMenu() throws IOException {
-        App.setRoot("MainMenu");
-    }
+public interface GameController {
+	public void restartGame() throws IOException;
+	public void backToMainMenu() throws IOException;
+	public void openHelp() throws IOException;
 }
