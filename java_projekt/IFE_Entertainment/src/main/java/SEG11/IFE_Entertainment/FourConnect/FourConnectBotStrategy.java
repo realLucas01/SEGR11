@@ -31,10 +31,9 @@ import static java.lang.Math.*;
 
 /**
  * Implementiert {@link IMoveStrategy} und stellt zwei Bot strategien für das Vier Gewinnt Spiel bereit:
- * <ul>
- *     <li>{@link EasyBotStrategy} - wählt zufällig eine gültige Spalte</li>
- *     <li>{@link HardBotStrategy} - berechnet den besten Zug per MinMax</li>
- * </ul>
+ * {@link EasyBotStrategy} - wählt zufällig eine gültige Spalte
+ * {@link HardBotStrategy} - berechnet den besten Zug per MinMax
+ * 
  */
 public class FourConnectBotStrategy implements IMoveStrategy {
 
