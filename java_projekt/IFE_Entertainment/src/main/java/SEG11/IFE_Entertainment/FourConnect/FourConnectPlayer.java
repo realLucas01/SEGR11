@@ -1,7 +1,7 @@
 package SEG11.IFE_Entertainment.FourConnect;
 
 /**
- * The type Four connect player.
+ * Der Vier gewinnt Spieler
  */
 public class FourConnectPlayer {
     private Player type;
@@ -11,8 +11,14 @@ public class FourConnectPlayer {
     /**
      * Standardkonstruktor
      */
-    public FourConnectPlayer() {
-        //todo constructor
+    public FourConnectPlayer(Player type, FourConnectBotStrategy strategy, String colour) {
+        this.type = type;
+        if(type.equals(Player.BOT)){
+            this.strategy = strategy;
+        } else {
+            this.strategy = null;
+        }
+        this.colour = colour;
     }
 
     /**
@@ -25,7 +31,7 @@ public class FourConnectPlayer {
     }
 
     /**
-     * Wenn vorhanden, gibt es die verwendete Bot Strategy zurück
+     * Wenn vorhanden, gibt es der verwendete Bot Strategy zurück
      *
      * @return die Bot Strategy
      */
@@ -41,6 +47,4 @@ public class FourConnectPlayer {
     public String getColour(){
         return colour;
     }
-
-
 }

@@ -1,5 +1,7 @@
 package SEG11.IFE_Entertainment.FourConnect;
 
+import java.util.Objects;
+
 /**
  * Die Position, welche für das Spielfeld genutzt werden umd die Zellen darzustellen
  */
@@ -36,6 +38,23 @@ public class Position {
         return y;
     }
 
+    /**
+     * Ich musste die diese beiden Funktionen überschreiben, um die die Positionen des Spielfeldes vergleichen zu können
+     * @param o   the reference object with which to compare.
+     * @return true oder false
+     */
+    @Override
+    public boolean equals(Object o){
+        if(this == o) return true;
+        if(o == null || getClass() != o.getClass()) return false;
+        Position position = (Position) o;
+        return x.equals(position.x) && y.equals(position.y);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(x, y);
+    }
 
 
 }
