@@ -9,6 +9,8 @@
    <children>
       <Label text="I will be the Main Menu! :D" />
       <Button fx:id="primaryButton" text="Switch to Game" onAction="#switchToGame"/>
+      <Button text="Help" onAction="#switchToHelp"/>
+      <Button text="Settings" onAction="#switchToSettings"/>
    </children>
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
