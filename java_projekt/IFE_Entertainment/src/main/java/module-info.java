@@ -7,4 +7,7 @@ module SEG11.IFE_Entertainment {
     
     opens SEG11.IFE_Entertainment.UIController to javafx.fxml;
     exports SEG11.IFE_Entertainment.UIController;
+    
+    opens SEG11.IFE_Entertainment.UIGameController to javafx.fxml;
+    exports SEG11.IFE_Entertainment.UIGameController;
 }
