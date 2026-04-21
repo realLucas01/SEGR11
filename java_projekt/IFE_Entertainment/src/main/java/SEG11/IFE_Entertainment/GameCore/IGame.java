@@ -1,8 +1,8 @@
 package SEG11.IFE_Entertainment.GameCore;
 
 public interface IGame {
-	public void setStatus();
+	public void setStatus(GameState state);
 	public void restart();
-	public void getStatus();
-	public void getBoard();
+	public GameState getStatus();
+	public IPlayArea getBoard();
 }
