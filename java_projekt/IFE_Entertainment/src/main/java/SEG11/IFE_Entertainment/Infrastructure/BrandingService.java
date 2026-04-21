@@ -16,7 +16,7 @@ public class BrandingService {
     private BrandingService() {
         this.primaryColor   = "#1a1a2e";
         this.secondaryColor = "#e94560";
-        this.logoPath       = "/SE611/IFE_Entertainment/images/logo_default.png";
+        this.logoPath       = "/SEG11/IFE_Entertainment/images/logo_default.png";
         this.airlineName    = "Default Airline";
     }
 
