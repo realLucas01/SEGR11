@@ -43,7 +43,7 @@
       </counter>
       <counter>
         <item-type type-id="property" type="Property" />
-        <value>84</value>
+        <value>86</value>
       </counter>
       <counter>
         <item-type type-id="generalization" type="Generalization" />
@@ -51,7 +51,7 @@
       </counter>
       <counter>
         <item-type type-id="relationship" type="Association" />
-        <value>23</value>
+        <value>24</value>
       </counter>
       <counter>
         <item-type type-id="usage" type="Usage" />
@@ -125,6 +125,16 @@
         <phone-number />
         <description />
         <color>#00000000</color>
+        <working-schedule uid="ws-ea9f1d271f9b4f2f9eff24d0b81e3a57" hours="8" monday="8" tuesday="8" wednesday="8" thursday="8" friday="8" saturday="0" sunday="0" />
+      </person>
+      <person id="">
+        <first-name>Luca</first-name>
+        <last-name>Tauscher</last-name>
+        <role />
+        <e-mail />
+        <phone-number />
+        <description />
+        <color>#00000000</color>
       </person>
     </persons>
     <teams />
@@ -142,45 +152,49 @@
     <custom-types>
       <parameters />
       <types>
-        <type id="Class:2dcb0ee62aa14d54bbd09d1023540c0d" name="FourConnectPlayer" class-ref="2dcb0ee62aa14d54bbd09d1023540c0d" />
-        <type id="Class:5eca074071474844b40a11a77d5dc185" name="FourConnectGameBoard" class-ref="5eca074071474844b40a11a77d5dc185" />
-        <type id="Player" name="Player" />
-        <type id="Class:f7b016b500cd497896e73822513290d6" name="FourConnectGame" class-ref="f7b016b500cd497896e73822513290d6" />
-        <type id="List&lt;FourConnectPlayer&gt;" name="List&lt;FourConnectPlayer&gt;" />
-        <type id="Class:97e1d64e27fb4c1da87657dd6d1ceae0" name="Position" class-ref="97e1d64e27fb4c1da87657dd6d1ceae0" />
-        <type id="Class:fa55e1749084453780854fe0c923a5ea" name="FourConnectBotStrategy" class-ref="fa55e1749084453780854fe0c923a5ea" />
-        <type id="FourConnectPlayer" name="FourConnectPlayer" />
-        <type id="Position" name="Position" />
-        <type id="IGame" name="IGame" />
-        <type id="FourConnectGameBoard" name="FourConnectGameBoard" />
-        <type id="BrandingService" name="BrandingService" />
-        <type id="Class:f4a645c4d61d4f79963c1d0a316e61d5" name="FourConnectRules" class-ref="f4a645c4d61d4f79963c1d0a316e61d5" />
-        <type id="Map" name="Map" />
-        <type id="GameState" name="GameState" />
-        <type id="(): void" name="(): void" />
-        <type id="Token" name="Token" />
-        <type id="Class:114c0a62156f4d0888693ac5b856c054" name="FourConnectGameBoard" class-ref="114c0a62156f4d0888693ac5b856c054" />
-        <type id="Class:a0b9d6dacfdb429c9990d786705ecb82" name="BrandingService" class-ref="a0b9d6dacfdb429c9990d786705ecb82" />
-        <type id="void" name="void" />
-        <type id="Class:30450284162b493382b1ec070834b157" name="FourConnectPlayer" class-ref="30450284162b493382b1ec070834b157" />
-        <type id="IPlayArea" name="IPlayArea" />
         <type id="LocalizationService" name="LocalizationService" />
-        <type id="Class:039e049b8e8f4044b778bb1f3f7626ab" name="FourConnectRules" class-ref="039e049b8e8f4044b778bb1f3f7626ab" />
-        <type id="Class:9ee27247dd934ce8906c5799e06af6ad" name="FourConnectGame" class-ref="9ee27247dd934ce8906c5799e06af6ad" />
-        <type id="Class:e06f85f06abf49e7957a784f161ed439" name="BrandingService" class-ref="e06f85f06abf49e7957a784f161ed439" />
-        <type id="Class:bda1f53a35e8465fafe0b34951ea1750" name="SettingsController" class-ref="bda1f53a35e8465fafe0b34951ea1750" />
-        <type id="Class:dc0db5f90b7e4ee58e043b99b86fed1b" name="LocaliziationService" class-ref="dc0db5f90b7e4ee58e043b99b86fed1b" />
-        <type id="Class:c52574edd7c440668d6a12f75ca38c5c" name="IMoveStrategy" class-ref="c52574edd7c440668d6a12f75ca38c5c" />
-        <type id="Class:3b67b5f1a4274b86bb4ce031b4ed0314" name="LocaliziationService" class-ref="3b67b5f1a4274b86bb4ce031b4ed0314" />
-        <type id="Class:72a93e09f93d4a8db0513fa4dd8dcd7f" name="Position" class-ref="72a93e09f93d4a8db0513fa4dd8dcd7f" />
-        <type id="Class:d5aaffd2bb0d4704854bc99277e17fb5" name="SettingsController" class-ref="d5aaffd2bb0d4704854bc99277e17fb5" />
-        <type id="Class:f365095b98354612b040d6a321bdb827" name="type" class-ref="f365095b98354612b040d6a321bdb827" />
-        <type id="Class:e6bad44916a940969c0a91e8741f74c0" name="FourConnectBotStrategy" class-ref="e6bad44916a940969c0a91e8741f74c0" />
+        <type id="Class:fa55e1749084453780854fe0c923a5ea" name="FourConnectBotStrategy" class-ref="fa55e1749084453780854fe0c923a5ea" />
+        <type id="List&lt;FourConnectPlayer&gt;" name="List&lt;FourConnectPlayer&gt;" />
+        <type id="Player" name="Player" />
+        <type id="Class:5eca074071474844b40a11a77d5dc185" name="FourConnectGameBoard" class-ref="5eca074071474844b40a11a77d5dc185" />
+        <type id="IGame" name="IGame" />
+        <type id="Class:f4a645c4d61d4f79963c1d0a316e61d5" name="FourConnectRules" class-ref="f4a645c4d61d4f79963c1d0a316e61d5" />
+        <type id="Class:a0b9d6dacfdb429c9990d786705ecb82" name="BrandingService" class-ref="a0b9d6dacfdb429c9990d786705ecb82" />
         <type id="Class:a73661b5928a4ae6a6a243be91e52412" name="GameMode" class-ref="a73661b5928a4ae6a6a243be91e52412" />
+        <type id="void" name="void" />
+        <type id="Class:f365095b98354612b040d6a321bdb827" name="type" class-ref="f365095b98354612b040d6a321bdb827" />
+        <type id="Class:72a93e09f93d4a8db0513fa4dd8dcd7f" name="Position" class-ref="72a93e09f93d4a8db0513fa4dd8dcd7f" />
+        <type id="Class:e6bad44916a940969c0a91e8741f74c0" name="FourConnectBotStrategy" class-ref="e6bad44916a940969c0a91e8741f74c0" />
+        <type id="FourConnectPlayer" name="FourConnectPlayer" />
+        <type id="Class:c52574edd7c440668d6a12f75ca38c5c" name="IMoveStrategy" class-ref="c52574edd7c440668d6a12f75ca38c5c" />
+        <type id="Class:bda1f53a35e8465fafe0b34951ea1750" name="SettingsController" class-ref="bda1f53a35e8465fafe0b34951ea1750" />
+        <type id="Class:114c0a62156f4d0888693ac5b856c054" name="FourConnectGameBoard" class-ref="114c0a62156f4d0888693ac5b856c054" />
+        <type id="Token" name="Token" />
+        <type id="Class:97e1d64e27fb4c1da87657dd6d1ceae0" name="Position" class-ref="97e1d64e27fb4c1da87657dd6d1ceae0" />
+        <type id="Position" name="Position" />
+        <type id="(): void" name="(): void" />
+        <type id="Class:d5aaffd2bb0d4704854bc99277e17fb5" name="SettingsController" class-ref="d5aaffd2bb0d4704854bc99277e17fb5" />
+        <type id="Class:f7b016b500cd497896e73822513290d6" name="FourConnectGame" class-ref="f7b016b500cd497896e73822513290d6" />
+        <type id="Class:dc0db5f90b7e4ee58e043b99b86fed1b" name="LocaliziationService" class-ref="dc0db5f90b7e4ee58e043b99b86fed1b" />
+        <type id="Class:e06f85f06abf49e7957a784f161ed439" name="BrandingService" class-ref="e06f85f06abf49e7957a784f161ed439" />
+        <type id="Class:9ee27247dd934ce8906c5799e06af6ad" name="FourConnectGame" class-ref="9ee27247dd934ce8906c5799e06af6ad" />
+        <type id="Class:039e049b8e8f4044b778bb1f3f7626ab" name="FourConnectRules" class-ref="039e049b8e8f4044b778bb1f3f7626ab" />
+        <type id="IPlayArea" name="IPlayArea" />
+        <type id="Class:30450284162b493382b1ec070834b157" name="FourConnectPlayer" class-ref="30450284162b493382b1ec070834b157" />
+        <type id="BrandingService" name="BrandingService" />
+        <type id="GameState" name="GameState" />
+        <type id="Class:2dcb0ee62aa14d54bbd09d1023540c0d" name="FourConnectPlayer" class-ref="2dcb0ee62aa14d54bbd09d1023540c0d" />
+        <type id="Class:89469ca546e34147aa8ecb9fc65cd66e" name="FourConnectGameController" class-ref="89469ca546e34147aa8ecb9fc65cd66e" />
+        <type id="Class:3b67b5f1a4274b86bb4ce031b4ed0314" name="LocaliziationService" class-ref="3b67b5f1a4274b86bb4ce031b4ed0314" />
+        <type id="FourConnectGameBoard" name="FourConnectGameBoard" />
+        <type id="Map" name="Map" />
       </types>
     </custom-types>
   </types>
   <items>
+    <item id="45a1c340aeb7446a9f2a8b2ef30b90f3" cid="PROP085" type="property" owner="0c100c76382948d69064a73078ac3078" creator="" creation-date="04/21/2026 11:25:19" visibility="private">
+      <structural-feature type="FourConnectGame" type-id="Class:f7b016b500cd497896e73822513290d6" />
+    </item>
     <item id="6c21e06651ac4c13a90394234325f082" cid="PROP008" type="property" owner="e241604fcedb4aedb1c72cbd0c68588f" creator="" creation-date="01/21/2026 16:46:17" visibility="private">
       <structural-feature type="SettingsController" type-id="Class:d5aaffd2bb0d4704854bc99277e17fb5" />
     </item>
@@ -189,6 +203,14 @@
       <property aggregation="shared" />
     </item>
     <item id="27d1c6062ba64f388f1824b24b67609f" cid="PROP041" type="property" owner="6657ac1ea83249868a5cfd8d1862380d" creator="" creation-date="01/21/2026 17:16:37" visibility="undefined">
+      <property aggregation="composite" />
+    </item>
+    <item id="b4956270cc6a4f79af27dac69a20b7fe" cid="PROP044" type="property" owner="c046c987ae0b47bba342b2db46fb54ec" creator="" creation-date="01/21/2026 17:16:46" visibility="undefined" />
+    <item id="4fa8635ff58445bfa24bf72465519d6b" cid="PROP028" type="property" owner="2a82b0813bbc4348b8a4aef56bb266d5" creator="" creation-date="01/21/2026 17:11:52" visibility="private">
+      <structural-feature type="FourConnectRules" type-id="Class:f4a645c4d61d4f79963c1d0a316e61d5" />
+    </item>
+    <item id="487126ea3c71454ea60905eb22ff4e9c" cid="PROP027" type="property" owner="2a82b0813bbc4348b8a4aef56bb266d5" creator="" creation-date="01/21/2026 17:11:52" visibility="private">
+      <structural-feature type="FourConnectGame" type-id="Class:9ee27247dd934ce8906c5799e06af6ad" />
       <property aggregation="composite" />
     </item>
     <item id="9adac257e7c541b09c61ee74e7748e77" cid="PROP020" type="property" name="x" owner="97e1d64e27fb4c1da87657dd6d1ceae0" creator="" creation-date="01/21/2026 17:04:08" visibility="private">
@@ -216,15 +238,8 @@
       </style>
       <structural-feature type="Integer" type-id="Uml.Integer" />
     </item>
-    <item id="487126ea3c71454ea60905eb22ff4e9c" cid="PROP027" type="property" owner="2a82b0813bbc4348b8a4aef56bb266d5" creator="" creation-date="01/21/2026 17:11:52" visibility="private">
-      <structural-feature type="FourConnectGame" type-id="Class:9ee27247dd934ce8906c5799e06af6ad" />
-      <property aggregation="composite" />
-    </item>
-    <item id="4fa8635ff58445bfa24bf72465519d6b" cid="PROP028" type="property" owner="2a82b0813bbc4348b8a4aef56bb266d5" creator="" creation-date="01/21/2026 17:11:52" visibility="private">
-      <structural-feature type="FourConnectRules" type-id="Class:f4a645c4d61d4f79963c1d0a316e61d5" />
-    </item>
-    <item id="b4956270cc6a4f79af27dac69a20b7fe" cid="PROP044" type="property" owner="c046c987ae0b47bba342b2db46fb54ec" creator="" creation-date="01/21/2026 17:16:46" visibility="undefined" />
     <item id="616795de4c7c40a99f4718fb029eb68c" cid="PROP043" type="property" owner="c046c987ae0b47bba342b2db46fb54ec" creator="" creation-date="01/21/2026 17:16:46" visibility="undefined" />
+    <item id="49b65ed1d00b44c6894a925d4f47a4a7" cid="PROP042" type="property" owner="6657ac1ea83249868a5cfd8d1862380d" creator="" creation-date="01/21/2026 17:16:37" visibility="undefined" />
     <item id="8ebd231ded884da5b86e34430f981036" cid="PROP021" type="property" name="y" owner="97e1d64e27fb4c1da87657dd6d1ceae0" creator="" creation-date="01/21/2026 17:04:15" visibility="private">
       <style style-name="Custom Style" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#3A555555" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" glow-color="#FFFFFF" accuracy="0.9">
         <text-style type="name" color="#555555" font="Segoe UI;11.25;B" />
@@ -250,7 +265,6 @@
       </style>
       <structural-feature type="Integer" type-id="Uml.Integer" />
     </item>
-    <item id="49b65ed1d00b44c6894a925d4f47a4a7" cid="PROP042" type="property" owner="6657ac1ea83249868a5cfd8d1862380d" creator="" creation-date="01/21/2026 17:16:37" visibility="undefined" />
     <item id="55c728c1da9b4f9f839218da72d73d3d" cid="PROP029" type="property" owner="cb456ef66a5647569551d411a59c49d7" creator="" creation-date="01/21/2026 17:12:03" visibility="private">
       <structural-feature type="FourConnectGame" type-id="Class:9ee27247dd934ce8906c5799e06af6ad" />
       <property aggregation="composite" />
@@ -264,11 +278,11 @@
     <item id="289750e14b314adea4506710ccdeed87" cid="PROP032" type="property" owner="1a621a2fba4b4ee0967e6b78766015c7" creator="" creation-date="01/21/2026 17:12:14" visibility="private">
       <structural-feature multiplicity="2" type="FourConnectPlayer" type-id="Class:30450284162b493382b1ec070834b157" />
     </item>
-    <item id="cfe7016eb86e4d2985f58a09610ceb5d" cid="PROP036" type="property" owner="a7cce9f30a4845499c8674f33684edd5" creator="" creation-date="01/21/2026 17:13:23" visibility="private">
-      <structural-feature multiplicity="*" type="Position" type-id="Class:97e1d64e27fb4c1da87657dd6d1ceae0" />
-    </item>
     <item id="5a31962b4d0b42588217b53cfa76ffb3" cid="PROP038" type="property" name="0..1" owner="96bb919f058e4fb09cb86f653d6b4e6f" creator="" creation-date="01/21/2026 17:14:48" visibility="undefined">
       <structural-feature type="FourConnectPlayer" type-id="Class:30450284162b493382b1ec070834b157" />
+    </item>
+    <item id="cfe7016eb86e4d2985f58a09610ceb5d" cid="PROP036" type="property" owner="a7cce9f30a4845499c8674f33684edd5" creator="" creation-date="01/21/2026 17:13:23" visibility="private">
+      <structural-feature multiplicity="*" type="Position" type-id="Class:97e1d64e27fb4c1da87657dd6d1ceae0" />
     </item>
     <item id="ae337d31b56f42e1adc404d13fbac06a" cid="PROP006" type="property" owner="453da417bd7a41c1887aa210ec2c90dc" creator="" creation-date="01/21/2026 16:46:12" visibility="private">
       <structural-feature type="SettingsController" type-id="Class:d5aaffd2bb0d4704854bc99277e17fb5" />
@@ -285,6 +299,9 @@
     </item>
     <item id="09fb9639db6844f680919ea29803eb15" cid="PROP009" type="property" owner="e241604fcedb4aedb1c72cbd0c68588f" creator="" creation-date="01/21/2026 16:46:17" visibility="private">
       <structural-feature type="LocaliziationService" type-id="Class:3b67b5f1a4274b86bb4ce031b4ed0314" />
+    </item>
+    <item id="f0f5cb6f78834b56aadf00bb722c2030" cid="PROP084" type="property" owner="0c100c76382948d69064a73078ac3078" creator="" creation-date="04/21/2026 11:25:19" visibility="private">
+      <structural-feature type="FourConnectGameController" type-id="Class:89469ca546e34147aa8ecb9fc65cd66e" />
     </item>
     <item id="ad1dd02f7167467f9efa04b88a55409a" cid="PROP040" type="property" owner="38724cacacd44398a94173e473b166f5" creator="" creation-date="01/21/2026 17:16:27" visibility="undefined" />
   </items>
@@ -355,8 +372,8 @@
           <item id="96bb919f058e4fb09cb86f653d6b4e6f" cid="REL009" type="relationship" creator="" creation-date="01/21/2026 17:14:48" from="e6bad44916a940969c0a91e8741f74c0" to="30450284162b493382b1ec070834b157" visibility="package">
             <owned-items />
             <relation from="e6bad44916a940969c0a91e8741f74c0" to="30450284162b493382b1ec070834b157" derived="false">
-              <start-role id="umlar-021ac013-888e-41c6-bafd-42064520a07c" name="" navigability="" association-type="aggregation" visibility="private" property-ref="bceb54f536ea4d23a41cba7de17438ff" />
-              <end-role id="umlar-191f9e84-fa74-45ae-8633-819e461af337" name="" navigability="" association-type="association" visibility="private" property-ref="5a31962b4d0b42588217b53cfa76ffb3" />
+              <start-role id="umlar-8893b8d5-9c00-43d6-b230-310c336fa3d7" name="" navigability="" association-type="aggregation" visibility="private" property-ref="bceb54f536ea4d23a41cba7de17438ff" />
+              <end-role id="umlar-fad0a20a-5de2-4e50-8b3b-2cd73de902cd" name="" navigability="" association-type="association" visibility="private" property-ref="5a31962b4d0b42588217b53cfa76ffb3" />
             </relation>
           </item>
           <item id="a30e649e5c2c49a2be89b4d53967443d" cid="I003" type="uml-interface-classifier" name="IGame" owner="235dd3ba128541c8b76a3a26fc6669d2" creator="" creation-date="01/21/2026 16:50:53" visibility="undefined">
@@ -424,15 +441,15 @@
           <item id="e241604fcedb4aedb1c72cbd0c68588f" cid="REL002" type="relationship" creator="" creation-date="01/21/2026 16:46:17" from="d5aaffd2bb0d4704854bc99277e17fb5" to="3b67b5f1a4274b86bb4ce031b4ed0314" visibility="package">
             <owned-items />
             <relation from="d5aaffd2bb0d4704854bc99277e17fb5" to="3b67b5f1a4274b86bb4ce031b4ed0314" derived="false">
-              <start-role id="umlar-047eafce-f133-4811-9a08-3dc5d3541a26" name="" navigability="" association-type="association" visibility="private" attribute-ref="a9213a9700d4b479ab66d03078b89e982579" property-ref="6c21e06651ac4c13a90394234325f082" />
-              <end-role id="umlar-323e51ae-c9ec-4bec-8a1e-aa0c2cb1b7a5" name="" navigability="yes" association-type="association" visibility="private" property-ref="09fb9639db6844f680919ea29803eb15" />
+              <start-role id="umlar-7521c76d-866c-44e5-adc3-792563468348" name="" navigability="" association-type="association" visibility="private" attribute-ref="a9213a9700d4b479ab66d03078b89e982579" property-ref="6c21e06651ac4c13a90394234325f082" />
+              <end-role id="umlar-9982c743-92ed-471f-b862-57ce384c1753" name="" navigability="yes" association-type="association" visibility="private" property-ref="09fb9639db6844f680919ea29803eb15" />
             </relation>
           </item>
           <item id="c046c987ae0b47bba342b2db46fb54ec" cid="REL012" type="relationship" owner="235dd3ba128541c8b76a3a26fc6669d2" creator="" creation-date="01/21/2026 17:16:46" from="c52574edd7c440668d6a12f75ca38c5c" to="b08b07f6ee0c4818b154657f21468fbd" visibility="package">
             <owned-items />
             <relation from="c52574edd7c440668d6a12f75ca38c5c" to="b08b07f6ee0c4818b154657f21468fbd" derived="false">
-              <start-role id="umlar-323ab7f3-0efb-4493-953c-513b06132821" name="" navigability="" association-type="association" visibility="undefined" property-ref="616795de4c7c40a99f4718fb029eb68c" />
-              <end-role id="umlar-54394941-0064-4502-9f33-29fc49264114" name="" navigability="" association-type="association" visibility="undefined" property-ref="b4956270cc6a4f79af27dac69a20b7fe" />
+              <start-role id="umlar-97735ec5-f25b-41ec-8816-952d2264b8f2" name="" navigability="" association-type="association" visibility="undefined" property-ref="616795de4c7c40a99f4718fb029eb68c" />
+              <end-role id="umlar-dc7c8b7b-a2d1-43f7-9864-12cb3f1beaa8" name="" navigability="" association-type="association" visibility="undefined" property-ref="b4956270cc6a4f79af27dac69a20b7fe" />
             </relation>
           </item>
           <item id="3b67b5f1a4274b86bb4ce031b4ed0314" cid="C008" type="class" name="LocaliziationService" owner="cae8a1620444425f8b0fb9744fcd1e09" creator="" creation-date="01/21/2026 16:44:31" visibility="undefined">
@@ -469,8 +486,8 @@
           <item id="a7cce9f30a4845499c8674f33684edd5" cid="REL008" type="relationship" owner="b151b294ff9c4fa580f4f746d7a65ac2" creator="" creation-date="01/21/2026 17:13:23" from="114c0a62156f4d0888693ac5b856c054" to="97e1d64e27fb4c1da87657dd6d1ceae0" visibility="package">
             <owned-items />
             <relation from="114c0a62156f4d0888693ac5b856c054" to="97e1d64e27fb4c1da87657dd6d1ceae0" derived="false">
-              <start-role id="umlar-1a9b3d39-4f62-4d22-afb1-cf3330b44015" name="" navigability="" association-type="association" visibility="private" property-ref="fcedc914296a4c6481b168dd670d186d" />
-              <end-role id="umlar-303b7b44-ea5b-4f41-a518-59c2c06d63f2" name="" navigability="" association-type="association" visibility="private" property-ref="cfe7016eb86e4d2985f58a09610ceb5d" />
+              <start-role id="umlar-e1bb99b6-7bd6-447c-b01b-da05c7998bfb" name="" navigability="" association-type="association" visibility="private" property-ref="fcedc914296a4c6481b168dd670d186d" />
+              <end-role id="umlar-7a6c30cb-b1fb-4dd7-9223-624be9b345c8" name="" navigability="" association-type="association" visibility="private" property-ref="cfe7016eb86e4d2985f58a09610ceb5d" />
             </relation>
           </item>
           <item id="fb97efab8d8c4d94ab262d634f7a99a3" cid="PROP015" type="property" name="rules" owner="9ee27247dd934ce8906c5799e06af6ad" creator="" creation-date="01/21/2026 16:58:24" visibility="private">
@@ -516,8 +533,8 @@
           <item id="2a82b0813bbc4348b8a4aef56bb266d5" cid="REL004" type="relationship" owner="b151b294ff9c4fa580f4f746d7a65ac2" creator="" creation-date="01/21/2026 17:11:52" from="9ee27247dd934ce8906c5799e06af6ad" to="f4a645c4d61d4f79963c1d0a316e61d5" visibility="package">
             <owned-items />
             <relation from="9ee27247dd934ce8906c5799e06af6ad" to="f4a645c4d61d4f79963c1d0a316e61d5" derived="false">
-              <start-role id="umlar-840bfeb6-588f-44dd-81c4-238b4a582f90" name="" navigability="" association-type="composition" visibility="private" property-ref="487126ea3c71454ea60905eb22ff4e9c" />
-              <end-role id="umlar-a0123650-dc57-44d7-b704-6fd37aa28213" name="" navigability="" association-type="association" visibility="private" property-ref="4fa8635ff58445bfa24bf72465519d6b" />
+              <start-role id="umlar-cc6e5d71-f5ef-4bf4-bc8f-866e934837bb" name="" navigability="" association-type="composition" visibility="private" property-ref="487126ea3c71454ea60905eb22ff4e9c" />
+              <end-role id="umlar-3f127d3f-a569-45fe-a196-806bc374f199" name="" navigability="" association-type="association" visibility="private" property-ref="4fa8635ff58445bfa24bf72465519d6b" />
             </relation>
           </item>
           <item id="c52574edd7c440668d6a12f75ca38c5c" cid="I005" type="uml-interface-classifier" name="IMoveStrategy" owner="235dd3ba128541c8b76a3a26fc6669d2" creator="" creation-date="01/21/2026 16:53:14" visibility="undefined">
@@ -541,8 +558,8 @@
           <item id="cb456ef66a5647569551d411a59c49d7" cid="REL005" type="relationship" owner="b151b294ff9c4fa580f4f746d7a65ac2" creator="" creation-date="01/21/2026 17:12:03" from="9ee27247dd934ce8906c5799e06af6ad" to="114c0a62156f4d0888693ac5b856c054" visibility="package">
             <owned-items />
             <relation from="9ee27247dd934ce8906c5799e06af6ad" to="114c0a62156f4d0888693ac5b856c054" derived="false">
-              <start-role id="umlar-df1233ce-9a06-4cd5-8171-9e0a75bf0d9b" name="" navigability="" association-type="composition" visibility="private" property-ref="55c728c1da9b4f9f839218da72d73d3d" />
-              <end-role id="umlar-946be540-2171-4e0b-89fa-1c0e9b8554c8" name="" navigability="" association-type="association" visibility="private" property-ref="429c557d43d1451db57896c34a93aa59" />
+              <start-role id="umlar-a269b908-44e8-4e8b-8fb4-46f22ac925fc" name="" navigability="" association-type="composition" visibility="private" property-ref="55c728c1da9b4f9f839218da72d73d3d" />
+              <end-role id="umlar-d88846d1-4d69-4001-881a-4b095eae667d" name="" navigability="" association-type="association" visibility="private" property-ref="429c557d43d1451db57896c34a93aa59" />
             </relation>
           </item>
           <item id="b08b07f6ee0c4818b154657f21468fbd" cid="I004" type="uml-interface-classifier" name="IPlayArea" owner="235dd3ba128541c8b76a3a26fc6669d2" creator="" creation-date="01/21/2026 16:52:29" visibility="undefined">
@@ -563,8 +580,8 @@
           <item id="453da417bd7a41c1887aa210ec2c90dc" cid="REL001" type="relationship" creator="" creation-date="01/21/2026 16:46:12" from="d5aaffd2bb0d4704854bc99277e17fb5" to="e06f85f06abf49e7957a784f161ed439" visibility="package">
             <owned-items />
             <relation from="d5aaffd2bb0d4704854bc99277e17fb5" to="e06f85f06abf49e7957a784f161ed439" derived="false">
-              <start-role id="umlar-77bb20e5-5328-4391-a51d-d7745724f510" name="" navigability="" association-type="association" visibility="private" property-ref="ae337d31b56f42e1adc404d13fbac06a" />
-              <end-role id="umlar-5a9a044b-852f-413d-8130-fbc120c30983" name="" navigability="yes" association-type="association" visibility="private" property-ref="d4517b25d70840c7b0a35390d83dd218" />
+              <start-role id="umlar-dc6e21a9-58a7-4387-ba61-a373f6582133" name="" navigability="" association-type="association" visibility="private" property-ref="ae337d31b56f42e1adc404d13fbac06a" />
+              <end-role id="umlar-f975894a-d692-4c91-91a1-493c0a72f5ac" name="" navigability="yes" association-type="association" visibility="private" property-ref="d4517b25d70840c7b0a35390d83dd218" />
             </relation>
           </item>
           <item id="cf1fa4f03493424c9de71437ac6e8b62" cid="PROP025" type="property" name="NewAttribute6" owner="9ee27247dd934ce8906c5799e06af6ad" creator="" creation-date="01/21/2026 17:10:22" visibility="private" />
@@ -574,8 +591,8 @@
           <item id="6657ac1ea83249868a5cfd8d1862380d" cid="REL011" type="relationship" owner="235dd3ba128541c8b76a3a26fc6669d2" creator="" creation-date="01/21/2026 17:16:37" from="a30e649e5c2c49a2be89b4d53967443d" to="c1a83d3eb77346ed9f3d56c4f7f5a289" visibility="package">
             <owned-items />
             <relation from="a30e649e5c2c49a2be89b4d53967443d" to="c1a83d3eb77346ed9f3d56c4f7f5a289" derived="false">
-              <start-role id="umlar-c65d043e-116f-444e-88c9-f4f04437796a" name="" navigability="" association-type="composition" visibility="undefined" property-ref="27d1c6062ba64f388f1824b24b67609f" />
-              <end-role id="umlar-f5e8f0ab-9a99-431f-bd8a-7d1bd71b2255" name="" navigability="" association-type="association" visibility="undefined" property-ref="49b65ed1d00b44c6894a925d4f47a4a7" />
+              <start-role id="umlar-f7379f6b-54f8-40c4-b6e4-b676d2c24873" name="" navigability="" association-type="composition" visibility="undefined" property-ref="27d1c6062ba64f388f1824b24b67609f" />
+              <end-role id="umlar-dd737aa7-13ec-4709-98f3-c4675508abde" name="" navigability="" association-type="association" visibility="undefined" property-ref="49b65ed1d00b44c6894a925d4f47a4a7" />
             </relation>
           </item>
           <item id="59ff4618354a4af48b5c275496ac07e4" cid="C002" type="class" name="GameController" owner="e3fda826b2544853b0c5b3e718fa31c6" creator="" creation-date="01/21/2026 16:34:06" visibility="undefined">
@@ -591,15 +608,15 @@
           <item id="69856c17e89f490d97dbd5d58a90e551" cid="PROP014" type="property" name="currentPlayerIndex" owner="9ee27247dd934ce8906c5799e06af6ad" creator="" creation-date="01/21/2026 16:58:10" visibility="private">
             <structural-feature type="Integer" type-id="Uml.Integer" />
           </item>
-          <item id="235dd3ba128541c8b76a3a26fc6669d2" cid="PKG004" type="package" name="GameCore" creator="" creation-date="01/21/2026 16:46:58" visibility="undefined">
-            <owned-items />
-          </item>
           <item id="38724cacacd44398a94173e473b166f5" cid="REL010" type="relationship" owner="235dd3ba128541c8b76a3a26fc6669d2" creator="" creation-date="01/21/2026 17:16:27" from="a30e649e5c2c49a2be89b4d53967443d" to="b08b07f6ee0c4818b154657f21468fbd" visibility="package">
             <owned-items />
             <relation from="a30e649e5c2c49a2be89b4d53967443d" to="b08b07f6ee0c4818b154657f21468fbd" derived="false">
-              <start-role id="umlar-5e77a7e8-301c-48e7-bc04-c0065c3e2c4f" name="" navigability="" association-type="composition" visibility="undefined" property-ref="a712ebe3bf274f4e866fe1c57dd7f3ae" />
-              <end-role id="umlar-7d8396a3-858d-4aa8-a486-a2e4a16bcb2c" name="" navigability="" association-type="association" visibility="undefined" property-ref="ad1dd02f7167467f9efa04b88a55409a" />
+              <start-role id="umlar-27cbe122-2631-447d-a79d-84b71d62dbb7" name="" navigability="" association-type="composition" visibility="undefined" property-ref="a712ebe3bf274f4e866fe1c57dd7f3ae" />
+              <end-role id="umlar-460d95b5-5267-469d-83ba-17bc97835fa4" name="" navigability="" association-type="association" visibility="undefined" property-ref="ad1dd02f7167467f9efa04b88a55409a" />
             </relation>
+          </item>
+          <item id="235dd3ba128541c8b76a3a26fc6669d2" cid="PKG004" type="package" name="GameCore" creator="" creation-date="01/21/2026 16:46:58" visibility="undefined">
+            <owned-items />
           </item>
           <item id="d5aaffd2bb0d4704854bc99277e17fb5" cid="C006" type="class" name="SettingsController" owner="e3fda826b2544853b0c5b3e718fa31c6" creator="" creation-date="01/21/2026 16:40:57" visibility="undefined">
             <owned-items />
@@ -623,12 +640,9 @@
           <item id="1a621a2fba4b4ee0967e6b78766015c7" cid="REL006" type="relationship" owner="b151b294ff9c4fa580f4f746d7a65ac2" creator="" creation-date="01/21/2026 17:12:14" from="9ee27247dd934ce8906c5799e06af6ad" to="30450284162b493382b1ec070834b157" visibility="package">
             <owned-items />
             <relation from="9ee27247dd934ce8906c5799e06af6ad" to="30450284162b493382b1ec070834b157" derived="false">
-              <start-role id="umlar-b7a65ff0-71fc-4c66-972e-2b8f739333f9" name="" navigability="" association-type="composition" visibility="private" property-ref="c5da71ed2cbc4db1ac3d814ba25e6170" />
-              <end-role id="umlar-1959f7d4-18a0-4ef4-a6fe-ddb2393b6a75" name="" navigability="" association-type="association" visibility="private" attribute-ref="ae9537d2e344742a686f176fbbb8f261f648" property-ref="289750e14b314adea4506710ccdeed87" />
+              <start-role id="umlar-03201811-433a-4818-a376-603e8e61ac92" name="" navigability="" association-type="composition" visibility="private" property-ref="c5da71ed2cbc4db1ac3d814ba25e6170" />
+              <end-role id="umlar-63e8330e-9806-4285-ac9b-0d7a7b9ad51e" name="" navigability="" association-type="association" visibility="private" attribute-ref="ae9537d2e344742a686f176fbbb8f261f648" property-ref="289750e14b314adea4506710ccdeed87" />
             </relation>
-          </item>
-          <item id="45264151068147d39b8682218c096a4f" cid="PROP018" type="property" name="cells" owner="114c0a62156f4d0888693ac5b856c054" creator="" creation-date="01/21/2026 17:02:08" visibility="private">
-            <structural-feature type="Map" type-id="Map" />
           </item>
           <item id="aa5a84968dd144b4a350e6b01cf3270a" cid="E004" type="enumeration" name="Player" owner="b151b294ff9c4fa580f4f746d7a65ac2" creator="" creation-date="01/21/2026 17:06:20" visibility="undefined">
             <stereotypes>
@@ -642,6 +656,9 @@
               <enumeration-item id="a2b6b2bb0d38a454082a02b481943941c712" cid="ENI008" name="Bot" creation-date="01/21/2026 17:06:30" />
               <enumeration-item id="a15cf9fa8ebd44c6883515376503c68a96" cid="ENI009" name="None" creation-date="01/21/2026 17:06:35" />
             </enumeration-items>
+          </item>
+          <item id="45264151068147d39b8682218c096a4f" cid="PROP018" type="property" name="cells" owner="114c0a62156f4d0888693ac5b856c054" creator="" creation-date="01/21/2026 17:02:08" visibility="private">
+            <structural-feature type="Map" type-id="Map" />
           </item>
           <item id="a73661b5928a4ae6a6a243be91e52412" cid="E003" type="enumeration" name="GameMode" owner="b151b294ff9c4fa580f4f746d7a65ac2" creator="" creation-date="01/21/2026 16:57:03" visibility="undefined">
             <stereotypes>
@@ -667,20 +684,6 @@
               <operation id="o71fbf92e8b1f47afa0896b7732039292735" cid="OP019" name="backToMainMenu" creation-date="01/21/2026 16:49:04" type="void" type-id="void" visibility="public" />
             </operations>
           </item>
-          <item id="90a3d7d80dfa4ac286ad51d2d6dac2be" cid="E002" type="enumeration" name="GameState" owner="235dd3ba128541c8b76a3a26fc6669d2" creator="" creation-date="01/21/2026 16:51:44" visibility="undefined">
-            <stereotypes>
-              <stereotype name="enumeration" />
-            </stereotypes>
-            <stereotype-instances>
-              <stereotype id="90a3d7d80dfa4ac286ad51d2d6dac2be_enumeration_c" type="enumeration" creation-date="01/21/2026 16:51:44" ref="" />
-            </stereotype-instances>
-            <enumeration-items>
-              <enumeration-item id="a288fa991d7fe4a23a16bff9f396d70ef313" cid="ENI001" name="NotStarted" creation-date="01/21/2026 16:51:51" />
-              <enumeration-item id="a618c3d45e19241adb7dc41bac68d418d708" cid="ENI002" name="Running" creation-date="01/21/2026 16:51:59" />
-              <enumeration-item id="ad3682258b56b4c8f95c682f69a7a9c56159" cid="ENI003" name="Paused" creation-date="01/21/2026 16:52:05" />
-              <enumeration-item id="a4128fd6d428e4d848350defa4a516096299" cid="ENI004" name="Finished" creation-date="01/21/2026 16:52:11" />
-            </enumeration-items>
-          </item>
           <item id="97e1d64e27fb4c1da87657dd6d1ceae0" cid="C012" type="class" name="Position" owner="b151b294ff9c4fa580f4f746d7a65ac2" creator="" creation-date="01/21/2026 17:04:01" visibility="undefined">
             <owned-items />
             <attributes>
@@ -703,22 +706,36 @@
               <source-code language="ActionScript" />
             </source-codes>
           </item>
+          <item id="90a3d7d80dfa4ac286ad51d2d6dac2be" cid="E002" type="enumeration" name="GameState" owner="235dd3ba128541c8b76a3a26fc6669d2" creator="" creation-date="01/21/2026 16:51:44" visibility="undefined">
+            <stereotypes>
+              <stereotype name="enumeration" />
+            </stereotypes>
+            <stereotype-instances>
+              <stereotype id="90a3d7d80dfa4ac286ad51d2d6dac2be_enumeration_c" type="enumeration" creation-date="01/21/2026 16:51:44" ref="" />
+            </stereotype-instances>
+            <enumeration-items>
+              <enumeration-item id="a288fa991d7fe4a23a16bff9f396d70ef313" cid="ENI001" name="NotStarted" creation-date="01/21/2026 16:51:51" />
+              <enumeration-item id="a618c3d45e19241adb7dc41bac68d418d708" cid="ENI002" name="Running" creation-date="01/21/2026 16:51:59" />
+              <enumeration-item id="ad3682258b56b4c8f95c682f69a7a9c56159" cid="ENI003" name="Paused" creation-date="01/21/2026 16:52:05" />
+              <enumeration-item id="a4128fd6d428e4d848350defa4a516096299" cid="ENI004" name="Finished" creation-date="01/21/2026 16:52:11" />
+            </enumeration-items>
+          </item>
           <item id="9eca049fea38416ab0ab587b81123774" cid="PROP003" type="property" name="localizationService" owner="d5aaffd2bb0d4704854bc99277e17fb5" creator="" creation-date="01/21/2026 16:41:06" visibility="private">
             <structural-feature type="LocalizationService" type-id="LocalizationService" />
           </item>
           <item id="f75944a7cac540128312d584b81dd490" cid="GNR001" type="generalization" owner="e3fda826b2544853b0c5b3e718fa31c6" creator="" creation-date="01/21/2026 16:38:44" from="9b12df825647442bbb3b3be0c9ff29b5" to="59ff4618354a4af48b5c275496ac07e4" visibility="package" />
           <item id="2544b113288140b6a65f2078d8e87233" cid="GNR003" type="generalization" creator="" creation-date="01/21/2026 17:15:33" from="114c0a62156f4d0888693ac5b856c054" to="b08b07f6ee0c4818b154657f21468fbd" visibility="package" />
-          <item id="d733c69bbbfa47fd95419a71f4dd0e02" cid="PROP012" type="property" name="state" owner="9ee27247dd934ce8906c5799e06af6ad" creator="" creation-date="01/21/2026 16:57:38" visibility="private">
-            <structural-feature type="GameState" type-id="GameState" />
-          </item>
           <item id="f5f2ea3249334415a48224b1ad2152f5" cid="PROP019" type="property" name="columns" owner="114c0a62156f4d0888693ac5b856c054" creator="" creation-date="01/21/2026 17:02:20" visibility="private">
             <structural-feature type="Integer" type-id="Uml.Integer" />
           </item>
-          <item id="3cd4f23729f74e4ea96388e6d6e56723" cid="PROP004" type="property" name="brandingService" owner="d5aaffd2bb0d4704854bc99277e17fb5" creator="" creation-date="01/21/2026 16:41:35" visibility="private">
-            <structural-feature type="BrandingService" type-id="BrandingService" />
+          <item id="d733c69bbbfa47fd95419a71f4dd0e02" cid="PROP012" type="property" name="state" owner="9ee27247dd934ce8906c5799e06af6ad" creator="" creation-date="01/21/2026 16:57:38" visibility="private">
+            <structural-feature type="GameState" type-id="GameState" />
           </item>
           <item id="b7f72ce8dcea4c709baece3e75d1d0be" cid="PROP023" type="property" name="strategy" owner="30450284162b493382b1ec070834b157" creator="" creation-date="01/21/2026 17:07:03" visibility="private">
             <structural-feature type="IMoveStrategy" type-id="Class:c52574edd7c440668d6a12f75ca38c5c" />
+          </item>
+          <item id="3cd4f23729f74e4ea96388e6d6e56723" cid="PROP004" type="property" name="brandingService" owner="d5aaffd2bb0d4704854bc99277e17fb5" creator="" creation-date="01/21/2026 16:41:35" visibility="private">
+            <structural-feature type="BrandingService" type-id="BrandingService" />
           </item>
           <item id="e2a992a34d0b441c9494f8b7649e363d" cid="C005" type="class" name="HelpController" owner="e3fda826b2544853b0c5b3e718fa31c6" creator="" creation-date="01/21/2026 16:40:16" visibility="undefined">
             <operations>
@@ -991,7 +1008,7 @@
           </item>
         </layer>
       </diagram>
-      <diagram type="uml-class" id="d3629a4507254231824055d090f7dde9" name="FCConnect ClassDiagramm" order-index="1" uid="" name-style="" auto-routed-paths="false" default-line-style="default" view-location="1,974" zoom="1.2">
+      <diagram type="uml-class" id="d3629a4507254231824055d090f7dde9" name="FCConnect ClassDiagramm" order-index="1" uid="" name-style="" auto-routed-paths="false" default-line-style="default" view-location="1,203" zoom="1.2">
         <style>
           <background-color index="1" color="#FFFFFFFF" />
           <background-color index="2" color="#FFFFFFFF" />
@@ -1003,238 +1020,87 @@
           </authors>
           <description />
           <creation-date>01/21/2026 16:26:05</creation-date>
-          <change-date>04/15/2026 19:31:03</change-date>
+          <change-date>04/21/2026 11:25:19</change-date>
           <revision-count>0</revision-count>
           <version />
         </meta>
         <abstract-items>
-          <item id="8c1e6bdfbb594249bd73fadb73f33efe" veid="59ff4618354a4af48b5c275496ac07e4" cid="C023" type="class" name="GameController" creator="" creation-date="01/21/2026 16:34:06" visibility="undefined">
-            <owned-items />
-            <attributes>
-              <attribute id="5920ae03ac9a4449845f9925e4ad50b9" cid="PROP079" veid="a47a52362a86a4914ae41a15d5a326d0e826" name="game" creation-date="01/21/2026 16:34:16" property-ref="7e1bc45f4eeb400dbc7889ada4cac8b2" />
-            </attributes>
-            <operations>
-              <operation id="5b980c3157484900b35f8c4bac35822c" cid="OP001" veid="ob66d9f7551e346e786ea2f5838157584607" name="restartGame" creation-date="01/21/2026 16:34:36" type="void" type-id="void" visibility="public" />
-              <operation id="5acd8320631f4f92a60677920cb323a0" cid="OP002" veid="o156ebad57f284959879b37edae8a87d4960" name="backToMenu" creation-date="01/21/2026 16:34:58" type="void" type-id="void" visibility="public" />
-            </operations>
-          </item>
-          <item id="5ff82c4ba6bb44ec8f9272685b4c6e50" veid="e2a992a34d0b441c9494f8b7649e363d" cid="C026" type="class" name="HelpController" owner="a717fd53155c49d996ac3d21875d2295" creator="" creation-date="01/21/2026 16:40:16" visibility="undefined">
-            <operations>
-              <operation id="a4f15486c4364cfaaccfb426a9da5571" cid="OP011" veid="o753067c2e2284d35a45b06f2c26c152a975" name="backToGameScreen" creation-date="01/21/2026 16:40:24" type="void" type-id="void" visibility="public" />
-            </operations>
-          </item>
-          <item id="039e049b8e8f4044b778bb1f3f7626ab" veid="f4a645c4d61d4f79963c1d0a316e61d5" cid="C017" type="class" name="FourConnectRules" owner="b8c3ebe311464fd2a9cd8675668916f9" creator="" creation-date="01/21/2026 16:56:18" visibility="undefined" />
-          <item id="5a9e5c0a89674d5fb8b035630757b352" veid="6657ac1ea83249868a5cfd8d1862380d" cid="REL014" type="relationship" owner="4c5c0f8613d74cb6a95a54098334cee6" creator="" creation-date="01/21/2026 17:16:37" from="6e22af9e08704cde9329f72fde0170a3" to="09f43d1fc8274d22a6cf5b321842d80a" visibility="package">
-            <owned-items />
-            <relation from="6e22af9e08704cde9329f72fde0170a3" to="09f43d1fc8274d22a6cf5b321842d80a" derived="false">
-              <start-role id="umlar-d3d8ea2c-2a98-465c-8035-ac8fd949d8dc" name="" navigability="" association-type="composition" visibility="undefined" property-ref="92c988986cb64394a97ed002b2430252" />
-              <end-role id="umlar-20b2e4a2-e578-4265-8135-f6f11c782b25" name="" navigability="" association-type="association" visibility="undefined" property-ref="e5944ca235c44275b59cd2c0142cce33" />
-            </relation>
-          </item>
-          <item id="bc0373a0f7c846a6afeba3b55ccdd70b" veid="1cd365d59bcf48e09b9eb5cfc9ba3bdb" cid="PROP046" type="property" name="players" owner="f7b016b500cd497896e73822513290d6" creator="" creation-date="01/21/2026 16:57:50" visibility="private">
-            <structural-feature type="List&lt;FourConnectPlayer&gt;" type-id="List&lt;FourConnectPlayer&gt;" />
-          </item>
-          <item id="a717fd53155c49d996ac3d21875d2295" veid="e3fda826b2544853b0c5b3e718fa31c6" cid="PKG009" type="package" name="UIController" creator="" creation-date="01/21/2026 16:33:56" visibility="undefined">
-            <owned-items />
-          </item>
-          <item id="b8c3ebe311464fd2a9cd8675668916f9" veid="b151b294ff9c4fa580f4f746d7a65ac2" cid="PKG008" type="package" name="FourConnect" creator="" creation-date="01/21/2026 16:54:44" visibility="undefined">
-            <owned-items />
-          </item>
-          <item id="2c807c629a934598a011e7a1193a0a52" veid="c5da71ed2cbc4db1ac3d814ba25e6170" cid="PROP063" type="property" owner="d7dee5dffdc54718a1adef8cd9eacd2c" creator="" creation-date="01/21/2026 17:12:14" visibility="private">
-            <structural-feature multiplicity="1" type="FourConnectGame" type-id="Class:f7b016b500cd497896e73822513290d6" />
-            <property aggregation="composite" />
-          </item>
-          <item id="a0b9d6dacfdb429c9990d786705ecb82" veid="e06f85f06abf49e7957a784f161ed439" cid="C015" type="class" name="BrandingService" owner="22d45ef5d4f942cd83c5fc9002a2dfb1" creator="" creation-date="01/21/2026 16:44:01" visibility="undefined">
-            <operations>
-              <operation id="0e1199c6040c486f9b57f324e9dd7d35" cid="OP016" veid="o48e5d1ede1fb4b16a1dcad724397015a102" name="setTheme" creation-date="01/21/2026 16:44:08" type="void" type-id="void" visibility="public">
-                <parameters>
-                  <parameter id="p8f8fab451c254b50b571cc8cf9191aa8" name="themeId" type="String" type-id="Uml.String" creation-date="01/21/2026 16:44:23" />
-                </parameters>
-              </operation>
-            </operations>
-          </item>
-          <item id="bdfaf9acee9345debe128a672b605d7e" veid="9eca049fea38416ab0ab587b81123774" cid="PROP080" type="property" name="localizationService" owner="bda1f53a35e8465fafe0b34951ea1750" creator="" creation-date="01/21/2026 16:41:06" visibility="private">
-            <structural-feature type="LocalizationService" type-id="LocalizationService" />
-          </item>
-          <item id="1385797cf1454fe882dfa316d75cf305" veid="9adac257e7c541b09c61ee74e7748e77" cid="PROP054" type="property" name="x" owner="72a93e09f93d4a8db0513fa4dd8dcd7f" creator="" creation-date="01/21/2026 17:04:08" visibility="private">
-            <style style-name="Custom Style" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#3A555555" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" glow-color="#FFFFFF" accuracy="0.9">
-              <text-style type="name" color="#555555" font="Segoe UI;11.25;B" />
-              <text-style type="part-header" color="#1E1E1E" font="Verdana;9;I" />
-              <text-style type="text" color="#555555" font="Segoe UI;9.75;" horizontal-alignment="left" />
-              <text-style type="tagged-value" color="#555555" font="Segoe UI;9.75;" />
-              <text-style type="stereotype" color="#555555" font="Segoe UI;9;I" />
-              <background type="solid" colors="#F2F2F2,#F2F2F2" />
-              <border color="#555555" width="2" />
-              <label-connector color="#80000000" dash-style="Dash" />
-              <alternate-styles>
-                <alternate-style style-name="Alternate" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#322A2A2A" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" margin="3" glow-color="#FFFFFF" accuracy="0.9">
-                  <text-style type="name" color="#E9E9E9" font="Segoe UI;11.25;B" />
-                  <text-style type="part-header" color="#1E1E1E" font="Verdana;9;I" />
-                  <text-style type="text" color="#E9E9E9" font="Segoe UI;9.75;" horizontal-alignment="left" />
-                  <text-style type="tagged-value" color="#E9E9E9" font="Segoe UI;9.75;" />
-                  <text-style type="stereotype" color="#E9E9E9" font="Segoe UI;9;I" />
-                  <background type="solid" colors="#203D85,#203D85" />
-                  <border color="#203D85" width="2" />
-                  <label-connector color="#80000000" dash-style="Dash" />
-                </alternate-style>
-              </alternate-styles>
-            </style>
+          <item id="8c5f8bbd927845648941ffeaf87df278" veid="69856c17e89f490d97dbd5d58a90e551" cid="PROP047" type="property" name="currentPlayerIndex" owner="f7b016b500cd497896e73822513290d6" creator="" creation-date="01/21/2026 16:58:10" visibility="private">
             <structural-feature type="Integer" type-id="Uml.Integer" />
-          </item>
-          <item id="bc9fd361e10b410385b0156b39131fd8" veid="38724cacacd44398a94173e473b166f5" cid="REL013" type="relationship" owner="4c5c0f8613d74cb6a95a54098334cee6" creator="" creation-date="01/21/2026 17:16:27" from="6e22af9e08704cde9329f72fde0170a3" to="8b3711946b954d269d9d206b28c953fd" visibility="package">
-            <owned-items />
-            <relation from="6e22af9e08704cde9329f72fde0170a3" to="8b3711946b954d269d9d206b28c953fd" derived="false">
-              <start-role id="umlar-3d53e273-eb5e-43e6-b93e-424f8e428962" name="" navigability="" association-type="composition" visibility="undefined" property-ref="c5c3b702fa0344f2a423efe0a46f06c1" />
-              <end-role id="umlar-1fa4fe8f-4af1-4489-a8b7-781a0f807b7e" name="" navigability="" association-type="association" visibility="undefined" property-ref="ed3af53539154077a5dcd842f0f6c3ca" />
-            </relation>
-          </item>
-          <item id="fa55e1749084453780854fe0c923a5ea" veid="e6bad44916a940969c0a91e8741f74c0" cid="C022" type="class" name="FourConnectBotStrategy" owner="b8c3ebe311464fd2a9cd8675668916f9" creator="" creation-date="01/21/2026 17:09:20" visibility="undefined" />
-          <item id="bda1f53a35e8465fafe0b34951ea1750" veid="d5aaffd2bb0d4704854bc99277e17fb5" cid="C027" type="class" name="SettingsController" owner="a717fd53155c49d996ac3d21875d2295" creator="" creation-date="01/21/2026 16:40:57" visibility="undefined">
-            <owned-items />
-            <attributes>
-              <attribute id="a5fad90a2fd54cc39f11ebefec576ebe" cid="PROP080" veid="a83d32939b4f3464d83fd927abac89d93116" name="localizationService" creation-date="01/21/2026 16:41:06" property-ref="bdfaf9acee9345debe128a672b605d7e" />
-              <attribute id="d599cb05be944e84b17f331f5d0c2bef" cid="PROP081" veid="a9213a9700d4b479ab66d03078b89e982579" name="brandingService" creation-date="01/21/2026 16:41:35" property-ref="4265434973b94c51a18583f1548e621f" />
-            </attributes>
-            <operations>
-              <operation id="c04b6578d0ab44d98740915c82c2e338" cid="OP013" veid="o6ff4297430ec429e9755905d0d244bc2575" name="changeLanguage" creation-date="01/21/2026 16:41:50" type="void" type-id="void" visibility="public">
-                <parameters>
-                  <parameter id="pf91dc9d19e6847bb90721a9f61726411" name="languageCode" type="String" type-id="Uml.String" creation-date="01/21/2026 16:42:21" />
-                </parameters>
-              </operation>
-              <operation id="7b0aee0d7b5b475c8e2fc999bea2dbf2" cid="OP014" veid="oa5661bad79264f4e9cfd568f76d69bd4280" name="changeTheme" creation-date="01/21/2026 16:42:23" type="void" type-id="void" visibility="public">
-                <parameters>
-                  <parameter id="p3169e6d660634e1cbd0bbb99e0d63d62" name="themeId" type="String" type-id="Uml.String" creation-date="01/21/2026 16:42:46" />
-                </parameters>
-              </operation>
-            </operations>
           </item>
           <item id="0df99c7d193c43cf8f97b347723f9bbe" cid="PKG010" type="package" name="UIGameController" creator="" creation-date="04/15/2026 19:29:47" visibility="undefined">
             <owned-items />
           </item>
-          <item id="41b8f4c0084241f3a6a394f1f6b03bc7" veid="cfe7016eb86e4d2985f58a09610ceb5d" cid="PROP066" type="property" owner="4ef5785e028f4848b4c57539a6cfc2de" creator="" creation-date="01/21/2026 17:13:23" visibility="private">
-            <structural-feature multiplicity="*" type="Position" type-id="Class:72a93e09f93d4a8db0513fa4dd8dcd7f" />
+          <item id="2180dd136dd34d7fa0bfc8da3b4a19f4" veid="90a3d7d80dfa4ac286ad51d2d6dac2be" cid="E005" type="enumeration" name="GameState" owner="4c5c0f8613d74cb6a95a54098334cee6" creator="" creation-date="01/21/2026 16:51:44" visibility="undefined">
+            <stereotypes>
+              <stereotype name="enumeration" />
+            </stereotypes>
+            <stereotype-instances>
+              <stereotype id="54d73a8355534b138de2a482d5d2654e" veid="aa5a84968dd144b4a350e6b01cf3270a_enumeration_c" type="enumeration" creation-date="01/21/2026 17:06:20" ref="" />
+            </stereotype-instances>
+            <enumeration-items>
+              <enumeration-item id="30123640fa6443549bd58758af9f95bf" cid="ENI001" veid="a288fa991d7fe4a23a16bff9f396d70ef313" name="NotStarted" creation-date="01/21/2026 16:51:51" />
+              <enumeration-item id="ca3dbc2780dd4243815a703e64f4b908" cid="ENI002" veid="a618c3d45e19241adb7dc41bac68d418d708" name="Running" creation-date="01/21/2026 16:51:59" />
+              <enumeration-item id="b4ccf7469d924a80a94298b5f6978440" cid="ENI003" veid="ad3682258b56b4c8f95c682f69a7a9c56159" name="Paused" creation-date="01/21/2026 16:52:05" />
+              <enumeration-item id="40f03449a74b4f84a8b75c91cd81bd25" cid="ENI004" veid="a4128fd6d428e4d848350defa4a516096299" name="Finished" creation-date="01/21/2026 16:52:11" />
+            </enumeration-items>
           </item>
-          <item id="4c5c0f8613d74cb6a95a54098334cee6" veid="235dd3ba128541c8b76a3a26fc6669d2" cid="PKG007" type="package" name="GameCore" creator="" creation-date="01/21/2026 16:46:58" visibility="undefined">
-            <owned-items />
+          <item id="79505cba31b9470f923a949aef066c30" veid="d4517b25d70840c7b0a35390d83dd218" cid="PROP076" type="property" owner="ddff13a5e857465d8f21c4cf914c904a" creator="" creation-date="01/21/2026 16:46:12" visibility="private">
+            <structural-feature type="BrandingService" type-id="Class:a0b9d6dacfdb429c9990d786705ecb82" />
           </item>
           <item id="0c745a78bb0d40b98d2dc127d07a7600" veid="e241604fcedb4aedb1c72cbd0c68588f" cid="REL022" type="relationship" creator="" creation-date="01/21/2026 16:46:17" from="bda1f53a35e8465fafe0b34951ea1750" to="dc0db5f90b7e4ee58e043b99b86fed1b" visibility="package">
             <owned-items />
             <relation from="bda1f53a35e8465fafe0b34951ea1750" to="dc0db5f90b7e4ee58e043b99b86fed1b" derived="false">
-              <start-role id="umlar-6d3e9946-c298-4115-81c8-1c2895297682" name="" navigability="" association-type="association" visibility="private" attribute-ref="a9213a9700d4b479ab66d03078b89e982579" property-ref="4b7487bdc7db4808ac7ef56f3e70c671" />
-              <end-role id="umlar-f653c47c-d1d9-4a78-84c0-3aefe4bf4397" name="" navigability="yes" association-type="association" visibility="private" property-ref="54eb744bb9e4444cbf08403112aa761e" />
+              <start-role id="umlar-976b07dd-de70-4c27-97c4-8e2540e2c954" name="" navigability="" association-type="association" visibility="private" attribute-ref="a9213a9700d4b479ab66d03078b89e982579" property-ref="4b7487bdc7db4808ac7ef56f3e70c671" />
+              <end-role id="umlar-e78bd559-2b9d-443b-abfb-b58509184921" name="" navigability="yes" association-type="association" visibility="private" property-ref="54eb744bb9e4444cbf08403112aa761e" />
             </relation>
           </item>
-          <item id="cd96c0224be14c108bac30642dc57fcc" veid="6998164ce9d74af39f74e63c9f3f6aa2" cid="C025" type="class" name="MainMenuController" owner="a717fd53155c49d996ac3d21875d2295" creator="" creation-date="01/21/2026 16:38:52" visibility="undefined">
-            <operations>
-              <operation id="1653be2e0c054e2aa114285e06e5114b" cid="OP007" veid="occf9420becdc4f60ac270b4c06c09ce9480" name="startGame" creation-date="01/21/2026 16:39:05" type="void" type-id="void" visibility="public" />
-              <operation id="657951e73f4841c1814a044fce5c7a08" cid="OP008" veid="oe4b5586c141045ad9e5f9e6bb403d00c423" name="openSetting" creation-date="01/21/2026 16:39:20" type="void" type-id="void" visibility="public" />
-              <operation id="71bfe171438049159bb5a5290be583a6" cid="OP019" veid="o71fbf92e8b1f47afa0896b7732039292735" name="backToMainMenu" creation-date="01/21/2026 16:49:04" type="void" type-id="void" visibility="public" />
-            </operations>
+          <item id="29cd3deb47204371ace3a7514041bb88" veid="4fa8635ff58445bfa24bf72465519d6b" cid="PROP060" type="property" owner="531a0e3971044d399e946636e9beeb97" creator="" creation-date="01/21/2026 17:11:52" visibility="private">
+            <structural-feature type="FourConnectRules" type-id="Class:039e049b8e8f4044b778bb1f3f7626ab" />
           </item>
-          <item id="6638d5439ef143a2a1f6f9c1a564d09a" veid="fcedc914296a4c6481b168dd670d186d" cid="PROP065" type="property" owner="4ef5785e028f4848b4c57539a6cfc2de" creator="" creation-date="01/21/2026 17:13:23" visibility="private">
-            <structural-feature multiplicity="1" type="FourConnectGameBoard" type-id="Class:5eca074071474844b40a11a77d5dc185" />
-          </item>
-          <item id="e70dfd5bb8db44989b9094c054ad97c9" veid="d733c69bbbfa47fd95419a71f4dd0e02" cid="PROP045" type="property" name="state" owner="f7b016b500cd497896e73822513290d6" creator="" creation-date="01/21/2026 16:57:38" visibility="private">
-            <structural-feature type="GameState" type-id="GameState" />
-          </item>
-          <item id="8d95088f9d094d11b6f9dec7e14dbeb5" veid="fb97efab8d8c4d94ab262d634f7a99a3" cid="PROP048" type="property" name="rules" owner="f7b016b500cd497896e73822513290d6" creator="" creation-date="01/21/2026 16:58:24" visibility="private">
-            <structural-feature type="FourConnectRules" type-id="Class:f4a645c4d61d4f79963c1d0a316e61d5" />
-          </item>
-          <item id="7e77da6c845145ffb0c32bdde1343e78" cid="I010" type="uml-interface-classifier" name="GameController" owner="a717fd53155c49d996ac3d21875d2295" creator="" creation-date="04/15/2026 15:45:37" visibility="undefined">
-            <stereotypes>
-              <stereotype name="interface" />
-            </stereotypes>
-            <stereotype-instances>
-              <stereotype id="7e77da6c845145ffb0c32bdde1343e78_interface_c" type="interface" creation-date="04/15/2026 15:45:37" ref="" />
-            </stereotype-instances>
-            <operations>
-              <operation id="o8ca3f966bfb24bc4bf1aec7dc6dc21aa199" cid="OP048" name="restartGame" creation-date="04/15/2026 15:45:54" type="" type-id="" visibility="public" />
-              <operation id="od68d6e69d1604239b6af83468b81dcfc525" cid="OP049" name="backToMainMenu" creation-date="04/15/2026 15:46:23" type="" type-id="" visibility="public" />
-              <operation id="o10e583eac1494a8b870c706d8b3c873d141" cid="OP050" name="openHelp" creation-date="04/15/2026 15:46:37" type="" type-id="" visibility="public" />
-            </operations>
-          </item>
-          <item id="3253984af76042b5b225716273550b00" veid="55c728c1da9b4f9f839218da72d73d3d" cid="PROP061" type="property" owner="b74079fb1a01499f971b5f257c655a13" creator="" creation-date="01/21/2026 17:12:03" visibility="private">
-            <structural-feature type="FourConnectGame" type-id="Class:f7b016b500cd497896e73822513290d6" />
-            <property aggregation="composite" />
-          </item>
-          <item id="e5944ca235c44275b59cd2c0142cce33" veid="49b65ed1d00b44c6894a925d4f47a4a7" cid="PROP072" type="property" owner="5a9e5c0a89674d5fb8b035630757b352" creator="" creation-date="01/21/2026 17:16:37" visibility="undefined" />
-          <item id="79505cba31b9470f923a949aef066c30" veid="d4517b25d70840c7b0a35390d83dd218" cid="PROP076" type="property" owner="ddff13a5e857465d8f21c4cf914c904a" creator="" creation-date="01/21/2026 16:46:12" visibility="private">
-            <structural-feature type="BrandingService" type-id="Class:a0b9d6dacfdb429c9990d786705ecb82" />
-          </item>
-          <item id="5ebc68d18c2d47d58ecc4c5ceb61ff19" veid="5a31962b4d0b42588217b53cfa76ffb3" cid="PROP068" type="property" name="0..1" owner="945559df37654c82ba25c363469f0792" creator="" creation-date="01/21/2026 17:14:48" visibility="undefined">
-            <structural-feature type="FourConnectPlayer" type-id="Class:2dcb0ee62aa14d54bbd09d1023540c0d" />
-          </item>
-          <item id="2b8f8ed8135241e8879a596a747a7e26" veid="45264151068147d39b8682218c096a4f" cid="PROP052" type="property" name="cells" owner="5eca074071474844b40a11a77d5dc185" creator="" creation-date="01/21/2026 17:02:08" visibility="private">
-            <structural-feature type="Map" type-id="Map" />
-          </item>
-          <item id="8def578795ce4732a88c0f99eaa78bf3" veid="616795de4c7c40a99f4718fb029eb68c" cid="PROP073" type="property" owner="a9bb7ebd3ac54461a9716f1e19d714aa" creator="" creation-date="01/21/2026 17:16:46" visibility="undefined" />
-          <item id="945559df37654c82ba25c363469f0792" veid="96bb919f058e4fb09cb86f653d6b4e6f" cid="REL020" type="relationship" creator="" creation-date="01/21/2026 17:14:48" from="fa55e1749084453780854fe0c923a5ea" to="2dcb0ee62aa14d54bbd09d1023540c0d" visibility="package">
-            <owned-items />
-            <relation from="fa55e1749084453780854fe0c923a5ea" to="2dcb0ee62aa14d54bbd09d1023540c0d" derived="false">
-              <start-role id="umlar-289b18c1-dde2-483c-9fb6-6b92350fb9ff" name="" navigability="" association-type="aggregation" visibility="private" property-ref="503d4acc44444cca894a87067515a3b3" />
-              <end-role id="umlar-9b30f56f-f654-4499-a4a8-6360378731bc" name="" navigability="" association-type="association" visibility="private" property-ref="5ebc68d18c2d47d58ecc4c5ceb61ff19" />
-            </relation>
+          <item id="42e0dac3bf564a12b87caf8767051f1f" veid="289750e14b314adea4506710ccdeed87" cid="PROP064" type="property" owner="d7dee5dffdc54718a1adef8cd9eacd2c" creator="" creation-date="01/21/2026 17:12:14" visibility="private">
+            <structural-feature multiplicity="2" type="FourConnectPlayer" type-id="Class:2dcb0ee62aa14d54bbd09d1023540c0d" />
           </item>
           <item id="0cd5ca77531b4472b448a926af5306ac" veid="d629b9308e9644188222cf300fbe7115" cid="PROP058" type="property" name="colour" owner="2dcb0ee62aa14d54bbd09d1023540c0d" creator="" creation-date="01/21/2026 17:07:23" visibility="private">
             <structural-feature type="String" type-id="Uml.String" />
           </item>
-          <item id="b30578332d5e4cf0913ff5109aae75d9" veid="487126ea3c71454ea60905eb22ff4e9c" cid="PROP059" type="property" owner="531a0e3971044d399e946636e9beeb97" creator="" creation-date="01/21/2026 17:11:52" visibility="private">
-            <structural-feature type="FourConnectGame" type-id="Class:f7b016b500cd497896e73822513290d6" />
-            <property aggregation="composite" />
+          <item id="4b7487bdc7db4808ac7ef56f3e70c671" veid="6c21e06651ac4c13a90394234325f082" cid="PROP077" type="property" owner="0c745a78bb0d40b98d2dc127d07a7600" creator="" creation-date="01/21/2026 16:46:17" visibility="private">
+            <structural-feature type="SettingsController" type-id="Class:bda1f53a35e8465fafe0b34951ea1750" />
           </item>
-          <item id="0e84cd9c65894cf292e0e15f3f29aa38" veid="c52574edd7c440668d6a12f75ca38c5c" cid="I008" type="uml-interface-classifier" name="IMoveStrategy" owner="4c5c0f8613d74cb6a95a54098334cee6" creator="" creation-date="01/21/2026 16:53:14" visibility="undefined">
-            <stereotypes>
-              <stereotype name="interface" />
-            </stereotypes>
-            <stereotype-instances>
-              <stereotype id="04f39f0103bb4caca85d2181a8b94ce1" veid="a30e649e5c2c49a2be89b4d53967443d_interface_c" type="interface" creation-date="01/21/2026 16:50:53" ref="" />
-            </stereotype-instances>
+          <item id="2dcb0ee62aa14d54bbd09d1023540c0d" veid="30450284162b493382b1ec070834b157" cid="C021" type="class" name="FourConnectPlayer" owner="b8c3ebe311464fd2a9cd8675668916f9" creator="" creation-date="01/21/2026 17:06:50" visibility="undefined">
+            <owned-items />
+            <attributes>
+              <attribute id="570cac634ff8458dbabf9fdb3964f709" cid="PROP056" veid="ae9537d2e344742a686f176fbbb8f261f648" name="type" creation-date="01/21/2026 17:06:56" property-ref="0606f6321ce54a1ab5f67b06d05f4330" />
+              <attribute id="87c167797ba04e26987f0bd0c16a414d" cid="PROP057" veid="a6fbc03a19c394d99809ccf777a111c55602" name="strategy" creation-date="01/21/2026 17:07:03" property-ref="820158fda90b4da194bd7055209aebce" />
+              <attribute id="9cb39b9310864655a0679ea6df0403d9" cid="PROP058" veid="aba4f7bfc3d9044afb9c377fbfff6b31a356" name="colour" creation-date="01/21/2026 17:07:23" property-ref="0cd5ca77531b4472b448a926af5306ac" />
+            </attributes>
             <operations>
-              <operation id="1a32cc6a7e6f48b3b1c3daa58ee1fea1" cid="OP028" veid="o948deff6277148b6bbbe975fe415942d470" name="chooseMove" creation-date="01/21/2026 16:53:26" type="void" type-id="void" visibility="public">
+              <operation id="84c7e0da204444e18e895ac5ccbd044c" cid="OP038" veid="o8805f49a76b644258c3c9a4d56f4aef0408" name="getType" creation-date="01/21/2026 17:07:30" type="Player" type-id="Player" visibility="public" />
+              <operation id="07953ab04ffe4899aa17b5c8c0aaebeb" cid="OP040" veid="oba0c76bf692d422fb98f2b0849a935b43" name="getStrategy" creation-date="01/21/2026 17:08:42" type="FourConnectBotStrategy" type-id="Class:e6bad44916a940969c0a91e8741f74c0" visibility="public" />
+              <operation id="of65fcf490dd548f0a646f4bf1ddbddb0697" cid="OP045" name="FourConnectPlayer" creation-date="04/15/2026 15:36:39" type="" type-id="" visibility="public">
                 <parameters>
-                  <parameter id="p89e10bc2abb34cefa103c2f513c3c3a6" name="board" type="IPlayArea" type-id="IPlayArea" creation-date="01/21/2026 16:53:56" />
+                  <parameter id="p32f2000abbff4ac1ae30084e99899e18" name="type" type="Player" type-id="Player" creation-date="04/15/2026 15:36:39">
+                    <tagged-values>
+                      <tagged-value id="tvd02217a81d13486daeff8bf0f1ed53ca" name="set_type" type="reference" multiple="false" hidden="false" ref="0606f6321ce54a1ab5f67b06d05f4330" />
+                    </tagged-values>
+                  </parameter>
+                  <parameter id="pcdd9c02cd4964ce18eced85148818cb2" name="strategy" type="FourConnectBotStrategy" type-id="Class:e6bad44916a940969c0a91e8741f74c0" creation-date="04/15/2026 15:36:39">
+                    <tagged-values>
+                      <tagged-value id="tve33236dfa14942ed8c83c5104e6e9eb8" name="set_strategy" type="reference" multiple="false" hidden="false" ref="820158fda90b4da194bd7055209aebce" />
+                    </tagged-values>
+                  </parameter>
+                  <parameter id="pd4baf1e0cbe24129a01e1ef2e6f59864" name="colour" type="String" type-id="Uml.String" creation-date="04/15/2026 15:36:39">
+                    <tagged-values>
+                      <tagged-value id="tv5dafa4fa63174c0582bbefe6889a719d" name="set_colour" type="reference" multiple="false" hidden="false" ref="0cd5ca77531b4472b448a926af5306ac" />
+                    </tagged-values>
+                  </parameter>
                 </parameters>
-                <source-codes>
-                  <source-code language="ActionScript" />
-                </source-codes>
+                <stereotypes>
+                  <stereotype>create</stereotype>
+                </stereotypes>
               </operation>
+              <operation id="offc13da5959d482a90aee78e702e039735" cid="OP046" name="getColour" creation-date="04/15/2026 15:38:15" type="String" type-id="Uml.String" visibility="public" />
             </operations>
-          </item>
-          <item id="531a0e3971044d399e946636e9beeb97" veid="2a82b0813bbc4348b8a4aef56bb266d5" cid="REL016" type="relationship" owner="b8c3ebe311464fd2a9cd8675668916f9" creator="" creation-date="01/21/2026 17:11:52" from="f7b016b500cd497896e73822513290d6" to="039e049b8e8f4044b778bb1f3f7626ab" visibility="package">
-            <owned-items />
-            <relation from="f7b016b500cd497896e73822513290d6" to="039e049b8e8f4044b778bb1f3f7626ab" derived="false">
-              <start-role id="umlar-82a99b3d-26ca-44da-ad87-1c56039e3870" name="" navigability="" association-type="composition" visibility="private" property-ref="b30578332d5e4cf0913ff5109aae75d9" />
-              <end-role id="umlar-5dac6a92-2371-4494-bdc3-3f64dd709e9d" name="" navigability="" association-type="association" visibility="private" property-ref="29cd3deb47204371ace3a7514041bb88" />
-            </relation>
-          </item>
-          <item id="32c18831e78f488890546a6b4e8d16c9" veid="68993c5e7c6946e58f2fbbaa38921329" cid="GNR007" type="generalization" creator="" creation-date="01/21/2026 17:15:16" from="fa55e1749084453780854fe0c923a5ea" to="0e84cd9c65894cf292e0e15f3f29aa38" visibility="package" />
-          <item id="22d45ef5d4f942cd83c5fc9002a2dfb1" veid="cae8a1620444425f8b0fb9744fcd1e09" cid="PKG006" type="package" name="infrastructure" creator="" creation-date="01/21/2026 16:43:50" visibility="undefined">
-            <owned-items />
-          </item>
-          <item id="4ef5785e028f4848b4c57539a6cfc2de" veid="a7cce9f30a4845499c8674f33684edd5" cid="REL019" type="relationship" owner="b8c3ebe311464fd2a9cd8675668916f9" creator="" creation-date="01/21/2026 17:13:23" from="5eca074071474844b40a11a77d5dc185" to="72a93e09f93d4a8db0513fa4dd8dcd7f" visibility="package">
-            <owned-items />
-            <relation from="5eca074071474844b40a11a77d5dc185" to="72a93e09f93d4a8db0513fa4dd8dcd7f" derived="false">
-              <start-role id="umlar-cb2630a7-03b2-4d06-aa75-b42e48cc51e7" name="" navigability="" association-type="association" visibility="private" property-ref="6638d5439ef143a2a1f6f9c1a564d09a" />
-              <end-role id="umlar-b4e28bd2-535d-4f5f-8c19-e3af76ffa5eb" name="" navigability="" association-type="association" visibility="private" property-ref="41b8f4c0084241f3a6a394f1f6b03bc7" />
-            </relation>
-          </item>
-          <item id="89469ca546e34147aa8ecb9fc65cd66e" veid="9b12df825647442bbb3b3be0c9ff29b5" cid="C024" type="class" name="FourConnectGameController" owner="0df99c7d193c43cf8f97b347723f9bbe" creator="" creation-date="01/21/2026 16:35:34" visibility="undefined">
-            <operations>
-              <operation id="b033358e7d0b4b2da1acc19c2407685b" cid="OP003" veid="o802f1de542c04e4db26b9c5d80466140396" name="handleColumnInput" creation-date="01/21/2026 16:35:45" type="void" type-id="void" visibility="public">
-                <parameters>
-                  <parameter id="pea89cd11c8e3419995720f0510b9f419" name="column" type="Integer" type-id="Uml.Integer" creation-date="01/21/2026 16:36:10" />
-                </parameters>
-              </operation>
-              <operation id="700464fd5aa34522ae8430778bdc0d71" cid="OP006" veid="ocd33895b580c454588a2ec1f975f0ae6521" name="openHelp" creation-date="01/21/2026 16:37:02" type="void" type-id="void" visibility="public" />
-              <operation id="ode19f036873948f1861cd8fa9b470ace822" cid="OP051" name="restartGame" creation-date="04/15/2026 15:50:40" type="void" type-id="void" visibility="public" />
-            </operations>
-          </item>
-          <item id="a9bb7ebd3ac54461a9716f1e19d714aa" veid="c046c987ae0b47bba342b2db46fb54ec" cid="REL015" type="relationship" owner="4c5c0f8613d74cb6a95a54098334cee6" creator="" creation-date="01/21/2026 17:16:46" from="0e84cd9c65894cf292e0e15f3f29aa38" to="8b3711946b954d269d9d206b28c953fd" visibility="package">
-            <owned-items />
-            <relation from="0e84cd9c65894cf292e0e15f3f29aa38" to="8b3711946b954d269d9d206b28c953fd" derived="false">
-              <start-role id="umlar-8b0dfbb6-ba45-426a-9e87-877cefc5afab" name="" navigability="" association-type="association" visibility="undefined" property-ref="8def578795ce4732a88c0f99eaa78bf3" />
-              <end-role id="umlar-e8e14cae-9fbb-41e6-ae0b-a11f6c2b7382" name="" navigability="" association-type="association" visibility="undefined" property-ref="fa7d142abb7f4a3e88719aa022c84aa1" />
-            </relation>
           </item>
           <item id="819e2079d0384ed6bd35f7039e405910" veid="8ebd231ded884da5b86e34430f981036" cid="PROP055" type="property" name="y" owner="72a93e09f93d4a8db0513fa4dd8dcd7f" creator="" creation-date="01/21/2026 17:04:15" visibility="private">
             <style style-name="Custom Style" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#3A555555" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" glow-color="#FFFFFF" accuracy="0.9">
@@ -1261,18 +1127,354 @@
             </style>
             <structural-feature type="Integer" type-id="Uml.Integer" />
           </item>
-          <item id="c81f62901b1a4fce83c68b6da3bd475c" veid="aa5a84968dd144b4a350e6b01cf3270a" cid="E006" type="enumeration" name="Player" owner="b8c3ebe311464fd2a9cd8675668916f9" creator="" creation-date="01/21/2026 17:06:20" visibility="undefined">
+          <item id="4265434973b94c51a18583f1548e621f" veid="3cd4f23729f74e4ea96388e6d6e56723" cid="PROP081" type="property" name="brandingService" owner="bda1f53a35e8465fafe0b34951ea1750" creator="" creation-date="01/21/2026 16:41:35" visibility="private">
+            <structural-feature type="BrandingService" type-id="BrandingService" />
+          </item>
+          <item id="2b8f8ed8135241e8879a596a747a7e26" veid="45264151068147d39b8682218c096a4f" cid="PROP052" type="property" name="cells" owner="5eca074071474844b40a11a77d5dc185" creator="" creation-date="01/21/2026 17:02:08" visibility="private">
+            <structural-feature type="Map" type-id="Map" />
+          </item>
+          <item id="fa55e1749084453780854fe0c923a5ea" veid="e6bad44916a940969c0a91e8741f74c0" cid="C022" type="class" name="FourConnectBotStrategy" owner="b8c3ebe311464fd2a9cd8675668916f9" creator="" creation-date="01/21/2026 17:09:20" visibility="undefined" />
+          <item id="54eb744bb9e4444cbf08403112aa761e" veid="09fb9639db6844f680919ea29803eb15" cid="PROP078" type="property" owner="0c745a78bb0d40b98d2dc127d07a7600" creator="" creation-date="01/21/2026 16:46:17" visibility="private">
+            <structural-feature type="LocaliziationService" type-id="Class:dc0db5f90b7e4ee58e043b99b86fed1b" />
+          </item>
+          <item id="3b8ba5cb2d70435db155d622d81835f9" veid="f5f2ea3249334415a48224b1ad2152f5" cid="PROP053" type="property" name="COLUM_COUNTS" owner="5eca074071474844b40a11a77d5dc185" creator="" creation-date="01/21/2026 17:02:20" visibility="private">
+            <structural-feature type="Integer" type-id="Uml.Integer" />
+          </item>
+          <item id="b8c3ebe311464fd2a9cd8675668916f9" veid="b151b294ff9c4fa580f4f746d7a65ac2" cid="PKG008" type="package" name="FourConnect" creator="" creation-date="01/21/2026 16:54:44" visibility="undefined">
+            <owned-items />
+          </item>
+          <item id="a9bb7ebd3ac54461a9716f1e19d714aa" veid="c046c987ae0b47bba342b2db46fb54ec" cid="REL015" type="relationship" owner="4c5c0f8613d74cb6a95a54098334cee6" creator="" creation-date="01/21/2026 17:16:46" from="0e84cd9c65894cf292e0e15f3f29aa38" to="8b3711946b954d269d9d206b28c953fd" visibility="package">
+            <owned-items />
+            <relation from="0e84cd9c65894cf292e0e15f3f29aa38" to="8b3711946b954d269d9d206b28c953fd" derived="false">
+              <start-role id="umlar-f175a4a4-0bbd-4a52-b803-c4ac727f5500" name="" navigability="" association-type="association" visibility="undefined" property-ref="8def578795ce4732a88c0f99eaa78bf3" />
+              <end-role id="umlar-56b15d03-4625-456e-aafe-dd6b797ebab5" name="" navigability="" association-type="association" visibility="undefined" property-ref="fa7d142abb7f4a3e88719aa022c84aa1" />
+            </relation>
+          </item>
+          <item id="5ebc68d18c2d47d58ecc4c5ceb61ff19" veid="5a31962b4d0b42588217b53cfa76ffb3" cid="PROP068" type="property" name="0..1" owner="945559df37654c82ba25c363469f0792" creator="" creation-date="01/21/2026 17:14:48" visibility="undefined">
+            <structural-feature type="FourConnectPlayer" type-id="Class:2dcb0ee62aa14d54bbd09d1023540c0d" />
+          </item>
+          <item id="bc0373a0f7c846a6afeba3b55ccdd70b" veid="1cd365d59bcf48e09b9eb5cfc9ba3bdb" cid="PROP046" type="property" name="players" owner="f7b016b500cd497896e73822513290d6" creator="" creation-date="01/21/2026 16:57:50" visibility="private">
+            <structural-feature type="List&lt;FourConnectPlayer&gt;" type-id="List&lt;FourConnectPlayer&gt;" />
+          </item>
+          <item id="9a99a811a32e43b8967862a1e5b3db49" veid="ab6a9e2d20e04e6e8f6a6b8856109442" cid="PROP049" type="property" name="gameBoard" owner="f7b016b500cd497896e73822513290d6" creator="" creation-date="01/21/2026 16:58:50" visibility="private">
+            <structural-feature type="FourConnectGameBoard" type-id="FourConnectGameBoard" />
+          </item>
+          <item id="22d45ef5d4f942cd83c5fc9002a2dfb1" veid="cae8a1620444425f8b0fb9744fcd1e09" cid="PKG006" type="package" name="infrastructure" creator="" creation-date="01/21/2026 16:43:50" visibility="undefined">
+            <owned-items />
+          </item>
+          <item id="bdfaf9acee9345debe128a672b605d7e" veid="9eca049fea38416ab0ab587b81123774" cid="PROP080" type="property" name="localizationService" owner="bda1f53a35e8465fafe0b34951ea1750" creator="" creation-date="01/21/2026 16:41:06" visibility="private">
+            <structural-feature type="LocalizationService" type-id="LocalizationService" />
+          </item>
+          <item id="5a9e5c0a89674d5fb8b035630757b352" veid="6657ac1ea83249868a5cfd8d1862380d" cid="REL014" type="relationship" owner="4c5c0f8613d74cb6a95a54098334cee6" creator="" creation-date="01/21/2026 17:16:37" from="6e22af9e08704cde9329f72fde0170a3" to="09f43d1fc8274d22a6cf5b321842d80a" visibility="package">
+            <owned-items />
+            <relation from="6e22af9e08704cde9329f72fde0170a3" to="09f43d1fc8274d22a6cf5b321842d80a" derived="false">
+              <start-role id="umlar-4a1bfd0b-d95a-4bba-bbd4-be06abc2c6dc" name="" navigability="" association-type="composition" visibility="undefined" property-ref="92c988986cb64394a97ed002b2430252" />
+              <end-role id="umlar-4e1c0c60-72b1-4dc8-aafa-d42a6f4b68dc" name="" navigability="" association-type="association" visibility="undefined" property-ref="e5944ca235c44275b59cd2c0142cce33" />
+            </relation>
+          </item>
+          <item id="2c807c629a934598a011e7a1193a0a52" veid="c5da71ed2cbc4db1ac3d814ba25e6170" cid="PROP063" type="property" owner="d7dee5dffdc54718a1adef8cd9eacd2c" creator="" creation-date="01/21/2026 17:12:14" visibility="private">
+            <structural-feature multiplicity="1" type="FourConnectGame" type-id="Class:f7b016b500cd497896e73822513290d6" />
+            <property aggregation="composite" />
+          </item>
+          <item id="039e049b8e8f4044b778bb1f3f7626ab" veid="f4a645c4d61d4f79963c1d0a316e61d5" cid="C017" type="class" name="FourConnectRules" owner="b8c3ebe311464fd2a9cd8675668916f9" creator="" creation-date="01/21/2026 16:56:18" visibility="undefined" />
+          <item id="3253984af76042b5b225716273550b00" veid="55c728c1da9b4f9f839218da72d73d3d" cid="PROP061" type="property" owner="b74079fb1a01499f971b5f257c655a13" creator="" creation-date="01/21/2026 17:12:03" visibility="private">
+            <structural-feature type="FourConnectGame" type-id="Class:f7b016b500cd497896e73822513290d6" />
+            <property aggregation="composite" />
+          </item>
+          <item id="6638d5439ef143a2a1f6f9c1a564d09a" veid="fcedc914296a4c6481b168dd670d186d" cid="PROP065" type="property" owner="4ef5785e028f4848b4c57539a6cfc2de" creator="" creation-date="01/21/2026 17:13:23" visibility="private">
+            <structural-feature multiplicity="1" type="FourConnectGameBoard" type-id="Class:5eca074071474844b40a11a77d5dc185" />
+          </item>
+          <item id="945559df37654c82ba25c363469f0792" veid="96bb919f058e4fb09cb86f653d6b4e6f" cid="REL020" type="relationship" creator="" creation-date="01/21/2026 17:14:48" from="fa55e1749084453780854fe0c923a5ea" to="2dcb0ee62aa14d54bbd09d1023540c0d" visibility="package">
+            <owned-items />
+            <relation from="fa55e1749084453780854fe0c923a5ea" to="2dcb0ee62aa14d54bbd09d1023540c0d" derived="false">
+              <start-role id="umlar-de0ff704-d3f6-44cd-8e5a-bf2a3b2691d9" name="" navigability="" association-type="aggregation" visibility="private" property-ref="503d4acc44444cca894a87067515a3b3" />
+              <end-role id="umlar-9205af57-379c-43b0-b482-a8161040e90c" name="" navigability="" association-type="association" visibility="private" property-ref="5ebc68d18c2d47d58ecc4c5ceb61ff19" />
+            </relation>
+          </item>
+          <item id="92c988986cb64394a97ed002b2430252" veid="27d1c6062ba64f388f1824b24b67609f" cid="PROP071" type="property" owner="5a9e5c0a89674d5fb8b035630757b352" creator="" creation-date="01/21/2026 17:16:37" visibility="undefined">
+            <property aggregation="composite" />
+          </item>
+          <item id="b33082fe55304189ba1ab35958610998" veid="429c557d43d1451db57896c34a93aa59" cid="PROP062" type="property" owner="b74079fb1a01499f971b5f257c655a13" creator="" creation-date="01/21/2026 17:12:03" visibility="private">
+            <structural-feature type="FourConnectGameBoard" type-id="Class:5eca074071474844b40a11a77d5dc185" />
+          </item>
+          <item id="a717fd53155c49d996ac3d21875d2295" veid="e3fda826b2544853b0c5b3e718fa31c6" cid="PKG009" type="package" name="UIController" creator="" creation-date="01/21/2026 16:33:56" visibility="undefined">
+            <owned-items />
+          </item>
+          <item id="bc9fd361e10b410385b0156b39131fd8" veid="38724cacacd44398a94173e473b166f5" cid="REL013" type="relationship" owner="4c5c0f8613d74cb6a95a54098334cee6" creator="" creation-date="01/21/2026 17:16:27" from="6e22af9e08704cde9329f72fde0170a3" to="8b3711946b954d269d9d206b28c953fd" visibility="package">
+            <owned-items />
+            <relation from="6e22af9e08704cde9329f72fde0170a3" to="8b3711946b954d269d9d206b28c953fd" derived="false">
+              <start-role id="umlar-b7421680-4bc6-4c93-95ec-4017a5f93165" name="" navigability="" association-type="composition" visibility="undefined" property-ref="c5c3b702fa0344f2a423efe0a46f06c1" />
+              <end-role id="umlar-f43e9216-5e34-4230-a59d-429b5c7a22dd" name="" navigability="" association-type="association" visibility="undefined" property-ref="ed3af53539154077a5dcd842f0f6c3ca" />
+            </relation>
+          </item>
+          <item id="5ff82c4ba6bb44ec8f9272685b4c6e50" veid="e2a992a34d0b441c9494f8b7649e363d" cid="C026" type="class" name="HelpController" owner="a717fd53155c49d996ac3d21875d2295" creator="" creation-date="01/21/2026 16:40:16" visibility="undefined">
+            <operations>
+              <operation id="a4f15486c4364cfaaccfb426a9da5571" cid="OP011" veid="o753067c2e2284d35a45b06f2c26c152a975" name="backToGameScreen" creation-date="01/21/2026 16:40:24" type="void" type-id="void" visibility="public" />
+            </operations>
+          </item>
+          <item id="7e1bc45f4eeb400dbc7889ada4cac8b2" veid="5c0e6d7a857747f8a316a2113ef3d6f6" cid="PROP079" type="property" name="game" owner="8c1e6bdfbb594249bd73fadb73f33efe" creator="" creation-date="01/21/2026 16:34:16" visibility="private">
+            <structural-feature type="IGame" type-id="IGame" />
+          </item>
+          <item id="0c100c76382948d69064a73078ac3078" cid="REL023" type="relationship" creator="" creation-date="04/21/2026 11:25:19" from="89469ca546e34147aa8ecb9fc65cd66e" to="f7b016b500cd497896e73822513290d6" visibility="package">
+            <owned-items />
+            <relation from="89469ca546e34147aa8ecb9fc65cd66e" to="f7b016b500cd497896e73822513290d6" derived="false">
+              <start-role id="umlar-32ceb8c7-e6e0-4d94-9bdb-3c135501949c" name="" navigability="" association-type="association" visibility="private" property-ref="f0f5cb6f78834b56aadf00bb722c2030" />
+              <end-role id="umlar-adece10e-a2d5-4a71-8f84-13171d0aa242" name="" navigability="" association-type="association" visibility="private" property-ref="45a1c340aeb7446a9f2a8b2ef30b90f3" />
+            </relation>
+          </item>
+          <item id="e5944ca235c44275b59cd2c0142cce33" veid="49b65ed1d00b44c6894a925d4f47a4a7" cid="PROP072" type="property" owner="5a9e5c0a89674d5fb8b035630757b352" creator="" creation-date="01/21/2026 17:16:37" visibility="undefined" />
+          <item id="41b8f4c0084241f3a6a394f1f6b03bc7" veid="cfe7016eb86e4d2985f58a09610ceb5d" cid="PROP066" type="property" owner="4ef5785e028f4848b4c57539a6cfc2de" creator="" creation-date="01/21/2026 17:13:23" visibility="private">
+            <structural-feature multiplicity="*" type="Position" type-id="Class:72a93e09f93d4a8db0513fa4dd8dcd7f" />
+          </item>
+          <item id="ddff13a5e857465d8f21c4cf914c904a" veid="453da417bd7a41c1887aa210ec2c90dc" cid="REL021" type="relationship" creator="" creation-date="01/21/2026 16:46:12" from="bda1f53a35e8465fafe0b34951ea1750" to="a0b9d6dacfdb429c9990d786705ecb82" visibility="package">
+            <owned-items />
+            <relation from="bda1f53a35e8465fafe0b34951ea1750" to="a0b9d6dacfdb429c9990d786705ecb82" derived="false">
+              <start-role id="umlar-7890031d-41ff-43a2-bb95-218efabec579" name="" navigability="" association-type="association" visibility="private" property-ref="73fb5e3afb3b467dbb71d882ea39bf28" />
+              <end-role id="umlar-9b2b4e12-88b0-460f-93e9-422a2157f7f5" name="" navigability="yes" association-type="association" visibility="private" property-ref="79505cba31b9470f923a949aef066c30" />
+            </relation>
+          </item>
+          <item id="8d95088f9d094d11b6f9dec7e14dbeb5" veid="fb97efab8d8c4d94ab262d634f7a99a3" cid="PROP048" type="property" name="rules" owner="f7b016b500cd497896e73822513290d6" creator="" creation-date="01/21/2026 16:58:24" visibility="private">
+            <structural-feature type="FourConnectRules" type-id="Class:f4a645c4d61d4f79963c1d0a316e61d5" />
+          </item>
+          <item id="b74079fb1a01499f971b5f257c655a13" veid="cb456ef66a5647569551d411a59c49d7" cid="REL017" type="relationship" owner="b8c3ebe311464fd2a9cd8675668916f9" creator="" creation-date="01/21/2026 17:12:03" from="f7b016b500cd497896e73822513290d6" to="5eca074071474844b40a11a77d5dc185" visibility="package">
+            <owned-items />
+            <relation from="f7b016b500cd497896e73822513290d6" to="5eca074071474844b40a11a77d5dc185" derived="false">
+              <start-role id="umlar-dca8400c-55ad-496b-8a16-de6e4f7911e8" name="" navigability="" association-type="composition" visibility="private" property-ref="3253984af76042b5b225716273550b00" />
+              <end-role id="umlar-663327b1-a154-45e1-a111-c404cf14b368" name="" navigability="" association-type="association" visibility="private" property-ref="b33082fe55304189ba1ab35958610998" />
+            </relation>
+          </item>
+          <item id="1385797cf1454fe882dfa316d75cf305" veid="9adac257e7c541b09c61ee74e7748e77" cid="PROP054" type="property" name="x" owner="72a93e09f93d4a8db0513fa4dd8dcd7f" creator="" creation-date="01/21/2026 17:04:08" visibility="private">
+            <style style-name="Custom Style" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#3A555555" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" glow-color="#FFFFFF" accuracy="0.9">
+              <text-style type="name" color="#555555" font="Segoe UI;11.25;B" />
+              <text-style type="part-header" color="#1E1E1E" font="Verdana;9;I" />
+              <text-style type="text" color="#555555" font="Segoe UI;9.75;" horizontal-alignment="left" />
+              <text-style type="tagged-value" color="#555555" font="Segoe UI;9.75;" />
+              <text-style type="stereotype" color="#555555" font="Segoe UI;9;I" />
+              <background type="solid" colors="#F2F2F2,#F2F2F2" />
+              <border color="#555555" width="2" />
+              <label-connector color="#80000000" dash-style="Dash" />
+              <alternate-styles>
+                <alternate-style style-name="Alternate" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#322A2A2A" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" margin="3" glow-color="#FFFFFF" accuracy="0.9">
+                  <text-style type="name" color="#E9E9E9" font="Segoe UI;11.25;B" />
+                  <text-style type="part-header" color="#1E1E1E" font="Verdana;9;I" />
+                  <text-style type="text" color="#E9E9E9" font="Segoe UI;9.75;" horizontal-alignment="left" />
+                  <text-style type="tagged-value" color="#E9E9E9" font="Segoe UI;9.75;" />
+                  <text-style type="stereotype" color="#E9E9E9" font="Segoe UI;9;I" />
+                  <background type="solid" colors="#203D85,#203D85" />
+                  <border color="#203D85" width="2" />
+                  <label-connector color="#80000000" dash-style="Dash" />
+                </alternate-style>
+              </alternate-styles>
+            </style>
+            <structural-feature type="Integer" type-id="Uml.Integer" />
+          </item>
+          <item id="f7b016b500cd497896e73822513290d6" veid="9ee27247dd934ce8906c5799e06af6ad" cid="C018" type="class" name="FourConnectGame" owner="b8c3ebe311464fd2a9cd8675668916f9" creator="" creation-date="01/21/2026 16:57:29" visibility="undefined">
+            <owned-items />
+            <attributes>
+              <attribute id="50c68b7c94144fb0b620658b79afb09e" cid="PROP045" veid="ab636c007e3c9468ea14b9815e2d3b683352" name="state" creation-date="01/21/2026 16:57:38" property-ref="e70dfd5bb8db44989b9094c054ad97c9" />
+              <attribute id="1e70c2ce4d874c138e45080222840699" cid="PROP046" veid="a3eab5ba2ecf74d95b903037875ea0724796" name="players" creation-date="01/21/2026 16:57:50" property-ref="bc0373a0f7c846a6afeba3b55ccdd70b" />
+              <attribute id="ac43d26567494789919de3b33c70c94c" cid="PROP047" veid="a08fe352928514d589df7680a00271c88413" name="currentPlayerIndex" creation-date="01/21/2026 16:58:10" property-ref="8c5f8bbd927845648941ffeaf87df278" />
+              <attribute id="ec19b4a6d208466ea3adaa93ec2ebb3a" cid="PROP048" veid="ac3e39cf346054df3847951a4b4b68b1d916" name="rules" creation-date="01/21/2026 16:58:24" property-ref="8d95088f9d094d11b6f9dec7e14dbeb5" />
+              <attribute id="47b394d3785f48038c56cf5304eb256c" cid="PROP049" veid="aac5efbcde5a24564848a0a7f815ba3c4952" name="gameBoard" creation-date="01/21/2026 16:58:50" property-ref="9a99a811a32e43b8967862a1e5b3db49" />
+              <attribute id="aeec9f919b364073b950c83adf8ba746" cid="PROP050" veid="a5f06dc839945421e849d08a79a7312fe914" name="gamemode" creation-date="01/21/2026 17:10:22" property-ref="bfb2215b461a49a6a0dd7a440febd663" />
+            </attributes>
+            <operations>
+              <operation id="80124531a4df4465835a9c277b734a7c" cid="OP029" veid="oae5321eb3ab54f59a91a1e049d327f46116" name="dropDisc" creation-date="01/21/2026 16:58:24" type="Integer" type-id="Uml.Integer" visibility="public">
+                <parameters>
+                  <parameter id="p2301f5454b0c4e528ec1756f3e865b16" name="column" type="Integer" type-id="Uml.Integer" creation-date="01/21/2026 17:00:06" />
+                </parameters>
+              </operation>
+              <operation id="6ad04fad16c9443ba370d83b415f7bdb" cid="OP030" veid="o4743b1dff5004374828ddd36833da849888" name="playerTurn" creation-date="01/21/2026 17:00:08" type="void" type-id="void" visibility="public" />
+              <operation id="316ef85346d94219844506b1f159d6d9" cid="OP031" veid="odb94cb8a565644e99254f7f4bf292c9a48" name="initFourConnectGame" creation-date="01/21/2026 17:00:54" type="Integer" type-id="Uml.Integer" visibility="public">
+                <parameters>
+                  <parameter id="p16bc07e008844fe49910a763761f6c33" name="playerOne" type="Player" type-id="Player" creation-date="01/21/2026 17:01:32" />
+                  <parameter id="p0bd63491186a44f78e5796ce9831068c" name="playerTwo" type="Player" type-id="Player" creation-date="01/21/2026 17:01:32" />
+                </parameters>
+              </operation>
+            </operations>
+          </item>
+          <item id="e70dfd5bb8db44989b9094c054ad97c9" veid="d733c69bbbfa47fd95419a71f4dd0e02" cid="PROP045" type="property" name="state" owner="f7b016b500cd497896e73822513290d6" creator="" creation-date="01/21/2026 16:57:38" visibility="private">
+            <structural-feature type="GameState" type-id="GameState" />
+          </item>
+          <item id="5eca074071474844b40a11a77d5dc185" veid="114c0a62156f4d0888693ac5b856c054" cid="C019" type="class" name="FourConnectGameBoard" owner="b8c3ebe311464fd2a9cd8675668916f9" creator="" creation-date="01/21/2026 17:01:50" visibility="undefined">
+            <owned-items />
+            <attributes>
+              <attribute id="65ab8b5a138f4081a34d359d7b1fd289" cid="PROP051" veid="ac05cfa30a19c45318aea5c765dd103a6370" name="ROW_COUNTS" creation-date="01/21/2026 17:02:00" property-ref="8bb88cd3b2d54cce92b3f50f5781bd21" />
+              <attribute id="2470f9d922e54a09bbb13d638b5f6f7e" cid="PROP052" veid="a90f0694eda4b47bbb97e45426f15623f331" name="cells" creation-date="01/21/2026 17:02:08" property-ref="2b8f8ed8135241e8879a596a747a7e26" />
+              <attribute id="fca0b6b424ab4d8d8dd9495640f1a6b6" cid="PROP053" veid="a419f59c34f1946719d6b891d41f2fce0907" name="COLUM_COUNTS" creation-date="01/21/2026 17:02:20" property-ref="3b8ba5cb2d70435db155d622d81835f9" />
+            </attributes>
+            <operations>
+              <operation id="69d69e0b794c46a486f15c04eb8814b6" cid="OP032" veid="ofe68bfcf5e0e4de9b3c1a92fa43759cc470" name="getRows" creation-date="01/21/2026 17:02:32" type="Integer" type-id="Uml.Integer" visibility="public" />
+              <operation id="1eec97bf02cc4652890a0e0f06eb9649" cid="OP033" veid="ofb2b47f6765649fa9ea4be301a386f73271" name="getColumns" creation-date="01/21/2026 17:02:46" type="Integer" type-id="Uml.Integer" visibility="public" />
+              <operation id="739a070d48714e1c99ba611ded368747" cid="OP034" veid="o0ed46da8b5b64a7280eabd2d30c1584d659" name="getCellOwner" creation-date="01/21/2026 17:03:02" type="FourConnectPlayer" type-id="FourConnectPlayer" visibility="public">
+                <parameters>
+                  <parameter id="pd1b73c96712147ae9224a6792a54cc00" name="x" type="Integer" type-id="Uml.Integer" creation-date="04/19/2026 15:14:21" />
+                  <parameter id="p7d57cf80a32c48c8a003c399432093ef" name="y" type="Integer" type-id="Uml.Integer" creation-date="04/19/2026 15:14:21" />
+                </parameters>
+              </operation>
+              <operation id="203e4c6892e64942b692ff850da0fb3c" cid="OP035" veid="o64f91fecb5db4ab78e9eaa1cc9107d49623" name="setCellValue" creation-date="01/21/2026 17:03:20" type="Integer" type-id="Uml.Integer" visibility="public">
+                <parameters>
+                  <parameter id="pc8b9142cfbf44465a3dba83acdabf0c5" name="cell" type="Position" type-id="Position" creation-date="01/21/2026 17:03:53" />
+                  <parameter id="p93af5be9d00448ba88d19b884f2a15d1" name="currentPlayer" type="FourConnectPlayer" type-id="FourConnectPlayer" creation-date="01/21/2026 17:03:53" />
+                </parameters>
+              </operation>
+              <operation id="o4c3526ec89104d6fbc96ce337d3deaa5802" cid="OP044" name="FourConnectGameBoard" creation-date="04/15/2026 15:32:44" type="" type-id="" visibility="public">
+                <stereotypes>
+                  <stereotype>create</stereotype>
+                </stereotypes>
+              </operation>
+              <operation id="o97146f23996f46429bc14ed7899bd6b6917" cid="OP052" name="copy" creation-date="04/19/2026 15:14:36" type="(): void" type-id="(): void" visibility="public">
+                <parameters>
+                  <parameter id="p84e409305fb14cdfaeafe02c66d939a0" name="board" type="FourConnectGameBoard" type-id="FourConnectGameBoard" creation-date="04/19/2026 15:15:20" />
+                </parameters>
+              </operation>
+            </operations>
+          </item>
+          <item id="820158fda90b4da194bd7055209aebce" veid="b7f72ce8dcea4c709baece3e75d1d0be" cid="PROP057" type="property" name="strategy" owner="2dcb0ee62aa14d54bbd09d1023540c0d" creator="" creation-date="01/21/2026 17:07:03" visibility="private">
+            <structural-feature type="FourConnectBotStrategy" type-id="Class:e6bad44916a940969c0a91e8741f74c0" />
+          </item>
+          <item id="8b3711946b954d269d9d206b28c953fd" veid="b08b07f6ee0c4818b154657f21468fbd" cid="I007" type="uml-interface-classifier" name="IPlayArea" owner="4c5c0f8613d74cb6a95a54098334cee6" creator="" creation-date="01/21/2026 16:52:29" visibility="undefined">
             <stereotypes>
-              <stereotype name="enumeration" />
+              <stereotype name="interface" />
             </stereotypes>
             <stereotype-instances>
-              <stereotype id="54d73a8355534b138de2a482d5d2654e" veid="aa5a84968dd144b4a350e6b01cf3270a_enumeration_c" type="enumeration" creation-date="01/21/2026 17:06:20" ref="" />
+              <stereotype id="04f39f0103bb4caca85d2181a8b94ce1" veid="a30e649e5c2c49a2be89b4d53967443d_interface_c" type="interface" creation-date="01/21/2026 16:50:53" ref="" />
             </stereotype-instances>
-            <enumeration-items>
-              <enumeration-item id="70ec6ae96b1940979b81775ad0ce6c7b" cid="ENI007" veid="a7945df58b4f2456fb5749f45e2d6c8b1554" name="HUMAN" creation-date="01/21/2026 17:06:25" />
-              <enumeration-item id="ad7ac93509aa4e748e188cde009b565d" cid="ENI008" veid="a2b6b2bb0d38a454082a02b481943941c712" name="BOT" creation-date="01/21/2026 17:06:30" />
-              <enumeration-item id="0ff38238e06b44f0835dc465eff7f987" cid="ENI009" veid="a15cf9fa8ebd44c6883515376503c68a96" name="NONE" creation-date="01/21/2026 17:06:35" />
-            </enumeration-items>
+            <operations>
+              <operation id="2220bfeadf314befab975dea7f73e530" cid="OP026" veid="o8ebaaf44efc24cffa45ed00c93cea719697" name="isFull" creation-date="01/21/2026 16:52:35" type="Boolean" type-id="Uml.Boolean" visibility="public" />
+              <operation id="46c8f076295548debb940d6d332d2421" cid="OP027" veid="o3508b45e150644afb4ba83f64180b143736" name="clear" creation-date="01/21/2026 16:52:47" type="Integer" type-id="Uml.Integer" visibility="public" />
+            </operations>
+          </item>
+          <item id="bfb2215b461a49a6a0dd7a440febd663" veid="cf1fa4f03493424c9de71437ac6e8b62" cid="PROP050" type="property" name="gamemode" owner="f7b016b500cd497896e73822513290d6" creator="" creation-date="01/21/2026 17:10:22" visibility="private">
+            <structural-feature type="GameMode" type-id="Class:a73661b5928a4ae6a6a243be91e52412" />
+          </item>
+          <item id="8def578795ce4732a88c0f99eaa78bf3" veid="616795de4c7c40a99f4718fb029eb68c" cid="PROP073" type="property" owner="a9bb7ebd3ac54461a9716f1e19d714aa" creator="" creation-date="01/21/2026 17:16:46" visibility="undefined" />
+          <item id="531a0e3971044d399e946636e9beeb97" veid="2a82b0813bbc4348b8a4aef56bb266d5" cid="REL016" type="relationship" owner="b8c3ebe311464fd2a9cd8675668916f9" creator="" creation-date="01/21/2026 17:11:52" from="f7b016b500cd497896e73822513290d6" to="039e049b8e8f4044b778bb1f3f7626ab" visibility="package">
+            <owned-items />
+            <relation from="f7b016b500cd497896e73822513290d6" to="039e049b8e8f4044b778bb1f3f7626ab" derived="false">
+              <start-role id="umlar-c2cc4906-abb2-4b3f-aa29-f1fb08cfa174" name="" navigability="" association-type="composition" visibility="private" property-ref="b30578332d5e4cf0913ff5109aae75d9" />
+              <end-role id="umlar-bb4889e9-04b5-4faf-8ccf-0de73d2048bb" name="" navigability="" association-type="association" visibility="private" property-ref="29cd3deb47204371ace3a7514041bb88" />
+            </relation>
+          </item>
+          <item id="bda1f53a35e8465fafe0b34951ea1750" veid="d5aaffd2bb0d4704854bc99277e17fb5" cid="C027" type="class" name="SettingsController" owner="a717fd53155c49d996ac3d21875d2295" creator="" creation-date="01/21/2026 16:40:57" visibility="undefined">
+            <owned-items />
+            <attributes>
+              <attribute id="a5fad90a2fd54cc39f11ebefec576ebe" cid="PROP080" veid="a83d32939b4f3464d83fd927abac89d93116" name="localizationService" creation-date="01/21/2026 16:41:06" property-ref="bdfaf9acee9345debe128a672b605d7e" />
+              <attribute id="d599cb05be944e84b17f331f5d0c2bef" cid="PROP081" veid="a9213a9700d4b479ab66d03078b89e982579" name="brandingService" creation-date="01/21/2026 16:41:35" property-ref="4265434973b94c51a18583f1548e621f" />
+            </attributes>
+            <operations>
+              <operation id="c04b6578d0ab44d98740915c82c2e338" cid="OP013" veid="o6ff4297430ec429e9755905d0d244bc2575" name="changeLanguage" creation-date="01/21/2026 16:41:50" type="void" type-id="void" visibility="public">
+                <parameters>
+                  <parameter id="pf91dc9d19e6847bb90721a9f61726411" name="languageCode" type="String" type-id="Uml.String" creation-date="01/21/2026 16:42:21" />
+                </parameters>
+              </operation>
+              <operation id="7b0aee0d7b5b475c8e2fc999bea2dbf2" cid="OP014" veid="oa5661bad79264f4e9cfd568f76d69bd4280" name="changeTheme" creation-date="01/21/2026 16:42:23" type="void" type-id="void" visibility="public">
+                <parameters>
+                  <parameter id="p3169e6d660634e1cbd0bbb99e0d63d62" name="themeId" type="String" type-id="Uml.String" creation-date="01/21/2026 16:42:46" />
+                </parameters>
+              </operation>
+            </operations>
+          </item>
+          <item id="09f43d1fc8274d22a6cf5b321842d80a" veid="c1a83d3eb77346ed9f3d56c4f7f5a289" cid="I006" type="uml-interface-classifier" name="IRuleSet" owner="4c5c0f8613d74cb6a95a54098334cee6" creator="" creation-date="01/21/2026 16:49:30" visibility="undefined">
+            <stereotypes>
+              <stereotype name="interface" />
+            </stereotypes>
+            <stereotype-instances>
+              <stereotype id="04f39f0103bb4caca85d2181a8b94ce1" veid="a30e649e5c2c49a2be89b4d53967443d_interface_c" type="interface" creation-date="01/21/2026 16:50:53" ref="" />
+            </stereotype-instances>
+            <operations>
+              <operation id="aa7c68a60f0f49ff8eeea229e6414349" cid="OP020" veid="o8bc9dcb0ffe04fa3a309a47fffc916af250" name="checkWin" creation-date="01/21/2026 16:49:36" type="Boolean" type-id="Uml.Boolean" visibility="public">
+                <parameters>
+                  <parameter id="p043d6f5872de4521adee0046bb7a51e5" name="board" type="IPlayArea" type-id="IPlayArea" creation-date="01/21/2026 16:49:54" />
+                </parameters>
+              </operation>
+              <operation id="fbc9ae8cfe80473aa8bdc1ea6c9d5958" cid="OP021" veid="o62449e20167841658f1a311670bc21ae132" name="isDraw" creation-date="01/21/2026 16:49:56" type="Boolean" type-id="Uml.Boolean" visibility="public">
+                <parameters>
+                  <parameter id="pe1b17e364641485db6ec4079e1ea76cf" name="board" type="IPlayArea" type-id="IPlayArea" creation-date="01/21/2026 16:50:17" />
+                </parameters>
+              </operation>
+            </operations>
+          </item>
+          <item id="fa7d142abb7f4a3e88719aa022c84aa1" veid="b4956270cc6a4f79af27dac69a20b7fe" cid="PROP074" type="property" owner="a9bb7ebd3ac54461a9716f1e19d714aa" creator="" creation-date="01/21/2026 17:16:46" visibility="undefined" />
+          <item id="4ef5785e028f4848b4c57539a6cfc2de" veid="a7cce9f30a4845499c8674f33684edd5" cid="REL019" type="relationship" owner="b8c3ebe311464fd2a9cd8675668916f9" creator="" creation-date="01/21/2026 17:13:23" from="5eca074071474844b40a11a77d5dc185" to="72a93e09f93d4a8db0513fa4dd8dcd7f" visibility="package">
+            <owned-items />
+            <relation from="5eca074071474844b40a11a77d5dc185" to="72a93e09f93d4a8db0513fa4dd8dcd7f" derived="false">
+              <start-role id="umlar-bdbb450d-cf86-4e53-ad07-76f3bc2ba85b" name="" navigability="" association-type="association" visibility="private" property-ref="6638d5439ef143a2a1f6f9c1a564d09a" />
+              <end-role id="umlar-07da1cfc-64e6-4bde-ba22-da741d6498c5" name="" navigability="" association-type="association" visibility="private" property-ref="41b8f4c0084241f3a6a394f1f6b03bc7" />
+            </relation>
+          </item>
+          <item id="b3f770a0494d48da8fb78c88bc746b68" veid="76847a0a4e96429ab282f082ab0eb849" cid="GNR010" type="generalization" creator="" creation-date="01/21/2026 17:16:06" from="039e049b8e8f4044b778bb1f3f7626ab" to="09f43d1fc8274d22a6cf5b321842d80a" visibility="package" />
+          <item id="0606f6321ce54a1ab5f67b06d05f4330" veid="f365095b98354612b040d6a321bdb827" cid="PROP056" type="property" name="type" owner="2dcb0ee62aa14d54bbd09d1023540c0d" creator="" creation-date="01/21/2026 17:06:56" visibility="private">
+            <structural-feature type="Player" type-id="Player" />
+          </item>
+          <item id="b30578332d5e4cf0913ff5109aae75d9" veid="487126ea3c71454ea60905eb22ff4e9c" cid="PROP059" type="property" owner="531a0e3971044d399e946636e9beeb97" creator="" creation-date="01/21/2026 17:11:52" visibility="private">
+            <structural-feature type="FourConnectGame" type-id="Class:f7b016b500cd497896e73822513290d6" />
+            <property aggregation="composite" />
+          </item>
+          <item id="d7dee5dffdc54718a1adef8cd9eacd2c" veid="1a621a2fba4b4ee0967e6b78766015c7" cid="REL018" type="relationship" owner="b8c3ebe311464fd2a9cd8675668916f9" creator="" creation-date="01/21/2026 17:12:14" from="f7b016b500cd497896e73822513290d6" to="2dcb0ee62aa14d54bbd09d1023540c0d" visibility="package">
+            <owned-items />
+            <relation from="f7b016b500cd497896e73822513290d6" to="2dcb0ee62aa14d54bbd09d1023540c0d" derived="false">
+              <start-role id="umlar-35d210f7-a324-4969-b8ed-20a78b609a2a" name="" navigability="" association-type="composition" visibility="private" property-ref="2c807c629a934598a011e7a1193a0a52" />
+              <end-role id="umlar-1f8d6ecf-be91-4d8c-afb1-6011e23d212a" name="" navigability="" association-type="association" visibility="private" attribute-ref="ae9537d2e344742a686f176fbbb8f261f648" property-ref="42e0dac3bf564a12b87caf8767051f1f" />
+            </relation>
+          </item>
+          <item id="dc0db5f90b7e4ee58e043b99b86fed1b" veid="3b67b5f1a4274b86bb4ce031b4ed0314" cid="C016" type="class" name="LocaliziationService" owner="22d45ef5d4f942cd83c5fc9002a2dfb1" creator="" creation-date="01/21/2026 16:44:31" visibility="undefined">
+            <operations>
+              <operation id="aa4302af70964f13bf2e16119d9f58be" cid="OP017" veid="of35850d414874d2e9bd4d4835068ba4d114" name="setLanguage" creation-date="01/21/2026 16:44:41" type="void" type-id="void" visibility="public">
+                <parameters>
+                  <parameter id="pdaaded44d90a4f99887489446398483e" name="languageCode" type="String" type-id="Uml.String" creation-date="01/21/2026 16:44:58" />
+                </parameters>
+              </operation>
+              <operation id="e9fc800b8c49419e98b31392c9a44780" cid="OP018" veid="oa437838fed4b42918fc27e3a0d96c318610" name="getText" creation-date="01/21/2026 16:45:02" type="String" type-id="Uml.String" visibility="public">
+                <parameters>
+                  <parameter id="p5e86fa768fbf407b90b8dd8cfa3f6ce3" name="key" type="String" type-id="Uml.String" creation-date="01/21/2026 16:45:17" />
+                </parameters>
+              </operation>
+            </operations>
+          </item>
+          <item id="4f3729c5c6214de6a88e51183ee24450" veid="2544b113288140b6a65f2078d8e87233" cid="GNR008" type="generalization" creator="" creation-date="01/21/2026 17:15:33" from="5eca074071474844b40a11a77d5dc185" to="8b3711946b954d269d9d206b28c953fd" visibility="package" />
+          <item id="4c5c0f8613d74cb6a95a54098334cee6" veid="235dd3ba128541c8b76a3a26fc6669d2" cid="PKG007" type="package" name="GameCore" creator="" creation-date="01/21/2026 16:46:58" visibility="undefined">
+            <owned-items />
+          </item>
+          <item id="89469ca546e34147aa8ecb9fc65cd66e" veid="9b12df825647442bbb3b3be0c9ff29b5" cid="C024" type="class" name="FourConnectGameController" owner="0df99c7d193c43cf8f97b347723f9bbe" creator="" creation-date="01/21/2026 16:35:34" visibility="undefined">
+            <operations>
+              <operation id="b033358e7d0b4b2da1acc19c2407685b" cid="OP003" veid="o802f1de542c04e4db26b9c5d80466140396" name="handleColumnInput" creation-date="01/21/2026 16:35:45" type="void" type-id="void" visibility="public">
+                <parameters>
+                  <parameter id="pea89cd11c8e3419995720f0510b9f419" name="column" type="Integer" type-id="Uml.Integer" creation-date="01/21/2026 16:36:10" />
+                </parameters>
+              </operation>
+              <operation id="700464fd5aa34522ae8430778bdc0d71" cid="OP006" veid="ocd33895b580c454588a2ec1f975f0ae6521" name="openHelp" creation-date="01/21/2026 16:37:02" type="void" type-id="void" visibility="public" />
+              <operation id="ode19f036873948f1861cd8fa9b470ace822" cid="OP051" name="restartGame" creation-date="04/15/2026 15:50:40" type="void" type-id="void" visibility="public" />
+            </operations>
+          </item>
+          <item id="6e22af9e08704cde9329f72fde0170a3" veid="a30e649e5c2c49a2be89b4d53967443d" cid="I009" type="uml-interface-classifier" name="IGame" owner="4c5c0f8613d74cb6a95a54098334cee6" creator="" creation-date="01/21/2026 16:50:53" visibility="undefined">
+            <stereotypes>
+              <stereotype name="interface" />
+            </stereotypes>
+            <stereotype-instances>
+              <stereotype id="04f39f0103bb4caca85d2181a8b94ce1" veid="a30e649e5c2c49a2be89b4d53967443d_interface_c" type="interface" creation-date="01/21/2026 16:50:53" ref="" />
+            </stereotype-instances>
+            <operations>
+              <operation id="2b1b550f221b4317933fcb8f1d94b6bd" cid="OP022" veid="o3848ead544504a6b978da5237f3afd5a299" name="setStatus" creation-date="01/21/2026 16:50:59" type="void" type-id="void" visibility="public" />
+              <operation id="de9bd7532fff4ef58aa04404cd84bdf9" cid="OP023" veid="o54bf457b357d44b8adcb77f91eda95a2265" name="restart" creation-date="01/21/2026 16:51:07" type="void" type-id="void" visibility="public" />
+              <operation id="fe478ad2dd8f47c0810c1defa4c16c9d" cid="OP024" veid="oae91c940cfbe4bca92175574cece90da545" name="getStatus" creation-date="01/21/2026 16:51:16" type="GameState" type-id="GameState" visibility="public" />
+              <operation id="7aed259ee809425fa489a464bce0aba5" cid="OP025" veid="o9816a9e6c38140528ce26472b95dc676511" name="getBoard" creation-date="01/21/2026 16:51:23" type="IPlayArea" type-id="IPlayArea" visibility="public" />
+            </operations>
+          </item>
+          <item id="ed3af53539154077a5dcd842f0f6c3ca" veid="ad1dd02f7167467f9efa04b88a55409a" cid="PROP070" type="property" owner="bc9fd361e10b410385b0156b39131fd8" creator="" creation-date="01/21/2026 17:16:27" visibility="undefined" />
+          <item id="c5c3b702fa0344f2a423efe0a46f06c1" veid="a712ebe3bf274f4e866fe1c57dd7f3ae" cid="PROP069" type="property" owner="bc9fd361e10b410385b0156b39131fd8" creator="" creation-date="01/21/2026 17:16:27" visibility="undefined">
+            <property aggregation="composite" />
+          </item>
+          <item id="8bb88cd3b2d54cce92b3f50f5781bd21" veid="00647624f4644fe6be3dac5b7362d55f" cid="PROP051" type="property" name="ROW_COUNTS" owner="5eca074071474844b40a11a77d5dc185" creator="" creation-date="01/21/2026 17:02:00" visibility="private">
+            <structural-feature type="Integer" type-id="Uml.Integer" />
+          </item>
+          <item id="69b3e6a1ec2c49cba4586a11e6465efe" veid="8f6d3c4be9a84d3f8470f58c49411994" cid="ELEM002" type="usage" owner="b8c3ebe311464fd2a9cd8675668916f9" creator="" creation-date="01/21/2026 17:12:53" from="039e049b8e8f4044b778bb1f3f7626ab" to="5eca074071474844b40a11a77d5dc185" visibility="package">
+            <stereotypes>
+              <stereotype name="use" />
+            </stereotypes>
+            <stereotype-instances>
+              <stereotype id="aae28c28e5944c268694c7def40a0765" veid="8f6d3c4be9a84d3f8470f58c49411994_use_c" type="use" creation-date="01/21/2026 17:12:53" ref="" />
+            </stereotype-instances>
           </item>
           <item id="72a93e09f93d4a8db0513fa4dd8dcd7f" veid="97e1d64e27fb4c1da87657dd6d1ceae0" cid="C020" type="class" name="Position" owner="b8c3ebe311464fd2a9cd8675668916f9" creator="" creation-date="01/21/2026 17:04:01" visibility="undefined">
             <owned-items />
@@ -1313,129 +1515,15 @@
               <source-code language="ActionScript" />
             </source-codes>
           </item>
-          <item id="b74079fb1a01499f971b5f257c655a13" veid="cb456ef66a5647569551d411a59c49d7" cid="REL017" type="relationship" owner="b8c3ebe311464fd2a9cd8675668916f9" creator="" creation-date="01/21/2026 17:12:03" from="f7b016b500cd497896e73822513290d6" to="5eca074071474844b40a11a77d5dc185" visibility="package">
-            <owned-items />
-            <relation from="f7b016b500cd497896e73822513290d6" to="5eca074071474844b40a11a77d5dc185" derived="false">
-              <start-role id="umlar-e081df84-e93f-4446-a4e4-3841c55fddb3" name="" navigability="" association-type="composition" visibility="private" property-ref="3253984af76042b5b225716273550b00" />
-              <end-role id="umlar-cec2943b-edd5-456e-8b35-b19f48b0c3fb" name="" navigability="" association-type="association" visibility="private" property-ref="b33082fe55304189ba1ab35958610998" />
-            </relation>
-          </item>
-          <item id="f7b016b500cd497896e73822513290d6" veid="9ee27247dd934ce8906c5799e06af6ad" cid="C018" type="class" name="FourConnectGame" owner="b8c3ebe311464fd2a9cd8675668916f9" creator="" creation-date="01/21/2026 16:57:29" visibility="undefined">
-            <owned-items />
-            <attributes>
-              <attribute id="50c68b7c94144fb0b620658b79afb09e" cid="PROP045" veid="ab636c007e3c9468ea14b9815e2d3b683352" name="state" creation-date="01/21/2026 16:57:38" property-ref="e70dfd5bb8db44989b9094c054ad97c9" />
-              <attribute id="1e70c2ce4d874c138e45080222840699" cid="PROP046" veid="a3eab5ba2ecf74d95b903037875ea0724796" name="players" creation-date="01/21/2026 16:57:50" property-ref="bc0373a0f7c846a6afeba3b55ccdd70b" />
-              <attribute id="ac43d26567494789919de3b33c70c94c" cid="PROP047" veid="a08fe352928514d589df7680a00271c88413" name="currentPlayerIndex" creation-date="01/21/2026 16:58:10" property-ref="8c5f8bbd927845648941ffeaf87df278" />
-              <attribute id="ec19b4a6d208466ea3adaa93ec2ebb3a" cid="PROP048" veid="ac3e39cf346054df3847951a4b4b68b1d916" name="rules" creation-date="01/21/2026 16:58:24" property-ref="8d95088f9d094d11b6f9dec7e14dbeb5" />
-              <attribute id="47b394d3785f48038c56cf5304eb256c" cid="PROP049" veid="aac5efbcde5a24564848a0a7f815ba3c4952" name="gameBoard" creation-date="01/21/2026 16:58:50" property-ref="9a99a811a32e43b8967862a1e5b3db49" />
-              <attribute id="aeec9f919b364073b950c83adf8ba746" cid="PROP050" veid="a5f06dc839945421e849d08a79a7312fe914" name="gamemode" creation-date="01/21/2026 17:10:22" property-ref="bfb2215b461a49a6a0dd7a440febd663" />
-            </attributes>
+          <item id="a0b9d6dacfdb429c9990d786705ecb82" veid="e06f85f06abf49e7957a784f161ed439" cid="C015" type="class" name="BrandingService" owner="22d45ef5d4f942cd83c5fc9002a2dfb1" creator="" creation-date="01/21/2026 16:44:01" visibility="undefined">
             <operations>
-              <operation id="80124531a4df4465835a9c277b734a7c" cid="OP029" veid="oae5321eb3ab54f59a91a1e049d327f46116" name="dropDisc" creation-date="01/21/2026 16:58:24" type="Integer" type-id="Uml.Integer" visibility="public">
+              <operation id="0e1199c6040c486f9b57f324e9dd7d35" cid="OP016" veid="o48e5d1ede1fb4b16a1dcad724397015a102" name="setTheme" creation-date="01/21/2026 16:44:08" type="void" type-id="void" visibility="public">
                 <parameters>
-                  <parameter id="p2301f5454b0c4e528ec1756f3e865b16" name="column" type="Integer" type-id="Uml.Integer" creation-date="01/21/2026 17:00:06" />
-                </parameters>
-              </operation>
-              <operation id="6ad04fad16c9443ba370d83b415f7bdb" cid="OP030" veid="o4743b1dff5004374828ddd36833da849888" name="playerTurn" creation-date="01/21/2026 17:00:08" type="void" type-id="void" visibility="public" />
-              <operation id="316ef85346d94219844506b1f159d6d9" cid="OP031" veid="odb94cb8a565644e99254f7f4bf292c9a48" name="initFourConnectGame" creation-date="01/21/2026 17:00:54" type="Integer" type-id="Uml.Integer" visibility="public">
-                <parameters>
-                  <parameter id="p16bc07e008844fe49910a763761f6c33" name="playerOne" type="Player" type-id="Player" creation-date="01/21/2026 17:01:32" />
-                  <parameter id="p0bd63491186a44f78e5796ce9831068c" name="playerTwo" type="Player" type-id="Player" creation-date="01/21/2026 17:01:32" />
+                  <parameter id="p8f8fab451c254b50b571cc8cf9191aa8" name="themeId" type="String" type-id="Uml.String" creation-date="01/21/2026 16:44:23" />
                 </parameters>
               </operation>
             </operations>
           </item>
-          <item id="4b7487bdc7db4808ac7ef56f3e70c671" veid="6c21e06651ac4c13a90394234325f082" cid="PROP077" type="property" owner="0c745a78bb0d40b98d2dc127d07a7600" creator="" creation-date="01/21/2026 16:46:17" visibility="private">
-            <structural-feature type="SettingsController" type-id="Class:bda1f53a35e8465fafe0b34951ea1750" />
-          </item>
-          <item id="4f3729c5c6214de6a88e51183ee24450" veid="2544b113288140b6a65f2078d8e87233" cid="GNR008" type="generalization" creator="" creation-date="01/21/2026 17:15:33" from="5eca074071474844b40a11a77d5dc185" to="8b3711946b954d269d9d206b28c953fd" visibility="package" />
-          <item id="6e22af9e08704cde9329f72fde0170a3" veid="a30e649e5c2c49a2be89b4d53967443d" cid="I009" type="uml-interface-classifier" name="IGame" owner="4c5c0f8613d74cb6a95a54098334cee6" creator="" creation-date="01/21/2026 16:50:53" visibility="undefined">
-            <stereotypes>
-              <stereotype name="interface" />
-            </stereotypes>
-            <stereotype-instances>
-              <stereotype id="04f39f0103bb4caca85d2181a8b94ce1" veid="a30e649e5c2c49a2be89b4d53967443d_interface_c" type="interface" creation-date="01/21/2026 16:50:53" ref="" />
-            </stereotype-instances>
-            <operations>
-              <operation id="2b1b550f221b4317933fcb8f1d94b6bd" cid="OP022" veid="o3848ead544504a6b978da5237f3afd5a299" name="setStatus" creation-date="01/21/2026 16:50:59" type="void" type-id="void" visibility="public" />
-              <operation id="de9bd7532fff4ef58aa04404cd84bdf9" cid="OP023" veid="o54bf457b357d44b8adcb77f91eda95a2265" name="restart" creation-date="01/21/2026 16:51:07" type="void" type-id="void" visibility="public" />
-              <operation id="fe478ad2dd8f47c0810c1defa4c16c9d" cid="OP024" veid="oae91c940cfbe4bca92175574cece90da545" name="getStatus" creation-date="01/21/2026 16:51:16" type="GameState" type-id="GameState" visibility="public" />
-              <operation id="7aed259ee809425fa489a464bce0aba5" cid="OP025" veid="o9816a9e6c38140528ce26472b95dc676511" name="getBoard" creation-date="01/21/2026 16:51:23" type="IPlayArea" type-id="IPlayArea" visibility="public" />
-            </operations>
-          </item>
-          <item id="2180dd136dd34d7fa0bfc8da3b4a19f4" veid="90a3d7d80dfa4ac286ad51d2d6dac2be" cid="E005" type="enumeration" name="GameState" owner="4c5c0f8613d74cb6a95a54098334cee6" creator="" creation-date="01/21/2026 16:51:44" visibility="undefined">
-            <stereotypes>
-              <stereotype name="enumeration" />
-            </stereotypes>
-            <stereotype-instances>
-              <stereotype id="54d73a8355534b138de2a482d5d2654e" veid="aa5a84968dd144b4a350e6b01cf3270a_enumeration_c" type="enumeration" creation-date="01/21/2026 17:06:20" ref="" />
-            </stereotype-instances>
-            <enumeration-items>
-              <enumeration-item id="30123640fa6443549bd58758af9f95bf" cid="ENI001" veid="a288fa991d7fe4a23a16bff9f396d70ef313" name="NotStarted" creation-date="01/21/2026 16:51:51" />
-              <enumeration-item id="ca3dbc2780dd4243815a703e64f4b908" cid="ENI002" veid="a618c3d45e19241adb7dc41bac68d418d708" name="Running" creation-date="01/21/2026 16:51:59" />
-              <enumeration-item id="b4ccf7469d924a80a94298b5f6978440" cid="ENI003" veid="ad3682258b56b4c8f95c682f69a7a9c56159" name="Paused" creation-date="01/21/2026 16:52:05" />
-              <enumeration-item id="40f03449a74b4f84a8b75c91cd81bd25" cid="ENI004" veid="a4128fd6d428e4d848350defa4a516096299" name="Finished" creation-date="01/21/2026 16:52:11" />
-            </enumeration-items>
-          </item>
-          <item id="54eb744bb9e4444cbf08403112aa761e" veid="09fb9639db6844f680919ea29803eb15" cid="PROP078" type="property" owner="0c745a78bb0d40b98d2dc127d07a7600" creator="" creation-date="01/21/2026 16:46:17" visibility="private">
-            <structural-feature type="LocaliziationService" type-id="Class:dc0db5f90b7e4ee58e043b99b86fed1b" />
-          </item>
-          <item id="b33082fe55304189ba1ab35958610998" veid="429c557d43d1451db57896c34a93aa59" cid="PROP062" type="property" owner="b74079fb1a01499f971b5f257c655a13" creator="" creation-date="01/21/2026 17:12:03" visibility="private">
-            <structural-feature type="FourConnectGameBoard" type-id="Class:5eca074071474844b40a11a77d5dc185" />
-          </item>
-          <item id="69b3e6a1ec2c49cba4586a11e6465efe" veid="8f6d3c4be9a84d3f8470f58c49411994" cid="ELEM002" type="usage" owner="b8c3ebe311464fd2a9cd8675668916f9" creator="" creation-date="01/21/2026 17:12:53" from="039e049b8e8f4044b778bb1f3f7626ab" to="5eca074071474844b40a11a77d5dc185" visibility="package">
-            <stereotypes>
-              <stereotype name="use" />
-            </stereotypes>
-            <stereotype-instances>
-              <stereotype id="aae28c28e5944c268694c7def40a0765" veid="8f6d3c4be9a84d3f8470f58c49411994_use_c" type="use" creation-date="01/21/2026 17:12:53" ref="" />
-            </stereotype-instances>
-          </item>
-          <item id="9a99a811a32e43b8967862a1e5b3db49" veid="ab6a9e2d20e04e6e8f6a6b8856109442" cid="PROP049" type="property" name="gameBoard" owner="f7b016b500cd497896e73822513290d6" creator="" creation-date="01/21/2026 16:58:50" visibility="private">
-            <structural-feature type="FourConnectGameBoard" type-id="FourConnectGameBoard" />
-          </item>
-          <item id="8c5f8bbd927845648941ffeaf87df278" veid="69856c17e89f490d97dbd5d58a90e551" cid="PROP047" type="property" name="currentPlayerIndex" owner="f7b016b500cd497896e73822513290d6" creator="" creation-date="01/21/2026 16:58:10" visibility="private">
-            <structural-feature type="Integer" type-id="Uml.Integer" />
-          </item>
-          <item id="dc0db5f90b7e4ee58e043b99b86fed1b" veid="3b67b5f1a4274b86bb4ce031b4ed0314" cid="C016" type="class" name="LocaliziationService" owner="22d45ef5d4f942cd83c5fc9002a2dfb1" creator="" creation-date="01/21/2026 16:44:31" visibility="undefined">
-            <operations>
-              <operation id="aa4302af70964f13bf2e16119d9f58be" cid="OP017" veid="of35850d414874d2e9bd4d4835068ba4d114" name="setLanguage" creation-date="01/21/2026 16:44:41" type="void" type-id="void" visibility="public">
-                <parameters>
-                  <parameter id="pdaaded44d90a4f99887489446398483e" name="languageCode" type="String" type-id="Uml.String" creation-date="01/21/2026 16:44:58" />
-                </parameters>
-              </operation>
-              <operation id="e9fc800b8c49419e98b31392c9a44780" cid="OP018" veid="oa437838fed4b42918fc27e3a0d96c318610" name="getText" creation-date="01/21/2026 16:45:02" type="String" type-id="Uml.String" visibility="public">
-                <parameters>
-                  <parameter id="p5e86fa768fbf407b90b8dd8cfa3f6ce3" name="key" type="String" type-id="Uml.String" creation-date="01/21/2026 16:45:17" />
-                </parameters>
-              </operation>
-            </operations>
-          </item>
-          <item id="bfb2215b461a49a6a0dd7a440febd663" veid="cf1fa4f03493424c9de71437ac6e8b62" cid="PROP050" type="property" name="gamemode" owner="f7b016b500cd497896e73822513290d6" creator="" creation-date="01/21/2026 17:10:22" visibility="private">
-            <structural-feature type="GameMode" type-id="Class:a73661b5928a4ae6a6a243be91e52412" />
-          </item>
-          <item id="eecadfd9bc9b4f3eb4ffbd5d7a017f9c" veid="f75944a7cac540128312d584b81dd490" cid="GNR006" type="generalization" owner="a717fd53155c49d996ac3d21875d2295" creator="" creation-date="01/21/2026 16:38:44" from="89469ca546e34147aa8ecb9fc65cd66e" to="7e77da6c845145ffb0c32bdde1343e78" visibility="package" />
-          <item id="d468e594638847e19bc58b253ccd0fa6" veid="1000431d32734996a74f7a090fd78d8c" cid="GNR009" type="generalization" creator="" creation-date="01/21/2026 17:15:53" from="f7b016b500cd497896e73822513290d6" to="6e22af9e08704cde9329f72fde0170a3" visibility="package" />
-          <item id="7e1bc45f4eeb400dbc7889ada4cac8b2" veid="5c0e6d7a857747f8a316a2113ef3d6f6" cid="PROP079" type="property" name="game" owner="8c1e6bdfbb594249bd73fadb73f33efe" creator="" creation-date="01/21/2026 16:34:16" visibility="private">
-            <structural-feature type="IGame" type-id="IGame" />
-          </item>
-          <item id="29cd3deb47204371ace3a7514041bb88" veid="4fa8635ff58445bfa24bf72465519d6b" cid="PROP060" type="property" owner="531a0e3971044d399e946636e9beeb97" creator="" creation-date="01/21/2026 17:11:52" visibility="private">
-            <structural-feature type="FourConnectRules" type-id="Class:039e049b8e8f4044b778bb1f3f7626ab" />
-          </item>
-          <item id="d7dee5dffdc54718a1adef8cd9eacd2c" veid="1a621a2fba4b4ee0967e6b78766015c7" cid="REL018" type="relationship" owner="b8c3ebe311464fd2a9cd8675668916f9" creator="" creation-date="01/21/2026 17:12:14" from="f7b016b500cd497896e73822513290d6" to="2dcb0ee62aa14d54bbd09d1023540c0d" visibility="package">
-            <owned-items />
-            <relation from="f7b016b500cd497896e73822513290d6" to="2dcb0ee62aa14d54bbd09d1023540c0d" derived="false">
-              <start-role id="umlar-cbf3b8b3-8b15-40ed-a197-6ecd551b0a7e" name="" navigability="" association-type="composition" visibility="private" property-ref="2c807c629a934598a011e7a1193a0a52" />
-              <end-role id="umlar-994952b8-ba85-491f-ae91-f633d5dd0a40" name="" navigability="" association-type="association" visibility="private" attribute-ref="ae9537d2e344742a686f176fbbb8f261f648" property-ref="42e0dac3bf564a12b87caf8767051f1f" />
-            </relation>
-          </item>
-          <item id="3b8ba5cb2d70435db155d622d81835f9" veid="f5f2ea3249334415a48224b1ad2152f5" cid="PROP053" type="property" name="COLUM_COUNTS" owner="5eca074071474844b40a11a77d5dc185" creator="" creation-date="01/21/2026 17:02:20" visibility="private">
-            <structural-feature type="Integer" type-id="Uml.Integer" />
-          </item>
-          <item id="8bb88cd3b2d54cce92b3f50f5781bd21" veid="00647624f4644fe6be3dac5b7362d55f" cid="PROP051" type="property" name="ROW_COUNTS" owner="5eca074071474844b40a11a77d5dc185" creator="" creation-date="01/21/2026 17:02:00" visibility="private">
-            <structural-feature type="Integer" type-id="Uml.Integer" />
-          </item>
-          <item id="fa7d142abb7f4a3e88719aa022c84aa1" veid="b4956270cc6a4f79af27dac69a20b7fe" cid="PROP074" type="property" owner="a9bb7ebd3ac54461a9716f1e19d714aa" creator="" creation-date="01/21/2026 17:16:46" visibility="undefined" />
           <item id="0bef3cfd52574e43935fc6bd340f42df" veid="a73661b5928a4ae6a6a243be91e52412" cid="E007" type="enumeration" name="GameMode" owner="b8c3ebe311464fd2a9cd8675668916f9" creator="" creation-date="01/21/2026 16:57:03" visibility="undefined">
             <stereotypes>
               <stereotype name="enumeration" />
@@ -1448,130 +1536,46 @@
               <enumeration-item id="37075b6c776e4cc199bbc114730eeb8c" cid="ENI006" veid="ac0a144adf1b4448fbe9251be793fb047152" name="BOT" creation-date="01/21/2026 16:57:16" />
             </enumeration-items>
           </item>
-          <item id="09f43d1fc8274d22a6cf5b321842d80a" veid="c1a83d3eb77346ed9f3d56c4f7f5a289" cid="I006" type="uml-interface-classifier" name="IRuleSet" owner="4c5c0f8613d74cb6a95a54098334cee6" creator="" creation-date="01/21/2026 16:49:30" visibility="undefined">
+          <item id="d468e594638847e19bc58b253ccd0fa6" veid="1000431d32734996a74f7a090fd78d8c" cid="GNR009" type="generalization" creator="" creation-date="01/21/2026 17:15:53" from="f7b016b500cd497896e73822513290d6" to="6e22af9e08704cde9329f72fde0170a3" visibility="package" />
+          <item id="c81f62901b1a4fce83c68b6da3bd475c" veid="aa5a84968dd144b4a350e6b01cf3270a" cid="E006" type="enumeration" name="Player" owner="b8c3ebe311464fd2a9cd8675668916f9" creator="" creation-date="01/21/2026 17:06:20" visibility="undefined">
             <stereotypes>
-              <stereotype name="interface" />
+              <stereotype name="enumeration" />
             </stereotypes>
             <stereotype-instances>
-              <stereotype id="04f39f0103bb4caca85d2181a8b94ce1" veid="a30e649e5c2c49a2be89b4d53967443d_interface_c" type="interface" creation-date="01/21/2026 16:50:53" ref="" />
+              <stereotype id="54d73a8355534b138de2a482d5d2654e" veid="aa5a84968dd144b4a350e6b01cf3270a_enumeration_c" type="enumeration" creation-date="01/21/2026 17:06:20" ref="" />
             </stereotype-instances>
-            <operations>
-              <operation id="aa7c68a60f0f49ff8eeea229e6414349" cid="OP020" veid="o8bc9dcb0ffe04fa3a309a47fffc916af250" name="checkWin" creation-date="01/21/2026 16:49:36" type="Boolean" type-id="Uml.Boolean" visibility="public">
-                <parameters>
-                  <parameter id="p043d6f5872de4521adee0046bb7a51e5" name="board" type="IPlayArea" type-id="IPlayArea" creation-date="01/21/2026 16:49:54" />
-                </parameters>
-              </operation>
-              <operation id="fbc9ae8cfe80473aa8bdc1ea6c9d5958" cid="OP021" veid="o62449e20167841658f1a311670bc21ae132" name="isDraw" creation-date="01/21/2026 16:49:56" type="Boolean" type-id="Uml.Boolean" visibility="public">
-                <parameters>
-                  <parameter id="pe1b17e364641485db6ec4079e1ea76cf" name="board" type="IPlayArea" type-id="IPlayArea" creation-date="01/21/2026 16:50:17" />
-                </parameters>
-              </operation>
-            </operations>
+            <enumeration-items>
+              <enumeration-item id="70ec6ae96b1940979b81775ad0ce6c7b" cid="ENI007" veid="a7945df58b4f2456fb5749f45e2d6c8b1554" name="HUMAN" creation-date="01/21/2026 17:06:25" />
+              <enumeration-item id="ad7ac93509aa4e748e188cde009b565d" cid="ENI008" veid="a2b6b2bb0d38a454082a02b481943941c712" name="BOT" creation-date="01/21/2026 17:06:30" />
+              <enumeration-item id="0ff38238e06b44f0835dc465eff7f987" cid="ENI009" veid="a15cf9fa8ebd44c6883515376503c68a96" name="NONE" creation-date="01/21/2026 17:06:35" />
+            </enumeration-items>
           </item>
-          <item id="2dcb0ee62aa14d54bbd09d1023540c0d" veid="30450284162b493382b1ec070834b157" cid="C021" type="class" name="FourConnectPlayer" owner="b8c3ebe311464fd2a9cd8675668916f9" creator="" creation-date="01/21/2026 17:06:50" visibility="undefined">
+          <item id="8c1e6bdfbb594249bd73fadb73f33efe" veid="59ff4618354a4af48b5c275496ac07e4" cid="C023" type="class" name="GameController" creator="" creation-date="01/21/2026 16:34:06" visibility="undefined">
             <owned-items />
             <attributes>
-              <attribute id="570cac634ff8458dbabf9fdb3964f709" cid="PROP056" veid="ae9537d2e344742a686f176fbbb8f261f648" name="type" creation-date="01/21/2026 17:06:56" property-ref="0606f6321ce54a1ab5f67b06d05f4330" />
-              <attribute id="87c167797ba04e26987f0bd0c16a414d" cid="PROP057" veid="a6fbc03a19c394d99809ccf777a111c55602" name="strategy" creation-date="01/21/2026 17:07:03" property-ref="820158fda90b4da194bd7055209aebce" />
-              <attribute id="9cb39b9310864655a0679ea6df0403d9" cid="PROP058" veid="aba4f7bfc3d9044afb9c377fbfff6b31a356" name="colour" creation-date="01/21/2026 17:07:23" property-ref="0cd5ca77531b4472b448a926af5306ac" />
+              <attribute id="5920ae03ac9a4449845f9925e4ad50b9" cid="PROP079" veid="a47a52362a86a4914ae41a15d5a326d0e826" name="game" creation-date="01/21/2026 16:34:16" property-ref="7e1bc45f4eeb400dbc7889ada4cac8b2" />
             </attributes>
             <operations>
-              <operation id="84c7e0da204444e18e895ac5ccbd044c" cid="OP038" veid="o8805f49a76b644258c3c9a4d56f4aef0408" name="getType" creation-date="01/21/2026 17:07:30" type="Player" type-id="Player" visibility="public" />
-              <operation id="07953ab04ffe4899aa17b5c8c0aaebeb" cid="OP040" veid="oba0c76bf692d422fb98f2b0849a935b43" name="getStrategy" creation-date="01/21/2026 17:08:42" type="FourConnectBotStrategy" type-id="Class:e6bad44916a940969c0a91e8741f74c0" visibility="public" />
-              <operation id="of65fcf490dd548f0a646f4bf1ddbddb0697" cid="OP045" name="FourConnectPlayer" creation-date="04/15/2026 15:36:39" type="" type-id="" visibility="public">
-                <parameters>
-                  <parameter id="p32f2000abbff4ac1ae30084e99899e18" name="type" type="Player" type-id="Player" creation-date="04/15/2026 15:36:39">
-                    <tagged-values>
-                      <tagged-value id="tvd02217a81d13486daeff8bf0f1ed53ca" name="set_type" type="reference" multiple="false" hidden="false" ref="0606f6321ce54a1ab5f67b06d05f4330" />
-                    </tagged-values>
-                  </parameter>
-                  <parameter id="pcdd9c02cd4964ce18eced85148818cb2" name="strategy" type="FourConnectBotStrategy" type-id="Class:e6bad44916a940969c0a91e8741f74c0" creation-date="04/15/2026 15:36:39">
-                    <tagged-values>
-                      <tagged-value id="tve33236dfa14942ed8c83c5104e6e9eb8" name="set_strategy" type="reference" multiple="false" hidden="false" ref="820158fda90b4da194bd7055209aebce" />
-                    </tagged-values>
-                  </parameter>
-                  <parameter id="pd4baf1e0cbe24129a01e1ef2e6f59864" name="colour" type="String" type-id="Uml.String" creation-date="04/15/2026 15:36:39">
-                    <tagged-values>
-                      <tagged-value id="tv5dafa4fa63174c0582bbefe6889a719d" name="set_colour" type="reference" multiple="false" hidden="false" ref="0cd5ca77531b4472b448a926af5306ac" />
-                    </tagged-values>
-                  </parameter>
-                </parameters>
-                <stereotypes>
-                  <stereotype>create</stereotype>
-                </stereotypes>
-              </operation>
-              <operation id="offc13da5959d482a90aee78e702e039735" cid="OP046" name="getColour" creation-date="04/15/2026 15:38:15" type="String" type-id="Uml.String" visibility="public" />
+              <operation id="5b980c3157484900b35f8c4bac35822c" cid="OP001" veid="ob66d9f7551e346e786ea2f5838157584607" name="restartGame" creation-date="01/21/2026 16:34:36" type="void" type-id="void" visibility="public" />
+              <operation id="5acd8320631f4f92a60677920cb323a0" cid="OP002" veid="o156ebad57f284959879b37edae8a87d4960" name="backToMenu" creation-date="01/21/2026 16:34:58" type="void" type-id="void" visibility="public" />
             </operations>
-          </item>
-          <item id="5eca074071474844b40a11a77d5dc185" veid="114c0a62156f4d0888693ac5b856c054" cid="C019" type="class" name="FourConnectGameBoard" owner="b8c3ebe311464fd2a9cd8675668916f9" creator="" creation-date="01/21/2026 17:01:50" visibility="undefined">
-            <owned-items />
-            <attributes>
-              <attribute id="65ab8b5a138f4081a34d359d7b1fd289" cid="PROP051" veid="ac05cfa30a19c45318aea5c765dd103a6370" name="ROW_COUNTS" creation-date="01/21/2026 17:02:00" property-ref="8bb88cd3b2d54cce92b3f50f5781bd21" />
-              <attribute id="2470f9d922e54a09bbb13d638b5f6f7e" cid="PROP052" veid="a90f0694eda4b47bbb97e45426f15623f331" name="cells" creation-date="01/21/2026 17:02:08" property-ref="2b8f8ed8135241e8879a596a747a7e26" />
-              <attribute id="fca0b6b424ab4d8d8dd9495640f1a6b6" cid="PROP053" veid="a419f59c34f1946719d6b891d41f2fce0907" name="COLUM_COUNTS" creation-date="01/21/2026 17:02:20" property-ref="3b8ba5cb2d70435db155d622d81835f9" />
-            </attributes>
-            <operations>
-              <operation id="69d69e0b794c46a486f15c04eb8814b6" cid="OP032" veid="ofe68bfcf5e0e4de9b3c1a92fa43759cc470" name="getRows" creation-date="01/21/2026 17:02:32" type="Integer" type-id="Uml.Integer" visibility="public" />
-              <operation id="1eec97bf02cc4652890a0e0f06eb9649" cid="OP033" veid="ofb2b47f6765649fa9ea4be301a386f73271" name="getColumns" creation-date="01/21/2026 17:02:46" type="Integer" type-id="Uml.Integer" visibility="public" />
-              <operation id="739a070d48714e1c99ba611ded368747" cid="OP034" veid="o0ed46da8b5b64a7280eabd2d30c1584d659" name="getCellOwner" creation-date="01/21/2026 17:03:02" type="FourConnectPlayer" type-id="FourConnectPlayer" visibility="public">
-                <parameters>
-                  <parameter id="pd1b73c96712147ae9224a6792a54cc00" name="x" type="Integer" type-id="Uml.Integer" creation-date="04/19/2026 15:14:21" />
-                  <parameter id="p7d57cf80a32c48c8a003c399432093ef" name="y" type="Integer" type-id="Uml.Integer" creation-date="04/19/2026 15:14:21" />
-                </parameters>
-              </operation>
-              <operation id="203e4c6892e64942b692ff850da0fb3c" cid="OP035" veid="o64f91fecb5db4ab78e9eaa1cc9107d49623" name="setCellValue" creation-date="01/21/2026 17:03:20" type="Integer" type-id="Uml.Integer" visibility="public">
-                <parameters>
-                  <parameter id="pc8b9142cfbf44465a3dba83acdabf0c5" name="cell" type="Position" type-id="Position" creation-date="01/21/2026 17:03:53" />
-                  <parameter id="p93af5be9d00448ba88d19b884f2a15d1" name="currentPlayer" type="FourConnectPlayer" type-id="FourConnectPlayer" creation-date="01/21/2026 17:03:53" />
-                </parameters>
-              </operation>
-              <operation id="o4c3526ec89104d6fbc96ce337d3deaa5802" cid="OP044" name="FourConnectGameBoard" creation-date="04/15/2026 15:32:44" type="" type-id="" visibility="public">
-                <stereotypes>
-                  <stereotype>create</stereotype>
-                </stereotypes>
-              </operation>
-              <operation id="o97146f23996f46429bc14ed7899bd6b6917" cid="OP052" name="copy" creation-date="04/19/2026 15:14:36" type="(): void" type-id="(): void" visibility="public">
-                <parameters>
-                  <parameter id="p84e409305fb14cdfaeafe02c66d939a0" name="board" type="FourConnectGameBoard" type-id="FourConnectGameBoard" creation-date="04/19/2026 15:15:20" />
-                </parameters>
-              </operation>
-            </operations>
-          </item>
-          <item id="820158fda90b4da194bd7055209aebce" veid="b7f72ce8dcea4c709baece3e75d1d0be" cid="PROP057" type="property" name="strategy" owner="2dcb0ee62aa14d54bbd09d1023540c0d" creator="" creation-date="01/21/2026 17:07:03" visibility="private">
-            <structural-feature type="FourConnectBotStrategy" type-id="Class:e6bad44916a940969c0a91e8741f74c0" />
-          </item>
-          <item id="42e0dac3bf564a12b87caf8767051f1f" veid="289750e14b314adea4506710ccdeed87" cid="PROP064" type="property" owner="d7dee5dffdc54718a1adef8cd9eacd2c" creator="" creation-date="01/21/2026 17:12:14" visibility="private">
-            <structural-feature multiplicity="2" type="FourConnectPlayer" type-id="Class:2dcb0ee62aa14d54bbd09d1023540c0d" />
-          </item>
-          <item id="503d4acc44444cca894a87067515a3b3" veid="bceb54f536ea4d23a41cba7de17438ff" cid="PROP067" type="property" owner="945559df37654c82ba25c363469f0792" creator="" creation-date="01/21/2026 17:14:48" visibility="undefined">
-            <structural-feature type="FourConnectBotStrategy" type-id="Class:fa55e1749084453780854fe0c923a5ea" />
-            <property aggregation="shared" />
-          </item>
-          <item id="4265434973b94c51a18583f1548e621f" veid="3cd4f23729f74e4ea96388e6d6e56723" cid="PROP081" type="property" name="brandingService" owner="bda1f53a35e8465fafe0b34951ea1750" creator="" creation-date="01/21/2026 16:41:35" visibility="private">
-            <structural-feature type="BrandingService" type-id="BrandingService" />
           </item>
           <item id="73fb5e3afb3b467dbb71d882ea39bf28" veid="ae337d31b56f42e1adc404d13fbac06a" cid="PROP075" type="property" owner="ddff13a5e857465d8f21c4cf914c904a" creator="" creation-date="01/21/2026 16:46:12" visibility="private">
             <structural-feature type="SettingsController" type-id="Class:bda1f53a35e8465fafe0b34951ea1750" />
           </item>
-          <item id="92c988986cb64394a97ed002b2430252" veid="27d1c6062ba64f388f1824b24b67609f" cid="PROP071" type="property" owner="5a9e5c0a89674d5fb8b035630757b352" creator="" creation-date="01/21/2026 17:16:37" visibility="undefined">
-            <property aggregation="composite" />
+          <item id="cd96c0224be14c108bac30642dc57fcc" veid="6998164ce9d74af39f74e63c9f3f6aa2" cid="C025" type="class" name="MainMenuController" owner="a717fd53155c49d996ac3d21875d2295" creator="" creation-date="01/21/2026 16:38:52" visibility="undefined">
+            <operations>
+              <operation id="1653be2e0c054e2aa114285e06e5114b" cid="OP007" veid="occf9420becdc4f60ac270b4c06c09ce9480" name="startGame" creation-date="01/21/2026 16:39:05" type="void" type-id="void" visibility="public" />
+              <operation id="657951e73f4841c1814a044fce5c7a08" cid="OP008" veid="oe4b5586c141045ad9e5f9e6bb403d00c423" name="openSetting" creation-date="01/21/2026 16:39:20" type="void" type-id="void" visibility="public" />
+              <operation id="71bfe171438049159bb5a5290be583a6" cid="OP019" veid="o71fbf92e8b1f47afa0896b7732039292735" name="backToMainMenu" creation-date="01/21/2026 16:49:04" type="void" type-id="void" visibility="public" />
+            </operations>
           </item>
-          <item id="b3f770a0494d48da8fb78c88bc746b68" veid="76847a0a4e96429ab282f082ab0eb849" cid="GNR010" type="generalization" creator="" creation-date="01/21/2026 17:16:06" from="039e049b8e8f4044b778bb1f3f7626ab" to="09f43d1fc8274d22a6cf5b321842d80a" visibility="package" />
-          <item id="c5c3b702fa0344f2a423efe0a46f06c1" veid="a712ebe3bf274f4e866fe1c57dd7f3ae" cid="PROP069" type="property" owner="bc9fd361e10b410385b0156b39131fd8" creator="" creation-date="01/21/2026 17:16:27" visibility="undefined">
-            <property aggregation="composite" />
+          <item id="32c18831e78f488890546a6b4e8d16c9" veid="68993c5e7c6946e58f2fbbaa38921329" cid="GNR007" type="generalization" creator="" creation-date="01/21/2026 17:15:16" from="fa55e1749084453780854fe0c923a5ea" to="0e84cd9c65894cf292e0e15f3f29aa38" visibility="package" />
+          <item id="503d4acc44444cca894a87067515a3b3" veid="bceb54f536ea4d23a41cba7de17438ff" cid="PROP067" type="property" owner="945559df37654c82ba25c363469f0792" creator="" creation-date="01/21/2026 17:14:48" visibility="undefined">
+            <structural-feature type="FourConnectBotStrategy" type-id="Class:fa55e1749084453780854fe0c923a5ea" />
+            <property aggregation="shared" />
           </item>
-          <item id="ed3af53539154077a5dcd842f0f6c3ca" veid="ad1dd02f7167467f9efa04b88a55409a" cid="PROP070" type="property" owner="bc9fd361e10b410385b0156b39131fd8" creator="" creation-date="01/21/2026 17:16:27" visibility="undefined" />
-          <item id="ddff13a5e857465d8f21c4cf914c904a" veid="453da417bd7a41c1887aa210ec2c90dc" cid="REL021" type="relationship" creator="" creation-date="01/21/2026 16:46:12" from="bda1f53a35e8465fafe0b34951ea1750" to="a0b9d6dacfdb429c9990d786705ecb82" visibility="package">
-            <owned-items />
-            <relation from="bda1f53a35e8465fafe0b34951ea1750" to="a0b9d6dacfdb429c9990d786705ecb82" derived="false">
-              <start-role id="umlar-3e101988-6b4b-4611-82be-b6a02dacf695" name="" navigability="" association-type="association" visibility="private" property-ref="73fb5e3afb3b467dbb71d882ea39bf28" />
-              <end-role id="umlar-89f7cdc4-9be3-4515-b627-adcbcc278a89" name="" navigability="yes" association-type="association" visibility="private" property-ref="79505cba31b9470f923a949aef066c30" />
-            </relation>
-          </item>
-          <item id="0606f6321ce54a1ab5f67b06d05f4330" veid="f365095b98354612b040d6a321bdb827" cid="PROP056" type="property" name="type" owner="2dcb0ee62aa14d54bbd09d1023540c0d" creator="" creation-date="01/21/2026 17:06:56" visibility="private">
-            <structural-feature type="Player" type-id="Player" />
-          </item>
-          <item id="8b3711946b954d269d9d206b28c953fd" veid="b08b07f6ee0c4818b154657f21468fbd" cid="I007" type="uml-interface-classifier" name="IPlayArea" owner="4c5c0f8613d74cb6a95a54098334cee6" creator="" creation-date="01/21/2026 16:52:29" visibility="undefined">
+          <item id="0e84cd9c65894cf292e0e15f3f29aa38" veid="c52574edd7c440668d6a12f75ca38c5c" cid="I008" type="uml-interface-classifier" name="IMoveStrategy" owner="4c5c0f8613d74cb6a95a54098334cee6" creator="" creation-date="01/21/2026 16:53:14" visibility="undefined">
             <stereotypes>
               <stereotype name="interface" />
             </stereotypes>
@@ -1579,10 +1583,30 @@
               <stereotype id="04f39f0103bb4caca85d2181a8b94ce1" veid="a30e649e5c2c49a2be89b4d53967443d_interface_c" type="interface" creation-date="01/21/2026 16:50:53" ref="" />
             </stereotype-instances>
             <operations>
-              <operation id="2220bfeadf314befab975dea7f73e530" cid="OP026" veid="o8ebaaf44efc24cffa45ed00c93cea719697" name="isFull" creation-date="01/21/2026 16:52:35" type="Boolean" type-id="Uml.Boolean" visibility="public" />
-              <operation id="46c8f076295548debb940d6d332d2421" cid="OP027" veid="o3508b45e150644afb4ba83f64180b143736" name="clear" creation-date="01/21/2026 16:52:47" type="Integer" type-id="Uml.Integer" visibility="public" />
+              <operation id="1a32cc6a7e6f48b3b1c3daa58ee1fea1" cid="OP028" veid="o948deff6277148b6bbbe975fe415942d470" name="chooseMove" creation-date="01/21/2026 16:53:26" type="void" type-id="void" visibility="public">
+                <parameters>
+                  <parameter id="p89e10bc2abb34cefa103c2f513c3c3a6" name="board" type="IPlayArea" type-id="IPlayArea" creation-date="01/21/2026 16:53:56" />
+                </parameters>
+                <source-codes>
+                  <source-code language="ActionScript" />
+                </source-codes>
+              </operation>
             </operations>
           </item>
+          <item id="7e77da6c845145ffb0c32bdde1343e78" cid="I010" type="uml-interface-classifier" name="GameController" owner="a717fd53155c49d996ac3d21875d2295" creator="" creation-date="04/15/2026 15:45:37" visibility="undefined">
+            <stereotypes>
+              <stereotype name="interface" />
+            </stereotypes>
+            <stereotype-instances>
+              <stereotype id="7e77da6c845145ffb0c32bdde1343e78_interface_c" type="interface" creation-date="04/15/2026 15:45:37" ref="" />
+            </stereotype-instances>
+            <operations>
+              <operation id="o8ca3f966bfb24bc4bf1aec7dc6dc21aa199" cid="OP048" name="restartGame" creation-date="04/15/2026 15:45:54" type="" type-id="" visibility="public" />
+              <operation id="od68d6e69d1604239b6af83468b81dcfc525" cid="OP049" name="backToMainMenu" creation-date="04/15/2026 15:46:23" type="" type-id="" visibility="public" />
+              <operation id="o10e583eac1494a8b870c706d8b3c873d141" cid="OP050" name="openHelp" creation-date="04/15/2026 15:46:37" type="" type-id="" visibility="public" />
+            </operations>
+          </item>
+          <item id="eecadfd9bc9b4f3eb4ffbd5d7a017f9c" veid="f75944a7cac540128312d584b81dd490" cid="GNR006" type="generalization" owner="a717fd53155c49d996ac3d21875d2295" creator="" creation-date="01/21/2026 16:38:44" from="89469ca546e34147aa8ecb9fc65cd66e" to="7e77da6c845145ffb0c32bdde1343e78" visibility="package" />
         </abstract-items>
         <layer id="70d075bd022a44c1b15b7cefba861195" name="Default" visible="true" enabled="true" locked="false">
           <item id="22d45ef5d4f942cd83c5fc9002a2dfb1" iid="98d6c6d4f55a4400adda46635a4553a2" creation-date="01/21/2026 16:43:50" order-index="8" type="entity">
@@ -1654,7 +1678,7 @@
             <layout ax="1017" ay="515.9131" awidth="143" aheight="121" x="1017" y="515.9131" width="140" height="115" />
           </item>
           <item id="2dcb0ee62aa14d54bbd09d1023540c0d" iid="a625fb03fe75405d8b341bb5aee21262" container="b8c3ebe311464fd2a9cd8675668916f9" container-iid="da54af403e034f76bcc10d99f554c20d" show-fields="true" creation-date="01/21/2026 17:06:50" order-index="26" type="entity">
-            <layout ax="455" ay="1016.0869" awidth="332" aheight="190" x="455" y="1016.0869" width="217" height="160" />
+            <layout ax="455" ay="1037.0869" awidth="332" aheight="190" x="455" y="1037.0869" width="217" height="160" />
             <classifier />
             <class />
           </item>
@@ -1685,12 +1709,12 @@
             <relation from="f7b016b500cd497896e73822513290d6" from-iid="37888bf169494a19b5e622b2675d592c" to="5eca074071474844b40a11a77d5dc185" to-iid="5f35130744ab4b93bae66ea9e2c6e78f" />
           </item>
           <item id="d7dee5dffdc54718a1adef8cd9eacd2c" iid="388a3a8237144977b4358586b19cc9f7" container="b8c3ebe311464fd2a9cd8675668916f9" container-iid="da54af403e034f76bcc10d99f554c20d" creation-date="01/21/2026 17:12:14" order-index="30" type="relation">
-            <layout start-role-position="25,15" end-role-position="25.134712,-4.999503" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" start-auto-side="false" lock-start-point="true" lock-end-point="true" lock-to-fields="true" auto-path="" x1="872" y1="726" x2="787" y2="1056" start-border-pos="0.47891825437545776" end-border-pos="0.3031751130756579" start-local-pos="227.08691" end-local-pos="39.913086" name-position="0,20">
+            <layout start-role-position="25,15" end-role-position="25.134712,-4.999503" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" start-auto-side="false" lock-start-point="true" lock-end-point="true" lock-to-fields="true" auto-path="" x1="872" y1="726" x2="787" y2="1078" start-border-pos="0.47891825437545776" end-border-pos="0.3031751130756579" start-local-pos="227.08691" end-local-pos="40.913086" name-position="0,20">
               <points>
                 <point x="872" y="726" />
                 <point x="969" y="741" />
                 <point x="969" y="1054" />
-                <point x="787" y="1056" />
+                <point x="787" y="1078" />
               </points>
             </layout>
             <relation from="f7b016b500cd497896e73822513290d6" from-iid="37888bf169494a19b5e622b2675d592c" to="2dcb0ee62aa14d54bbd09d1023540c0d" to-iid="a625fb03fe75405d8b341bb5aee21262" to-field="570cac634ff8458dbabf9fdb3964f709" />
@@ -1716,10 +1740,10 @@
             <relation from="5eca074071474844b40a11a77d5dc185" from-iid="5f35130744ab4b93bae66ea9e2c6e78f" to="72a93e09f93d4a8db0513fa4dd8dcd7f" to-iid="968f7d13d7574672bdb52067a5233e83" />
           </item>
           <item id="945559df37654c82ba25c363469f0792" iid="e9f9c97de2a34a11b851f90673ff9cfe" creation-date="01/21/2026 17:14:48" order-index="33" type="relation">
-            <layout start-role-position="25,15" end-role-position="18.636383,-16.66901" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" start-auto-side="false" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="483" y1="1265" x2="501" y2="1206" start-border-pos="0.04895104840397835" end-border-pos="0.7154377847909927" start-local-pos="28" end-local-pos="30" name-position="5,22.086914">
+            <layout start-role-position="25,15" end-role-position="18.636383,-16.66901" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" start-auto-side="false" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="483" y1="1265" x2="501" y2="1227" start-border-pos="0.04895104840397835" end-border-pos="0.7154377847909927" start-local-pos="28" end-local-pos="30" name-position="5,22.086914">
               <points>
                 <point x="483" y="1265" />
-                <point x="501" y="1206" />
+                <point x="501" y="1227" />
               </points>
             </layout>
             <relation from="fa55e1749084453780854fe0c923a5ea" from-iid="7420c90b75d24550b78ff78e40b124c5" to="2dcb0ee62aa14d54bbd09d1023540c0d" to-iid="a625fb03fe75405d8b341bb5aee21262" to-field="07953ab04ffe4899aa17b5c8c0aaebeb" />
@@ -1847,6 +1871,16 @@
               </points>
             </layout>
             <relation from="89469ca546e34147aa8ecb9fc65cd66e" from-iid="91354c650bf74ec091b4a75dad52f03d" to="7e77da6c845145ffb0c32bdde1343e78" to-iid="d0b4b6fbb34f471fa492d2ca55588cbe" />
+          </item>
+          <item id="0c100c76382948d69064a73078ac3078" iid="edd4a50cb1284e669e5563201d4b1851" creation-date="04/21/2026 11:25:19" order-index="43" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="true" auto-path="" x1="924" y1="230" x2="732" y2="516" start-border-pos="0.46985371907552087" end-border-pos="0.16606714628297362" start-local-pos="84.92383" end-local-pos="277" name-position="0,20">
+              <points>
+                <point x="924" y="230" />
+                <point x="922" y="373" />
+                <point x="732" y="516" />
+              </points>
+            </layout>
+            <relation from="89469ca546e34147aa8ecb9fc65cd66e" from-iid="91354c650bf74ec091b4a75dad52f03d" from-field="ode19f036873948f1861cd8fa9b470ace822" to="f7b016b500cd497896e73822513290d6" to-iid="37888bf169494a19b5e622b2675d592c" />
           </item>
         </layer>
       </diagram>
