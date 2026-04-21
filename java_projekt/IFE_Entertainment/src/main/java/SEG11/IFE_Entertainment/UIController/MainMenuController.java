@@ -6,9 +6,21 @@ import java.io.IOException;
 
 public class MainMenuController {
 
+	// TODO in startGame() umändern und implementieren
     @FXML
     private void switchToGame() throws IOException {
-        App.setRoot("Game");
+        App.setRoot("FourConnectGame");
+        // TODO
+    }
+    
+    @FXML
+    private void openSettings() throws IOException{
+    	// TODO
+    }
+    
+    @FXML
+    private void backToMainMenu() throws IOException{
+    	// TODO
     }
 
     @FXML
