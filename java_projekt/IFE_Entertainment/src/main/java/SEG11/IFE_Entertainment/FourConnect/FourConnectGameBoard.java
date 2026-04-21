@@ -20,10 +20,10 @@
 
 package SEG11.IFE_Entertainment.FourConnect;
 
-
+import SEG11.IFE_Entertainment.GameCore.IPlayArea;
 import java.util.*;
 
-public class FourConnectGameBoard {
+public class FourConnectGameBoard implements IPlayArea {
     private static final Integer ROW_COUNTS = 6; //6
     private static final Integer COLUM_COUNTS = 7; //7
     private Map<Position,FourConnectPlayer> cells = new HashMap<>();
@@ -87,5 +87,35 @@ public class FourConnectGameBoard {
                 cells.put(position, board.getCellOwner(c,r));
             }
         }
+    }
+
+    /**
+     * überprüft, ob das Spielfeld gefüllt ist
+     * @return true, wenn voll und false, wenn es noch nicht voll ist
+     */
+    @Override
+    public Boolean isFull() {
+        int numberCells = ROW_COUNTS * COLUM_COUNTS; // Gesamtanzahl der vorhanden Zellen
+        int filledCells = 0;
+        for(Map.Entry<Position, FourConnectPlayer> pos : cells.entrySet()){
+            if(pos.getValue().getType() != Player.NONE) filledCells++;
+        }
+        return filledCells == numberCells;
+    }
+
+    /**
+     * füllt das Feld erneut mit leeren Zellen
+     * @return 0, wenn erfolgreich
+     */
+    @Override
+    public Integer clear() {
+        FourConnectPlayer nonePlayer = new FourConnectPlayer(Player.NONE,null,null);
+        for(int r=0;r<ROW_COUNTS;r++){
+            for(int c = 0; c< COLUM_COUNTS; c++){
+                Position position = new Position(c,r);
+                cells.put(position, nonePlayer);
+            }
+        }
+        return 0;
     }
 }

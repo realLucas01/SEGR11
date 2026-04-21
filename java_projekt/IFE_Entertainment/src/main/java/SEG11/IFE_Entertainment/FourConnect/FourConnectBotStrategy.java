@@ -91,6 +91,19 @@ public class FourConnectBotStrategy implements IMoveStrategy {
     }
 
     /**
+     * Standardkonstruktor für die BotStrategy, der Bot wird dann benutzt über:
+     * FourConnectBotStrategy botStrategy = new FourConnectBotStrategy(game, rules);
+     * IMoveStrategy hardBot = botStrategy.new HardBotStrategy();
+     * hardBot.chooseMove(board);
+     * @param game die aktuelle Instanz des verwendeten Spiels
+     * @param rules die Instanz der regeln
+     */
+    public FourConnectBotStrategy(FourConnectGame game, FourConnectRules rules){
+        this.fcGame = game;
+        this.fcRules = rules;
+    }
+
+    /**
      * Bewertet den aktuellen Zustand des Spielfelds aus Sicht des Bots.
      * Alle 69 möglichen Vier Felder Fenster werden analysiert. Enthält
      * ein Fenster ausschließlich Bot Scheiben und leere Felder, wird ein
@@ -220,7 +233,16 @@ public class FourConnectBotStrategy implements IMoveStrategy {
         @Override
         public void chooseMove(IPlayArea board) {
             // Logik für zufälligen Zug
-            fcGame.dropDisc(randNum.nextInt(7)+1);
+            List<Integer> possibleColumns = new ArrayList<>();
+            /* Es überprüft, welche Spalten noch frei sind. Anhand der freien Spalten wird eine zufällig ausgewählt
+            * und diese an dropDisc() weitergeleitet  */
+            for(int col = 0; col < ((FourConnectGameBoard) board).getColumns()-1; col++ ){
+                if(((FourConnectGameBoard) board).getCellOwner(col,0).getType() != Player.NONE){
+                    possibleColumns.add(col);
+                }
+            }
+            Integer randomIndex = randNum.nextInt(possibleColumns.size());
+            fcGame.dropDisc(possibleColumns.get(randomIndex));
         }
     }
 
@@ -366,7 +388,7 @@ public class FourConnectBotStrategy implements IMoveStrategy {
                 for(int y = rowCount - 1; y > -1; y--){
                     if(board.getCellOwner(x,y).getType() == Player.NONE){
                         // Unterste freie Zelle dieser Spalte gefunden
-                        possibleTurns.add(new Position(x, y-1));
+                        possibleTurns.add(new Position(x, y));
                         break;
                     }
                     // Keine freie zelle, Spalte wird übersprungen
