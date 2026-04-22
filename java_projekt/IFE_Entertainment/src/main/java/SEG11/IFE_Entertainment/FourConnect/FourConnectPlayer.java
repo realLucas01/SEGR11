@@ -23,20 +23,16 @@ package SEG11.IFE_Entertainment.FourConnect;
  * Der Vier gewinnt Spieler
  */
 public class FourConnectPlayer {
-    private Player type;
-    private FourConnectBotStrategy strategy;
-    private String colour;
+    private final Player type;
+    private final FourConnectBotStrategy strategy;
+    private final String colour;
 
     /**
      * Standardkonstruktor
      */
     public FourConnectPlayer(Player type, FourConnectBotStrategy strategy, String colour) {
         this.type = type;
-        if(type.equals(Player.BOT)){
-            this.strategy = strategy;
-        } else {
-            this.strategy = null;
-        }
+        this.strategy = type == Player.BOT ? strategy : null;
         this.colour = colour;
     }
 

@@ -19,7 +19,6 @@
 
 
 package SEG11.IFE_Entertainment.FourConnect;
-
 import SEG11.IFE_Entertainment.GameCore.IMoveStrategy;
 import SEG11.IFE_Entertainment.GameCore.IPlayArea;
 
@@ -28,12 +27,13 @@ import java.util.List;
 import java.util.Random;
 
 import static java.lang.Math.*;
+import java.security.SecureRandom;
 
 /**
  * Implementiert {@link IMoveStrategy} und stellt zwei Bot strategien für das Vier Gewinnt Spiel bereit:
  * {@link EasyBotStrategy} - wählt zufällig eine gültige Spalte
  * {@link HardBotStrategy} - berechnet den besten Zug per MinMax
- * 
+ *
  */
 public class FourConnectBotStrategy implements IMoveStrategy {
 
@@ -48,7 +48,7 @@ public class FourConnectBotStrategy implements IMoveStrategy {
     /**
      * Zufallsgenerator
      */
-    private final Random randNum = new Random();
+    private final Random randNum = new SecureRandom();
     /**
      * Spieler Typ des menschlichen Gegners
      */
@@ -116,7 +116,7 @@ public class FourConnectBotStrategy implements IMoveStrategy {
      */
     Integer appraiseBoard(FourConnectGameBoard board) {
         int score = 0;
-        ArrayList<Position[]> connectsList = allFourConnects(board);
+        final ArrayList<Position[]> connectsList = allFourConnects(board);
 
         for (Position[] connects : connectsList) {
             int botOwningCount = 0;
@@ -124,49 +124,27 @@ public class FourConnectBotStrategy implements IMoveStrategy {
 
             //Zähle Bot und Gegner Scheiben im aktuellen Fenster
             for (Position pos : connects) {
-                Player owner = board.getCellOwner(pos.getX(), pos.getY()).getType();
+                final Player owner = board.getCellOwner(pos.getX(), pos.getY()).getType();
                 switch (owner) {
-                    case HUMAN:
-                        playerOwningCount++;
-                        break;
-                    case BOT:
-                        botOwningCount++;
-                        break;
-                    default:
-                        break;
-                }
+				case HUMAN -> playerOwningCount++;
+				case BOT -> botOwningCount++;
+				}
             }
             // Bot Fenster: kein Gegner vorhanden -> positiv bewerten
             if (playerOwningCount == 0) {
                 switch (botOwningCount) {
-                    case 4:
-                        score += SCORE_BOT_FOUR;
-                        break;
-                    case 3:
-                        score += SCORE_BOT_THREE;
-                        break;
-                    case 2:
-                        score += SCORE_BOT_TWO;
-                        break;
-                    default:
-                        break;
-                }
+				case 4 -> score += SCORE_BOT_FOUR;
+				case 3 -> score += SCORE_BOT_THREE;
+				case 2 -> score += SCORE_BOT_TWO;
+				}
             }
             //Gegner Fenster: kein Bot vorhanden -> negativ bewerten
             if (botOwningCount == 0) {
                 switch (playerOwningCount) {
-                    case 4:
-                        score += SCORE_OPP_FOUR;
-                        break;
-                    case 3:
-                        score += SCORE_OPP_THREE;
-                        break;
-                    case 2:
-                        score += SCORE_OPP_TWO;
-                        break;
-                    default:
-                        break;
-                }
+				case 4 -> score += SCORE_OPP_FOUR;
+				case 3 -> score += SCORE_OPP_THREE;
+				case 2 -> score += SCORE_OPP_TWO;
+				}
             }
         }
         return score;
@@ -180,13 +158,13 @@ public class FourConnectBotStrategy implements IMoveStrategy {
      * @return die ArrayList mit allen Siegeskoordinaten
      */
     ArrayList<Position[]> allFourConnects(FourConnectGameBoard board){
-        ArrayList<Position[]> connectsList = new ArrayList<>();
-        Integer columCount = board.getColumns();
-        Integer rowCount = board.getRows();
+        final ArrayList<Position[]> connectsList = new ArrayList<>();
+        final Integer columCount = board.getColumns();
+        final Integer rowCount = board.getRows();
         //Horizontal
         for(int y = 0; y < rowCount; y++ ){
             for(int x = 0; x < columCount - 3; x++){
-                Position[] temp = {new Position(x,y), new Position(x+1,y), new Position(x+2,y),
+                final Position[] temp = {new Position(x,y), new Position(x+1,y), new Position(x+2,y),
                         new Position(x+3,y)};
                 connectsList.add(temp);
             }
@@ -194,7 +172,7 @@ public class FourConnectBotStrategy implements IMoveStrategy {
         //Vertical
         for(int x = 0; x < columCount; x++ ){
             for(int y = 0; y < rowCount - 3; y++){
-                Position[] temp = {new Position(x,y), new Position(x,y+1), new Position(x,y+2),
+                final Position[] temp = {new Position(x,y), new Position(x,y+1), new Position(x,y+2),
                         new Position(x,y+3)};
                 connectsList.add(temp);
             }
@@ -202,7 +180,7 @@ public class FourConnectBotStrategy implements IMoveStrategy {
         //Diagonal ↗
         for(int x = 0; x < columCount - 3; x++ ){
             for(int y = 0; y < rowCount - 3; y++){
-                Position[] temp = {new Position(x,y), new Position(x+1,y+1), new Position(x+2,y+2),
+                final Position[] temp = {new Position(x,y), new Position(x+1,y+1), new Position(x+2,y+2),
                         new Position(x+3,y+3)};
                 connectsList.add(temp);
             }
@@ -210,7 +188,7 @@ public class FourConnectBotStrategy implements IMoveStrategy {
         //Diagonal ↘
         for(int x = 0; x < columCount-3; x++ ){
             for(int y = 3; y < rowCount; y++){
-                Position[] temp = {new Position(x,y), new Position(x+1,y-1), new Position(x+2,y-2),
+                final Position[] temp = {new Position(x,y), new Position(x+1,y-1), new Position(x+2,y-2),
                         new Position(x+3,y-3)};
                 connectsList.add(temp);
             }
@@ -233,7 +211,7 @@ public class FourConnectBotStrategy implements IMoveStrategy {
         @Override
         public void chooseMove(IPlayArea board) {
             // Logik für zufälligen Zug
-            List<Integer> possibleColumns = new ArrayList<>();
+            final List<Integer> possibleColumns = new ArrayList<>();
             /* Es überprüft, welche Spalten noch frei sind. Anhand der freien Spalten wird eine zufällig ausgewählt
             * und diese an dropDisc() weitergeleitet  */
             for(int col = 0; col < ((FourConnectGameBoard) board).getColumns()-1; col++ ){
@@ -241,7 +219,7 @@ public class FourConnectBotStrategy implements IMoveStrategy {
                     possibleColumns.add(col);
                 }
             }
-            Integer randomIndex = randNum.nextInt(possibleColumns.size());
+            final Integer randomIndex = randNum.nextInt(possibleColumns.size());
             fcGame.dropDisc(possibleColumns.get(randomIndex));
         }
     }
@@ -266,10 +244,10 @@ public class FourConnectBotStrategy implements IMoveStrategy {
         @Override
         public void chooseMove(IPlayArea board) {
             // Spielfeld kopieren, damit der Originalzustand unverändert bleibt
-            FourConnectGameBoard boardCopy = new FourConnectGameBoard();
+            final FourConnectGameBoard boardCopy = new FourConnectGameBoard();
             boardCopy.copy((FourConnectGameBoard) board);
 
-            Integer toPlayCol = findBestTurn(boardCopy, MINIMAX_DEPTH);
+            final Integer toPlayCol = findBestTurn(boardCopy, MINIMAX_DEPTH);
             fcGame.dropDisc(toPlayCol);
         }
 
@@ -286,7 +264,7 @@ public class FourConnectBotStrategy implements IMoveStrategy {
             Integer bestScore = Integer.MIN_VALUE;
             Integer bestTurn = -1;
             Integer score;
-            List<Position> valideTurns = findValideTurns(board);
+            final List<Position> valideTurns = findValideTurns(board);
 
             for(Position turn: valideTurns){
                 playTestTurn(board, turn, bot);
@@ -322,7 +300,7 @@ public class FourConnectBotStrategy implements IMoveStrategy {
                 return appraiseBoard(board);
             }
 
-            List<Position> valideTurns = findValideTurns(board);
+            final List<Position> valideTurns = findValideTurns(board);
 
             if( isMaximizing){
                 // Bot am Zug: höchsten erreichbaren Score suchen
@@ -364,7 +342,7 @@ public class FourConnectBotStrategy implements IMoveStrategy {
          * @param bot der Spieler, dessen Scheibe gesetzt wird
          */
         private void playTestTurn(FourConnectGameBoard board, Position turn, Player bot) {
-           FourConnectPlayer testTurnOwner = new FourConnectPlayer(bot, null, null);
+           final FourConnectPlayer testTurnOwner = new FourConnectPlayer(bot, null, null);
            board.setCellValue(turn,testTurnOwner);
         }
 
@@ -380,9 +358,9 @@ public class FourConnectBotStrategy implements IMoveStrategy {
          * @return Liste der validen Zielpositionen
          */
         private List<Position> findValideTurns(FourConnectGameBoard board) {
-            Integer columCount = board.getColumns();
-            Integer rowCount = board.getRows();
-            List<Position> possibleTurns = new ArrayList<>();
+            final Integer columCount = board.getColumns();
+            final Integer rowCount = board.getRows();
+            final List<Position> possibleTurns = new ArrayList<>();
             for(int x = 0; x <= columCount-1; x++ ){
                 // Von unten (y = rowCount-1) nach oben (y = 0) suchen
                 for(int y = rowCount - 1; y > -1; y--){
