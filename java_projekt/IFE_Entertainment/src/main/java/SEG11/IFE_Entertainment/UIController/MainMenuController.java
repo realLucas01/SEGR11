@@ -18,6 +18,6 @@ public class MainMenuController {
 
     @FXML
     public void backToMainMenu() throws IOException {
-        App.setRoot("MainMenu");
+        App.setRoot("ModeMenu");
     }
 }
