@@ -214,8 +214,8 @@ public class FourConnectBotStrategy implements IMoveStrategy {
             final List<Integer> possibleColumns = new ArrayList<>();
             /* Es überprüft, welche Spalten noch frei sind. Anhand der freien Spalten wird eine zufällig ausgewählt
             * und diese an dropDisc() weitergeleitet  */
-            for(int col = 0; col < ((FourConnectGameBoard) board).getColumns()-1; col++ ){
-                if(((FourConnectGameBoard) board).getCellOwner(col,0).getType() != Player.NONE){
+            for(int col = 0; col < ((FourConnectGameBoard) board).getColumns(); col++ ){
+                if(((FourConnectGameBoard) board).getCellOwner(col,0).getType() == Player.NONE){
                     possibleColumns.add(col);
                 }
             }
