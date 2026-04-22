@@ -22,7 +22,7 @@ package SEG11.IFE_Entertainment.GameCore;
 /**
  * Interface für die Überprüfung/Einhaltung der Spielregeln
  * 
- * <p>Ist für die Klasse zu implementieren die die gesammte Logik für die
+ * <p>Ist für die Klasse zu implementieren, die die gesammte Logik für die
  * Überprüfung der Spielzüge auf Konformität mit dem jeweiligen Regelwerk
  * beherbergt
  * 

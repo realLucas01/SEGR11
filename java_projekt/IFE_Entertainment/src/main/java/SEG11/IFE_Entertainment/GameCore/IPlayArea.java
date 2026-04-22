@@ -22,7 +22,7 @@ package SEG11.IFE_Entertainment.GameCore;
 /**
  * Interface für die Logik zur Verwaltung des Spielbretts
  * 
- * <p>Ist für die Klasse zu implementieren die die gesammte Logik für die
+ * <p>Ist für die Klasse zu implementieren, die die gesammte Logik für die
  * Verwaltung des Spielbretts beherbergt, also z.B.: das Initialisieren des
  * Spielbretts und das zur Verfügungstellen von Funktionen um auf einzelne
  * Zellen oder Werte zu zugreifen und diese zu verändern

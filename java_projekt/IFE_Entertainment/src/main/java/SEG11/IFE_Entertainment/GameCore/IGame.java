@@ -23,7 +23,7 @@ package SEG11.IFE_Entertainment.GameCore;
  * Interface für die Logik des Spielablaufes
  * 
  * <p>
- * Ist für die Klasse zu implementieren die die gesammte Logik für den Ablauf
+ * Ist für die Klasse zu implementieren, die die gesammte Logik für den Ablauf
  * und die Verwaltung des Spieles beherbegt, also in der neue Spiele
  * initialisiert werden, Züge ausgefphrt werden usw
  * 
