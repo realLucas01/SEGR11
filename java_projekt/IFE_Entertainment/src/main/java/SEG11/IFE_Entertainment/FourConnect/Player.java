@@ -9,9 +9,13 @@ public enum Player {
      */
     HUMAN,
     /**
-     * Bot Spieler
+     * Simpler Bot Spieler
      */
-    BOT,
+    EASYBOT,
+    /**
+     * Schwerer Bot Spieler
+     */
+    HARDBOT,
     /**
      * Leerer Spieler, zum init des Spielfeldes
      */

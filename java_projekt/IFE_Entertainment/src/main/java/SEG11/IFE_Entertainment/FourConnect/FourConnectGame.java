@@ -1,5 +1,6 @@
 package SEG11.IFE_Entertainment.FourConnect;
 
+import SEG11.IFE_Entertainment.App;
 import SEG11.IFE_Entertainment.GameCore.GameState;
 import SEG11.IFE_Entertainment.GameCore.IGame;
 import SEG11.IFE_Entertainment.GameCore.IPlayArea;
@@ -11,11 +12,14 @@ public class FourConnectGame implements IGame {
     private int currentPlayerIndex ;
     private FourConnectRules Rules;
     private FourConnectGameBoard gameBoard;
+    private BrandingService currentbranding;
     
     public FourConnectGame() {
     	State = GameState.NotStarted;
     	players = new FourConnectPlayer[2];
     	currentPlayerIndex = 0;
+    	Rules = new FourConnectRules();
+    	gameBoard = new FourConnectGameBoard();
     }
 
 	@Override
@@ -43,7 +47,7 @@ public class FourConnectGame implements IGame {
     	players[0] = null;
     	players[1] = null;
     	currentPlayerIndex = 0;
-    	gameBoard = null;
+    	gameBoard.clear();
 	}
 	
     /**
@@ -85,17 +89,41 @@ public class FourConnectGame implements IGame {
      * @return
      */
     public Integer initFourConnectGame(Player playerOne, Player playerTwo){
-        
-    	gameBoard = new FourConnectGameBoard();
-        
-        FourConnectPlayer player1 = new FourConnectPlayer();
-        players[0] = player1;
-        
-        FourConnectPlayer player2 = new FourConnectPlayer();
-        players[1] = player2;
-        
-        currentPlayerIndex = 0;
     	
+        currentPlayerIndex = 0;
+        
+    	currentbranding = App.branding;
+    	FourConnectBotStrategy botStrategy = new FourConnectBotStrategy(this, Rules); 
+    	switch (playerOne) {
+    	
+    	case Player.HUMAN:
+    		players[0] = new FourConnectPlayer(playerOne, null, currentbranding.getPrimaryColor());
+    		break;
+    	case Player.EASYBOT:
+    		players[0] = new FourConnectPlayer(playerOne, botStrategy.new EasyBotStrategy(), currentbranding.getPrimaryColor());
+    		break;
+    	case Player.HARDBOT:
+    		players[0] = new FourConnectPlayer(playerOne, botStrategy.new HardBotStrategy(), currentbranding.getPrimaryColor());
+    		break;
+    	default:
+    		return 1;
+    	}
+    	
+    	switch (playerTwo) {
+    	
+    	case Player.HUMAN:
+    		players[1] = new FourConnectPlayer(playerTwo, null, currentbranding.getPrimaryColor());
+    		break;
+    	case Player.EASYBOT:
+    		players[1] = new FourConnectPlayer(playerTwo, botStrategy.new EasyBotStrategy(), currentbranding.getPrimaryColor());
+    		break;
+    	case Player.HARDBOT:
+    		players[1] = new FourConnectPlayer(playerTwo, botStrategy.new HardBotStrategy(), currentbranding.getPrimaryColor());
+    		break;
+    	default:
+    		return 1;
+    	}
+        
         State = GameState.Running;
     	return 0;
     }
