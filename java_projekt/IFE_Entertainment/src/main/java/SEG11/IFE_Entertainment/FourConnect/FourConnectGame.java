@@ -1,9 +1,5 @@
 package SEG11.IFE_Entertainment.FourConnect;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.List;
-
 import SEG11.IFE_Entertainment.GameCore.GameState;
 import SEG11.IFE_Entertainment.GameCore.IGame;
 import SEG11.IFE_Entertainment.GameCore.IPlayArea;
@@ -57,14 +53,15 @@ public class FourConnectGame implements IGame {
      * @return
      */
     public GameState dropDisc(Integer Column){
-    	for (int rows = 0 ; rows <= gameBoard.getRows() ; rows++) {
+    	int rows;
+    	for (rows = 0 ; rows <= gameBoard.getRows() ; rows++) {
         	if(gameBoard.getCellOwner(new Position(rows,Column)).getType() != Player.NONE) {
         		gameBoard.setCellValue(new Position(rows+1,Column), players[currentPlayerIndex]);
         		break;
         	}
         }
-    	if (Rules.checkTie(gameBoard)) {State = GameState.Tied;}
-    	if (Rules.checkWin(gameBoard)) {State = GameState.Won;}
+    	if (Rules.checkTie(gameBoard, players[currentPlayerIndex])) {State = GameState.Tied;}
+    	if (Rules.checkWin(gameBoard, players[currentPlayerIndex])) {State = GameState.Won;}
 		return State;
     }
 
