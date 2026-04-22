@@ -95,34 +95,22 @@ public class FourConnectGame implements IGame {
     	currentbranding = App.branding;
     	FourConnectBotStrategy botStrategy = new FourConnectBotStrategy(this, Rules); 
     	switch (playerOne) {
-    	
-    	case Player.HUMAN:
-    		players[0] = new FourConnectPlayer(playerOne, null, currentbranding.getPrimaryColor());
-    		break;
-    	case Player.EASYBOT:
-    		players[0] = new FourConnectPlayer(playerOne, botStrategy.new EasyBotStrategy(), currentbranding.getPrimaryColor());
-    		break;
-    	case Player.HARDBOT:
-    		players[0] = new FourConnectPlayer(playerOne, botStrategy.new HardBotStrategy(), currentbranding.getPrimaryColor());
-    		break;
-    	default:
-    		return 1;
-    	}
+		case Player.HUMAN -> players[0] = new FourConnectPlayer(playerOne, null, currentbranding.getPrimaryColor());
+		case Player.EASYBOT -> players[0] = new FourConnectPlayer(playerOne, botStrategy.new EasyBotStrategy(), currentbranding.getPrimaryColor());
+		case Player.HARDBOT -> players[0] = new FourConnectPlayer(playerOne, botStrategy.new HardBotStrategy(), currentbranding.getPrimaryColor());
+		default -> {
+			return 1;
+		}
+		}
     	
     	switch (playerTwo) {
-    	
-    	case Player.HUMAN:
-    		players[1] = new FourConnectPlayer(playerTwo, null, currentbranding.getPrimaryColor());
-    		break;
-    	case Player.EASYBOT:
-    		players[1] = new FourConnectPlayer(playerTwo, botStrategy.new EasyBotStrategy(), currentbranding.getPrimaryColor());
-    		break;
-    	case Player.HARDBOT:
-    		players[1] = new FourConnectPlayer(playerTwo, botStrategy.new HardBotStrategy(), currentbranding.getPrimaryColor());
-    		break;
-    	default:
-    		return 1;
-    	}
+		case Player.HUMAN -> players[1] = new FourConnectPlayer(playerTwo, null, currentbranding.getPrimaryColor());
+		case Player.EASYBOT -> players[1] = new FourConnectPlayer(playerTwo, botStrategy.new EasyBotStrategy(), currentbranding.getPrimaryColor());
+		case Player.HARDBOT -> players[1] = new FourConnectPlayer(playerTwo, botStrategy.new HardBotStrategy(), currentbranding.getPrimaryColor());
+		default -> {
+			return 1;
+		}
+		}
         
         State = GameState.Running;
     	return 0;
