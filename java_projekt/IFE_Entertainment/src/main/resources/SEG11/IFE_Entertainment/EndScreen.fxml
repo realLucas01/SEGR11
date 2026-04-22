@@ -7,15 +7,19 @@
 
 <BorderPane xmlns="http://javafx.com/javafx/21.0.2"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="SEG11.IFE_Entertainment.UIGameController.FourConnectGameController">
+            fx:controller="SEG11.IFE_Entertainment.UIGameController.FourConnectGameController"
+			stylesheets="@style.css">
 
     <center>
         <VBox alignment="CENTER" spacing="20">
 
-            <Label text="Player Wins!" styleClass="title"/>
-
+            <Label fx:id="resultLabel" styleClass="title"/>
+			
+			<!-- Nochmal Spielen -->
             <Button text="Play Again" onAction="#restartGame"/>
-            <Button text="Main Menu" onAction="#backToMainMenu"/>
+            
+            <!-- Zurück zum Main Menü -->
+            <Button text="Main Menu" onAction="#backToMainMenu"/>	
 
         </VBox>
     </center>

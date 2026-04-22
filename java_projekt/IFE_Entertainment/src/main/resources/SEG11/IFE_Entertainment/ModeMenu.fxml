@@ -7,7 +7,8 @@
 
 <BorderPane xmlns="http://javafx.com/javafx/21.0.2"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="SEG11.IFE_Entertainment.UIController.MainMenuController">
+            fx:controller="SEG11.IFE_Entertainment.UIController.ModeMenuController"
+            stylesheets="@style.css">
 
     <top>
         <Label text="Select Mode" styleClass="title"/>
@@ -16,13 +17,18 @@
     <center>
         <VBox alignment="CENTER" spacing="20">
 
-            <Button text="Two Players"
+			 <!-- Java handled, in Java dann z.B. startGame("PVP"); -->
+            <Button text="Two Player-Mode"
                     prefWidth="200"
-                    onAction="#startPvP"/>
-
-            <Button text="Vs Computer"
-                    prefWidth="200"
-                    onAction="#startBot"/>
+                    onAction="#startGame"/>
+                    
+            <Button text="VS Easy Bot"
+            			prefWidth="200"
+			        onAction="#startGameEasyBot"/>
+			
+			<Button text="VS Hard Bot"
+					prefWidth="200"
+			        onAction="#startGameHardBot"/>
 
             <Button text="Back"
                     prefWidth="150"
@@ -32,3 +38,8 @@
     </center>
 
 </BorderPane>
+
+<!--
+Ich habe mir gedacht das man einfach um sinnlose fxml Datein anzulegen einfach in die Mode Selection reinpacken kann Player vs Player
+und dann halt nicht Player vs Bot sonder direkt als Option das man gegen einen einfachen und schweren Bot spielen kann...
+-->

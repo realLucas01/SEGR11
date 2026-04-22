@@ -11,10 +11,16 @@
             fx:controller="SEG11.IFE_Entertainment.UIGameController.FourConnectGameController"
             stylesheets="@style.css">
 
+
+
+			<!-- Titel (wer hätte es gedacht) -->
     <top>
         <Label text="Four Connect" styleClass="title"/>
     </top>
 
+
+
+			<!-- Spielfeld mit Back to Main Menü Button -->
     <center>
         <VBox alignment="CENTER" spacing="20">
 
@@ -27,8 +33,10 @@
         </VBox>
     </center>
 
+
+			<!-- Status Label also wer ist drann oder so... Muss aber nicht sein -->
     <bottom>
-        <Label text="Player turn / status" styleClass="status-label"/>
+        <Label fx:id="statusLabel" styleClass="status-label"/>
     </bottom>
 
 </BorderPane>

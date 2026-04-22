@@ -30,4 +30,11 @@ public class MainMenuController {
     private void onExit() {
         System.exit(0);
     }
+    @FXML
+    public void startGame() {
+        System.out.println("Start Game clicked");
+
+        // später:
+        // SceneManager.switchScene("ModeMenu.fxml");
+    }
 }

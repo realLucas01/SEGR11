@@ -7,12 +7,13 @@
 <?import javafx.geometry.Insets?>
 
 <BorderPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="SEG11.IFE_Entertainment.UIController.MainMenuController">
+            xmlns="http://javafx.com/javafx/21.0.2"
+            fx:controller="SEG11.IFE_Entertainment.UIController.MainMenuController"
+            stylesheets="@style.css">
 
     <top>
         <VBox alignment="CENTER" spacing="10">
-            <Label text="Main Menu"
+            <Label text="Main Menu Four Connect Game"
                    style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
         </VBox>
     </top>
@@ -23,23 +24,25 @@
             <!-- Spiel starten -->
             <Button text="Start Game"
                     prefWidth="200"
-                    onAction="#switchToGame"/>
-
-            <!-- Modus Auswahl -->
-            <Button text="Mode Selection"
-                    prefWidth="200"
                     onAction="#openModeMenu"/>
 
             <!-- Hilfe -->
             <Button text="Help"
                     prefWidth="200"
                     onAction="#openHelp"/>
+               
+            <!-- Settings -->
+            <Button text="Settings"
+                    prefWidth="200"
+                    onAction="#openSettings"/>
+            
 
         </VBox>
     </center>
 
     <bottom>
         <VBox alignment="CENTER">
+			<!--Back Button -->
             <Button text="Exit"
                     prefWidth="120"
                     onAction="#onExit"/>
