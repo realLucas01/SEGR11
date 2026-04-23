@@ -128,7 +128,10 @@ public class FourConnectBotStrategy implements IMoveStrategy {
                 switch (owner) {
 				case HUMAN -> playerOwningCount++;
 				case BOT -> botOwningCount++;
-				}
+                    default -> {
+                        return -1;
+                    }
+                }
             }
             // Bot Fenster: kein Gegner vorhanden -> positiv bewerten
             if (playerOwningCount == 0) {
@@ -136,6 +139,9 @@ public class FourConnectBotStrategy implements IMoveStrategy {
 				case 4 -> score += SCORE_BOT_FOUR;
 				case 3 -> score += SCORE_BOT_THREE;
 				case 2 -> score += SCORE_BOT_TWO;
+                    default -> {
+                        return -1;
+                    }
 				}
             }
             //Gegner Fenster: kein Bot vorhanden -> negativ bewerten
@@ -144,6 +150,9 @@ public class FourConnectBotStrategy implements IMoveStrategy {
 				case 4 -> score += SCORE_OPP_FOUR;
 				case 3 -> score += SCORE_OPP_THREE;
 				case 2 -> score += SCORE_OPP_TWO;
+                    default -> {
+                        return -1;
+                    }
 				}
             }
         }
@@ -219,7 +228,7 @@ public class FourConnectBotStrategy implements IMoveStrategy {
                     possibleColumns.add(col);
                 }
             }
-            final Integer randomIndex = randNum.nextInt(possibleColumns.size());
+            final int randomIndex = randNum.nextInt(possibleColumns.size());
             fcGame.dropDisc(possibleColumns.get(randomIndex));
         }
     }
