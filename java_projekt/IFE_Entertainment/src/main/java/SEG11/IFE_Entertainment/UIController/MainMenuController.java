@@ -20,4 +20,8 @@ public class MainMenuController {
     public void exit() {
         System.exit(0);
     }
+    @FXML
+    public void openHelp() throws IOException {
+        App.setRoot("Help");
+    }
 }
