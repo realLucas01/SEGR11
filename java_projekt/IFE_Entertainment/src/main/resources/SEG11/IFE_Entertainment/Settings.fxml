@@ -19,7 +19,8 @@
 
 
 			<!-- KANN Kriterium deshalb kein onAction -->
-            <Button text="Language"/>
+            <Button text="Language" onAction="changeLanguage"/>
+            <Button text="Change Theme" onAction="#changeTheme"/>
             <Button text="Back" onAction="#backToMainMenu"/>
 
         </VBox>

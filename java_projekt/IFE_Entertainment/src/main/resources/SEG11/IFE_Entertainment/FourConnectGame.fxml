@@ -26,6 +26,14 @@
 
             <GridPane fx:id="gridPane" hgap="5" vgap="5"/>
 
+            <Button text="Restart"
+			        onAction="#restartGame"
+			        styleClass="main-button"/>
+
+			<Button text="Help"
+			        onAction="#openHelp"
+			        styleClass="main-button"/>
+			        
             <Button text="Back"
                     onAction="#backToMainMenu"
                     styleClass="main-button"/>

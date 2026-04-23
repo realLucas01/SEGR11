@@ -30,7 +30,7 @@
 
 	<bottom>
     		<VBox alignment="CENTER">
-    		<!--wtf  Warum in der java denn nicht backToMainMenu????????? -->
+    		<!--wtf  Warum in der java denn nicht backToMainMenu????????? Nicht Konsistent!!! -->
         		<Button text="Back" onAction="#backToGameScreen"/>
     		</VBox>
 	</bottom>

@@ -7,7 +7,7 @@
 <?import javafx.geometry.Insets?>
 
 <BorderPane xmlns="http://javafx.com/javafx"
-            xmlns="http://javafx.com/javafx/21.0.2"
+            xmlns:fx="http://javafx.com/javafx/21.0.2"
             fx:controller="SEG11.IFE_Entertainment.UIController.MainMenuController"
             stylesheets="@style.css">
 
@@ -24,7 +24,7 @@
             <!-- Spiel starten -->
             <Button text="Start Game"
                     prefWidth="200"
-                    onAction="#openModeMenu"/>
+                    onAction="#startGame"/>
 
             <!-- Hilfe -->
             <Button text="Help"
@@ -45,7 +45,7 @@
 			<!--Back Button -->
             <Button text="Exit"
                     prefWidth="120"
-                    onAction="#onExit"/>
+                    onAction="#exit"/>
         </VBox>
     </bottom>
 
