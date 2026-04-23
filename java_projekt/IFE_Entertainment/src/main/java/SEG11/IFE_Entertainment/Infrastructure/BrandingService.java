@@ -62,4 +62,8 @@ public class BrandingService {
     public void setAirlineName(String airlineName) {
         this.airlineName = airlineName;
     }
+
+    public void setTheme(String themeId) {
+        // TODO: Theme anhand von themeId setzen
+    }
 }

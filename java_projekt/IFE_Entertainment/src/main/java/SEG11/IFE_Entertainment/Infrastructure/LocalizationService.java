@@ -53,4 +53,11 @@ public class LocalizationService {
     public Locale[] getAvailableLocales() {
         return new Locale[]{Locale.ENGLISH, Locale.GERMAN};
     }
+    public void setLanguage(String languageCode) {
+        setLocale(new Locale(languageCode));
+    }
+
+    public String getText(String key) {
+        return getString(key);
+    }
 }

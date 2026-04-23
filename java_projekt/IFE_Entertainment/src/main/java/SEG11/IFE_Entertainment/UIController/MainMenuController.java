@@ -8,16 +8,16 @@ public class MainMenuController {
 
     @FXML
     public void startGame() throws IOException {
-        App.setRoot("FourConnectGame");
+        App.setRoot("ModeMenu");
     }
 
     @FXML
-    public void openSetting() throws IOException {
+    public void openSettings() throws IOException {
         App.setRoot("Settings");
     }
 
     @FXML
-    public void backToMainMenu() throws IOException {
-        App.setRoot("ModeMenu");
+    public void exit() {
+        System.exit(0);
     }
 }
