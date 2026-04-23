@@ -44,6 +44,11 @@ public class FourConnectGameController implements GameController {
         if (game.getStatus() != GameState.Running) {
             return;
         }
+        // Prüfen ob Spalte voll ist (oberste Zeile belegt)
+        if (game.getBoard().getCellOwner(column, 0).getType() != Player.NONE) {
+            statusLabel.setText("Spalte ist voll!");
+            return;
+        }
         GameState result = game.dropDisc(column);
         if (result == GameState.Won) {
             statusLabel.setText("Gewonnen!");
