@@ -223,11 +223,11 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
 
 		// Erstellen von Spieler 2 abhängig seines übergebenen Typs
 		switch (playerTwo) {
-		case Player.HUMAN -> players[1] = new FourConnectPlayer(playerTwo, null, currentbranding.getPrimaryColor());
+		case Player.HUMAN -> players[1] = new FourConnectPlayer(playerTwo, null, currentbranding.getSecondaryColor());
 		case Player.EASYBOT -> players[1] = new FourConnectPlayer(playerTwo,botStrategy.new EasyBotStrategy(), 
-				currentbranding.getPrimaryColor());
+				currentbranding.getSecondaryColor());
 		case Player.HARDBOT -> players[1] = new FourConnectPlayer(playerTwo,botStrategy.new HardBotStrategy(), 
-				currentbranding.getPrimaryColor());
+				currentbranding.getSecondaryColor());
 		default -> {
 			return 1;
 		}
