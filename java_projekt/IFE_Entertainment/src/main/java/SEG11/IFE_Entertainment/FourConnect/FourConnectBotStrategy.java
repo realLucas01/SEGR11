@@ -30,7 +30,8 @@ import static java.lang.Math.*;
 import java.security.SecureRandom;
 
 /**
- * Implementiert {@link IMoveStrategy} und stellt zwei Bot strategien für das Vier Gewinnt Spiel bereit:
+ * Implementiert {@link IMoveStrategy} und stellt zwei Bot strategien für das Vier Gewinnt Spiel
+ * bereit:
  * {@link EasyBotStrategy} - wählt zufällig eine gültige Spalte
  * {@link HardBotStrategy} - berechnet den besten Zug per MinMax
  *
@@ -81,8 +82,8 @@ public class FourConnectBotStrategy implements IMoveStrategy {
     /** Suchtiefe des MinMax-Algorithmus (höher = stärker, aber langsamer) */
     private static final int MINIMAX_DEPTH   =     4;
     /**
-     * Wird vom Spielrahmen aufgerufen, um den Bot einen Zug ausführen zu lassen. Die konkrete Logik liegt in den inneren
-     * Klassen {@link EasyBotStrategy} und {@link HardBotStrategy}
+     * Wird vom Spielrahmen aufgerufen, um den Bot einen Zug ausführen zu lassen. Die konkrete
+     * Logik liegt in den inneren Klassen {@link EasyBotStrategy} und {@link HardBotStrategy}
      * @param board das aktuelle Spielfeld
      */
     @Override
@@ -105,7 +106,8 @@ public class FourConnectBotStrategy implements IMoveStrategy {
 
     /**
      * Bewertet den aktuellen Zustand des Spielfelds aus Sicht des Bots.
-     * Alle 69 möglichen Vier Felder Fenster werden analysiert. Enthält
+     *
+     * <p>Alle 69 möglichen Vier Felder Fenster werden analysiert. Enthält
      * ein Fenster ausschließlich Bot Scheiben und leere Felder, wird ein
      * positiver Wert addiert. Enthält es ausschließlich Gegner Scheiben,
      * wird ein negativer Wert subtrahiert. Gemischte Fenster fließen nicht
@@ -160,8 +162,10 @@ public class FourConnectBotStrategy implements IMoveStrategy {
     }
 
     /**
-     * Sucht in einem Standardspielfeld alle 69 Kombinationsmöglichkeiten welche einen Sieg ermöglichen. Diese werden
-     * alle in einer Liste gespeichert und zurückgegeben.
+     * Funktion, um alle Kombinationsmöglichkeiten für einen Sieg zu finden
+     *
+     * <p>Sucht in einem Standardspielfeld alle 69 Kombinationsmöglichkeiten welche einen Sieg
+     * ermöglichen. Diese werden alle in einer Liste gespeichert und zurückgegeben.
      *
      * @param board das Spielfeld
      * @return die ArrayList mit allen Siegeskoordinaten
@@ -173,32 +177,32 @@ public class FourConnectBotStrategy implements IMoveStrategy {
         //Horizontal
         for(int y = 0; y < rowCount; y++ ){
             for(int x = 0; x < columCount - 3; x++){
-                final Position[] temp = {new Position(x,y), new Position(x+1,y), new Position(x+2,y),
-                        new Position(x+3,y)};
+                final Position[] temp = {new Position(x,y), new Position(x+1,y),
+                    new Position(x+2,y), new Position(x+3,y)};
                 connectsList.add(temp);
             }
         }
         //Vertical
         for(int x = 0; x < columCount; x++ ){
             for(int y = 0; y < rowCount - 3; y++){
-                final Position[] temp = {new Position(x,y), new Position(x,y+1), new Position(x,y+2),
-                        new Position(x,y+3)};
+                final Position[] temp = {new Position(x,y), new Position(x,y+1),
+                    new Position(x,y+2), new Position(x,y+3)};
                 connectsList.add(temp);
             }
         }
         //Diagonal ↗
         for(int x = 0; x < columCount - 3; x++ ){
             for(int y = 0; y < rowCount - 3; y++){
-                final Position[] temp = {new Position(x,y), new Position(x+1,y+1), new Position(x+2,y+2),
-                        new Position(x+3,y+3)};
+                final Position[] temp = {new Position(x,y), new Position(x+1,y+1),
+                     new Position(x+2,y+2), new Position(x+3,y+3)};
                 connectsList.add(temp);
             }
         }
         //Diagonal ↘
         for(int x = 0; x < columCount-3; x++ ){
             for(int y = 3; y < rowCount; y++){
-                final Position[] temp = {new Position(x,y), new Position(x+1,y-1), new Position(x+2,y-2),
-                        new Position(x+3,y-3)};
+                final Position[] temp = {new Position(x,y), new Position(x+1,y-1),
+                    new Position(x+2,y-2), new Position(x+3,y-3)};
                 connectsList.add(temp);
             }
         }
@@ -221,8 +225,8 @@ public class FourConnectBotStrategy implements IMoveStrategy {
         public void chooseMove(IPlayArea board) {
             // Logik für zufälligen Zug
             final List<Integer> possibleColumns = new ArrayList<>();
-            /* Es überprüft, welche Spalten noch frei sind. Anhand der freien Spalten wird eine zufällig ausgewählt
-            * und diese an dropDisc() weitergeleitet  */
+            /* Es überprüft, welche Spalten noch frei sind. Anhand der freien Spalten wird eine
+            zufällig ausgewählt und diese an dropDisc() weitergeleitet  */
             for(int col = 0; col < ((FourConnectGameBoard) board).getColumns(); col++ ){
                 if(((FourConnectGameBoard) board).getCellOwner(col,0).getType() == Player.NONE){
                     possibleColumns.add(col);
@@ -235,7 +239,8 @@ public class FourConnectBotStrategy implements IMoveStrategy {
 
     /**
      * Der schwere Bot, er benutzt den MinMax Algorithmus zum Berechnen seines Zuges.
-     * Der Algorithmus durchsucht den Spielbaum bis zur Tiefe
+     *
+     * <p>Der Algorithmus durchsucht den Spielbaum bis zur Tiefe
      * {@value FourConnectBotStrategy#MINIMAX_DEPTH}, bewertet Blattknoten
      * mit {@link #appraiseBoard} und wählt den Zug mit dem höchsten Score
      * aktueller Stand :
@@ -246,8 +251,9 @@ public class FourConnectBotStrategy implements IMoveStrategy {
 
 
         /**
-         * Einstiegspunkt der schweren Strategie. Erstellt eine Kopie des
-         * Spielfelds, berechnet darauf den besten Zug und führt ihn aus.
+         * Einstiegspunkt der schweren Strategie.
+         *
+         * <p>Erstellt eine Kopie des Spielfelds, berechnet darauf den besten Zug und führt ihn aus.
          * @param board das aktuelle Spielfeld
          */
         @Override
@@ -262,11 +268,12 @@ public class FourConnectBotStrategy implements IMoveStrategy {
 
         /**
          * Bestimmt die optimale Spalte für den Bot auf der obersten Ebene des MinMax-Baums.
-         * Jeder valide Zug wird simuliert, per {@link #minMax} bewertet und danach rückgängig gemacht.
-         * Der Zug mit dem höchsten Score wird als Spaltenindex zurückgegeben.
+         *
+         * <p>Jeder valide Zug wird simuliert, per {@link #minMax} bewertet und danach rückgängig
+         * gemacht. Der Zug mit dem höchsten Score wird als Spaltenindex zurückgegeben.
          * @param board das (kopierte) Spielfeld
-         * @param depth die maximale Suchtiefe, umso größer die Zahl, umso höher die Stärke und Berechnungszeit
-         *              3-5 ist ein gutes Maß
+         * @param depth die maximale Suchtiefe, umso größer die Zahl, umso höher die Stärke und
+         *              Berechnungszeit 3-5 ist ein gutes Maß
          * @return Spaltenindex des besten Zugs
          */
         private Integer findBestTurn(FourConnectGameBoard board, int depth){
@@ -290,7 +297,8 @@ public class FourConnectBotStrategy implements IMoveStrategy {
 
         /**
          * Rekursiver MinMax-Algorithmus.
-         * Wechselt bei jedem Aufruf zwischen dem maximierenden (Bot) und
+         *
+         * <p>Wechselt bei jedem Aufruf zwischen dem maximierenden (Bot) und
          *          * dem minimierenden (Gegner) Spieler. Terminiert wenn:
          *          * die maximale Tiefe erreicht ist,
          *          * ein Spieler gewonnen hat, oder
@@ -305,7 +313,7 @@ public class FourConnectBotStrategy implements IMoveStrategy {
             Integer value;
             int bestValue;
             // Abbruchbedingung: Tiefe 0, Sieg oder Unentschieden
-            if(depth == 0 || fcRules.checkWin((IPlayArea) board) || fcRules.isDraw((IPlayArea) board) ) {
+            if(depth == 0 || fcRules.checkWin((IPlayArea) board) || fcRules.isDraw((IPlayArea) board)) {
                 return appraiseBoard(board);
             }
 
@@ -335,7 +343,7 @@ public class FourConnectBotStrategy implements IMoveStrategy {
         }
 
         /**
-         *  Macht einen Testzug rückgängig, indem die Zielzelle auf
+         * Macht einen Testzug rückgängig, indem die Zielzelle auf
          * {@link Player#NONE} zurückgesetzt wird.
          * @param board  das Spielfeld
          * @param turn die Position, die geleert werden soll
@@ -345,7 +353,7 @@ public class FourConnectBotStrategy implements IMoveStrategy {
         }
 
         /**
-         *  Setzt eine Scheibe des angegebenen Spielers auf die Zielposition
+         * Setzt eine Scheibe des angegebenen Spielers auf die Zielposition
          * @param board das Spielfeld
          * @param turn die Zielposition der Scheibe
          * @param bot der Spieler, dessen Scheibe gesetzt wird
@@ -357,7 +365,8 @@ public class FourConnectBotStrategy implements IMoveStrategy {
 
         /**
          * Ermittelt alle validen Züge auf dem aktuellen Spielfeld.
-         * In vier Gewinnt ist pro Spalte genau eine Position gültig:
+         *
+         * <p>In vier Gewinnt ist pro Spalte genau eine Position gültig:
          * die unterste noch freie Zelle (größter y-Wert mit {@link Player#NONE}).
          * Vollständig gefüllte Spalten werden übersprungen.
          * Das Board wird direkt als Parameter verwendet, um die Abhängigkeit vom äußeren Feld
@@ -385,4 +394,3 @@ public class FourConnectBotStrategy implements IMoveStrategy {
         }
     }
 }
-
