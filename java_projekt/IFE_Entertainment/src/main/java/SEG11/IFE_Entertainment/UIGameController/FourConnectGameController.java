@@ -9,6 +9,8 @@ import SEG11.IFE_Entertainment.UIController.GameController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
 
 public class FourConnectGameController implements GameController {
 
@@ -19,11 +21,13 @@ public class FourConnectGameController implements GameController {
     private Label statusLabel;
 
     private final FourConnectGame game = new FourConnectGame();
+    private Circle[][] circles = new Circle[6][7];
 
     @Override
     @FXML
     public void restartGame() throws IOException {
         game.restart();
+        initBoard();
         updateStatus();
     }
 
@@ -44,12 +48,12 @@ public class FourConnectGameController implements GameController {
         if (game.getStatus() != GameState.Running) {
             return;
         }
-        // Prüfen ob Spalte voll ist (oberste Zeile belegt)
         if (game.getBoard().getCellOwner(column, 0).getType() != Player.NONE) {
             statusLabel.setText("Spalte ist voll!");
             return;
         }
         GameState result = game.dropDisc(column);
+        updateBoard();
         if (result == GameState.Won) {
             statusLabel.setText("Gewonnen!");
         } else if (result == GameState.Tied) {
@@ -62,7 +66,37 @@ public class FourConnectGameController implements GameController {
 
     public void handlePlayMode(Player playerOne, Player playerTwo) {
         game.initFourConnectGame(playerOne, playerTwo);
+        initBoard();
         updateStatus();
+    }
+
+    private void initBoard() {
+        gridPane.getChildren().clear();
+        BrandingService branding = BrandingService.getInstance();
+        circles = new Circle[6][7];
+        for (int row = 0; row < 6; row++) {
+            for (int col = 0; col < 7; col++) {
+                Circle circle = new Circle(30);
+                circle.setFill(Color.GRAY);
+                circles[row][col] = circle;
+                final int c = col;
+                circle.setOnMouseClicked(e -> handleColumnInput(c));
+                gridPane.add(circle, col, row);
+            }
+        }
+    }
+
+    private void updateBoard() {
+        for (int row = 0; row < 6; row++) {
+            for (int col = 0; col < 7; col++) {
+                String colour = game.getBoard().getCellOwner(col, row).getColour();
+                if (colour != null) {
+                    circles[row][col].setFill(Color.web(colour));
+                } else {
+                    circles[row][col].setFill(Color.GRAY);
+                }
+            }
+        }
     }
 
     private void updateStatus() {

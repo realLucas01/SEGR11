@@ -35,4 +35,10 @@ public class App extends Application {
         launch();
     }
 
+    public static <T> T setRootAndGetController(String fxml) throws IOException {
+        FXMLLoader loader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
+        scene.setRoot(loader.load());
+        return loader.getController();
+    }
+
 }

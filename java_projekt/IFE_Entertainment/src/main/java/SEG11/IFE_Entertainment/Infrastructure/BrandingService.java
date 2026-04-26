@@ -66,4 +66,5 @@ public class BrandingService {
     public void setTheme(String themeId) {
         // TODO: Theme anhand von themeId setzen
     }
+
 }
