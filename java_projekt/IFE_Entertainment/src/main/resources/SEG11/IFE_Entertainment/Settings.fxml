@@ -5,6 +5,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
 
 
 <BorderPane xmlns="http://javafx.com/javafx/21.0.2"
@@ -17,9 +18,22 @@
 
             <Label text="Settings" styleClass="title"/>
 
+			<!-- Language Box mit der man dann Java die Sprache einstellen kann  -->
+               <ComboBox fx:id="languageBox"
+                      	onAction="#changeLanguage"
+                      	promptText="Language">
+
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="de"/>
+                        <String fx:value="en"/>
+                    </FXCollections>
+                </items>
+                
+               </ComboBox>
+
 
 			<!-- KANN Kriterium deshalb kein onAction -->
-            <Button text="Language" onAction="changeLanguage"/>
             <Button text="Change Theme" onAction="#changeTheme"/>
             <Button text="Back" onAction="#backToMainMenu"/>
 
