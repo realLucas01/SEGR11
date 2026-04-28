@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+
+
+<BorderPane xmlns="http://javafx.com/javafx/21.0.2"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="SEG11.IFE_Entertainment.UIController.SettingsController"
+            stylesheets="@style.css">
+
+    <center>
+        <VBox alignment="CENTER" spacing="20">
+
+            <Label text="Settings" styleClass="title"/>
+
+			<!-- Language Box mit der man dann Java die Sprache einstellen kann  -->
+               <ComboBox fx:id="languageBox"
+                      	onAction="#changeLanguage"
+                      	promptText="Language">
+
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="de"/>
+                        <String fx:value="en"/>
+                    </FXCollections>
+                </items>
+                
+               </ComboBox>
+
+
+			<!-- KANN Kriterium deshalb kein onAction -->
+            <Button text="Change Theme" onAction="#changeTheme"/>
+            <Button text="Back" onAction="#backToMainMenu"/>
+
+        </VBox>
+    </center>
+
+</BorderPane>
