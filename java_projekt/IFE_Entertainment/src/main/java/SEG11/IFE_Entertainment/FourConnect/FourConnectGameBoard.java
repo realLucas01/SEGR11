@@ -87,6 +87,16 @@ public class FourConnectGameBoard implements IPlayArea {
   }
 
   /**
+   * erhält eine bestimmte Zelle und gibt den Besitzer dieser Zelle zurück
+   *
+   * @param position eine bereits erstellte Position
+   * @return den Spieler der Zelle
+   */
+  public FourConnectPlayer getCellOwner(Position position) {
+    return cells.get(position);
+  }
+
+  /**
    * Wird in dropDisc() aufgerufen und erhält die ermittelte Zelle, diese Zelle wird nun dem Spieler
    * zugewiesen
    * 

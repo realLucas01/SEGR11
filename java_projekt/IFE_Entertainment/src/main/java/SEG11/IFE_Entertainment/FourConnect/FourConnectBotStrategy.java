@@ -124,8 +124,8 @@ public class FourConnectBotStrategy implements IMoveStrategy {
                 final Player owner = board.getCellOwner(pos.getX(), pos.getY()).getType();
                 switch (owner) {
 				case HUMAN -> playerOwningCount++;
-				case BOT -> botOwningCount++;
-                    default -> {
+				case EASYBOT, HARDBOT -> botOwningCount++;
+                  default -> {
                         return -1;
                     }
                 }
@@ -319,7 +319,7 @@ public class FourConnectBotStrategy implements IMoveStrategy {
             Integer value;
             int bestValue;
             // Abbruchbedingung: Tiefe 0, Sieg oder Unentschieden
-            if(depth == 0 || fcRules.checkWin((IPlayArea) board) || fcRules.isDraw((IPlayArea) board)) {
+            if(depth == 0 /*|| fcRules.checkWin(board)*/ || fcRules.checkTie(board)) {
                 return appraiseBoard(board);
             }
 
