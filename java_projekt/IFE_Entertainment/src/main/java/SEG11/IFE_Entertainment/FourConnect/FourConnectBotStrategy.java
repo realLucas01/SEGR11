@@ -32,31 +32,22 @@ import java.security.SecureRandom;
 /**
  * Implementiert {@link IMoveStrategy} und stellt zwei Bot strategien für das Vier Gewinnt Spiel
  * bereit:
+ *
  * {@link EasyBotStrategy} - wählt zufällig eine gültige Spalte
  * {@link HardBotStrategy} - berechnet den besten Zug per MinMax
  *
  */
 public class FourConnectBotStrategy implements IMoveStrategy {
 
-    /**
-     * Referenz auf das laufende Spiel wird zum Ausführen echter Züge benötigt
-     */
+    /** Referenz auf das laufende Spiel wird zum Ausführen echter Züge benötigt */
     FourConnectGame fcGame;
-    /**
-     * Regelwerk, wird für Sieg- und Unentschieden Prüfung genutzt
-     */
+    /** Regelwerk, wird für Sieg- und Unentschieden Prüfung genutzt */
     FourConnectRules fcRules ;
-    /**
-     * Zufallsgenerator
-     */
+    /** Zufallsgenerator */
     private final Random randNum = new SecureRandom();
-    /**
-     * Spieler Typ des menschlichen Gegners
-     */
+    /** Spieler Typ des menschlichen Gegners */
     private static final Player player = Player.HUMAN;
-    /**
-     * Spieler Typ des Bots
-     */
+    /** Spieler Typ des Bots */
     private static final Player bot = Player.BOT;
 
     // Bewertungsgewichte
@@ -81,9 +72,11 @@ public class FourConnectBotStrategy implements IMoveStrategy {
 
     /** Suchtiefe des MinMax-Algorithmus (höher = stärker, aber langsamer) */
     private static final int MINIMAX_DEPTH   =     4;
+
     /**
      * Wird vom Spielrahmen aufgerufen, um den Bot einen Zug ausführen zu lassen. Die konkrete
      * Logik liegt in den inneren Klassen {@link EasyBotStrategy} und {@link HardBotStrategy}
+     *
      * @param board das aktuelle Spielfeld
      */
     @Override
@@ -91,11 +84,13 @@ public class FourConnectBotStrategy implements IMoveStrategy {
         // wird durch die inneren Strategieklassen überschrieben
     }
 
-    /**
-     * Standardkonstruktor für die BotStrategy, der Bot wird dann benutzt über:
+    /** Standardkonstruktor für die BotStrategy
+     *
+     * <p>Der Bot wird dann benutzt über:
      * FourConnectBotStrategy botStrategy = new FourConnectBotStrategy(game, rules);
      * IMoveStrategy hardBot = botStrategy.new HardBotStrategy();
      * hardBot.chooseMove(board);
+     *
      * @param game die aktuelle Instanz des verwendeten Spiels
      * @param rules die Instanz der regeln
      */
@@ -214,11 +209,16 @@ public class FourConnectBotStrategy implements IMoveStrategy {
     // ------------------------------------------------
 
     /**
-     * Der einfache Bot, er wählt zufällig eine Spalte aus
+     * Die innere Klasse, welche den einfachen Bot repräsentiert. Auch diese implementiert das
+     * Interface {@link IMoveStrategy}.
+     *
+     * <p>Der einfache Bot wählt aus den verfügbaren, leeren Spalten zufällig eine aus
      */
     public class EasyBotStrategy implements IMoveStrategy {
+
         /**
          * Wählt zufällig eine Spalte aus und wirft dort eine Scheibe ein
+         *
          * @param board das aktuelle Spielfeld
          */
         @Override
@@ -238,22 +238,26 @@ public class FourConnectBotStrategy implements IMoveStrategy {
     }
 
     /**
-     * Der schwere Bot, er benutzt den MinMax Algorithmus zum Berechnen seines Zuges.
+     * Die innere Klasse, welche den schweren Bot repräsentiert. Auch diese implementiert das
+     * Interface {@link IMoveStrategy}.
+     *
+     * <p>Er benutzt den MinMax Algorithmus zum Berechnen seines Zuges.
      *
      * <p>Der Algorithmus durchsucht den Spielbaum bis zur Tiefe
      * {@value FourConnectBotStrategy#MINIMAX_DEPTH}, bewertet Blattknoten
      * mit {@link #appraiseBoard} und wählt den Zug mit dem höchsten Score
-     * aktueller Stand :
+     *
+     * <p>aktueller Stand :
      *      5 : 0 für den Bot ...
      *      und 1 Unentschieden
      */
     public class HardBotStrategy implements IMoveStrategy {
 
-
         /**
          * Einstiegspunkt der schweren Strategie.
          *
          * <p>Erstellt eine Kopie des Spielfelds, berechnet darauf den besten Zug und führt ihn aus.
+         *
          * @param board das aktuelle Spielfeld
          */
         @Override
@@ -271,6 +275,7 @@ public class FourConnectBotStrategy implements IMoveStrategy {
          *
          * <p>Jeder valide Zug wird simuliert, per {@link #minMax} bewertet und danach rückgängig
          * gemacht. Der Zug mit dem höchsten Score wird als Spaltenindex zurückgegeben.
+         *
          * @param board das (kopierte) Spielfeld
          * @param depth die maximale Suchtiefe, umso größer die Zahl, umso höher die Stärke und
          *              Berechnungszeit 3-5 ist ein gutes Maß
@@ -303,6 +308,7 @@ public class FourConnectBotStrategy implements IMoveStrategy {
          *          * die maximale Tiefe erreicht ist,
          *          * ein Spieler gewonnen hat, oder
          *          * das Spielfeld voll ist (Unentschieden).
+         *
          * @param board das aktuell simulierte Spielfeld
          * @param depth verbleibende Suchtiefe
          * @param isMaximizing {@code true} wenn der Bot am Zug ist,
@@ -344,6 +350,7 @@ public class FourConnectBotStrategy implements IMoveStrategy {
 
         /**
          * Macht einen Testzug rückgängig, indem die Zielzelle auf
+         *
          * {@link Player#NONE} zurückgesetzt wird.
          * @param board  das Spielfeld
          * @param turn die Position, die geleert werden soll
@@ -354,6 +361,7 @@ public class FourConnectBotStrategy implements IMoveStrategy {
 
         /**
          * Setzt eine Scheibe des angegebenen Spielers auf die Zielposition
+         *
          * @param board das Spielfeld
          * @param turn die Zielposition der Scheibe
          * @param bot der Spieler, dessen Scheibe gesetzt wird

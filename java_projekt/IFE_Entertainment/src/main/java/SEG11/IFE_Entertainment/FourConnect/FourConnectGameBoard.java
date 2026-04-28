@@ -21,13 +21,26 @@ package SEG11.IFE_Entertainment.FourConnect;
 import SEG11.IFE_Entertainment.GameCore.IPlayArea;
 import java.util.*;
 
+/**
+ * Das Vier Gewinnt Spielfeld
+ */
 public class FourConnectGameBoard implements IPlayArea {
-  private static final Integer ROW_COUNTS = 6; // 6
-  private static final Integer COLUM_COUNTS = 7; // 7
+  private static final Integer ROW_COUNTS = 6; /** Die Anzahl der Zeilen, Standard: 6 */
+  private static final Integer COLUM_COUNTS = 7; /** Die Anzahl der Spalten, Standard: 7 */
+  /** Die Map welches, das Spielfeld repräsentiert. Es speichert zu jeder Koordinate des Spielfeldes
+  * den besitzenden Spieler   */
   private final Map<Position, FourConnectPlayer> cells = new HashMap<>();
 
   /**
    * Standardkonstruktor zum Initialisieren des Spielbrettes
+   *
+   * <p>Er initialisiert das Spielfeld, die leeren Felder werden hierbei mit einem weiteren Spieler
+   * Objekt gefüllt, welches den Spieler Typ NONE besitzt.
+   *
+   * <p>Das Spielfeld:
+   * (0,0) | (1,0) | (2,0) | ....
+   * (0,1) | (1,1) | (2,1) | ....
+   * ...     ...     ...
    */
   public FourConnectGameBoard() {
     final FourConnectPlayer nonePlayer = new FourConnectPlayer(Player.NONE, null, null);
@@ -70,7 +83,7 @@ public class FourConnectGameBoard implements IPlayArea {
   }
 
   /**
-   * wird in dropDisc() aufgerufen und erhält die ermittelte Zelle, diese Zelle wird nun dem Spieler
+   * Wird in dropDisc() aufgerufen und erhält die ermittelte Zelle, diese Zelle wird nun dem Spieler
    * zugewiesen
    * 
    * @param cell übergabe der Position

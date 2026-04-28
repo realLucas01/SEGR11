@@ -21,22 +21,21 @@ package SEG11.IFE_Entertainment.GameCore;
 /**
  * Das Interface für das Spielfeld
  *
- *
  *<p>Ist für die Klasse zu implementieren die, die gesamte Logik für das
  * Spielfeld beherbergt.
- *
- *
  *
  */
 public interface IPlayArea {
   /**
    * Überprüft, ob das Spielfeld voll ist
+   *
    * @return true wenn voll, und false wenn noch nicht voll
    */
   Boolean isFull();
 
   /**
    * Funktion um das Spielfeld zu leeren, oder den Ausgangszustand herzustellen
+   *
    * @return 0, wenn erfolgreich
    */
   Integer clear();

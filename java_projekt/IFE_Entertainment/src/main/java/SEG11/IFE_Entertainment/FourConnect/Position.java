@@ -20,17 +20,17 @@ package SEG11.IFE_Entertainment.FourConnect;
 import java.util.Objects;
 
 /**
- * Die Position, welche für das Spielfeld genutzt werden umd die Zellen darzustellen
+ * Die Position, welche für das Spielfeld genutzt werden, um die Zellen darzustellen
  */
 public class Position {
   private final Integer x;
   private final Integer y;
 
   /**
-   * Instantiates a new Position.
+   * Konstuktor für Position
    *
-   * @param x the x
-   * @param y the y
+   * @param x, die x-Achse
+   * @param y, die y-Achse
    */
   public Position(Integer x, Integer y) {
     this.x = x;
@@ -38,28 +38,30 @@ public class Position {
   }
 
   /**
-   * Get x integer.
+   * Gibt die X Koordinate zurück
    *
-   * @return the integer
+   * @return den Integer Wert
    */
   public Integer getX() {
     return x;
   }
 
   /**
-   * Get y integer.
+   * Gibt die Y Koordinate zurück
    *
-   * @return the integer
+   * @return den Integer Wert
    */
   public Integer getY() {
     return y;
   }
 
   /**
-   * Ich musste die diese beiden Funktionen überschreiben, um die die Positionen des Spielfeldes
-   * vergleichen zu können
+   * <p>Funktion um zwei Position Objekte zu vergleichen
+   *
+   * Überschriebe so, dass die Vergleichsfunktion auch für die Positionen innerhalb der Map verwendbar
+   * ist.
    * 
-   * @param o the reference object with which to compare.
+   * @param o, das Referenzobjekt mit dem es verglichen werden soll
    * @return true oder false
    */
   @Override
@@ -74,6 +76,11 @@ public class Position {
     return x.equals(position.x) && y.equals(position.y);
   }
 
+  /**
+   * <p>Gibt den HashCode des Objektes zurück
+   *
+   * @return HashCode
+   */
   @Override
   public int hashCode() {
     return Objects.hash(x, y);
