@@ -19,7 +19,6 @@ package SEG11.IFE_Entertainment.GameCore;
 
 /**
  * Das Interface für das Spielfeld
- *
  */
 public interface IMoveStrategy {
 
