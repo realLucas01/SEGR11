@@ -1,0 +1,255 @@
+@startuml FourConnect_3_9_3
+
+skinparam packageStyle rectangle
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+
+' ──────────────────────────────────────────
+package "Infrastructure" {
+
+  class BrandingService {
+    - {static} instance: BrandingService
+    - primaryColour: String
+    - secondaryColour: String
+    - logoPath: String
+    - airlineName: String
+
+    - <<create>> BrandingService()
+    + setTheme(themeId : String) : void
+    + {static} getInstance(): brandingService
+    + getPrimaryColour(): String
+    + getSecondaryColour(): String
+    + getLogoPath(): String
+    + getAirlineName(): String
+    + setPrimaryColour(primaryColour: String):void
+    + setSecondaryColour(secondaryColour: String): void
+    + setLogoPath(logoPath:String): void
+    + setAirlineName(airlineName: String): void
+
+  }
+
+  class LocalizationService {
+    - {static} instance: LocalizationService
+    - {static} BUNDLE_BASE: String
+    - bundle: ResourceBundle
+    - currentLocale: Locale
+
+    - <<create>> LocalizationService()
+    + {static} getInstance(): LocalizationService
+    - loadBundle(): void
+    + getString(key : String): String
+    + setLocale(locale: Locale): void
+    + getCurrentLocale(): Locale
+    + getAvailableLocales(): Locale[]
+    + setLanguage(languageCode : String) : void
+    + getText(key : String) : String
+  }
+}
+
+' ──────────────────────────────────────────
+package "FourConnect"{
+ class FourConnectRules{
+  }
+
+  class FourConnectGame {
+    - state : GameState
+    - players : FourConnectPlayer[]
+    - currentPlayerIndex : Integer
+    - rules : FourConnectRules
+    - gameBoard : FourConnectGameBoard
+    - currenBranding : BrandingService
+    <<create>> FourConnectGame()
+    + getStatus(): GameState
+    + setStatus(): void
+    + getBoard(): FourConnectGameBoard
+    + restart(): void
+    + endGame(): void
+    + dropDisc(column : Integer) : GameState
+    + playerTurn() : void
+    + initFourConnectGame(playerOne : Player, playerTwo : Player) : Integer
+  }
+
+  class FourConnectGameBoard {
+    - {static} ROW_COUNTS : Integer
+    - {static} COLUMN_COUNTS : Integer
+    - cells : Map
+    + getRows() : Integer
+    + getColumns() : Integer
+    + getCellOwner(x : Integer, y : Integer) : FourConnectPlayer
+    + setCellValue(cell : Position, currentPlayer : FourConnectPlayer) : Integer
+    + «create» FourConnectGameBoard()
+    + copy(board : FourConnectGameBoard) : void
+  }
+
+  class Position {
+    - x : Integer
+    - y : Integer
+    + getX() : Integer
+    + getY() : Integer
+    + «create» Position(x : Integer, y : Integer)
+  }
+
+  enum Player <<enumeration>> {
+    HUMAN
+    EASYBOT
+    HARDBOT
+    NONE
+  }
+
+  class FourConnectPlayer {
+    - type : Player
+    - strategy : FourConnectBotStrategy
+    - colour : String
+    + getType() : Player
+    + getStrategy() : FourConnectBotStrategy
+    + getColour() : String
+    + «create» FourConnectPlayer(type : Player, strategy : FourConnectBotStrategy, colour : String)
+  }
+
+class FourConnectBotStrategy {
+  ~ fcGame: FourConnectGame
+  ~ fcRules: FourConnectRules
+  - randNum: Random
+  - {static} player: Player
+  - {static} bot: Player
+  - {static} SCORE_BOT_FOUR: int
+  - {static} SCORE_BOT_THREE: int
+  - {static} SCORE_BOT_TWO: int
+  - {static} SCORE_OPP_FOUR: int
+  - {static} SCORE_OPP_THREE: int
+  - {static} SCORE_OPP_TWO: int
+  - {static} MINIMAX_DEPTH: int
+  + FourConnectBotStrategy(game, rules)
+  + chooseMove(board: IPlayArea): void
+  ~ appraiseBoard(board: FourConnectGameBoard): Integer
+  ~ allFourConnects(board: FourConnectGameBoard): ArrayList<Position[]>
+  }
+
+  class "EasyBotStrategy" as Easy {
+    + chooseMove(board: IPlayArea): void
+  }
+
+  class "HardBotStrategy" as Hard {
+    + chooseMove(board: IPlayArea): void
+    - findBestTurn(board, depth): Integer
+    - minMax(board, depth, isMaximizing): Integer
+    - findValideTurns(board): List<Position>
+    - playTestTurn(board, turn, bot): void
+    - undoTestTurn(board, turn): void
+  }
+
+  enum GameMode <<enumeration>> {
+    TWOPLAYER
+    BOT
+  }
+    Position     - FourConnectGameBoard
+    FourConnectBotStrategy +-- Easy   : inner
+    FourConnectBotStrategy +-- Hard   : inner
+
+    FourConnectBotStrategy ..|> IMoveStrategy
+    Easy ..|> IMoveStrategy
+    Hard ..|> IMoveStrategy
+}
+
+
+package "Game Core" {
+
+  interface IRuleSet <<interface>> {
+    + checkWin(board : IPlayArea, player : PlayerT) : Boolean
+    + checkTie(board : IPlayArea) : Boolean
+  }
+
+  enum GameState <<enumeration>> {
+    NotStarted
+    Running
+    Paused
+    Finished
+    Won
+    Tied
+  }
+
+  interface IPlayArea <<interface>> {
+    + isFull() : Boolean
+    + clear() : Integer
+  }
+
+  interface IMoveStrategy <<interface>> {
+    + chooseMove(board : IPlayArea) : void
+  }
+
+  interface IGame <<interface>> {
+    + setStatus() : void
+    + restart() : void
+    + getStatus() : GameState
+    + getBoard() : IPlayArea
+  }
+
+
+
+  ' Realizations
+  FourConnectRules      ..|> IRuleSet
+  FourConnectGame       ..|> IGame
+  FourConnectGameBoard  ..|> IPlayArea
+  FourConnectBotStrategy ..|> IMoveStrategy
+
+  ' Compositions / associations inside Game Core
+  FourConnectGame "1" *--> "*"    FourConnectPlayer
+  FourConnectGame      *-->        FourConnectRules
+  FourConnectGame      *-->        FourConnectGameBoard
+  FourConnectPlayer "1" o--> "0..1" FourConnectBotStrategy
+}
+
+' ──────────────────────────────────────────
+package "UIController" {
+
+
+  class MainMenuController {
+    + startGame() : void
+    + openSetting() : void
+    + openHelp() : void
+    + exit() : void
+  }
+
+  class HelpController {
+    + backToGameScreen() : void
+  }
+
+  class SettingsController {
+    - localizationService : LocalizationService
+    - brandingService : BrandingService
+    + changeLanguage(languageCode : String) : void
+    + changeTheme(themeId : String) : void
+  }
+
+  interface GameController <<interface>> {
+    + restartGame() : void
+    + backToMainMenu() : void
+    + openHelp() : void
+  }
+
+  }
+
+  ' ──────────────────────────────────────────
+  ' Cross-package dependencies
+  SettingsController        ..> LocalizationService  : «use»
+  SettingsController        ..> BrandingService       : «use»
+
+
+
+package "UIGameController"{
+
+  class FourConnectGameController {
+    + handleColumnInput(column : Integer) : void
+    + openHelp() : void
+    + restartGame() : void
+
+
+  }
+     ' Cross-package dependencies
+         FourConnectGameController ..|> GameController
+         FourConnectGameController ..> FourConnectGame       : «use»
+
+ }
+
+
+@enduml
