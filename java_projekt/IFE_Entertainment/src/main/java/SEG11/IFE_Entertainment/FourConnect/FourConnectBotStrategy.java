@@ -48,7 +48,7 @@ public class FourConnectBotStrategy implements IMoveStrategy {
     /** Spieler Typ des menschlichen Gegners */
     private static final Player player = Player.HUMAN;
     /** Spieler Typ des Bots */
-    private static final Player bot = Player.BOT;
+    private static final Player bot = Player.HARDBOT;
 
     // Bewertungsgewichte
 
