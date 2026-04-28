@@ -1,5 +1,5 @@
 /*
- * 1.0 2026-04-22 Luca Tauscher
+ * 1.0 2026-04-28 Lucas Rumann
  *
  * Copyright (c) 2025-2026 Gervithrall Systems GmbH. All Rights Reserved.
  *
@@ -19,24 +19,28 @@
 package SEG11.IFE_Entertainment.GameCore;
 
 /**
- * Das Interface für das Spielfeld
+ * Interface für die Logik zur Verwaltung des Spielbretts
  *
- *<p>Ist für die Klasse zu implementieren die, die gesamte Logik für das
- * Spielfeld beherbergt.
+ * <p>Ist für die Klasse zu implementieren, die die gesammte Logik für die
+ * Verwaltung des Spielbretts beherbergt, also z.B.: das Initialisieren des
+ * Spielbretts und das zur Verfügungstellen von Funktionen um auf einzelne
+ * Zellen oder Werte zu zugreifen und diese zu verändern
  *
  */
 public interface IPlayArea {
+
   /**
-   * Überprüft, ob das Spielfeld voll ist
+   * Funktion zum Überprüfen ob das Spielfeld voll ist
    *
-   * @return true wenn voll, und false wenn noch nicht voll
+   * @return Boolschen Wert, der wahr ist wenn das Spielfeld voll ist
    */
   Boolean isFull();
 
   /**
-   * Funktion um das Spielfeld zu leeren, oder den Ausgangszustand herzustellen
+   * Funktion zum leeren und neu-initialisieren des Spielbretts
    *
-   * @return 0, wenn erfolgreich
+   * @return Integer Wert zur Überprüfung ob die Operation erfolreich war. Bei
+   *         einem Wert != 0 ist ein Fehler aufgetreten
    */
   Integer clear();
 }
