@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21.0.2"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="SEG11.IFE_Entertainment.UIController.HelpController"
+            stylesheets="@style.css">
+
+
+			<!-- Tutorial wie man das Spiel spielt lol -->
+    <top>
+        <Label text="How to Play" styleClass="title"/>
+    </top>
+
+    <center>
+        <VBox spacing="15" alignment="CENTER">
+			<!-- Sehr interessanter Text -->
+			
+            <Label text="Connect 4 rules:" styleClass="text"/>
+
+            <Label text="Drop pieces into columns. First to connect 4 wins."
+                   wrapText="true"/>
+
+        </VBox>
+    </center>
+
+	<bottom>
+    		<VBox alignment="CENTER">
+    		<!--wtf  Warum in der java denn nicht backToMainMenu????????? Nicht Konsistent!!! -->
+        		<Button text="Back" onAction="#backToGameScreen"/>
+    		</VBox>
+	</bottom>
+	
+</BorderPane>

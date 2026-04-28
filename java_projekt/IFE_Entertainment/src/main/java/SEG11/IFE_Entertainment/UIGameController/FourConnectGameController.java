@@ -12,17 +12,30 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 
+/**
+ * Controller für den Vier-Gewinnt-Spielscreen.
+ *
+ * <p>Verbindet die Spiellogik mit der Benutzeroberfläche. Verwaltet das
+ * Spielfeld, verarbeitet Eingaben des Spielers und aktualisiert die Anzeige.
+ */
 public class FourConnectGameController implements GameController {
 
+    /** Das Spielfeld als GridPane. */
     @FXML
     private GridPane gridPane;
 
+    /** Label zur Anzeige des aktuellen Spielstatus. */
     @FXML
     private Label statusLabel;
 
     private final FourConnectGame game = new FourConnectGame();
     private Circle[][] circles = new Circle[6][7];
 
+    /**
+     * Startet das Spiel neu mit demselben Spielmodus.
+     *
+     * @throws IOException falls die FXML-Datei nicht geladen werden kann
+     */
     @Override
     @FXML
     public void restartGame() throws IOException {
@@ -31,6 +44,11 @@ public class FourConnectGameController implements GameController {
         updateStatus();
     }
 
+    /**
+     * Beendet das Spiel und navigiert zurück zum Hauptmenü.
+     *
+     * @throws IOException falls die FXML-Datei nicht geladen werden kann
+     */
     @Override
     @FXML
     public void backToMainMenu() throws IOException {
@@ -38,12 +56,23 @@ public class FourConnectGameController implements GameController {
         App.setRoot("MainMenu");
     }
 
+    /**
+     * Navigiert zum Hilfe-Screen.
+     *
+     * @throws IOException falls die FXML-Datei nicht geladen werden kann
+     */
     @Override
     @FXML
     public void openHelp() throws IOException {
         App.setRoot("Help");
     }
 
+    /**
+     * Verarbeitet die Eingabe des Spielers für eine bestimmte Spalte.
+     * Prüft ob die Spalte voll ist, wirft die Scheibe ein und aktualisiert die Anzeige.
+     *
+     * @param column die gewählte Spalte
+     */
     public void handleColumnInput(Integer column) {
         if (game.getStatus() != GameState.Running) {
             return;
@@ -64,15 +93,24 @@ public class FourConnectGameController implements GameController {
         }
     }
 
+    /**
+     * Initialisiert das Spiel mit den gewählten Spielertypen und zeichnet das Spielfeld.
+     *
+     * @param playerOne der Typ von Spieler 1
+     * @param playerTwo der Typ von Spieler 2
+     */
     public void handlePlayMode(Player playerOne, Player playerTwo) {
         game.initFourConnectGame(playerOne, playerTwo);
         initBoard();
         updateStatus();
     }
 
+    /**
+     * Erstellt das Spielfeld als 6x7 Grid aus grauen Kreisen.
+     * Jeder Kreis reagiert auf Mausklicks zur Spaltenauswahl.
+     */
     private void initBoard() {
         gridPane.getChildren().clear();
-        BrandingService branding = BrandingService.getInstance();
         circles = new Circle[6][7];
         for (int row = 0; row < 6; row++) {
             for (int col = 0; col < 7; col++) {
@@ -86,6 +124,9 @@ public class FourConnectGameController implements GameController {
         }
     }
 
+    /**
+     * Aktualisiert die Farben der Kreise basierend auf dem aktuellen Spielfeldzustand.
+     */
     private void updateBoard() {
         for (int row = 0; row < 6; row++) {
             for (int col = 0; col < 7; col++) {
@@ -99,6 +140,9 @@ public class FourConnectGameController implements GameController {
         }
     }
 
+    /**
+     * Aktualisiert das Statuslabel basierend auf dem aktuellen Spielzustand.
+     */
     private void updateStatus() {
         GameState state = game.getStatus();
         switch (state) {

@@ -31,10 +31,14 @@ public class App extends Application {
         return fxmlLoader.load();
     }
 
-    public static void main(String[] args) {
-        launch();
-    }
-
+    /**
+     * Lädt eine FXML-Datei, setzt sie als Root der Scene und gibt den zugehörigen Controller zurück.
+     *
+     * @param <T> der Typ des Controllers
+     * @param fxml der Name der FXML-Datei ohne Dateiendung
+     * @return der Controller der geladenen FXML-Datei
+     * @throws IOException falls die FXML-Datei nicht geladen werden kann
+     */
     public static <T> T setRootAndGetController(String fxml) throws IOException {
         FXMLLoader loader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
         scene.setRoot(loader.load());
