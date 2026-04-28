@@ -1,5 +1,5 @@
 /*
- * 1.0 2026-04-28 Luca Tauscher
+ * 1.0 2026-04-28 Lucas Rumann
  *
  * Copyright (c) 2025-2026 Gervithrall Systems GmbH. All Rights Reserved.
  *
