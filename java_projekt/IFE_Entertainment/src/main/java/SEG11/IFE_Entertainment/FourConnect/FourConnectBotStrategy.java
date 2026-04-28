@@ -33,8 +33,8 @@ import java.security.SecureRandom;
  * Implementiert {@link IMoveStrategy} und stellt zwei Bot strategien für das Vier Gewinnt Spiel
  * bereit:
  *
- * {@link EasyBotStrategy} - wählt zufällig eine gültige Spalte
- * {@link HardBotStrategy} - berechnet den besten Zug per MinMax
+ * <p>{@link EasyBotStrategy} - wählt zufällig eine gültige Spalte
+ * <p>{@link HardBotStrategy} - berechnet den besten Zug per MinMax
  *
  */
 public class FourConnectBotStrategy implements IMoveStrategy {
@@ -350,8 +350,8 @@ public class FourConnectBotStrategy implements IMoveStrategy {
 
         /**
          * Macht einen Testzug rückgängig, indem die Zielzelle auf
-         *
          * {@link Player#NONE} zurückgesetzt wird.
+         * 
          * @param board  das Spielfeld
          * @param turn die Position, die geleert werden soll
          */

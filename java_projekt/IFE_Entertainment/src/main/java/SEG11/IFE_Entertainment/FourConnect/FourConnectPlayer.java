@@ -23,9 +23,12 @@ package SEG11.IFE_Entertainment.FourConnect;
  * Der Vier gewinnt Spieler
  */
 public class FourConnectPlayer {
-    private final Player type; /** Der Typ des Spielers, siehe das enum {@link Player} */
-    private final FourConnectBotStrategy strategy; /** Die verwendete Schwierigkeitsstufe des Bots */
-    private final String colour; /* Die Farbe des Spielsteines */
+    /** Der Typ des Spielers, siehe das enum {@link Player} */
+    private final Player type;
+    /** Die verwendete Schwierigkeitsstufe des Bots */
+    private final FourConnectBotStrategy strategy;
+    /** Die Farbe des Spielsteines */
+    private final String colour;
 
     /**
      * Der Konstruktor um einen FCPlayer zu initialisieren.

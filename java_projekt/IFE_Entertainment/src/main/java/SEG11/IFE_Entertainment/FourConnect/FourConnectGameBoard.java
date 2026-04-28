@@ -25,10 +25,14 @@ import java.util.*;
  * Das Vier Gewinnt Spielfeld
  */
 public class FourConnectGameBoard implements IPlayArea {
-  private static final Integer ROW_COUNTS = 6; /** Die Anzahl der Zeilen, Standard: 6 */
-  private static final Integer COLUM_COUNTS = 7; /** Die Anzahl der Spalten, Standard: 7 */
-  /** Die Map welches, das Spielfeld repräsentiert. Es speichert zu jeder Koordinate des Spielfeldes
-  * den besitzenden Spieler   */
+  /** Die Anzahl der Zeilen, Standard: 6 */
+  private static final Integer ROW_COUNTS = 6;
+  /** Die Anzahl der Spalten, Standard: 7 */
+  private static final Integer COLUM_COUNTS = 7;
+  /**
+   *  Die Map welches, das Spielfeld repräsentiert. Es speichert zu jeder Koordinate des Spielfeldes
+   * den besitzenden Spieler
+   * */
   private final Map<Position, FourConnectPlayer> cells = new HashMap<>();
 
   /**

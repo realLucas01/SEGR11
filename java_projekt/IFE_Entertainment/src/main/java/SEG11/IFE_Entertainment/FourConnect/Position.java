@@ -56,10 +56,10 @@ public class Position {
   }
 
   /**
-   * <p>Funktion um zwei Position Objekte zu vergleichen
+   * Funktion um zwei Position Objekte zu vergleichen
    *
-   * Überschriebe so, dass die Vergleichsfunktion auch für die Positionen innerhalb der Map verwendbar
-   * ist.
+   * <p>Überschrieben so, dass die Vergleichsfunktion auch für die Positionen innerhalb der Map
+   * verwendbar ist.
    * 
    * @param o, das Referenzobjekt mit dem es verglichen werden soll
    * @return true oder false
