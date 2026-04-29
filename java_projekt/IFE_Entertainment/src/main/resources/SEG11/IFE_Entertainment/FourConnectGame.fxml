@@ -9,34 +9,38 @@
 <BorderPane xmlns="http://javafx.com/javafx/21.0.2"
             xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="SEG11.IFE_Entertainment.UIGameController.FourConnectGameController"
-            stylesheets="@style.css">
+            stylesheets="@style.css" styleClass="game-root">
 
 
 
-			<!-- Titel (wer hätte es gedacht) -->
+			<!-- Titel -->
     <top>
         <Label text="Four Connect" styleClass="title"/>
     </top>
 
 
-
 			<!-- Spielfeld mit Back to Main Menü Button -->
     <center>
-        <VBox alignment="CENTER" spacing="20">
+        <VBox spacing="20" alignment="CENTER" >
 
             <GridPane fx:id="gridPane" hgap="5" vgap="5"/>
 
+			<HBox spacing="15" alignment="CENTER" styleClass="game-button-bar">
             <Button text="Restart"
+            		prefWidth="150"
 			        onAction="#restartGame"
-			        styleClass="main-button"/>
+			        styleClass="button-secondary"/>
 
 			<Button text="Help"
+					prefWidth="150"
 			        onAction="#openHelp"
-			        styleClass="main-button"/>
+			        styleClass="button-secondary"/>
 			        
-            <Button text="Back"
-                    onAction="#backToMainMenu"
-                    styleClass="main-button"/>
+            <Button text="Mainmenu"
+        			prefWidth="150"
+        			onAction="#backToMainMenu"
+        			styleClass="button-secondary"/>
+        	</HBox>
 
         </VBox>
     </center>
