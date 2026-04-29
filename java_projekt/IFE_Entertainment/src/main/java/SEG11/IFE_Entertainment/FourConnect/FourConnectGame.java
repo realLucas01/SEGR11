@@ -26,7 +26,7 @@ import SEG11.IFE_Entertainment.GameCore.IPlayArea;
 import SEG11.IFE_Entertainment.Infrastructure.BrandingService;
 
 /**
- * Klasse die für den eigentlichen Spieablauf zuständig ist
+ * Klasse die für den eigentlichen Spielablauf zuständig ist
  * 
  * <p>Implementiert dabei {@link IGame} und seine Funktionen, und stellt
  * zusätzliche Funktionen für alle Phasen des Spielablaufs bereit
@@ -45,7 +45,7 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
 	 */
 	private FourConnectPlayer[] players;
 	/**
-	 * Indexvariable zum finden des aktuellen Spielers in der Liste {@link players}
+	 * Indexvariable zum Finden des aktuellen Spielers in der Liste {@link #players}
 	 */
 	private int currentPlayerIndex;
 	/**
@@ -119,11 +119,11 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
 	}
 
 	/**
-	 * Implementierung der Interface Methode restart()
+	 * Implementierung der Interfacemethode restart()
 	 * 
 	 * <p>Startet das Spiel mit den aktuellen Spielern bzw. im aktuellen Spielmodus
-	 * neu. Wenn Spieler bzw Spielmodus gewechselt werden soll dann muss dafür erst
-	 * {@link endGame} und dann {@link initFourConnectGame} aufgerufen werden
+	 * neu. Wenn Spieler bzw Spielmodus gewechselt werden soll, dann muss dafür erst
+	 * {@link #endGame} und dann {@link #initFourConnectGame} aufgerufen werden
 	 * 
 	 * @see IGame
 	 * @return Den aktuellen Zustand des Spielbretts im Datentyp
@@ -165,11 +165,11 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
 				break;
 			}
 		}
-		// Überprüfen ob unentschieden
+		// Überprüfen, ob unentschieden
 		if (Rules.checkTie(gameBoard)) {
 			State = GameState.Tied;
 		}
-		// Überprüfen ob gewonnen
+		// Überprüfen, ob gewonnen
 		if (Rules.checkWin(gameBoard, players[currentPlayerIndex])) {
 			State = GameState.Won;
 		}
@@ -180,7 +180,7 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
 	 * Beendet den Zug eines Spielers
 	 * 
 	 * <p>Sie invertiert den Wert von currentPlayerIndex so das nun der andere Spieler
-	 * über die Liste {@link players} auffindbar ist
+	 * über die Liste {@link #players} auffindbar ist
 	 */
 	public void playerTurn() {
 		currentPlayerIndex = currentPlayerIndex == 0 ? 1 : 0;
@@ -190,11 +190,11 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
 	 * Initialisierung eines neuen Spiels von Vier Gewinnt.
 	 * 
 	 * <p>Dabei werden die neuen Spieler, so wie für mögliche Bots, deren Strategie
-	 * inititalisiert
+	 * initialisiert
 	 * 
 	 * @param playerOne Der Typ von Spieler 1 im ENUM {@link Player}
 	 * @param playerTwo Der Typ von Spieler 2 im ENUM {@link Player}
-	 * @return Einen Integer wert der aussagt ob die Operation erfolgreich war, bei
+	 * @return Einen Integer wert der aussagt, ob die Operation erfolgreich war, bei
 	 *         einer Rückgabe != 0 ist ein Fehler aufgetreten
 	 */
 	public Integer initFourConnectGame(Player playerOne, Player playerTwo) {
@@ -203,7 +203,8 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
 		currentPlayerIndex = 0;
 
 		// Laden des aktuellen Brandings für die Farben
-		currentbranding = App.branding;
+		//currentbranding = App.branding;
+
 
 		// Erstellen einer neuen Instanz von FourConnectBotStrategy um die Strategien
 		// für die schwierigkeitsstufen "laden" zu können
@@ -211,10 +212,10 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
 
 		// Erstellen von Spieler 1 abhängig seines übergebenen Typs
 		switch (playerOne) {
-		case Player.HUMAN -> players[0] = new FourConnectPlayer(playerOne, null, currentbranding.getPrimaryColor());
-		case Player.EASYBOT -> players[0] = new FourConnectPlayer(playerOne,botStrategy.new EasyBotStrategy(), 
+		case HUMAN -> players[0] = new FourConnectPlayer(playerOne, null, currentbranding.getPrimaryColor());
+		case EASYBOT -> players[0] = new FourConnectPlayer(playerOne,botStrategy.new EasyBotStrategy(),
 				currentbranding.getPrimaryColor());
-		case Player.HARDBOT -> players[0] = new FourConnectPlayer(playerOne,botStrategy.new HardBotStrategy(), 
+		case HARDBOT -> players[0] = new FourConnectPlayer(playerOne,botStrategy.new HardBotStrategy(),
 				currentbranding.getPrimaryColor());
 		default -> {
 			return 1;
@@ -223,10 +224,10 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
 
 		// Erstellen von Spieler 2 abhängig seines übergebenen Typs
 		switch (playerTwo) {
-		case Player.HUMAN -> players[1] = new FourConnectPlayer(playerTwo, null, currentbranding.getSecondaryColor());
-		case Player.EASYBOT -> players[1] = new FourConnectPlayer(playerTwo,botStrategy.new EasyBotStrategy(), 
+		case HUMAN -> players[1] = new FourConnectPlayer(playerTwo, null, currentbranding.getSecondaryColor());
+		case EASYBOT -> players[1] = new FourConnectPlayer(playerTwo, botStrategy.new EasyBotStrategy(),
 				currentbranding.getSecondaryColor());
-		case Player.HARDBOT -> players[1] = new FourConnectPlayer(playerTwo,botStrategy.new HardBotStrategy(), 
+		case HARDBOT -> players[1] = new FourConnectPlayer(playerTwo,botStrategy.new HardBotStrategy(),
 				currentbranding.getSecondaryColor());
 		default -> {
 			return 1;
