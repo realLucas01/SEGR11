@@ -19,7 +19,6 @@
 
 package SEG11.IFE_Entertainment.FourConnect;
 
-import SEG11.IFE_Entertainment.App;
 import SEG11.IFE_Entertainment.GameCore.GameState;
 import SEG11.IFE_Entertainment.GameCore.IGame;
 import SEG11.IFE_Entertainment.GameCore.IPlayArea;
@@ -40,21 +39,13 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
 	 * Aktueller Zustand des Spiels
 	 */
 	private GameState state;
-	/**
-	 * Liste der Spieler
-	 */
+	/** Liste der Spieler */
 	private FourConnectPlayer[] players;
-	/**
-	 * Indexvariable zum Finden des aktuellen Spielers in der Liste {@link #players}
-	 */
+	/** Indexvariable zum Finden des aktuellen Spielers in der Liste {@link #players} */
 	private int currentPlayerIndex;
-	/**
-	 * Regelwerk das zur überprüfung der Sieg-Bedingungen genutzt wird
-	 */
+	/** Regelwerk das zur überprüfung der Sieg-Bedingungen genutzt wird */
 	private FourConnectRules rules;
-	/**
-	 * Das Spielbrett auf dem das Spiel ausgetragen wird
-	 */
+	/** Das Spielbrett auf dem das Spiel ausgetragen wird */
 	private FourConnectGameBoard gameBoard;
 	/**
 	 * Das aktuelle Branding der Software was für die Farben der Spieler verwendet
@@ -116,6 +107,15 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
 	@Override
 	public FourConnectGameBoard getBoard() {
 		return gameBoard;
+	}
+	
+	/**
+	 * Gibt alle aktuellen Spieler als Array zurück
+	 * 
+	 * @return Das Array der aktuellen Spieler im Datentyp FourConnectPlayer
+	 */
+	public FourConnectPlayer[] getPlayers() {
+		return players;
 	}
 
 	/**
