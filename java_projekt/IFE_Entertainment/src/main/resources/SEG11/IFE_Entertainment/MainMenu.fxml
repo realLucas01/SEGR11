@@ -45,7 +45,7 @@
 			<!--Back Button -->
             <Button text="Exit"
                     prefWidth="120"
-                    onAction="#onExit"/>
+                    onAction="#exit"/>
         </VBox>
     </bottom>
 
