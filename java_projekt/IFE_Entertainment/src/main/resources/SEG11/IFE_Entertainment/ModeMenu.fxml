@@ -8,7 +8,7 @@
 <BorderPane xmlns="http://javafx.com/javafx/21.0.2"
             xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="SEG11.IFE_Entertainment.UIController.ModeMenuController"
-            stylesheets="@style.css">
+            stylesheets="@style.css" styleClass="mode-menu-root">
 
     <top>
         <Label text="Select Mode" styleClass="title"/>
@@ -20,19 +20,23 @@
 			 <!-- Java handled, in Java dann z.B. startGame("PVP"); -->
             <Button text="Two Player-Mode"
                     prefWidth="200"
-                    onAction="#startGame"/>
+                    onAction="#startGame"
+                    styleClass="button-primary"/>
                     
             <Button text="VS Easy Bot"
             			prefWidth="200"
-			        onAction="#startGameEasyBot"/>
+			        onAction="#startGameEasyBot"
+			        styleClass="button-primary"/>
 			
 			<Button text="VS Hard Bot"
 					prefWidth="200"
-			        onAction="#startGameHardBot"/>
+			        onAction="#startGameHardBot"
+			        styleClass="button-primary"/>
 
             <Button text="Back"
                     prefWidth="150"
-                    onAction="#backToMainMenu"/>
+                    onAction="#backToMainMenu"
+        			styleClass="button-secondary"/>
 
         </VBox>
     </center>
