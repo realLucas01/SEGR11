@@ -104,6 +104,10 @@
     -fx-background-color: #991b1b;
 }
 
+.game-button-bar {
+    -fx-padding: 20 0 0 0;
+}
+
 /* =========================
    Formular-Elemente
    ========================= */
