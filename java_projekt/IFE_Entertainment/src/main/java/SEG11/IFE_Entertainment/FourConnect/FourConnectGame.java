@@ -39,7 +39,7 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
 	/**
 	 * Aktueller Zustand des Spiels
 	 */
-	private GameState State;
+	private GameState state;
 	/**
 	 * Liste der Spieler
 	 */
@@ -51,7 +51,7 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
 	/**
 	 * Regelwerk das zur überprüfung der Sieg-Bedingungen genutzt wird
 	 */
-	private FourConnectRules Rules;
+	private FourConnectRules rules;
 	/**
 	 * Das Spielbrett auf dem das Spiel ausgetragen wird
 	 */
@@ -67,10 +67,10 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
 	 * initialisierung aller wichtigen Variablen
 	 */
 	public FourConnectGame() {
-		State = GameState.NotStarted;
+		state = GameState.NotStarted;
 		players = new FourConnectPlayer[2];
 		currentPlayerIndex = 0;
-		Rules = new FourConnectRules();
+		rules = new FourConnectRules();
 		gameBoard = new FourConnectGameBoard();
 	}
 
@@ -79,13 +79,13 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
 	 * 
 	 * <p>Wird genutzt um den aktuellen Status des Spiels von außerhalb abzufragen
 	 * 
-	 * @see IGame
 	 * @return Den aktuellen Status des Spiels im Datentyp des ENUM
 	 *         {@link GameState}
+	 * @see IGame
 	 */
 	@Override
 	public GameState getStatus() {
-		return State;
+		return state;
 	}
 
 	/**
@@ -94,13 +94,13 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
 	 * <p>Wird genutzt um den aktuellen Status des Spiels manuell von außerhalb zu
 	 * setzen
 	 * 
-	 * @see IGame
 	 * @param state Den gewünschten Status des Spiels im Datentyp des ENUM
 	 *              {@link GameState}
+	 * @see IGame
 	 */
 	@Override
-	public void setStatus(GameState state) {
-		State = state;
+	public void setStatus(GameState inputState) {
+		state = inputState;
 	}
 
 	/**
@@ -109,9 +109,9 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
 	 * <p>Wird genutzt um den aktuellen Zustand des Spielbretts von außerhalb
 	 * abzufragen
 	 * 
-	 * @see IGame
 	 * @return Den aktuellen Zustand des Spielbretts im Datentyp
 	 *         {@link FourConnectGameBoard}
+	 * @see IGame
 	 */
 	@Override
 	public FourConnectGameBoard getBoard() {
@@ -125,9 +125,9 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
 	 * neu. Wenn Spieler bzw Spielmodus gewechselt werden soll, dann muss dafür erst
 	 * {@link #endGame} und dann {@link #initFourConnectGame} aufgerufen werden
 	 * 
-	 * @see IGame
 	 * @return Den aktuellen Zustand des Spielbretts im Datentyp
 	 *         {@link FourConnectGameBoard}
+	 * @see IGame
 	 */
 	@Override
 	public void restart() {
@@ -142,7 +142,7 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
 	 * 
 	 */
 	public void endGame() {
-		State = GameState.NotStarted;
+		state = GameState.NotStarted;
 		players[0] = null;
 		players[1] = null;
 		currentPlayerIndex = 0;
@@ -166,14 +166,14 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
 			}
 		}
 		// Überprüfen, ob unentschieden
-		if (Rules.checkTie(gameBoard)) {
-			State = GameState.Tied;
+		if (rules.checkTie(gameBoard)) {
+			state = GameState.Tied;
 		}
 		// Überprüfen, ob gewonnen
-		if (Rules.checkWin(gameBoard, players[currentPlayerIndex])) {
-			State = GameState.Won;
+		if (rules.checkWin(gameBoard, players[currentPlayerIndex])) {
+			state = GameState.Won;
 		}
-		return State;
+		return state;
 	}
 
 	/**
@@ -203,19 +203,18 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
 		currentPlayerIndex = 0;
 
 		// Laden des aktuellen Brandings für die Farben
-		//currentbranding = App.branding;
-
+		currentbranding = BrandingService.getInstance();
 
 		// Erstellen einer neuen Instanz von FourConnectBotStrategy um die Strategien
 		// für die schwierigkeitsstufen "laden" zu können
-		FourConnectBotStrategy botStrategy = new FourConnectBotStrategy(this, Rules);
+		FourConnectBotStrategy botStrategy = new FourConnectBotStrategy(this, rules);
 
 		// Erstellen von Spieler 1 abhängig seines übergebenen Typs
 		switch (playerOne) {
 		case HUMAN -> players[0] = new FourConnectPlayer(playerOne, null, currentbranding.getPrimaryColor());
-		case EASYBOT -> players[0] = new FourConnectPlayer(playerOne,botStrategy.new EasyBotStrategy(),
+		case EASYBOT -> players[0] = new FourConnectPlayer(playerOne, botStrategy.new EasyBotStrategy(), 
 				currentbranding.getPrimaryColor());
-		case HARDBOT -> players[0] = new FourConnectPlayer(playerOne,botStrategy.new HardBotStrategy(),
+		case HARDBOT -> players[0] = new FourConnectPlayer(playerOne, botStrategy.new HardBotStrategy(), 
 				currentbranding.getPrimaryColor());
 		default -> {
 			return 1;
@@ -225,9 +224,9 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
 		// Erstellen von Spieler 2 abhängig seines übergebenen Typs
 		switch (playerTwo) {
 		case HUMAN -> players[1] = new FourConnectPlayer(playerTwo, null, currentbranding.getSecondaryColor());
-		case EASYBOT -> players[1] = new FourConnectPlayer(playerTwo, botStrategy.new EasyBotStrategy(),
+		case EASYBOT -> players[1] = new FourConnectPlayer(playerTwo, botStrategy.new EasyBotStrategy(), 
 				currentbranding.getSecondaryColor());
-		case HARDBOT -> players[1] = new FourConnectPlayer(playerTwo,botStrategy.new HardBotStrategy(),
+		case HARDBOT -> players[1] = new FourConnectPlayer(playerTwo, botStrategy.new HardBotStrategy(), 
 				currentbranding.getSecondaryColor());
 		default -> {
 			return 1;
@@ -235,7 +234,7 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
 		}
 
 		// Status des Spiels aktuallisieren
-		State = GameState.Running;
+		state = GameState.Running;
 		return 0;
 	}
 }
