@@ -52,6 +52,8 @@ public class FourConnectGameController implements GameController {
 
     private Circle[][] circles = new Circle[6][7];
 
+    private boolean oneBotPlayer;
+
     /**
      * Startet das Spiel neu mit demselben Spielmodus.
      *
@@ -108,11 +110,27 @@ public class FourConnectGameController implements GameController {
         updateBoard();
         if (result == GameState.Won) {
             App.setRoot("EndScreen");
+            return;
         } else if (result == GameState.Tied) {
             statusLabel.setText("Unentschieden!");
+            return;
         } else {
             game.playerTurn();
             updateStatus();
+        }
+
+        if(oneBotPlayer){
+            result = game.playBotTurn();
+            updateBoard();
+
+            if (result == GameState.Won) {
+                App.setRoot("EndScreen");
+            } else if (result == GameState.Tied) {
+                statusLabel.setText("Unentschieden!");
+            } else {
+                game.playerTurn();
+                updateStatus();
+            }
         }
     }
 
@@ -163,6 +181,7 @@ public class FourConnectGameController implements GameController {
                 gridPane.add(circle, col, row);
             }
         }
+        oneBotPlayer = game.getOneBotPlayer();
     }
 
     /**

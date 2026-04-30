@@ -23,6 +23,9 @@ import SEG11.IFE_Entertainment.GameCore.GameState;
 import SEG11.IFE_Entertainment.GameCore.IGame;
 import SEG11.IFE_Entertainment.GameCore.IPlayArea;
 import SEG11.IFE_Entertainment.Infrastructure.BrandingService;
+import SEG11.IFE_Entertainment.UIGameController.FourConnectGameController;
+
+import java.util.Objects;
 
 /**
  * Klasse die für den eigentlichen Spielablauf zuständig ist
@@ -52,6 +55,8 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
 	 * wird
 	 */
 	private BrandingService currentbranding;
+
+    private boolean oneBotPlayer;
 
 	/**
 	 * Konstruktor für die Klasse FourConnectGame mitsammt der Grundlegenden
@@ -181,6 +186,9 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
 		return state;
 	}
 
+
+    public boolean getOneBotPlayer(){return oneBotPlayer;}
+
 	/**
 	 * Beendet den Zug eines Spielers
 	 * 
@@ -188,8 +196,16 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
 	 * über die Liste {@link #players} auffindbar ist
 	 */
 	public void playerTurn() {
-		currentPlayerIndex = currentPlayerIndex == 0 ? 1 : 0;
-	}
+        currentPlayerIndex = currentPlayerIndex == 0 ? 1 : 0;
+
+    }
+
+    public GameState playBotTurn(){
+        return players[currentPlayerIndex].getStrategy().chooseMove(gameBoard);
+
+
+
+    }
 
 	/**
 	 * Initialisierung eines neuen Spiels von Vier Gewinnt.
@@ -217,10 +233,16 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
 		// Erstellen von Spieler 1 abhängig seines übergebenen Typs
 		switch (playerOne) {
 		case HUMAN -> players[0] = new FourConnectPlayer(playerOne, null, currentbranding.getPrimaryColor());
-		case EASYBOT -> players[0] = new FourConnectPlayer(playerOne, botStrategy.new EasyBotStrategy(), 
+		case EASYBOT ->{
+            players[0] = new FourConnectPlayer(playerOne, botStrategy.new EasyBotStrategy(),
+                    currentbranding.getPrimaryColor());
+            oneBotPlayer = true;
+        }
+		case HARDBOT ->{
+            players[0] = new FourConnectPlayer(playerOne, botStrategy.new HardBotStrategy(),
 				currentbranding.getPrimaryColor());
-		case HARDBOT -> players[0] = new FourConnectPlayer(playerOne, botStrategy.new HardBotStrategy(), 
-				currentbranding.getPrimaryColor());
+            oneBotPlayer = true;
+        }
 		default -> {
 			return 1;
 		}
@@ -229,10 +251,16 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
 		// Erstellen von Spieler 2 abhängig seines übergebenen Typs
 		switch (playerTwo) {
 		case HUMAN -> players[1] = new FourConnectPlayer(playerTwo, null, currentbranding.getSecondaryColor());
-		case EASYBOT -> players[1] = new FourConnectPlayer(playerTwo, botStrategy.new EasyBotStrategy(), 
+		case EASYBOT -> {
+            players[1] = new FourConnectPlayer(playerTwo, botStrategy.new EasyBotStrategy(),
 				currentbranding.getSecondaryColor());
-		case HARDBOT -> players[1] = new FourConnectPlayer(playerTwo, botStrategy.new HardBotStrategy(), 
+            oneBotPlayer = true;
+        }
+		case HARDBOT ->{
+            players[1] = new FourConnectPlayer(playerTwo, botStrategy.new HardBotStrategy(),
 				currentbranding.getSecondaryColor());
+            oneBotPlayer = true;
+        }
 		default -> {
 			return 1;
 		}
