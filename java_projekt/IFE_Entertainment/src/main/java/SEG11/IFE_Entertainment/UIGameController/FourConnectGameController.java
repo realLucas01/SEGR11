@@ -94,8 +94,9 @@ public class FourConnectGameController implements GameController {
      * Prüft ob die Spalte voll ist, wirft die Scheibe ein und aktualisiert die Anzeige.
      *
      * @param column die gewählte Spalte
+     * @throws IOException falls die FXML-Datei nicht geladen werden kann
      */
-    public void handleColumnInput(Integer column) {
+    public void handleColumnInput(Integer column) throws IOException {
         if (game.getStatus() != GameState.Running) {
             return;
         }
@@ -106,7 +107,7 @@ public class FourConnectGameController implements GameController {
         GameState result = game.dropDisc(column);
         updateBoard();
         if (result == GameState.Won) {
-            statusLabel.setText("Gewonnen!");
+            App.setRoot("EndScreen");
         } else if (result == GameState.Tied) {
             statusLabel.setText("Unentschieden!");
         } else {
@@ -152,7 +153,13 @@ public class FourConnectGameController implements GameController {
                 circle.setFill(Color.GRAY);
                 circles[row][col] = circle;
                 final int c = col;
-                circle.setOnMouseClicked(e -> handleColumnInput(c));
+                circle.setOnMouseClicked(e -> {
+                    try {
+                        handleColumnInput(c);
+                    } catch (IOException ex) {
+                        throw new RuntimeException(ex);
+                    }
+                });
                 gridPane.add(circle, col, row);
             }
         }

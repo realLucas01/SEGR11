@@ -7,7 +7,7 @@
 
 <BorderPane xmlns="http://javafx.com/javafx/21.0.2"
             xmlns:fx="http://javafx.com/javafx/1"
-            fx:controller="SEG11.IFE_Entertainment.UIGameController.FourConnectGameController"
+            fx:controller="SEG11.IFE_Entertainment.UIGameController.EndScreenController"
 			stylesheets="@style.css">
 
     <center>
