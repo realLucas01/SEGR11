@@ -131,8 +131,10 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
 	 */
 	@Override
 	public void restart() {
+		//kopieren der Spieler in ein neues Array da endGame() players null'ed
+		FourConnectPlayer[] playerClone = players.clone();
 		endGame();
-		initFourConnectGame(players[0].getType(), players[1].getType());
+		initFourConnectGame(playerClone[0].getType(), playerClone[1].getType());
 	}
 
 	/**
@@ -159,9 +161,12 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
 	public GameState dropDisc(Integer Column) {
 
 		// Scheibe auf niedrigst möglichen/freien Punkt in der Spalte fallen lassen
-		for (int rows = 0; rows <= gameBoard.getRows(); rows++) {
-			if (gameBoard.getCellOwner(new Position(rows, Column)).getType() != Player.NONE) {
-				gameBoard.setCellValue(new Position(rows + 1, Column), players[currentPlayerIndex]);
+		for (int rows = 0; rows < gameBoard.getRows(); rows++) {
+			if (gameBoard.getCellOwner(new Position(Column, rows)).getType() != Player.NONE) {
+				gameBoard.setCellValue(new Position(Column, rows-1), players[currentPlayerIndex]);
+				break;
+			}else if (rows+1 == gameBoard.getRows()){
+				gameBoard.setCellValue(new Position(Column, rows), players[currentPlayerIndex]);
 				break;
 			}
 		}
