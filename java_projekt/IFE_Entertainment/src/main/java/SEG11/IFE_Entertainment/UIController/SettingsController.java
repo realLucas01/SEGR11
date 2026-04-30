@@ -68,4 +68,11 @@ public class SettingsController {
     public void backToMainMenu() throws IOException {
         App.setRoot("MainMenu");
     }
+    /**
+     * Initialisiert die ComboBox mit den verfügbaren Sprachen.
+     */
+    @FXML
+    public void initialize() {
+        languageBox.getItems().addAll("de", "en");
+    }
 }

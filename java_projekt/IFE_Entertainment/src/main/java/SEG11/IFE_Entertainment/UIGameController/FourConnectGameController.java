@@ -23,6 +23,7 @@ import SEG11.IFE_Entertainment.App;
 import SEG11.IFE_Entertainment.FourConnect.FourConnectGame;
 import SEG11.IFE_Entertainment.FourConnect.Player;
 import SEG11.IFE_Entertainment.GameCore.GameState;
+import SEG11.IFE_Entertainment.Infrastructure.GameSessionService;
 import SEG11.IFE_Entertainment.UIController.GameController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -46,7 +47,9 @@ public class FourConnectGameController implements GameController {
     @FXML
     private Label statusLabel;
 
-    private final FourConnectGame game = new FourConnectGame();
+    /** Das aktuell laufende Spiel. */
+    private FourConnectGame game;
+
     private Circle[][] circles = new Circle[6][7];
 
     /**
@@ -82,6 +85,7 @@ public class FourConnectGameController implements GameController {
     @Override
     @FXML
     public void openHelp() throws IOException {
+        GameSessionService.getInstance().setPreviousScreen("FourConnectGame");
         App.setRoot("Help");
     }
 
@@ -118,8 +122,20 @@ public class FourConnectGameController implements GameController {
      * @param playerTwo der Typ von Spieler 2
      */
     public void handlePlayMode(Player playerOne, Player playerTwo) {
+        game = new FourConnectGame();
+        GameSessionService.getInstance().setCurrentGame(game);
         game.initFourConnectGame(playerOne, playerTwo);
         initBoard();
+        updateStatus();
+    }
+
+    /**
+     * Setzt das laufende Spiel fort ohne es neu zu initialisieren.
+     */
+    public void resumeGame() {
+        game = GameSessionService.getInstance().getCurrentGame();
+        initBoard();
+        updateBoard();
         updateStatus();
     }
 
@@ -164,7 +180,7 @@ public class FourConnectGameController implements GameController {
     private void updateStatus() {
         GameState state = game.getStatus();
         switch (state) {
-            case Running -> statusLabel.setText("Spiel läuft");
+            case Running -> statusLabel.setText("");
             case Won -> statusLabel.setText("Gewonnen!");
             case Tied -> statusLabel.setText("Unentschieden!");
             default -> statusLabel.setText("");
