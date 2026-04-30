@@ -20,7 +20,6 @@ package SEG11.IFE_Entertainment.UIController;
 
 import SEG11.IFE_Entertainment.App;
 import SEG11.IFE_Entertainment.FourConnect.Player;
-import SEG11.IFE_Entertainment.Infrastructure.GameSessionService;
 import SEG11.IFE_Entertainment.UIGameController.FourConnectGameController;
 import javafx.fxml.FXML;
 import java.io.IOException;
@@ -40,7 +39,6 @@ public class ModeMenuController {
      */
     @FXML
     public void startGame() throws IOException {
-        GameSessionService.getInstance().setPlayers(Player.HUMAN, Player.HUMAN);
         FourConnectGameController controller = App.setRootAndGetController("FourConnectGame");
         controller.handlePlayMode(Player.HUMAN, Player.HUMAN);
     }
@@ -52,7 +50,6 @@ public class ModeMenuController {
      */
     @FXML
     public void startGameEasyBot() throws IOException {
-        GameSessionService.getInstance().setPlayers(Player.HUMAN, Player.EASYBOT);
         FourConnectGameController controller = App.setRootAndGetController("FourConnectGame");
         controller.handlePlayMode(Player.HUMAN, Player.EASYBOT);
     }
@@ -64,7 +61,6 @@ public class ModeMenuController {
      */
     @FXML
     public void startGameHardBot() throws IOException {
-        GameSessionService.getInstance().setPlayers(Player.HUMAN, Player.HARDBOT);
         FourConnectGameController controller = App.setRootAndGetController("FourConnectGame");
         controller.handlePlayMode(Player.HUMAN, Player.HARDBOT);
     }

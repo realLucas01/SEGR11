@@ -58,8 +58,8 @@ public class EndScreenController {
      */
     @FXML
     public void restartGame() throws IOException {
-        Player p1 = GameSessionService.getInstance().getPlayerOne();
-        Player p2 = GameSessionService.getInstance().getPlayerTwo();
+        Player p1 = GameSessionService.getInstance().getCurrentGame().getPlayers()[0].getType();
+        Player p2 = GameSessionService.getInstance().getCurrentGame().getPlayers()[1].getType();
         FourConnectGameController controller = App.setRootAndGetController("FourConnectGame");
         controller.handlePlayMode(p1, p2);
     }
