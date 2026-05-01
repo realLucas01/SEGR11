@@ -1,4 +1,4 @@
-package SEG11IFE_Entertainment;
+package SEG11IFE_Entertainment.FourConnectTest;
 
 import SEG11.IFE_Entertainment.FourConnect.FourConnectPlayer;
 import SEG11.IFE_Entertainment.FourConnect.Player;
