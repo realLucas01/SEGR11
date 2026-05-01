@@ -16,13 +16,14 @@
  * SHALL NOT BE LIABLE FOR ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT
  * OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
  */
-package SEG11.IFE_Entertainment.UIGameController;
+package SEG11.IFE_Entertainment.UIController;
 
 import java.io.IOException;
 import SEG11.IFE_Entertainment.App;
 import SEG11.IFE_Entertainment.FourConnect.Player;
 import SEG11.IFE_Entertainment.GameCore.GameState;
 import SEG11.IFE_Entertainment.Infrastructure.GameSessionService;
+import SEG11.IFE_Entertainment.UIGameController.FourConnectGameController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
