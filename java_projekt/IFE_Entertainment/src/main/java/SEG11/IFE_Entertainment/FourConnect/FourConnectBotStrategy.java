@@ -22,7 +22,6 @@ package SEG11.IFE_Entertainment.FourConnect;
 import SEG11.IFE_Entertainment.GameCore.GameState;
 import SEG11.IFE_Entertainment.GameCore.IMoveStrategy;
 import SEG11.IFE_Entertainment.GameCore.IPlayArea;
-import SEG11.IFE_Entertainment.UIGameController.FourConnectGameController;
 
 import java.util.ArrayList;
 import java.util.List;

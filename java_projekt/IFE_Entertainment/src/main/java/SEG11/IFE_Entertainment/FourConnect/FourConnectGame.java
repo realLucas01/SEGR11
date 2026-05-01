@@ -23,9 +23,7 @@ import SEG11.IFE_Entertainment.GameCore.GameState;
 import SEG11.IFE_Entertainment.GameCore.IGame;
 import SEG11.IFE_Entertainment.GameCore.IPlayArea;
 import SEG11.IFE_Entertainment.Infrastructure.BrandingService;
-import SEG11.IFE_Entertainment.UIGameController.FourConnectGameController;
 
-import java.util.Objects;
 
 /**
  * Klasse die für den eigentlichen Spielablauf zuständig ist
@@ -56,6 +54,7 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
 	 */
 	private BrandingService currentbranding;
 
+    /** true, wenn ein Bot im Spiel ist. false wenn kein Bot */
     private boolean oneBotPlayer;
 
 	/**
@@ -87,10 +86,10 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
 	/**
 	 * Implementierung der Interface Methode setStatus()
 	 * 
-	 * <p>Wird genutzt um den aktuellen Status des Spiels manuell von außerhalb zu
+	 * <p>Wird genutzt, um den aktuellen Status des Spiels manuell von außerhalb zu
 	 * setzen
 	 * 
-	 * @param state Den gewünschten Status des Spiels im Datentyp des ENUM
+	 * @param inputState Den gewünschten Status des Spiels im Datentyp des ENUM
 	 *              {@link GameState}
 	 * @see IGame
 	 */
@@ -160,18 +159,18 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
 	 * Die eigentliche Ausführung des Spielzuges bei dem die neue Scheibe in der
 	 * jeweiligen Spalte "fallen gelassen" wird
 	 * 
-	 * @param Column Spalte in der die Scheibe fallen gelassen werden soll
-	 * @return
+	 * @param column Spalte in der die Scheibe fallen gelassen werden soll
+	 * @return den Spielstatus, nach dem Ausführen des Spielzuges
 	 */
-	public GameState dropDisc(Integer Column) {
+	public GameState dropDisc(Integer column) {
 
 		// Scheibe auf niedrigst möglichen/freien Punkt in der Spalte fallen lassen
 		for (int rows = 0; rows < gameBoard.getRows(); rows++) {
-			if (gameBoard.getCellOwner(new Position(Column, rows)).getType() != Player.NONE) {
-				gameBoard.setCellValue(new Position(Column, rows-1), players[currentPlayerIndex]);
+			if (gameBoard.getCellOwner(new Position(column, rows)).getType() != Player.NONE) {
+				gameBoard.setCellValue(new Position(column, rows-1), players[currentPlayerIndex]);
 				break;
 			}else if (rows+1 == gameBoard.getRows()){
-				gameBoard.setCellValue(new Position(Column, rows), players[currentPlayerIndex]);
+				gameBoard.setCellValue(new Position(column, rows), players[currentPlayerIndex]);
 				break;
 			}
 		}
@@ -186,7 +185,12 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
 		return state;
 	}
 
-
+    /**
+     * Get Funktion um das Mitspielen eines Botes abzufragen
+     *
+     * @return true, wenn ein Bot mitspielt
+     *          false, wenn kein Bot mitspielt
+     */
     public boolean getOneBotPlayer(){return oneBotPlayer;}
 
 	/**
@@ -200,11 +204,13 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
 
     }
 
+    /**
+     * Führt einen Zug des Botes aus
+     *
+     * @return den Spielzustand nach dem Zug
+     */
     public GameState playBotTurn(){
         return players[currentPlayerIndex].getStrategy().chooseMove(gameBoard);
-
-
-
     }
 
 	/**
