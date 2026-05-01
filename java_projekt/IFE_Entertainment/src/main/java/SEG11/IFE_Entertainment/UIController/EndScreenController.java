@@ -18,51 +18,51 @@
  */
 package SEG11.IFE_Entertainment.UIController;
 
+import java.io.IOException;
 import SEG11.IFE_Entertainment.App;
 import SEG11.IFE_Entertainment.FourConnect.Player;
+import SEG11.IFE_Entertainment.GameCore.GameState;
+import SEG11.IFE_Entertainment.Infrastructure.GameSessionService;
 import SEG11.IFE_Entertainment.UIGameController.FourConnectGameController;
 import javafx.fxml.FXML;
-import java.io.IOException;
+import javafx.scene.control.Label;
 
 /**
- * Controller für die Modusauswahl.
+ * Controller für den End-Screen.
  *
- * <p>Ermöglicht die Auswahl des Spielmodus und startet das Spiel
- * mit den entsprechenden Spielertypen.
+ * <p>Ermöglicht nach Spielende die Navigation zurück zum Hauptmenü
+ * oder den Neustart des Spiels im selben Modus.
  */
-public class ModeMenuController {
+public class EndScreenController {
+
+    /** Label zur Anzeige des Spielergebnisses. */
+    @FXML
+    private Label resultLabel;
 
     /**
-     * Startet ein Spiel im Zwei-Spieler-Modus.
-     *
-     * @throws IOException falls die FXML-Datei nicht geladen werden kann
+     * Initialisiert den EndScreen und zeigt das Spielergebnis an.
      */
     @FXML
-    public void startGame() throws IOException {
-        FourConnectGameController controller = App.setRootAndGetController("FourConnectGame");
-        controller.handlePlayMode(Player.HUMAN, Player.HUMAN);
+    public void initialize() {
+        GameState state = GameSessionService.getInstance().getCurrentGame().getStatus();
+        if (state == GameState.Won) {
+            resultLabel.setText("Gewonnen!");
+        } else if (state == GameState.Tied) {
+            resultLabel.setText("Unentschieden!");
+        }
     }
 
     /**
-     * Startet ein Spiel gegen den einfachen Bot.
+     * Startet ein neues Spiel im selben Modus.
      *
      * @throws IOException falls die FXML-Datei nicht geladen werden kann
      */
     @FXML
-    public void startGameEasyBot() throws IOException {
+    public void restartGame() throws IOException {
+        Player p1 = GameSessionService.getInstance().getCurrentGame().getPlayers()[0].getType();
+        Player p2 = GameSessionService.getInstance().getCurrentGame().getPlayers()[1].getType();
         FourConnectGameController controller = App.setRootAndGetController("FourConnectGame");
-        controller.handlePlayMode(Player.HUMAN, Player.EASYBOT);
-    }
-
-    /**
-     * Startet ein Spiel gegen den schweren Bot.
-     *
-     * @throws IOException falls die FXML-Datei nicht geladen werden kann
-     */
-    @FXML
-    public void startGameHardBot() throws IOException {
-        FourConnectGameController controller = App.setRootAndGetController("FourConnectGame");
-        controller.handlePlayMode(Player.HUMAN, Player.HARDBOT);
+        controller.handlePlayMode(p1, p2);
     }
 
     /**

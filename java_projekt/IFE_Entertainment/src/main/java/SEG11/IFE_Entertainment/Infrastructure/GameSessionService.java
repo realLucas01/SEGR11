@@ -19,13 +19,12 @@
 
 package SEG11.IFE_Entertainment.Infrastructure;
 
-import SEG11.IFE_Entertainment.FourConnect.Player;
 import SEG11.IFE_Entertainment.FourConnect.FourConnectGame;
 
 /**
  * Service zur Verwaltung der aktuellen Spielsitzung.
  *
- * <p>Speichert den gewählten Spielmodus damit Controller
+ * <p>Speichert das laufende Spiel und den vorherigen Screen damit Controller
  * darauf zugreifen können. Wird als Singleton implementiert,
  * sodass nur eine Instanz global zugänglich ist.
  */
@@ -33,18 +32,16 @@ public class GameSessionService {
 
     private static GameSessionService instance;
 
-    /** Spielertyp von Spieler 1 */
-    private Player playerOne;
-    /** Spielertyp von Spieler 2 */
-    private Player playerTwo;
+    /** Das aktuell laufende Spiel */
+    private FourConnectGame currentGame;
+
+    /** Der vorherige Screen von dem aus Help geöffnet wurde */
+    private String previousScreen = "MainMenu";
 
     /**
-     * Privater Konstruktor mit Standardwerten.
+     * Privater Konstruktor.
      */
-    private GameSessionService() {
-        this.playerOne = Player.HUMAN;
-        this.playerTwo = Player.HUMAN;
-    }
+    private GameSessionService() {}
 
     /**
      * Gibt die einzige Instanz des GameSessionService zurück.
@@ -59,35 +56,22 @@ public class GameSessionService {
     }
 
     /**
-     * Gibt den Typ von Spieler 1 zurück.
+     * Gibt das aktuell laufende Spiel zurück.
      *
-     * @return der Spielertyp von Spieler 1
+     * @return das aktuelle FourConnectGame Objekt
      */
-    public Player getPlayerOne() {
-        return playerOne;
+    public FourConnectGame getCurrentGame() {
+        return currentGame;
     }
 
     /**
-     * Gibt den Typ von Spieler 2 zurück.
+     * Setzt das aktuell laufende Spiel.
      *
-     * @return der Spielertyp von Spieler 2
+     * @param game das zu speichernde FourConnectGame Objekt
      */
-    public Player getPlayerTwo() {
-        return playerTwo;
+    public void setCurrentGame(FourConnectGame game) {
+        this.currentGame = game;
     }
-
-    /**
-     * Setzt die Spielertypen für die aktuelle Sitzung.
-     *
-     * @param playerOne der Typ von Spieler 1
-     * @param playerTwo der Typ von Spieler 2
-     */
-    public void setPlayers(Player playerOne, Player playerTwo) {
-        this.playerOne = playerOne;
-        this.playerTwo = playerTwo;
-    }
-    /** Der vorherige Screen von dem aus Help geöffnet wurde */
-    private String previousScreen = "MainMenu";
 
     /**
      * Gibt den vorherigen Screen zurück.
@@ -105,14 +89,5 @@ public class GameSessionService {
      */
     public void setPreviousScreen(String screen) {
         this.previousScreen = screen;
-    }
-    private FourConnectGame currentGame;
-
-    public FourConnectGame getCurrentGame() {
-        return currentGame;
-    }
-
-    public void setCurrentGame(FourConnectGame game) {
-        this.currentGame = game;
     }
 }
