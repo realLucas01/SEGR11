@@ -1,4 +1,4 @@
-@startuml FourConnect_3_9_3
+@startuml FourConnect_4_1_1
 
 skinparam packageStyle rectangle
 skinparam classAttributeIconSize 0
@@ -213,15 +213,8 @@ package "UIController" {
     + exit() : void
   }
 
-  class HelpController {
+  interface HelpController <<interface>> {
     + backToGameScreen() : void
-  }
-
-  class ModeMenuController{
-    + startGame() : void
-    + startGameEasyBot() : void
-    + startGameHardBot() : void
-    + backToMainMenu() : void
   }
 
   class SettingsController {
@@ -240,11 +233,11 @@ package "UIController" {
     + openHelp() : void
   }
 
-  class EndScreenController{
+  interface EndScreenController <<interface>> {
     - resultLabel : Label
     + initialize() : void
     + restartGame() : void
-    + backToMainMenu : void
+    + backToMainMenu() : void
   }
 
   }
@@ -256,7 +249,7 @@ package "UIController" {
 
 
 
-package "UIGameController"{
+package "UIFourConnectController"{
 
   class FourConnectGameController {
     + handleColumnInput(column : Integer) : void
@@ -266,9 +259,31 @@ package "UIGameController"{
     - updateBoard() : void
     - updateStatus() : void
   }
+  
+  class FourConnectEndScreenController {
+    - resultLabel : Label
+    + initialize() : void
+    + restartGame() : void
+    + backToMainMenu() : void
+  }
+  
+  class FourConnectHelpController {
+    + backToGameScreen() : void
+  }
+  
+  class ModeMenuController{
+    + startGame() : void
+    + startGameEasyBot() : void
+    + startGameHardBot() : void
+    + backToMainMenu() : void
+  }
+  
+  
      ' Cross-package dependencies
          FourConnectGameController ..|> GameController
          FourConnectGameController ..> FourConnectGame       : «use»
+         FourConnectEndScreenController ..|> EndScreenController
+         FourConnectHelpController ..|> HelpController
 
  }
 
