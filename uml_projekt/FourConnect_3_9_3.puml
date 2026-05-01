@@ -54,18 +54,18 @@ package "FourConnect"{
   class FourConnectGame {
     - state : GameState
     - players : FourConnectPlayer[]
-    - currentPlayerIndex : Integer
+    - currentPlayerIndex : int
     - rules : FourConnectRules
     - gameBoard : FourConnectGameBoard
-    - currenBranding : BrandingService
+    - currentBranding : BrandingService
+    - oneBotPlayer: boolean
     <<create>> FourConnectGame()
-    + getStatus(): GameState
-    + setStatus(): void
-    + getBoard(): FourConnectGameBoard
-    + restart(): void
+    + getPlayers(): FourConnectPlayer[]
     + endGame(): void
     + dropDisc(column : Integer) : GameState
+    + getOneBotPlayer(): boolean
     + playerTurn() : void
+    + playBotTurn() : GameState
     + initFourConnectGame(playerOne : Player, playerTwo : Player) : Integer
   }
 
@@ -73,20 +73,23 @@ package "FourConnect"{
     - {static} ROW_COUNTS : Integer
     - {static} COLUMN_COUNTS : Integer
     - cells : Map
+    + «create» FourConnectGameBoard()
     + getRows() : Integer
     + getColumns() : Integer
     + getCellOwner(x : Integer, y : Integer) : FourConnectPlayer
-    + setCellValue(cell : Position, currentPlayer : FourConnectPlayer) : Integer
-    + «create» FourConnectGameBoard()
+    + getCellOwner(position : Position) : FourConnectPlayer
+    + setCellValue(cell : Position, currentPlayer : FourConnectPlayer) : void
     + copy(board : FourConnectGameBoard) : void
   }
 
   class Position {
     - x : Integer
     - y : Integer
+    + «create» Position(x : Integer, y : Integer)
     + getX() : Integer
     + getY() : Integer
-    + «create» Position(x : Integer, y : Integer)
+    + equals(o : Object) : boolean
+    + hashCode() : int
   }
 
   enum Player <<enumeration>> {
@@ -98,12 +101,12 @@ package "FourConnect"{
 
   class FourConnectPlayer {
     - type : Player
-    - strategy : FourConnectBotStrategy
+    - strategy : IMoveStrategy
     - colour : String
+    + «create» FourConnectPlayer(type : Player, strategy : IMoveStrategy, colour : String)
     + getType() : Player
-    + getStrategy() : FourConnectBotStrategy
+    + getStrategy() : IMoveStrategy
     + getColour() : String
-    + «create» FourConnectPlayer(type : Player, strategy : FourConnectBotStrategy, colour : String)
   }
 
 class FourConnectBotStrategy {
@@ -115,27 +118,27 @@ class FourConnectBotStrategy {
   - {static} SCORE_BOT_FOUR: int
   - {static} SCORE_BOT_THREE: int
   - {static} SCORE_BOT_TWO: int
+  - {static} SCORE_BOT_ONE: int
   - {static} SCORE_OPP_FOUR: int
   - {static} SCORE_OPP_THREE: int
   - {static} SCORE_OPP_TWO: int
+  - {static} SCORE_OPP_ONE: int
   - {static} MINIMAX_DEPTH: int
-  + FourConnectBotStrategy(game, rules)
-  + chooseMove(board: IPlayArea): void
+  + FourConnectBotStrategy(game: FourConnectGame, rules: FourConnectRules)
   ~ appraiseBoard(board: FourConnectGameBoard): Integer
   ~ allFourConnects(board: FourConnectGameBoard): ArrayList<Position[]>
   }
 
   class "EasyBotStrategy" as Easy {
-    + chooseMove(board: IPlayArea): void
   }
 
   class "HardBotStrategy" as Hard {
-    + chooseMove(board: IPlayArea): void
-    - findBestTurn(board, depth): Integer
-    - minMax(board, depth, isMaximizing): Integer
-    - findValideTurns(board): List<Position>
-    - playTestTurn(board, turn, bot): void
-    - undoTestTurn(board, turn): void
+    - findBestTurn(boardC: FourConnectGameBoard, depth: int): Integer
+    - minMax(board: FourConnectGameBoard, depth: int, isMaximizing: boolean): Integer
+    - findValideTurns(board: FourConnectGameBoard): List<Position>
+    - playTestTurn(board: FourConnectGameBoard, turn: Position, currentFCPLayer: FourConnectPlayer): void
+    - undoTestTurn(board: FourConnectGameBoard, turn: Position): void
+    - findBotPlayerPosition(players: FourConnectPlayer[]): Integer
   }
 
   enum GameMode <<enumeration>> {
@@ -214,17 +217,34 @@ package "UIController" {
     + backToGameScreen() : void
   }
 
+  class ModeMenuController{
+    + startGame() : void
+    + startGameEasyBot() : void
+    + startGameHardBot() : void
+    + backToMainMenu() : void
+  }
+
   class SettingsController {
+    - languageBox : ComboBox<String>
     - localizationService : LocalizationService
     - brandingService : BrandingService
     + changeLanguage(languageCode : String) : void
     + changeTheme(themeId : String) : void
+    + backToMainMenu() : void
+    + initialize() : void
   }
 
   interface GameController <<interface>> {
     + restartGame() : void
     + backToMainMenu() : void
     + openHelp() : void
+  }
+
+  class EndScreenController{
+    - resultLabel : Label
+    + initialize() : void
+    + restartGame() : void
+    + backToMainMenu : void
   }
 
   }
@@ -240,10 +260,11 @@ package "UIGameController"{
 
   class FourConnectGameController {
     + handleColumnInput(column : Integer) : void
-    + openHelp() : void
-    + restartGame() : void
-
-
+    + handlePlayMode( playerOne : Player, playerTwo : Player) void
+    + resumeGame() : void
+    - initBoard() : void
+    - updateBoard() : void
+    - updateStatus() : void
   }
      ' Cross-package dependencies
          FourConnectGameController ..|> GameController
