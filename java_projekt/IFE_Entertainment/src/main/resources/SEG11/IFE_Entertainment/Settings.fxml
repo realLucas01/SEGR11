@@ -3,7 +3,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.ComboBox?>
 
 <BorderPane xmlns="http://javafx.com/javafx/21.0.2"
@@ -13,9 +12,13 @@
     <center>
         <VBox alignment="CENTER" spacing="20">
             <Label text="Settings" styleClass="title"/>
+            
+            
             <ComboBox fx:id="languageBox"
                       onAction="#changeLanguage"
                       promptText="Language"/>
+
+
             <Button text="Change Theme" onAction="#changeTheme"/>
             <Button text="Back" onAction="#backToMainMenu"/>
         </VBox>

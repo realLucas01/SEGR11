@@ -15,16 +15,16 @@
 
 			<!-- Titel (wer hätte es gedacht) -->
     <top>
-        <Label text="Four Connect" styleClass="title"/>
+        <Label text="Four Connect" styleClass="title" BorderPane.alignment="CENTER"/>
     </top>
 
 
 
 			<!-- Spielfeld mit Back to Main Menü Button -->
     <center>
-        <VBox alignment="CENTER" spacing="20">
+        <VBox alignment="CENTER" spacing="20"> 
 
-            <GridPane fx:id="gridPane" hgap="5" vgap="5"/>
+            <GridPane fx:id="gridPane" hgap="5" vgap="5" alignment="CENTER"/>
 
             <Button text="Restart"
 			        onAction="#restartGame"

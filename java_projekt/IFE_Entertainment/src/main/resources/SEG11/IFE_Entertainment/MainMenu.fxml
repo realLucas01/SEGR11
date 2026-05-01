@@ -9,17 +9,21 @@
 <BorderPane xmlns="http://javafx.com/javafx/21.0.2"
             xmlns:fx="http://javafx.com/javafx/1"
             fx:controller="SEG11.IFE_Entertainment.UIController.MainMenuController"
-            stylesheets="@style.css">
+            stylesheets="@style.css"
+            maxWidth="Infinity"
+            maxHeight="Infinity">
 
     <top>
-        <VBox alignment="CENTER" spacing="10">
+        <VBox alignment="CENTER" spacing="10" VBox.vgrow="ALWAYS">
             <Label text="Main Menu Four Connect Game"
                    style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
         </VBox>
     </top>
 
     <center>
-        <VBox spacing="15" alignment="CENTER">
+        <VBox spacing="15" alignment="CENTER"
+        		  maxWidth="Infinity"
+            	  maxHeight="Infinity">
 
             <!-- Spiel starten -->
             <Button text="Start Game"
@@ -41,7 +45,9 @@
     </center>
 
     <bottom>
-        <VBox alignment="CENTER">
+        <VBox alignment="CENTER"
+        		  maxWidth="Infinity"
+        		  maxHeight="Infinity">
 			<!--Back Button -->
             <Button text="Exit"
                     prefWidth="120"

@@ -13,7 +13,7 @@
 
 			<!-- Tutorial wie man das Spiel spielt lol -->
     <top>
-        <Label text="How to Play" styleClass="title"/>
+        <Label text="How to Play" styleClass="title" BorderPane.alignment="CENTER"/>
     </top>
 
     <center>
@@ -24,15 +24,10 @@
 
             <Label text="Drop pieces into columns. First to connect 4 wins."
                    wrapText="true"/>
+                   
+            <Button text="Back" onAction="#backToGameScreen"/>
 
         </VBox>
     </center>
-
-	<bottom>
-    		<VBox alignment="CENTER">
-    		<!--wtf  Warum in der java denn nicht backToMainMenu????????? Nicht Konsistent!!! -->
-        		<Button text="Back" onAction="#backToGameScreen"/>
-    		</VBox>
-	</bottom>
 	
 </BorderPane>
