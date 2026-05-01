@@ -20,10 +20,23 @@
 
 
 
-			<!-- Spielfeld mit Back to Main Menü Button -->
     <center>
+    
+    		<!-- Turn label also wer ist wann drann -->
         <VBox alignment="CENTER" spacing="20"> 
-
+			
+			<HBox fx:id="turnBox" spacing="10" alignment="CENTER" styleClass="turn-box">
+			
+			    <Label text="Dran:" styleClass="turn-title"/>
+			
+			    <Label fx:id="turnLabel" text="Spieler X"
+			           styleClass="turn-value"/>
+			
+			</HBox>
+					
+					
+			
+			<!-- Spielfeld mit Back to Main Menü Button -->
             <GridPane fx:id="gridPane" hgap="5" vgap="5" alignment="CENTER"/>
 
             <Button text="Restart"
@@ -40,11 +53,4 @@
 
         </VBox>
     </center>
-
-
-			<!-- Status Label also wer ist drann oder so... Muss aber nicht sein -->
-    <bottom>
-        <Label fx:id="statusLabel" styleClass="status-label"/>
-    </bottom>
-
 </BorderPane>
