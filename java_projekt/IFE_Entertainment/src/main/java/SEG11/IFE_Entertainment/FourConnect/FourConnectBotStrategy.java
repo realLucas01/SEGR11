@@ -251,7 +251,7 @@ public class FourConnectBotStrategy implements IMoveStrategy {
      * mit {@link #appraiseBoard} und wählt den Zug mit dem höchsten Score
      *
      * <p>aktueller Stand :
-     *      8 : 0 für den Bot ...
+     *      34 : 1 für den Bot ...
      *      und 1 Unentschieden
      */
     public class HardBotStrategy implements IMoveStrategy {
