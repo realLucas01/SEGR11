@@ -19,17 +19,21 @@
 package SEG11.IFE_Entertainment.UIGameController;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
+
 import SEG11.IFE_Entertainment.App;
 import SEG11.IFE_Entertainment.FourConnect.FourConnectGame;
 import SEG11.IFE_Entertainment.FourConnect.Player;
 import SEG11.IFE_Entertainment.GameCore.GameState;
 import SEG11.IFE_Entertainment.Infrastructure.GameSessionService;
 import SEG11.IFE_Entertainment.UIController.GameController;
+import javafx.animation.PauseTransition;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+import javafx.util.Duration;
 
 /**
  * Controller für den Vier-Gewinnt-Spielscreen.
@@ -120,17 +124,30 @@ public class FourConnectGameController implements GameController {
         }
 
         if(oneBotPlayer){
-            result = game.playBotTurn();
-            updateBoard();
+            gridPane.setDisable(true);
 
-            if (result == GameState.Won) {
-                App.setRoot("EndScreen");
-            } else if (result == GameState.Tied) {
-                statusLabel.setText("Unentschieden!");
-            } else {
-                game.playerTurn();
-                updateStatus();
-            }
+            PauseTransition pause = new PauseTransition(Duration.seconds((1.5)));
+            pause.setOnFinished(event -> {
+                GameState botResult = game.playBotTurn();
+
+                updateBoard();
+                gridPane.setDisable(false);
+
+                if (botResult == GameState.Won) {
+                    try {
+                        App.setRoot("EndScreen");
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                } else if (botResult == GameState.Tied) {
+                    statusLabel.setText("Unentschieden!");
+                } else {
+                    game.playerTurn();
+                    updateStatus();
+                }
+            });
+            pause.play();
+
         }
     }
 
