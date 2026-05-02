@@ -6,8 +6,8 @@
 <?import javafx.scene.control.Label?>
 
 <BorderPane xmlns="http://javafx.com/javafx/21.0.2"
-            xmlns:fx="http://javafx.com/javafx/1"
-            fx:controller="SEG11.IFE_Entertainment.UIController.ModeMenuController"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="SEG11.IFE_Entertainment.UIGameController.FourConnectModeMenuController"
             stylesheets="@style.css">
 
     <top>
@@ -16,24 +16,18 @@
 
     <center>
         <VBox alignment="CENTER" spacing="20">
-
-			 <!-- Java handled, in Java dann z.B. startGame("PVP"); -->
             <Button text="Two Player-Mode"
                     prefWidth="200"
                     onAction="#startGame"/>
-                    
             <Button text="VS Easy Bot"
-            			prefWidth="200"
-			        onAction="#startGameEasyBot"/>
-			
-			<Button text="VS Hard Bot"
-					prefWidth="200"
-			        onAction="#startGameHardBot"/>
-
+                    prefWidth="200"
+                    onAction="#startGameEasyBot"/>
+            <Button text="VS Hard Bot"
+                    prefWidth="200"
+                    onAction="#startGameHardBot"/>
             <Button text="Back"
                     prefWidth="150"
                     onAction="#backToMainMenu"/>
-
         </VBox>
     </center>
 

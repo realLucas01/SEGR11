@@ -106,10 +106,8 @@ public class FourConnectGameController implements GameController {
         }
         GameState result = game.dropDisc(column);
         updateBoard();
-        if (result == GameState.Won) {
+        if (result == GameState.Won || result == GameState.Tied) {
             App.setRoot("EndScreen");
-        } else if (result == GameState.Tied) {
-            statusLabel.setText("Unentschieden!");
         } else {
             game.playerTurn();
             updateStatus();

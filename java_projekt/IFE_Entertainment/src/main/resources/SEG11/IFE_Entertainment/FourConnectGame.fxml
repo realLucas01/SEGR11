@@ -46,7 +46,7 @@
 			<Button text="Help"
 			        onAction="#openHelp"
 			        styleClass="main-button"/>
-			        
+
             <Button text="Back"
                     onAction="#backToMainMenu"
                     styleClass="main-button"/>

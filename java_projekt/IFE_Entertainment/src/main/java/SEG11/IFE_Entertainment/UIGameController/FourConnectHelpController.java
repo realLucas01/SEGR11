@@ -16,43 +16,36 @@
  * SHALL NOT BE LIABLE FOR ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT
  * OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
  */
-package SEG11.IFE_Entertainment.UIController;
+package SEG11.IFE_Entertainment.UIGameController;
 
 import java.io.IOException;
-<<<<<<< HEAD
 import SEG11.IFE_Entertainment.App;
-import SEG11.IFE_Entertainment.FourConnect.Player;
-import SEG11.IFE_Entertainment.GameCore.GameState;
 import SEG11.IFE_Entertainment.Infrastructure.GameSessionService;
-import SEG11.IFE_Entertainment.UIGameController.FourConnectGameController;
+import SEG11.IFE_Entertainment.UIController.HelpController;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
-=======
->>>>>>> 4aee5e8 (fix end screen navigation and refactor controllers to interface pattern)
 
 /**
- * Interface für den EndScreen Controller.
+ * FourConnect-spezifische Implementierung des HelpControllers.
  *
- * <p>Definiert die Funktionen des EndScreens nach Spielende.
+ * <p>Navigiert zurück zum Spielfeld oder zum Hauptmenü
+ * abhängig davon woher der Hilfe-Screen geöffnet wurde.
  */
-public interface EndScreenController {
+public class FourConnectHelpController implements HelpController {
 
     /**
-     * Initialisiert den EndScreen.
-     */
-    void initialize();
-
-    /**
-     * Startet ein neues Spiel im selben Modus.
+     * Navigiert zurück zum vorherigen Screen.
      *
      * @throws IOException falls die FXML-Datei nicht geladen werden kann
      */
-    void restartGame() throws IOException;
-
-    /**
-     * Navigiert zurück zum Hauptmenü.
-     *
-     * @throws IOException falls die FXML-Datei nicht geladen werden kann
-     */
-    void backToMainMenu() throws IOException;
+    @Override
+    @FXML
+    public void backToGameScreen() throws IOException {
+        String previous = GameSessionService.getInstance().getPreviousScreen();
+        if (previous.equals("FourConnectGame")) {
+            FourConnectGameController controller = App.setRootAndGetController("FourConnectGame");
+            controller.resumeGame();
+        } else {
+            App.setRoot("MainMenu");
+        }
+    }
 }
