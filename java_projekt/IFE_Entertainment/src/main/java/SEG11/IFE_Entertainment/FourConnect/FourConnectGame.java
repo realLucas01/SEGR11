@@ -35,9 +35,7 @@ import SEG11.IFE_Entertainment.Infrastructure.BrandingService;
  *                               {@link IPlayArea} konkretisiert
  */
 public class FourConnectGame implements IGame<FourConnectGameBoard> {
-	/**
-	 * Aktueller Zustand des Spiels
-	 */
+	/** Aktueller Zustand des Spiels */
 	private GameState state;
 	/** Liste der Spieler */
 	private FourConnectPlayer[] players;
@@ -107,6 +105,15 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
 	@Override
 	public FourConnectGameBoard getBoard() {
 		return gameBoard;
+	}
+	
+	/**
+	 * Gibt die Position des aktuellen Spielers im players Array zurück
+	 * 
+	 * @return 0 für "Spieler 1" und 1 für "Spieler 2"
+	 */
+	public Integer getCurrentPlayerIndex() {
+		return currentPlayerIndex;
 	}
 	
 	/**
