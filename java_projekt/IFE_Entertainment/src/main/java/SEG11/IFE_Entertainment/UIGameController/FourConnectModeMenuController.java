@@ -16,11 +16,10 @@
  * SHALL NOT BE LIABLE FOR ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT
  * OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
  */
-package SEG11.IFE_Entertainment.UIController;
+package SEG11.IFE_Entertainment.UIGameController;
 
 import SEG11.IFE_Entertainment.App;
 import SEG11.IFE_Entertainment.FourConnect.Player;
-import SEG11.IFE_Entertainment.UIGameController.FourConnectGameController;
 import javafx.fxml.FXML;
 import java.io.IOException;
 
@@ -30,7 +29,7 @@ import java.io.IOException;
  * <p>Ermöglicht die Auswahl des Spielmodus und startet das Spiel
  * mit den entsprechenden Spielertypen.
  */
-public class ModeMenuController {
+public class FourConnectModeMenuController {
 
     /**
      * Startet ein Spiel im Zwei-Spieler-Modus.

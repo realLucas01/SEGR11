@@ -6,21 +6,15 @@
 <?import javafx.scene.control.Label?>
 
 <BorderPane xmlns="http://javafx.com/javafx/21.0.2"
-            xmlns:fx="http://javafx.com/javafx/1"
-            fx:controller="SEG11.IFE_Entertainment.UIController.EndScreenController"
-			stylesheets="@style.css">
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="SEG11.IFE_Entertainment.UIGameController.FourConnectEndScreenController"
+            stylesheets="@style.css">
 
     <center>
         <VBox alignment="CENTER" spacing="20">
-
             <Label fx:id="resultLabel" styleClass="title"/>
-			
-			<!-- Nochmal Spielen -->
             <Button text="Play Again" onAction="#restartGame"/>
-            
-            <!-- Zurück zum Main Menü -->
-            <Button text="Main Menu" onAction="#backToMainMenu"/>	
-
+            <Button text="Main Menu" onAction="#backToMainMenu"/>
         </VBox>
     </center>
 
