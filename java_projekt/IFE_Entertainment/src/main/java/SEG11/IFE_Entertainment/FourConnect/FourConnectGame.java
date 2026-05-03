@@ -35,6 +35,8 @@ import SEG11.IFE_Entertainment.Infrastructure.BrandingService;
  *                               {@link IPlayArea} konkretisiert
  */
 public class FourConnectGame implements IGame<FourConnectGameBoard> {
+	/** Speichern der Singleton Instanz der Klasse */
+	private static FourConnectGame INSTANCE;
 	/** Aktueller Zustand des Spiels */
 	private GameState state;
 	/** Liste der Spieler */
@@ -52,15 +54,27 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
 	private BrandingService currentbranding;
 
 	/**
-	 * Konstruktor für die Klasse FourConnectGame mitsammt der Grundlegenden
+	 * Privater Konstruktor für die Klasse FourConnectGame mitsammt der Grundlegenden
 	 * initialisierung aller wichtigen Variablen
 	 */
-	public FourConnectGame() {
+	private FourConnectGame() {
 		state = GameState.NotStarted;
 		players = new FourConnectPlayer[2];
 		currentPlayerIndex = 0;
 		rules = new FourConnectRules();
 		gameBoard = new FourConnectGameBoard();
+	}
+	
+	/**
+	 * Funtkion zum erstellen bzw. bekommen der Instanz der Klasse
+	 * 
+	 * @return Den Pointer auf die einzige Instanz der Klasse
+	 */
+	public static FourConnectGame getInstance() {
+		if (INSTANCE == null) {
+			INSTANCE = new FourConnectGame();
+		}
+		return INSTANCE;
 	}
 
 	/**
