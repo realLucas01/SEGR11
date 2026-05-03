@@ -272,7 +272,7 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
 		}
 		}
 
-		// Status des Spiels aktuallisieren
+		// Status des Spiels aktualisieren
 		state = GameState.Running;
 		return 0;
 	}

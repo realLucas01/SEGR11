@@ -260,6 +260,10 @@ public class FourConnectBotStrategy implements IMoveStrategy {
         /** die im {@link FourConnectGameBoard} initialisierte Spieler Liste  */
         FourConnectPlayer[] playerList;
 
+        FourConnectPlayer currentFCPlayer;
+        int botPlayerIndex;
+        FourConnectPlayer[] playerList;
+
         /**
          * Einstiegspunkt der schweren Strategie.
          *
@@ -362,6 +366,22 @@ public class FourConnectBotStrategy implements IMoveStrategy {
             return bestValue;
         }
 
+
+        /**
+         * Hilfsfunktion um die Position, des Bot Spielers in der Spielliste zu finden
+         * @param players Array mit den Spielern
+         * @return array Position des Botes
+         *         -1, wenn der Bot nicht gefunden wurde
+         */
+        private Integer findBotPlayerPosition(FourConnectPlayer[] players){
+            for(int i = 0; i < players.length; i++){
+                if(players[i].getType() == Player.HARDBOT){
+                    return i;
+                }
+            }
+            return -1;
+        }
+
         /**
          * Durchsucht das FCSpieler Array, um die Position des Botes festzustellen
          * @param players, das Array mit allen Spielern
@@ -395,7 +415,7 @@ public class FourConnectBotStrategy implements IMoveStrategy {
          * @param currentFCPlayer der Spieler, dessen Scheibe gesetzt wird
          */
         private void playTestTurn(FourConnectGameBoard board, Position turn, FourConnectPlayer currentFCPlayer) {
-            board.setCellValue(turn,currentFCPlayer);
+           board.setCellValue(turn,currentFCPlayer);
         }
 
         /**
