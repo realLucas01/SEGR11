@@ -5,6 +5,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
 
 <BorderPane xmlns="http://javafx.com/javafx/21.0.2"
             xmlns:fx="http://javafx.com/javafx/1"
@@ -29,7 +30,7 @@
 			
 			    <Label text="Dran:" styleClass="turn-title"/>
 			
-			    <Label fx:id="turnLabel" text="Spieler X"
+			    <Label fx:id="statusLabel" text="Spieler X"
 			           styleClass="turn-value"/>
 			
 			</HBox>
