@@ -121,7 +121,7 @@ public class FourConnectGameController implements GameController {
      * @param playerTwo der Typ von Spieler 2
      */
     public void handlePlayMode(Player playerOne, Player playerTwo) {
-        game = new FourConnectGame();
+        game = FourConnectGame.getInstance();
         GameSessionService.getInstance().setCurrentGame(game);
         game.initFourConnectGame(playerOne, playerTwo);
         initBoard();
