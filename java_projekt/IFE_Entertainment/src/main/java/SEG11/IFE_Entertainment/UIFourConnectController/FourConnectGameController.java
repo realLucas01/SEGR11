@@ -16,14 +16,13 @@
  * SHALL NOT BE LIABLE FOR ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT
  * OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
  */
-package SEG11.IFE_Entertainment.UIGameController;
+package SEG11.IFE_Entertainment.UIFourConnectController;
 
 import java.io.IOException;
 import SEG11.IFE_Entertainment.App;
 import SEG11.IFE_Entertainment.FourConnect.FourConnectGame;
 import SEG11.IFE_Entertainment.FourConnect.Player;
 import SEG11.IFE_Entertainment.GameCore.GameState;
-import SEG11.IFE_Entertainment.Infrastructure.GameSessionService;
 import SEG11.IFE_Entertainment.UIController.GameController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -49,6 +48,9 @@ public class FourConnectGameController implements GameController {
 
     /** Das aktuell laufende Spiel. */
     private FourConnectGame game;
+
+    /** Der vorherige Screen von dem aus Help geöffnet wurde. */
+    public static String previousScreen = "MainMenu";
 
     private Circle[][] circles = new Circle[6][7];
 
@@ -85,7 +87,7 @@ public class FourConnectGameController implements GameController {
     @Override
     @FXML
     public void openHelp() throws IOException {
-        GameSessionService.getInstance().setPreviousScreen("FourConnectGame");
+        previousScreen = "FourConnectGame";
         App.setRoot("Help");
     }
 
@@ -121,8 +123,7 @@ public class FourConnectGameController implements GameController {
      * @param playerTwo der Typ von Spieler 2
      */
     public void handlePlayMode(Player playerOne, Player playerTwo) {
-        game = new FourConnectGame();
-        GameSessionService.getInstance().setCurrentGame(game);
+        game = FourConnectGame.getInstance();
         game.initFourConnectGame(playerOne, playerTwo);
         initBoard();
         updateStatus();
@@ -132,7 +133,7 @@ public class FourConnectGameController implements GameController {
      * Setzt das laufende Spiel fort ohne es neu zu initialisieren.
      */
     public void resumeGame() {
-        game = GameSessionService.getInstance().getCurrentGame();
+        game = FourConnectGame.getInstance();
         initBoard();
         updateBoard();
         updateStatus();
