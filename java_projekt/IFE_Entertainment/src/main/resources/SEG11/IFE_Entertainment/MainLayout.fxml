@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21.0.2"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="SEG11.IFE_Entertainment.UIGameController.MainLayoutController"
+            stylesheets="@style.css">
+	
+	
+    <top>
+        <Label text="Gamemenu" style="-fx-font-size: 24px; -fx-padding: 20;" BorderPane.alignment="CENTER" />
+    </top>
+    
+    <center>
+        <GridPane hgap="20" vgap="20" alignment="CENTER">
+            <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+            
+            <Button text="4 Gewinnt" prefHeight="150" prefWidth="200" GridPane.columnIndex="0" GridPane.rowIndex="0" onAction="#openFourConnect"/>
+            <Button text="Spiel 2" prefHeight="150" prefWidth="200" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <Button text="Spiel 3" prefHeight="150" prefWidth="200" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+            <Button text="Spiel 4" prefHeight="150" prefWidth="200" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+            
+            <Button text="Spiel 5" prefHeight="150" prefWidth="200" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <Button text="Spiel 6" prefHeight="150" prefWidth="200" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button text="Spiel 7" prefHeight="150" prefWidth="200" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button text="Spiel 8" prefHeight="150" prefWidth="200" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+        </GridPane>
+    </center>
+    
+    <bottom>
+        <HBox alignment="CENTER" spacing="50" style="-fx-padding: 20;">
+            <Button text="Help" />	<!-- onAction??? -->
+            <Button text="Exit" onAction="#exit" />
+            <Button text="Settings" />   <!-- onAction??? -->
+        </HBox>
+    </bottom>
+</BorderPane>
