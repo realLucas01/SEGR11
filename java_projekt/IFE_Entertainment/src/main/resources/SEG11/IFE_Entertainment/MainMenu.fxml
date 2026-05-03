@@ -6,7 +6,8 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.geometry.Insets?>
 
-<BorderPane xmlns="http://javafx.com/javafx/21.0.2" xmlns:fx="http://javafx.com/fxml/1" 
+<BorderPane xmlns="http://javafx.com/javafx/21.0.2"
+            xmlns:fx="http://javafx.com/javafx/1"
             fx:controller="SEG11.IFE_Entertainment.UIController.MainMenuController"
             stylesheets="@style.css">
 
@@ -44,7 +45,7 @@
 			<!--Back Button -->
             <Button text="Exit"
                     prefWidth="120"
-                    onAction="#onExit"/>
+                    onAction="#exit"/>
         </VBox>
     </bottom>
 

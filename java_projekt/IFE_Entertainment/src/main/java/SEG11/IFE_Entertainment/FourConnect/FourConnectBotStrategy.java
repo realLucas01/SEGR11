@@ -253,6 +253,10 @@ public class FourConnectBotStrategy implements IMoveStrategy {
      */
     public class HardBotStrategy implements IMoveStrategy {
 
+        FourConnectPlayer currentFCPlayer;
+        int botPlayerIndex;
+        FourConnectPlayer[] playerList;
+
         /**
          * Einstiegspunkt der schweren Strategie.
          *
@@ -265,6 +269,9 @@ public class FourConnectBotStrategy implements IMoveStrategy {
             // Spielfeld kopieren, damit der Originalzustand unverändert bleibt
             final FourConnectGameBoard boardCopy = new FourConnectGameBoard();
             boardCopy.copy((FourConnectGameBoard) board);
+
+            playerList = fcGame.getPlayers();
+            botPlayerIndex = findBotPlayerPosition(playerList);
 
             final Integer toPlayCol = findBestTurn(boardCopy, MINIMAX_DEPTH);
             fcGame.dropDisc(toPlayCol);
@@ -288,7 +295,7 @@ public class FourConnectBotStrategy implements IMoveStrategy {
             final List<Position> valideTurns = findValideTurns(board);
 
             for(Position turn: valideTurns){
-                playTestTurn(board, turn, bot);
+                playTestTurn(board, turn, playerList[botPlayerIndex]);
                 score = minMax(board, depth-1, false);
                 undoTestTurn(board, turn);
 
@@ -318,8 +325,9 @@ public class FourConnectBotStrategy implements IMoveStrategy {
         private Integer minMax(FourConnectGameBoard board, int depth, boolean isMaximizing){
             Integer value;
             int bestValue;
+
             // Abbruchbedingung: Tiefe 0, Sieg oder Unentschieden
-            if(depth == 0 /*|| fcRules.checkWin(board)*/ || fcRules.checkTie(board)) {
+            if(depth == 0 || fcRules.checkWin(board, playerList[(botPlayerIndex + (isMaximizing ? 1 : 0)) % 2]) || fcRules.checkTie(board)) {
                 return appraiseBoard(board);
             }
 
@@ -329,7 +337,7 @@ public class FourConnectBotStrategy implements IMoveStrategy {
                 // Bot am Zug: höchsten erreichbaren Score suchen
                 bestValue = Integer.MIN_VALUE;
                 for(Position turn: valideTurns){
-                    playTestTurn(board, turn, bot );
+                    playTestTurn(board, turn, playerList[botPlayerIndex] );
                     value = minMax(board, depth-1, false);
                     undoTestTurn(board, turn);
                     bestValue = max(bestValue, value);
@@ -339,13 +347,29 @@ public class FourConnectBotStrategy implements IMoveStrategy {
                 // Gegner am Zug: niedrigsten erreichbaren Score suchen
                 bestValue = Integer.MAX_VALUE;
                 for(Position turn: valideTurns){
-                    playTestTurn(board, turn, player );
+                    playTestTurn(board, turn, playerList[(botPlayerIndex+1)%2] );
                     value = minMax(board, depth-1, true);
                     undoTestTurn(board,turn);
                     bestValue = min(bestValue,value);
                 }
             }
             return bestValue;
+        }
+
+
+        /**
+         * Hilfsfunktion um die Position, des Bot Spielers in der Spielliste zu finden
+         * @param players Array mit den Spielern
+         * @return array Position des Botes
+         *         -1, wenn der Bot nicht gefunden wurde
+         */
+        private Integer findBotPlayerPosition(FourConnectPlayer[] players){
+            for(int i = 0; i < players.length; i++){
+                if(players[i].getType() == Player.HARDBOT){
+                    return i;
+                }
+            }
+            return -1;
         }
 
         /**
@@ -364,11 +388,10 @@ public class FourConnectBotStrategy implements IMoveStrategy {
          *
          * @param board das Spielfeld
          * @param turn die Zielposition der Scheibe
-         * @param bot der Spieler, dessen Scheibe gesetzt wird
+         * @param currentFCPlayer der Spieler, dessen Scheibe gesetzt wird
          */
-        private void playTestTurn(FourConnectGameBoard board, Position turn, Player bot) {
-           final FourConnectPlayer testTurnOwner = new FourConnectPlayer(bot, null, null);
-           board.setCellValue(turn,testTurnOwner);
+        private void playTestTurn(FourConnectGameBoard board, Position turn, FourConnectPlayer currentFCPlayer) {
+           board.setCellValue(turn,currentFCPlayer);
         }
 
         /**
