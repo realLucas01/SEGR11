@@ -14,7 +14,7 @@
         <VBox alignment="CENTER" spacing="20">
         		<!-- Label wer gewonnen hat: Zeigt an wer der Gewinner der Runde ist -->
             <Label fx:id="resultLabel" styleClass="title"/>
-            <!-- Speile Restart -->
+            <!-- Spiel Restart -->
             <Button text="%menu.newRound" onAction="#restartGame"/>
             <!-- Back to Main Menü -->
             <Button text="%menu.back" onAction="#backToMainMenu"/>

@@ -12,7 +12,7 @@
 
 
 
-		<!-- Selbsterlärende Beschreibung des Spiels und wie gespielt wird -->
+		<!-- Selbsterklärende Beschreibung des Spiels und wie gespielt wird -->
     <top>
         <Label text="%help.title" styleClass="title"/>
     </top>
