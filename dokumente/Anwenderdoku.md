@@ -29,10 +29,10 @@ Die gesamte Bedienung erfolgt über eine grafische Benutzeroberfläche mit klar 
 
 Im Hauptmenü stehen folgende Funktionen zur Verfügung:
 
-Spiel starten – Öffnet die Auswahl der Spielmodi
-Hilfe – Öffnet eine Seite mit den Spielregeln
-Einstellungen – Öffnet das Einstellungsmenü
-Exit – Beendet die Anwendung und kehrt zum IFE-Menü zurück
+- **Spiel starten:** Öffnet die Auswahl der Spielmodi
+- **Hilfe:** Öffnet eine Seite mit den Spielregeln
+- **Einstellungen:** Öffnet das Einstellungsmenü
+- **Exit:** Beendet die Anwendung und kehrt zum IFE-Menü zurück
 
 ---
 
@@ -43,7 +43,7 @@ Im Hilfe-Bereich werden die Spielregeln verständlich dargestellt.
 Funktionen:
 
 - Anzeige der Spielregeln
-- Back – Rückkehr zum Hauptmenü
+- **Back:** Rückkehr zum Hauptmenü
 
 ---
 
@@ -51,9 +51,9 @@ Funktionen:
 
 Im Einstellungsmenü stehen folgende Optionen zur Verfügung:
 
-**Sprache (Language):** Auswahl der Anzeigesprache über ein Dropdown-Menü
-**Theme ändern (optional):** Anpassung von Farben und visuellen Elementen (Kann-Kriterium)
-Back – Rückkehr zum Hauptmenü
+- **Sprache (Language):** Auswahl der Anzeigesprache über ein Dropdown-Menü
+- **Theme ändern (optional):** Anpassung von Farben und visuellen Elementen (Kann-Kriterium)
+- **Back:** Rückkehr zum Hauptmenü
 
 ---
 
@@ -61,9 +61,9 @@ Back – Rückkehr zum Hauptmenü
 
 Nach Auswahl von „Spiel starten“ wird der gewünschte Spielmodus gewählt:
 
-**Spieler gegen Spieler (PvP):** Zwei Passagiere spielen abwechselnd am selben Gerät
-**Spieler gegen Computer – Einfach:** Spiel gegen einen einfachen Bot
-**Spieler gegen Computer – Schwer:** Spiel gegen einen stärkeren Bot
+- **Spieler gegen Spieler (PvP):** Zwei Passagiere spielen abwechselnd am selben Gerät
+- **Spieler gegen Computer – Einfach:** Spiel gegen einen einfachen Bot
+- **Spieler gegen Computer – Schwer:** Spiel gegen einen stärkeren Bot
 
 Nach der Auswahl startet das Spiel automatisch.
 
@@ -73,24 +73,24 @@ Nach der Auswahl startet das Spiel automatisch.
 
 Während des Spiels stehen folgende Funktionen zur Verfügung:
 
-**Spielstein setzen:** Durch Tippen oder Klicken auf eine Spalte wird ein Spielstein platziert
-**Spieleranzeige:** Anzeige, welcher Spieler aktuell am Zug ist
-**Restart:** Setzt das Spielfeld zurück und startet eine neue Runde
-**Help:** Öffnet die Spielregeln während des Spiels
-**Back:** Rückkehr zum Hauptmenü
+- **Spielstein setzen:** Durch Tippen oder Klicken auf eine Spalte wird ein Spielstein platziert
+- **Spieleranzeige:** Anzeige, welcher Spieler aktuell am Zug ist
+- **Restart:** Setzt das Spielfeld zurück und startet eine neue Runde
+- **Help:** Öffnet die Spielregeln während des Spiels
+- **Back:** Rückkehr zum Hauptmenü
 
 ---
 
 ## 1.9 Spielablauf
 
-Grundprinzip:
+**Grundprinzip:**
 Das Spielfeld besteht aus einem Raster. Ziel ist es, vier eigene Spielsteine in einer Linie zu platzieren:
 
 - horizontal
 - vertikal
 - diagonal
 
-Zugausführung:
+**Zugausführung:**
 
 - Auswahl einer Spalte
 - Der Spielstein fällt automatisch in die nächste freie Position
@@ -120,7 +120,7 @@ Die Spielregeln können jederzeit über den Menüpunkt Hilfe aufgerufen werden.
 
 Inhalt:
 
-- **Ziel:** Vier Steine in einer Reihe platzieren
+- Ziel: Vier Steine in einer Reihe platzieren
 - Abwechselnde Spielzüge
 - Pro Zug wird ein Stein gesetzt
 - Nur freie Felder können belegt werden
@@ -131,8 +131,8 @@ Inhalt:
 
 Das Spiel endet automatisch in folgenden Fällen:
 
-**Sieg:** Ein Spieler erreicht vier Steine in einer Reihe
-Unentschieden: Das Spielfeld ist vollständig gefüllt
+- **Sieg:** Ein Spieler erreicht vier Steine in einer Reihe
+- **Unentschieden**: Das Spielfeld ist vollständig gefüllt
 
 Nach Spielende wird ein Ergebnisbildschirm angezeigt.
 
