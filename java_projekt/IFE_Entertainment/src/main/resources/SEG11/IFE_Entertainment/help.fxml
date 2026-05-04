@@ -8,30 +8,40 @@
 <BorderPane xmlns="http://javafx.com/javafx/21.0.2"
             xmlns:fx="http://javafx.com/javafx/1"
             fx:controller="SEG11.IFE_Entertainment.UIController.HelpController"
-            stylesheets="@style.css">
+            stylesheets="@style.css" styleClass="help-root">
 
 
 			<!-- Tutorial wie man das Spiel spielt lol -->
     <top>
-        <Label text="How to Play" styleClass="title"/>
+        <Label text="Help / Rules" styleClass="title"/>
     </top>
 
     <center>
-        <VBox spacing="15" alignment="CENTER">
-			<!-- Sehr interessanter Text -->
-			
-            <Label text="Connect 4 rules:" styleClass="text"/>
-
-            <Label text="Drop pieces into columns. First to connect 4 wins."
-                   wrapText="true"/>
-
-        </VBox>
+		<VBox spacing="10" alignment="TOP_LEFT" styleClass="help-container">
+				
+		    <Label text="Goal of the Game:" styleClass="section-title"/>
+		    <Label text="Get four discs in a row (horizontal, vertical, or diagonal)." styleClass="text"/>
+		
+		    <Label text="Gameplay:" styleClass="section-title"/>
+		    <Label text="Players take turns dropping a disc into a column." styleClass="text"/>
+		    <Label text="The disc falls to the lowest available position in that column." styleClass="text"/>
+		
+		    <Label text="Controls:" styleClass="section-title"/>
+		    <Label text="Tap a column to place a disc." styleClass="text"/>
+		    <Label text='"New Round" resets the board at any time.' styleClass="text"/>
+		
+		</VBox>
     </center>
 
 	<bottom>
     		<VBox alignment="CENTER">
     		<!--wtf  Warum in der java denn nicht backToMainMenu????????? Nicht Konsistent!!! -->
-        		<Button text="Back" onAction="#backToGameScreen"/>
+			<!-- Der Back-Button müsste hier unterscheiden ob man vom Hauptmenü kommt oder aus einem aktiven Spiel -->
+			<!-- Alternativ vielleicht zwei Button? "Back to Game" und "Mainmenu"? -->
+        		<Button text="Back to Game"
+        				prefWidth="120"
+        				onAction="#backToGameScreen"
+        				styleClass="button-secondary"/>
     		</VBox>
 	</bottom>
 	
