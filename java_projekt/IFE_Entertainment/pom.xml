@@ -133,7 +133,8 @@
                                 <resource>
                                     <directory>${project.build.directory}</directory>
                                     <includes>
-                                        <include>IFE_Entertainment-${project.version}-executable.jar</include>                                    </includes>
+                                        <include>IFE_Entertainment-${project.version}-obfuscated.jar</include>
+                                    </includes>
                                 </resource>
                             </resources>
                         </configuration>
@@ -212,6 +213,28 @@
                         </configuration>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>com.github.wvengen</groupId>
+                <artifactId>proguard-maven-plugin</artifactId>
+                <version>2.6.1</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals><goal>proguard</goal></goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <obfuscate>true</obfuscate>
+                    <injar>IFE_Entertainment-${project.version}-executable.jar</injar>
+                    <outjar>IFE_Entertainment-${project.version}-obfuscated.jar</outjar>
+                    <proguardInclude>${basedir}/proguard.conf</proguardInclude>
+                    <libs>
+                        <!-- Ersetze dies durch den Pfad zu deinem Java-Home (jmods) -->
+                        <lib>${java.home}/jmods/java.base.jmod</lib>
+                        <lib>${java.home}/jmods/java.desktop.jmod</lib>
+                    </libs>
+                </configuration>
             </plugin>
 
         </plugins>
