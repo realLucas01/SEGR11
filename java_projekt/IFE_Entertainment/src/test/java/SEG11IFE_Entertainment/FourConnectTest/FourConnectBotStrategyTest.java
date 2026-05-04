@@ -4,12 +4,9 @@ import SEG11.IFE_Entertainment.FourConnect.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
-import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -136,70 +133,4 @@ class FourConnectBotStrategyTest {
             assertTrue(scoreAfterMix < scoreBeforeMix);
         }
     }
-
-/*
-    @Nested
-    class HardBotStrategyTests {
-
-        private FourConnectBotStrategy.HardBotStrategy hardBot;
-
-        @BeforeEach
-        void setUpHard() {
-
-            game = new FourConnectGame();
-            rules = new FourConnectRules();
-            game.initFourConnectGame(Player.HARDBOT, Player.HUMAN);
-            board    = game.getBoard();
-            strategy = new FourConnectBotStrategy(game, rules);
-            hardBot  = strategy.new HardBotStrategy();
-        }
-
-        @Test
-        void takesWinningMove() {
-
-            game.dropDisc(0);
-            game.dropDisc(1);
-            game.dropDisc(2);
-
-            hardBot.chooseMove(board);
-
-            assertEquals(Player.HARDBOT, board.getCellOwner(3, 5).getType());
-        }
-
-        @Test
-        void blocksOpponentWin() {
-
-            game.playerTurn();
-            game.dropDisc(0);
-            game.dropDisc(1);
-            game.dropDisc(2);
-
-
-            hardBot.chooseMove(board);
-
-            assertEquals(Player.HARDBOT, board.getCellOwner(3, 5).getType());
-        }
-
-
-        @Test
-        void prefersWinOverBlock() {
-
-
-            game.dropDisc(0);
-            game.dropDisc(1);
-            game.dropDisc(2);
-            game.playerTurn();
-            game.dropDisc(0);
-            game.dropDisc(1);
-            game.dropDisc(2);
-
-            hardBot.chooseMove(board);
-
-            assertEquals(Player.HARDBOT, board.getCellOwner(3, 5).getType());
-        }
-
-
-    }
-
- */
 }
