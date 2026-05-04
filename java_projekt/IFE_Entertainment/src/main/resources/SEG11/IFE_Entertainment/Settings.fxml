@@ -9,13 +9,17 @@
             xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="SEG11.IFE_Entertainment.UIController.SettingsController"
             stylesheets="@style.css">
+            
+    <!-- Hier kann man die Sprache der Applikation verändern -->
     <center>
         <VBox alignment="CENTER" spacing="20">
             <Label text="%settings.title" styleClass="title"/>
             <ComboBox fx:id="languageBox"
                       onAction="#changeLanguage"
                       promptText="%settings.language"/>
+            <!--  Ändern des Aussehens der App, NUR DUMMY!!! -->
             <Button text="%settings.theme" onAction="#changeTheme"/>
+            <!-- Zurück zum Main Menü -->
             <Button text="%menu.back" onAction="#backToMainMenu"/>
         </VBox>
     </center>

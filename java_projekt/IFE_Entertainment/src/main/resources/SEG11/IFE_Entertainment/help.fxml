@@ -10,6 +10,9 @@
             fx:controller="SEG11.IFE_Entertainment.UIFourConnectController.FourConnectHelpController"
             stylesheets="@style.css">
 
+
+
+		<!-- Selbsterlärende Beschreibung des Spiels und wie gespielt wird -->
     <top>
         <Label text="%help.title" styleClass="title"/>
     </top>

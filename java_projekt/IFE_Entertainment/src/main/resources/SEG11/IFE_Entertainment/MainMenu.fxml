@@ -29,7 +29,7 @@
     <center>
         <GridPane alignment="CENTER" hgap="30" vgap="30">
 
-            <!-- Reihe 1 -->
+            <!-- 1te Reihe -->
             <Button text="4 Gewinnt"
                     prefWidth="150" prefHeight="100"
                     onAction="#startGame"
@@ -44,7 +44,7 @@
                     prefWidth="150" prefHeight="100"
                     GridPane.rowIndex="0" GridPane.columnIndex="3"/>
 
-            <!-- Reihe 2 -->
+            <!-- 2te Reihe -->
             <Button text="Spiel 5"
                     prefWidth="150" prefHeight="100"
                     GridPane.rowIndex="1" GridPane.columnIndex="0"/>
