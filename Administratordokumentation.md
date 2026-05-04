@@ -36,7 +36,7 @@ java -jar IFE_Entertainment.jar
 1. Repository klonen
 2. In das Projektverzeichnis wechseln:
 
-```cd java_projekt/IFE_Entertainmen```
+```cd java_projekt/IFE_Entertainment```
 3. Build ausführen:
 ```mvn clean install```
 4. Die fertige JAR-Datei befindet sich im `target/` Ordner
