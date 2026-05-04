@@ -11,16 +11,12 @@
             stylesheets="@style.css">
     <center>
         <VBox alignment="CENTER" spacing="20">
-            <Label text="Settings" styleClass="title"/>
-            
-            
+            <Label text="%settings.title" styleClass="title"/>
             <ComboBox fx:id="languageBox"
                       onAction="#changeLanguage"
-                      promptText="Language"/>
-
-
-            <Button text="Change Theme" onAction="#changeTheme"/>
-            <Button text="Back" onAction="#backToMainMenu"/>
+                      promptText="%settings.language"/>
+            <Button text="%settings.theme" onAction="#changeTheme"/>
+            <Button text="%menu.back" onAction="#backToMainMenu"/>
         </VBox>
     </center>
 </BorderPane>

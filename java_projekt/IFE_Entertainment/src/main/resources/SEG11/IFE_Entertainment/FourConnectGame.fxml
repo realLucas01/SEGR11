@@ -8,50 +8,35 @@
 <?import javafx.scene.layout.HBox?>
 
 <BorderPane xmlns="http://javafx.com/javafx/21.0.2"
-            xmlns:fx="http://javafx.com/javafx/1"
+            xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="SEG11.IFE_Entertainment.UIFourConnectController.FourConnectGameController"
             stylesheets="@style.css">
 
+	<top>
+		<Label text="%game.title" styleClass="title" BorderPane.alignment="CENTER"/>
+	</top>
 
+	<center>
+		<VBox alignment="CENTER" spacing="20">
 
-			<!-- Titel (wer hätte es gedacht) -->
-    <top>
-        <Label text="Four Connect" styleClass="title" BorderPane.alignment="CENTER"/>
-    </top>
-
-
-
-    <center>
-    
-    		<!-- Turn label also wer ist wann drann -->
-        <VBox alignment="CENTER" spacing="20"> 
-			
 			<HBox fx:id="turnBox" spacing="10" alignment="CENTER" styleClass="turn-box">
-			
-			    <Label text="Dran:" styleClass="turn-title"/>
-			
-			    <Label fx:id="statusLabel" text="Spieler X"
-			           styleClass="turn-value"/>
-			
+				<Label text="%game.turn" styleClass="turn-title"/>
+				<Label fx:id="statusLabel" text="" styleClass="turn-value"/>
 			</HBox>
-					
-					
-			
-			<!-- Spielfeld mit Back to Main Menü Button -->
-            <GridPane fx:id="gridPane" hgap="5" vgap="5" alignment="CENTER"/>
 
-            <Button text="Restart"
+			<GridPane fx:id="gridPane" hgap="5" vgap="5" alignment="CENTER"/>
+
+			<Button text="%menu.restart"
 			        onAction="#restartGame"
 			        styleClass="main-button"/>
-
-			<Button text="Help"
+			<Button text="%menu.help"
 			        onAction="#openHelp"
 			        styleClass="main-button"/>
+			<Button text="%menu.back"
+			        onAction="#backToMainMenu"
+			        styleClass="main-button"/>
 
-            <Button text="Back"
-                    onAction="#backToMainMenu"
-                    styleClass="main-button"/>
+		</VBox>
+	</center>
 
-        </VBox>
-    </center>
 </BorderPane>

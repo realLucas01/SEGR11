@@ -11,21 +11,21 @@
             stylesheets="@style.css">
 
     <top>
-        <Label text="Select Mode" styleClass="title"/>
+        <Label text="%mode.title" styleClass="title"/>
     </top>
 
     <center>
         <VBox alignment="CENTER" spacing="20">
-            <Button text="Two Player-Mode"
+            <Button text="%mode.twoPlayer"
                     prefWidth="200"
                     onAction="#startGame"/>
-            <Button text="VS Easy Bot"
+            <Button text="%mode.easyBot"
                     prefWidth="200"
                     onAction="#startGameEasyBot"/>
-            <Button text="VS Hard Bot"
+            <Button text="%mode.hardBot"
                     prefWidth="200"
                     onAction="#startGameHardBot"/>
-            <Button text="Back"
+            <Button text="%menu.back"
                     prefWidth="150"
                     onAction="#backToMainMenu"/>
         </VBox>

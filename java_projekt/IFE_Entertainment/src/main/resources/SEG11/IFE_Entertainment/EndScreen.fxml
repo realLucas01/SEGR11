@@ -13,8 +13,8 @@
     <center>
         <VBox alignment="CENTER" spacing="20">
             <Label fx:id="resultLabel" styleClass="title"/>
-            <Button text="Play Again" onAction="#restartGame"/>
-            <Button text="Main Menu" onAction="#backToMainMenu"/>
+            <Button text="%menu.newRound" onAction="#restartGame"/>
+            <Button text="%menu.back" onAction="#backToMainMenu"/>
         </VBox>
     </center>
 

@@ -11,20 +11,18 @@
             stylesheets="@style.css">
 
     <top>
-        <Label text="How to Play" styleClass="title"/>
+        <Label text="%help.title" styleClass="title"/>
     </top>
 
     <center>
         <VBox spacing="15" alignment="CENTER">
-            <Label text="Connect 4 rules:" styleClass="text"/>
-            <Label text="Drop pieces into columns. First to connect 4 wins."
-                   wrapText="true"/>
+            <Label text="%help.rules" wrapText="true"/>
         </VBox>
     </center>
 
     <bottom>
         <VBox alignment="CENTER">
-            <Button text="Back" onAction="#backToGameScreen"/>
+            <Button text="%menu.back" onAction="#backToGameScreen"/>
         </VBox>
     </bottom>
 
