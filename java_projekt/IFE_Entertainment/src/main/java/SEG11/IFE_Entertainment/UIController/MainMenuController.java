@@ -19,6 +19,7 @@
 package SEG11.IFE_Entertainment.UIController;
 
 import SEG11.IFE_Entertainment.App;
+import SEG11.IFE_Entertainment.Infrastructure.GameSessionService;
 import javafx.fxml.FXML;
 import java.io.IOException;
 
@@ -64,6 +65,7 @@ public class MainMenuController {
      */
     @FXML
     public void openHelp() throws IOException {
+        GameSessionService.getInstance().setPreviousScreen("MainMenu");
         App.setRoot("Help");
     }
 }

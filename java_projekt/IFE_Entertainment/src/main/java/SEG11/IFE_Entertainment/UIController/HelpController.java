@@ -19,9 +19,11 @@
 package SEG11.IFE_Entertainment.UIController;
 
 import SEG11.IFE_Entertainment.App;
+import SEG11.IFE_Entertainment.FourConnect.Player;
+import SEG11.IFE_Entertainment.Infrastructure.GameSessionService;
+import SEG11.IFE_Entertainment.UIGameController.FourConnectGameController;
 import javafx.fxml.FXML;
 import java.io.IOException;
-
 /**
  * Controller für den Hilfe-Screen.
  *
@@ -36,6 +38,12 @@ public class HelpController {
      */
     @FXML
     public void backToGameScreen() throws IOException {
-        App.setRoot("FourConnectGame");
+        String previous = GameSessionService.getInstance().getPreviousScreen();
+        if (previous.equals("FourConnectGame")) {
+            FourConnectGameController controller = App.setRootAndGetController("FourConnectGame");
+            controller.resumeGame();
+        } else {
+            App.setRoot("MainMenu");
+        }
     }
 }
