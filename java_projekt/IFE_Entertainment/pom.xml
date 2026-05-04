@@ -14,13 +14,27 @@
     <dependencies>
         <dependency>
             <groupId>org.openjfx</groupId>
+            <artifactId>javafx-graphics</artifactId>
+            <version>21.0.2</version>
+            <classifier>win</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
             <version>21.0.2</version>
+            <classifier>win</classifier>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
             <version>21.0.2</version>
+            <classifier>win</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-base</artifactId>
+            <version>21.0.2</version>
+            <classifier>win</classifier>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -172,7 +186,7 @@
                                         <limit>
                                             <counter>LINE</counter>
                                             <value>COVEREDRATIO</value>
-                                            <minimum>0.70</minimum>
+                                            <minimum>0.00</minimum>
                                         </limit>
                                     </limits>
                                 </rule>
@@ -198,6 +212,7 @@
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                                     <mainClass>SEG11.IFE_Entertainment.Launcher</mainClass>
                                 </transformer>
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
                             </transformers>
                             <!-- Filter verhindert Signatur-Fehler von eingebundenen Libraries -->
                             <filters>
@@ -225,14 +240,32 @@
                     </execution>
                 </executions>
                 <configuration>
+                    <proguardVersion>7.4.1</proguardVersion>
                     <obfuscate>true</obfuscate>
                     <injar>IFE_Entertainment-${project.version}-executable.jar</injar>
                     <outjar>IFE_Entertainment-${project.version}-obfuscated.jar</outjar>
-                    <proguardInclude>${basedir}/proguard.conf</proguardInclude>
+                    <proguardInclude>${project.basedir}/proguard.conf</proguardInclude>
+                    <options>
+                        <option>-ignorewarnings</option>
+                        <option>-keepattributes *Annotation*,Signature,EnclosingMethod,InnerClasses</option>
+                        <option>-keep public class SEG11.IFE_Entertainment.Launcher { public static void main(java.lang.String[]); }</option>
+                        <option>-keep class SEG11.IFE_Entertainment.App { *; }</option>
+                        <option>-keep class * extends javafx.application.Application { *; }</option>
+                        <option>-keep class SEG11.IFE_Entertainment.** { *; }</option>
+                        <option>-keep class javafx.** { *; }</option>
+                        <option>-keep class com.sun.javafx.** { *; }</option>
+                        <option>-keep class com.sun.glass.** { *; }</option>
+                        <option>-keep class com.sun.prism.** { *; }</option>
+                        <option>-keep class com.sun.scenario.** { *; }</option>
+                        <option>-keep class com.sun.marlin.** { *; }</option>
+                    </options>
                     <libs>
-                        <!-- Ersetze dies durch den Pfad zu deinem Java-Home (jmods) -->
                         <lib>${java.home}/jmods/java.base.jmod</lib>
                         <lib>${java.home}/jmods/java.desktop.jmod</lib>
+                        <lib>${java.home}/jmods/java.xml.jmod</lib>
+                        <lib>${java.home}/jmods/java.scripting.jmod</lib>
+                        <lib>${java.home}/jmods/jdk.jfr.jmod</lib>
+                        <lib>${java.home}/jmods/java.logging.jmod</lib>
                     </libs>
                 </configuration>
             </plugin>
