@@ -21,6 +21,7 @@ public class App extends Application {
     public void start(Stage stage) throws IOException {
         scene = new Scene(loadFXML("MainMenu"), 1000, 900);
         stage.setScene(scene);
+        stage.setFullScreen(true);
         stage.show();
     }
 
@@ -50,4 +51,5 @@ public class App extends Application {
         scene.setRoot(loader.load());
         return loader.getController();
     }
+
 }

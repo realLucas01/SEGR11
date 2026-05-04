@@ -124,6 +124,7 @@ public class FourConnectGameController implements GameController {
      */
     public void handlePlayMode(Player playerOne, Player playerTwo) {
         game = FourConnectGame.getInstance();
+        game.endGame();
         game.initFourConnectGame(playerOne, playerTwo);
         initBoard();
         updateStatus();
