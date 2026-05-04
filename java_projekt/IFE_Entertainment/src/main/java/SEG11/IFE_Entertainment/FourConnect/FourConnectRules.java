@@ -28,13 +28,14 @@ import SEG11.IFE_Entertainment.GameCore.IRuleSet;
  * 
  * <p>Implementiert dabei {@link IRuleSet} und seine Funktionen
  * 
- * @param <FourConnectGameBoard> Der generische Datentyp {@link TIPlayArea}
+ * @param <FourConnectGameBoard> Der generische Datentyp {@link IRuleSet#IPlayAreaT}
  *                               wurde auf die von uns implementierte Version
  *                               des Interface {@link IPlayArea} konkretisiert
- * @param <FourConnectPlayer>    Der generische Datentyp {@link TPlayer} wurde
+ * @param <FourConnectPlayer>    Der generische Datentyp {@link IRuleSet#PlayerT} wurde
  *                               auf die von unsere implementierung des Spielers
  *                               konkretisiert
  * 
+ * @see IPlayArea
  * @see Player
  * 
  */
@@ -53,8 +54,8 @@ public class FourConnectRules implements IRuleSet<FourConnectGameBoard, FourConn
 	@Override
 	public boolean checkWin(FourConnectGameBoard board, FourConnectPlayer player) {
 
-		// Überprüfen ob 4 Scheiben in horizontaler Aufeinnanderfolge des aktuellen
-		// Spielers
+		// Überprüfen ob 4 Scheiben in horizontaler Aufeinanderfolge des aktuellen
+		// Spielers existieren
 		for (int i = 0; i < board.getColumns() - 3; i++) {
 			for (int j = 0; j < board.getRows(); j++) {
 				if (board.getCellOwner(new Position(i, j)).equals(player)
@@ -66,8 +67,8 @@ public class FourConnectRules implements IRuleSet<FourConnectGameBoard, FourConn
 			}
 		}
 
-		// Überprüfen ob 4 Scheiben in vertikaler Aufeinnanderfolge des aktuellen
-		// Spielers
+		// Überprüfen ob 4 Scheiben in vertikaler Aufeinanderfolge des aktuellen
+		// Spielers existieren
 		for (int i = 0; i < board.getColumns(); i++) {
 			for (int j = 0; j < board.getRows() - 3; j++) {
 				if (board.getCellOwner(new Position(i, j)).equals(player)
@@ -79,8 +80,8 @@ public class FourConnectRules implements IRuleSet<FourConnectGameBoard, FourConn
 			}
 		}
 
-		// Überprüfen ob 4 Scheiben in diagonaler(links oben -> rechts unten)
-		// Aufeinnanderfolge des aktuellen Spielers
+		// Überprüfen ob 4 Scheiben in diagonaler (links oben → rechts unten)
+		// Aufeinanderfolge des aktuellen Spielers existieren
 		for (int i = 0; i < board.getColumns() - 3; i++) {
 			for (int j = 0; j < board.getRows() - 3; j++) {
 				if (board.getCellOwner(new Position(i, j)).equals(player)
@@ -92,8 +93,8 @@ public class FourConnectRules implements IRuleSet<FourConnectGameBoard, FourConn
 			}
 		}
 
-		// Überprüfen ob 4 Scheiben in diagonaler(rechts oben -> links unten)
-		// Aufeinnanderfolge des aktuellen Spielers
+		// Überprüfen ob 4 Scheiben in diagonaler (rechts oben → links unten)
+		// Aufeinanderfolge des aktuellen Spielers existieren
 		for (int i = board.getColumns() - 1; i >= 3; i--) {
 			for (int j = 0; j < board.getRows() - 3; j++) {
 				if (board.getCellOwner(new Position(i, j)).equals(player)
@@ -108,7 +109,7 @@ public class FourConnectRules implements IRuleSet<FourConnectGameBoard, FourConn
 	}
 
 	/**
-	 * Implementierung der Interface Methode checkTie()
+	 * Implementierung der Interfacemethode checkTie()
 	 * 
 	 * <p>Wird genutzt um zu überprüfen ob ein Unentschieden vorliegt
 	 * 

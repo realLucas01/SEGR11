@@ -10,6 +10,7 @@
             fx:controller="SEG11.IFE_Entertainment.UIGameController.FourConnectGameController"
 			stylesheets="@style.css" styleClass="end-screen-root">
 
+
     <center>
         <VBox alignment="CENTER" spacing="20">
 
