@@ -16,11 +16,10 @@
  * SHALL NOT BE LIABLE FOR ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT
  * OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
  */
-package SEG11.IFE_Entertainment.UIGameController;
+package SEG11.IFE_Entertainment.UIFourConnectController;
 
 import java.io.IOException;
 import SEG11.IFE_Entertainment.App;
-import SEG11.IFE_Entertainment.Infrastructure.GameSessionService;
 import SEG11.IFE_Entertainment.UIController.HelpController;
 import javafx.fxml.FXML;
 
@@ -40,8 +39,7 @@ public class FourConnectHelpController implements HelpController {
     @Override
     @FXML
     public void backToGameScreen() throws IOException {
-        String previous = GameSessionService.getInstance().getPreviousScreen();
-        if (previous.equals("FourConnectGame")) {
+        if (FourConnectGameController.previousScreen.equals("FourConnectGame")) {
             FourConnectGameController controller = App.setRootAndGetController("FourConnectGame");
             controller.resumeGame();
         } else {

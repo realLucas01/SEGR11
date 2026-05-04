@@ -19,16 +19,6 @@
 package SEG11.IFE_Entertainment.UIController;
 
 import java.io.IOException;
-<<<<<<< HEAD
-import SEG11.IFE_Entertainment.App;
-import SEG11.IFE_Entertainment.FourConnect.Player;
-import SEG11.IFE_Entertainment.GameCore.GameState;
-import SEG11.IFE_Entertainment.Infrastructure.GameSessionService;
-import SEG11.IFE_Entertainment.UIGameController.FourConnectGameController;
-import javafx.fxml.FXML;
-import javafx.scene.control.Label;
-=======
->>>>>>> 4aee5e8 (fix end screen navigation and refactor controllers to interface pattern)
 
 /**
  * Interface für den EndScreen Controller.
