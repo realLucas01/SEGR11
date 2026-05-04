@@ -63,6 +63,7 @@ public class FourConnectEndScreenController implements EndScreenController {
     public void restartGame() throws IOException {
         Player p1 = FourConnectGame.getInstance().getPlayers()[0].getType();
         Player p2 = FourConnectGame.getInstance().getPlayers()[1].getType();
+        FourConnectGame.getInstance().endGame();
         FourConnectGameController controller = App.setRootAndGetController("FourConnectGame");
         controller.handlePlayMode(p1, p2);
     }

@@ -186,7 +186,10 @@ public class FourConnectGameController implements GameController {
     private void updateStatus() {
         GameState state = game.getStatus();
         switch (state) {
-            case Running -> statusLabel.setText("");
+            case Running -> {
+                int playerIndex = game.getCurrentPlayerIndex();
+                statusLabel.setText("Spieler " + (playerIndex + 1));
+            }
             case Won -> statusLabel.setText("Gewonnen!");
             case Tied -> statusLabel.setText("Unentschieden!");
             default -> statusLabel.setText("");
