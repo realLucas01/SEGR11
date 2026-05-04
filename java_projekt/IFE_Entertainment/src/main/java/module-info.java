@@ -12,4 +12,8 @@ module SEG11.IFE_Entertainment {
     exports SEG11.IFE_Entertainment.UIGameController;
     exports SEG11.IFE_Entertainment.Infrastructure;
     opens SEG11.IFE_Entertainment.Infrastructure to javafx.fxml;
+
+    exports SEG11.IFE_Entertainment.FourConnect;
+
+    exports SEG11.IFE_Entertainment.GameCore;
 }
