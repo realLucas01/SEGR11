@@ -1,0 +1,44 @@
+@startuml
+title 4-Connect – Sequenzdiagramm Spielzug ausführen
+
+skinparam defaultFontName Monospaced
+skinparam ParticipantPadding 80
+skinparam BoxPadding 50
+
+actor "Fluggast" as Fluggast
+boundary "Spielansicht" as View
+control "SpielController" as Controller
+entity "Spielbrett" as Board
+entity "Spielzustand" as State
+
+Fluggast -> View : Spalte auswählen
+View -> Controller : handleColumnSelection(spalte)
+Controller -> Board : istZugGueltig(spalte)
+
+alt Zug gültig
+  Board --> Controller : true
+  Controller -> Board : spielsteinSetzen(spalte, aktuellerSpieler)
+  Controller -> State : pruefeGewinn(Board)
+  
+  alt Gewinn
+    State --> Controller : Gewinner erkannt
+    Controller -> View : zeigeGewinner(aktuellerSpieler)
+  else Kein Gewinn
+    Controller -> State : pruefeUnentschieden(Board)
+
+    alt Unentschieden
+      State --> Controller : Spielfeld voll
+      Controller -> View : zeigeUnentschieden()
+    else Spiel läuft weiter
+      Controller -> State : spielerWechseln()
+      Controller -> View : aktualisiereSpielbrett()
+      Controller -> View : zeigeAktuellenSpieler()
+    end
+  end
+
+else Zug ungültig
+  Board --> Controller : false
+  Controller -> View : zeigeFehlermeldung()
+end
+
+@enduml
