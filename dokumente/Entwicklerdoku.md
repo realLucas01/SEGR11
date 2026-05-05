@@ -148,7 +148,6 @@ Es wird mit folgendem Befehl eingesetzt:
 ```
 mvn clean site install
 ```
-//todo
 
 ## 5. Code Conventions
 
@@ -159,7 +158,8 @@ Im Projekt wird der Google Java Code Style verwendet, siehe: https://google.gith
 
 - Funktions-, Klassen- und Variablennamen sind in Englisch zu schreiben  
 - JavaDoc und Kommentare sind in Deutsch zu verfassen  
-Ausnahme: rechtliche Disclaimer im Kopf von Klassen werden in English verfasst  
+
+**Ausnahme:** rechtliche Disclaimer im Kopf von Klassen werden in English verfasst  
 
 Ziel ist eine konsistente, gut lesbare und wartbare Codebasis.  
 
@@ -180,22 +180,21 @@ mvn test
 ## 7. Buildscript
 
 Das Projekt verwendet ein automatisiertes Buildsystem auf Basis von Maven und befindet sich daher in der pom.xml innerhalb der <build></build> Artefakte.  
-Es hat folgende Funktionen:
+Es hat folgende Funktionen:  
 
-- **Qualitätssicherung:**  
-Automatische Ausführung aller JUnit-Tests bei jedem Build
+- **Kompilierung des Codes** durch das maven-compiler-plugin  
 
-- **Code Coverage:**  
-Messung der Testabdeckung mit JaCoCo  
-Erstellung von Reports zur Analyse der Testqualität  
-Optional konfigurierbare Mindestabdeckung  
+- **Testen:**  
+  - maven-surefire-plugin → führt JUnit-Tests aus  
+  - jacoco-maven-plugin → misst Testabdeckung und erstellt dazugehörigen Report  
 
-- **Fat-JAR Erstellung:**  
-Zusammenführung von Anwendung und Abhängigkeiten in eine ausführbare JAR  
-Notwendig für JavaFX da nicht mehr Teil des SDK  
-
-- **Automatisches Kopieren:**  
-Build-Artefakte (Obfusctaed JAR, JavaDoc und Test-Report) werden automatisch in das Zielverzeichniss /final kopiert.  
+- **Packaging:**  
+  - maven-jar-plugin → Standard-JAR mit Main-Class  
+  - maven-shade-plugin → Fat-JAR, also inkl. aller Dependencies
+    aufgrund dessen das JavaFX kein Teil der SDK mehr ist  
+  - proguard-maven-plugin → obfuscated JAR  
+  
+- **Automatisches Kopieren** der Ausgabedateien(Obfuscataed JAR, JavaDoc und Test-Report)in das Zielverzeichniss /final durch das maven-resources-plugin.
 
 Ausführung in der Konsole:
 ```
@@ -215,6 +214,19 @@ Backend bzw. GameCore
 
 Diese Trennung ermöglicht eine bessere Wartbarkeit und erleichtert die Erweiterung des Systems.
 
-8.2 Vorgehensweise für ein neues Spiel
+### 8.2 Vorgehensweise für ein neues Spiel
 
-//todo
+1. Erstellen von 2 neuen Packages mit folgenden benennungen:  
+    - {Spielname}Controller, für die eigene Implementierung der Controller  
+    - {Spielname}, für die eigene Implementierung des Backend  
+    <sub>*der Inhalt der geschweiften Klammern ist durch den Namen des eigenen Spiel zu ersetzen*</sub>  
+2. Implementieren aller Interfaces aus den Modularen Packages:  
+    - für die Controller sind die Interfaces aus UIController zu implementieren  
+    - für die Klassen des Backend sind die Interfaces aus GameCore zu implementieren  
+    <sub> ***Ausnahme:** Das Interface IMoveStrategy aus GameCore, dieses muss nur Implementiert  
+    werden wenn es einen Automatisierten bzw Bot-Spieler gibt.* </sub>  
+3. Hinzufügen und Implementieren von weiteren Klassen die Spezifisch nur für das eigene Spiel gebraucht werden.
+4. Erstellen der benötigten .fxml für das UI
+5. Erweitern des Hauptmenüs um die Kachel des eigenen Spiels
+
+
