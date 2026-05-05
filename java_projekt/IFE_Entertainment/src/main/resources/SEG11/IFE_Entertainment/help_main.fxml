@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21.0.2"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="SEG11.IFE_Entertainment.UIController.MainHelpController"
+            stylesheets="@style.css">
+
+    <!-- Titel -->
+    <top>
+        <Label text="Hilfe – Hauptmenü" styleClass="title"/>
+    </top>
+
+    <!-- Inhalt -->
+    <center>
+        <VBox spacing="15" alignment="CENTER">
+
+            <Label text="Bedienung der Anwendung"
+                   styleClass="text"/>
+
+            <Label wrapText="true"
+                   text="Dieses System dient zur Auswahl und Nutzung verschiedener Spiele innerhalb des Inflight-Entertainment-Systems.
+
+Im Hauptmenü werden alle verfügbaren Spiele als Kacheln angezeigt.
+
+• Durch Anklicken einer Spiel-Kachel wird das jeweilige Spiel gestartet.
+• Der Button 'Help' öffnet diese Hilfeseite.
+• Über 'Settings' können Einstellungen angepasst werden.
+• Mit 'Exit' wird die Anwendung beendet.
+
+Die Bedienung erfolgt vollständig über Maus oder Touch-Eingaben. Alle Funktionen sind über klar beschriftete Schaltflächen erreichbar.
+
+Je nach Spiel können zusätzliche Menüs oder Optionen erscheinen, z. B. zur Auswahl des Spielmodus."/>
+        </VBox>
+    </center>
+
+    <!-- Zurück -->
+    <bottom>
+        <VBox alignment="CENTER">
+            <Button text="Zurück"
+                    onAction="#backToMainMenu"/>
+        </VBox>
+    </bottom>
+
+</BorderPane>

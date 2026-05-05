@@ -66,6 +66,6 @@ public class MainMenuController {
     @FXML
     public void openHelp() throws IOException {
         FourConnectGameController.previousScreen = "MainMenu";
-        App.setRoot("Help");
+        App.setRoot("help_main");
     }
 }
