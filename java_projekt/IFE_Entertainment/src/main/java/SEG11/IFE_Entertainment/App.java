@@ -45,4 +45,8 @@ public class App extends Application {
         return loader.getController();
     }
 
+    public static void main(String[] args) {
+        launch();
+    }
+
 }
