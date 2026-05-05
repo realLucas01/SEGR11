@@ -1,17 +1,20 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
+    <!-- Projekt-Identifikation -->
     <groupId>SEG11</groupId>
     <artifactId>IFE_Entertainment</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
+        <maven.compiler.source>21</maven.compiler.source> <!-- Java 21 Syntax -->
+        <maven.compiler.target>21</maven.compiler.target> <!-- Kompilieren für Java 21 JRE -->
     </properties>
 
     <dependencies>
+        <!-- JavaFX Kern-Module  -->
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-graphics</artifactId>
@@ -36,6 +39,8 @@
             <version>21.0.2</version>
             <classifier>win</classifier>
         </dependency>
+
+        <!-- Test-Framework -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
@@ -43,9 +48,10 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
     <build>
         <plugins>
-            <!-- Compiler mit Warnungen -->
+            <!-- Compiler: Wandelt .java in .class Dateien um -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -55,12 +61,12 @@
                     <target>21</target>
                     <encoding>UTF-8</encoding>
                     <compilerArgs>
-                        <arg>-Xlint:all</arg>
+                        <arg>-Xlint:all</arg> <!-- Aktiviert alle Compiler-Warnungen für sauberen Code -->
                     </compilerArgs>
                 </configuration>
             </plugin>
 
-            <!-- JavaFX -->
+            <!-- JavaFX Plugin: Ermöglicht "mvn javafx:run" -->
             <plugin>
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
@@ -74,14 +80,15 @@
                     </execution>
                 </executions>
             </plugin>
-            <!-- Surefire: JUnit 5 Tests ausführen -->
+
+            <!-- Surefire: Führt Unit-Tests während des Builds aus -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.2.5</version>
             </plugin>
 
-            <!-- JAR mit Versionsnummer -->
+            <!-- Jar Plugin: Erstellt das Standard-JAR  -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
@@ -102,13 +109,13 @@
                 </configuration>
             </plugin>
 
-            <!-- Dateien kopieren (JavaDoc + Coverage nach docs/) -->
+            <!-- Resources Plugin: Kopiert Artefakte in Zielordner (Javadoc, Berichte, Finales JAR) -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
                 <version>3.3.1</version>
                 <executions>
-                    <!-- JavaDoc nach docs/ -->
+                    <!-- Kopiert Javadoc nach jedem "install" in den finalen Ordner -->
                     <execution>
                         <id>copy-javadoc</id>
                         <phase>install</phase>
@@ -136,7 +143,7 @@
                             </resources>
                         </configuration>
                     </execution>
-                    <!-- JAR in den final-Ordner kopieren -->
+                    <!-- Kopiert das fertig obfuskierte JAR in den finalen Ordner -->
                     <execution>
                         <id>copy-jar</id>
                         <phase>install</phase>
@@ -161,15 +168,13 @@
                 <version>3.12.1</version>
             </plugin>
 
-            <!-- JaCoCo: Test-Coverage messen -->
+            <!-- JaCoCo: Analysiert die Testabdeckung -->
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.8.11</version>
                 <executions>
-                    <execution>
-                        <goals><goal>prepare-agent</goal></goals>
-                    </execution>
+                    <execution><goals><goal>prepare-agent</goal></goals></execution>
                     <execution>
                         <id>report</id>
                         <phase>test</phase>
@@ -195,6 +200,9 @@
                     </execution>
                 </executions>
             </plugin>
+
+            <!-- Shade Plugin: Erstellt ein "Fat-JAR" (enthält Code + alle Libraries) -->
+            <!-- Das ist die Basis für ProGuard -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
@@ -202,9 +210,7 @@
                 <executions>
                     <execution>
                         <phase>package</phase>
-                        <goals>
-                            <goal>shade</goal>
-                        </goals>
+                        <goals><goal>shade</goal></goals>
                         <configuration>
                             <shadedArtifactAttached>true</shadedArtifactAttached>
                             <shadedClassifierName>executable</shadedClassifierName>
@@ -212,6 +218,7 @@
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                                     <mainClass>SEG11.IFE_Entertainment.Launcher</mainClass>
                                 </transformer>
+                                <!-- Wichtig für JavaFX/SPI -->
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
                             </transformers>
                             <!-- Filter verhindert Signatur-Fehler von eingebundenen Libraries -->
@@ -219,7 +226,7 @@
                                 <filter>
                                     <artifact>*:*</artifact>
                                     <excludes>
-                                        <exclude>META-INF/*.SF</exclude>
+                                        <exclude>META-INF/*.SF</exclude> <!-- Entfernt Signaturen, um Security-Fehler im Fat-JAR zu vermeiden -->
                                         <exclude>META-INF/*.DSA</exclude>
                                         <exclude>META-INF/*.RSA</exclude>
                                     </excludes>
@@ -229,6 +236,8 @@
                     </execution>
                 </executions>
             </plugin>
+
+            <!-- ProGuard: Obfuskierung  -->
             <plugin>
                 <groupId>com.github.wvengen</groupId>
                 <artifactId>proguard-maven-plugin</artifactId>
@@ -246,11 +255,13 @@
                     <outjar>IFE_Entertainment-${project.version}-obfuscated.jar</outjar>
                     <proguardInclude>${project.basedir}/proguard.conf</proguardInclude>
                     <options>
-                        <option>-ignorewarnings</option>
+                        <option>-ignorewarnings</option> <!-- Ignoriert unwichtige JavaFX/JDK-Referenzfehler -->
                         <option>-keepattributes *Annotation*,Signature,EnclosingMethod,InnerClasses</option>
+                        <!-- Schützt die Einstiegspunkte vor Umbenennung, sonst startet die App nicht -->
                         <option>-keep public class SEG11.IFE_Entertainment.Launcher { public static void main(java.lang.String[]); }</option>
                         <option>-keep class SEG11.IFE_Entertainment.App { *; }</option>
                         <option>-keep class * extends javafx.application.Application { *; }</option>
+                        <!-- Schützt die eigenen Klassen  -->
                         <option>-keep class SEG11.IFE_Entertainment.** { *; }</option>
                         <option>-keep class javafx.** { *; }</option>
                         <option>-keep class com.sun.javafx.** { *; }</option>
@@ -260,6 +271,7 @@
                         <option>-keep class com.sun.marlin.** { *; }</option>
                     </options>
                     <libs>
+                        <!-- Bindet JDK-Module ein, damit ProGuard die Standard-Klassen kennt -->
                         <lib>${java.home}/jmods/java.base.jmod</lib>
                         <lib>${java.home}/jmods/java.desktop.jmod</lib>
                         <lib>${java.home}/jmods/java.xml.jmod</lib>
@@ -269,11 +281,11 @@
                     </libs>
                 </configuration>
             </plugin>
-
         </plugins>
     </build>
 
     <reporting>
+        <!-- Definiert, welche Berichte mit "mvn site" generiert werden (Dokumentation) -->
         <plugins>
             <!-- Basis-Berichte (Projektinfos) -->
             <plugin>
