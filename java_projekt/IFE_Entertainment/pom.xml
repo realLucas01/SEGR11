@@ -121,7 +121,7 @@
                         <phase>install</phase>
                         <goals><goal>copy-resources</goal></goals>
                         <configuration>
-                            <outputDirectory>${project.basedir}/../../final/javadoc</outputDirectory>
+                            <outputDirectory>${project.basedir}/../../final/JavaDoc</outputDirectory>
                             <resources>
                                 <resource>
                                     <directory>${project.build.directory}/site/apidocs</directory>
@@ -135,7 +135,7 @@
                         <phase>verify</phase>
                         <goals><goal>copy-resources</goal></goals>
                         <configuration>
-                            <outputDirectory>${project.basedir}/../../final/coverage</outputDirectory>
+                            <outputDirectory>${project.basedir}/../../final/Coverage</outputDirectory>
                             <resources>
                                 <resource>
                                     <directory>${project.build.directory}/site/jacoco</directory>
