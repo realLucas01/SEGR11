@@ -15,13 +15,17 @@ class FourConnectGameBoardTest {
 
     private FourConnectGameBoard board;
 
-    /** Hilfsmethode: setzt eine Scheibe direkt auf eine Position */
+    /**
+     * Hilfsmethode: setzt eine Scheibe direkt auf eine Position
+     */
     private void placeAt(int col, int row, Player type) {
         board.setCellValue(new Position(col, row),
                 new FourConnectPlayer(type, null, null));
     }
 
-    /** Hilfsmethode: füllt das gesamte Board mit einem Spieler */
+    /**
+     * Hilfsmethode: füllt das gesamte Board mit einem Spieler
+     */
     private void fillBoard(Player type) {
         for (int col = 0; col < board.getColumns(); col++) {
             for (int row = 0; row < board.getRows(); row++) {
@@ -82,7 +86,6 @@ class FourConnectGameBoardTest {
         }
 
 
-
     }
 
     @Nested
@@ -92,7 +95,7 @@ class FourConnectGameBoardTest {
         void positionOverloadMatchesIntOverload() {
             placeAt(2, 4, Player.HUMAN);
 
-            FourConnectPlayer byInt      = board.getCellOwner(2, 4);
+            FourConnectPlayer byInt = board.getCellOwner(2, 4);
             FourConnectPlayer byPosition = board.getCellOwner(new Position(2, 4));
 
             assertEquals(byInt.getType(), byPosition.getType());
@@ -253,4 +256,5 @@ class FourConnectGameBoardTest {
             assertTrue(copy.isFull());
         }
     }
+}
 
