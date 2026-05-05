@@ -10,14 +10,14 @@ IFE Entertainment ist eine offlinefähige Spieleapplikation zur Erweiterung des 
 
 - Java 21 LTS (21.0.x)
 - JavaFX 21.0.2
+- Maven 3.9.x
 - Keine Netzwerkverbindung erforderlich - vollständiger Offline-Betrieb
 - Keine zusätzliche Peripherie erforderlich - Touch oder Mausbedienung
-
 ---
 
 ## Installation
 
-Das Programm wird als ausführbare JAR-Datei ausgeliefert.
+Das Programm wird als ausführbare Fat-JAR-Datei ausgeliefert. Diese enthält den gesamten Code sowie alle JavaFX-Bibliotheken und ist ohne separate JavaFX-Installation lauffähig.
 
 ### Programmstart
 ```
@@ -31,15 +31,20 @@ java -jar IFE_Entertainment.jar
 - JDK 21 LTS
 - Maven 3.9.x
 
-**Build-Schritte:**
+**Build-Befehl:**
+```mvn clean site install```
+Dieser Befehl führt folgende Schritte automatisch aus:
 
-1. Repository klonen
-2. In das Projektverzeichnis wechseln:
+1. **Qualitätssicherung** - JUnit Tests werden automatisch ausgeführt
+2. **Code Coverage** - JaCoCo misst die Testabdeckung und erstellt Berichte
+3. **Fat-JAR** - Code und alle JavaFX-Bibliotheken werden zu einer ausführbaren JAR zusammengepackt
+4. **Auto Copy** - Die fertige JAR sowie JavaDocs und Coverage-Berichte werden automatisch in die vorgesehenen Ausgabeordner kopiert
 
-```cd java_projekt/IFE_Entertainment```
-3. Build ausführen:
-```mvn clean install```
-4. Die fertige JAR-Datei befindet sich im `target/` Ordner
+**Ausgaben nach dem Build:**
+
+- Die fertige JAR-Datei liegt nicht im `target/` Ordner sondern wird automatisch in einen konfigurierten Ausgabeordner kopiert
+- JavaDocs und Coverage-Berichte werden ebenfalls automatisch kopiert
+- Zum Öffnen der Berichte die jeweilige `index.html` im Ausgabeordner starten
 
 ---
 
@@ -113,10 +118,11 @@ public Locale[] getAvailableLocales() {
 
 ## Tests
 
-Unit Tests werden mit JUnit 5 ausgeführt:
-```mvn test```
-Die Tests liegen unter `src/test/java/SEG11IFE_Entertainment/`.
+Unit Tests werden bei jedem Build automatisch ausgeführt. Manuell können sie mit folgendem Befehl gestartet werden:
+``` mvn test ```
+Die Code Coverage wird per JaCoCo gemessen. Der Coverage-Bericht wird automatisch erstellt und in den konfigurierten Ausgabeordner kopiert. Zum Öffnen die `index.html` im Coverage-Ordner starten.
 
+Die Tests liegen unter `src/test/java/SEG11IFE_Entertainment/`.
 ---
 
 ## Erweiterung um neue Spiele
@@ -135,7 +141,7 @@ Die Architektur ist modular aufgebaut. Um ein neues Spiel hinzuzufügen:
 
 - Die `setTheme()` Methode in `BrandingService` ist noch nicht implementiert
 - Sprachänderungen werden erst beim nächsten Screenwechsel wirksam
-
+- Code Coverage per JaCoCo ist noch nicht aktiv konfiguriert
 ---
 
 ## Fehlerbehebung
@@ -153,3 +159,11 @@ Die Architektur ist modular aufgebaut. Um ein neues Spiel hinzuzufügen:
 - Maven Version prüfen: `mvn -version`
 - JDK 21 installiert?
 - `mvn clean install` erneut ausführen
+
+- ### Coverage-Bericht nicht sichtbar
+- `mvn clean site install` ausführen
+- `index.html` im konfigurierten Coverage-Ausgabeordner öffnen
+
+### JavaDocs nicht sichtbar
+- `mvn clean site install` ausführen
+- `index.html` im konfigurierten JavaDocs-Ausgabeordner öffnen
