@@ -253,4 +253,4 @@ class FourConnectGameBoardTest {
             assertTrue(copy.isFull());
         }
     }
-}
+
