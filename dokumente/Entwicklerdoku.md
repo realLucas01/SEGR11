@@ -50,7 +50,7 @@ Detaillierte Informationen zur Ordnerstruktur sowie zu den konkreten Inhalten de
 
 Die Bewertungen und Begründungen für die Auswahl der 11 wichtigsten Werkzeuge kann in folgendem Dokument gefunden werden:  
 [Entscheidung zur Entwicklungsumgebung und genutzten Tools für die Erstellung der Entertainment-Erweiterung für IFE](/final/Toolvergleich.md)  
-<sub>*(auch zu finden unter: /final/Toolvergleich.md)*</sub>
+<sub>*(auch zu finden unter: `/final/Toolvergleich.md`)*</sub>
 
 ### 2.1 Grundlegende Entwicklungsumgebung
 
@@ -143,16 +143,16 @@ Es dient zur Übersicht der wichtigsten Klassen, ihrer Beziehungen sowie der Sys
 ![Klassendiagramm](/final/Klassendiagramm.svg)  
 
 Das vollständige Klassendiagramm des Systems ist in dieser Datei zu finden: [Klassendiagramm](/final/Klassendiagramm.svg)  
-<sub>*(auch zu finden unter: /final/Klassendiagramm.svg)*</sub>  
+<sub>*(auch zu finden unter: `/final/Klassendiagramm.svg`)*</sub>  
 
 Und die PlantUML Projektdatei für das Klassendiagramm hier : [FourConnect_ClassDiagram](/uml_projekt/FourConnect_ClassDiagram.puml)  
-<sub>*(auch zu finden unter: /uml_projekt/FourConnect_ClassDiagram.puml)*</sub>  
+<sub>*(auch zu finden unter: `/uml_projekt/FourConnect_ClassDiagram.puml`)*</sub>  
 
 ### 3.3 JavaDoc
 
 Die generierte JavaDoc-Dokumentation kann unter folgendem Link eingesehen werden:
 [JavaDoc](/final/JavaDoc/index.html)  
-<sub>*(oder auch: /final/JavaDoc/index.html)*</sub>  
+<sub>*(oder auch: `/final/JavaDoc/index.html`)*</sub>  
 
 Sie enthält detaillierte Beschreibungen aller Klassen, Methoden und Schnittstellen.
 
@@ -164,7 +164,7 @@ java -jar IFE_Entertainment-[Versionsnummer]-obfuscated.jar
 ```
 
 Das Programm ist mit einem automatischen Buildscript ausgestatet, das automatisch alte Builds löscht und die .jar, so wie alle 
-dazugehörigen Dokumente wie z.B.: JavaDoc generiert. Die genauere Funktionsweise dieses Scriptes ist unter Punkt [7 Buildscript](#7-buildscript) erklärt.  
+dazugehörigen Dokumente(JavaDoc und Test-Coverage Report) generiert. Die genauere Funktionsweise dieses Scriptes ist unter Punkt [7 Buildscript](#7-buildscript) erklärt.  
 Es wird mit folgendem Befehl eingesetzt:  
 ```
 mvn clean site install
@@ -173,7 +173,7 @@ mvn clean site install
 ## 5. Code Conventions
 
 Im Projekt wird der Google Java Code Style verwendet, siehe: https://google.github.io/styleguide/javaguide.html  
-<sub>*(oder auch: /final/CodeConvention.pdf)*</sub>  
+<sub>*(oder auch: `/final/CodeConvention.pdf`)*</sub>  
 
 <ins>Zusätzlich gelten folgende Regeln:<ins>
 
@@ -200,8 +200,23 @@ mvn test
 
 ## 7. Buildscript
 
-Das Projekt verwendet ein automatisiertes Buildsystem auf Basis von Maven und befindet sich daher in der pom.xml innerhalb der <build></build> Artefakte.  
-Es hat folgende Funktionen:  
+Das Projekt verwendet ein automatisiertes Buildsystem auf Basis von Maven und befindet sich daher in der pom.xml innerhalb der `<build>` `</build>` Artefakte, die wichtigsten Informationen zur Funktionsweise der einzelnen plugins/executions ist ebenfalls in der pom.xml kommentiert.  
+
+Es wird über folgenden Befehl in der Konsole ausgeführt:
+```
+mvn clean site install
+```
+und generiert dabei hauptsächlich 3 Artefakte:
+
+- die Ausführbare .jar mitsammt allen Dependencies, unter `/final/IFE_Entertainment-[Versionsnummer]-obfuscated.jar`
+- das Javadoc, unter `/final/JavaDoc`
+- Den Bericht für die Testabdeckung von JaCoCo, unter `/final/Coverage`.  
+
+Hinweis: diese Artefakte befinden sich nach ausführen des Buildscript ebenfalls in `\java_projekt\IFE_Entertainment\target`.Zusätzlich sind in diesem Ordner dann auch die `IFE_Entertainment-[Versionsnummer].jar`(ohne JavaFX Bibliotheken) und die `IFE_Entertainment-[Versionsnummer]-executable.jar`(nicht obfuscated) zu finden.
+
+---
+
+Die grobe Funktionsweise des Buidlscripts und seiner Plugins ist wie folgt:  
 
 - **Kompilierung des Codes** durch das maven-compiler-plugin  
 
@@ -215,12 +230,8 @@ Es hat folgende Funktionen:
     aufgrund dessen das JavaFX kein Teil der SDK mehr ist  
   - proguard-maven-plugin → obfuscated JAR  
   
-- **Automatisches Kopieren** der Ausgabedateien(Obfuscataed JAR, JavaDoc und Test-Report)in das Zielverzeichniss /final durch das maven-resources-plugin.
-
-Ausführung in der Konsole:
-```
-mvn clean site install
-```
+- **Automatisches Kopieren** der Ausgabedateien(Obfuscataed JAR, JavaDoc und Test-Report)in das Zielverzeichniss `/final` durch das maven-resources-plugin.  
+   <sub>*(das Javdoc befindet sich unter `/final/JavaDoc` und der Test-Coverage Report unter `/final/Coverage`. Es muss dann jeweils die index.html in einem Browser geöffnet werden)*</sub>  
 
 ## 8. Informationen für weitere Entwicklung
 ### 8.1 Programmtrennung
