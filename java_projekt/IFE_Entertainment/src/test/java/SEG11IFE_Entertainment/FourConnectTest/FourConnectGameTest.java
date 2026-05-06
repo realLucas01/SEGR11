@@ -1,114 +1,106 @@
 package SEG11IFE_Entertainment.FourConnectTest;
 
-import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 
 import SEG11.IFE_Entertainment.FourConnect.FourConnectGame;
 import SEG11.IFE_Entertainment.FourConnect.Player;
 import SEG11.IFE_Entertainment.GameCore.GameState;
-import SEG11.IFE_Entertainment.Infrastructure.BrandingService;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 /**
- * Unit tests for the central game controller FourConnectGame.
- *
- * Tests:
- * - Initialization
- * - Status handling
- * - Player switching
- * - Moves
- * - Restart / EndGame
+ * Unit tests for FourConnectGame.
  */
 class FourConnectGameTest {
 
-  private FourConnectGame game;
+    private FourConnectGame game;
 
-  @BeforeEach
-  void setUp() {
-    game = new FourConnectGame();
-  }
+    @BeforeEach
+    void setUp() {
+        game = new FourConnectGame();
+    }
 
-  /**
-   * Verifies correct game initialization.
-   */
-  @Test
-  void initGameTest() {
-    int result = game.initFourConnectGame(Player.HUMAN, Player.HUMAN);
+    /**
+     * Initialization test
+     */
+    @Test
+    void initGameTest() {
+        int result = game.initFourConnectGame(Player.HUMAN, Player.HUMAN);
 
-    assertEquals(0, result);
-    assertEquals(GameState.Running, game.getStatus());
-    assertNotNull(game.getBoard());
-    assertNotNull(game.getPlayers());
-  }
+        assertEquals(0, result);
+        assertEquals(GameState.Running, game.getStatus());
+        assertNotNull(game.getBoard());
+        assertNotNull(game.getPlayers());
+    }
 
-  /**
-   * Tests status getter and setter.
-   */
-  @Test
-  void statusTest() {
-    game.setStatus(GameState.Won);
-    assertEquals(GameState.Won, game.getStatus());
-  }
+    /**
+     * Status getter/setter
+     */
+    @Test
+    void statusTest() {
+        game.setStatus(GameState.Won);
+        assertEquals(GameState.Won, game.getStatus());
+    }
 
-  /**
-   * Verifies player switching behavior.
-   */
-  @Test
-  void playerTurnTest() {
-    game.initFourConnectGame(Player.HUMAN, Player.HUMAN);
+    /**
+     * Player switching
+     */
+    @Test
+    void playerTurnTest() {
+        game.initFourConnectGame(Player.HUMAN, Player.HUMAN);
 
-    game.playerTurn();
+        game.playerTurn();
 
-    assertDoesNotThrow(() -> game.dropDisc(0));
-  }
+        assertDoesNotThrow(() -> game.dropDisc(0));
+    }
 
-  /**
-   * Verifies that a valid move can be executed.
-   */
-  @Test
-  void dropDiscTest() {
-    game.initFourConnectGame(Player.HUMAN, Player.HUMAN);
+    /**
+     * Valid move execution
+     */
+    @Test
+    void dropDiscTest() {
+        game.initFourConnectGame(Player.HUMAN, Player.HUMAN);
 
-    GameState state = game.dropDisc(0);
+        GameState state = game.dropDisc(0);
 
-    assertNotNull(state);
-  }
+        assertNotNull(state);
+    }
 
-  /**
-   * Verifies restart functionality.
-   */
-  @Test
-  void restartTest() {
-    game.initFourConnectGame(Player.HUMAN, Player.HUMAN);
-    game.dropDisc(0);
+    /**
+     * Restart test
+     */
+    @Test
+    void restartTest() {
+        game.initFourConnectGame(Player.HUMAN, Player.HUMAN);
+        game.dropDisc(0);
 
-    assertDoesNotThrow(() -> game.restart());
-    assertEquals(GameState.Running, game.getStatus());
-  }
+        game.restart();
 
-  /**
-   * Verifies end game reset behavior.
-   */
-  @Test
-  void endGameTest() {
-    game.initFourConnectGame(Player.HUMAN, Player.HUMAN);
+        assertEquals(GameState.Running, game.getStatus());
+    }
 
-    game.endGame();
+    /**
+     * End game test
+     */
+    @Test
+    void endGameTest() {
+        game.initFourConnectGame(Player.HUMAN, Player.HUMAN);
 
-    assertEquals(GameState.NotStarted, game.getStatus());
-  }
+        game.endGame();
 
-  /**
-   * Verifies board accessibility and dimensions.
-   */
-  @Test
-  void boardTest() {
-    game.initFourConnectGame(Player.HUMAN, Player.HUMAN);
+        assertEquals(GameState.NotStarted, game.getStatus());
+    }
 
-    assertNotNull(game.getBoard());
-    assertEquals(6, game.getBoard().getRows());
-    assertEquals(7, game.getBoard().getColumns());
-  }
+    /**
+     * Board dimensions test
+     */
+    @Test
+    void boardTest() {
+        game.initFourConnectGame(Player.HUMAN, Player.HUMAN);
+
+        assertNotNull(game.getBoard());
+        assertEquals(6, game.getBoard().getRows());
+        assertEquals(7, game.getBoard().getColumns());
+    }
 }
