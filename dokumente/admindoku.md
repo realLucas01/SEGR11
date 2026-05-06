@@ -53,7 +53,7 @@ Das Programm wird als ausführbare Fat-JAR-Datei ausgeliefert. Diese enthält de
 
 ### Programmstart
 ```
-IFE_Entertainment-[Versionsnummer]-obfuscated.ja
+java -jar IFE_Entertainment-[Versionsnummer]-obfuscated.jar
 ```
 ---
 
@@ -94,7 +94,7 @@ java_projekt/IFE_Entertainment/
 │   │       ├── i18n/                    - Sprachdateien
 │   │       └── SEG11/IFE_Entertainment/ - FXML-Dateien und CSS
 │   └── test/                            - Unit Tests
-└── pom.xml
+├──  pom.xml
 └──proguard.config
 ```
 ---
@@ -114,7 +114,7 @@ Folgende Eigenschaften können pro Theme definiert werden:
 | Logo-Pfad | `/SEG11/IFE_Entertainment/images/logo-gervithrall-systems.png` |
 | Airline-Name | `Gervithrall Systems` |
 
-Die Themes werden innerhalb der Methode setTheme(String themeId) definiert:
+Die Themes werden innerhalb der Methode `setTheme(String themeId)` in `BrandingService.java` (Zeile 122) definiert.
 
 ```
 switch (themeId) {
