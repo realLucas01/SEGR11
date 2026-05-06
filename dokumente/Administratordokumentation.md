@@ -47,12 +47,29 @@ Dieser Befehl führt folgende Schritte automatisch aus:
 - Zum Öffnen der Berichte die jeweilige `index.html` im Ausgabeordner starten
 
 ---
-
+## Projektstruktur
+```
+java_projekt/IFE_Entertainment/
+├── src/
+│   ├── main/
+│   │   ├── java/SEG11/IFE_Entertainment/
+│   │   │   ├── FourConnect/             - Spiellogik für Vier Gewinnt
+│   │   │   ├── GameCore/                - Allgemeine Spiel-Interfaces
+│   │   │   ├── Infrastructure/          - BrandingService, LocalizationService
+│   │   │   ├── UIController/            - Allgemeine UI Controller und Interfaces
+│   │   │   └── UIFourConnectController/ - Controller spezifisch für Vier Gewinnt
+│   │   └── resources/
+│   │       ├── i18n/                    - Sprachdateien
+│   │       └── SEG11/IFE_Entertainment/ - FXML-Dateien und CSS
+│   └── test/                            - Unit Tests
+└── pom.xml
+```
+---
 ## Konfiguration
 
 ### Branding (CI-Anpassung)
 
-Das Airline-Branding wird über die Klasse `BrandingService` verwaltet. Folgende Eigenschaften können angepasst werden:
+Das Airline-Branding wird über die Klasse `BrandingService.java` verwaltet. Folgende Eigenschaften können angepasst werden:
 
 | Eigenschaft | Standardwert |
 |---|---|
@@ -61,21 +78,47 @@ Das Airline-Branding wird über die Klasse `BrandingService` verwaltet. Folgende
 | Logo-Pfad | `/SEG11/IFE_Entertainment/images/logo_default.png` |
 | Airline-Name | `Default Airline` |
 
-Für Branding-Anpassungen bitte das Entwicklungsteam kontaktieren.
+Die Werte werden im Konstruktor von `BrandingService.java` (Zeile 40-44) angepasst:
+
+```java
+private BrandingService() {
+    this.primaryColor   = "#1a1a2e";              // Primärfarbe anpassen
+    this.secondaryColor = "#e94560";              // Sekundärfarbe anpassen
+    this.logoPath       = "/pfad/zum/logo.png";   // Logo-Pfad anpassen
+    this.airlineName    = "Airline Name";         // Airline-Name anpassen
 }
-
-
+```
 
 ### Sprachkonfiguration
 
 Das Programm unterstützt standardmäßig Deutsch und Englisch. Die Sprache kann in den Einstellungen der Anwendung geändert werden.
 
-Für das Hinzufügen einer neuen Sprache bitte das Entwicklungsteam kontaktieren.
+Die Sprachdateien liegen unter:
 
-4. Neu bauen: `mvn clean install`
+```
+src/main/resources/i18n/
+├── messages_de.properties   - Deutsche Texte
+└── messages_en.properties   - Englische Texte
+```
 
+#### Neue Sprache hinzufügen
 
+1. Neue Properties-Datei erstellen: `messages_XX.properties` (XX = Sprachcode, z.B. `fr` für Französisch)
+2. Alle Schlüssel aus einer bestehenden Datei übernehmen und übersetzen
+3. In `LocalizationService.java` (Zeile 80) die neue Sprache in `getAvailableLocales()` eintragen:
+
+```
+java
+public Locale[] getAvailableLocales() {
+    return new Locale[]{Locale.ENGLISH, Locale.GERMAN, Locale.FRENCH};
+}
+```
+
+4. Neu bauen: `mvn clean site install`
 ---
+## Tests und Qualitätssicherung
+
+Unit Tests und Code Coverage werden bei jedem Build automatisch ausgeführt. Der Coverage-Bericht wird automatisch in den `final/` Ordner kopiert - zum Öffnen die `index.html` dort starten.
 
 ## Bekannte Einschränkungen
 
@@ -87,12 +130,12 @@ Für das Hinzufügen einer neuen Sprache bitte das Entwicklungsteam kontaktieren
 
 ### Programm startet nicht
 - Java-Version prüfen: `java -version` (muss 21 sein)
-- JAR-Datei vorhanden?
+- JAR-Datei im `final/` Ordner vorhanden?
+- Versionsnummer im Dateinamen korrekt?
 
 ### Sprache wird nicht geladen
-- Properties-Datei vorhanden und korrekt benannt?
-- Dateiformat UTF-8?
-- Sprachcode in `getAvailableLocales()` eingetragen?
+- Einstellungen in der Anwendung prüfen
+- Bei anhaltenden Problemen das Entwicklungsteam kontaktieren
 
 ### Build schlägt fehl
 - Maven Version prüfen: `mvn -version`
