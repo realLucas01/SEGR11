@@ -9,7 +9,6 @@ skinparam padding 5
 start
 
 :Spielzustand initialisieren;
-:Startspieler festlegen;
 :Spielbrett anzeigen;
 
 repeat
@@ -34,7 +33,6 @@ repeat
     endif
 
   else (nein)
-    :Fehlermeldung anzeigen;
   endif
 
 repeat while (Spiel nicht beendet?) is (ja)
