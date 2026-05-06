@@ -2,44 +2,65 @@
 
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 
 <BorderPane xmlns="http://javafx.com/javafx/21.0.2"
-            xmlns:fx="http://javafx.com/javafx/1"
-            fx:controller="SEG11.IFE_Entertainment.UIController.ModeMenuController"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="SEG11.IFE_Entertainment.UIFourConnectController.FourConnectModeMenuController"
             stylesheets="@style.css" styleClass="mode-menu-root">
 
     <top>
-        <Label text="Select Mode" styleClass="title"/>
+        <Label text="%mode.title" styleClass="screen-title" BorderPane.alignment="CENTER"/>
     </top>
 
-    <center>
-        <VBox alignment="CENTER" spacing="20">
 
-			 <!-- Java handled, in Java dann z.B. startGame("PVP"); -->
-            <Button text="Two Player-Mode"
-                    prefWidth="200"
+    <center>
+        <GridPane alignment="CENTER" hgap="30" vgap="30">
+        
+            <Button text="%mode.twoPlayer"
+                    prefWidth="200" prefHeight="100"
                     onAction="#startGame"
+                    GridPane.rowIndex="0" GridPane.columnIndex="0"
                     styleClass="button-primary"/>
                     
-            <Button text="VS Easy Bot"
-            			prefWidth="200"
-			        onAction="#startGameEasyBot"
-			        styleClass="button-primary"/>
-			
-			<Button text="VS Hard Bot"
-					prefWidth="200"
-			        onAction="#startGameHardBot"
-			        styleClass="button-primary"/>
+            <Button text="%mode.easyBot"
+                    prefWidth="200" prefHeight="100"
+                    onAction="#startGameEasyBot"
+                    GridPane.rowIndex="0" GridPane.columnIndex="1"
+                    styleClass="button-primary"/>
+                    
+            <Button text="%mode.hardBot"
+                    prefWidth="200" prefHeight="100"
+                    onAction="#startGameHardBot"
+                    GridPane.rowIndex="0" GridPane.columnIndex="2"
+                    styleClass="button-primary"/>
+                    
+        </GridPane>
+     </center>
 
-            <Button text="Back"
-                    prefWidth="150"
+
+    <bottom>
+    	<GridPane alignment="CENTER" hgap="30" vgap="30">
+    	
+            <Label prefWidth="150" prefHeight="50"
+                    GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                    
+            <Label prefWidth="150" prefHeight="50"
+                    GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+                    
+            <Label prefWidth="150" prefHeight="50"
+                    GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+                    
+			<Button text="%menu.back"
+            		prefWidth="150" prefHeight="50"
                     onAction="#backToMainMenu"
-        			styleClass="button-secondary"/>
-
-        </VBox>
-    </center>
+                    GridPane.rowIndex="0" GridPane.columnIndex="3"
+                    styleClass="button-secondary"/>          
+                                        
+        </GridPane>
+    </bottom>
 
 </BorderPane>
 

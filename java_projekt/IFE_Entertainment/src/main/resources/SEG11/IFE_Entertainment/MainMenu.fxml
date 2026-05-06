@@ -9,48 +9,79 @@
 <BorderPane xmlns="http://javafx.com/javafx/21.0.2"
             xmlns:fx="http://javafx.com/javafx/1"
             fx:controller="SEG11.IFE_Entertainment.UIController.MainMenuController"
-            stylesheets="@style.css" styleClass="main-menu-root">
+            stylesheets="@style.css" styleClass="main-menu-root"
+            maxWidth="Infinity"
+            maxHeight="Infinity">
 
     <top>
-        <VBox alignment="CENTER" spacing="10">
-            <Label text="Main Menu Four Connect Game" styleClass="title"/>
-        </VBox>
+        <HBox alignment="CENTER" spacing="20" styleClass="top-bar">
+            <Label text="Gamemenu" HBox.hgrow="ALWAYS" alignment="CENTER" styleClass="screen-title"/>
+        </HBox>
     </top>
 
     <center>
         <VBox spacing="15" alignment="CENTER">
 
-            <!-- Spiel starten -->
-            <Button text="Start Game"
-                    prefWidth="200"
+            <!-- 1te Reihe -->
+            <Button text="4 Gewinnt"
+                    prefWidth="150" prefHeight="150"
                     onAction="#startGame"
-        			styleClass="button-primary"/>
+                    GridPane.rowIndex="0" GridPane.columnIndex="0"
+                    styleClass="game-tile"/>
+            <Button text="Spiel 2"
+                    prefWidth="150" prefHeight="150"
+                    GridPane.rowIndex="0" GridPane.columnIndex="1"
+                    styleClass="game-tile"/>
+            <Button text="Spiel 3"
+                    prefWidth="150" prefHeight="150"
+                    GridPane.rowIndex="0" GridPane.columnIndex="2"
+                    styleClass="game-tile"/>
+            <Button text="Spiel 4"
+                    prefWidth="150" prefHeight="150"
+                    GridPane.rowIndex="0" GridPane.columnIndex="3"
+                    styleClass="game-tile"/>
 
-            <!-- Hilfe -->
-            <Button text="Help"
-                    prefWidth="200"
-                    onAction="#openHelp"
-                    styleClass="button-secondary"/>
-               
-            <!-- Settings -->
-            <Button text="Settings"
-                    prefWidth="200"
-                    onAction="#openSettings"
-                    styleClass="button-secondary"/>
-            
-
+            <!-- 2te Reihe -->
+            <Button text="Spiel 5"
+                    prefWidth="150" prefHeight="150"
+                    GridPane.rowIndex="1" GridPane.columnIndex="0"
+                    styleClass="game-tile"/>
+            <Button text="Spiel 6"
+                    prefWidth="150" prefHeight="150"
+                    GridPane.rowIndex="1" GridPane.columnIndex="1"
+                    styleClass="game-tile"/>
+            <Button text="Spiel 7"
+                    prefWidth="150" prefHeight="150"
+                    GridPane.rowIndex="1" GridPane.columnIndex="2"
+                    styleClass="game-tile"/>
+            <Button text="Spiel 8"
+                    prefWidth="150" prefHeight="150"
+                    GridPane.rowIndex="1" GridPane.columnIndex="3"
+                    styleClass="game-tile"/>
         </VBox>
     </center>
 
     <bottom>
-        <VBox alignment="CENTER">
-			<!--Back Button -->
-            <Button text="Exit"
-                    prefWidth="120"
-                    onAction="#exit"
-                    styleClass="button-danger"/>
 
-        </VBox>
+    	<GridPane alignment="CENTER" hgap="30" vgap="30">
+            <Button text="%menu.help"
+            		prefWidth="150" prefHeight="50"
+                    onAction="#openHelp"
+                    GridPane.rowIndex="0" GridPane.columnIndex="0"
+                    styleClass="button-secondary"/>
+            <Button text="%menu.exit"
+            		prefWidth="150" prefHeight="50"
+                    onAction="#exit"
+                    GridPane.rowIndex="0" GridPane.columnIndex="1"
+                    styleClass="button-secondary"/>
+            <Label prefWidth="150" prefHeight="50"
+                    GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+            <Button text="%menu.settings"
+            		prefWidth="150" prefHeight="50"
+                    onAction="#openSettings"
+                    GridPane.rowIndex="0" GridPane.columnIndex="3"
+                    styleClass="button-secondary"/>
+        </GridPane>
     </bottom>
 
 </BorderPane>

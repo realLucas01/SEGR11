@@ -1,5 +1,7 @@
 package SEG11.IFE_Entertainment;
 
+import SEG11.IFE_Entertainment.Infrastructure.LocalizationService;
+import SEG11.IFE_Entertainment.Infrastructure.BrandingService;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -17,15 +19,26 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("MainMenu"), 800, 700);
+        scene = new Scene(loadFXML("MainMenu"), 1000, 900);
+        applyBranding();
         stage.setScene(scene);
         stage.show();
     }
 
     public static void setRoot(String fxml) throws IOException {
         scene.setRoot(loadFXML(fxml));
+        applyBranding();
     }
 
+    public static void applyBranding() {
+        BrandingService branding = BrandingService.getInstance();
+
+        scene.getRoot().setStyle(
+            "-theme-primary: " + branding.getPrimaryColor() + ";" +
+            "-theme-secondary: " + branding.getSecondaryColor() + ";"
+        );
+    }    
+    
     private static Parent loadFXML(String fxml) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
         return fxmlLoader.load();

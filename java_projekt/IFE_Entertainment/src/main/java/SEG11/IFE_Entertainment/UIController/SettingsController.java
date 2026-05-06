@@ -35,6 +35,9 @@ public class SettingsController {
     /** Auswahlfeld für die Sprache. */
     @FXML
     private ComboBox<String> languageBox;
+    
+    @FXML
+    private ComboBox<String> themeBox;
 
     private final LocalizationService localizationService = LocalizationService.getInstance();
     private final BrandingService brandingService = BrandingService.getInstance();
@@ -43,7 +46,22 @@ public class SettingsController {
      * Ändert die Anzeigesprache anhand der Auswahl in der ComboBox.
      */
     @FXML
-    public void changeLanguage() {
+    public void initialize() {
+        languageBox.getItems().addAll("de", "en");
+        languageBox.setValue(localizationService.getCurrentLocale().getLanguage());
+        
+        themeBox.getItems().addAll("gervithrall", "lufthansa", "emirates", "ryanair");
+        themeBox.setValue("gervithrall");
+    }
+
+    /**
+     * Ändert die Anzeigesprache anhand der Auswahl in der ComboBox
+     * und lädt den Settings-Screen neu.
+     *
+     * @throws IOException falls die FXML-Datei nicht geladen werden kann
+     */
+    @FXML
+    public void changeLanguage() throws IOException {
         String languageCode = languageBox.getValue();
         if (languageCode != null) {
             localizationService.setLanguage(languageCode);
@@ -56,7 +74,11 @@ public class SettingsController {
      */
     @FXML
     public void changeTheme() {
-        // TODO: Themawahl implementieren (KANN-Kriterium)
+        String selectedTheme = themeBox.getValue();
+        if (selectedTheme != null) {
+            brandingService.setTheme(selectedTheme);
+            App.applyBranding();
+        }
     }
 
     /**

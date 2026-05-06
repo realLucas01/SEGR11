@@ -38,8 +38,8 @@ public class BrandingService {
      * Privater Konstruktor mit Standardwerten für das Default-Branding.
      */
     private BrandingService() {
-        this.primaryColor   = "#1a1a2e";
-        this.secondaryColor = "#e94560";
+        this.primaryColor   = "#004761";
+        this.secondaryColor = "#555756";
         this.logoPath       = "/SEG11/IFE_Entertainment/images/logo_default.png";
         this.airlineName    = "Default Airline";
     }
@@ -134,6 +134,49 @@ public class BrandingService {
      * @param themeId die ID des gewünschten Themes
      */
     public void setTheme(String themeId) {
-        // TODO: Theme anhand von themeId setzen
+    	switch (themeId) {
+
+    	case "gervithrall":
+    	    this.primaryColor = "#004761";
+    	    this.secondaryColor = "#555756";
+    	    this.airlineName = "Gervithrall Systems";
+    	    this.logoPath = "/SEG11/IFE_Entertainment/images/logo_gervithrall-systems.png";
+    	    break;
+    	
+    	case "lufthansa":
+            this.primaryColor = "#05164D";
+            this.secondaryColor = "#FFCC00";
+            this.airlineName = "Lufthansa";
+            this.logoPath = "/SEG11/IFE_Entertainment/images/logo_lufthansa.png";
+            break;
+
+        case "emirates":
+            this.primaryColor = "#D71920";
+            this.secondaryColor = "#333333";
+            this.airlineName = "Emirates";
+            this.logoPath = "/SEG11/IFE_Entertainment/images/logo_emirates.png";
+            break;
+
+        case "ryanair":
+            this.primaryColor = "#073590";
+            this.secondaryColor = "#F1C933";
+            this.airlineName = "Ryanair";
+            this.logoPath = "/SEG11/IFE_Entertainment/images/logo_ryanair.png";
+            break;
+
+        case "singapore":
+            this.primaryColor = "#0F2E6D";
+            this.secondaryColor = "#F9B000";
+            this.airlineName = "Singapore Airlines";
+            this.logoPath = "/SEG11/IFE_Entertainment/images/logo_singapore.png";
+            break;
+
+        default:
+            this.primaryColor = "#004761";
+            this.secondaryColor = "#555756";
+            this.airlineName = "Gervithrall Systems";
+            this.logoPath = "/SEG11/IFE_Entertainment/images/logo_gervithrall-systems.png";
+            break;
+    	}
     }
 }

@@ -1,15 +1,40 @@
 /* =========================
-   Basis / Branding
+   Fonts
    ========================= */
 
-.root {
-    -fx-font-family: "Arial";
-    -fx-background-color: #e1ffff;
+@font-face {
+    font-family: "Montserrat";
+    src: url("fonts/Montserrat-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat SemiBold";
+    src: url("fonts/Montserrat-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat Bold";
+    src: url("fonts/Montserrat-Bold.ttf");
 }
 
 /* =========================
-   Layouts
+   
    ========================= */
+
+
+
+
+
+
+.root {
+    -fx-font-family: "Montserrat";
+
+    -theme-primary: #004761;
+    -theme-secondary: #555756;
+    -theme-background: #EAF5F9;
+    -theme-text: #333333;
+    -theme-button: #A5A5A5;
+}
 
 .main-menu-root,
 .mode-menu-root,
@@ -17,111 +42,98 @@
 .help-root,
 .game-root,
 .end-screen-root {
-    -fx-background-color: #e1ffff;
-    -fx-padding: 32;
+    -fx-background-color: -theme-background;
+    -fx-padding: 70 306;
 }
 
-/* =========================
-   Help Screen
-   ========================= */
-
-.help-container {
-    -fx-padding: 24;
-    -fx-spacing: 10;
-}
-
-/* =========================
-   Text
-   ========================= */
-
-.title {
-    -fx-font-size: 28px;
-    -fx-font-weight: bold;
-    -fx-text-fill: #004761;
+.screen-title {
+    -fx-font-family: "Montserrat Bold";
+    -fx-font-size: 48px;
+    -fx-text-fill: -theme-primary;
 }
 
 .section-title {
-    -fx-font-size: 18px;
-    -fx-font-weight: bold;
-    -fx-text-fill: #004761;
-    -fx-padding: 16 0 0 0;
+    -fx-font-size: 32px;
+    -fx-font-family: "Montserrat SemiBold";
+    -fx-text-fill: -theme-primary;
 }
 
 .text {
     -fx-font-size: 16px;
-    -fx-text-fill: #555756;
+    -fx-text-fill: -theme-text;
 }
-
-.status-label {
+.turn-title {
     -fx-font-size: 16px;
-    -fx-text-fill: white;
-    -fx-padding: 16;
+    -fx-font-family: "Montserrat Bold";
+    -fx-text-fill: -theme-text;
 }
 
-/* =========================
-   Buttons
-   ========================= */
-
-.button-primary {
-    -fx-background-color: #004761;
-    -fx-text-fill: white;
-    -fx-font-size: 16px;
-    -fx-font-weight: bold;
-    -fx-background-radius: 6;
-    -fx-padding: 10 24;
-    -fx-cursor: hand;
-}
-
-.button-primary:hover {
-    -fx-background-color: #70c2e0;
-}
-
-.button-secondary {
-    -fx-background-color: transparent;
-    -fx-border-color: #004761;
-    -fx-border-width: 2;
-    -fx-border-radius: 6;
-    -fx-background-radius: 6;
-    -fx-text-fill: #555756;
-    -fx-font-size: 15px;
-    -fx-padding: 8 20;
-    -fx-cursor: hand;
-}
-
-.button-secondary:hover {
-    -fx-background-color: rgba(255, 255, 255, 0.35);
-}
-
+.button-secondary,
 .button-danger {
-    -fx-background-color: #7f1d1d;
+    -fx-background-color: -theme-button;
     -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-family: "Montserrat SemiBold";
     -fx-background-radius: 6;
-    -fx-padding: 8 20;
+    -fx-padding: 10 20;
     -fx-cursor: hand;
 }
 
-.button-danger:hover {
-    -fx-background-color: #991b1b;
+.button-primary,
+.game-tile {
+    -fx-background-color: white;
+    -fx-border-color: -theme-primary;
+    -fx-border-width: 2;
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+    -fx-font-size: 32px;
+    -fx-font-family: "Montserrat Bold";
+    -fx-text-fill: -theme-primary;
 }
 
-.game-button-bar {
-    -fx-padding: 20 0 0 0;
-}
+
+
+
+
+
 
 /* =========================
-   Formular-Elemente
+   Combo Box
    ========================= */
 
 .combo-box {
-    -fx-pref-width: 200;
+    -fx-background-color: white;
+    -fx-border-color: -theme-primary;
+    -fx-border-width: 2;
+    -fx-border-radius: 6;
     -fx-background-radius: 6;
+    -fx-font-size: 16px;
+    -fx-pref-width: 220;
+    -fx-pref-height: 42;
 }
 
-/* =========================
-   Spielfeld
-   ========================= */
-
-.grid-pane {
-    -fx-hgap: 6;
-    -fx-vgap: 6;
+.combo-box .list-cell {
+    -fx-text-fill: -theme-primary;
+    -fx-font-size: 16px;
+    -fx-padding: 8 12;
 }
+
+.combo-box .arrow {
+    -fx-background-color: -theme-primary;
+}
+
+.combo-box .arrow-button {
+    -fx-background-color: transparent;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: white;
+    -fx-border-color: -theme-primary;
+}
+
+.combo-box-popup .list-cell:filled:selected {
+    -fx-background-color: -theme-primary;
+    -fx-text-fill: white;
+}
+
+
