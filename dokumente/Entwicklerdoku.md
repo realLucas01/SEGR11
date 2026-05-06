@@ -1,6 +1,6 @@
 ## Entwicklerdokumentation der Entertainment-Erweiterung für IFE  
 
-**Stand:** 05.05, durch Gervithrall Systems  
+**Stand:** 05.05.2026, durch Gervithrall Systems  
 
 **Auftraggeber:** Novaris Cabin Systems GmbH  
 Friedrich-List-Platz 1   
@@ -48,7 +48,7 @@ Detaillierte Informationen zur Ordnerstruktur sowie zu den konkreten Inhalten de
 
 ## 2. Versionen und Tools / Plugins
 
-Die Bewertungen und Begründungen für die Auswahl der 11 wichtigsten Werkzeuge kann in folgendem Dokument gefunden werden:  
+Die Bewertungen und Begründungen für die Auswahl der 11 wichtigsten Werkzeuge können in folgendem Dokument gefunden werden:  
 [Entscheidung zur Entwicklungsumgebung und genutzten Tools für die Erstellung der Entertainment-Erweiterung für IFE](/final/Toolvergleich.md)  
 <sub>*(auch zu finden unter: `/final/Toolvergleich.md`)*</sub>
 
@@ -145,7 +145,7 @@ Es dient zur Übersicht der wichtigsten Klassen, ihrer Beziehungen sowie der Sys
 Das vollständige Klassendiagramm des Systems ist in dieser Datei zu finden: [Klassendiagramm](/final/Klassendiagramm.svg)  
 <sub>*(auch zu finden unter: `/final/Klassendiagramm.svg`)*</sub>  
 
-Und die PlantUML Projektdatei für das Klassendiagramm hier : [FourConnect_ClassDiagram](/uml_projekt/FourConnect_ClassDiagram.puml)  
+Und die PlantUML-Projektdatei für das Klassendiagramm hier: [FourConnect_ClassDiagram](/uml_projekt/FourConnect_ClassDiagram.puml)  
 <sub>*(auch zu finden unter: `/uml_projekt/FourConnect_ClassDiagram.puml`)*</sub>  
 
 ### 3.3 JavaDoc
@@ -163,8 +163,8 @@ Start des Programms aus der Konsole:
 java -jar IFE_Entertainment-[Versionsnummer]-obfuscated.jar
 ```
 
-Das Programm ist mit einem automatischen Buildscript ausgestatet, das automatisch alte Builds löscht und die .jar, so wie alle 
-dazugehörigen Dokumente(JavaDoc und Test-Coverage Report) generiert. Die genauere Funktionsweise dieses Scriptes ist unter Punkt [7 Buildscript](#7-buildscript) erklärt.  
+Das Programm ist mit einem automatischen Buildscript ausgestattet, das automatisch alte Builds löscht und die .jar, so wie alle 
+dazugehörigen Dokumente (JavaDoc und Test-Coverage Report) generiert. Die genauere Funktionsweise dieses Scriptes ist unter Punkt [7 Buildscript](#7-buildscript) erklärt.  
 Es wird mit folgendem Befehl eingesetzt:  
 ```
 mvn clean site install
@@ -173,14 +173,14 @@ mvn clean site install
 ## 5. Code Conventions
 
 Im Projekt wird der Google Java Code Style verwendet, siehe: https://google.github.io/styleguide/javaguide.html  
-<sub>*(oder auch: `/final/CodeConvention.pdf`)*</sub>  
+<sub>* (oder auch: `/final/CodeConvention.pdf`) *</sub>  
 
 <ins>Zusätzlich gelten folgende Regeln:<ins>
 
 - Funktions-, Klassen- und Variablennamen sind in Englisch zu schreiben  
 - JavaDoc und Kommentare sind in Deutsch zu verfassen  
 
-**Ausnahme:** rechtliche Disclaimer im Kopf von Klassen werden in English verfasst  
+**Ausnahme:** rechtliche Disclaimer im Kopf von Klassen werden in Englisch verfasst  
 
 Ziel ist eine konsistente, gut lesbare und wartbare Codebasis.  
 
@@ -200,7 +200,7 @@ mvn test
 
 ## 7. Buildscript
 
-Das Projekt verwendet ein automatisiertes Buildsystem auf Basis von Maven und befindet sich daher in der pom.xml innerhalb der `<build>` `</build>` Artefakte, die wichtigsten Informationen zur Funktionsweise der einzelnen plugins/executions ist ebenfalls in der pom.xml kommentiert.  
+Das Projekt verwendet ein automatisiertes Buildsystem auf Basis von Maven und befindet sich daher in der pom.xml innerhalb der `<build>` `</build>` Artefakte. Die wichtigsten Informationen zur Funktionsweise der einzelnen Plugins/Executions sind ebenfalls in der pom.xml kommentiert.  
 
 Es wird über folgenden Befehl in der Konsole ausgeführt:
 ```
@@ -208,15 +208,15 @@ mvn clean site install
 ```
 und generiert dabei hauptsächlich 3 Artefakte:
 
-- die Ausführbare .jar mitsammt allen Dependencies, unter `/final/IFE_Entertainment-[Versionsnummer]-obfuscated.jar`
+- die Ausführbare .jar mitsamt allen Dependencies, unter `/final/IFE_Entertainment-[Versionsnummer]-obfuscated.jar`
 - das Javadoc, unter `/final/JavaDoc`
-- Den Bericht für die Testabdeckung von JaCoCo, unter `/final/Coverage`.  
+- Den Bericht für die Testabdeckung von JaCoCo, unter `/final/Coverage`  
 
-Hinweis: diese Artefakte befinden sich nach ausführen des Buildscript ebenfalls in `\java_projekt\IFE_Entertainment\target`.Zusätzlich sind in diesem Ordner dann auch die `IFE_Entertainment-[Versionsnummer].jar`(ohne JavaFX Bibliotheken) und die `IFE_Entertainment-[Versionsnummer]-executable.jar`(nicht obfuscated) zu finden.
+Hinweis: Diese Artefakte befinden sich nach Ausführen des Buildscripts ebenfalls in `\java_projekt\IFE_Entertainment\target`.Zusätzlich sind in diesem Ordner dann auch die `IFE_Entertainment-[Versionsnummer].jar`(ohne JavaFX Bibliotheken) und die `IFE_Entertainment-[Versionsnummer]-executable.jar`(nicht obfuscated) zu finden.
 
 ---
 
-Die grobe Funktionsweise des Buidlscripts und seiner Plugins ist wie folgt:  
+Die grobe Funktionsweise des Buildscripts und seiner Plugins ist wie folgt:  
 
 - **Kompilierung des Codes** durch das maven-compiler-plugin  
 
@@ -230,8 +230,8 @@ Die grobe Funktionsweise des Buidlscripts und seiner Plugins ist wie folgt:
     aufgrund dessen das JavaFX kein Teil der SDK mehr ist  
   - proguard-maven-plugin → obfuscated JAR  
   
-- **Automatisches Kopieren** der Ausgabedateien(Obfuscataed JAR, JavaDoc und Test-Report)in das Zielverzeichniss `/final` durch das maven-resources-plugin.  
-   <sub>*(das Javdoc befindet sich unter `/final/JavaDoc` und der Test-Coverage Report unter `/final/Coverage`. Es muss dann jeweils die index.html in einem Browser geöffnet werden)*</sub>  
+- **Automatisches Kopieren** der Ausgabedateien(obfuscated JAR, JavaDoc und Test-Report) in das Zielverzeichnis `/final` durch das maven-resources-plugin.  
+   <sub>* (das Javadoc befindet sich unter `/final/JavaDoc` und der Test-Coverage-Report unter `/final/Coverage`. Es muss dann jeweils die index.html in einem Browser geöffnet werden) *</sub>  
 
 ## 8. Informationen für weitere Entwicklung
 ### 8.1 Programmtrennung
@@ -250,13 +250,13 @@ Diese Trennung ermöglicht eine bessere Wartbarkeit und erleichtert die Erweiter
 
 1. Erstellen von 2 neuen Packages mit folgenden benennungen:  
     - {Spielname}Controller, für die eigene Implementierung der Controller  
-    - {Spielname}, für die eigene Implementierung des Backend  
-    <sub>*der Inhalt der geschweiften Klammern ist durch den Namen des eigenen Spiel zu ersetzen*</sub>  
+    - {Spielname}, für die eigene Implementierung des Backends  
+    <sub>*Der Inhalt der geschweiften Klammern ist durch den Namen des eigenen Spiels zu ersetzen.*</sub>  
 2. Implementieren aller Interfaces aus den Modularen Packages:  
-    - für die Controller sind die Interfaces aus UIController zu implementieren  
-    - für die Klassen des Backend sind die Interfaces aus GameCore zu implementieren  
-    <sub> ***Ausnahme:** Das Interface IMoveStrategy aus GameCore, dieses muss nur Implementiert  
-    werden wenn es einen Automatisierten bzw Bot-Spieler gibt.* </sub>  
+    - Für die Controller sind die Interfaces aus UIController zu implementieren.  
+    - Für die Klassen des Backends sind die Interfaces aus GameCore zu implementieren.  
+    <sub> ***Ausnahme:** Das Interface IMoveStrategy aus GameCore, dieses muss nur implementiert  
+    werden, wenn es einen automatisierten bzw. Bot-Spieler gibt.* </sub>  
 3. Hinzufügen und Implementieren von weiteren Klassen die Spezifisch nur für das eigene Spiel gebraucht werden.
 4. Erstellen der benötigten .fxml für das UI
 5. Erweitern des Hauptmenüs um die Kachel des eigenen Spiels
