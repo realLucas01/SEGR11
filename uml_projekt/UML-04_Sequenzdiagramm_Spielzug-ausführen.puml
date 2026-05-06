@@ -11,12 +11,17 @@ skinparam SequenceArrowThickness 1
 
 skinparam ResponseMessageBelowArrow true
 
-actor "              Fluggast              " as Fluggast
+actor "       Fluggast       " as Fluggast
 |||
-boundary "              FourConnectGameController              " as Controller
+boundary "       FourConnectGameController       " as Controller
 |||
-control "              FourConnectGame              " as Game
-
+control "       FourConnectGame       " as Game
+|||
+entity "       FourConnectPlayer       " as Player
+|||
+control "       IMoveStrategy       " as Strategy
+|||
+control "       App       " as App
 
 Fluggast -> Controller : handleColumnInput(column)
 
@@ -27,38 +32,33 @@ Controller -> Controller : updateBoard()
 |||
 
 alt GameState == Won
-  Controller -> Controller : updateStatus()
+  Controller -> App : setRoot("EndScreen")
+
 else GameState == Tied
-  Controller -> Controller : updateStatus()
+  Controller -> App : setRoot("EndScreen")
+
 else GameState == Running
-  Controller -> Game : getOneBotPlayer()
-  Game --> Controller : boolean
-  |||
 
-  alt Bot-Modus aktiv
-    Controller -> Game : playBotTurn()
-    Game --> Controller : GameState
-
-    Controller -> Controller : updateBoard()
-    |||
-
-    alt GameState == Won
-      Controller -> Controller : updateStatus()
-      |||
-    else GameState == Tied
-      Controller -> Controller : updateStatus()
-      |||
-    else GameState == Running
-      Controller -> Controller : updateStatus()
-      |||
-    end
-
-  else Zwei-Spieler-Modus
-    Controller -> Controller : updateStatus()
-    |||
-  end
-end
+  Controller -> Game : playerTurn()
 |||
 
+  alt Bot-Spieler aktiv
+
+    Game -> Player : getStrategy()
+    Player --> Game : IMoveStrategy
+
+    Game -> Strategy : chooseMove(board)
+
+    Controller -> Controller : updateBoard()
+|||
+
+  end
+
+  Controller -> Controller : updateStatus()
+|||
+
+end
+|||
+|||
 
 @enduml
