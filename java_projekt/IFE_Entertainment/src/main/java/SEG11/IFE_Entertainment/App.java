@@ -2,6 +2,7 @@ package SEG11.IFE_Entertainment;
 
 import SEG11.IFE_Entertainment.Infrastructure.LocalizationService;
 import SEG11.IFE_Entertainment.Infrastructure.BrandingService;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -9,6 +10,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ResourceBundle;
 
 /**
  * JavaFX App
@@ -21,7 +23,9 @@ public class App extends Application {
     public void start(Stage stage) throws IOException {
         scene = new Scene(loadFXML("MainMenu"), 1000, 900);
         applyBranding();
+
         stage.setScene(scene);
+        stage.setFullScreen(true);
         stage.show();
     }
 
@@ -41,6 +45,8 @@ public class App extends Application {
     
     private static Parent loadFXML(String fxml) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
+        fxmlLoader.setResources(ResourceBundle.getBundle("i18n.messages",
+                LocalizationService.getInstance().getCurrentLocale()));
         return fxmlLoader.load();
     }
 
@@ -54,8 +60,14 @@ public class App extends Application {
      */
     public static <T> T setRootAndGetController(String fxml) throws IOException {
         FXMLLoader loader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
+        loader.setResources(ResourceBundle.getBundle("i18n.messages",
+                LocalizationService.getInstance().getCurrentLocale()));
         scene.setRoot(loader.load());
         return loader.getController();
+    }
+
+    public static void main(String[] args) {
+        launch();
     }
 
 }

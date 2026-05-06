@@ -2,25 +2,30 @@
 
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.geometry.Insets?>
 
 <BorderPane xmlns="http://javafx.com/javafx/21.0.2"
-            xmlns:fx="http://javafx.com/javafx/1"
+            xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="SEG11.IFE_Entertainment.UIController.MainMenuController"
             stylesheets="@style.css" styleClass="main-menu-root"
+
             maxWidth="Infinity"
             maxHeight="Infinity">
 
+    <!-- TOP BAR -->
     <top>
         <HBox alignment="CENTER" spacing="20" styleClass="top-bar">
             <Label text="Gamemenu" HBox.hgrow="ALWAYS" alignment="CENTER" styleClass="screen-title"/>
         </HBox>
     </top>
 
+    <!-- GAME GRID -->
     <center>
-        <VBox spacing="15" alignment="CENTER">
+        <GridPane alignment="CENTER" hgap="30" vgap="30">
 
             <!-- 1te Reihe -->
             <Button text="4 Gewinnt"
@@ -61,6 +66,7 @@
         </VBox>
     </center>
 
+    <!-- BOTTOM BAR -->
     <bottom>
 
     	<GridPane alignment="CENTER" hgap="30" vgap="30">

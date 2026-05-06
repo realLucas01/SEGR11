@@ -16,24 +16,19 @@
  * SHALL NOT BE LIABLE FOR ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT
  * OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
  */
-package SEG11.IFE_Entertainment.UIGameController;
+package SEG11.IFE_Entertainment.UIFourConnectController;
 
 import java.io.IOException;
-import java.util.concurrent.TimeUnit;
-
 import SEG11.IFE_Entertainment.App;
 import SEG11.IFE_Entertainment.FourConnect.FourConnectGame;
 import SEG11.IFE_Entertainment.FourConnect.Player;
 import SEG11.IFE_Entertainment.GameCore.GameState;
-import SEG11.IFE_Entertainment.Infrastructure.GameSessionService;
 import SEG11.IFE_Entertainment.UIController.GameController;
-import javafx.animation.PauseTransition;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
-import javafx.util.Duration;
 
 /**
  * Controller für den Vier-Gewinnt-Spielscreen.
@@ -54,9 +49,10 @@ public class FourConnectGameController implements GameController {
     /** Das aktuell laufende Spiel. */
     private FourConnectGame game;
 
-    private Circle[][] circles = new Circle[6][7];
+    /** Der vorherige Screen von dem aus Help geöffnet wurde. */
+    public static String previousScreen = "MainMenu";
 
-    private boolean oneBotPlayer;
+    private Circle[][] circles = new Circle[6][7];
 
     /**
      * Startet das Spiel neu mit demselben Spielmodus.
@@ -91,8 +87,8 @@ public class FourConnectGameController implements GameController {
     @Override
     @FXML
     public void openHelp() throws IOException {
-        GameSessionService.getInstance().setPreviousScreen("FourConnectGame");
-        App.setRoot("Help");
+        previousScreen = "FourConnectGame";
+        App.setRoot("help_fc");
     }
 
     /**
@@ -112,42 +108,11 @@ public class FourConnectGameController implements GameController {
         }
         GameState result = game.dropDisc(column);
         updateBoard();
-        if (result == GameState.Won) {
+        if (result == GameState.Won || result == GameState.Tied) {
             App.setRoot("EndScreen");
-            return;
-        } else if (result == GameState.Tied) {
-            statusLabel.setText("Unentschieden!");
-            return;
         } else {
             game.playerTurn();
             updateStatus();
-        }
-
-        if(oneBotPlayer){
-            gridPane.setDisable(true);
-
-            PauseTransition pause = new PauseTransition(Duration.seconds((1.5)));
-            pause.setOnFinished(event -> {
-                GameState botResult = game.playBotTurn();
-
-                updateBoard();
-                gridPane.setDisable(false);
-
-                if (botResult == GameState.Won) {
-                    try {
-                        App.setRoot("EndScreen");
-                    } catch (IOException e) {
-                        throw new RuntimeException(e);
-                    }
-                } else if (botResult == GameState.Tied) {
-                    statusLabel.setText("Unentschieden!");
-                } else {
-                    game.playerTurn();
-                    updateStatus();
-                }
-            });
-            pause.play();
-
         }
     }
 
@@ -158,8 +123,8 @@ public class FourConnectGameController implements GameController {
      * @param playerTwo der Typ von Spieler 2
      */
     public void handlePlayMode(Player playerOne, Player playerTwo) {
-        game = new FourConnectGame();
-        GameSessionService.getInstance().setCurrentGame(game);
+        game = FourConnectGame.getInstance();
+        game.endGame();
         game.initFourConnectGame(playerOne, playerTwo);
         initBoard();
         updateStatus();
@@ -169,7 +134,7 @@ public class FourConnectGameController implements GameController {
      * Setzt das laufende Spiel fort ohne es neu zu initialisieren.
      */
     public void resumeGame() {
-        game = GameSessionService.getInstance().getCurrentGame();
+        game = FourConnectGame.getInstance();
         initBoard();
         updateBoard();
         updateStatus();
@@ -198,7 +163,6 @@ public class FourConnectGameController implements GameController {
                 gridPane.add(circle, col, row);
             }
         }
-        oneBotPlayer = game.getOneBotPlayer();
     }
 
     /**
@@ -223,7 +187,10 @@ public class FourConnectGameController implements GameController {
     private void updateStatus() {
         GameState state = game.getStatus();
         switch (state) {
-            case Running -> statusLabel.setText("");
+            case Running -> {
+                int playerIndex = game.getCurrentPlayerIndex();
+                statusLabel.setText("Spieler " + (playerIndex + 1));
+            }
             case Won -> statusLabel.setText("Gewonnen!");
             case Tied -> statusLabel.setText("Unentschieden!");
             default -> statusLabel.setText("");

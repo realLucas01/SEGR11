@@ -11,6 +11,7 @@
             fx:controller="SEG11.IFE_Entertainment.UIFourConnectController.FourConnectModeMenuController"
             stylesheets="@style.css" styleClass="mode-menu-root">
 
+	<!-- Zeigt den Namen des gewählten Spiels an -->
     <top>
         <Label text="%mode.title" styleClass="screen-title" BorderPane.alignment="CENTER"/>
     </top>
@@ -66,5 +67,5 @@
 
 <!--
 Ich habe mir gedacht das man einfach um sinnlose fxml Datein anzulegen einfach in die Mode Selection reinpacken kann Player vs Player
-und dann halt nicht Player vs Bot sonder direkt als Option das man gegen einen einfachen und schweren Bot spielen kann...
+und dann halt nicht Player vs Bot sondern direkt als Option das man gegen einen einfachen und schweren Bot spielen kann...
 -->

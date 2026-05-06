@@ -19,9 +19,9 @@
 package SEG11.IFE_Entertainment.UIController;
 
 import SEG11.IFE_Entertainment.App;
-import SEG11.IFE_Entertainment.Infrastructure.GameSessionService;
 import javafx.fxml.FXML;
 import java.io.IOException;
+import SEG11.IFE_Entertainment.UIFourConnectController.FourConnectGameController;
 
 /**
  * Controller für das Hauptmenü.
@@ -65,7 +65,7 @@ public class MainMenuController {
      */
     @FXML
     public void openHelp() throws IOException {
-        GameSessionService.getInstance().setPreviousScreen("MainMenu");
-        App.setRoot("Help");
+        FourConnectGameController.previousScreen = "MainMenu";
+        App.setRoot("help_main");
     }
 }

@@ -43,15 +43,17 @@ public class SettingsController {
     private final BrandingService brandingService = BrandingService.getInstance();
 
     /**
-     * Ändert die Anzeigesprache anhand der Auswahl in der ComboBox.
+     * Initialisiert die ComboBox mit den verfügbaren Sprachen
+     * und setzt die aktuell gewählte Sprache.
      */
     @FXML
     public void initialize() {
         languageBox.getItems().addAll("de", "en");
         languageBox.setValue(localizationService.getCurrentLocale().getLanguage());
-        
+
         themeBox.getItems().addAll("gervithrall", "lufthansa", "emirates", "ryanair");
         themeBox.setValue("gervithrall");
+
     }
 
     /**
@@ -65,6 +67,7 @@ public class SettingsController {
         String languageCode = languageBox.getValue();
         if (languageCode != null) {
             localizationService.setLanguage(languageCode);
+            App.setRoot("Settings");
         }
     }
 
@@ -89,12 +92,5 @@ public class SettingsController {
     @FXML
     public void backToMainMenu() throws IOException {
         App.setRoot("MainMenu");
-    }
-    /**
-     * Initialisiert die ComboBox mit den verfügbaren Sprachen.
-     */
-    @FXML
-    public void initialize() {
-        languageBox.getItems().addAll("de", "en");
     }
 }
