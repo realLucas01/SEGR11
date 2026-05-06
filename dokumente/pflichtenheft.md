@@ -334,8 +334,6 @@ Zur Sicherstellung der Qualität wird das System kontinuierlich auf dem bereitge
 Die automatisierten Tests werden über JUnit ausgeführt und über Maven in den Buildprozess integriert. Zusätzlich wird die Testabdeckung mithilfe von JaCoCo überwacht und dokumentiert.
 
 Darüber hinaus erfolgen:
-- Usability-Tests zur Bewertung der Bedienbarkeit über Touch- und Maus-/Remote-Eingaben
-- Stabilitäts- und Belastungstests bei wiederholter oder schneller Eingabe
 - Tests des Offline-Betriebs innerhalb der vorgesehenen IFE-Umgebung
 - Überprüfung der Start- und Rückkehrnavigation innerhalb des IFE-Systems
 
@@ -755,7 +753,7 @@ Zusätzlich werden folgende Artefakte automatisiert generiert bzw. exportiert:
 
 ### 8.5 Konventionen und Qualitätssicherung
 
-Für die Codebasis gelten die Oracle Java Code Conventions als Stilrichtlinie. Die Einhaltung wird durch Reviews unterstützt. Änderungen werden nachvollziehbar über GitHub mit Commits, Pull Requests und Issues geführt.
+Für die Codebasis gilt der Google Java Style Guide als Stilrichtlinie. Die Einhaltung wird durch Reviews unterstützt. Änderungen werden nachvollziehbar über GitHub mit Commits, Pull Requests und Issues geführt.
 
 ---
 
