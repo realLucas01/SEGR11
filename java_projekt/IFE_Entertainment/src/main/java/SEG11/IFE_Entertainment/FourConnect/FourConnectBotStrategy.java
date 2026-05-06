@@ -116,7 +116,7 @@ public class FourConnectBotStrategy implements IMoveStrategy {
      * @param board das zu bewertende Spielfeld
      * @return der Score: positiv: Bot ist im Vorteil, negativ: Gegner im Vorteil
      */
-    Integer appraiseBoard(FourConnectGameBoard board) {
+    public Integer appraiseBoard(FourConnectGameBoard board) {
         int score = 0;
         final ArrayList<Position[]> connectsList = allFourConnects(board);
 
@@ -167,7 +167,7 @@ public class FourConnectBotStrategy implements IMoveStrategy {
      * @param board das Spielfeld
      * @return die ArrayList mit allen Siegeskoordinaten
      */
-    ArrayList<Position[]> allFourConnects(FourConnectGameBoard board){
+    public ArrayList<Position[]> allFourConnects(FourConnectGameBoard board){
         final ArrayList<Position[]> connectsList = new ArrayList<>();
         final Integer columCount = board.getColumns();
         final Integer rowCount = board.getRows();
