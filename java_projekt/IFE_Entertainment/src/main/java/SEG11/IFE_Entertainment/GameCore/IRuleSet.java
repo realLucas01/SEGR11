@@ -34,7 +34,7 @@ package SEG11.IFE_Entertainment.GameCore;
 public interface IRuleSet<IPlayAreaT, PlayerT> {
 
 	/**
-	 * Funktion zur Überprüfung ob ein Sieg vorliegt
+	 * Funktion zur Überprüfung, ob ein Sieg vorliegt
 	 * 
 	 * @param board  Den aktuellen Zustand des Spielbretts im Datentyp der eigenen
 	 *               Implementierung von {@link IPlayArea}
@@ -45,7 +45,7 @@ public interface IRuleSet<IPlayAreaT, PlayerT> {
 	boolean checkWin(IPlayAreaT board, PlayerT player);
 
 	/**
-	 * Funktion zur Überprüfung ob ein Unentschieden vorliegt
+	 * Funktion zur Überprüfung, ob ein Unentschieden vorliegt
 	 * 
 	 * @param board Den aktuellen Zustand des Spielbretts im Datentyp der eigenen
 	 *              Implementierung von {@link IPlayArea}

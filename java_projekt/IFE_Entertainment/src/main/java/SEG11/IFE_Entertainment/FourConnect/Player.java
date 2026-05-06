@@ -19,5 +19,5 @@ public enum Player {
 	/**
 	 * Leerer Spieler, zum init des Spielfeldes
 	 */
-	NONE;
+	NONE
 }

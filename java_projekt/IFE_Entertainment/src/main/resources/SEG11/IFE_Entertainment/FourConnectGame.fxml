@@ -19,7 +19,7 @@
 	<center>
 		<VBox alignment="CENTER" spacing="20">
 			
-			<!-- Zeigt den aktuellen "Turn" an also wer gerade am Zug ist (aktuell drann ist) -->
+			<!-- Zeigt den aktuellen "Turn" an also wer gerade am Zug ist (aktuell dran ist) -->
 			<HBox fx:id="turnBox" spacing="10" alignment="CENTER" styleClass="turn-box">
 				<Label text="%game.turn" styleClass="turn-title"/>
 				<Label fx:id="statusLabel" text="" styleClass="turn-value"/>

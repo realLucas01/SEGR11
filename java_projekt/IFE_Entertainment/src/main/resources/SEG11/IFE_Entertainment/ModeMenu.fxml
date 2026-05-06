@@ -35,6 +35,7 @@
 </BorderPane>
 
 <!--
-Ich habe mir gedacht das man einfach um sinnlose fxml Datein anzulegen einfach in die Mode Selection reinpacken kann Player vs Player
-und dann halt nicht Player vs Bot sondern direkt als Option das man gegen einen einfachen und schweren Bot spielen kann...
+ Ich habe mir gedacht das man einfach, um nicht sinnlose fxml Datein anzulegen, einfach in die Mode Selection herein packen
+ kann Player vs Player und dann halt nicht Player vs Bot, sondern direkt als Option das man gegen einen einfachen
+ und schweren Bot spielen kann ...
 -->

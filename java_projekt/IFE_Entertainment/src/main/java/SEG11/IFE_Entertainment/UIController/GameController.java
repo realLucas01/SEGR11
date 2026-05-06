@@ -2,8 +2,13 @@ package SEG11.IFE_Entertainment.UIController;
 
 import java.io.IOException;
 
+/**
+ * Interface für den Gamecontroller
+ *
+ * <p>Definiert die Funktionen während des Spieles
+ */
 public interface GameController {
-	public void restartGame() throws IOException;
-	public void backToMainMenu() throws IOException;
-	public void openHelp() throws IOException;
+	void restartGame() throws IOException;
+	void backToMainMenu() throws IOException;
+	void openHelp() throws IOException;
 }

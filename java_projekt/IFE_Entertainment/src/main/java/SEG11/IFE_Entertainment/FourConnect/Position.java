@@ -20,7 +20,6 @@ package SEG11.IFE_Entertainment.FourConnect;
 import java.util.Objects;
 
 /**
- * GameBoard,-Player,-BotStrategy,-position
  * Die Position, welche für das Spielfeld genutzt werden, um die Zellen darzustellen
  */
 public class Position {
@@ -28,7 +27,7 @@ public class Position {
   private final Integer y;
 
   /**
-   * Konstuktor für Position
+   * Konstruktor für Position
    *
    * @param x, die x-Achse
    * @param y, die y-Achse

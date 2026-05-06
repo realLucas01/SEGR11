@@ -46,5 +46,5 @@ public enum GameState {
 	/**
 	 * Spiel mit Sieg eines Spielers ausgegangen
 	 */
-	Won;
+	Won
 }

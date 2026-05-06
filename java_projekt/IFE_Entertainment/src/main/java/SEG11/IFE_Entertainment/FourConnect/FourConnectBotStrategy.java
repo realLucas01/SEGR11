@@ -31,7 +31,7 @@ import static java.lang.Math.*;
 import java.security.SecureRandom;
 
 /**
- * Implementiert {@link IMoveStrategy} und stellt zwei Bot strategien für das Vier Gewinnt Spiel
+ * Implementiert {@link IMoveStrategy} und stellt zwei Bot strategien für das "Vier Gewinnt" Spiel
  * bereit:
  *
  * <p>{@link EasyBotStrategy} - wählt zufällig eine gültige Spalte
@@ -134,7 +134,7 @@ public class FourConnectBotStrategy implements IMoveStrategy {
                     }
                 }
             }
-            // Bot Fenster: kein Gegner vorhanden -> positiv bewerten
+            // Bot Fenster: kein Gegner vorhanden → positiv bewerten
             if (playerOwningCount == 0) {
                 switch (botOwningCount) {
                     case 4 -> score += SCORE_BOT_FOUR;
@@ -144,7 +144,7 @@ public class FourConnectBotStrategy implements IMoveStrategy {
                     default -> score += 0;
                 }
             }
-            //Gegner Fenster: kein Bot vorhanden -> negativ bewerten
+            //Gegner Fenster: kein Bot vorhanden → negativ bewerten
             if (botOwningCount == 0) {
                 switch (playerOwningCount) {
                     case 4 -> score += SCORE_OPP_FOUR;

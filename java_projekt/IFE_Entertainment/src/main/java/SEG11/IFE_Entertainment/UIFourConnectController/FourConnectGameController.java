@@ -24,11 +24,13 @@ import SEG11.IFE_Entertainment.FourConnect.FourConnectGame;
 import SEG11.IFE_Entertainment.FourConnect.Player;
 import SEG11.IFE_Entertainment.GameCore.GameState;
 import SEG11.IFE_Entertainment.UIController.GameController;
+import javafx.animation.PauseTransition;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+import javafx.util.Duration;
 
 /**
  * Controller für den Vier-Gewinnt-Spielscreen.
@@ -53,6 +55,9 @@ public class FourConnectGameController implements GameController {
     public static String previousScreen = "MainMenu";
 
     private Circle[][] circles = new Circle[6][7];
+    /** Variable um die Anwesenheit eines BotSpielers zu signalisieren. True = einer vorhanden */
+    private boolean oneBotPlayer;
+
 
     /**
      * Startet das Spiel neu mit demselben Spielmodus.
@@ -93,7 +98,7 @@ public class FourConnectGameController implements GameController {
 
     /**
      * Verarbeitet die Eingabe des Spielers für eine bestimmte Spalte.
-     * Prüft ob die Spalte voll ist, wirft die Scheibe ein und aktualisiert die Anzeige.
+     * Prüft, ob die Spalte voll ist, wirft die Scheibe ein und aktualisiert die Anzeige.
      *
      * @param column die gewählte Spalte
      * @throws IOException falls die FXML-Datei nicht geladen werden kann
@@ -114,6 +119,33 @@ public class FourConnectGameController implements GameController {
             game.playerTurn();
             updateStatus();
         }
+
+        if(oneBotPlayer){
+            gridPane.setDisable(true);
+
+            PauseTransition pause = new PauseTransition(Duration.seconds((1.0)));
+            pause.setOnFinished(event -> {
+                GameState botResult = game.playBotTurn();
+
+                updateBoard();
+                gridPane.setDisable(false);
+
+                if (botResult == GameState.Won) {
+                    try {
+                        App.setRoot("EndScreen");
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                } else if (botResult == GameState.Tied) {
+                    statusLabel.setText("Unentschieden!");
+                } else {
+                    game.playerTurn();
+                    updateStatus();
+                }
+            });
+            pause.play();
+
+        }
     }
 
     /**
@@ -131,7 +163,7 @@ public class FourConnectGameController implements GameController {
     }
 
     /**
-     * Setzt das laufende Spiel fort ohne es neu zu initialisieren.
+     * Setzt das laufende Spiel fort, ohne es neu zu initialisieren.
      */
     public void resumeGame() {
         game = FourConnectGame.getInstance();
@@ -163,6 +195,7 @@ public class FourConnectGameController implements GameController {
                 gridPane.add(circle, col, row);
             }
         }
+        oneBotPlayer = game.getOneBotPlayer();
     }
 
     /**

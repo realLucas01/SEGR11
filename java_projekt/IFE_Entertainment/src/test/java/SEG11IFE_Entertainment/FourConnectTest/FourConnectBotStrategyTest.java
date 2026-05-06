@@ -27,18 +27,9 @@ class FourConnectBotStrategyTest {
                 new FourConnectPlayer(type, null, null));
     }
 
-    /**
-     * Füllt eine Spalte bis auf die oberste Zeile komplett mit dem angegebenen Spieler
-     */
-    private void fillColumn(FourConnectGameBoard b, int col, Player type) {
-        for (int row = 0; row < b.getRows(); row++) {
-            placeAt(b, col, row, type);
-        }
-    }
-
     @BeforeEach
     void setUp() {
-        game     = new FourConnectGame();
+        game     = FourConnectGame.getInstance();
         rules    = new FourConnectRules();
         strategy = new FourConnectBotStrategy(game, rules);
         board    = new FourConnectGameBoard();

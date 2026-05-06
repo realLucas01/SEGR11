@@ -29,9 +29,9 @@ import SEG11.IFE_Entertainment.Infrastructure.BrandingService;
  * Klasse die für den eigentlichen Spielablauf zuständig ist
  * 
  * <p>Implementiert dabei {@link IGame} und seine Funktionen, und stellt
- * zusätzliche Funktionen für alle Phasen des Spielablaufs bereit
+ * zusätzliche Funktionen für alle Phasen des Spielablaufs bereit.
  * 
- * @param <FourConnectGameBoard> Der generische Datentyp wurde auf die von uns
+ * @implNote  IGame<FourConnectGameBoard> der generische Datentyp wurde auf die von uns
  *                               implementierte Version des Interface
  *                               {@link IPlayArea} konkretisiert
  */
@@ -53,12 +53,11 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
 	 * wird
 	 */
 	private BrandingService currentbranding;
-
     /** true, wenn ein Bot im Spiel ist. false wenn kein Bot */
     private boolean oneBotPlayer;
 
 	/**
-	 * Privater Konstruktor für die Klasse FourConnectGame mitsammt der Grundlegenden
+	 * Privater Konstruktor für die Klasse FourConnectGame mitsamt der Grundlegenden
 	 * initialisierung aller wichtigen Variablen
 	 */
 	private FourConnectGame() {
@@ -70,7 +69,7 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
 	}
 	
 	/**
-	 * Funtkion zum erstellen bzw. bekommen der Instanz der Klasse
+	 * Funktion zum Erstellen bzw. Bekommen der Instanz der Klasse
 	 * 
 	 * @return Den Pointer auf die einzige Instanz der Klasse
 	 */
@@ -84,7 +83,7 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
 	/**
 	 * Implementierung der Interface Methode getStatus()
 	 * 
-	 * <p>Wird genutzt um den aktuellen Status des Spiels von außerhalb abzufragen
+	 * <p>Wird genutzt, um den aktuellen Status des Spiels von außerhalb abzufragen
 	 * 
 	 * @return Den aktuellen Status des Spiels im Datentyp des ENUM
 	 *         {@link GameState}
@@ -113,7 +112,7 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
 	/**
 	 * Implementierung der Interface Methode getBoard()
 	 * 
-	 * <p>Wird genutzt um den aktuellen Zustand des Spielbretts von außerhalb
+	 * <p>Wird genutzt, um den aktuellen Zustand des Spielbretts von außerhalb
 	 * abzufragen
 	 * 
 	 * @return Den aktuellen Zustand des Spielbretts im Datentyp
@@ -150,8 +149,6 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
 	 * neu. Wenn Spieler bzw Spielmodus gewechselt werden soll, dann muss dafür erst
 	 * {@link #endGame} und dann {@link #initFourConnectGame} aufgerufen werden
 	 * 
-	 * @return Den aktuellen Zustand des Spielbretts im Datentyp
-	 *         {@link FourConnectGameBoard}
 	 * @see IGame
 	 */
 	@Override
@@ -235,7 +232,7 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
     }
 
 	/**
-	 * Initialisierung eines neuen Spiels von Vier Gewinnt.
+	 * Initialisierung eines neuen Spiels von "Vier Gewinnt".
 	 * 
 	 * <p>Dabei werden die neuen Spieler, so wie für mögliche Bots, deren Strategie
 	 * initialisiert
