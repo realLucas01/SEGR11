@@ -60,7 +60,7 @@ Die Bewertungen und Begründungen für die Auswahl der 11 wichtigsten Werkzeuge 
 - JavaFX (21.0.2)  
 *JavaFX wird zur Erstellung der grafischen Benutzeroberfläche eingesetzt. Es ermöglicht die Umsetzung der UI inklusive Layout, Interaktion und Darstellung.*
 
-- Maven (3.9.0)  
+- Maven (3.9.15)  
 *Maven dient als Build-Tool zur Verwaltung von Abhängigkeiten, zum Kompilieren des Projekts sowie zur Erstellung des finalen Artefakts (JAR-Datei).*
 
 - JUnit 5 (5.11.0)  
@@ -68,7 +68,7 @@ Die Bewertungen und Begründungen für die Auswahl der 11 wichtigsten Werkzeuge 
 
 ### 2.2 Verwendete Plugins und Abhängigkeiten
 
-- Maven: 3.9.0  
+- Maven: 3.9.15  
 *Build-Management-Tool zur Strukturierung und Automatisierung des Projektes.*
 
 - JavaFX: 21.0.2  
