@@ -1,5 +1,37 @@
-# Administratordokumentation - IFE Entertainment
+# Administratordokumentation der Entertainment-Erweiterung für IFE
+**Stand:** 06.05.2026, durch Gervithrall Systems
 
+**Auftraggeber:** Novaris Cabin Systems GmbH  
+Friedrich-List-Platz 1   
+01069 Dresden  
+**Ansprechpartner*in:** Lea Wagner  
+**E-Mail:** lwagner@novaris-cabinystems.de   
+**Telefon:** 0351 4620   
+
+**Auftragnehmer:** Gervithrall Systems GmbH   
+Perlickstraße 1   
+04103 Leipzig   
+**Ansprechpartner*in:** Lucas Rumann   
+**E-Mail:** lucasr@gervithrall-systems.de   
+**Telefon:** 0351 6482642
+
+---
+
+# Inhaltsverzeichnis
+
+1. [Übersicht](#1-übersicht)
+2. [Systemanforderungen](#2-systemanforderungen)
+3. [Installation](#3-installation)
+4. [Build aus dem Quellcode](#4-build-aus-dem-quellcode)
+5. [Projektstruktur](#5-projektstruktur)
+6. [Konfiguration](#6-konfiguration)  
+   6.1 [Branding (CI-Anpassung)](#61-branding-ci-anpassung)  
+   6.2 [Sprachkonfiguration](#62-sprachkonfiguration)
+7. [Tests und Qualitätssicherung](#7-tests-und-qualitätssicherung)
+8. [Bekannte Einschränkungen](#8-bekannte-einschränkungen)
+9. [Fehlerbehebung](#9-fehlerbehebung)
+
+---
 ## Übersicht
 
 IFE Entertainment ist eine offlinefähige Spieleapplikation zur Erweiterung des Inflight-Entertainment-Systems (IFE) von Novaris Cabin Systems GmbH. Die Anwendung wird auf den Sitzmonitoren der Passagiere betrieben und bietet aktuell das Spiel Vier Gewinnt an.
