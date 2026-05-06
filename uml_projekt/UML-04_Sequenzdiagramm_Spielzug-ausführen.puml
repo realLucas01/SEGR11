@@ -5,40 +5,60 @@ skinparam defaultFontName Monospaced
 skinparam ParticipantPadding 80
 skinparam BoxPadding 50
 
-actor "Fluggast" as Fluggast
-boundary "Spielansicht" as View
-control "SpielController" as Controller
-entity "Spielbrett" as Board
-entity "Spielzustand" as State
+skinparam SequenceLifeLineBorderColor #666666
+skinparam SequenceLifeLineBackgroundColor transparent
+skinparam SequenceArrowThickness 1
 
-Fluggast -> View : Spalte auswählen
-View -> Controller : handleColumnSelection(spalte)
-Controller -> Board : istZugGueltig(spalte)
+skinparam ResponseMessageBelowArrow true
 
-alt Zug gültig
-  Board --> Controller : true
-  Controller -> Board : spielsteinSetzen(spalte, aktuellerSpieler)
-  Controller -> State : pruefeGewinn(Board)
-  
-  alt Gewinn
-    State --> Controller : Gewinner erkannt
-    Controller -> View : zeigeGewinner(aktuellerSpieler)
-  else Kein Gewinn
-    Controller -> State : pruefeUnentschieden(Board)
+actor "              Fluggast              " as Fluggast
+|||
+boundary "              FourConnectGameController              " as Controller
+|||
+control "              FourConnectGame              " as Game
 
-    alt Unentschieden
-      State --> Controller : Spielfeld voll
-      Controller -> View : zeigeUnentschieden()
-    else Spiel läuft weiter
-      Controller -> State : spielerWechseln()
-      Controller -> View : aktualisiereSpielbrett()
-      Controller -> View : zeigeAktuellenSpieler()
+
+Fluggast -> Controller : handleColumnInput(column)
+
+Controller -> Game : dropDisc(column)
+Game --> Controller : GameState
+
+Controller -> Controller : updateBoard()
+|||
+
+alt GameState == Won
+  Controller -> Controller : updateStatus()
+else GameState == Tied
+  Controller -> Controller : updateStatus()
+else GameState == Running
+  Controller -> Game : getOneBotPlayer()
+  Game --> Controller : boolean
+  |||
+
+  alt Bot-Modus aktiv
+    Controller -> Game : playBotTurn()
+    Game --> Controller : GameState
+
+    Controller -> Controller : updateBoard()
+    |||
+
+    alt GameState == Won
+      Controller -> Controller : updateStatus()
+      |||
+    else GameState == Tied
+      Controller -> Controller : updateStatus()
+      |||
+    else GameState == Running
+      Controller -> Controller : updateStatus()
+      |||
     end
-  end
 
-else Zug ungültig
-  Board --> Controller : false
-  Controller -> View : zeigeFehlermeldung()
+  else Zwei-Spieler-Modus
+    Controller -> Controller : updateStatus()
+    |||
+  end
 end
+|||
+
 
 @enduml
