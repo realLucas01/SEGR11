@@ -11,19 +11,21 @@ skinparam dashedLineColor #666666
 skinparam nodesep 120
 skinparam ranksep 150
 
-actor "Fluggast" as Fluggast
+skinparam ResponseMessageBelowArrow true
+
+actor "   Fluggast   " as Fluggast
+actor "   Fluggesellschaft   " as Airline
 
 rectangle "4-Connect" {
-
   usecase "Spiel starten" as UC1
   usecase "Spielmodus wählen" as UC2
   usecase "Spiel spielen" as UC3
   usecase "Neue Runde starten" as UC4
-
   usecase "Spielhilfe anzeigen" as UC5
   usecase "Einstellungen öffnen" as UC6
   usecase "Sprache auswählen" as UC7
   usecase "Zurück zur Spielesammlung" as UC8
+  usecase "Branding konfigurieren" as UC9
 }
 
 Fluggast --> UC1
@@ -35,10 +37,12 @@ Fluggast --> UC6
 Fluggast --> UC7
 Fluggast --> UC8
 
+Airline --> UC9
+
+UC6 ..> UC7 : <<include>>
+UC3 ..> UC4 : <<extend>>
 UC3 ..> UC5 : <<extend>>
 UC3 ..> UC6 : <<extend>>
 UC3 ..> UC8 : <<extend>>
-
-UC4 ..> UC3 : <<extend>>
 
 @enduml
