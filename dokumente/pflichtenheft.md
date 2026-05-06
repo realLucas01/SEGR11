@@ -329,7 +329,17 @@ Die Anwendung ist als Unterhaltungssoftware für Fluggäste konzipiert und ist n
 
 ## 4 Testung
 
-Zur Sicherstellung der Qualität wird das System kontinuierlich auf dem bereitgestellten Dev-Kit getestet. Die Testaktivitäten umfassen Funktionstests zur Überprüfung aller spezifizierten Anforderungen, Usability-Tests zur Bewertung der Bedienbarkeit über Touch-Eingaben sowie Stabilitäts- und Belastungstests bei wiederholter und schneller Eingabe. Dabei auftretende Fehler werden je nach schwere umgehend behoben oder Dokumentiert.
+Zur Sicherstellung der Qualität wird das System kontinuierlich auf dem bereitgestellten Dev-Kit sowie auf den Entwicklungsumgebungen der Teammitglieder getestet. Die Testaktivitäten umfassen automatisierte Unit-Tests zur Überprüfung der zentralen Spiellogik sowie manuelle Funktionstests der Benutzeroberfläche und Spielabläufe.
+
+Die automatisierten Tests werden über JUnit ausgeführt und über Maven in den Buildprozess integriert. Zusätzlich wird die Testabdeckung mithilfe von JaCoCo überwacht und dokumentiert.
+
+Darüber hinaus erfolgen:
+- Usability-Tests zur Bewertung der Bedienbarkeit über Touch- und Maus-/Remote-Eingaben
+- Stabilitäts- und Belastungstests bei wiederholter oder schneller Eingabe
+- Tests des Offline-Betriebs innerhalb der vorgesehenen IFE-Umgebung
+- Überprüfung der Start- und Rückkehrnavigation innerhalb des IFE-Systems
+
+Auftretende Fehler werden dokumentiert, priorisiert und im Rahmen der iterativen Entwicklung behoben.
 
 ---
 
@@ -347,50 +357,95 @@ Ziel der Dokumentation ist es, die Nutzung, Integration/Installation sowie Wartu
 
 Die Dokumentationsartefakte werden in folgenden Formaten bereitgestellt:
 - Inhaltliche Dokumente: PDF
-- README: Markdown
+- README und technische Zusatzdokumente: Markdown
 - API-Dokumentation: HTML (Javadoc)
 - Diagramme / UML-Exporte: PDF und/oder SVG
+- Build- und Testberichte: HTML
 
 ### 6.1 Anwenderdokumentation
 
-Eine separate Anwenderdokumentation für Passagiere wird nicht erstellt, da die Bedienung sowie Spielregeln und Abläufe vollständig innerhalb der Anwendung vermittelt werden.
+Eine separate Anwenderdokumentation für Passagiere wird nicht erstellt, da die Bedienung sowie Spielregeln und Abläufe vollständig innerhalb der Anwendung vermittelt werden. Die Benutzeroberfläche ist bewusst intuitiv gestaltet und enthält integrierte Hilfefunktionen zur Erklärung der Spielregeln und Bedienung.
 
-Stattdessen wird für die Demo eine kurze README bereitgestellt, die ausschließlich den Start und die Inbetriebnahme der Anwendung beschreibt.
+Zusätzlich wird für Demo-, Test- und Integrationszwecke eine kompakte README-Datei bereitgestellt. Diese beschreibt insbesondere den Start der Anwendung, die grundlegende Bedienung sowie die Voraussetzungen für die Ausführung.
 
-**Zielgruppe:** Abnahme-/Testpersonal (AG) sowie Projektbeteiligte für den Demo-Betrieb  
+**Zielgruppe:** Abnahme-/Testpersonal (AG), Integrationsverantwortliche sowie Projektbeteiligte für den Demo- und Testbetrieb  
 
-**Form:** README als Markdown
+**Form:**
+- Markdown (README)
+- PDF
 
 ### 6.2 Administratorendokumentation
 
 **Zielgruppe:** Airline-/IFE-Administratoren bzw. Integrations-/Deployment-Verantwortliche.
 
 **Inhalte:**
-- Systemvoraussetzungen / Offline-Betrieb: Es wird lediglich eine lokale Java-Runtime benötigt; es werden keine externen Dienste vorausgesetzt.
-- Installation / Deployment: Die Auslieferung erfolgt als JAR-Datei die in der vorgesehenen IFE-Ordnerstruktur abgelegt wird; der Start erfolgt über den vorgesehenen IFE-Startmechanismus.
-- Rücksprung zum IFE-Menü: Der Rücksprung erfolgt über eine in der Anwendung bereitgestellte Navigation (z. B. „Zurück“-Button), die zurück in das übergeordnete IFE-Menü führt.
-- Update / Release: Ein Update erfolgt durch Austausch der JAR-Datei; die Version ist im Dateinamen und/oder in der Anwendung ersichtlich.
-- Fehlerausgabe: Laufzeitfehler werden als Meldung ausgegeben (z. B. Konsole/Standardausgabe); ein separates Logging-/Monitoring-System ist nicht vorgesehen.
-- Datenschutz / Sicherheit: Es werden keine personenbezogenen Daten verarbeitet, gespeichert oder extern übertragen.
+- Systemvoraussetzungen / Offline-Betrieb:
+  - Java 21 LTS Runtime
+  - keine Netzwerkverbindung erforderlich
+  - keine externen Dienste notwendig
+- Installation / Deployment:
+  - Auslieferung als ausführbare Fat-JAR-Datei
+  - keine separate JavaFX-Installation notwendig
+  - Integration innerhalb der vorgesehenen IFE-Ordnerstruktur
+- Start der Anwendung:
+  - Ausführung über den vorgesehenen IFE-Startmechanismus
+  - alternativ über `java -jar`
+- Buildprozess:
+  - automatisierter Build über Maven
+  - Erstellung der JAR-Datei, JavaDoc und Build-Reports
+- Sprachverwaltung:
+  - Sprachdateien über `.properties`
+  - Erweiterbarkeit um zusätzliche Sprachen
+- Branding / CI-Anpassung:
+  - Anpassung von Farben, Logos und Airline-Name über den `BrandingService`
+- Fehlerausgabe:
+  - Laufzeitfehler werden über Konsole bzw. Standardausgabe ausgegeben
+  - kein separates Monitoring-System vorgesehen
+- Datenschutz / Sicherheit:
+  - keine Verarbeitung oder Speicherung personenbezogener Daten
+  - vollständiger Offline-Betrieb
 
 **Form**
 - PDF
+- Markdown
 
 ### 6.3 Entwicklerdokumentation
 
 **Zielgruppe:** Entwicklerteam (Weiterentwicklung, Bugfixing, Erweiterung).
 
 **Inhalte:**
-- Projektüberblick und Architektur, inklusive Module, Schichten und Verantwortlichkeiten
-- Build und Ausführung, inklusive Build-Tool, Build-Kommandos, Erzeugung des JAR
-- Teststrategie und Testausführung: dokumentierte manuelle Tests
-- Erweiterbarkeit, insbesondere Integration neuer Spiele in die Menüführung, Internationalisierung über String-Ressourcen und Branding über austauschbare Assets
-- Coding Standards und Konventionen mit Verweis auf die im Repository festgelegten Code Conventions
-- UML-Artefakte, darunter Use-Case-Diagramm, Klassendiagramm und weitere Diagramme,
-- API-Dokumentation als Javadoc-HTML-Ausgabe
+- Projektüberblick und Systemarchitektur
+- Beschreibung der Package-Struktur:
+  - `FourConnect`
+  - `GameCore`
+  - `Infrastructure`
+  - `UIController`
+  - `UIFourConnectController`
+- Trennung von Benutzeroberfläche, Controller und Spiellogik
+- Build- und Ausführungsprozess über Maven
+- Beschreibung der verwendeten Plugins und Frameworks:
+  - JavaFX
+  - JUnit
+  - JaCoCo
+  - Maven Shade
+  - ProGuard
+- Teststrategie und Testausführung
+- automatisierte Testdurchführung über Maven
+- Generierung von Code-Coverage-Reports
+- Erweiterbarkeit:
+  - Integration neuer Spiele
+  - zusätzliche Sprachdateien
+  - Branding-/Theme-Anpassungen
+- UML-Artefakte:
+  - Use-Case-Diagramm
+  - Aktivitätsdiagramme
+  - Klassendiagramm
+- API-Dokumentation als generierte Javadoc-HTML-Ausgabe
+- Beschreibung der Build- und Deploymentstruktur
 
 **Form**
 - PDF
+- Markdown
 - HTML (Javadoc)
 - PDF/SVG (UML-Exporte)
 
@@ -398,11 +453,14 @@ Stattdessen wird für die Demo eine kurze README bereitgestellt, die ausschließ
 
 Die folgenden Dokumente sind Bestandteil des Repositories und werden im Release mit ausgeliefert bzw. referenziert:
 
-- Lastenheft des AG
+- Lastenheft des Auftraggebers
 - projektbegleitender Bericht und Protokolle
 - UML-Modelle und Diagramme
 - Build- und Deploymentanweisungen
 - Code Conventions
+- README-Dateien
+- Coverage-Reports
+- JavaDoc-Dokumentation
 
 ---
 
@@ -530,14 +588,20 @@ Die folgenden Meilensteine beschreiben den geplanten Ablauf über 16 Wochen. Zei
 
 ### 7.4 Qualitätssicherung und Tests
 
-Die Qualitätssicherung erfolgt begleitend während der Entwicklung durch:
+Die Qualitätssicherung erfolgt entwicklungsbegleitend während aller Projektphasen.
 
-- Reviews der Änderungen zur Sicherstellung von Lesbarkeit und Korrektheit
-- Manuelle, dokumentierte Tests der zentralen Anwendungsfälle
-- Tests auf der Zielumgebung/Dev-Kit, um IFE-spezifisches Verhalten zuverlässig zu prüfen
-  - Start/Beenden
-  - Eingaben
-  - Offline-Betrieb
+Zur Sicherstellung von Stabilität, Wartbarkeit und Nachvollziehbarkeit werden folgende Maßnahmen eingesetzt:
+
+- Versionsverwaltung über Git und GitHub
+- Entwicklung neuer Funktionen in Feature-Branches
+- Reviews und Freigaben über Pull-/Merge-Requests
+- Einhaltung definierter Code Conventions
+- Automatisierte Unit-Tests über JUnit
+- Überwachung der Testabdeckung mit JaCoCo
+- Regelmäßige Tests auf der Zielumgebung bzw. dem Dev-Kit
+- Dokumentierte manuelle Funktionstests zentraler Anwendungsfälle
+
+Die Build- und Testprozesse werden über Maven automatisiert ausgeführt. Fehler, Risiken und Änderungswünsche werden über Issues dokumentiert und priorisiert.
 
 ### 7.5 Konfigurations- und Änderungsmanagement
 
@@ -569,12 +633,11 @@ Die Anwendung wird innerhalb des bestehenden IFE betrieben. Der Betrieb erfolgt 
 
 An die Hardware und Orgware der Zielumgebung bestehen keine besonderen Anforderungen über die vorhandene IFE-Standardumgebung hinaus (z. B. Sitzmonitor/Touch bzw. Maus-/Remote-Bedienung). Die Anwendung ist ressourcenschonend ausgelegt und nutzt keine zusätzliche Peripherie.
 
-Die Anwendung läuft in der vom IFE vorgegebenen Java 21-LTS Runtime.   
-
+Die Anwendung läuft innerhalb der vom IFE vorgegebenen Java-21-LTS-Runtime.
 
 ### 8.2 Tooling- und Versionsübersicht
 
-Die folgenden Werkzeuge werden im Projekt eingesetzt. 
+Die folgenden Werkzeuge werden im Projekt eingesetzt.
 
 #### 8.2.1 Implementierung und Laufzeit
 
@@ -585,8 +648,7 @@ Die folgenden Werkzeuge werden im Projekt eingesetzt.
 | UI-Framework | JavaFX | 21.0.2 |
 | UI-Designer | SceneBuilder | 21.0.0 |
 | IDE | Eclipse IDE for Enterprise Java and Web Developers | 2025-09 |
-| IDE | IntelliJ IDEA | 2025.2.6.x |
-| IDE | Visual Studio Code | 1.108.1 |
+| IDE | IntelliJ IDEA Community Edition | 2025.2.6.x |
 
 #### 8.2.2 Versionsverwaltung und Kollaboration
 
@@ -600,60 +662,96 @@ Die folgenden Werkzeuge werden im Projekt eingesetzt.
 
 | Bereich | Werkzeug | Version / Stand |
 |--------|----------|-----------------|
-| Diagramme (PlantUML) | PlantUML Extension (VS Code) | 2.18.1|
+| Diagramme (PlantUML) | PlantUML Extension (VS Code) | 2.18.1 |
 | Modellierung/UML | Software Ideas Modeler | 15 |
+| API-Dokumentation | Javadoc | Bestandteil JDK 21 |
+| Testabdeckung | JaCoCo | 0.8.11 |
+| Testausführung | Maven Surefire Plugin | 3.2.5 |
 | Code-Konvention | Oracle Java Code Conventions | Vorgabe |
 
 #### 8.2.4 UI/UX, Prototyping und Layout 
 
 | Bereich | Werkzeug | Version / Stand |
 |--------|----------|-----------------|
-| UI-Grafiken & Icons | Adobe Illustrator (Creative Cloud) | Illustrator 30 |
-| Wireframes & Prototypen | Adobe XD (Creative Cloud) | XD 58 |
+| Wireframes | PlantUML Extension (VS Code) | 2.18.1 |
+| Prototypen | Adobe XD (Creative Cloud) | XD 58 |
 | Dokumentation/Layout Abgabe | Adobe InDesign (Creative Cloud) | InDesign 21.1 |
 
 #### 8.2.5 Build/Obfuscation
 
 | Bereich | Werkzeug | Version / Stand |
 |--------|----------|-----------------|
-| Build-Tool | Maven | 3.9.12 |
-| Obfuscation | ProGuard | 7.8.2 |
+| Build-Tool | Maven | 3.9.0 |
+| Packaging | Maven Shade Plugin | 3.5.1 |
+| Obfuscation | ProGuard | 2.6.1 |
 
 ### 8.3 Modellierung, Diagramme und Ablageorte
 
 Alle Diagramm-Artefakte werden versioniert im Repository abgelegt unter:
 
-- `documentation/diagrams/`
+- `dokumente/diagrams/`
 
 #### 8.3.1 Export-Dateien (SVG)
 
 Beispiele für vorhandene Exporte:
 
-- `documentation/diagrams/4C_transparent.svg`
-- `documentation/diagrams/FourConnect_Nr2.svg`
-- `documentation/diagrams/FourConnect_Nr3.svg`
-- `documentation/diagrams/FourConnect_Nr3.2.svg`
-- `documentation/diagrams/FourConnect_Nr3.3.svg`
-- `documentation/diagrams/FourConnect_Nr3.4.svg`
-- `documentation/diagrams/FourConnect_Nr3.5.svg`
-- `documentation/diagrams/FourConnect_Nr3.6.svg`
+- `dokumente/diagrams/01_hauptmenue.svg`
+- `dokumente/diagrams/02_modusmenue.svg`
+- `dokumente/diagrams/03-06-07_spielscreen.svg`
+- `dokumente/diagrams/03a_sprachauswahl.svg`
+- `dokumente/diagrams/04-07_ergebnis.svg`
+- `dokumente/diagrams/05_hilfe.svg`
+- `dokumente/diagrams/activity_spielrunde.svg`
+- `dokumente/diagrams/screenflow_v2.svg`
+
+Die Exportdateien werden als SVG und teilweise zusätzlich als PDF bereitgestellt.
 
 #### 8.3.2 Quelldateien
 
-- Modell-/UML-Quelldatei: `documentation/diagrams/PL.mdj` bearbeitet mit Software Ideas Modeler 15
-- Textbasierte Diagramme: PlantUML-Quellen werden im Repository versioniert und über VS Code (1.108.1) mit PlantUML Extension (2.18.1) gepflegt. Exporte erfolgen als SVG.
+- `.puml` für PlantUML-Diagramme
+- `.mdj` für UML-Modelle aus Software Ideas Modeler
+- `.xd` für Adobe-XD-Wireframes und UI-Prototypen
+- `.ai` für Grafiken und Logos aus Adobe Illustrator
+- `.md` für Markdown-Dokumentation
 
 ### 8.4 Build, Tests und Dokumentation
 
 #### 8.4.1 Build / Auslieferung
-Die Auslieferung erfolgt als ausführbares JAR für den Offline-Betrieb. Ein verbindliches Build-Tool Maven wird im nächsten Meilenstein eingeführt; die zugehörigen Build-Kommandos und der Artefaktpfad werden dann in diesem Kapitel ergänzt.
+Die Auslieferung erfolgt als ausführbares Fat-JAR-Datei für den Offline-Betrieb innerhalb des IFE-Systems.
+
+Der Buildprozess basiert auf Maven und wird automatisiert über folgende Werkzeuge umgesetzt:
+- maven-compiler-plugin
+- maven-surefire-plugin
+- jacoco-maven-plugin
+- maven-shade-plugin
+- proguard-maven-plugin
+
+Der vollständige Build einschließlich Tests, JavaDoc, Coverage-Reports und Packaging erfolgt über:
+
+`mvn clean site install`
+
+Die erzeugten Artefakte werden automatisiert in die vorgesehenen Ausgabeordner kopiert.
+
 ### 8.4.2 Tests
 Die Qualitätssicherung erfolgt begleitend während der Entwicklung durch:
-- Reviews der Änderungen über Pull Requests,
-- manuelle, dokumentierte Tests der zentralen Anwendungsfälle,
-- Tests auf der Zielumgebung bzw. dem Dev-Kit zur Prüfung von Start/Beenden, Eingaben und Offline-Betrieb.
+- Reviews der Änderungen über Pull Requests
+- automatisierte Unit-Tests mit JUnit
+- Code-Coverage-Auswertung über JaCoCo
+- manuelle, dokumentierte Tests der zentralen Anwendungsfälle
+- Tests auf der Zielumgebung bzw. dem Dev-Kit zur Prüfung von:
+  - Start/Beenden
+  - Eingaben
+  - Offline-Betrieb
+  - Stabilität der Benutzeroberfläche
+
 ### 8.4.3 Projektdokumentation
-Die Projektdokumentation wird im Repository gepflegt. Zusätzlich kann eine API-Dokumentation als Javadoc erzeugt werden (Tool `javadoc` aus JDK 21).
+Die Projektdokumentation wird versioniert im Repository gepflegt. 
+
+Zusätzlich werden folgende Artefakte automatisiert generiert bzw. exportiert:
+- JavaDoc-Dokumentation
+- UML-Exporte
+- Coverage-Reports
+- ausführbare Build-Artefakte
 
 ### 8.5 Konventionen und Qualitätssicherung
 
