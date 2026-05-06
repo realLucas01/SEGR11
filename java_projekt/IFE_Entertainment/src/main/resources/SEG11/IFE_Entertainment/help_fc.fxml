@@ -19,22 +19,7 @@
 
     <center>
         <VBox spacing="15" alignment="CENTER">
-            <Label text="%help.rules" wrapText="true"/>
-
-            <Label text="Kurzbeschreibung der Bedienung und Spielregeln&#10;&#10;
-„4-Connect“ ist eine digitale Umsetzung des Spiels „Vier Gewinnt“.&#10;
-Ziel des Spiels ist es, als erster Spieler vier eigene Spielsteine in einer durchgehenden Linie zu platzieren.&#10;
-Die Linie kann horizontal, vertikal oder diagonal verlaufen.&#10;&#10;
-Gespielt wird auf einem vertikal aufgebauten Spielfeld mit mehreren Spalten.&#10;
-Zwei Spieler (oder ein Spieler gegen den Computer) setzen abwechselnd jeweils einen Spielstein.&#10;
-Dabei wird durch Antippen oder Anklicken einer Spalte bestimmt, wo der Stein fallen soll.&#10;
-Der Spielstein rutscht anschließend automatisch in die tiefste freie Position der gewählten Spalte.&#10;&#10;
-Das Spiel endet, sobald ein Spieler vier Steine in einer Reihe erreicht oder das Spielfeld vollständig gefüllt ist,&#10;
-ohne dass eine Gewinnkombination entstanden ist (Unentschieden).&#10;&#10;
-Die Bedienung erfolgt vollständig über eine einfache grafische Oberfläche.&#10;
-Alle Aktionen wie Spielzug, Neustart oder Rückkehr ins Menü werden über deutlich gekennzeichnete Schaltflächen&#10;
-ausgeführt und benötigen keine zusätzlichen Eingaben."
-                   wrapText="true"/>
+            <Label text="%help.rules_game" wrapText="true"/>
         </VBox>
     </center>
 
