@@ -16,6 +16,27 @@ Perlickstraße 1
 **E-Mail:** lucasr@gervithrall-systems.de   
 **Telefon:** 0351 6482642
 
+---
+
+# Inhaltsverzeichnis
+
+1. [Einführung](1-einführung)  
+2. [Versionen und Tools / Plugins](2-versionen-und-tools-/-plugins)  
+   2.1 [Grundlegende Entwicklungsumgebung](21-grundlegende-entwicklungsumgebung)  
+   2.2 [Verwendete Plugins und Abhängigkeiten](22-verwendete-plugins-und-abhängigkeiten)  
+   2.3 [Externe Tools](23-externe-tools)  
+3. [Projektstruktur und Inhalt](3-projektstruktur-und-inhalt)  
+   3.1 [Ordnerbaum und wichtigste Ordner](31-ordnerbaum-und-wichtigste-ordner)
+   3.2 [Klassendiagramm](32-klassendiagramm)
+   3.3 [JavaDoc](33-javadoc)
+4. [Wichtigste Befehle für Build und Deployment](4-wichtigste-befehle-für-build-und-deployment)
+5. [Code Conventions](5-code-conventions)
+6. [Tests](6-tests)
+7. [Buildscript](7-buildscript)
+8. [Informationen für weitere Entwicklung](8-informationen-für-weitere-entwicklung)
+   8.1 [Programmtrennung](81-Programmtrennung)
+   8.2 [Vorgehensweise für die Erstellung eines weiteren Spiels](82-vorgehensweise-für-die-erstellung-eines-weiteren-spiels)
+
 ## 1. Einführung
 
 Diese Entwicklerdokumentation dient als zentrale technische Referenz für das Java-Projekt der Entertainment-Erweiterung „4-Connect“ im Inflight-Entertainment-System (IFE). Sie richtet sich an Entwickler, die das Projekt verstehen, erweitern oder warten möchten.
@@ -80,16 +101,16 @@ Die Bewertungen und Begründungen für die Auswahl der 11 wichtigsten Werkzeuge 
 Das Projekt wird über Git versioniert und auf GitHub verwaltet. Git ermöglicht Versionskontrolle, Branching sowie Zusammenarbeit im Team.  
 Link zum Repo: https://github.com/realLucas01/SEGR11
 
-- Adobe XD [Version trage ich noch ein]  
+- Adobe XD Version XD 58
 Wird für die Erstellung von UI-Wireframes und Design-Prototypen verwendet.
 
-- PlantUML [Version trage ich noch ein]  
+- PlantUML Version 2.18.1 
 Tool zur Erstellung von UML-Diagrammen in textbasierter Form, die versionierbar im Repository abgelegt werden.
 
 - IDE
 Die Wahl der Entwicklungsumgebung ist freigestellt. Im Projekt wurden verwendet:  
-  - Eclipse IDE [Version trage ich noch ein]  
-  - IntelliJ IDEA Community Edition [Version trage ich noch ein]  
+  - Eclipse IDE Version 2025-09  
+  - IntelliJ IDEA Version 2025.2.6.x  
 
 ## 3. Projektstruktur und Inhalt
 ### 3.1 Ordnerbaum und wichtigste Ordner  
@@ -139,7 +160,7 @@ Sie enthält detaillierte Beschreibungen aller Klassen, Methoden und Schnittstel
 
 Start des Programms aus der Konsole:
 ```
-java -jar IFE_Entertainment-[Versionsnummer]-executable.jar
+java -jar IFE_Entertainment-[Versionsnummer]-obfuscated.jar
 ```
 
 Das Programm ist mit einem automatischen Buildscript ausgestatet, das automatisch alte Builds löscht und die .jar, so wie alle 
@@ -214,7 +235,7 @@ Backend bzw. GameCore
 
 Diese Trennung ermöglicht eine bessere Wartbarkeit und erleichtert die Erweiterung des Systems.
 
-### 8.2 Vorgehensweise für ein neues Spiel
+### 8.2 Vorgehensweise für die Erstellung eines weiteren Spiels
 
 1. Erstellen von 2 neuen Packages mit folgenden benennungen:  
     - {Spielname}Controller, für die eigene Implementierung der Controller  
