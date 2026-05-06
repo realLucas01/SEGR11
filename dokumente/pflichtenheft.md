@@ -667,7 +667,7 @@ Die folgenden Werkzeuge werden im Projekt eingesetzt.
 | API-Dokumentation | Javadoc | Bestandteil JDK 21 |
 | Testabdeckung | JaCoCo | 0.8.11 |
 | Testausführung | Maven Surefire Plugin | 3.2.5 |
-| Code-Konvention | Oracle Java Code Conventions | Vorgabe |
+| Code-Konvention | Google Java Style | Vorgabe |
 
 #### 8.2.4 UI/UX, Prototyping und Layout 
 
