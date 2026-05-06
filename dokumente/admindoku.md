@@ -102,14 +102,17 @@ java_projekt/IFE_Entertainment/
 
 ### 6.1 Branding (CI-Anpassung)
 
-Das Airline-Branding wird über die Klasse `BrandingService.java` verwaltet. Folgende Eigenschaften können angepasst werden:
+Das Airline-Branding wird über die Klasse BrandingService.java verwaltet.
+Das System unterstützt verschiedene Themes, wodurch Farben und Branding je nach Airline angepasst werden können.
+
+Folgende Eigenschaften können pro Theme definiert werden:
 
 | Eigenschaft | Standardwert |
 |---|---|
-| Primärfarbe | `#1a1a2e` |
-| Sekundärfarbe | `#e94560` |
-| Logo-Pfad | `/SEG11/IFE_Entertainment/images/logo_default.png` |
-| Airline-Name | `Default Airline` |
+| Primärfarbe | `#004761` |
+| Sekundärfarbe | `#555756` |
+| Logo-Pfad | `/SEG11/IFE_Entertainment/images/logo-gervithrall-systems.png` |
+| Airline-Name | `Gervithrall Systems` |
 
 Die Themes werden innerhalb der Methode setTheme(String themeId) definiert:
 
