@@ -30,7 +30,7 @@ Im Rahmen des Projekts wird eine offlinefähige und modular erweiterbare Spieles
 ## 2. Projektplanung  
 
 Die zeitliche Planung des Projekts erfolgte anhand eines Gantt-Diagramms, welches die einzelnen Arbeitspakete sowie deren zeitliche Abfolge darstellt. Die Arbeitspakete spiegeln hier die Kategorien aus dem Dokument [Kalkulation für die Entwicklung einer Entertainment-Erweiterung speziell für IFE](/final/kalkulation.pdf) wieder.  
-<sup> *(auch hier zu finden: `final/kalkulation.pdf`)* </sup>  
+<sup> *(auch hier zu finden: `/final/kalkulation.pdf`)* </sup>  
 
 Das Gantt-Diagramm selber ist unter [hier Sektion] bzw. in der PDF-Version, aufgrund seiner Größe, der letzten Seite zu finden.  
 
