@@ -61,7 +61,7 @@ package "FourConnect"{
     - rules : FourConnectRules
     - gameBoard : FourConnectGameBoard
     - currentBranding : BrandingService
-
+    - oneBotPlayer: boolean
     - <<create>> FourConnectGame()
     + {static} getInstance() : FourConnectGame
     + getStatus() : GameState
@@ -72,7 +72,9 @@ package "FourConnect"{
     + restart() : void
     + endGame(): void
     + dropDisc(column : Integer) : GameState
+    + getOneBotPlayer(): boolean
     + playerTurn() : void
+    + playBotTurn() : GameState
     + initFourConnectGame(playerOne : Player, playerTwo : Player) : Integer
   }
 
@@ -125,9 +127,11 @@ class FourConnectBotStrategy {
   - {static} SCORE_BOT_FOUR: int
   - {static} SCORE_BOT_THREE: int
   - {static} SCORE_BOT_TWO: int
+  - {static} SCORE_BOT_ONE: int
   - {static} SCORE_OPP_FOUR: int
   - {static} SCORE_OPP_THREE: int
   - {static} SCORE_OPP_TWO: int
+  - {static} SCORE_OPP_ONE: int
   - {static} MINIMAX_DEPTH: int
   + FourConnectBotStrategy(game: FourConnectGame, rules: FourConnectRules)
   ~ appraiseBoard(board: FourConnectGameBoard): Integer
@@ -145,6 +149,7 @@ class FourConnectBotStrategy {
     - findValideTurns(board: FourConnectGameBoard): List<Position>
     - playTestTurn(board: FourConnectGameBoard, turn: Position, bot: Player): void
     - undoTestTurn(board: FourConnectGameBoard, turn: Position): void
+    - findBotPlayerPosition(players: FourConnectPlayer[]): Integer
   }
 
   enum GameMode <<enumeration>> {
