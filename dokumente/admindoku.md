@@ -34,7 +34,7 @@ Perlickstraße 1
 ---
 ## 1. Übersicht
 
-IFE Entertainment ist eine offlinefähige Spieleapplikation zur Erweiterung des Inflight-Entertainment-Systems (IFE) von Novaris Cabin Systems GmbH. Die Anwendung wird auf den Sitzmonitoren der Passagiere betrieben und bietet aktuell das Spiel Vier Gewinnt an.
+IFE Entertainment ist eine offlinefähige Spieleapplikation zur Erweiterung des Inflight-Entertainment-Systems (IFE) von Novaris Cabin Systems GmbH. Die Anwendung wird auf den Sitzmonitoren der Passagiere betrieben und bietet aktuell das Spiel "Vier Gewinnt" an.
 
 ---
 
@@ -42,7 +42,7 @@ IFE Entertainment ist eine offlinefähige Spieleapplikation zur Erweiterung des 
 
 - Java 21 LTS (21.0.x)
 - JavaFX 21.0.2
-- Maven 3.9.x
+- Maven 3.9.15
 - Keine Netzwerkverbindung erforderlich - vollständiger Offline-Betrieb
 - Keine zusätzliche Peripherie erforderlich - Touch oder Mausbedienung
 ---
@@ -53,7 +53,7 @@ Das Programm wird als ausführbare Fat-JAR-Datei ausgeliefert. Diese enthält de
 
 ### Programmstart
 ```
-java -jar IFE_Entertainment.jar
+IFE_Entertainment-[Versionsnummer]-obfuscated.ja
 ```
 ---
 
@@ -70,14 +70,14 @@ Dieser Befehl führt folgende Schritte automatisch aus:
 1. **Qualitätssicherung** - JUnit Tests werden automatisch ausgeführt
 2. **Code Coverage** - JaCoCo misst die Testabdeckung und erstellt Berichte
 3. **Fat-JAR** - Code und alle JavaFX-Bibliotheken werden zu einer ausführbaren JAR zusammengepackt
-4. **Auto Copy** - Die fertige JAR sowie JavaDocs und Coverage-Berichte werden automatisch in die vorgesehenen Ausgabeordner kopiert
+4. **Auto Copy** - Die fertige JAR sowie JavaDocs und Coverage-Berichte werden automatisch in den `final/` Ordner kopiert
+
 
 **Ausgaben nach dem Build:**
 
-- Die fertige JAR-Datei liegt nicht im `target/` Ordner sondern wird automatisch in einen konfigurierten Ausgabeordner kopiert
-- JavaDocs und Coverage-Berichte werden ebenfalls automatisch kopiert
-- Zum Öffnen der Berichte die jeweilige `index.html` im Ausgabeordner starten
-
+- Die fertige JAR-Datei liegt sowohl im `target/` Ordner als auch im `final/` Ordner
+- JavaDocs und Coverage-Berichte liegen ebenfalls im `final/` Ordner
+- Zum Öffnen der Berichte die jeweilige `index.html` im `final/` Ordner starten
 ---
 ## 5. Projektstruktur
 ```
@@ -95,6 +95,7 @@ java_projekt/IFE_Entertainment/
 │   │       └── SEG11/IFE_Entertainment/ - FXML-Dateien und CSS
 │   └── test/                            - Unit Tests
 └── pom.xml
+└──proguard.config
 ```
 ---
 ## 6. Konfiguration
@@ -155,7 +156,6 @@ Unit Tests und Code Coverage werden bei jedem Build automatisch ausgeführt. Der
 ## 8. Bekannte Einschränkungen
 
 - Die `setTheme()` Methode in `BrandingService` ist noch nicht implementiert
-- Code Coverage per JaCoCo ist noch nicht aktiv konfiguriert
 ---
 
 ## 9. Fehlerbehebung
