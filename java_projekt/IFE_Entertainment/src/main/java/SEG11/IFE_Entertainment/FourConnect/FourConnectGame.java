@@ -31,7 +31,8 @@ import SEG11.IFE_Entertainment.Infrastructure.BrandingService;
  * <p>Implementiert dabei {@link IGame} und seine Funktionen, und stellt
  * zusätzliche Funktionen für alle Phasen des Spielablaufs bereit.
  * 
- * @implNote  IGame<FourConnectGameBoard> der generische Datentyp wurde auf die von uns
+ * @author Lucas Rumann
+ * @param <FourConnectGameBoard> Der generische Datentyp wurde auf die von uns
  *                               implementierte Version des Interface
  *                               {@link IPlayArea} konkretisiert
  */

@@ -23,6 +23,8 @@ import java.util.*;
 
 /**
  * Das "Vier Gewinnt" Spielfeld
+ * 
+ * @author Luca Tauscher
  */
 public class FourConnectGameBoard implements IPlayArea {
   /** Die Anzahl der Zeilen, Standard: 6 */

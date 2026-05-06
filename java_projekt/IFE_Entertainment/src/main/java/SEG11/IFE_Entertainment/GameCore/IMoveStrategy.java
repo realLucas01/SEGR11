@@ -21,6 +21,8 @@ package SEG11.IFE_Entertainment.GameCore;
  * Das Interface für die Logik der Bot Gegner
  *
  * <p>Ist für die Klasse zu implementieren, die die gesamte Logik für das autonome agieren eines Bot Gegners.
+ * 
+ * @author Luca Tauscher
  */
 public interface IMoveStrategy {
 

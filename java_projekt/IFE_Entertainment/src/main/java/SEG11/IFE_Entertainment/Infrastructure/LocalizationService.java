@@ -28,6 +28,8 @@ import java.util.ResourceBundle;
  * <p>Lädt Texte aus den entsprechenden Properties-Dateien basierend auf der
  * aktuell eingestellten Sprache. Wird als Singleton implementiert,
  * sodass nur eine Instanz global zugänglich ist.
+ * 
+ * @author Truong Tan Long Nguyen
  */
 public class LocalizationService {
 

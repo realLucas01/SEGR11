@@ -24,6 +24,8 @@ import java.io.IOException;
  * Interface für den EndScreen Controller.
  *
  * <p>Definiert die Funktionen des EndScreens nach Spielende.
+ * 
+ * @author Truong Tan Long Nguyen
  */
 public interface EndScreenController {
 

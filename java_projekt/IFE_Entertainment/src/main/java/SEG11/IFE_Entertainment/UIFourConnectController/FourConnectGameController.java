@@ -37,6 +37,8 @@ import javafx.util.Duration;
  *
  * <p>Verbindet die Spiellogik mit der Benutzeroberfläche. Verwaltet das
  * Spielfeld, verarbeitet Eingaben des Spielers und aktualisiert die Anzeige.
+ * 
+ * @author Truong Tan Long Nguyen
  */
 public class FourConnectGameController implements GameController {
 

@@ -26,6 +26,7 @@ package SEG11.IFE_Entertainment.GameCore;
  * Überprüfung der Spielzüge auf Konformität mit dem jeweiligen Regelwerk
  * beherbergt
  * 
+ * @author Lucas Rumann
  * @param <IPlayAreaT> Ist bei der Implementierung des Interface mit der eigenen
  *                     Implementierung von {@link IPlayArea} zu konkretisieren
  * @param <PlayerT>    Ist bei der Implementierung des Interface mit der eigenen

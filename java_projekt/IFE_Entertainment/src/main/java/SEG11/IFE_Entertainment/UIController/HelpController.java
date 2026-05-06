@@ -24,6 +24,8 @@ import java.io.IOException;
  * Interface für den Hilfe-Screen Controller.
  *
  * <p>Definiert die Navigation vom Hilfe-Screen zurück zum vorherigen Screen.
+ * 
+ * @author Truong Tan Long Nguyen
  */
 public interface HelpController {
 

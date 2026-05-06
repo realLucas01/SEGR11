@@ -21,6 +21,8 @@ import java.util.Objects;
 
 /**
  * Die Position, welche für das Spielfeld genutzt werden, um die Zellen darzustellen
+ * 
+ * @author Luca Tauscher
  */
 public class Position {
   private final Integer x;

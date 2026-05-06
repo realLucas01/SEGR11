@@ -23,9 +23,10 @@ package SEG11.IFE_Entertainment.GameCore;
  *
  * <p>Ist für die Klasse zu implementieren, die die gesamte Logik für die
  * Verwaltung des Spielbretts beherbergt, also z.B.: das Initialisieren des
- * Spielbretts und das zur Verfügungsstelle von Funktionen um auf einzelne
+ * Spielbretts und das zur Verfügungstellen von Funktionen um auf einzelne
  * Zellen oder Werte zuzugreifen und diese zu verändern
- *
+ * 
+ * @author Lucas Rumann
  */
 public interface IPlayArea {
 

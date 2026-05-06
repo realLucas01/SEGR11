@@ -28,10 +28,11 @@ import SEG11.IFE_Entertainment.GameCore.IRuleSet;
  * 
  * <p>Implementiert dabei {@link IRuleSet} und seine Funktionen
  * 
- * @implNote   <FourConnectGameBoard> Der generische Datentyp {@link IRuleSet IPlayAreaT}
+ * @author Lucas Rumann
+ * @param <FourConnectGameBoard> Der generische Datentyp {@link IRuleSet#IPlayAreaT}
  *                               wurde auf die von uns implementierte Version
  *                               des Interface {@link IPlayArea} konkretisiert
- * @implNote <FourConnectPlayer>    Der generische Datentyp {@link IRuleSet PlayerT} wurde
+ * @param <FourConnectPlayer>    Der generische Datentyp {@link IRuleSet PlayerT} wurde
  *                               auf die von unserem implementierung des Spielers
  *                               konkretisiert
  * 

@@ -26,6 +26,7 @@ package SEG11.IFE_Entertainment.GameCore;
  * und die Verwaltung des Spieles beherbergt, also in der neuen Spiele
  * initialisiert werden, Züge ausgeführt werden usw
  * 
+ * @author Lucas Rumann
  * @param <IPlayAreaT> Ist bei der Implementierung des Interface mit der eigenen
  *                     Implementierung von {@link IPlayArea} zu konkretisieren
  */

@@ -21,6 +21,8 @@ package SEG11.IFE_Entertainment.GameCore;
 
 /**
  * Enum zur Identifizierung des aktuellen Zustands des Spiels
+ * 
+ * @author Lucas Rumann
  */
 public enum GameState {
 	/**

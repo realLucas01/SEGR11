@@ -36,7 +36,8 @@ import java.security.SecureRandom;
  *
  * <p>{@link EasyBotStrategy} - wählt zufällig eine gültige Spalte
  * <p>{@link HardBotStrategy} - berechnet den besten Zug per MinMax
- *
+ * 
+ * @author Luca Tauscher
  */
 public class FourConnectBotStrategy implements IMoveStrategy {
 
