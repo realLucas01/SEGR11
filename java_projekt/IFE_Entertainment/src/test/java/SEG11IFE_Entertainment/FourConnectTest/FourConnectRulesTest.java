@@ -1,141 +1,150 @@
 package SEG11IFE_Entertainment.FourConnectTest;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
-import SEG11.IFE_Entertainment.FourConnect.FourConnectGameBoard;
-import SEG11.IFE_Entertainment.FourConnect.FourConnectPlayer;
-import SEG11.IFE_Entertainment.FourConnect.FourConnectRules;
-import SEG11.IFE_Entertainment.FourConnect.Player;
-import SEG11.IFE_Entertainment.FourConnect.Position;
-
+import SEG11.IFE_Entertainment.FourConnect.*;
 import org.junit.jupiter.api.Test;
 
 /**
- * Test class for FourConnectRules.
+ * Unit Tests für FourConnectRules
+ * Fokus: vollständige Abdeckung aller Win-/Tie-Logiken inkl. Edge Cases
  */
 class FourConnectRulesTest {
 
-    /**
-     * Creates a standard game board.
-     */
     private FourConnectGameBoard createBoard() {
-        return new FourConnectGameBoard(); // FIX: kein Konstruktor mit Parametern
+        return new FourConnectGameBoard();
     }
 
-    /**
-     * Hilfsmethode zum Setzen einer Scheibe
-     */
-    private void place(FourConnectGameBoard board, int x, int y, FourConnectPlayer player) {
-        board.setCellValue(new Position(x, y), player); // FIX: richtige Methode
+    private FourConnectPlayer human() {
+        return new FourConnectPlayer(Player.HUMAN, null, null);
     }
 
-    /**
-     * Horizontal win condition test.
-     */
+    private FourConnectPlayer bot() {
+        return new FourConnectPlayer(Player.HARDBOT, null, null);
+    }
+
+    private void place(FourConnectGameBoard board, int x, int y, FourConnectPlayer p) {
+        board.setCellValue(new Position(x, y), p);
+    }
+
+    // ---------------------------
+    // WIN TESTS
+    // ---------------------------
+
     @Test
-    void testHorizontalWin() {
+    void horizontalWin_detected() {
         FourConnectRules rules = new FourConnectRules();
         FourConnectGameBoard board = createBoard();
-        FourConnectPlayer player = new FourConnectPlayer(Player.HUMAN, null, null);
+        FourConnectPlayer p = human();
 
-        place(board, 0, 0, player);
-        place(board, 1, 0, player);
-        place(board, 2, 0, player);
-        place(board, 3, 0, player);
+        place(board, 0, 0, p);
+        place(board, 1, 0, p);
+        place(board, 2, 0, p);
+        place(board, 3, 0, p);
 
-        assertTrue(rules.checkWin(board, player));
+        assertTrue(rules.checkWin(board, p));
     }
 
-    /**
-     * Vertical win condition test.
-     */
     @Test
-    void testVerticalWin() {
+    void verticalWin_detected() {
         FourConnectRules rules = new FourConnectRules();
         FourConnectGameBoard board = createBoard();
-        FourConnectPlayer player = new FourConnectPlayer(Player.HUMAN, null, null);
+        FourConnectPlayer p = human();
 
-        place(board, 0, 0, player);
-        place(board, 0, 1, player);
-        place(board, 0, 2, player);
-        place(board, 0, 3, player);
+        place(board, 0, 0, p);
+        place(board, 0, 1, p);
+        place(board, 0, 2, p);
+        place(board, 0, 3, p);
 
-        assertTrue(rules.checkWin(board, player));
+        assertTrue(rules.checkWin(board, p));
     }
 
-    /**
-     * Diagonal win (↘)
-     */
     @Test
-    void testDiagonalWinLeftToRight() {
+    void diagonalDownRightWin_detected() {
         FourConnectRules rules = new FourConnectRules();
         FourConnectGameBoard board = createBoard();
-        FourConnectPlayer player = new FourConnectPlayer(Player.HUMAN, null, null);
+        FourConnectPlayer p = human();
 
-        place(board, 0, 0, player);
-        place(board, 1, 1, player);
-        place(board, 2, 2, player);
-        place(board, 3, 3, player);
+        place(board, 0, 0, p);
+        place(board, 1, 1, p);
+        place(board, 2, 2, p);
+        place(board, 3, 3, p);
 
-        assertTrue(rules.checkWin(board, player));
+        assertTrue(rules.checkWin(board, p));
     }
 
-    /**
-     * Diagonal win (↙)
-     */
     @Test
-    void testDiagonalWinRightToLeft() {
+    void diagonalDownLeftWin_detected() {
         FourConnectRules rules = new FourConnectRules();
         FourConnectGameBoard board = createBoard();
-        FourConnectPlayer player = new FourConnectPlayer(Player.HUMAN, null, null);
+        FourConnectPlayer p = human();
 
-        place(board, 3, 0, player);
-        place(board, 2, 1, player);
-        place(board, 1, 2, player);
-        place(board, 0, 3, player);
+        place(board, 3, 0, p);
+        place(board, 2, 1, p);
+        place(board, 1, 2, p);
+        place(board, 0, 3, p);
 
-        assertTrue(rules.checkWin(board, player));
+        assertTrue(rules.checkWin(board, p));
     }
 
-    /**
-     * No win condition.
-     */
+    // ---------------------------
+    // NEGATIVE CASES
+    // ---------------------------
+
     @Test
-    void testNoWin() {
+    void noWin_whenInterruptedLine() {
         FourConnectRules rules = new FourConnectRules();
         FourConnectGameBoard board = createBoard();
-        FourConnectPlayer player = new FourConnectPlayer(Player.HUMAN, null, null);
+        FourConnectPlayer p = human();
+        FourConnectPlayer enemy = bot();
 
-        place(board, 0, 0, player);
-        place(board, 1, 0, player);
-        place(board, 2, 0, player);
+        place(board, 0, 0, p);
+        place(board, 1, 0, p);
+        place(board, 2, 0, enemy); // blockiert
+        place(board, 3, 0, p);
 
-        assertFalse(rules.checkWin(board, player));
+        assertFalse(rules.checkWin(board, p));
     }
 
-    /**
-     * Tie condition (board full).
-     */
     @Test
-    void testTie() {
+    void noWin_insufficientPieces() {
+        FourConnectRules rules = new FourConnectRules();
+        FourConnectGameBoard board = createBoard();
+        FourConnectPlayer p = human();
+
+        place(board, 0, 0, p);
+        place(board, 1, 0, p);
+        place(board, 2, 0, p);
+
+        assertFalse(rules.checkWin(board, p));
+    }
+
+    // ---------------------------
+    // TIE TESTS
+    // ---------------------------
+
+    @Test
+    void tie_detected_whenBoardFull() {
         FourConnectRules rules = new FourConnectRules();
         FourConnectGameBoard board = createBoard();
 
-        FourConnectPlayer player1 = new FourConnectPlayer(Player.HUMAN, null, null);
-        FourConnectPlayer player2 = new FourConnectPlayer(Player.HARDBOT, null, null);
+        FourConnectPlayer p1 = human();
+        FourConnectPlayer p2 = bot();
 
-        // Board komplett füllen
         for (int x = 0; x < board.getColumns(); x++) {
             for (int y = 0; y < board.getRows(); y++) {
-                if ((x + y) % 2 == 0) {
-                    place(board, x, y, player1);
-                } else {
-                    place(board, x, y, player2);
-                }
+                place(board, x, y, (x + y) % 2 == 0 ? p1 : p2);
             }
         }
 
         assertTrue(rules.checkTie(board));
+    }
+
+    @Test
+    void tie_false_whenBoardNotFull() {
+        FourConnectRules rules = new FourConnectRules();
+        FourConnectGameBoard board = createBoard();
+
+        assertFalse(rules.checkTie(board));
     }
 }

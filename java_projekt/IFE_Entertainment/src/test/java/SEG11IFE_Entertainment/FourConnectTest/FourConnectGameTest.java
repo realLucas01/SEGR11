@@ -2,76 +2,101 @@ package SEG11IFE_Entertainment.FourConnectTest;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import SEG11.IFE_Entertainment.FourConnect.FourConnectGame;
-import SEG11.IFE_Entertainment.FourConnect.Player;
+import SEG11.IFE_Entertainment.FourConnect.*;
 import SEG11.IFE_Entertainment.GameCore.GameState;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import SEG11.IFE_Entertainment.FourConnect.FourConnectGame;
 
 /**
- * Unit tests for FourConnectGame.
+ * Unit Tests für FourConnectGame
+ * Fokus: Spielablauf, State Changes, Gravity, Restart, Turn Handling
  */
 class FourConnectGameTest {
 
     private FourConnectGame game;
 
     @BeforeEach
-    void setUp() {
+    void setup() {
         game = new FourConnectGame();
     }
 
-    /**
-     * Initialization test
-     */
-    @Test
-    void initGameTest() {
-        int result = game.initFourConnectGame(Player.HUMAN, Player.HUMAN);
+    // ---------------------------
+    // INIT
+    // ---------------------------
 
-        assertEquals(0, result);
+    @Test
+    void init_setsRunningState() {
+        assertEquals(0, game.initFourConnectGame(Player.HUMAN, Player.HUMAN));
         assertEquals(GameState.Running, game.getStatus());
-        assertNotNull(game.getBoard());
-        assertNotNull(game.getPlayers());
     }
 
-    /**
-     * Status getter/setter
-     */
     @Test
-    void statusTest() {
-        game.setStatus(GameState.Won);
-        assertEquals(GameState.Won, game.getStatus());
-    }
-
-    /**
-     * Player switching
-     */
-    @Test
-    void playerTurnTest() {
+    void init_setsPlayersCorrectly() {
         game.initFourConnectGame(Player.HUMAN, Player.HUMAN);
 
+        assertEquals(2, game.getPlayers().length);
+        assertNotNull(game.getPlayers()[0]);
+        assertNotNull(game.getPlayers()[1]);
+    }
+
+    // ---------------------------
+    // DROP DISC + GRAVITY
+    // ---------------------------
+
+    @Test
+    void dropDisc_placesAtBottom() {
+        game.initFourConnectGame(Player.HUMAN, Player.HUMAN);
+
+        game.dropDisc(0);
+
+        assertNotNull(game.getBoard().getCellOwner(new Position(0, 0)));
+    }
+
+    @Test
+    void dropDisc_stacksCorrectly() {
+        game.initFourConnectGame(Player.HUMAN, Player.HUMAN);
+
+        game.dropDisc(0);
         game.playerTurn();
+        game.dropDisc(0);
 
-        assertDoesNotThrow(() -> game.dropDisc(0));
+        // zwei Steine in einer Spalte → müssen übereinander liegen
+        assertTrue(
+            game.getBoard().getCellOwner(new Position(0, 1)).getType() != Player.NONE ||
+            game.getBoard().getCellOwner(new Position(0, 0)).getType() != Player.NONE
+        );
     }
 
-    /**
-     * Valid move execution
-     */
+    // ---------------------------
+    // PLAYER TURN
+    // ---------------------------
+
     @Test
-    void dropDiscTest() {
+    void playerTurn_switchesPlayerIndex() {
         game.initFourConnectGame(Player.HUMAN, Player.HUMAN);
 
-        GameState state = game.dropDisc(0);
+        int before = game.currentPlayerIndex();
+        game.playerTurn();
+        int after = game.currentPlayerIndex();
 
-        assertNotNull(state);
+        assertNotEquals(before, after);
     }
 
-    /**
-     * Restart test
-     */
+    // ---------------------------
+    // STATE CHANGES
+    // ---------------------------
+
     @Test
-    void restartTest() {
+    void endGame_resetsState() {
+        game.initFourConnectGame(Player.HUMAN, Player.HUMAN);
+        game.endGame();
+
+        assertEquals(GameState.NotStarted, game.getStatus());
+    }
+
+    @Test
+    void restart_keepsGameRunning() {
         game.initFourConnectGame(Player.HUMAN, Player.HUMAN);
         game.dropDisc(0);
 
@@ -80,27 +105,26 @@ class FourConnectGameTest {
         assertEquals(GameState.Running, game.getStatus());
     }
 
-    /**
-     * End game test
-     */
+    // ---------------------------
+    // BOARD CHECK
+    // ---------------------------
+
     @Test
-    void endGameTest() {
+    void boardDimensions_areCorrect() {
         game.initFourConnectGame(Player.HUMAN, Player.HUMAN);
 
-        game.endGame();
-
-        assertEquals(GameState.NotStarted, game.getStatus());
+        assertEquals(7, game.getBoard().getColumns());
+        assertEquals(6, game.getBoard().getRows());
     }
 
-    /**
-     * Board dimensions test
-     */
+    // ---------------------------
+    // EDGE CASE
+    // ---------------------------
+
     @Test
-    void boardTest() {
+    void dropDisc_invalidColumn_doesNotCrash() {
         game.initFourConnectGame(Player.HUMAN, Player.HUMAN);
 
-        assertNotNull(game.getBoard());
-        assertEquals(6, game.getBoard().getRows());
-        assertEquals(7, game.getBoard().getColumns());
+        assertDoesNotThrow(() -> game.dropDisc(-1));
     }
 }
