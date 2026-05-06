@@ -18,19 +18,24 @@
  */
 package SEG11.IFE_Entertainment.UIController;
 
+import SEG11.IFE_Entertainment.App;
+import javafx.fxml.FXML;
 import java.io.IOException;
 
 /**
- * Interface für den Hilfe-Screen Controller.
+ * Controller für die allgemeine Hilfe-Seite im Hauptmenü.
  *
- * <p>Definiert die Navigation vom Hilfe-Screen zurück zum vorherigen Screen.
+ * <p>Stellt die Navigation zurück zum Hauptmenü bereit.
  */
-public interface HelpController {
+public class MainHelpController {
 
     /**
-     * Navigiert zurück zum vorherigen Screen.
+     * Navigiert zurück zum Hauptmenü.
      *
      * @throws IOException falls die FXML-Datei nicht geladen werden kann
      */
-    void backToGameScreen() throws IOException;
+    @FXML
+    public void backToMainMenu() throws IOException {
+        App.setRoot("MainMenu");
+    }
 }

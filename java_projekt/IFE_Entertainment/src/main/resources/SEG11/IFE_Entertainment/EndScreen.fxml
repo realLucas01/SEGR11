@@ -7,21 +7,17 @@
 
 <BorderPane xmlns="http://javafx.com/javafx/21.0.2"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="SEG11.IFE_Entertainment.UIGameController.FourConnectGameController"
-			stylesheets="@style.css" styleClass="end-screen-root">
-
+            fx:controller="SEG11.IFE_Entertainment.UIFourConnectController.FourConnectEndScreenController"
+            stylesheets="@style.css">
 
     <center>
         <VBox alignment="CENTER" spacing="20">
-
+        		<!-- Label wer gewonnen hat: Zeigt an wer der Gewinner der Runde ist -->
             <Label fx:id="resultLabel" styleClass="title"/>
-			
-			<!-- Nochmal Spielen -->
-            <Button text="Play Again" onAction="#restartGame" styleClass="button-secondary"/>
-            
-            <!-- Zurück zum Main Menü -->
-            <Button text="Main Menu" onAction="#backToMainMenu" styleClass="button-secondary"/>	
-
+            <!-- Spiel Restart -->
+            <Button text="%menu.newRound" onAction="#restartGame"/>
+            <!-- Back to Main Menü -->
+            <Button text="%menu.back" onAction="#backToMainMenu"/>
         </VBox>
     </center>
 

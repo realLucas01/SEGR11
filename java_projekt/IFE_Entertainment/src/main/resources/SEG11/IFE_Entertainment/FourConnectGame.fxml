@@ -1,55 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
 
 <BorderPane xmlns="http://javafx.com/javafx/21.0.2"
-            xmlns:fx="http://javafx.com/javafx/1"
-            fx:controller="SEG11.IFE_Entertainment.UIGameController.FourConnectGameController"
-            stylesheets="@style.css" styleClass="game-root">
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="SEG11.IFE_Entertainment.UIFourConnectController.FourConnectGameController"
+            stylesheets="@style.css">
 
+	<top>
+		<Label text="%game.title" styleClass="title" BorderPane.alignment="CENTER"/>
+	</top>
 
+	<center>
+		<VBox alignment="CENTER" spacing="20">
+			
+			<!-- Zeigt den aktuellen "Turn" an also wer gerade am Zug ist (aktuell drann ist) -->
+			<HBox fx:id="turnBox" spacing="10" alignment="CENTER" styleClass="turn-box">
+				<Label text="%game.turn" styleClass="turn-title"/>
+				<Label fx:id="statusLabel" text="" styleClass="turn-value"/>
+			</HBox>
 
-			<!-- Titel -->
-    <top>
-        <Label text="Four Connect" styleClass="title"/>
-    </top>
-
-
-			<!-- Spielfeld mit Back to Main Menü Button -->
-    <center>
-        <VBox spacing="20" alignment="CENTER" >
-
-            <GridPane fx:id="gridPane" hgap="5" vgap="5"/>
-
-			<HBox spacing="15" alignment="CENTER" styleClass="game-button-bar">
-            <Button text="Restart"
-            		prefWidth="150"
+			<GridPane fx:id="gridPane" hgap="5" vgap="5" alignment="CENTER"/>
+			
+			<!-- Setzt das Grid zurück -->
+			<Button text="%menu.restart"
 			        onAction="#restartGame"
-			        styleClass="button-secondary"/>
-
-			<Button text="Help"
-					prefWidth="150"
+			        styleClass="main-button"/>
+			<!-- Zeigt die Hilfe Seite an -->
+			<Button text="%menu.help"
 			        onAction="#openHelp"
-			        styleClass="button-secondary"/>
-			        
-            <Button text="Mainmenu"
-        			prefWidth="150"
-        			onAction="#backToMainMenu"
-        			styleClass="button-secondary"/>
-        	</HBox>
+			        styleClass="main-button"/>
+			<!-- Kehrt zurück zum Hauptmenü zurück -->
+			<Button text="%menu.back"
+			        onAction="#backToMainMenu"
+			        styleClass="main-button"/>
 
-        </VBox>
-    </center>
-
-
-			<!-- Status Label also wer ist drann oder so... Muss aber nicht sein -->
-    <bottom>
-        <Label fx:id="statusLabel" styleClass="status-label"/>
-    </bottom>
+		</VBox>
+	</center>
 
 </BorderPane>

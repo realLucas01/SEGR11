@@ -6,38 +6,29 @@
 <?import javafx.scene.control.Label?>
 
 <BorderPane xmlns="http://javafx.com/javafx/21.0.2"
-            xmlns:fx="http://javafx.com/javafx/1"
-            fx:controller="SEG11.IFE_Entertainment.UIController.ModeMenuController"
-            stylesheets="@style.css" styleClass="mode-menu-root">
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="SEG11.IFE_Entertainment.UIFourConnectController.FourConnectModeMenuController"
+            stylesheets="@style.css">
 
+	<!-- Zeigt den Namen des gewählten Spiels an -->
     <top>
-        <Label text="Select Mode" styleClass="title"/>
+        <Label text="%mode.title" styleClass="title"/>
     </top>
 
     <center>
         <VBox alignment="CENTER" spacing="20">
-
-			 <!-- Java handled, in Java dann z.B. startGame("PVP"); -->
-            <Button text="Two Player-Mode"
+            <Button text="%mode.twoPlayer"
                     prefWidth="200"
-                    onAction="#startGame"
-                    styleClass="button-primary"/>
-                    
-            <Button text="VS Easy Bot"
-            			prefWidth="200"
-			        onAction="#startGameEasyBot"
-			        styleClass="button-primary"/>
-			
-			<Button text="VS Hard Bot"
-					prefWidth="200"
-			        onAction="#startGameHardBot"
-			        styleClass="button-primary"/>
-
-            <Button text="Back"
+                    onAction="#startGame"/>
+            <Button text="%mode.easyBot"
+                    prefWidth="200"
+                    onAction="#startGameEasyBot"/>
+            <Button text="%mode.hardBot"
+                    prefWidth="200"
+                    onAction="#startGameHardBot"/>
+            <Button text="%menu.back"
                     prefWidth="150"
-                    onAction="#backToMainMenu"
-        			styleClass="button-secondary"/>
-
+                    onAction="#backToMainMenu"/>
         </VBox>
     </center>
 
@@ -45,5 +36,5 @@
 
 <!--
 Ich habe mir gedacht das man einfach um sinnlose fxml Datein anzulegen einfach in die Mode Selection reinpacken kann Player vs Player
-und dann halt nicht Player vs Bot sonder direkt als Option das man gegen einen einfachen und schweren Bot spielen kann...
+und dann halt nicht Player vs Bot sondern direkt als Option das man gegen einen einfachen und schweren Bot spielen kann...
 -->
