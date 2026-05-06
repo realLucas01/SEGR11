@@ -111,16 +111,36 @@ Das Airline-Branding wird über die Klasse `BrandingService.java` verwaltet. Fol
 | Logo-Pfad | `/SEG11/IFE_Entertainment/images/logo_default.png` |
 | Airline-Name | `Default Airline` |
 
-Die Werte werden im Konstruktor von `BrandingService.java` (Zeile 40-44) angepasst:
+Die Themes werden innerhalb der Methode setTheme(String themeId) definiert:
 
-```java
-private BrandingService() {
-    this.primaryColor   = "#1a1a2e";              // Primärfarbe anpassen
-    this.secondaryColor = "#e94560";              // Sekundärfarbe anpassen
-    this.logoPath       = "/pfad/zum/logo.png";   // Logo-Pfad anpassen
-    this.airlineName    = "Airline Name";         // Airline-Name anpassen
-}
 ```
+switch (themeId) {
+
+        case "gervithrall":
+        this.primaryColor = "#004761";
+        this.secondaryColor = "#555756";
+        this.logoPath       = "/pfad/zum/logo.png";   // nur vorbereitet, keine Funktionalität
+        this.airlineName = "Gervithrall Systems";
+        break;
+
+        case "lufthansa":
+        this.primaryColor = "#05164D";
+        this.secondaryColor = "#FFD100";
+        this.logoPath       = "/pfad/zum/logo.png";   // nur vorbereitet, keine Funktionalität
+        this.airlineName = "Lufthansa";
+        break;
+
+default:
+        this.primaryColor = "#004761";
+        this.secondaryColor = "#555756";
+        this.logoPath       = "/pfad/zum/logo.png";   // nur vorbereitet, keine Funktionalität
+        this.airlineName = "Gervithrall Systems";
+        break;
+        }
+```
+Die definierten Werte werden anschließend automatisch an das CSS-System übergeben und dort als Theme-Variablen verwendet.
+
+Der Wechsel zwischen den verfügbaren Themes erfolgt über die Einstellungen innerhalb der Anwendung (Settings.fxml).
 
 ### 6.2 Sprachkonfiguration
 
