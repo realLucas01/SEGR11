@@ -33,6 +33,7 @@ repeat
     endif
 
   else (nein)
+    :Fehlermeldung anzeigen;
   endif
 
 repeat while (Spiel nicht beendet?) is (ja)
