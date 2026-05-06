@@ -1,0 +1,28 @@
+--class-path
+'C:/Users/lucas/.m2/repository/org/openjfx/javafx-controls/21.0.2/javafx-controls-21.0.2.jar;C:/Users/lucas/.m2/repository/org/openjfx/javafx-graphics/21.0.2/javafx-graphics-21.0.2.jar;C:/Users/lucas/.m2/repository/org/openjfx/javafx-base/21.0.2/javafx-base-21.0.2.jar;C:/Users/lucas/.m2/repository/org/openjfx/javafx-fxml/21.0.2/javafx-fxml-21.0.2.jar'
+--module-path
+'C:/Users/lucas/.m2/repository/org/openjfx/javafx-controls/21.0.2/javafx-controls-21.0.2-win.jar;C:/Neue Platte/GITHUB/Depositorys/SEGR11/java_projekt/IFE_Entertainment/target/classes;C:/Users/lucas/.m2/repository/org/openjfx/javafx-fxml/21.0.2/javafx-fxml-21.0.2-win.jar;C:/Users/lucas/.m2/repository/org/openjfx/javafx-base/21.0.2/javafx-base-21.0.2-win.jar;C:/Users/lucas/.m2/repository/org/openjfx/javafx-graphics/21.0.2/javafx-graphics-21.0.2-win.jar'
+--patch-module
+SEG11.IFE_Entertainment='C:/Neue Platte/GITHUB/Depositorys/SEGR11/java_projekt/IFE_Entertainment/src/main/java'
+-encoding
+'UTF-8'
+-protected
+-source
+'21'
+--module-source-path
+'C:/Neue Platte/GITHUB/Depositorys/SEGR11/java_projekt/IFE_Entertainment/target/reports/apidocs/src'
+-author
+-bottom
+'Copyright &#169; 2026. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Neue Platte/GITHUB/Depositorys/SEGR11/java_projekt/IFE_Entertainment/target/reports/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'IFE_Entertainment 0.0.1-SNAPSHOT API'
+-use
+-version
+-windowtitle
+'IFE_Entertainment 0.0.1-SNAPSHOT API'
