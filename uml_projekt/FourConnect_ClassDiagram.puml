@@ -4,6 +4,18 @@ skinparam packageStyle rectangle
 skinparam classAttributeIconSize 0
 skinparam linetype ortho
 
+  class App {
+    - {static} scene : Scene
+    + start(stage : Stage) : void
+    + {static} setRoot(fxml : String) : void
+    + {static} loadFXML(fxml : String) : Parent
+  }
+
+  class Launcher{
+    + {static}main(args: String[]): void
+  }
+
+  Launcher -> App
 ' ──────────────────────────────────────────
 package "Infrastructure" {
 
@@ -62,6 +74,7 @@ package "FourConnect"{
     - gameBoard : FourConnectGameBoard
     - currentBranding : BrandingService
     - oneBotPlayer: boolean
+
     - <<create>> FourConnectGame()
     + {static} getInstance() : FourConnectGame
     + getStatus() : GameState
@@ -82,6 +95,7 @@ package "FourConnect"{
     - {static} ROW_COUNTS : Integer
     - {static} COLUMN_COUNTS : Integer
     - cells : Map
+
     + «create» FourConnectGameBoard()
     + getRows() : Integer
     + getColumns() : Integer
@@ -94,11 +108,10 @@ package "FourConnect"{
   class Position {
     - x : Integer
     - y : Integer
+
     + «create» Position(x : Integer, y : Integer)
     + getX() : Integer
     + getY() : Integer
-    + equals(o : Object) : boolean
-    + hashCode() : int
   }
 
   enum Player <<enumeration>> {
@@ -112,6 +125,7 @@ package "FourConnect"{
     - type : Player
     - strategy : IMoveStrategy
     - colour : String
+
     + «create» FourConnectPlayer(type : Player, strategy : IMoveStrategy, colour : String)
     + getType() : Player
     + getStrategy() : IMoveStrategy
@@ -122,8 +136,6 @@ class FourConnectBotStrategy {
   ~ fcGame: FourConnectGame
   ~ fcRules: FourConnectRules
   - randNum: Random
-  - {static} player: Player
-  - {static} bot: Player
   - {static} SCORE_BOT_FOUR: int
   - {static} SCORE_BOT_THREE: int
   - {static} SCORE_BOT_TWO: int
@@ -133,23 +145,27 @@ class FourConnectBotStrategy {
   - {static} SCORE_OPP_TWO: int
   - {static} SCORE_OPP_ONE: int
   - {static} MINIMAX_DEPTH: int
-  + FourConnectBotStrategy(game: FourConnectGame, rules: FourConnectRules)
-  ~ appraiseBoard(board: FourConnectGameBoard): Integer
-  ~ allFourConnects(board: FourConnectGameBoard): ArrayList<Position[]>
+
+  + «create»FourConnectBotStrategy(game: FourConnectGame, rules: FourConnectRules)
+  + appraiseBoard(board: FourConnectGameBoard): Integer
+  + allFourConnects(board: FourConnectGameBoard): ArrayList<Position[]>
   }
 
   class "EasyBotStrategy" as Easy {
-    + chooseMove(board : IPlayArea) : void
+    + chooseMove(board : IPlayArea) : GameState
   }
 
   class "HardBotStrategy" as Hard {
-    + chooseMove(board : IPlayArea) : void
+    + botPlayerIndex: int
+    + playerList FourConnectPlayer[]
+
+    + chooseMove(board : IPlayArea) : GameState
     - findBestTurn(board: FourConnectGameBoard, depth: int): Integer
     - minMax(board: FourConnectGameBoard, depth: int, isMaximizing: boolean): Integer
+    - findBotPlayerPosition(players: FourConnectPlayer[]): Integer
     - findValideTurns(board: FourConnectGameBoard): List<Position>
     - playTestTurn(board: FourConnectGameBoard, turn: Position, bot: Player): void
     - undoTestTurn(board: FourConnectGameBoard, turn: Position): void
-    - findBotPlayerPosition(players: FourConnectPlayer[]): Integer
   }
 
   enum GameMode <<enumeration>> {
@@ -160,17 +176,17 @@ class FourConnectBotStrategy {
     FourConnectBotStrategy +-- Easy   : inner
     FourConnectBotStrategy +-- Hard   : inner
 
-    FourConnectBotStrategy ..|> IMoveStrategy
-    Easy ..|> IMoveStrategy
-    Hard ..|> IMoveStrategy
+
+
 }
+
 
 
 package "Game Core" {
 
   interface IRuleSet <<interface>> {
-    + checkWin(board : IPlayArea, player : PlayerT) : Boolean
-    + checkTie(board : IPlayArea) : Boolean
+    + checkWin(board : IPlayArea, player : PlayerT) : boolean
+    + checkTie(board : IPlayArea) : boolean
   }
 
   enum GameState <<enumeration>> {
@@ -188,7 +204,7 @@ package "Game Core" {
   }
 
   interface IMoveStrategy <<interface>> {
-    + chooseMove(board : IPlayArea) : void
+    + chooseMove(board : IPlayArea) : GameState
   }
 
   interface IGame <<interface>> {
@@ -205,6 +221,8 @@ package "Game Core" {
   FourConnectGame       ..|> IGame
   FourConnectGameBoard  ..|> IPlayArea
   FourConnectBotStrategy ..|> IMoveStrategy
+  Easy ..|> IMoveStrategy
+  Hard ..|> IMoveStrategy
 
   ' Compositions / associations inside Game Core
   FourConnectGame "1" *--> "*"    FourConnectPlayer
@@ -216,12 +234,6 @@ package "Game Core" {
 ' ──────────────────────────────────────────
 package "UIController" {
 
-  class App {
-    - {static} scene : Scene
-    + start(stage : Stage) : void
-    + {static} setRoot(fxml : String) : void
-    + {static} loadFXML(fxml : String) : Parent
-  }
 
   class MainMenuController {
     + startGame() : void
@@ -273,6 +285,12 @@ package "UIController" {
 package "UIFourConnectController"{
 
   class FourConnectGameController {
+    - gridPane: GridPane
+    - statusLabel: Label
+    - game: FourConnectGame
+    - {static}previousScreen: String
+    - circles: Circle[][]
+
     + handleColumnInput(column : Integer) : void
     + handlePlayMode( playerOne : Player, playerTwo : Player) : void
     + resumeGame() : void
@@ -283,13 +301,9 @@ package "UIFourConnectController"{
   
   class FourConnectEndScreenController {
     - resultLabel : Label
-    + initialize() : void
-    + restartGame() : void
-    + backToMainMenu() : void
   }
   
   class FourConnectHelpController {
-    + backToGameScreen() : void
   }
   
   class ModeMenuController{
