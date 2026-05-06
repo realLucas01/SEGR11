@@ -32,13 +32,13 @@ Perlickstraße 1
 9. [Fehlerbehebung](#9-fehlerbehebung)
 
 ---
-## Übersicht
+## 1. Übersicht
 
 IFE Entertainment ist eine offlinefähige Spieleapplikation zur Erweiterung des Inflight-Entertainment-Systems (IFE) von Novaris Cabin Systems GmbH. Die Anwendung wird auf den Sitzmonitoren der Passagiere betrieben und bietet aktuell das Spiel Vier Gewinnt an.
 
 ---
 
-## Systemanforderungen
+## 2. Systemanforderungen
 
 - Java 21 LTS (21.0.x)
 - JavaFX 21.0.2
@@ -47,7 +47,7 @@ IFE Entertainment ist eine offlinefähige Spieleapplikation zur Erweiterung des 
 - Keine zusätzliche Peripherie erforderlich - Touch oder Mausbedienung
 ---
 
-## Installation
+## 3. Installation
 
 Das Programm wird als ausführbare Fat-JAR-Datei ausgeliefert. Diese enthält den gesamten Code sowie alle JavaFX-Bibliotheken und ist ohne separate JavaFX-Installation lauffähig.
 
@@ -57,7 +57,7 @@ java -jar IFE_Entertainment.jar
 ```
 ---
 
-## Build aus dem Quellcode
+## 4. Build aus dem Quellcode
 
 **Voraussetzungen:**
 - JDK 21 LTS
@@ -79,7 +79,7 @@ Dieser Befehl führt folgende Schritte automatisch aus:
 - Zum Öffnen der Berichte die jeweilige `index.html` im Ausgabeordner starten
 
 ---
-## Projektstruktur
+## 5. Projektstruktur
 ```
 java_projekt/IFE_Entertainment/
 ├── src/
@@ -97,9 +97,9 @@ java_projekt/IFE_Entertainment/
 └── pom.xml
 ```
 ---
-## Konfiguration
+## 6. Konfiguration
 
-### Branding (CI-Anpassung)
+### 6.1 Branding (CI-Anpassung)
 
 Das Airline-Branding wird über die Klasse `BrandingService.java` verwaltet. Folgende Eigenschaften können angepasst werden:
 
@@ -121,7 +121,7 @@ private BrandingService() {
 }
 ```
 
-### Sprachkonfiguration
+### 6.2 Sprachkonfiguration
 
 Das Programm unterstützt standardmäßig Deutsch und Englisch. Die Sprache kann in den Einstellungen der Anwendung geändert werden.
 
@@ -148,17 +148,17 @@ public Locale[] getAvailableLocales() {
 
 4. Neu bauen: `mvn clean site install`
 ---
-## Tests und Qualitätssicherung
+## 7. Tests und Qualitätssicherung
 
 Unit Tests und Code Coverage werden bei jedem Build automatisch ausgeführt. Der Coverage-Bericht wird automatisch in den `final/` Ordner kopiert - zum Öffnen die `index.html` dort starten.
 
-## Bekannte Einschränkungen
+## 8. Bekannte Einschränkungen
 
 - Die `setTheme()` Methode in `BrandingService` ist noch nicht implementiert
 - Code Coverage per JaCoCo ist noch nicht aktiv konfiguriert
 ---
 
-## Fehlerbehebung
+## 9. Fehlerbehebung
 
 ### Programm startet nicht
 - Java-Version prüfen: `java -version` (muss 21 sein)
