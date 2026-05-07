@@ -165,7 +165,7 @@ java -jar IFE_Entertainment-[Versionsnummer]-obfuscated.jar
 ```
 
 Das Programm ist mit einem automatischen Buildscript ausgestattet, das automatisch alte Builds löscht und die .jar, so wie alle 
-dazugehörigen Dokumente (JavaDoc und Test-Coverage Report) generiert. Die genauere Funktionsweise dieses Scriptes ist unter Punkt 7 - [Buildscript](#7-buildscript) erklärt.  
+dazugehörigen Dokumente (JavaDoc und Test-Coverage Report) generiert. Die genauere Funktionsweise dieses Scriptes ist in disem Dokument, unter Punkt 7 - [Buildscript](#7-buildscript), erklärt.  
 Es wird mit folgendem Befehl eingesetzt:  
 ```
 mvn clean site install
