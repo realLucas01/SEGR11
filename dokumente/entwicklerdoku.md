@@ -36,6 +36,7 @@ Perlickstraße 1
 8. [Informationen für weitere Entwicklung](8-informationen-für-weitere-entwicklung)  
    8.1 [Programmtrennung](81-Programmtrennung)  
    8.2 [Vorgehensweise für die Erstellung eines weiteren Spiels](82-vorgehensweise-für-die-erstellung-eines-weiteren-spiels)  
+   8.3 [Hinzufügen von neuen Sprachen oder CI-Themes](83-hinzufügen-von-neuen-sprachen-oder-ci-themes)  
 
 ## 1. Einführung
 
@@ -49,8 +50,8 @@ Detaillierte Informationen zur Ordnerstruktur sowie zu den konkreten Inhalten de
 ## 2. Versionen und Tools / Plugins
 
 Die Bewertungen und Begründungen für die Auswahl der 11 wichtigsten Werkzeuge können in folgendem Dokument gefunden werden:  
-[Entscheidung zur Entwicklungsumgebung und genutzten Tools für die Erstellung der Entertainment-Erweiterung für IFE](/final/Toolvergleich.md)  
-<sub>*(auch zu finden unter: `/final/Toolvergleich.md`)*</sub>
+[Entscheidung zur Entwicklungsumgebung und genutzten Tools für die Erstellung der Entertainment-Erweiterung für IFE](/final/toolvergleich.md)  
+<sub>*(auch zu finden unter: `/final/toolvergleich.md`)*</sub>
 
 ### 2.1 Grundlegende Entwicklungsumgebung
 
@@ -164,7 +165,7 @@ java -jar IFE_Entertainment-[Versionsnummer]-obfuscated.jar
 ```
 
 Das Programm ist mit einem automatischen Buildscript ausgestattet, das automatisch alte Builds löscht und die .jar, so wie alle 
-dazugehörigen Dokumente (JavaDoc und Test-Coverage Report) generiert. Die genauere Funktionsweise dieses Scriptes ist unter Punkt [7 Buildscript](#7-buildscript) erklärt.  
+dazugehörigen Dokumente (JavaDoc und Test-Coverage Report) generiert. Die genauere Funktionsweise dieses Scriptes ist in disem Dokument, unter Punkt 7 - [Buildscript](#7-buildscript), erklärt.  
 Es wird mit folgendem Befehl eingesetzt:  
 ```
 mvn clean site install
@@ -173,7 +174,7 @@ mvn clean site install
 ## 5. Code Conventions
 
 Im Projekt wird der Google Java Code Style verwendet, siehe: https://google.github.io/styleguide/javaguide.html  
-<sub>* (oder auch: `/final/CodeConvention.pdf`) *</sub>  
+<sub>* (oder auch: `/final/Google Java Style Guide.pdf`) *</sub>  
 
 <ins>Zusätzlich gelten folgende Regeln:<ins>
 
@@ -261,4 +262,7 @@ Diese Trennung ermöglicht eine bessere Wartbarkeit und erleichtert die Erweiter
 4. Erstellen der benötigten .fxml für das UI
 5. Erweitern des Hauptmenüs um die Kachel des eigenen Spiels
 
+### 8.3 Hinzufügen von neuen Sprachen oder CI-Themes  
 
+Genauere Informationen und Anleitungen zum hinzufügen neuer Themes für die CI-Anpassung oder dem hinzufügen neuer Sprachen sind in der [Admindoku](/final/admindoku.pdf) in Sektion 6 - Konfiguration zu finden.  
+<sub>*(auch zu finden unter: `/final/admindoku.pdf`)*</sub>
