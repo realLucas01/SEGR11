@@ -1,0 +1,33 @@
+@startuml
+title 4-Connect - Spielhilfe (Wireframe)
+
+skinparam defaultFontName Monospaced
+
+salt
+{
+  {+
+    { **Hilfe / Regeln** }
+    .
+    {Kurzbeschreibung der Bedienung und Spielregeln
+.
+    „4-Connect“ ist eine digitale Umsetzung des Spiels „Vier Gewinnt“.
+    Ziel des Spiels ist es, als erster Spieler vier eigene Spielsteine in einer durchgehenden Linie zu platzieren. 
+    Die Linie kann horizontal, vertikal oder diagonal verlaufen.
+.
+    Gespielt wird auf einem vertikal aufgebauten Spielfeld mit mehreren Spalten. Zwei Spieler (oder ein Spieler 
+    gegen den Computer) setzen abwechselnd jeweils einen Spielstein. Durch Antippen oder Anklicken einer Spalte 
+    wird bestimmt, wo der Stein fallen soll. Der Spielstein rutscht anschließend automatisch in die tiefste 
+    freie Position der gewählten Spalte.
+.
+    Das Spiel endet, sobald ein Spieler vier Steine in einer Reihe erreicht oder das Spielfeld vollständig 
+    gefüllt ist, ohne dass eine Gewinnkombination entstanden ist (Unentschieden).
+.
+    Die Bedienung erfolgt vollständig über eine einfache grafische Oberfläche. Alle Aktionen wie Spielzug, 
+    Neustart oder Rückkehr ins Menü werden über deutlich gekennzeichnete Schaltflächen ausgeführt und 
+    benötigen keine zusätzlichen Eingaben.}
+    .
+    .
+    {[ Zurück ]}
+  }
+}
+@enduml

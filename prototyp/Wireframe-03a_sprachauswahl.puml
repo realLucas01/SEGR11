@@ -1,0 +1,19 @@
+@startuml
+title 4-Connect - Sprachauswahl (Wireframe)
+
+skinparam defaultFontName Monospaced
+
+salt
+{
+  {+
+    { **Sprache** }
+    .
+    ( ) English (EN)
+    (X) Deutsch (DE)
+    .
+    .
+    .
+    {[ OK ]} | {[ Abbrechen ]}
+  }
+}
+@enduml

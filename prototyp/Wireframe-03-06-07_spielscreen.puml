@@ -1,0 +1,32 @@
+@startuml
+title 4-Connect - Spielansicht (Wireframe)
+
+skinparam defaultFontName Monospaced
+
+salt
+{
+  {+
+    {^ **4-Connect **}
+    .
+    { **Spielfeld (2D)** 
+.
+    o o o o o o o
+    o o o o o o o
+    o o o o o o o
+    o o o o o o o
+    o o o o o o o
+    o o o o o o o
+    
+    } {}{}{}{}{} { 
+      
+      **Am Zug:** 
+      < "Spieler 1" / "Spieler 2" >
+      .
+      [  Neue Runde  ]
+      [Hilfe / Regeln]
+      [   Hauptmenü  ]
+    }
+    .
+  }
+}
+@enduml
