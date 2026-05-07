@@ -20,6 +20,8 @@
 package SEG11.IFE_Entertainment;
 
 import SEG11.IFE_Entertainment.Infrastructure.LocalizationService;
+import SEG11.IFE_Entertainment.Infrastructure.BrandingService;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -48,22 +50,40 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         scene = new Scene(loadFXML("MainMenu"), 1000, 900);
+        applyBranding();
+
         stage.setScene(scene);
         stage.setFullScreen(true);
         stage.show();
     }
 
     /**
-     * Setzt die Wurzel, für JavaFX
+     * Setzt eine neue Root-FXML für die aktuelle Scene
+     * und aktualisiert anschließend das Branding.
      *
-     * @param fxml, die als Grundlage dienende JavaFX Datei
-     * @throws IOException
+     * @param fxml Name der FXML-Datei ohne Dateiendung
+     * @throws IOException falls die FXML-Datei nicht geladen werden kann
      */
     public static void setRoot(String fxml) throws IOException {
         scene.setRoot(loadFXML(fxml));
+        applyBranding();
     }
 
     /**
+     * Wendet das aktuell ausgewählte Theme auf die Anwendung an.
+     *
+     * <p>Dabei werden die Theme-Farben aus dem BrandingService
+     * als CSS-Variablen an das Root-Element der Scene übergeben.
+     */
+    public static void applyBranding() {
+        BrandingService branding = BrandingService.getInstance();
+
+        scene.getRoot().setStyle(
+            "-theme-primary: " + branding.getPrimaryColor() + ";" +
+            "-theme-secondary: " + branding.getSecondaryColor() + ";"
+        );
+    }    
+
      * Lädt, die angegebene JavaFX Datei und zeigt diese an.
      *
      * @param fxml, die Anzuzeigende Datei

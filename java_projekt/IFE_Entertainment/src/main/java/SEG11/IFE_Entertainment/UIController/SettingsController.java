@@ -37,6 +37,10 @@ public class SettingsController {
     /** Auswahlfeld für die Sprache. */
     @FXML
     private ComboBox<String> languageBox;
+    
+    /** Auswahlfeld für das Theme. */
+    @FXML
+    private ComboBox<String> themeBox;
 
     private final LocalizationService localizationService = LocalizationService.getInstance();
     private final BrandingService brandingService = BrandingService.getInstance();
@@ -49,6 +53,10 @@ public class SettingsController {
     public void initialize() {
         languageBox.getItems().addAll("de", "en");
         languageBox.setValue(localizationService.getCurrentLocale().getLanguage());
+
+        themeBox.getItems().addAll("gervithrall", "lufthansa", "emirates", "ryanair");
+        themeBox.setValue("gervithrall");
+
     }
 
     /**
@@ -72,7 +80,11 @@ public class SettingsController {
      */
     @FXML
     public void changeTheme() {
-        // TODO: Themawahl implementieren (KANN-Kriterium)
+        String selectedTheme = themeBox.getValue();
+        if (selectedTheme != null) {
+            brandingService.setTheme(selectedTheme);
+            App.applyBranding();
+        }
     }
 
     /**
