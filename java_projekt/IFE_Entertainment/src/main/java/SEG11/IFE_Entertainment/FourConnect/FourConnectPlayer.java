@@ -23,6 +23,8 @@ import SEG11.IFE_Entertainment.GameCore.IMoveStrategy;
 
 /**
  * Der Vier gewinnt Spieler
+ * 
+ * @author Luca Tauscher
  */
 public class FourConnectPlayer {
     /** Der Typ des Spielers, siehe das enum {@link Player} */

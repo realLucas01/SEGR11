@@ -21,25 +21,26 @@ package SEG11.IFE_Entertainment.GameCore;
 /**
  * Interface für die Logik zur Verwaltung des Spielbretts
  *
- * <p>Ist für die Klasse zu implementieren, die die gesammte Logik für die
+ * <p>Ist für die Klasse zu implementieren, die die gesamte Logik für die
  * Verwaltung des Spielbretts beherbergt, also z.B.: das Initialisieren des
  * Spielbretts und das zur Verfügungstellen von Funktionen um auf einzelne
- * Zellen oder Werte zu zugreifen und diese zu verändern
- *
+ * Zellen oder Werte zuzugreifen und diese zu verändern
+ * 
+ * @author Lucas Rumann
  */
 public interface IPlayArea {
 
   /**
-   * Funktion zum Überprüfen ob das Spielfeld voll ist
+   * Funktion zum Überprüfen, ob das Spielfeld voll ist
    *
-   * @return Boolschen Wert, der wahr ist wenn das Spielfeld voll ist
+   * @return Booleschen Wert, der wahr ist, wenn das Spielfeld voll ist
    */
   Boolean isFull();
 
   /**
    * Funktion zum leeren und neu-initialisieren des Spielbretts
    *
-   * @return Integer Wert zur Überprüfung ob die Operation erfolreich war. Bei
+   * @return Integer Wert zur Überprüfung, ob die Operation erfolgreich war. Bei
    *         einem Wert != 0 ist ein Fehler aufgetreten
    */
   Integer clear();

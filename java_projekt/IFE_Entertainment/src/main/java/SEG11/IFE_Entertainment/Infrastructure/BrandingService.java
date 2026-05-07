@@ -24,6 +24,8 @@ package SEG11.IFE_Entertainment.Infrastructure;
  * <p>Ermöglicht die Anpassung der visuellen Identität der Airline,
  * einschließlich Farben, Logo und Name. Wird als Singleton implementiert,
  * sodass nur eine Instanz global zugänglich ist.
+ * 
+ * @author Truong Tan Long Nguyen
  */
 public class BrandingService {
 

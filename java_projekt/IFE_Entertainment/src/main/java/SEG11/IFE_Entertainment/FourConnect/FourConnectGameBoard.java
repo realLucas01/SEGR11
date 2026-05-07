@@ -22,7 +22,9 @@ import SEG11.IFE_Entertainment.GameCore.IPlayArea;
 import java.util.*;
 
 /**
- * Das Vier Gewinnt Spielfeld
+ * Das "Vier Gewinnt" Spielfeld
+ * 
+ * @author Luca Tauscher
  */
 public class FourConnectGameBoard implements IPlayArea {
   /** Die Anzahl der Zeilen, Standard: 6 */
@@ -30,7 +32,7 @@ public class FourConnectGameBoard implements IPlayArea {
   /** Die Anzahl der Spalten, Standard: 7 */
   private static final Integer COLUM_COUNTS = 7;
   /**
-   *  Die Map welches, das Spielfeld repräsentiert. Es speichert zu jeder Koordinate des Spielfeldes
+   *  Die map welches, das Spielfeld repräsentiert. Es speichert zu jeder Koordinate des Spielfeldes
    * den besitzenden Spieler
    * */
   private final Map<Position, FourConnectPlayer> cells = new HashMap<>();

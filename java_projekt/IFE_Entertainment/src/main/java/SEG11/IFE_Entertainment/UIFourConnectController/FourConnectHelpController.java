@@ -28,6 +28,8 @@ import javafx.fxml.FXML;
  *
  * <p>Navigiert zurück zum Spielfeld oder zum Hauptmenü
  * abhängig davon woher der Hilfe-Screen geöffnet wurde.
+ * 
+ * @author Truong Tan Long Nguyen
  */
 public class FourConnectHelpController implements HelpController {
 

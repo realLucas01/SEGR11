@@ -1,5 +1,38 @@
-# Anwenderdokumentation
-## 1.1 Zweck der Anwendung
+## Anwenderdokumentation der Entertainment-Erweiterung für IFE  
+
+**Stand:** 05.05.2026, durch Gervithrall Systems  
+
+**Auftraggeber:** Novaris Cabin Systems GmbH  
+Friedrich-List-Platz 1   
+01069 Dresden  
+**Ansprechpartner*in:** Lea Wagner  
+**E-Mail:** lwagner@novaris-cabinystems.de   
+**Telefon:** 0351 4620   
+
+**Auftragnehmer:** Gervithrall Systems GmbH   
+Perlickstraße 1   
+04103 Leipzig   
+**Ansprechpartner*in:** Lucas Rumann   
+**E-Mail:** lucasr@gervithrall-systems.de   
+**Telefon:** 0351 6482642
+
+# Inhaltsverzeichnis
+
+1. [Zweck der Anwendung](1-zweck-der-anwendung)
+2. [Start der Anwendung](2-start-der-anwendung)
+3. [Steuerung](3-steuerung)
+4. [Hauptmenü](4-hauptmenü)
+5. [Hilfe](5-hilfe)
+6. [Einstellungen](6-einstellungen)
+7. [Spiel starten / Spielmodus wählen](7-spiel-starten-/-spielmodus-wählen)
+8. [Spielansicht und Funktionen](8-spielansicht-und-funktionen)
+9. [Spielablauf](9-spielablauf)
+10. [Spielsteuerung](10-spielsteuerung)
+11. [Spielregeln](11-spielregeln)
+12. [Spielende](12-spielende)
+13. [Nach dem Spiel](13-nach-dem-spiel)
+
+## 1 Zweck der Anwendung
 
 Die Anwendung „4-Connect“ ist ein integriertes Unterhaltungsspiel innerhalb des Inflight-Entertainment-Systems (IFE). Sie dient ausschließlich der Unterhaltung während des Fluges und ist ohne Vorkenntnisse intuitiv bedienbar.
 
@@ -7,7 +40,7 @@ Das Spiel basiert auf dem bekannten Prinzip „Vier Gewinnt“. Es kann entweder
 
 ---
 
-## 1.2 Start der Anwendung
+## 2 Start der Anwendung
 
 Die Anwendung wird über das IFE-Hauptmenü gestartet:
 
@@ -19,13 +52,13 @@ Nach dem Start wird das Hauptmenü der Anwendung angezeigt.
 
 ---
 
-## 1.3 Steuerung
+## 3 Steuerung
 
 Die gesamte Bedienung erfolgt über eine grafische Benutzeroberfläche mit klar erkennbaren Schaltflächen. Alle Funktionen werden durch direkte Auswahl (Touch oder Klick) ausgeführt.
 
 ---
 
-## 1.4 Hauptmenü
+## 4 Hauptmenü
 
 Im Hauptmenü stehen folgende Funktionen zur Verfügung:
 
@@ -36,7 +69,7 @@ Im Hauptmenü stehen folgende Funktionen zur Verfügung:
 
 ---
 
-## 1.5 Hilfe
+## 5 Hilfe
 
 Im Hilfe-Bereich werden die Spielregeln verständlich dargestellt.
 
@@ -47,7 +80,7 @@ Funktionen:
 
 ---
 
-## 1.6 Einstellungen
+## 6 Einstellungen
 
 Im Einstellungsmenü stehen folgende Optionen zur Verfügung:
 
@@ -57,7 +90,7 @@ Im Einstellungsmenü stehen folgende Optionen zur Verfügung:
 
 ---
 
-## 1.7 Spiel starten / Spielmodus wählen
+## 7 Spiel starten / Spielmodus wählen
 
 Nach Auswahl von „Spiel starten“ wird der gewünschte Spielmodus gewählt:
 
@@ -69,7 +102,7 @@ Nach der Auswahl startet das Spiel automatisch.
 
 ---
 
-## 1.8 Spielansicht und Funktionen
+## 8 Spielansicht und Funktionen
 
 Während des Spiels stehen folgende Funktionen zur Verfügung:
 
@@ -81,7 +114,7 @@ Während des Spiels stehen folgende Funktionen zur Verfügung:
 
 ---
 
-## 1.9 Spielablauf
+## 9 Spielablauf
 
 **Grundprinzip:**
 Das Spielfeld besteht aus einem Raster. Ziel ist es, vier eigene Spielsteine in einer Linie zu platzieren:
@@ -98,7 +131,7 @@ Das Spielfeld besteht aus einem Raster. Ziel ist es, vier eigene Spielsteine in 
 
 ---
 
-## 1.10 Spielsteuerung
+## 10 Spielsteuerung
 
 Die Bedienung erfolgt ausschließlich über:
 
@@ -114,7 +147,7 @@ Zusätzliche Funktionen:
 
 ---
 
-## 1.11 Spielregeln
+## 11 Spielregeln
 
 Die Spielregeln können jederzeit über den Menüpunkt Hilfe aufgerufen werden.
 
@@ -127,7 +160,7 @@ Inhalt:
 
 ---
 
-## 1.12 Spielende
+## 12 Spielende
 
 Das Spiel endet automatisch in folgenden Fällen:
 
@@ -138,7 +171,7 @@ Nach Spielende wird ein Ergebnisbildschirm angezeigt.
 
 ---
 
-## 1.13 Nach dem Spiel
+## 13 Nach dem Spiel
 
 Nach Abschluss einer Runde stehen folgende Optionen zur Verfügung:
 

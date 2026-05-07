@@ -28,6 +28,8 @@ import java.io.IOException;
  *
  * <p>Ermöglicht die Auswahl des Spielmodus und startet das Spiel
  * mit den entsprechenden Spielertypen.
+ * 
+ * @author Truong Tan Long Nguyen
  */
 public class FourConnectModeMenuController {
 

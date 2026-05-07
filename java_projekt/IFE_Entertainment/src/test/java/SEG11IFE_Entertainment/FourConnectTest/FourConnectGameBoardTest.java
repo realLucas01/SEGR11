@@ -5,7 +5,6 @@ import SEG11.IFE_Entertainment.FourConnect.FourConnectPlayer;
 import SEG11.IFE_Entertainment.FourConnect.Player;
 import SEG11.IFE_Entertainment.FourConnect.Position;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
@@ -40,7 +39,7 @@ class FourConnectGameBoardTest {
     }
 
     @Nested
-    class ConstrucorTests {
+    class ConstructorTests {
 
         @Test
         void hasCorrectRowCount() {
