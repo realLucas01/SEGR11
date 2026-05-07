@@ -39,7 +39,7 @@ class FourConnectGameBoardTest {
     }
 
     @Nested
-    class ConstrucorTests {
+    class ConstructorTests {
 
         @Test
         void hasCorrectRowCount() {

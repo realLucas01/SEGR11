@@ -29,6 +29,8 @@ import java.io.IOException;
  * Controller für den Einstellungs-Screen.
  *
  * <p>Ermöglicht die Anpassung der Sprache und des Themes der Anwendung.
+ * 
+ * @author Truong Tan Long Nguyen
  */
 public class SettingsController {
 

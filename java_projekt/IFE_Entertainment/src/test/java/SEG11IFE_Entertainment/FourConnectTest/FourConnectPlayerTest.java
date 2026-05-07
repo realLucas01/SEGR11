@@ -9,19 +9,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertSame;
 
-/** wichtige Befehle
- * Alle Tests ausführen
- * mvn test
- *
- * Einzelne Testklasse
- * mvn test -Dtest=FourConnectPlayerTest
- *
- * # Einzelne Testmethode
- * mvn test -Dtest=FourConnectPlayerTest#getTypeTest
- */
-
-
-
 class FourConnectPlayerTest {
     private BrandingService currentbranding;
     private FourConnectRules fcRules;
@@ -38,7 +25,6 @@ class FourConnectPlayerTest {
 
         fcHumanPlayer = new FourConnectPlayer(Player.HUMAN,null, currentbranding.getPrimaryColor());
         fcHardPlayer = new FourConnectPlayer(Player.HARDBOT,null, currentbranding.getSecondaryColor());
-
     }
 
     @Test

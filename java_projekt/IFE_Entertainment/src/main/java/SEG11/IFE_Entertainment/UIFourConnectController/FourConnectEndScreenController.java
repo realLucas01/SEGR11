@@ -32,6 +32,8 @@ import javafx.scene.control.Label;
  *
  * <p>Zeigt das Spielergebnis an und ermöglicht nach Spielende
  * die Navigation zurück zum Hauptmenü oder den Neustart des Spiels.
+ * 
+ * @author Truong Tan Long Nguyen
  */
 public class FourConnectEndScreenController implements EndScreenController {
 

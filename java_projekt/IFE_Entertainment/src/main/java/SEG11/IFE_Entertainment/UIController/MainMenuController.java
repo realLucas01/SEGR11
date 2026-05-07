@@ -27,6 +27,8 @@ import SEG11.IFE_Entertainment.UIFourConnectController.FourConnectGameController
  * Controller für das Hauptmenü.
  *
  * <p>Stellt die Navigation zu den verschiedenen Screens des Hauptmenüs bereit.
+ * 
+ * @author Truong Tan Long Nguyen
  */
 public class MainMenuController {
 

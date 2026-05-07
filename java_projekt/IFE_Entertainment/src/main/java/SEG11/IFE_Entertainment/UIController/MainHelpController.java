@@ -26,6 +26,8 @@ import java.io.IOException;
  * Controller für die allgemeine Hilfe-Seite im Hauptmenü.
  *
  * <p>Stellt die Navigation zurück zum Hauptmenü bereit.
+ * 
+ * @author Truong Tan Long Nguyen
  */
 public class MainHelpController {
 

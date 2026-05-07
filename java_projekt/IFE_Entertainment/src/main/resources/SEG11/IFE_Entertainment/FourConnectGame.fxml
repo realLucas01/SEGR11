@@ -1,4 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--  
+1.0 2026-04-22 Domenik Schütz
+
+Copyright (c) 2025-2026 Gervithrall Systems GmbH. All Rights Reserved.
+
+This software is the confidential and proprietary information of
+Gervithrall Systems GmbH ("Confidential Information"). You shall not
+disclose such Confidential Information and shall use it only in
+accordance with the terms of the license agreement you entered into
+with Gervithrall Systems GmbH.
+
+GERVITHRALL SYSTEMS GMBH MAKES NO REPRESENTATIONS OR WARRANTIES ABOUT
+THE SUITABILITY OF THE SOFTWARE, EITHER EXPRESS OR IMPLIED, INCLUDING
+BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. GERVITHRALL SYSTEMS GMBH
+SHALL NOT BE LIABLE FOR ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT
+OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
+-->
 
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.layout.BorderPane?>
@@ -19,7 +37,7 @@
 	<center>
 		<VBox alignment="CENTER" spacing="20">
 			
-			<!-- Zeigt den aktuellen "Turn" an also wer gerade am Zug ist (aktuell drann ist) -->
+			<!-- Zeigt den aktuellen "Turn" an also wer gerade am Zug ist (aktuell dran ist) -->
 			<HBox fx:id="turnBox" spacing="10" alignment="CENTER" styleClass="turn-box">
 				<Label text="%game.turn" styleClass="turn-title"/>
 				<Label fx:id="statusLabel" text="" styleClass="turn-value"/>

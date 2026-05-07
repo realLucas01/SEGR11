@@ -180,7 +180,7 @@
                         <phase>test</phase>
                         <goals><goal>report</goal></goals>
                     </execution>
-                    <!-- Build schlägt fehl wenn Coverage unter 20% -->
+                    <!-- Build schlägt fehl wenn Coverage unter 50 % -->
                     <execution>
                         <id>check</id>
                         <goals><goal>check</goal></goals>
@@ -191,7 +191,7 @@
                                         <limit>
                                             <counter>LINE</counter>
                                             <value>COVEREDRATIO</value>
-                                            <minimum>0.00</minimum>
+                                            <minimum>0.50</minimum>
                                         </limit>
                                     </limits>
                                 </rule>

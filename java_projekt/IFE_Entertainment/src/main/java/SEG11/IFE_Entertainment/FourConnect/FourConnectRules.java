@@ -28,11 +28,12 @@ import SEG11.IFE_Entertainment.GameCore.IRuleSet;
  * 
  * <p>Implementiert dabei {@link IRuleSet} und seine Funktionen
  * 
+ * @author Lucas Rumann
  * @param <FourConnectGameBoard> Der generische Datentyp {@link IRuleSet#IPlayAreaT}
  *                               wurde auf die von uns implementierte Version
  *                               des Interface {@link IPlayArea} konkretisiert
- * @param <FourConnectPlayer>    Der generische Datentyp {@link IRuleSet#PlayerT} wurde
- *                               auf die von unsere implementierung des Spielers
+ * @param <FourConnectPlayer>    Der generische Datentyp {@link IRuleSet PlayerT} wurde
+ *                               auf die von unserem implementierung des Spielers
  *                               konkretisiert
  * 
  * @see IPlayArea
@@ -44,7 +45,7 @@ public class FourConnectRules implements IRuleSet<FourConnectGameBoard, FourConn
 	/**
 	 * Implementierung der Interface Methode checkWin()
 	 * 
-	 * <p>Wird genutzt um zu überprüfen ob ein Sieg vorliegt
+	 * <p>Wird genutzt um zu überprüfen, ob ein Sieg vorliegt
 	 * 
 	 * @param board  Aktueller Zustand des Spielbretts
 	 * @param player Spieler der den aktuellen Zug gemacht hat
@@ -111,7 +112,7 @@ public class FourConnectRules implements IRuleSet<FourConnectGameBoard, FourConn
 	/**
 	 * Implementierung der Interfacemethode checkTie()
 	 * 
-	 * <p>Wird genutzt um zu überprüfen ob ein Unentschieden vorliegt
+	 * <p>Wird genutzt um zu überprüfen, ob ein Unentschieden vorliegt
 	 * 
 	 * @param board aktueller Zustand des Spielbretts
 	 * 
