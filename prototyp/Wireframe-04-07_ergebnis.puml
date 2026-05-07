@@ -11,7 +11,7 @@ salt
     { **Spielende:** }
     { < "Spieler 1 gewinnt" / "Spieler 2 gewinnt" / "Bot gewinnt" / "Unentschieden" > }
     .
-    {[ Neue Runde ] | [ Spielesammlung ]}
+    {[ Neue Runde ] | [ Hauptmenü ]}
   }
 }
 @enduml

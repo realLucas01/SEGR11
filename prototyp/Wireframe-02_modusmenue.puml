@@ -6,14 +6,14 @@ skinparam defaultFontName Monospaced
 salt
 {
   {+
-    {^ **4-Connect - Modus** }{[ Spielhilfe ]}
+    {^ **Modusmenü** }
     .
-    ^Bitte Modus wählen:^ Zwei Spieler^ Gegen Bot^ |
-    .
-    .
+    {[ Zweispieler Modus ] | [ VS Easy Bot ] | [ VS Hard Bot ]}
     .
     .
-    {[ Spiel starten ] | [ Zurück ]}
+    .
+    .
+    {[ Hauptmenü ]}
   }
 }
 @enduml
