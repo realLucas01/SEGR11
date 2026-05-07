@@ -201,7 +201,7 @@ Die Wireframes skizzieren die grundlegende Anordnung und Funktion der Bedienelem
 |Benutzerschnittstelle| |  
 
 **Abbildung:** Wireframe – Hauptmenü  
-![Hauptmenü](diagrams/01_hauptmenue.svg)
+![Hauptmenü](‎prototyp/Wireframe-01_hauptmenue.svg)
 
 |Anwendungsfall ID| AF-02|
 |------|-------------|
@@ -215,7 +215,7 @@ Die Wireframes skizzieren die grundlegende Anordnung und Funktion der Bedienelem
 |Benutzerschnittstelle| |  
 
 **Abbildung:** Wireframe – Modusmenü  
-![Modusmenü](diagrams/02_modusmenue.svg)
+![Modusmenü](prototyp/Wireframe-02_modusmenue.svg)
 
 |Anwendungsfall ID| AF-03|  
 |-----|-------------|
@@ -229,7 +229,7 @@ Die Wireframes skizzieren die grundlegende Anordnung und Funktion der Bedienelem
 |Benutzerschnittstelle| |  
 
 **Abbildung:** Wireframe – Spielansicht  
-![Spielansicht](diagrams/03-06-07_spielscreen.svg)
+![Spielansicht](prototyp/Wireframe-03-06-07_spielscreen.svg)
 
 |Anwendungsfall ID| AF-04|
 |------|-------------|
@@ -243,7 +243,7 @@ Die Wireframes skizzieren die grundlegende Anordnung und Funktion der Bedienelem
 |Benutzerschnittstelle| |  
 
 **Abbildung:** Wireframe – Neue Runde starten  
-![Neue Runde](diagrams/04-07_ergebnis.svg)
+![Neue Runde](prototyp/Wireframe-04-07_ergebnis.svg)
 
 |Anwendungsfall ID| AF-05 a|
 |-----|-------------|
@@ -257,7 +257,7 @@ Die Wireframes skizzieren die grundlegende Anordnung und Funktion der Bedienelem
 |Benutzerschnittstelle| |  
 
 **Abbildung:** Wireframe – Hilfe / Regeln  
-![Hilfe](diagrams/05_hilfe.svg)
+![Hilfe](prototyp/Wireframe-05-a_spielhilfe.svg)
 
 |Anwendungsfall ID| AF-05 b|
 |-----|-------------|
@@ -271,7 +271,7 @@ Die Wireframes skizzieren die grundlegende Anordnung und Funktion der Bedienelem
 |Benutzerschnittstelle| |  
 
 **Abbildung:** Wireframe – Hilfe Hauptmenü  
-![Hilfe](diagrams/05_hilfe.svg)
+![Hilfe](prototyp/Wireframe-05-b_hauptmenu-hilfe.svg)
 
 
 |Anwendungsfall ID| AF-06|
@@ -286,7 +286,7 @@ Die Wireframes skizzieren die grundlegende Anordnung und Funktion der Bedienelem
 |Benutzerschnittstelle| |  
 
 **Abbildung:** Wireframe – Spielansicht  
-![Spielansicht](diagrams/03-06-07_spielscreen.svg)
+![Spielansicht](prototyp/Wireframe-03-06-07_spielscreen.svg)
 
 |Anwendungsfall ID| AF-07|
 |-----|-------------|
@@ -300,15 +300,15 @@ Die Wireframes skizzieren die grundlegende Anordnung und Funktion der Bedienelem
 |Benutzerschnittstelle| | 
 
 **Abbildung:** Wireframe – Spielansicht  
-![Spielansicht](diagrams/03-06-07_spielscreen.svg)
+![Spielansicht](prototyp/Wireframe-03-06-07_spielscreen.svg)
 
 **Abbildung:** Wireframe – Ergebnisbildschirm  
-![Ergebnis](diagrams/04-07_ergebnis.svg)
+![Ergebnis](prototyp/Wireframe-04-07_ergebnis.svg)
 
 
 Das Aktivitätsdiagramm stellt den Ablauf einer Spielrunde einschließlich optionaler Aktionen (Spielhilfe, Sprachwahl) sowie der Behandlung von Spielende und Neustart dar.
 **Abbildung:** Aktivitätsdiagramm – Spielrunde  
-![Aktivitätsdiagramm Spielrunde](diagrams/activity_spielrunde.svg)
+![Aktivitätsdiagramm Spielrunde](final/uml-03-aktivitaetsdiagramm-spielrunde.svg)
 
 #### 3.1.3 Fachliches Klassendiagramm (Domain Model) / Produktdaten
 
@@ -549,10 +549,8 @@ Die Umsetzung wird in Arbeitspakete gegliedert, die sich an der Kalkulation und 
 
 Die folgenden Meilensteine beschreiben die wesentlichen Entwicklungs- und Dokumentationsschritte des Projekts sowie die geplanten Ergebnisse der einzelnen Projektphasen.
 
-#### M1 Projektdefinition und Lastenheft
-- Erstellung des Firmenporträts des Auftraggebers
+#### M1 Projektdefinition
 - Definition der Projektidee und Anforderungen
-- Erstellung des Lastenhefts und Ausschreibungstextes
 
 **Ergebnis:** abgestimmte Projektgrundlage und Aufgabenbeschreibung.
 
@@ -588,7 +586,16 @@ Die folgenden Meilensteine beschreiben die wesentlichen Entwicklungs- und Dokume
 
 **Ergebnis:** vollständiger Projektstand mit Dokumentation und Buildstruktur.
 
-#### M6 Release und Projektabschluss
+#### M6 Wartung, Erweiterung und Schulung
+- Vorstellung des bisherigen Projektstandes beim Auftraggeber
+- Aufnahme neuer Anforderungen und Feedback des Auftraggebers
+- Anpassung und Erweiterung des bestehenden Funktionsumfangs
+- Implementierung, Test und Dokumentationspflege der neuen Anforderungen
+- Vorbereitung einer Anwenderschulung und Demonstration der Anwendung
+
+**Ergebnis:** aktualisierter Projektstand mit neuer Anforderung, getesteter Erweiterung und vorbereiteter Übergabe an den Auftraggeber.
+
+#### M7 Release und Projektabschluss
 - Erstellung der finalen Release-Artefakte
 - Zusammenführung aller Projektdokumente
 - Abschlusspräsentation und Übergabe
@@ -745,7 +752,7 @@ Die Qualitätssicherung erfolgt begleitend während der Entwicklung durch:
 - Reviews der Änderungen über Pull Requests
 - automatisierte Unit-Tests mit JUnit
 - Code-Coverage-Auswertung über JaCoCo
-- manuelle, dokumentierte Tests der zentralen Anwendungsfälle
+- manuelle Tests der zentralen Anwendungsfälle
 - Tests auf der Zielumgebung bzw. dem Dev-Kit zur Prüfung von:
   - Start/Beenden
   - Eingaben
