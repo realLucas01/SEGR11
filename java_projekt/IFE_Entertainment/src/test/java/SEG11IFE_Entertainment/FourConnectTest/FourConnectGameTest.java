@@ -27,7 +27,7 @@ class FourConnectGameTest {
      */
     @BeforeEach
     void setUp() {
-        game = new FourConnectGame();
+        game = FourConnectGame.getInstance();
     }
 
     /**
