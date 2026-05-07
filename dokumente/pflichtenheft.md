@@ -187,7 +187,7 @@ Der Screenflow zeigt die Navigation zwischen den einzelnen Bildschirmen.
 Die Wireframes skizzieren die grundlegende Anordnung und Funktion der Bedienelemente (Low-Fidelity) und definieren das Bedienkonzept, ohne ein finales Design festzulegen.
 
 **Abbildung:** Screenflow der Benutzeroberfläche  
-![Screenflow](diagrams/screenflow_v2.svg)
+![Screenflow](final/4-connect-screenflow_v2.svg)
 
 |Anwendungsfall ID | AF-01|
 |-------|-------------|
