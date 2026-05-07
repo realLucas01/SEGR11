@@ -175,7 +175,8 @@ Muss Kriterien:
 |AF-02 |Spielmodus wählen |Der Fluggast wählt zwischen den Spielmodi: "Spieler gegen Spieler" oder "Spieler gegen Bot". |
 |AF-03 |Spielstein setzen |Der Fluggast wählt ein Feld oder eine Reihe im Spielfeld aus, der Spielstein dieses Spielers fällt daraufhin von oben in die Reihe und bleibt auf dem niedrigsten freien Platz liegen. |
 |AF-04 |Neue Runde starten |Nach dem Abschluss eines Spiels ist es dem Fluggast möglich eine neue Runde zu starten durch einen Knopfdruck. |
-|AF-05 |Spielhilfe aufrufen |Vor, im Laufe oder nach Beendigung des Spieles, ist es dem Fluggast möglich eine Spielhilfe, mit den Grundlegenden Regeln des Spieles aufzurufen. |
+|AF-05 a |Spielhilfe aufrufen |Im Laufe des Spieles, ist es dem Fluggast möglich eine Spielhilfe, mit den Grundlegenden Regeln des Spieles aufzurufen. |
+|AF-05 b |Hilfe Hauptmenü aufrufen |Im Hauptmenü, ist es dem Fluggast möglich allgemeine Informationen, zur Navigation und Bedienung des System aufzurufen. |
 |AF-06 |Spielfeld zurücksetzen |Im Laufe des Spieles, ist es dem Fluggast möglich das Spielfeld zu seinem Ausgangszustand zurückzusetzen.| 
 |AF-07 |Rückkehr zur Spielesammlung |Im Laufe eines Spieles oder nach Beendigung einer Runde, ist es dem Fluggast möglich zur Spielesammlung zurückzukehren.|
 
@@ -244,12 +245,12 @@ Die Wireframes skizzieren die grundlegende Anordnung und Funktion der Bedienelem
 **Abbildung:** Wireframe – Neue Runde starten  
 ![Neue Runde](diagrams/04-07_ergebnis.svg)
 
-|Anwendungsfall ID| AF-05|
+|Anwendungsfall ID| AF-05 a|
 |-----|-------------|
 |AF Name| Spielhilfe aufrufen   |
 |Akteur| Fluggast    |
-|Vorbedingungen| Spiel oder Hauptmenü ist geöffnet    |
-|Auslösendes Ereignis| Auswahl "Spielhilfe"  |
+|Vorbedingungen| Spiel ist geöffnet    |
+|Auslösendes Ereignis| Auswahl "Hilfe / Regeln"  |
 |Nachbedingung Erfolg| Spielhilfe mit Regeln wird angezeigt  |
 |Nachbedingung Fehlschlag| Spielhilfe kann nicht angezeigt werden  |
 |Ablauf| - Auswahl der Spielhilfe <br/>- Anzeige der grundlegenden Spielregeln      |
@@ -258,15 +259,30 @@ Die Wireframes skizzieren die grundlegende Anordnung und Funktion der Bedienelem
 **Abbildung:** Wireframe – Hilfe / Regeln  
 ![Hilfe](diagrams/05_hilfe.svg)
 
+|Anwendungsfall ID| AF-05 b|
+|-----|-------------|
+|AF Name| Hilfe Hauptmenü aufrufen   |
+|Akteur| Fluggast    |
+|Vorbedingungen| Hauptmenü ist geöffnet    |
+|Auslösendes Ereignis| Auswahl "Hilfe"  |
+|Nachbedingung Erfolg| Allgemeine Information zur Bedienung wird angezeigt  |
+|Nachbedingung Fehlschlag| Hilfe Hauptmenü kann nicht angezeigt werden  |
+|Ablauf| - Auswahl der Hilfe im Hauptmenü <br/>- Anzeige der grundlegenden Bedienung      |
+|Benutzerschnittstelle| |  
+
+**Abbildung:** Wireframe – Hilfe Hauptmenü  
+![Hilfe](diagrams/05_hilfe.svg)
+
+
 |Anwendungsfall ID| AF-06|
 |-----|-------------|
 |AF Name| Spielfeld zurücksetzen   |
 |Akteur| Fluggast    |
 |Vorbedingungen| Ein Spiel ist in Betrieb    |
-|Auslösendes Ereignis| Auswahl Schaltfläche "Zurücksetzen"  |
+|Auslösendes Ereignis| Auswahl Schaltfläche "Neustart"  |
 |Nachbedingung Erfolg| Das Spielfeld wird zurückgesetzt auf seinen Ausgangszustand  |
 |Nachbedingung Fehlschlag| Spielfeld wird nicht zurückgesetzt  |
-|Ablauf| - Auswahl der Schaltfläche "Zurücksetzen" <br/>- Spielfläche wird von den Spielsteinen geleert <br/>- Anzeige des neuen leeren Spielfeldes       |
+|Ablauf| - Auswahl der Schaltfläche "Neustart" <br/>- Spielfläche wird von den Spielsteinen geleert <br/>- Anzeige des neuen leeren Spielfeldes       |
 |Benutzerschnittstelle| |  
 
 **Abbildung:** Wireframe – Spielansicht  
@@ -362,14 +378,14 @@ Die Dokumentationsartefakte werden in folgenden Formaten bereitgestellt:
 
 ### 6.1 Anwenderdokumentation
 
-Eine separate Anwenderdokumentation für Passagiere wird nicht erstellt, da die Bedienung sowie Spielregeln und Abläufe vollständig innerhalb der Anwendung vermittelt werden. Die Benutzeroberfläche ist bewusst intuitiv gestaltet und enthält integrierte Hilfefunktionen zur Erklärung der Spielregeln und Bedienung.
+Eine separate Anwenderdokumentation für Passagiere wird nicht erstellt, da die Bedienung sowie Spielregeln und Abläufe vollständig innerhalb der Anwendung vermittelt werden. Die Benutzeroberfläche ist bewusst intuitiv gestaltet und enthält integrierte Hilfefunktionen zur Erklärung der Spielregeln und Bedienung. Die Spielregeln und Bedienhinweise können jederzeit über die vorgesehenen Hilfe-Buttons innerhalb der Anwendung aufgerufen werden.
 
-Zusätzlich wird für Demo-, Test- und Integrationszwecke eine kompakte README-Datei bereitgestellt. Diese beschreibt insbesondere den Start der Anwendung, die grundlegende Bedienung sowie die Voraussetzungen für die Ausführung.
+Zusätzlich wird für Demo-, Test- und Abnahmezwecke eine vereinfachte Anwenderdokumentation bereitgestellt. Diese beschreibt die grundlegende Bedienung, die Navigation innerhalb der Anwendung sowie die Spielregeln und Funktionen von „4-Connect“.
 
 **Zielgruppe:** Abnahme-/Testpersonal (AG), Integrationsverantwortliche sowie Projektbeteiligte für den Demo- und Testbetrieb  
 
 **Form:**
-- Markdown (README)
+- Markdown
 - PDF
 
 ### 6.2 Administratorendokumentation
@@ -432,8 +448,6 @@ Zusätzlich wird für Demo-, Test- und Integrationszwecke eine kompakte README-D
 - Generierung von Code-Coverage-Reports
 - Erweiterbarkeit:
   - Integration neuer Spiele
-  - zusätzliche Sprachdateien
-  - Branding-/Theme-Anpassungen
 - UML-Artefakte:
   - Use-Case-Diagramm
   - Aktivitätsdiagramme
@@ -452,9 +466,8 @@ Zusätzlich wird für Demo-, Test- und Integrationszwecke eine kompakte README-D
 Die folgenden Dokumente sind Bestandteil des Repositories und werden im Release mit ausgeliefert bzw. referenziert:
 
 - Lastenheft des Auftraggebers
-- projektbegleitender Bericht und Protokolle
+- projektbegleitender Bericht
 - UML-Modelle und Diagramme
-- Build- und Deploymentanweisungen
 - Code Conventions
 - README-Dateien
 - Coverage-Reports
@@ -470,24 +483,20 @@ Das Vorgehen ist so gewählt, dass frühzeitig lauffähige Zwischenstände entst
 
 ### 7.1 Vorgehensmodell
 
-Die Entwicklung erfolgt iterativ und inkrementell in Sprints, kurzen, zeitlich abgegrenzten Arbeitszyklen. Ziel jedes Sprints ist ein stabiler, lauffähiger Zwischenstand.
+Die Entwicklung erfolgt iterativ und in mehreren aufeinander aufbauenden Arbeitsphasen. Neue Anforderungen, Fehler und Anpassungen werden fortlaufend im Team abgestimmt und schrittweise umgesetzt.
 
-Anforderungen, Anpassungen und Fehler werden als Aufgaben erfasst, priorisiert und in überschaubaren Teilschritten umgesetzt. Ein Sprint umfasst typischerweise:
+Die Aufgabenverwaltung erfolgt über GitHub-Issues und projektinterne Absprachen. Änderungen und neue Funktionen werden in kleineren Arbeitspaketen entwickelt und regelmäßig in den aktuellen Projektstand integriert.
 
-- Planung zu Sprintbeginn
-  - Aufgabenabgrenzung
-  - Priorisierung
-  - Definition „fertig“
-- Implementierung während des Sprints
-  - Umsetzung in Feature-Branches
-- Review nach Umsetzung
-  - Prüfung über Merge-/Pull-Requests
-- Test zur Absicherung
-  - insbesondere auf der Zielumgebung/Dev-Kit
-- Dokumentationspflege begleitend
-  - fortlaufend, nicht ausschließlich am Projektende
+Der Entwicklungsprozess umfasst insbesondere:
+- Planung und Aufteilung der Aufgaben innerhalb des Teams
+- Umsetzung einzelner Funktionen und Dokumentationsbestandteile
+- Versionsverwaltung über Git und GitHub
+- Überprüfung und Zusammenführung von Änderungen über Pull-/Merge-Requests
+- regelmäßige Tests auf den Entwicklungsumgebungen sowie dem Dev-Kit
+- fortlaufende Pflege der Projektdokumentation
 
 ### 7.2 Arbeitspakete und Ablauf
+
 Die Umsetzung wird in Arbeitspakete gegliedert, die sich an der Kalkulation und den Anforderungen orientieren. Die folgenden Pakete dienen als Struktur für Planung und Umsetzung:
 
 - **Konzeption**
@@ -538,51 +547,54 @@ Die Umsetzung wird in Arbeitspakete gegliedert, die sich an der Kalkulation und 
 
 ### 7.3 Meilensteine und Zeitplan
 
-Die folgenden Meilensteine beschreiben den geplanten Ablauf über 16 Wochen. Zeiträume sind als Orientierung zu verstehen. Verschiebungen durch technische Randbedingungen oder notwendige Stabilisierung sind möglich. Die Meilensteine werden durch mehrere Sprints erreicht.
+Die folgenden Meilensteine beschreiben die wesentlichen Entwicklungs- und Dokumentationsschritte des Projekts sowie die geplanten Ergebnisse der einzelnen Projektphasen.
 
-#### M0.5 Projektstart und Setup (Woche 1)
-- Repository-/Build-Grundlage und Arbeitsorganisation
-- Erste technische Validierung auf der Zielumgebung/Dev-Kit
-- Initiale Aufgabenstruktur 
+#### M1 Projektdefinition und Lastenheft
+- Erstellung des Firmenporträts des Auftraggebers
+- Definition der Projektidee und Anforderungen
+- Erstellung des Lastenhefts und Ausschreibungstextes
 
-**Ergebnis:** lauffähiges Grundgerüst und initiale Planung.
+**Ergebnis:** abgestimmte Projektgrundlage und Aufgabenbeschreibung.
 
-#### M1 Konzeption abgeschlossen (Woche 2–3)
-- Spielregeln, Screenflow und Bedienkonzept abgestimmt
-- Definition der Modus- und Zustandslogik
+#### M2 Projektvorbereitung und Pflichtenheft
+- Erstellung des Firmenporträts des Auftragnehmers
+- Rollenverteilung innerhalb des Teams
+- Erstellung von Angebot, Kalkulation und Pflichtenheft
+- Beginn des projektbegleitenden Berichts
 
-**Ergebnis:** belastbare Grundlage für Umsetzung und UI-Struktur.
+**Ergebnis:** vollständige Projektplanung und organisatorische Grundlage.
 
-#### M2 Spielkern funktional (Woche 4–7)
-- Grundlegender Spielablauf 
-   - Zuglogik
-   - Sieg
-   - Unentschieden
-- UI-Grundlayout inkl. Eingabe (Touch/Maus)
-- Neustart/Abbruch und Rückkehr zur Spielesammlung
+#### M3 Entwicklungsumgebung und Toolauswahl
+- Vergleich und Auswahl geeigneter Entwicklungswerkzeuge
+- Definition der Entwicklungsumgebung
+- Festlegung von Code-Conventions und Arbeitsrichtlinien
+- Einrichtung von Repository und Kollaborationsstruktur
 
-**Ergebnis:** „4-Connect“ ist spielbar und technisch integrierbar.
+**Ergebnis:** einheitliche Entwicklungsumgebung und Arbeitsstruktur.
 
-#### M3 Funktionsumfang vervollständigt (Woche 8–11)
-- Moduswahl (PvP / PvE)
-- Bot-Grundlogik für Einzelspieler
-- UI-Flows vollständig (Menü, Spiel, Ergebnis)
+#### M4 Modellierung, Prototyping und Implementierung
+- Erstellung der UML-Diagramme
+- Entwicklung von UI-Prototypen und Wireframes
+- Implementierung des Spielkerns und der Benutzeroberfläche
+- Integration der Spielmodi und Bot-Logik
 
-**Ergebnis:** geplanter Funktionsumfang ist in einem konsolidierten Stand umgesetzt.
+**Ergebnis:** lauffähiger Prototyp mit zentralem Funktionsumfang.
 
-#### M4 Stabilisierung, Integration und Abnahmevorbereitung (Woche 12–15)
-- Stabilitäts- und Belastungsprüfung 
-- Fehlerkorrekturen und UI-Feinschliff
-- Dokumentationsfinalisierung und Abnahmecheck
+#### M5 Tests, Dokumentation und Buildprozess
+- Durchführung von Tests und Fehlerkorrekturen
+- Erstellung von Entwickler-, Administrator- und Anwenderdokumentation
+- Automatisierung des Buildprozesses
+- Pflege und Finalisierung der Projektdokumentation
 
-**Ergebnis:** Release-Kandidat mit geprüfter Auslieferungsstruktur.
+**Ergebnis:** vollständiger Projektstand mit Dokumentation und Buildstruktur.
 
-#### M5 Release/Abgabe (Woche 16)
-- Finales JAR-Paket und vollständige Abgabeunterlagen
-- Abschließende Prüfung der Start-/Beendenavigation und Offline-Fähigkeit
+#### M6 Release und Projektabschluss
+- Erstellung der finalen Release-Artefakte
+- Zusammenführung aller Projektdokumente
+- Abschlusspräsentation und Übergabe
+- Reflexion des Projektverlaufs und Vergleich mit der Kalkulation
 
-**Ergebnis:** finale Abgabeversion.
-
+**Ergebnis:** finale Abgabeversion einschließlich Repository, Dokumentation und Release-Paket.
 
 ### 7.4 Qualitätssicherung und Tests
 
@@ -597,7 +609,7 @@ Zur Sicherstellung von Stabilität, Wartbarkeit und Nachvollziehbarkeit werden f
 - Automatisierte Unit-Tests über JUnit
 - Überwachung der Testabdeckung mit JaCoCo
 - Regelmäßige Tests auf der Zielumgebung bzw. dem Dev-Kit
-- Dokumentierte manuelle Funktionstests zentraler Anwendungsfälle
+- manuelle Funktionstests zentraler Anwendungsfälle
 
 Die Build- und Testprozesse werden über Maven automatisiert ausgeführt. Fehler, Risiken und Änderungswünsche werden über Issues dokumentiert und priorisiert.
 
@@ -609,7 +621,7 @@ Die Versionierung erfolgt über Git. Änderungen werden über Feature-Branches e
 
 ### 7.6 Kommunikation und Projektdokumentation
 
-Das Team stimmt sich regelmäßig ab und dokumentiert Fortschritt, Entscheidungen, Risiken und Änderungen in Protokollen oder im Projektbericht. Der Projektstatus ist jederzeit über Issues und Milestones nachvollziehbar.
+Das Team stimmt sich regelmäßig ab und dokumentiert Fortschritt und Änderungen in Protokollen oder im Projektbericht. Der Projektstatus ist jederzeit über Issues und Milestones nachvollziehbar.
 
 ### 7.7 Risiken und Gegenmaßnahmen
 
@@ -685,22 +697,20 @@ Die folgenden Werkzeuge werden im Projekt eingesetzt.
 
 ### 8.3 Modellierung, Diagramme und Ablageorte
 
-Alle Diagramm-Artefakte werden versioniert im Repository abgelegt unter:
+Alle Diagramm-Artefakte werden in ihrer Endversion abgelegt unter:
 
-- `dokumente/diagrams/`
+- `final/`
 
 #### 8.3.1 Export-Dateien (SVG)
 
 Beispiele für vorhandene Exporte:
 
-- `dokumente/diagrams/01_hauptmenue.svg`
-- `dokumente/diagrams/02_modusmenue.svg`
-- `dokumente/diagrams/03-06-07_spielscreen.svg`
-- `dokumente/diagrams/03a_sprachauswahl.svg`
-- `dokumente/diagrams/04-07_ergebnis.svg`
-- `dokumente/diagrams/05_hilfe.svg`
-- `dokumente/diagrams/activity_spielrunde.svg`
-- `dokumente/diagrams/screenflow_v2.svg`
+- `prototyp/01_hauptmenue.svg`
+- `prototyp/02_modusmenue.svg`
+- `prototyp/03-06-07_spielscreen.svg`
+- `prototyp/03a_sprachauswahl.svg`
+- `prototyp/04-07_ergebnis.svg`
+- `prototyp/05_hilfe.svg`
 
 Die Exportdateien werden als SVG und teilweise zusätzlich als PDF bereitgestellt.
 
@@ -747,7 +757,6 @@ Die Projektdokumentation wird versioniert im Repository gepflegt.
 
 Zusätzlich werden folgende Artefakte automatisiert generiert bzw. exportiert:
 - JavaDoc-Dokumentation
-- UML-Exporte
 - Coverage-Reports
 - ausführbare Build-Artefakte
 
