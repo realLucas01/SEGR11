@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>FourConnectBotStrategy.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">IFE_Entertainment</a> &gt; <a href="index.source.html" class="el_package">SEG11.IFE_Entertainment.FourConnect</a> &gt; <span class="el_source">FourConnectBotStrategy.java</span></div><h1>FourConnectBotStrategy.java</h1><pre class="source lang-java linenums">/*
+ * 1.0 2026-04-19 Luca Tauscher
+ *
+ * Copyright (c) 2025-2026 Gervithrall Systems GmbH. All Rights Reserved.
+ *
+ * This software is the confidential and proprietary information of
+ * Gervithrall Systems GmbH (&quot;Confidential Information&quot;). You shall not
+ * disclose such Confidential Information and shall use it only in
+ * accordance with the terms of the license agreement you entered into
+ * with Gervithrall Systems GmbH.
+ *
+ * GERVITHRALL SYSTEMS GMBH MAKES NO REPRESENTATIONS OR WARRANTIES ABOUT
+ * THE SUITABILITY OF THE SOFTWARE, EITHER EXPRESS OR IMPLIED, INCLUDING
+ * BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS
+ * FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. GERVITHRALL SYSTEMS GMBH
+ * SHALL NOT BE LIABLE FOR ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT
+ * OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
+ */
+
+
+package SEG11.IFE_Entertainment.FourConnect;
+import SEG11.IFE_Entertainment.GameCore.GameState;
+import SEG11.IFE_Entertainment.GameCore.IMoveStrategy;
+import SEG11.IFE_Entertainment.GameCore.IPlayArea;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
+import static java.lang.Math.*;
+import java.security.SecureRandom;
+
+/**
+ * Implementiert {@link IMoveStrategy} und stellt zwei Bot strategien für das &quot;Vier Gewinnt&quot; Spiel
+ * bereit:
+ *
+ * &lt;p&gt;{@link EasyBotStrategy} - wählt zufällig eine gültige Spalte
+ * &lt;p&gt;{@link HardBotStrategy} - berechnet den besten Zug per MinMax
+ * 
+ * @author Luca Tauscher
+ */
+public class FourConnectBotStrategy implements IMoveStrategy {
+
+    /** Referenz auf das laufende Spiel wird zum Ausführen echter Züge benötigt */
+    FourConnectGame fcGame;
+    /** Regelwerk, wird für Sieg- und Unentschieden Prüfung genutzt */
+    FourConnectRules fcRules ;
+    /** Zufallsgenerator */
+<span class="fc" id="L49">    private final Random randNum = new SecureRandom();</span>
+
+    // Bewertungsgewichte
+
+    /** Punktwert für einen vollständigen Vier-Gewinnt-Zug des Bots */
+    private static final int SCORE_BOT_FOUR  =  1000;
+
+    /** Punktwert für drei eigene Scheiben in einem freien Fenster */
+    private static final int SCORE_BOT_THREE =     5;
+
+    /** Punktwert für zwei eigene Scheiben in einem freien Fenster */
+    private static final int SCORE_BOT_TWO   =     2;
+
+    /** Punktwert für eine eigene Scheibe in einem freien Fenster */
+    private static final int SCORE_BOT_ONE = 1;
+
+    /** Punktabzug für vier Gegner-Scheiben */
+    private static final int SCORE_OPP_FOUR  = -1000;
+
+    /** Punktabzug für drei Gegner-Scheiben in einem freien Fenster */
+    private static final int SCORE_OPP_THREE =    -5;
+
+    /** Punktabzug für zwei Gegner-Scheiben in einem freien Fenster */
+    private static final int SCORE_OPP_TWO   =    -2;
+
+    /** Punktwert für eine Gegner-Scheibe in einem freien Fenster */
+    private static final int SCORE_OPP_ONE = -1;
+
+    /** Suchtiefe des MinMax-Algorithmus (höher = stärker, aber langsamer) */
+    private static final int MINIMAX_DEPTH   =     4;
+
+    /**
+     * Wird vom Spielrahmen aufgerufen, um den Bot einen Zug ausführen zu lassen. Die konkrete
+     * Logik liegt in den inneren Klassen {@link EasyBotStrategy} und {@link HardBotStrategy}
+     *
+     * @param board das aktuelle Spielfeld
+     * @return der Status des Spieles{@link GameState}
+     */
+    @Override
+    public GameState chooseMove(IPlayArea board) {
+        // wird durch die inneren Strategieklassen überschrieben
+<span class="nc" id="L90">        return null;</span>
+    }
+
+    /** Standardkonstruktor für die BotStrategy
+     *
+     * &lt;p&gt;Der Bot wird dann benutzt über:
+     * FourConnectBotStrategy botStrategy = new FourConnectBotStrategy(game, rules);
+     * IMoveStrategy hardBot = botStrategy.new HardBotStrategy();
+     * hardBot.chooseMove(board);
+     *
+     * @param game die aktuelle Instanz des verwendeten Spiels
+     * @param rules die Instanz der regeln
+     */
+<span class="fc" id="L103">    public FourConnectBotStrategy(FourConnectGame game, FourConnectRules rules){</span>
+<span class="fc" id="L104">        this.fcGame = game;</span>
+<span class="fc" id="L105">        this.fcRules = rules;</span>
+<span class="fc" id="L106">    }</span>
+
+    /**
+     * Bewertet den aktuellen Zustand des Spielfelds aus Sicht des Bots.
+     *
+     * &lt;p&gt;Alle 69 möglichen Vier Felder Fenster werden analysiert. Enthält
+     * ein Fenster ausschließlich Bot Scheiben und leere Felder, wird ein
+     * positiver Wert addiert. Enthält es ausschließlich Gegner Scheiben,
+     * wird ein negativer Wert subtrahiert. Gemischte Fenster fließen nicht
+     * in die Bewertung ein, da sie für keinen Spieler mehr gewinnbar sind
+     *
+     * @param board das zu bewertende Spielfeld
+     * @return der Score: positiv: Bot ist im Vorteil, negativ: Gegner im Vorteil
+     */
+    public Integer appraiseBoard(FourConnectGameBoard board) {
+<span class="fc" id="L121">        int score = 0;</span>
+<span class="fc" id="L122">        final ArrayList&lt;Position[]&gt; connectsList = allFourConnects(board);</span>
+
+<span class="fc bfc" id="L124" title="All 2 branches covered.">        for (Position[] connects : connectsList) {</span>
+<span class="fc" id="L125">            int botOwningCount = 0;</span>
+<span class="fc" id="L126">            int playerOwningCount = 0;</span>
+
+            //Zähle Bot und Gegner Scheiben im aktuellen Fenster
+<span class="fc bfc" id="L129" title="All 2 branches covered.">            for (Position pos : connects) {</span>
+<span class="fc" id="L130">                final Player owner = board.getCellOwner(pos.getX(), pos.getY()).getType();</span>
+<span class="fc bfc" id="L131" title="All 3 branches covered.">                switch (owner) {</span>
+<span class="fc" id="L132">                    case HUMAN -&gt; playerOwningCount++;</span>
+<span class="fc" id="L133">                    case HARDBOT -&gt; botOwningCount++;</span>
+                    default -&gt; { //nix passiert
+                    }
+                }
+            }
+            // Bot Fenster: kein Gegner vorhanden → positiv bewerten
+<span class="fc bfc" id="L139" title="All 2 branches covered.">            if (playerOwningCount == 0) {</span>
+<span class="fc bfc" id="L140" title="All 5 branches covered.">                switch (botOwningCount) {</span>
+<span class="fc" id="L141">                    case 4 -&gt; score += SCORE_BOT_FOUR;</span>
+<span class="fc" id="L142">                    case 3 -&gt; score += SCORE_BOT_THREE;</span>
+<span class="fc" id="L143">                    case 2 -&gt; score += SCORE_BOT_TWO;</span>
+<span class="fc" id="L144">                    case 1 -&gt; score += SCORE_BOT_ONE;</span>
+<span class="fc" id="L145">                    default -&gt; score += 0;</span>
+                }
+            }
+            //Gegner Fenster: kein Bot vorhanden → negativ bewerten
+<span class="fc bfc" id="L149" title="All 2 branches covered.">            if (botOwningCount == 0) {</span>
+<span class="fc bfc" id="L150" title="All 5 branches covered.">                switch (playerOwningCount) {</span>
+<span class="fc" id="L151">                    case 4 -&gt; score += SCORE_OPP_FOUR;</span>
+<span class="fc" id="L152">                    case 3 -&gt; score += SCORE_OPP_THREE;</span>
+<span class="fc" id="L153">                    case 2 -&gt; score += SCORE_OPP_TWO;</span>
+<span class="fc" id="L154">                    case 1 -&gt; score += SCORE_OPP_ONE;</span>
+<span class="fc" id="L155">                    default -&gt; score += 0;</span>
+                }
+            }
+<span class="fc" id="L158">        }</span>
+<span class="fc" id="L159">        return score;</span>
+    }
+
+    /**
+     * Funktion, um alle Kombinationsmöglichkeiten für einen Sieg zu finden
+     *
+     * &lt;p&gt;Sucht in einem Standardspielfeld alle 69 Kombinationsmöglichkeiten welche einen Sieg
+     * ermöglichen. Diese werden alle in einer Liste gespeichert und zurückgegeben.
+     *
+     * @param board das Spielfeld
+     * @return die ArrayList mit allen Siegeskoordinaten
+     */
+    public ArrayList&lt;Position[]&gt; allFourConnects(FourConnectGameBoard board){
+<span class="fc" id="L172">        final ArrayList&lt;Position[]&gt; connectsList = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L173">        final Integer columCount = board.getColumns();</span>
+<span class="fc" id="L174">        final Integer rowCount = board.getRows();</span>
+        //Horizontal
+<span class="fc bfc" id="L176" title="All 2 branches covered.">        for(int y = 0; y &lt; rowCount; y++ ){</span>
+<span class="fc bfc" id="L177" title="All 2 branches covered.">            for(int x = 0; x &lt; columCount - 3; x++){</span>
+<span class="fc" id="L178">                final Position[] temp = {new Position(x,y), new Position(x+1,y),</span>
+<span class="fc" id="L179">                        new Position(x+2,y), new Position(x+3,y)};</span>
+<span class="fc" id="L180">                connectsList.add(temp);</span>
+            }
+        }
+        //Vertical
+<span class="fc bfc" id="L184" title="All 2 branches covered.">        for(int x = 0; x &lt; columCount; x++ ){</span>
+<span class="fc bfc" id="L185" title="All 2 branches covered.">            for(int y = 0; y &lt; rowCount - 3; y++){</span>
+<span class="fc" id="L186">                final Position[] temp = {new Position(x,y), new Position(x,y+1),</span>
+<span class="fc" id="L187">                        new Position(x,y+2), new Position(x,y+3)};</span>
+<span class="fc" id="L188">                connectsList.add(temp);</span>
+            }
+        }
+        //Diagonal ↗
+<span class="fc bfc" id="L192" title="All 2 branches covered.">        for(int x = 0; x &lt; columCount - 3; x++ ){</span>
+<span class="fc bfc" id="L193" title="All 2 branches covered.">            for(int y = 0; y &lt; rowCount - 3; y++){</span>
+<span class="fc" id="L194">                final Position[] temp = {new Position(x,y), new Position(x+1,y+1),</span>
+<span class="fc" id="L195">                        new Position(x+2,y+2), new Position(x+3,y+3)};</span>
+<span class="fc" id="L196">                connectsList.add(temp);</span>
+            }
+        }
+        //Diagonal ↘
+<span class="fc bfc" id="L200" title="All 2 branches covered.">        for(int x = 0; x &lt; columCount-3; x++ ){</span>
+<span class="fc bfc" id="L201" title="All 2 branches covered.">            for(int y = 3; y &lt; rowCount; y++){</span>
+<span class="fc" id="L202">                final Position[] temp = {new Position(x,y), new Position(x+1,y-1),</span>
+<span class="fc" id="L203">                        new Position(x+2,y-2), new Position(x+3,y-3)};</span>
+<span class="fc" id="L204">                connectsList.add(temp);</span>
+            }
+        }
+<span class="fc" id="L207">        return connectsList;</span>
+    }
+
+    // ------------------------------------------------
+    //  INNERE KLASSEN
+    // ------------------------------------------------
+
+    /**
+     * Die innere Klasse, welche den einfachen Bot repräsentiert. Auch diese implementiert das
+     * Interface {@link IMoveStrategy}.
+     *
+     * &lt;p&gt;Der einfache Bot wählt aus den verfügbaren, leeren Spalten zufällig eine aus
+     */
+<span class="fc" id="L220">    public class EasyBotStrategy implements IMoveStrategy {</span>
+
+        /**
+         * Wählt zufällig eine Spalte aus und wirft dort eine Scheibe ein
+         *
+         * @param board das aktuelle Spielfeld
+         * @return der Status des Spieles{@link GameState}
+         */
+        @Override
+        public GameState chooseMove(IPlayArea board) {
+            // Logik für zufälligen Zug
+<span class="fc" id="L231">            final List&lt;Integer&gt; possibleColumns = new ArrayList&lt;&gt;();</span>
+            /* Es überprüft, welche Spalten noch frei sind. Anhand der freien Spalten wird eine
+            zufällig ausgewählt und diese an dropDisc() weitergeleitet  */
+<span class="fc bfc" id="L234" title="All 2 branches covered.">            for(int col = 0; col &lt; ((FourConnectGameBoard) board).getColumns(); col++ ){</span>
+<span class="pc bpc" id="L235" title="1 of 2 branches missed.">                if(((FourConnectGameBoard) board).getCellOwner(col,0).getType() == Player.NONE){</span>
+<span class="fc" id="L236">                    possibleColumns.add(col);</span>
+                }
+            }
+<span class="fc" id="L239">            final int randomIndex = randNum.nextInt(possibleColumns.size());</span>
+<span class="fc" id="L240">            return fcGame.dropDisc(possibleColumns.get(randomIndex));</span>
+        }
+    }
+
+    /**
+     * Die innere Klasse, welche den schweren Bot repräsentiert. Auch diese implementiert das
+     * Interface {@link IMoveStrategy}.
+     *
+     * &lt;p&gt;Er benutzt den MinMax Algorithmus zum Berechnen seines Zuges.
+     *
+     * &lt;p&gt;Der Algorithmus durchsucht den Spielbaum bis zur Tiefe
+     * {@value FourConnectBotStrategy#MINIMAX_DEPTH}, bewertet Blattknoten
+     * mit {@link #appraiseBoard} und wählt den Zug mit dem höchsten Score
+     *
+     * &lt;p&gt;aktueller Stand :
+     *      43 : 1 für den Bot ...
+     *      und 2 Unentschieden
+     */
+<span class="fc" id="L258">    public class HardBotStrategy implements IMoveStrategy {</span>
+        /* index für die playerList, um zu wissen, an welcher Stelle der Bot Spieler steht */
+        int botPlayerIndex;
+        /** die im {@link FourConnectGameBoard} initialisierte Spieler Liste  */
+        FourConnectPlayer[] playerList;
+
+        /**
+         * Einstiegspunkt der schweren Strategie.
+         *
+         * &lt;p&gt;Erstellt eine Kopie des Spielfelds, berechnet darauf den besten Zug und führt ihn aus.
+         *
+         * @param board das aktuelle Spielfeld
+         * @return der Status des Spieles{@link GameState}
+         */
+        @Override
+        public GameState chooseMove(IPlayArea board) {
+            // Spielfeld kopieren, damit der Originalzustand unverändert bleibt
+<span class="nc" id="L275">            final FourConnectGameBoard boardCopy = new FourConnectGameBoard();</span>
+<span class="nc" id="L276">            boardCopy.copy((FourConnectGameBoard) board);</span>
+
+<span class="nc" id="L278">            playerList = fcGame.getPlayers();</span>
+<span class="nc" id="L279">            botPlayerIndex = findBotPlayerPosition(playerList);</span>
+
+<span class="nc" id="L281">            final Integer toPlayCol = findBestTurn(boardCopy, MINIMAX_DEPTH);</span>
+
+<span class="nc" id="L283">            return fcGame.dropDisc(toPlayCol);</span>
+        }
+
+        /**
+         * Bestimmt die optimale Spalte für den Bot auf der obersten Ebene des MinMax-Baums.
+         *
+         * &lt;p&gt;Jeder valide Zug wird simuliert, per {@link #minMax} bewertet und danach rückgängig
+         * gemacht. Der Zug mit dem höchsten Score wird als Spaltenindex zurückgegeben.
+         *
+         * @param boardC das (kopierte) Spielfeld
+         * @param depth die maximale Suchtiefe, umso größer die Zahl, umso höher die Stärke und
+         *              Berechnungszeit 3-5 ist ein gutes Maß
+         * @return Spaltenindex des besten Zugs
+         */
+        private Integer findBestTurn(FourConnectGameBoard boardC, int depth){
+<span class="nc" id="L298">            Integer bestScore = Integer.MIN_VALUE;</span>
+<span class="nc" id="L299">            Integer bestTurn = -1;</span>
+            Integer score;
+<span class="nc" id="L301">            final List&lt;Position&gt; valideTurns = findValideTurns(boardC);</span>
+
+<span class="nc bnc" id="L303" title="All 2 branches missed.">            for(Position turn: valideTurns){</span>
+<span class="nc" id="L304">                playTestTurn(boardC, turn, playerList[botPlayerIndex]);</span>
+<span class="nc" id="L305">                score = minMax(boardC, depth-1, false);</span>
+<span class="nc" id="L306">                undoTestTurn(boardC, turn);</span>
+
+<span class="nc bnc" id="L308" title="All 2 branches missed.">                if(score &gt; bestScore){</span>
+<span class="nc" id="L309">                    bestScore = score;</span>
+<span class="nc" id="L310">                    bestTurn = turn.getX();</span>
+                }
+<span class="nc" id="L312">            }</span>
+<span class="nc" id="L313">            return bestTurn;</span>
+        }
+
+        /**
+         * Rekursiver MinMax-Algorithmus.
+         *
+         * &lt;p&gt;Wechselt bei jedem Aufruf zwischen dem maximierenden (Bot) und
+         *          * dem minimierenden (Gegner) Spieler. Terminiert wenn:
+         *          * die maximale Tiefe erreicht ist,
+         *          * ein Spieler gewonnen hat, oder
+         *          * das Spielfeld voll ist (Unentschieden).
+         *
+         * @param board das aktuell simulierte Spielfeld
+         * @param depth verbleibende Suchtiefe
+         * @param isMaximizing {@code true} wenn der Bot am Zug ist,
+         *                     {@code false} wenn der Gegner am Zug ist
+         * @return heuristischer Score des besten erreichbaren Zustands
+         */
+        private Integer minMax(FourConnectGameBoard board, int depth, boolean isMaximizing){
+            Integer value;
+            int bestValue;
+
+            // Abbruchbedingung: Tiefe 0, Sieg oder Unentschieden
+<span class="nc bnc" id="L336" title="All 6 branches missed.">            if((depth == 0) || (fcRules.checkWin(board, playerList[(botPlayerIndex + (isMaximizing ? 1 : 0)) % 2]) )||</span>
+<span class="nc bnc" id="L337" title="All 2 branches missed.">                    (fcRules.checkTie(board))) {</span>
+<span class="nc" id="L338">                return appraiseBoard(board);</span>
+            }
+
+<span class="nc" id="L341">            final List&lt;Position&gt; valideTurns = findValideTurns(board);</span>
+
+<span class="nc bnc" id="L343" title="All 2 branches missed.">            if( isMaximizing){</span>
+                // Bot am Zug: höchsten erreichbaren Score suchen
+<span class="nc" id="L345">                bestValue = Integer.MIN_VALUE;</span>
+
+<span class="nc bnc" id="L347" title="All 2 branches missed.">                for(Position turn: valideTurns){</span>
+<span class="nc" id="L348">                    playTestTurn(board, turn, playerList[botPlayerIndex] );</span>
+<span class="nc" id="L349">                    value = minMax(board, depth-1, false);</span>
+<span class="nc" id="L350">                    undoTestTurn(board, turn);</span>
+<span class="nc" id="L351">                    bestValue = max(bestValue, value);</span>
+<span class="nc" id="L352">                }</span>
+            } else{
+                // Gegner am Zug: niedrigsten erreichbaren Score suchen
+<span class="nc" id="L355">                bestValue = Integer.MAX_VALUE;</span>
+<span class="nc bnc" id="L356" title="All 2 branches missed.">                for(Position turn: valideTurns){</span>
+<span class="nc" id="L357">                    playTestTurn(board, turn, playerList[(botPlayerIndex+1)%2] );</span>
+<span class="nc" id="L358">                    value = minMax(board, depth-1, true);</span>
+<span class="nc" id="L359">                    undoTestTurn(board,turn);</span>
+<span class="nc" id="L360">                    bestValue = min(bestValue,value);</span>
+<span class="nc" id="L361">                }</span>
+            }
+<span class="nc" id="L363">            return bestValue;</span>
+        }
+
+
+        /**
+         * Hilfsfunktion um die Position, des Bot Spielers in der Spielliste zu finden
+         * @param players Array mit den Spielern
+         * @return array Position des Botes
+         *         -1, wenn der Bot nicht gefunden wurde
+         */
+        private Integer findBotPlayerPosition(FourConnectPlayer[] players){
+<span class="nc bnc" id="L374" title="All 2 branches missed.">            for(int i = 0; i &lt; players.length; i++){</span>
+<span class="nc bnc" id="L375" title="All 2 branches missed.">                if(players[i].getType() == Player.HARDBOT){</span>
+<span class="nc" id="L376">                    return i;</span>
+                }
+            }
+<span class="nc" id="L379">            return -1;</span>
+        }
+
+        /**
+         * Macht einen Testzug rückgängig, indem die Zielzelle auf
+         * {@link Player#NONE} zurückgesetzt wird.
+         *
+         * @param board  das Spielfeld
+         * @param turn die Position, die geleert werden soll
+         */
+        private void undoTestTurn(FourConnectGameBoard board, Position turn) {
+<span class="nc" id="L390">            board.setCellValue(turn,new FourConnectPlayer(Player.NONE, null, null));</span>
+<span class="nc" id="L391">        }</span>
+
+        /**
+         * Setzt eine Scheibe des angegebenen Spielers auf die Zielposition
+         *
+         * @param board das Spielfeld
+         * @param turn die Zielposition der Scheibe
+         * @param currentFCPlayer der Spieler, dessen Scheibe gesetzt wird
+         */
+        private void playTestTurn(FourConnectGameBoard board, Position turn, FourConnectPlayer currentFCPlayer) {
+<span class="nc" id="L401">           board.setCellValue(turn,currentFCPlayer);</span>
+<span class="nc" id="L402">        }</span>
+
+        /**
+         * Ermittelt alle validen Züge auf dem aktuellen Spielfeld.
+         *
+         * &lt;p&gt;In vier Gewinnt ist pro Spalte genau eine Position gültig:
+         * die unterste noch freie Zelle (größter y-Wert mit {@link Player#NONE}).
+         * Vollständig gefüllte Spalten werden übersprungen.
+         * Das Board wird direkt als Parameter verwendet, um die Abhängigkeit vom äußeren Feld
+         * {@code fcBoard} zu vermeiden.
+         *
+         * @param board das zu analysierende Spielfeld
+         * @return Liste der validen Zielpositionen
+         */
+        private List&lt;Position&gt; findValideTurns(FourConnectGameBoard board) {
+<span class="nc" id="L417">            final Integer columCount = board.getColumns();</span>
+<span class="nc" id="L418">            final Integer rowCount = board.getRows();</span>
+<span class="nc" id="L419">            final List&lt;Position&gt; possibleTurns = new ArrayList&lt;&gt;();</span>
+<span class="nc bnc" id="L420" title="All 2 branches missed.">            for(int x = 0; x &lt;= columCount-1; x++ ){</span>
+                // Von unten (y = rowCount-1) nach oben (y = 0) suchen
+<span class="nc bnc" id="L422" title="All 2 branches missed.">                for(int y = rowCount - 1; y &gt; -1; y--){</span>
+<span class="nc bnc" id="L423" title="All 2 branches missed.">                    if(board.getCellOwner(x,y).getType() == Player.NONE){</span>
+                        // Unterste freie Zelle dieser Spalte gefunden
+<span class="nc" id="L425">                        possibleTurns.add(new Position(x, y));</span>
+<span class="nc" id="L426">                        break;</span>
+                    }
+                    // Keine freie zelle, Spalte wird übersprungen
+                }
+            }
+
+<span class="nc" id="L432">            return possibleTurns;</span>
+        }
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

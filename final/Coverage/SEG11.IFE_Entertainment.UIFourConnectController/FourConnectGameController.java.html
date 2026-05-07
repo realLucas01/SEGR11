@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>FourConnectGameController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">IFE_Entertainment</a> &gt; <a href="index.source.html" class="el_package">SEG11.IFE_Entertainment.UIFourConnectController</a> &gt; <span class="el_source">FourConnectGameController.java</span></div><h1>FourConnectGameController.java</h1><pre class="source lang-java linenums">/*
+ * 1.0 2026-04-28 Truong Tan Long Nguyen
+ *
+ * Copyright (c) 2025-2026 Gervithrall Systems GmbH. All Rights Reserved.
+ *
+ * This software is the confidential and proprietary information of
+ * Gervithrall Systems GmbH (&quot;Confidential Information&quot;). You shall not
+ * disclose such Confidential Information and shall use it only in
+ * accordance with the terms of the license agreement you entered into
+ * with Gervithrall Systems GmbH.
+ *
+ * GERVITHRALL SYSTEMS GMBH MAKES NO REPRESENTATIONS OR WARRANTIES ABOUT
+ * THE SUITABILITY OF THE SOFTWARE, EITHER EXPRESS OR IMPLIED, INCLUDING
+ * BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS
+ * FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. GERVITHRALL SYSTEMS GMBH
+ * SHALL NOT BE LIABLE FOR ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT
+ * OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
+ */
+package SEG11.IFE_Entertainment.UIFourConnectController;
+
+import java.io.IOException;
+import SEG11.IFE_Entertainment.App;
+import SEG11.IFE_Entertainment.FourConnect.FourConnectGame;
+import SEG11.IFE_Entertainment.FourConnect.Player;
+import SEG11.IFE_Entertainment.GameCore.GameState;
+import SEG11.IFE_Entertainment.UIController.GameController;
+import javafx.animation.PauseTransition;
+import javafx.fxml.FXML;
+import javafx.scene.control.Label;
+import javafx.scene.layout.GridPane;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
+import javafx.util.Duration;
+
+/**
+ * Controller für den Vier-Gewinnt-Spielscreen.
+ *
+ * &lt;p&gt;Verbindet die Spiellogik mit der Benutzeroberfläche. Verwaltet das
+ * Spielfeld, verarbeitet Eingaben des Spielers und aktualisiert die Anzeige.
+ * 
+ * @author Truong Tan Long Nguyen
+ */
+<span class="nc" id="L43">public class FourConnectGameController implements GameController {</span>
+
+    /** Das Spielfeld als GridPane. */
+    @FXML
+    private GridPane gridPane;
+
+    /** Label zur Anzeige des aktuellen Spielstatus. */
+    @FXML
+    private Label statusLabel;
+
+    /** Das aktuell laufende Spiel. */
+    private FourConnectGame game;
+
+    /** Der vorherige Screen von dem aus Help geöffnet wurde. */
+<span class="nc" id="L57">    public static String previousScreen = &quot;MainMenu&quot;;</span>
+
+<span class="nc" id="L59">    private Circle[][] circles = new Circle[6][7];</span>
+    /** Variable um die Anwesenheit eines BotSpielers zu signalisieren. True = einer vorhanden */
+    private boolean oneBotPlayer;
+
+
+    /**
+     * Startet das Spiel neu mit demselben Spielmodus.
+     *
+     * @throws IOException falls die FXML-Datei nicht geladen werden kann
+     */
+    @Override
+    @FXML
+    public void restartGame() throws IOException {
+<span class="nc" id="L72">        game.restart();</span>
+<span class="nc" id="L73">        initBoard();</span>
+<span class="nc" id="L74">        updateStatus();</span>
+<span class="nc" id="L75">    }</span>
+
+    /**
+     * Beendet das Spiel und navigiert zurück zum Hauptmenü.
+     *
+     * @throws IOException falls die FXML-Datei nicht geladen werden kann
+     */
+    @Override
+    @FXML
+    public void backToMainMenu() throws IOException {
+<span class="nc" id="L85">        game.endGame();</span>
+<span class="nc" id="L86">        App.setRoot(&quot;MainMenu&quot;);</span>
+<span class="nc" id="L87">    }</span>
+
+    /**
+     * Navigiert zum Hilfe-Screen.
+     *
+     * @throws IOException falls die FXML-Datei nicht geladen werden kann
+     */
+    @Override
+    @FXML
+    public void openHelp() throws IOException {
+<span class="nc" id="L97">        previousScreen = &quot;FourConnectGame&quot;;</span>
+<span class="nc" id="L98">        App.setRoot(&quot;help_fc&quot;);</span>
+<span class="nc" id="L99">    }</span>
+
+    /**
+     * Verarbeitet die Eingabe des Spielers für eine bestimmte Spalte.
+     * Prüft, ob die Spalte voll ist, wirft die Scheibe ein und aktualisiert die Anzeige.
+     *
+     * @param column die gewählte Spalte
+     * @throws IOException falls die FXML-Datei nicht geladen werden kann
+     */
+    public void handleColumnInput(Integer column) throws IOException {
+<span class="nc bnc" id="L109" title="All 2 branches missed.">        if (game.getStatus() != GameState.Running) {</span>
+<span class="nc" id="L110">            return;</span>
+        }
+<span class="nc bnc" id="L112" title="All 2 branches missed.">        if (game.getBoard().getCellOwner(column, 0).getType() != Player.NONE) {</span>
+<span class="nc" id="L113">            statusLabel.setText(&quot;Spalte ist voll!&quot;);</span>
+<span class="nc" id="L114">            return;</span>
+        }
+<span class="nc" id="L116">        GameState result = game.dropDisc(column);</span>
+<span class="nc" id="L117">        updateBoard();</span>
+<span class="nc bnc" id="L118" title="All 4 branches missed.">        if (result == GameState.Won || result == GameState.Tied) {</span>
+<span class="nc" id="L119">            App.setRoot(&quot;EndScreen&quot;);</span>
+        } else {
+<span class="nc" id="L121">            game.playerTurn();</span>
+<span class="nc" id="L122">            updateStatus();</span>
+        }
+
+<span class="nc bnc" id="L125" title="All 2 branches missed.">        if(oneBotPlayer){</span>
+<span class="nc" id="L126">            gridPane.setDisable(true);</span>
+
+<span class="nc" id="L128">            PauseTransition pause = new PauseTransition(Duration.seconds((1.0)));</span>
+<span class="nc" id="L129">            pause.setOnFinished(event -&gt; {</span>
+<span class="nc" id="L130">                GameState botResult = game.playBotTurn();</span>
+
+<span class="nc" id="L132">                updateBoard();</span>
+<span class="nc" id="L133">                gridPane.setDisable(false);</span>
+
+<span class="nc bnc" id="L135" title="All 2 branches missed.">                if (botResult == GameState.Won) {</span>
+                    try {
+<span class="nc" id="L137">                        App.setRoot(&quot;EndScreen&quot;);</span>
+<span class="nc" id="L138">                    } catch (IOException e) {</span>
+<span class="nc" id="L139">                        throw new RuntimeException(e);</span>
+<span class="nc" id="L140">                    }</span>
+<span class="nc bnc" id="L141" title="All 2 branches missed.">                } else if (botResult == GameState.Tied) {</span>
+<span class="nc" id="L142">                    statusLabel.setText(&quot;Unentschieden!&quot;);</span>
+                } else {
+<span class="nc" id="L144">                    game.playerTurn();</span>
+<span class="nc" id="L145">                    updateStatus();</span>
+                }
+<span class="nc" id="L147">            });</span>
+<span class="nc" id="L148">            pause.play();</span>
+
+        }
+<span class="nc" id="L151">    }</span>
+
+    /**
+     * Initialisiert das Spiel mit den gewählten Spielertypen und zeichnet das Spielfeld.
+     *
+     * @param playerOne der Typ von Spieler 1
+     * @param playerTwo der Typ von Spieler 2
+     */
+    public void handlePlayMode(Player playerOne, Player playerTwo) {
+<span class="nc" id="L160">        game = FourConnectGame.getInstance();</span>
+<span class="nc" id="L161">        game.endGame();</span>
+<span class="nc" id="L162">        game.initFourConnectGame(playerOne, playerTwo);</span>
+<span class="nc" id="L163">        initBoard();</span>
+<span class="nc" id="L164">        updateStatus();</span>
+<span class="nc" id="L165">    }</span>
+
+    /**
+     * Setzt das laufende Spiel fort, ohne es neu zu initialisieren.
+     */
+    public void resumeGame() {
+<span class="nc" id="L171">        game = FourConnectGame.getInstance();</span>
+<span class="nc" id="L172">        initBoard();</span>
+<span class="nc" id="L173">        updateBoard();</span>
+<span class="nc" id="L174">        updateStatus();</span>
+<span class="nc" id="L175">    }</span>
+
+    /**
+     * Erstellt das Spielfeld als 6x7 Grid aus grauen Kreisen.
+     * Jeder Kreis reagiert auf Mausklicks zur Spaltenauswahl.
+     */
+    private void initBoard() {
+<span class="nc" id="L182">        gridPane.getChildren().clear();</span>
+<span class="nc" id="L183">        circles = new Circle[6][7];</span>
+<span class="nc bnc" id="L184" title="All 2 branches missed.">        for (int row = 0; row &lt; 6; row++) {</span>
+<span class="nc bnc" id="L185" title="All 2 branches missed.">            for (int col = 0; col &lt; 7; col++) {</span>
+<span class="nc" id="L186">                Circle circle = new Circle(30);</span>
+<span class="nc" id="L187">                circle.setFill(Color.GRAY);</span>
+<span class="nc" id="L188">                circles[row][col] = circle;</span>
+<span class="nc" id="L189">                final int c = col;</span>
+<span class="nc" id="L190">                circle.setOnMouseClicked(e -&gt; {</span>
+                    try {
+<span class="nc" id="L192">                        handleColumnInput(c);</span>
+<span class="nc" id="L193">                    } catch (IOException ex) {</span>
+<span class="nc" id="L194">                        throw new RuntimeException(ex);</span>
+<span class="nc" id="L195">                    }</span>
+<span class="nc" id="L196">                });</span>
+<span class="nc" id="L197">                gridPane.add(circle, col, row);</span>
+            }
+        }
+<span class="nc" id="L200">        oneBotPlayer = game.getOneBotPlayer();</span>
+<span class="nc" id="L201">    }</span>
+
+    /**
+     * Aktualisiert die Farben der Kreise basierend auf dem aktuellen Spielfeldzustand.
+     */
+    private void updateBoard() {
+<span class="nc bnc" id="L207" title="All 2 branches missed.">        for (int row = 0; row &lt; 6; row++) {</span>
+<span class="nc bnc" id="L208" title="All 2 branches missed.">            for (int col = 0; col &lt; 7; col++) {</span>
+<span class="nc" id="L209">                String colour = game.getBoard().getCellOwner(col, row).getColour();</span>
+<span class="nc bnc" id="L210" title="All 2 branches missed.">                if (colour != null) {</span>
+<span class="nc" id="L211">                    circles[row][col].setFill(Color.web(colour));</span>
+                } else {
+<span class="nc" id="L213">                    circles[row][col].setFill(Color.GRAY);</span>
+                }
+            }
+        }
+<span class="nc" id="L217">    }</span>
+
+    /**
+     * Aktualisiert das Statuslabel basierend auf dem aktuellen Spielzustand.
+     */
+    private void updateStatus() {
+<span class="nc" id="L223">        GameState state = game.getStatus();</span>
+<span class="nc bnc" id="L224" title="All 4 branches missed.">        switch (state) {</span>
+            case Running -&gt; {
+<span class="nc" id="L226">                int playerIndex = game.getCurrentPlayerIndex();</span>
+<span class="nc" id="L227">                statusLabel.setText(&quot;Spieler &quot; + (playerIndex + 1));</span>
+<span class="nc" id="L228">            }</span>
+<span class="nc" id="L229">            case Won -&gt; statusLabel.setText(&quot;Gewonnen!&quot;);</span>
+<span class="nc" id="L230">            case Tied -&gt; statusLabel.setText(&quot;Unentschieden!&quot;);</span>
+<span class="nc" id="L231">            default -&gt; statusLabel.setText(&quot;&quot;);</span>
+        }
+<span class="nc" id="L233">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

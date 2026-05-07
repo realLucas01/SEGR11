@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>FourConnectGameBoard.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">IFE_Entertainment</a> &gt; <a href="index.source.html" class="el_package">SEG11.IFE_Entertainment.FourConnect</a> &gt; <span class="el_source">FourConnectGameBoard.java</span></div><h1>FourConnectGameBoard.java</h1><pre class="source lang-java linenums">/*
+ * 1.0 2026-04-19 Luca Tauscher
+ *
+ * Copyright (c) 2025-2026 Gervithrall Systems GmbH. All Rights Reserved.
+ *
+ * This software is the confidential and proprietary information of Gervithrall Systems GmbH
+ * (&quot;Confidential Information&quot;). You shall not disclose such Confidential Information and shall use
+ * it only in accordance with the terms of the license agreement you entered into with Gervithrall
+ * Systems GmbH.
+ *
+ * GERVITHRALL SYSTEMS GMBH MAKES NO REPRESENTATIONS OR WARRANTIES ABOUT THE SUITABILITY OF THE
+ * SOFTWARE, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF
+ * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. GERVITHRALL SYSTEMS GMBH
+ * SHALL NOT BE LIABLE FOR ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT OF USING, MODIFYING OR
+ * DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
+ */
+
+
+package SEG11.IFE_Entertainment.FourConnect;
+
+import SEG11.IFE_Entertainment.GameCore.IPlayArea;
+import java.util.*;
+
+/**
+ * Das &quot;Vier Gewinnt&quot; Spielfeld
+ * 
+ * @author Luca Tauscher
+ */
+public class FourConnectGameBoard implements IPlayArea {
+  /** Die Anzahl der Zeilen, Standard: 6 */
+<span class="fc" id="L31">  private static final Integer ROW_COUNTS = 6;</span>
+  /** Die Anzahl der Spalten, Standard: 7 */
+<span class="fc" id="L33">  private static final Integer COLUM_COUNTS = 7;</span>
+  /**
+   *  Die map welches, das Spielfeld repräsentiert. Es speichert zu jeder Koordinate des Spielfeldes
+   * den besitzenden Spieler
+   * */
+<span class="fc" id="L38">  private final Map&lt;Position, FourConnectPlayer&gt; cells = new HashMap&lt;&gt;();</span>
+
+  /**
+   * Standardkonstruktor zum Initialisieren des Spielbrettes
+   *
+   * &lt;p&gt;Er initialisiert das Spielfeld, die leeren Felder werden hierbei mit einem weiteren Spieler
+   * Objekt gefüllt, welches den Spieler Typ NONE besitzt.
+   *
+   * &lt;p&gt;Das Spielfeld:
+   * (0,0) | (1,0) | (2,0) | ....
+   * (0,1) | (1,1) | (2,1) | ....
+   * ...     ...     ...
+   */
+<span class="fc" id="L51">  public FourConnectGameBoard() {</span>
+<span class="fc" id="L52">    final FourConnectPlayer nonePlayer = new FourConnectPlayer(Player.NONE, null, null);</span>
+<span class="fc bfc" id="L53" title="All 2 branches covered.">    for (int r = 0; r &lt; ROW_COUNTS; r++) {</span>
+<span class="fc bfc" id="L54" title="All 2 branches covered.">      for (int c = 0; c &lt; COLUM_COUNTS; c++) {</span>
+<span class="fc" id="L55">        final Position position = new Position(c, r);</span>
+<span class="fc" id="L56">        cells.put(position, nonePlayer);</span>
+      }
+    }
+<span class="fc" id="L59">  }</span>
+
+  /**
+   * gibt die Anzahl der Zeilen zurück
+   * 
+   * @return die Anzahl an Zeilen
+   */
+  public Integer getRows() {
+<span class="fc" id="L67">    return ROW_COUNTS;</span>
+  }
+
+
+  /**
+   * gibt die Anzahl der Spalten zurück
+   * 
+   * @return Anzahl der Spalten
+   */
+  public Integer getColumns() {
+<span class="fc" id="L77">    return COLUM_COUNTS;</span>
+  }
+
+  /**
+   * erhält eine bestimmte Zelle und gibt den Besitzer dieser Zelle zurück
+   * 
+   * @param y die Spalte
+   * @param x die Zeile
+   * @return den Spieler der Zelle
+   */
+  public FourConnectPlayer getCellOwner(Integer x, Integer y) {
+<span class="fc" id="L88">    return cells.get(new Position(x, y));</span>
+  }
+
+  /**
+   * erhält eine bestimmte Zelle und gibt den Besitzer dieser Zelle zurück
+   *
+   * @param position eine bereits erstellte Position
+   * @return den Spieler der Zelle
+   */
+  public FourConnectPlayer getCellOwner(Position position) {
+<span class="fc" id="L98">    return cells.get(position);</span>
+  }
+
+  /**
+   * Wird in dropDisc() aufgerufen und erhält die ermittelte Zelle, diese Zelle wird nun dem Spieler
+   * zugewiesen
+   * 
+   * @param cell übergabe der Position
+   * @param currentPlayer der Spieler welcher das Spielfeld bekommen soll
+   */
+  public void setCellValue(Position cell, FourConnectPlayer currentPlayer) {
+<span class="fc" id="L109">    cells.put(cell, currentPlayer);</span>
+<span class="fc" id="L110">  }</span>
+
+  /**
+   * Wird in der BotStrategy benötigt, um eine Kopie des vorhanden Brettes zu erstellen
+   * 
+   * @param board das zu kopieren Spielfeld
+   */
+  public void copy(FourConnectGameBoard board) {
+<span class="fc bfc" id="L118" title="All 2 branches covered.">    for (int r = 0; r &lt; ROW_COUNTS; r++) {</span>
+<span class="fc bfc" id="L119" title="All 2 branches covered.">      for (int c = 0; c &lt; COLUM_COUNTS; c++) {</span>
+<span class="fc" id="L120">        final Position position = new Position(c, r);</span>
+<span class="fc" id="L121">        cells.put(position, board.getCellOwner(c, r));</span>
+      }
+    }
+<span class="fc" id="L124">  }</span>
+
+  /**
+   * überprüft, ob das Spielfeld gefüllt ist
+   * 
+   * @return true, wenn voll und false, wenn es noch nicht voll ist
+   */
+  @Override
+  public Boolean isFull() {
+<span class="fc" id="L133">    final int numberCells = ROW_COUNTS * COLUM_COUNTS; // Gesamtanzahl der vorhanden Zellen</span>
+<span class="fc" id="L134">    int filledCells = 0;</span>
+<span class="fc bfc" id="L135" title="All 2 branches covered.">    for (Map.Entry&lt;Position, FourConnectPlayer&gt; pos : cells.entrySet()) {</span>
+<span class="fc bfc" id="L136" title="All 2 branches covered.">      if (pos.getValue().getType() != Player.NONE) {</span>
+<span class="fc" id="L137">        filledCells++;</span>
+      }
+<span class="fc" id="L139">    }</span>
+<span class="fc bfc" id="L140" title="All 2 branches covered.">    return filledCells == numberCells;</span>
+  }
+
+  /**
+   * füllt das Feld erneut mit leeren Zellen
+   * 
+   * @return 0, wenn erfolgreich
+   */
+  @Override
+  public Integer clear() {
+<span class="fc" id="L150">    final FourConnectPlayer nonePlayer = new FourConnectPlayer(Player.NONE, null, null);</span>
+<span class="fc bfc" id="L151" title="All 2 branches covered.">    for (int r = 0; r &lt; ROW_COUNTS; r++) {</span>
+<span class="fc bfc" id="L152" title="All 2 branches covered.">      for (int c = 0; c &lt; COLUM_COUNTS; c++) {</span>
+<span class="fc" id="L153">        final Position position = new Position(c, r);</span>
+<span class="fc" id="L154">        cells.put(position, nonePlayer);</span>
+      }
+    }
+<span class="fc" id="L157">    return 0;</span>
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

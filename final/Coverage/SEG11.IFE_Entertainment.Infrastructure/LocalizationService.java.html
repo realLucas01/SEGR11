@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>LocalizationService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">IFE_Entertainment</a> &gt; <a href="index.source.html" class="el_package">SEG11.IFE_Entertainment.Infrastructure</a> &gt; <span class="el_source">LocalizationService.java</span></div><h1>LocalizationService.java</h1><pre class="source lang-java linenums">/*
+ * 1.0 2026-04-28 Truong Tan Long Nguyen
+ *
+ * Copyright (c) 2025-2026 Gervithrall Systems GmbH. All Rights Reserved.
+ *
+ * This software is the confidential and proprietary information of
+ * Gervithrall Systems GmbH (&quot;Confidential Information&quot;). You shall not
+ * disclose such Confidential Information and shall use it only in
+ * accordance with the terms of the license agreement you entered into
+ * with Gervithrall Systems GmbH.
+ *
+ * GERVITHRALL SYSTEMS GMBH MAKES NO REPRESENTATIONS OR WARRANTIES ABOUT
+ * THE SUITABILITY OF THE SOFTWARE, EITHER EXPRESS OR IMPLIED, INCLUDING
+ * BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS
+ * FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. GERVITHRALL SYSTEMS GMBH
+ * SHALL NOT BE LIABLE FOR ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT
+ * OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
+ */
+package SEG11.IFE_Entertainment.Infrastructure;
+
+import java.util.Locale;
+import java.util.MissingResourceException;
+import java.util.ResourceBundle;
+
+/**
+ * Service zur Verwaltung der Anzeigesprache.
+ *
+ * &lt;p&gt;Lädt Texte aus den entsprechenden Properties-Dateien basierend auf der
+ * aktuell eingestellten Sprache. Wird als Singleton implementiert,
+ * sodass nur eine Instanz global zugänglich ist.
+ * 
+ * @author Truong Tan Long Nguyen
+ */
+public class LocalizationService {
+
+    private static LocalizationService instance;
+
+    private static final String BUNDLE_BASE = &quot;i18n.messages&quot;;
+
+    private ResourceBundle bundle;
+    private Locale currentLocale;
+
+    /**
+     * Privater Konstruktor, setzt Standardsprache auf Englisch.
+     */
+<span class="fc" id="L46">    private LocalizationService() {</span>
+<span class="fc" id="L47">        this.currentLocale = Locale.ENGLISH;</span>
+<span class="fc" id="L48">        loadBundle();</span>
+<span class="fc" id="L49">    }</span>
+
+    /**
+     * Gibt die einzige Instanz des LocalizationService zurück.
+     *
+     * @return die Singleton-Instanz
+     */
+    public static LocalizationService getInstance() {
+<span class="fc bfc" id="L57" title="All 2 branches covered.">        if (instance == null) {</span>
+<span class="fc" id="L58">            instance = new LocalizationService();</span>
+        }
+<span class="fc" id="L60">        return instance;</span>
+    }
+
+    /**
+     * Lädt das ResourceBundle für die aktuelle Sprache.
+     */
+    private void loadBundle() {
+<span class="fc" id="L67">        bundle = ResourceBundle.getBundle(BUNDLE_BASE, currentLocale);</span>
+<span class="fc" id="L68">    }</span>
+
+    /**
+     * Gibt den Text zum angegebenen Schlüssel zurück.
+     * Falls der Schlüssel nicht gefunden wird, wird der Schlüssel selbst zurückgegeben.
+     *
+     * @param key der Schlüssel des gesuchten Texts
+     * @return der lokalisierte Text oder der Schlüssel bei fehlendem Eintrag
+     */
+    public String getString(String key) {
+        try {
+<span class="fc" id="L79">            return bundle.getString(key);</span>
+<span class="fc" id="L80">        } catch (MissingResourceException e) {</span>
+<span class="fc" id="L81">            return key;</span>
+        }
+    }
+
+    /**
+     * Setzt die aktuelle Sprache und lädt das Bundle neu.
+     *
+     * @param locale das neue Locale
+     */
+    public void setLocale(Locale locale) {
+<span class="fc" id="L91">        this.currentLocale = locale;</span>
+<span class="fc" id="L92">        loadBundle();</span>
+<span class="fc" id="L93">    }</span>
+
+    /**
+     * Gibt das aktuell eingestellte Locale zurück.
+     *
+     * @return das aktuelle Locale
+     */
+    public Locale getCurrentLocale() {
+<span class="fc" id="L101">        return currentLocale;</span>
+    }
+
+    /**
+     * Gibt alle verfügbaren Sprachen zurück.
+     *
+     * @return Array der verfügbaren Locales
+     */
+    public Locale[] getAvailableLocales() {
+<span class="fc" id="L110">        return new Locale[]{Locale.ENGLISH, Locale.GERMAN};</span>
+    }
+
+    /**
+     * Setzt die Sprache anhand eines Sprachcodes.
+     *
+     * @param languageCode der Sprachcode, z.B. &quot;de&quot; oder &quot;en&quot;
+     */
+    public void setLanguage(String languageCode) {
+<span class="fc" id="L119">        setLocale(new Locale(languageCode));</span>
+<span class="fc" id="L120">    }</span>
+
+    /**
+     * Gibt den Text zum angegebenen Schlüssel zurück.
+     *
+     * @param key der Schlüssel des gesuchten Texts
+     * @return der lokalisierte Text
+     */
+    public String getText(String key) {
+<span class="fc" id="L129">        return getString(key);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

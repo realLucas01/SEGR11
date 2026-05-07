@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>FourConnectRules.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">IFE_Entertainment</a> &gt; <a href="index.source.html" class="el_package">SEG11.IFE_Entertainment.FourConnect</a> &gt; <span class="el_source">FourConnectRules.java</span></div><h1>FourConnectRules.java</h1><pre class="source lang-java linenums">/*
+ * 1.0 2026-04-22 Lucas Rumann
+ *
+ * Copyright (c) 2025-2026 Gervithrall Systems GmbH. All Rights Reserved.
+ *
+ * This software is the confidential and proprietary information of
+ * Gervithrall Systems GmbH (&quot;Confidential Information&quot;). You shall not
+ * disclose such Confidential Information and shall use it only in
+ * accordance with the terms of the license agreement you entered into
+ * with Gervithrall Systems GmbH.
+ *
+ * GERVITHRALL SYSTEMS GMBH MAKES NO REPRESENTATIONS OR WARRANTIES ABOUT
+ * THE SUITABILITY OF THE SOFTWARE, EITHER EXPRESS OR IMPLIED, INCLUDING
+ * BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS
+ * FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. GERVITHRALL SYSTEMS GMBH
+ * SHALL NOT BE LIABLE FOR ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT
+ * OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
+ */
+
+package SEG11.IFE_Entertainment.FourConnect;
+
+import SEG11.IFE_Entertainment.GameCore.IPlayArea;
+import SEG11.IFE_Entertainment.GameCore.IRuleSet;
+
+/**
+ * Klasse stellt grundlegende Funktionen für das Überprüfen des Regelwerks zur
+ * verfügung
+ * 
+ * &lt;p&gt;Implementiert dabei {@link IRuleSet} und seine Funktionen
+ * 
+ * @author Lucas Rumann
+ * @param &lt;FourConnectGameBoard&gt; Der generische Datentyp {@link IRuleSet#IPlayAreaT}
+ *                               wurde auf die von uns implementierte Version
+ *                               des Interface {@link IPlayArea} konkretisiert
+ * @param &lt;FourConnectPlayer&gt;    Der generische Datentyp {@link IRuleSet PlayerT} wurde
+ *                               auf die von unserem implementierung des Spielers
+ *                               konkretisiert
+ * 
+ * @see IPlayArea
+ * @see Player
+ * 
+ */
+<span class="fc" id="L43">public class FourConnectRules implements IRuleSet&lt;FourConnectGameBoard, FourConnectPlayer&gt; {</span>
+
+	/**
+	 * Implementierung der Interface Methode checkWin()
+	 * 
+	 * &lt;p&gt;Wird genutzt um zu überprüfen, ob ein Sieg vorliegt
+	 * 
+	 * @param board  Aktueller Zustand des Spielbretts
+	 * @param player Spieler der den aktuellen Zug gemacht hat
+	 * 
+	 * @see IRuleSet
+	 */
+	@Override
+	public boolean checkWin(FourConnectGameBoard board, FourConnectPlayer player) {
+
+		// Überprüfen ob 4 Scheiben in horizontaler Aufeinanderfolge des aktuellen
+		// Spielers existieren
+<span class="fc bfc" id="L60" title="All 2 branches covered.">		for (int i = 0; i &lt; board.getColumns() - 3; i++) {</span>
+<span class="fc bfc" id="L61" title="All 2 branches covered.">			for (int j = 0; j &lt; board.getRows(); j++) {</span>
+<span class="fc bfc" id="L62" title="All 2 branches covered.">				if (board.getCellOwner(new Position(i, j)).equals(player)</span>
+<span class="fc bfc" id="L63" title="All 2 branches covered.">						&amp;&amp; board.getCellOwner(new Position(i + 1, j)).equals(player)</span>
+<span class="fc bfc" id="L64" title="All 2 branches covered.">						&amp;&amp; board.getCellOwner(new Position(i + 2, j)).equals(player)</span>
+<span class="fc bfc" id="L65" title="All 2 branches covered.">						&amp;&amp; board.getCellOwner(new Position(i + 3, j)).equals(player)) {</span>
+<span class="fc" id="L66">					return true;</span>
+				}
+			}
+		}
+
+		// Überprüfen ob 4 Scheiben in vertikaler Aufeinanderfolge des aktuellen
+		// Spielers existieren
+<span class="fc bfc" id="L73" title="All 2 branches covered.">		for (int i = 0; i &lt; board.getColumns(); i++) {</span>
+<span class="fc bfc" id="L74" title="All 2 branches covered.">			for (int j = 0; j &lt; board.getRows() - 3; j++) {</span>
+<span class="fc bfc" id="L75" title="All 2 branches covered.">				if (board.getCellOwner(new Position(i, j)).equals(player)</span>
+<span class="fc bfc" id="L76" title="All 2 branches covered.">						&amp;&amp; board.getCellOwner(new Position(i, j + 1)).equals(player)</span>
+<span class="pc bpc" id="L77" title="1 of 2 branches missed.">						&amp;&amp; board.getCellOwner(new Position(i, j + 2)).equals(player)</span>
+<span class="pc bpc" id="L78" title="1 of 2 branches missed.">						&amp;&amp; board.getCellOwner(new Position(i, j + 3)).equals(player)) {</span>
+<span class="fc" id="L79">					return true;</span>
+				}
+			}
+		}
+
+		// Überprüfen ob 4 Scheiben in diagonaler (links oben → rechts unten)
+		// Aufeinanderfolge des aktuellen Spielers existieren
+<span class="fc bfc" id="L86" title="All 2 branches covered.">		for (int i = 0; i &lt; board.getColumns() - 3; i++) {</span>
+<span class="fc bfc" id="L87" title="All 2 branches covered.">			for (int j = 0; j &lt; board.getRows() - 3; j++) {</span>
+<span class="fc bfc" id="L88" title="All 2 branches covered.">				if (board.getCellOwner(new Position(i, j)).equals(player)</span>
+<span class="fc bfc" id="L89" title="All 2 branches covered.">						&amp;&amp; board.getCellOwner(new Position(i + 1, j + 1)).equals(player)</span>
+<span class="pc bpc" id="L90" title="1 of 2 branches missed.">						&amp;&amp; board.getCellOwner(new Position(i + 2, j + 2)).equals(player)</span>
+<span class="pc bpc" id="L91" title="1 of 2 branches missed.">						&amp;&amp; board.getCellOwner(new Position(i + 3, j + 3)).equals(player)) {</span>
+<span class="fc" id="L92">					return true;</span>
+				}
+			}
+		}
+
+		// Überprüfen ob 4 Scheiben in diagonaler (rechts oben → links unten)
+		// Aufeinanderfolge des aktuellen Spielers existieren
+<span class="fc bfc" id="L99" title="All 2 branches covered.">		for (int i = board.getColumns() - 1; i &gt;= 3; i--) {</span>
+<span class="fc bfc" id="L100" title="All 2 branches covered.">			for (int j = 0; j &lt; board.getRows() - 3; j++) {</span>
+<span class="fc bfc" id="L101" title="All 2 branches covered.">				if (board.getCellOwner(new Position(i, j)).equals(player)</span>
+<span class="fc bfc" id="L102" title="All 2 branches covered.">						&amp;&amp; board.getCellOwner(new Position(i - 1, j + 1)).equals(player)</span>
+<span class="pc bpc" id="L103" title="1 of 2 branches missed.">						&amp;&amp; board.getCellOwner(new Position(i - 2, j + 2)).equals(player)</span>
+<span class="pc bpc" id="L104" title="1 of 2 branches missed.">						&amp;&amp; board.getCellOwner(new Position(i - 3, j + 3)).equals(player)) {</span>
+<span class="fc" id="L105">					return true;</span>
+				}
+			}
+		}
+<span class="fc" id="L109">		return false;</span>
+	}
+
+	/**
+	 * Implementierung der Interfacemethode checkTie()
+	 * 
+	 * &lt;p&gt;Wird genutzt um zu überprüfen, ob ein Unentschieden vorliegt
+	 * 
+	 * @param board aktueller Zustand des Spielbretts
+	 * 
+	 * @see IRuleSet
+	 */
+	@Override
+	public boolean checkTie(FourConnectGameBoard board) {
+		// Check ob Spielbrett voll
+<span class="fc" id="L124">		return board.isFull();</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>
