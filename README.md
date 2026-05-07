@@ -19,8 +19,8 @@ Neben einem lokalen Mehrspielermodus unterstützt die Anwendung ebenfalls einen 
 - Adobe XD / Illustrator
 - ProGuard
 
-Die Anwendung wird als ausführbares JAR-Paket bereitgestellt und ist für den Offline-Betrieb innerhalb einer Java-21-LTS-Laufzeitumgebung vorgesehen.
-Weiter Informationen zur Entwicklung, Tools und dem Projektaufbau ist hier zu finden: [Dev Doku](/final/entwicklerdoku.pdf)
+Die Anwendung wird als ausführbares JAR-Paket bereitgestellt und ist für den Offline-Betrieb innerhalb einer Java-21-LTS-Laufzeitumgebung vorgesehen.  
+Weiter Informationen zur Entwicklung, Tools und dem Projektaufbau ist hier zu finden: [Dev Doku](/final/entwicklerdoku.pdf)  
 <sup> *(alternativ auch hier zu finden: `/final/entwicklerdoku.pdf`)* </sub>
 
 ## Wichtigste Befehle
