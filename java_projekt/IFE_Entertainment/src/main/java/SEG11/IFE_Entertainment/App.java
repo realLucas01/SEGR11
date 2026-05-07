@@ -29,11 +29,24 @@ public class App extends Application {
         stage.show();
     }
 
+    /**
+     * Setzt eine neue Root-FXML für die aktuelle Scene
+     * und aktualisiert anschließend das Branding.
+     *
+     * @param fxml Name der FXML-Datei ohne Dateiendung
+     * @throws IOException falls die FXML-Datei nicht geladen werden kann
+     */
     public static void setRoot(String fxml) throws IOException {
         scene.setRoot(loadFXML(fxml));
         applyBranding();
     }
 
+    /**
+     * Wendet das aktuell ausgewählte Theme auf die Anwendung an.
+     *
+     * <p>Dabei werden die Theme-Farben aus dem BrandingService
+     * als CSS-Variablen an das Root-Element der Scene übergeben.
+     */
     public static void applyBranding() {
         BrandingService branding = BrandingService.getInstance();
 

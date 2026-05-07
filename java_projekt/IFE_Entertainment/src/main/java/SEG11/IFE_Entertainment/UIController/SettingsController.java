@@ -36,6 +36,7 @@ public class SettingsController {
     @FXML
     private ComboBox<String> languageBox;
     
+    /** Auswahlfeld für das Theme. */
     @FXML
     private ComboBox<String> themeBox;
 
