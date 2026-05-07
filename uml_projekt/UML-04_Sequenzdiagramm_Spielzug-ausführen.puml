@@ -54,6 +54,8 @@ else GameState == Running
     Strategy -> Game : dropDisc(botColumn)
     Game --> Strategy : GameState
 
+    Strategy--> Controller: GameState
+
     Controller -> Controller : updateBoard()
     |||
     alt GameState == Won
