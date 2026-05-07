@@ -81,7 +81,7 @@ OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
                     prefWidth="150" prefHeight="150"
                     GridPane.rowIndex="1" GridPane.columnIndex="3"
                     styleClass="game-tile"/>
-        </VBox>
+        </GridPane>
     </center>
 
     <!-- BOTTOM BAR -->
