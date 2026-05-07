@@ -1,0 +1,19 @@
+@startuml
+title 4-Connect - Modusmenü (Wireframe)
+
+skinparam defaultFontName Monospaced
+
+salt
+{
+  {+
+    {^ **4-Connect - Modus** }{[ Spielhilfe ]}
+    .
+    ^Bitte Modus wählen:^ Zwei Spieler^ Gegen Bot^ |
+    .
+    .
+    .
+    .
+    {[ Spiel starten ] | [ Zurück ]}
+  }
+}
+@enduml
