@@ -19,7 +19,7 @@ control "       FourConnectGame       " as Game
 |||
 entity "       FourConnectPlayer       " as Player
 |||
-control "       IMoveStrategy       " as Strategy
+control "       FourConnectBotStrategy       " as Strategy
 |||
 control "       App       " as App
 
@@ -33,30 +33,43 @@ Controller -> Controller : updateBoard()
 
 alt GameState == Won
   Controller -> App : setRoot("EndScreen")
-
+|||
 else GameState == Tied
   Controller -> App : setRoot("EndScreen")
-
+|||
 else GameState == Running
-
   Controller -> Game : playerTurn()
+  Controller -> Controller : updateStatus()
 |||
 
   alt Bot-Spieler aktiv
 
-    Game -> Player : getStrategy()
-    Player --> Game : IMoveStrategy
+    Controller -> Game : getPlayers()
+    Game --> Controller : FourConnectPlayer[]
 
-    Game -> Strategy : chooseMove(board)
+    Controller -> Player : getStrategy()
+    Player --> Controller : strategy
+
+    Controller -> Strategy : chooseMove(board)
+    Strategy -> Game : dropDisc(botColumn)
+    Game --> Strategy : GameState
 
     Controller -> Controller : updateBoard()
-|||
-
+    |||
+    alt GameState == Won
+      Controller -> App : setRoot("EndScreen")
+    |||
+    else GameState == Tied
+      Controller -> App : setRoot("EndScreen")
+    |||
+    else GameState == Running
+      Controller -> Game : playerTurn()
+      Controller -> Controller : updateStatus()
+      |||
+    end
+    |||
   end
-
-  Controller -> Controller : updateStatus()
-|||
-
+  |||
 end
 |||
 |||
