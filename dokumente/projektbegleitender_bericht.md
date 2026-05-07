@@ -29,7 +29,7 @@ Perlickstraße 1
 
 Dieser projektbegleitende Bericht dokumentiert den aktuellen Stand des Projekts zur Entwicklung einer Entertainment-Erweiterung für ein Inflight-Entertainment-System. Ziel des Berichts ist es, den bisherigen Projektverlauf, die Aufgabenverteilung innerhalb des Teams sowie den aktuellen Entwicklungsstand darzustellen.  
 
-Im Rahmen des Projekts wird eine offlinefähige und modular erweiterbare Spielesammlung entwickelt, die in ein bestehendes Inflight-Entertainment-System integriert werden soll. Als erster konkreter Anwendungsfall wird das Spiel "Vier-Gewinnt" umgesetzt, welches sowohl im Einzelspieler- als auch im Mehrspielermodus genutzt werden kann.  
+Im Rahmen des Projekts wird eine offlinefähige und modular erweiterbare Spielesammlung entwickelt, die in ein bestehendes Inflight-Entertainment-System integriert werden soll. Als erster konkreter Anwendungsfall wird das Spiel "Vier-Gewinnt" umgesetzt, welches sowohl im Einzelspieler- als auch im lokalen Mehrspielermodus genutzt werden kann.  
 
 ## 2. Projektplanung  
 
