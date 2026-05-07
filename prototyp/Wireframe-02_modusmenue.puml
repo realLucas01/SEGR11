@@ -1,0 +1,19 @@
+@startuml
+title 4-Connect - Modusmenü (Wireframe)
+
+skinparam defaultFontName Monospaced
+
+salt
+{
+  {+
+    {^ **Modusmenü** }
+    .
+    {[ Zweispieler Modus ] | [ VS Easy Bot ] | [ VS Hard Bot ]}
+    .
+    .
+    .
+    .
+    {[ Hauptmenü ]}
+  }
+}
+@enduml
