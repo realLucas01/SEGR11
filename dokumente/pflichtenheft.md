@@ -187,7 +187,7 @@ Der Screenflow zeigt die Navigation zwischen den einzelnen Bildschirmen.
 Die Wireframes skizzieren die grundlegende Anordnung und Funktion der Bedienelemente (Low-Fidelity) und definieren das Bedienkonzept, ohne ein finales Design festzulegen.
 
 **Abbildung:** Screenflow der Benutzeroberfläche  
-![Screenflow](final/4-connect-screenflow_v2.svg)
+![Screenflow](/final/4-connect-screenflow_v2.svg)
 
 |Anwendungsfall ID | AF-01|
 |-------|-------------|
@@ -201,7 +201,7 @@ Die Wireframes skizzieren die grundlegende Anordnung und Funktion der Bedienelem
 |Benutzerschnittstelle| |  
 
 **Abbildung:** Wireframe – Hauptmenü  
-![Hauptmenü](‎prototyp/Wireframe-01_hauptmenue.svg)
+![Hauptmenü](‎/prototyp/Wireframe-01_hauptmenue.svg)
 
 |Anwendungsfall ID| AF-02|
 |------|-------------|
@@ -215,7 +215,7 @@ Die Wireframes skizzieren die grundlegende Anordnung und Funktion der Bedienelem
 |Benutzerschnittstelle| |  
 
 **Abbildung:** Wireframe – Modusmenü  
-![Modusmenü](prototyp/Wireframe-02_modusmenue.svg)
+![Modusmenü](/prototyp/Wireframe-02_modusmenue.svg)
 
 |Anwendungsfall ID| AF-03|  
 |-----|-------------|
@@ -229,7 +229,7 @@ Die Wireframes skizzieren die grundlegende Anordnung und Funktion der Bedienelem
 |Benutzerschnittstelle| |  
 
 **Abbildung:** Wireframe – Spielansicht  
-![Spielansicht](prototyp/Wireframe-03-06-07_spielscreen.svg)
+![Spielansicht](/prototyp/Wireframe-03-06-07_spielscreen.svg)
 
 |Anwendungsfall ID| AF-04|
 |------|-------------|
@@ -243,7 +243,7 @@ Die Wireframes skizzieren die grundlegende Anordnung und Funktion der Bedienelem
 |Benutzerschnittstelle| |  
 
 **Abbildung:** Wireframe – Neue Runde starten  
-![Neue Runde](prototyp/Wireframe-04-07_ergebnis.svg)
+![Neue Runde](/prototyp/Wireframe-04-07_ergebnis.svg)
 
 |Anwendungsfall ID| AF-05 a|
 |-----|-------------|
@@ -257,7 +257,7 @@ Die Wireframes skizzieren die grundlegende Anordnung und Funktion der Bedienelem
 |Benutzerschnittstelle| |  
 
 **Abbildung:** Wireframe – Hilfe / Regeln  
-![Hilfe](prototyp/Wireframe-05-a_spielhilfe.svg)
+![Hilfe](/prototyp/Wireframe-05-a_spielhilfe.svg)
 
 |Anwendungsfall ID| AF-05 b|
 |-----|-------------|
@@ -271,7 +271,7 @@ Die Wireframes skizzieren die grundlegende Anordnung und Funktion der Bedienelem
 |Benutzerschnittstelle| |  
 
 **Abbildung:** Wireframe – Hilfe Hauptmenü  
-![Hilfe](prototyp/Wireframe-05-b_hauptmenu-hilfe.svg)
+![Hilfe](/prototyp/Wireframe-05-b_hauptmenu-hilfe.svg)
 
 
 |Anwendungsfall ID| AF-06|
@@ -286,7 +286,7 @@ Die Wireframes skizzieren die grundlegende Anordnung und Funktion der Bedienelem
 |Benutzerschnittstelle| |  
 
 **Abbildung:** Wireframe – Spielansicht  
-![Spielansicht](prototyp/Wireframe-03-06-07_spielscreen.svg)
+![Spielansicht](/prototyp/Wireframe-03-06-07_spielscreen.svg)
 
 |Anwendungsfall ID| AF-07|
 |-----|-------------|
@@ -300,20 +300,20 @@ Die Wireframes skizzieren die grundlegende Anordnung und Funktion der Bedienelem
 |Benutzerschnittstelle| | 
 
 **Abbildung:** Wireframe – Spielansicht  
-![Spielansicht](prototyp/Wireframe-03-06-07_spielscreen.svg)
+![Spielansicht](/prototyp/Wireframe-03-06-07_spielscreen.svg)
 
 **Abbildung:** Wireframe – Ergebnisbildschirm  
-![Ergebnis](prototyp/Wireframe-04-07_ergebnis.svg)
+![Ergebnis](/prototyp/Wireframe-04-07_ergebnis.svg)
 
 
 Das Aktivitätsdiagramm stellt den Ablauf einer Spielrunde einschließlich optionaler Aktionen (Spielhilfe, Sprachwahl) sowie der Behandlung von Spielende und Neustart dar.
 **Abbildung:** Aktivitätsdiagramm – Spielrunde  
-![Aktivitätsdiagramm Spielrunde](final/uml-03-aktivitaetsdiagramm-spielrunde.svg)
+![Aktivitätsdiagramm Spielrunde](/final/uml-03-aktivitaetsdiagramm-spielrunde.svg)
 
 #### 3.1.3 Fachliches Klassendiagramm (Domain Model) / Produktdaten
 
 **Abbildung:** Klassendiagramm
-![Klassendiagramm](final/Klassendiagramm.svg)
+![Klassendiagramm](/final/Klassendiagramm.svg)
 
 ### 3.2 Nichtfunktionale Anforderungen
 
