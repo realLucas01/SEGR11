@@ -23,6 +23,21 @@ Die Anwendung wird als ausführbares JAR-Paket bereitgestellt und ist für den O
 Weiter Informationen zur Entwicklung, Tools und dem Projektaufbau ist hier zu finden: [Dev Doku](/final/entwicklerdoku.pdf)  
 <sup> *(alternativ auch hier zu finden: `/final/entwicklerdoku.pdf`)* </sub>
 
+## JavaDoc, Test-Report und Pages
+Der aktuelle Stand der JavaDoc und des Test-Coverage Report auf dem main branch, werden nach jedem Commit auf einen eigenen Branch *`(JavaDoc-and-TestCoverage)`* gepusht, und dann auf jeweils eigene Github Pages deployed.  
+So kann man diese Dokumente einfacher öffnen und nutzen, ohne das man die Dokuemente manuell erzeugen muss, und dann bei einem Commit innerhalb der hunderten Dateien die Übersicht verliert. Ebenfalls muss bei einem Release so nicht mehr eine extrem unübersichtliche PR stattfinden, sondern man kann den Branch ohne Bedenken einfach auf main Mergen und hat den aktuellsten Stand.
+
+**JavaDoc Page:** https://reallucas01.github.io/SEGR11/javadoc  
+**Test-Report Page:** https://reallucas01.github.io/SEGR11/coverage
+
+## Automatische überprüfung auf unseren Code Standart
+
+Es wird nun in jeder PR die eine Änderung im Ordner **`java_projekt`** beeinhaltet, automatisch über eine Github Action überprüft ob der Goolge Java Style Guide korrekt eingehalten wurde. Den Fortschritt kann man dabei ganz unten im Repo sehen.  
+Sobald der Check abgeschlossen ist, und Fehler gefunden wurden, werden diese ein paar Sekunden nach Abschluss als Alert direkt in der PR angezeigt:  
+<img width="865" height="297" alt="image" src="https://github.com/user-attachments/assets/9bd6e582-436e-4a37-b722-02787620d3eb" />
+
+Die Analyse erfolgt über [Checkstyle](https://github.com/checkstyle/checkstyle) und [ReviewDog](https://github.com/reviewdog).
+
 ## Wichtigste Befehle
 
 Start des Programms aus der Konsole:
