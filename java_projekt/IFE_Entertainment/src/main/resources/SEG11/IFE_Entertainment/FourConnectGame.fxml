@@ -75,31 +75,5 @@ OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
 		<Label text="%game.title" styleClass="title" BorderPane.alignment="CENTER"/>
 	</top>
 
-	<center>
-		<VBox alignment="CENTER" spacing="20">
-			
-			<!-- Zeigt den aktuellen "Turn" an also wer gerade am Zug ist (aktuell dran ist) -->
-			<HBox fx:id="turnBox" spacing="10" alignment="CENTER" styleClass="turn-box">
-				<Label text="%game.turn" styleClass="turn-title"/>
-				<Label fx:id="statusLabel" text="" styleClass="turn-value"/>
-			</HBox>
-
-			<GridPane fx:id="gridPane" hgap="5" vgap="5" alignment="CENTER"/>
-			
-			<!-- Setzt das Grid zurück -->
-			<Button text="%menu.restart"
-			        onAction="#restartGame"
-			        styleClass="main-button"/>
-			<!-- Zeigt die Hilfe Seite an -->
-			<Button text="%menu.help"
-			        onAction="#openHelp"
-			        styleClass="main-button"/>
-			<!-- Kehrt zurück zum Hauptmenü zurück -->
-			<Button text="%menu.back"
-			        onAction="#backToMainMenu"
-			        styleClass="main-button"/>
-
-		</VBox>
-	</center>
 
 </BorderPane>
