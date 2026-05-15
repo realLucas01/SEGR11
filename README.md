@@ -54,7 +54,7 @@ So kann man diese Dokumente einfacher öffnen und nutzen, ohne das man die Dokue
 **JavaDoc Page:** https://reallucas01.github.io/SEGR11/javadoc  
 **Test-Report Page:** https://reallucas01.github.io/SEGR11/coverage
 
-## Automatische überprüfung auf unseren Code Standart
+## Automatische Überprüfung auf den Google Java Code Style
 
 Es wird nun in jeder PR die eine Änderung im Ordner **`java_projekt`** beeinhaltet, automatisch über eine Github Action überprüft ob der Goolge Java Style Guide korrekt eingehalten wurde. Den Fortschritt kann man dabei ganz unten im Repo sehen.  
 Sobald der Check abgeschlossen ist, und Fehler gefunden wurden, werden diese ein paar Sekunden nach Abschluss als Alert direkt in der PR angezeigt:  
