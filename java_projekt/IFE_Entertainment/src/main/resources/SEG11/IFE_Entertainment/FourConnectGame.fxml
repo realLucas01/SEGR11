@@ -30,7 +30,9 @@ OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
             fx:controller="SEG11.IFE_Entertainment.UIFourConnectController.FourConnectGameController"
             stylesheets="@style.css" styleClass="game-root">
 
-	
+	<top>
+		<Label text="%game.title" styleClass="screen-title" BorderPane.alignment="CENTER"/>
+	</top>
 
 	<center>
 		<HBox alignment="CENTER" spacing="150">
@@ -68,10 +70,6 @@ OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
 		</HBox>
 	</center>
 
-
-	<top>
-		<Label text="%game.title" styleClass="title" BorderPane.alignment="CENTER"/>
-	</top>
 
 
 </BorderPane>
