@@ -1,0 +1,86 @@
+name: JavaDocDeployment
+
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'java_projekt/**'
+
+permissions:
+  contents: write
+  pages: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ssh-key: ${{ secrets.DEPLOY_KEY }}
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+
+      - name: Generate Javadoc and Coverage Report
+        working-directory: java_projekt/IFE_Entertainment
+        run: mvn clean site
+
+      - name: Refresh Javadoc and Coverage Report in /final-Folder
+        run: |
+          rm -rf final/JavaDoc
+          rm -rf final/Coverage
+
+          mkdir -p final/JavaDoc
+          mkdir -p final/Coverage
+
+          cp -r java_projekt/IFE_Entertainment/target/site/apidocs/* final/JavaDoc/
+          cp -r java_projekt/IFE_Entertainment/target/site/jacoco/* final/Coverage/
+
+      - name: Config Git
+        run: |
+
+          git checkout -B JavaDoc-and-TestCoverage
+
+          git config --local user.email "github-actions@github.com"
+          git config --local user.name "GitHub Actions"
+
+      - name: Push JavaDoc and TestCoverage to own Branch
+        run: |
+
+          git add final/
+          git commit -m "Update generated reports" || echo "No changes"
+          git push origin JavaDoc-and-TestCoverage
+
+      - name: Prepare Pages
+        run: |
+          mkdir -p public/javadoc
+          mkdir -p public/coverage
+
+          cp -r java_projekt/IFE_Entertainment/target/site/apidocs/* public/javadoc/
+          cp -r java_projekt/IFE_Entertainment/target/site/jacoco/* public/coverage/
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+  deploy:
+    needs: build
+
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
