@@ -84,7 +84,7 @@ public class App extends Application {
         );
     }    
 
-     /* Lädt, die angegebene JavaFX Datei und zeigt diese an.
+     /** Lädt, die angegebene JavaFX Datei und zeigt diese an.
      *
      * @param fxml, die Anzuzeigende Datei
      * @return fxmlLoader.load()
