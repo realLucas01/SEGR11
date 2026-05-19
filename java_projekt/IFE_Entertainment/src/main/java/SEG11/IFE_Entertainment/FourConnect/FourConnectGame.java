@@ -59,8 +59,8 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
   private boolean oneBotPlayer;
 
   /**
-   * Privater Konstruktor für die Klasse FourConnectGame mitsamt der Grundlegenden
-   * initialisierung aller wichtigen Variablen.
+   * Privater Konstruktor für die Klasse FourConnectGame mitsamt der grundlegenden
+   * Initialisierung aller wichtigen Variablen.
    */
   private FourConnectGame() {
     state = GameState.NotStarted;
@@ -71,7 +71,7 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
   }
 
   /**
-   * Funktion zum Erstellen bzw. Bekommen der Instanz der Klasse.
+   * Funktion zum erstellen bzw. bekommen der Instanz der Klasse.
    *
    * @return Den Pointer auf die einzige Instanz der Klasse
    */
@@ -88,7 +88,7 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
   }
 
   /**
-   * Implementierung der Interface Methode setStatus().
+   * Implementierung der Interface-Methode setStatus().
    * 
    * <p>Wird genutzt, um den aktuellen Status des Spiels manuell von außerhalb zu
    * setzen
@@ -101,7 +101,7 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
   }
 
   /**
-   * Implementierung der Interface Methode getBoard().
+   * Implementierung der Interface-Methode getBoard().
    * 
    * <p>Wird genutzt, um den aktuellen Zustand des Spielbretts von außerhalb
    * abzufragen
@@ -134,7 +134,7 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
   }
 
   /**
-   * Implementierung der Interfacemethode restart().
+   * Implementierung der Interface-Methode restart().
    * 
    * <p>Startet das Spiel mit den aktuellen Spielern bzw. im aktuellen Spielmodus
    * neu. Wenn Spieler bzw Spielmodus gewechselt werden soll, dann muss dafür erst
@@ -164,7 +164,7 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
   }
 
   /**
-   * Die eigentliche Ausführung des Spielzuges bei dem die neue Scheibe in der
+   * Die eigentliche Ausführung des Spielzuges, bei dem die neue Scheibe in der
    * jeweiligen Spalte "fallen gelassen" wird.
    *
    * @param column Spalte in der die Scheibe fallen gelassen werden soll
@@ -196,7 +196,7 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
   /**
    * Get Funktion um das Mitspielen eines Botes abzufragen.
    *
-   * @return true, wenn ein Bot mitspielt false, wenn kein Bot mitspielt
+   * @return true, wenn ein Bot mitspielt, und false, wenn kein Bot mitspielt
    */
   public boolean getOneBotPlayer() {
     return oneBotPlayer;
@@ -230,7 +230,7 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
    *
    * @param playerOne Der Typ von Spieler 1 im ENUM {@link Player}
    * @param playerTwo Der Typ von Spieler 2 im ENUM {@link Player}
-   * @return Einen Integer wert der aussagt, ob die Operation erfolgreich war, bei
+   * @return Einen Integer-Wert der aussagt, ob die Operation erfolgreich war. Bei
    *         einer Rückgabe != 0 ist ein Fehler aufgetreten
    */
   public Integer initFourConnectGame(Player playerOne, Player playerTwo) {
@@ -242,7 +242,7 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
     currentbranding = BrandingService.getInstance();
 
     // Erstellen einer neuen Instanz von FourConnectBotStrategy um die Strategien
-    // für die schwierigkeitsstufen "laden" zu können
+    // für die Schwierigkeitsstufen "laden" zu können
     FourConnectBotStrategy botStrategy = new FourConnectBotStrategy(this, rules);
 
     // Erstellen von Spieler 1 abhängig seines übergebenen Typs
