@@ -59,6 +59,8 @@ public class FourConnectGameController implements GameController {
     private Circle[][] circles = new Circle[6][7];
     /** Variable um die Anwesenheit eines BotSpielers zu signalisieren. True = einer vorhanden */
     private boolean oneBotPlayer;
+    /** Die Verzögerung, bevor der Bot seinen Zug ausführt */
+    private PauseTransition botDelayTimer;
 
 
     /**
@@ -69,6 +71,11 @@ public class FourConnectGameController implements GameController {
     @Override
     @FXML
     public void restartGame() throws IOException {
+        if (botDelayTimer != null) {
+            botDelayTimer.stop();
+        }
+        gridPane.setDisable(false);
+
         game.restart();
         initBoard();
         updateStatus();
@@ -125,8 +132,8 @@ public class FourConnectGameController implements GameController {
         if(oneBotPlayer){
             gridPane.setDisable(true);
 
-            PauseTransition pause = new PauseTransition(Duration.seconds((1.0)));
-            pause.setOnFinished(event -> {
+            botDelayTimer = new PauseTransition(Duration.seconds(1.0));
+            botDelayTimer.setOnFinished(event -> {
                 GameState botResult = game.playBotTurn();
 
                 updateBoard();
@@ -140,12 +147,18 @@ public class FourConnectGameController implements GameController {
                     }
                 } else if (botResult == GameState.Tied) {
                     statusLabel.setText("Unentschieden!");
+                    try {
+                        App.setRoot("EndScreen");
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+
                 } else {
                     game.playerTurn();
                     updateStatus();
                 }
             });
-            pause.play();
+            botDelayTimer.play();
 
         }
     }
