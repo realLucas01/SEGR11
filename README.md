@@ -60,6 +60,8 @@ Es wird nun in jeder PR die eine Änderung im Ordner **`java_projekt`** beeinhal
 Sobald der Check abgeschlossen ist, und Fehler gefunden wurden, werden diese ein paar Sekunden nach Abschluss als Alert direkt in der PR angezeigt:  
 <img width="865" height="297" alt="image" src="https://github.com/user-attachments/assets/9bd6e582-436e-4a37-b722-02787620d3eb" />
 
+****Zu Beachten: Reviewdog kann nur 10 Sachen gleichzeitig anmerken. Das heißt falls ihr seht das ein Fehler dabei ist, der sich wiederholt, oder wie z.B.: die Einrückung vllt. überall falsch ist, fixt ihr den am besten direkt überall wo ihr was geändert habt. Sonst werdet ihr ja immer nur in 10er Schritten fixen, und das kann je nach dem was es ist etwas dauern.**** 
+
 Die Analyse erfolgt über [Checkstyle](https://github.com/checkstyle/checkstyle) und [ReviewDog](https://github.com/reviewdog).
 
 ## Ordnerstruktur
