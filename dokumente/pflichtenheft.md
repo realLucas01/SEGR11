@@ -106,9 +106,10 @@ Im Rahmen dieses Pflichtenhefts werden die funktionalen und nicht-funktionalen E
 | MK205 | Singleplayer | Das System muss einen Einzelspielermodus gegen einen Bot unterstützen. |
 | MK206 | Spielzüge | Spielzüge müssen regelkonform verarbeitet und umgesetzt werden. |
 | MK207 | Win-Condition | Das System muss erkennen, wenn ein Spieler gewonnen hat. |
-| MK208 | Unentschieden | Das System muss erkennen, wenn keine weiteren Spielzüge mehr möglich sind und das Spiel als "Unentschieden" beenden. |
-| MK209 | Neustart | Ein laufendes Spiel muss jederzeit neu gestartet werden können. |
-| MK210 | Rückkehr | Die Anwendung muss jederzeit korrekt in das IFE-Hauptmenü zurückkehren können. |
+| MK208 | Gewinnmarkierung | Nach einem gewonnenen Spiel müssen die vier Spielsteine, die zum Sieg geführt haben, visuell hervorgehoben werden. |
+| MK209 | Unentschieden | Das System muss erkennen, wenn keine weiteren Spielzüge mehr möglich sind und das Spiel als "Unentschieden" beenden. |
+| MK210 | Neustart | Ein laufendes Spiel muss jederzeit neu gestartet werden können. |
+| MK211 | Rückkehr | Die Anwendung muss jederzeit korrekt in das IFE-Hauptmenü zurückkehren können. |
 | MK300 | Datenverarbeitung | Es dürfen keine personenbezogenen Daten erfasst, gespeichert oder übertragen werden. |
 | MK301 | Modularität | Die Architektur ist modular aufgebaut, damit zukünftige Erweiterungen um weitere Spiele mit geringem Aufwand möglich sind. |
 
@@ -179,6 +180,7 @@ Muss Kriterien:
 |AF-05 b |Hilfe Hauptmenü aufrufen |Im Hauptmenü, ist es dem Fluggast möglich allgemeine Informationen, zur Navigation und Bedienung des System aufzurufen. |
 |AF-06 |Spielfeld zurücksetzen |Im Laufe des Spieles, ist es dem Fluggast möglich das Spielfeld zu seinem Ausgangszustand zurückzusetzen.| 
 |AF-07 |Rückkehr zur Spielesammlung |Im Laufe eines Spieles oder nach Beendigung einer Runde, ist es dem Fluggast möglich zur Spielesammlung zurückzukehren.|
+|AF-08 |Gewinnkombination hervorheben |Nach dem Gewinn einer Spielrunde werden die vier Spielsteine, die zum Sieg geführt haben, visuell hervorgehoben dargestellt.|
 
 #### 3.1.2 Aktivitäten mit Benutzerschnittstelle (UI)
 
@@ -201,7 +203,7 @@ Die Wireframes skizzieren die grundlegende Anordnung und Funktion der Bedienelem
 |Benutzerschnittstelle| |  
 
 **Abbildung:** Wireframe – Hauptmenü  
-![Hauptmenü](‎/prototyp/Wireframe-01_hauptmenue.svg)
+![Hauptmenü](/prototyp/Wireframe-01_hauptmenue.svg)
 
 |Anwendungsfall ID| AF-02|
 |------|-------------|
@@ -304,6 +306,20 @@ Die Wireframes skizzieren die grundlegende Anordnung und Funktion der Bedienelem
 
 **Abbildung:** Wireframe – Ergebnisbildschirm  
 ![Ergebnis](/prototyp/Wireframe-04-07_ergebnis.svg)
+
+|Anwendungsfall ID| AF-08|
+|-----|-------------|
+|AF Name| Gewinnkombination hervorheben |
+|Akteur| Fluggast |
+|Vorbedingungen| Eine Spielrunde wurde gewonnen |
+|Auslösendes Ereignis| Erkennung einer gültigen Gewinnkombination |
+|Nachbedingung Erfolg| Die vier gewinnbringenden Spielsteine werden hervorgehoben dargestellt |
+|Nachbedingung Fehlschlag| Spiel endet ohne visuelle Hervorhebung |
+|Ablauf| - Gewinnbedingung wird erkannt <br/>- Gewinnkombination wird ermittelt <br/>- Vier gewinnbringende Spielsteine werden visuell markiert |
+|Benutzerschnittstelle| |
+
+**Abbildung:** Wireframe – Gewinnmarkierung  
+![Gewinnmarkierung](/prototyp/Wireframe-08_gewinnmarkierung.svg)
 
 
 Das Aktivitätsdiagramm stellt den Ablauf einer Spielrunde einschließlich optionaler Aktionen (Spielhilfe, Sprachwahl) sowie der Behandlung von Spielende und Neustart dar.

@@ -1,0 +1,30 @@
+@startuml
+title 4-Connect - Gewinnmarkierung (Wireframe)
+
+skinparam defaultFontName Monospaced
+
+salt
+{
+  {+
+    {^ **4-Connect **}
+.
+    { **Spielfeld (2D)** 
+.
+    o o  o  o  o  o  o
+    o o  o  o  o  o  o
+    o o [o] o  o  o  o
+    o o  o [o] o  o  o
+    o o  o  o [o] o  o
+    o o  o  o  o [o] o
+
+    } {}{}{}{}{} { 
+      
+      **Spieler 1 gewinnt!**
+.
+      [Neue Runde]
+      [Hauptmenü ]
+    }
+    .
+  }
+}
+@enduml
