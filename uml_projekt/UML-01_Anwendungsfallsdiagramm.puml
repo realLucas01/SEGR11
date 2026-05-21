@@ -8,10 +8,13 @@ skinparam linetype ortho
 skinparam ArrowThickness 1
 skinparam ArrowColor #444444
 skinparam dashedLineColor #666666
-skinparam nodesep 120
-skinparam ranksep 150
+skinparam nodesep 200
+skinparam ranksep 400
+skinparam padding 30
+skinparam defaultTextAlignment left
 
 skinparam ResponseMessageBelowArrow true
+
 
 actor "   Fluggast   " as Fluggast
 actor "   Fluggesellschaft   " as Airline
@@ -26,6 +29,7 @@ rectangle "4-Connect" {
   usecase "Sprache auswählen" as UC7
   usecase "Zurück zur Spielesammlung" as UC8
   usecase "Branding konfigurieren" as UC9
+  usecase "Gewinnzug hervorheben" as UC10
 }
 
 Fluggast --> UC1
@@ -39,10 +43,12 @@ Fluggast --> UC8
 
 Airline --> UC9
 
+
 UC6 ..> UC7 : <<include>>
-UC3 ..> UC4 : <<extend>>
-UC3 ..> UC5 : <<extend>>
-UC3 ..> UC6 : <<extend>>
-UC3 ..> UC8 : <<extend>>
+UC3 ..> UC4 : <<extend>>\n[Spiel beendet]\nExtension Point: Endscreen
+UC3 ..> UC5 : <<extend>>\n[Hilfe ausgewählt]\nExtension Point: InGameMenu
+UC3 ..> UC6 : <<extend>>\n[Einstellungen ausgewählt]\nExtension Point: InGameMenu
+UC3 ..> UC8 : <<extend>>\n[Spiel beendet oder Abbruch]\nExtension Point: Navigation
+UC3 ..> UC10 : <<extend>>\n[Gewinn erkannt]\nExtension Point: GameFinished
 
 @enduml
