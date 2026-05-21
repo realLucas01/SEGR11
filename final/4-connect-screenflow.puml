@@ -1,0 +1,46 @@
+@startuml
+title 4-Connect UI - Screenflow
+
+skinparam linetype ortho
+skinparam defaultFontName Monospaced
+top to bottom direction
+
+skinparam nodesep 300
+skinparam ranksep 200
+skinparam padding 20
+
+' --- States ---
+state "        Gamemenu         " as Gamemenu
+state "        Modusmenu        " as Modusmenu
+state "        4-Connect        " as FourConnect
+state "      Help / Rules       " as HelpRules
+state "           Help          " as Help
+state "         Settings        " as Settings
+state "    Winning Highlight    " as WinningHighlight
+state "        Endscreen        " as Result
+
+[*] --> Gamemenu : Start
+
+
+Gamemenu --> Modusmenu : Select Game\n(AF-01)
+Gamemenu --> Help : Help\n(AF-05b)
+Gamemenu --> Settings : Settings
+
+Help --> Gamemenu : Return to Gamemenu\n(AF-07)
+Settings --> Gamemenu : Return to Gamemenu\n(AF-07)
+
+Modusmenu --> FourConnect : Select Modus\n(AF-02)
+Modusmenu --> Gamemenu : Return to Gamemenu\n(AF-07)
+
+FourConnect --> FourConnect : New Game\n(AF-06)
+FourConnect --> HelpRules : Help\n(AF-05a)
+HelpRules --> FourConnect : Return to Gamemenu\n(AF-07)
+FourConnect --> Result : Show Result
+Result --> WinningHighlight : Win Detected\n(AF-08)
+
+Result --> FourConnect : New Round\n(AF-04)
+Result --> Gamemenu : Return to Gamemenu\n(AF-07)
+
+FourConnect --> Gamemenu : Return to Gamemenu\n(AF-07)
+
+@enduml
