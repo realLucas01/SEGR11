@@ -33,7 +33,6 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.util.Duration;
 
-
 /**
  * Controller für den Vier-Gewinnt-Spielscreen.
  *

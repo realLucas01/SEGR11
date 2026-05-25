@@ -21,46 +21,43 @@ package SEG11.IFE_Entertainment.GameCore;
 
 /**
  * Interface für die Logik des Spielablaufes
- * 
+ *
  * <p>Ist für die Klasse zu implementieren, die die gesamte Logik für den Ablauf
- * und die Verwaltung des Spieles beherbergt, also in der neuen Spiele
- * initialisiert werden, Züge ausgeführt werden usw
- * 
+ * und die Verwaltung des Spieles beherbergt, also in der neuen Spiele initialisiert werden, Züge
+ * ausgeführt werden usw
+ *
+ * @param <IPlayAreaT> Ist bei der Implementierung des Interface mit der eigenen Implementierung von
+ *                     {@link IPlayArea} zu konkretisieren
+ *
  * @author Lucas Rumann
- * @param <IPlayAreaT> Ist bei der Implementierung des Interface mit der eigenen
- *                     Implementierung von {@link IPlayArea} zu konkretisieren
  */
 public interface IGame<IPlayAreaT> {
 
-	/**
-	 * Wird genutzt, um den aktuellen Status des Spiels von außerhalb abzufragen
-	 * 
-	 * @return Den aktuellen Status des Spiels im Datentyp des ENUM
-	 *         {@link GameState}
-	 */
-	GameState getStatus();
+  /**
+   * Wird genutzt, um den aktuellen Status des Spiels von außerhalb abzufragen
+   *
+   * @return Den aktuellen Status des Spiels im Datentyp des ENUM {@link GameState}
+   */
+  GameState getStatus();
 
-	/**
-	 * Wird genutzt, um den aktuellen Status des Spiels manuell von außerhalb zu
-	 * setzen
-	 * 
-	 * @param state Den gewünschten Status des Spiels im Datentyp des ENUM
-	 *              {@link GameState}
-	 */
-	void setStatus(GameState state);
+  /**
+   * Wird genutzt, um den aktuellen Status des Spiels manuell von außerhalb zu setzen
+   *
+   * @param state Den gewünschten Status des Spiels im Datentyp des ENUM {@link GameState}
+   */
+  void setStatus(GameState state);
 
-	/**
-	 * Wird genutzt, um den aktuellen Zustand des Spielbretts von außerhalb
-	 * abzufragen
-	 * 
-	 * @return Den aktuellen Zustand des Spielbretts im Datentyp der eigenen
-	 *         Implementierung von {@link IPlayArea}
-	 */
-	IPlayAreaT getBoard();
+  /**
+   * Wird genutzt, um den aktuellen Zustand des Spielbretts von außerhalb abzufragen
+   *
+   * @return Den aktuellen Zustand des Spielbretts im Datentyp der eigenen Implementierung von
+   * {@link IPlayArea}
+   */
+  IPlayAreaT getBoard();
 
-	/**
-	 * Funktion zum neustarten des Spiels unter gleichen Bedingungen
-	 */
-	void restart();
+  /**
+   * Funktion zum neustarten des Spiels unter gleichen Bedingungen
+   */
+  void restart();
 
 }

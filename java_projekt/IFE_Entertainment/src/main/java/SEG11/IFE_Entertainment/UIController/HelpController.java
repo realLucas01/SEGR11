@@ -16,6 +16,7 @@
  * SHALL NOT BE LIABLE FOR ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT
  * OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
  */
+
 package SEG11.IFE_Entertainment.UIController;
 
 import java.io.IOException;
@@ -24,15 +25,15 @@ import java.io.IOException;
  * Interface für den Hilfe-Screen Controller.
  *
  * <p>Definiert die Navigation vom Hilfe-Screen zurück zum vorherigen Screen.
- * 
+ *
  * @author Truong Tan Long Nguyen
  */
 public interface HelpController {
 
-    /**
-     * Navigiert zurück zum vorherigen Screen.
-     *
-     * @throws IOException falls die FXML-Datei nicht geladen werden kann
-     */
-    void backToGameScreen() throws IOException;
+  /**
+   * Navigiert zurück zum vorherigen Screen.
+   *
+   * @throws IOException falls die FXML-Datei nicht geladen werden kann
+   */
+  void backToGameScreen() throws IOException;
 }

@@ -16,58 +16,59 @@
  * SHALL NOT BE LIABLE FOR ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT
  * OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
  */
+
 package SEG11.IFE_Entertainment.UIController;
 
 import SEG11.IFE_Entertainment.App;
-import javafx.fxml.FXML;
-import java.io.IOException;
 import SEG11.IFE_Entertainment.UIFourConnectController.FourConnectGameController;
+import java.io.IOException;
+import javafx.fxml.FXML;
 
 /**
  * Controller für das Hauptmenü.
  *
  * <p>Stellt die Navigation zu den verschiedenen Screens des Hauptmenüs bereit.
- * 
+ *
  * @author Truong Tan Long Nguyen
  */
 public class MainMenuController {
 
-    /**
-     * Navigiert zur Modusauswahl.
-     *
-     * @throws IOException falls die FXML-Datei nicht geladen werden kann
-     */
-    @FXML
-    public void startGame() throws IOException {
-        App.setRoot("ModeMenu");
-    }
+  /**
+   * Navigiert zur Modusauswahl.
+   *
+   * @throws IOException falls die FXML-Datei nicht geladen werden kann
+   */
+  @FXML
+  public void startGame() throws IOException {
+    App.setRoot("ModeMenu");
+  }
 
-    /**
-     * Navigiert zu den Einstellungen.
-     *
-     * @throws IOException falls die FXML-Datei nicht geladen werden kann
-     */
-    @FXML
-    public void openSettings() throws IOException {
-        App.setRoot("Settings");
-    }
+  /**
+   * Navigiert zu den Einstellungen.
+   *
+   * @throws IOException falls die FXML-Datei nicht geladen werden kann
+   */
+  @FXML
+  public void openSettings() throws IOException {
+    App.setRoot("Settings");
+  }
 
-    /**
-     * Beendet die Anwendung.
-     */
-    @FXML
-    public void exit() {
-        System.exit(0);
-    }
+  /**
+   * Beendet die Anwendung.
+   */
+  @FXML
+  public void exit() {
+    System.exit(0);
+  }
 
-    /**
-     * Navigiert zum Hilfe-Screen.
-     *
-     * @throws IOException falls die FXML-Datei nicht geladen werden kann
-     */
-    @FXML
-    public void openHelp() throws IOException {
-        FourConnectGameController.previousScreen = "MainMenu";
-        App.setRoot("help_main");
-    }
+  /**
+   * Navigiert zum Hilfe-Screen.
+   *
+   * @throws IOException falls die FXML-Datei nicht geladen werden kann
+   */
+  @FXML
+  public void openHelp() throws IOException {
+    FourConnectGameController.previousScreen = "MainMenu";
+    App.setRoot("help_main");
+  }
 }

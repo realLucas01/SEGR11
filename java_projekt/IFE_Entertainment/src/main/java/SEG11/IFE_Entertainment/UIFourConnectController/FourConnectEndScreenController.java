@@ -16,14 +16,15 @@
  * SHALL NOT BE LIABLE FOR ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT
  * OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
  */
+
 package SEG11.IFE_Entertainment.UIFourConnectController;
 
-import java.io.IOException;
 import SEG11.IFE_Entertainment.App;
 import SEG11.IFE_Entertainment.FourConnect.FourConnectGame;
 import SEG11.IFE_Entertainment.FourConnect.Player;
 import SEG11.IFE_Entertainment.GameCore.GameState;
 import SEG11.IFE_Entertainment.UIController.EndScreenController;
+import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
@@ -32,52 +33,52 @@ import javafx.scene.control.Label;
  *
  * <p>Zeigt das Spielergebnis an und ermöglicht nach Spielende
  * die Navigation zurück zum Hauptmenü oder den Neustart des Spiels.
- * 
+ *
  * @author Truong Tan Long Nguyen
  */
 public class FourConnectEndScreenController implements EndScreenController {
 
-    /** Label zur Anzeige des Spielergebnisses. */
-    @FXML
-    private Label resultLabel;
+  /** Label zur Anzeige des Spielergebnisses. */
+  @FXML
+  private Label resultLabel;
 
-    /**
-     * Initialisiert den EndScreen und zeigt das Spielergebnis an.
-     */
-    @Override
-    @FXML
-    public void initialize() {
-        GameState state = FourConnectGame.getInstance().getStatus();
-        if (state == GameState.Won) {
-            resultLabel.setText("Gewonnen!");
-        } else if (state == GameState.Tied) {
-            resultLabel.setText("Unentschieden!");
-        }
+  /**
+   * Initialisiert den EndScreen und zeigt das Spielergebnis an.
+   */
+  @Override
+  @FXML
+  public void initialize() {
+    GameState state = FourConnectGame.getInstance().getStatus();
+    if (state == GameState.Won) {
+      resultLabel.setText("Gewonnen!");
+    } else if (state == GameState.Tied) {
+      resultLabel.setText("Unentschieden!");
     }
+  }
 
-    /**
-     * Startet ein neues Spiel im selben Modus.
-     *
-     * @throws IOException falls die FXML-Datei nicht geladen werden kann
-     */
-    @Override
-    @FXML
-    public void restartGame() throws IOException {
-        Player p1 = FourConnectGame.getInstance().getPlayers()[0].getType();
-        Player p2 = FourConnectGame.getInstance().getPlayers()[1].getType();
-        FourConnectGame.getInstance().endGame();
-        FourConnectGameController controller = App.setRootAndGetController("FourConnectGame");
-        controller.handlePlayMode(p1, p2);
-    }
+  /**
+   * Startet ein neues Spiel im selben Modus.
+   *
+   * @throws IOException falls die FXML-Datei nicht geladen werden kann
+   */
+  @Override
+  @FXML
+  public void restartGame() throws IOException {
+    Player p1 = FourConnectGame.getInstance().getPlayers()[0].getType();
+    Player p2 = FourConnectGame.getInstance().getPlayers()[1].getType();
+    FourConnectGame.getInstance().endGame();
+    FourConnectGameController controller = App.setRootAndGetController("FourConnectGame");
+    controller.handlePlayMode(p1, p2);
+  }
 
-    /**
-     * Navigiert zurück zum Hauptmenü.
-     *
-     * @throws IOException falls die FXML-Datei nicht geladen werden kann
-     */
-    @Override
-    @FXML
-    public void backToMainMenu() throws IOException {
-        App.setRoot("MainMenu");
-    }
+  /**
+   * Navigiert zurück zum Hauptmenü.
+   *
+   * @throws IOException falls die FXML-Datei nicht geladen werden kann
+   */
+  @Override
+  @FXML
+  public void backToMainMenu() throws IOException {
+    App.setRoot("MainMenu");
+  }
 }

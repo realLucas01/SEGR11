@@ -21,16 +21,16 @@ package SEG11.IFE_Entertainment.FourConnect;
 
 /**
  * Das enum Game mode.
- * 
+ *
  * @author Luca Tauscher
  */
 public enum GameMode {
-	/**
-	 * Zwei Spieler game mode.
-	 */
-	TWOPLAYER,
-	/**
-	 * Bot game mode.
-	 */
-	BOT
+  /**
+   * Zwei Spieler game mode.
+   */
+  TWOPLAYER,
+  /**
+   * Bot game mode.
+   */
+  BOT
 }

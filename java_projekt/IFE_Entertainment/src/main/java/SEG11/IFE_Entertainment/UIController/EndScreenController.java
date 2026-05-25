@@ -16,7 +16,10 @@
  * SHALL NOT BE LIABLE FOR ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT
  * OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
  */
+
 package SEG11.IFE_Entertainment.UIController;
+//package SEG11.IFE_Entertainment.UIController;
+
 
 import java.io.IOException;
 
@@ -24,27 +27,27 @@ import java.io.IOException;
  * Interface für den EndScreen Controller.
  *
  * <p>Definiert die Funktionen des EndScreens nach Spielende.
- * 
+ *
  * @author Truong Tan Long Nguyen
  */
 public interface EndScreenController {
 
-    /**
-     * Initialisiert den EndScreen.
-     */
-    void initialize();
+  /**
+   * Initialisiert den EndScreen.
+   */
+  void initialize();
 
-    /**
-     * Startet ein neues Spiel im selben Modus.
-     *
-     * @throws IOException falls die FXML-Datei nicht geladen werden kann
-     */
-    void restartGame() throws IOException;
+  /**
+   * Startet ein neues Spiel im selben Modus.
+   *
+   * @throws IOException falls die FXML-Datei nicht geladen werden kann
+   */
+  void restartGame() throws IOException;
 
-    /**
-     * Navigiert zurück zum Hauptmenü.
-     *
-     * @throws IOException falls die FXML-Datei nicht geladen werden kann
-     */
-    void backToMainMenu() throws IOException;
+  /**
+   * Navigiert zurück zum Hauptmenü.
+   *
+   * @throws IOException falls die FXML-Datei nicht geladen werden kann
+   */
+  void backToMainMenu() throws IOException;
 }

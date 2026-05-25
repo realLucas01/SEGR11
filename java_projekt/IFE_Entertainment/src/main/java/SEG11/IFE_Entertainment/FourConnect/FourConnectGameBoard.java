@@ -19,11 +19,13 @@
 package SEG11.IFE_Entertainment.FourConnect;
 
 import SEG11.IFE_Entertainment.GameCore.IPlayArea;
-import java.util.*;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Das "Vier Gewinnt" Spielfeld
- * 
+ *
  * @author Luca Tauscher
  */
 public class FourConnectGameBoard implements IPlayArea {
@@ -32,9 +34,9 @@ public class FourConnectGameBoard implements IPlayArea {
   /** Die Anzahl der Spalten, Standard: 7 */
   private static final Integer COLUM_COUNTS = 7;
   /**
-   *  Die map welches, das Spielfeld repräsentiert. Es speichert zu jeder Koordinate des Spielfeldes
+   * Die map welches, das Spielfeld repräsentiert. Es speichert zu jeder Koordinate des Spielfeldes
    * den besitzenden Spieler
-   * */
+   */
   private final Map<Position, FourConnectPlayer> cells = new HashMap<>();
 
   /**
@@ -44,9 +46,7 @@ public class FourConnectGameBoard implements IPlayArea {
    * Objekt gefüllt, welches den Spieler Typ NONE besitzt.
    *
    * <p>Das Spielfeld:
-   * (0,0) | (1,0) | (2,0) | ....
-   * (0,1) | (1,1) | (2,1) | ....
-   * ...     ...     ...
+   * (0,0) | (1,0) | (2,0) | .... (0,1) | (1,1) | (2,1) | .... ...     ...     ...
    */
   public FourConnectGameBoard() {
     final FourConnectPlayer nonePlayer = new FourConnectPlayer(Player.NONE, null, null);
@@ -60,7 +60,7 @@ public class FourConnectGameBoard implements IPlayArea {
 
   /**
    * gibt die Anzahl der Zeilen zurück
-   * 
+   *
    * @return die Anzahl an Zeilen
    */
   public Integer getRows() {
@@ -70,7 +70,7 @@ public class FourConnectGameBoard implements IPlayArea {
 
   /**
    * gibt die Anzahl der Spalten zurück
-   * 
+   *
    * @return Anzahl der Spalten
    */
   public Integer getColumns() {
@@ -79,9 +79,10 @@ public class FourConnectGameBoard implements IPlayArea {
 
   /**
    * erhält eine bestimmte Zelle und gibt den Besitzer dieser Zelle zurück
-   * 
+   *
    * @param y die Spalte
    * @param x die Zeile
+   *
    * @return den Spieler der Zelle
    */
   public FourConnectPlayer getCellOwner(Integer x, Integer y) {
@@ -92,6 +93,7 @@ public class FourConnectGameBoard implements IPlayArea {
    * erhält eine bestimmte Zelle und gibt den Besitzer dieser Zelle zurück
    *
    * @param position eine bereits erstellte Position
+   *
    * @return den Spieler der Zelle
    */
   public FourConnectPlayer getCellOwner(Position position) {
@@ -101,8 +103,8 @@ public class FourConnectGameBoard implements IPlayArea {
   /**
    * Wird in dropDisc() aufgerufen und erhält die ermittelte Zelle, diese Zelle wird nun dem Spieler
    * zugewiesen
-   * 
-   * @param cell übergabe der Position
+   *
+   * @param cell          übergabe der Position
    * @param currentPlayer der Spieler welcher das Spielfeld bekommen soll
    */
   public void setCellValue(Position cell, FourConnectPlayer currentPlayer) {
@@ -111,7 +113,7 @@ public class FourConnectGameBoard implements IPlayArea {
 
   /**
    * Wird in der BotStrategy benötigt, um eine Kopie des vorhanden Brettes zu erstellen
-   * 
+   *
    * @param board das zu kopieren Spielfeld
    */
   public void copy(FourConnectGameBoard board) {
@@ -125,7 +127,7 @@ public class FourConnectGameBoard implements IPlayArea {
 
   /**
    * überprüft, ob das Spielfeld gefüllt ist
-   * 
+   *
    * @return true, wenn voll und false, wenn es noch nicht voll ist
    */
   @Override
@@ -142,7 +144,7 @@ public class FourConnectGameBoard implements IPlayArea {
 
   /**
    * füllt das Feld erneut mit leeren Zellen
-   * 
+   *
    * @return 0, wenn erfolgreich
    */
   @Override

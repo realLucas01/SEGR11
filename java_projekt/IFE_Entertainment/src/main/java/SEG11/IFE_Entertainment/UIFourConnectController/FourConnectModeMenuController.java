@@ -16,63 +16,65 @@
  * SHALL NOT BE LIABLE FOR ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT
  * OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
  */
+
 package SEG11.IFE_Entertainment.UIFourConnectController;
 
 import SEG11.IFE_Entertainment.App;
 import SEG11.IFE_Entertainment.FourConnect.Player;
-import javafx.fxml.FXML;
 import java.io.IOException;
+import javafx.fxml.FXML;
+
 
 /**
  * Controller für die Modusauswahl.
  *
  * <p>Ermöglicht die Auswahl des Spielmodus und startet das Spiel
  * mit den entsprechenden Spielertypen.
- * 
+ *
  * @author Truong Tan Long Nguyen
  */
 public class FourConnectModeMenuController {
 
-    /**
-     * Startet ein Spiel im Zwei-Spieler-Modus.
-     *
-     * @throws IOException falls die FXML-Datei nicht geladen werden kann
-     */
-    @FXML
-    public void startGame() throws IOException {
-        FourConnectGameController controller = App.setRootAndGetController("FourConnectGame");
-        controller.handlePlayMode(Player.HUMAN, Player.HUMAN);
-    }
+  /**
+   * Startet ein Spiel im Zwei-Spieler-Modus.
+   *
+   * @throws IOException falls die FXML-Datei nicht geladen werden kann
+   */
+  @FXML
+  public void startGame() throws IOException {
+    FourConnectGameController controller = App.setRootAndGetController("FourConnectGame");
+    controller.handlePlayMode(Player.HUMAN, Player.HUMAN);
+  }
 
-    /**
-     * Startet ein Spiel gegen den einfachen Bot.
-     *
-     * @throws IOException falls die FXML-Datei nicht geladen werden kann
-     */
-    @FXML
-    public void startGameEasyBot() throws IOException {
-        FourConnectGameController controller = App.setRootAndGetController("FourConnectGame");
-        controller.handlePlayMode(Player.HUMAN, Player.EASYBOT);
-    }
+  /**
+   * Startet ein Spiel gegen den einfachen Bot.
+   *
+   * @throws IOException falls die FXML-Datei nicht geladen werden kann
+   */
+  @FXML
+  public void startGameEasyBot() throws IOException {
+    FourConnectGameController controller = App.setRootAndGetController("FourConnectGame");
+    controller.handlePlayMode(Player.HUMAN, Player.EASYBOT);
+  }
 
-    /**
-     * Startet ein Spiel gegen den schweren Bot.
-     *
-     * @throws IOException falls die FXML-Datei nicht geladen werden kann
-     */
-    @FXML
-    public void startGameHardBot() throws IOException {
-        FourConnectGameController controller = App.setRootAndGetController("FourConnectGame");
-        controller.handlePlayMode(Player.HUMAN, Player.HARDBOT);
-    }
+  /**
+   * Startet ein Spiel gegen den schweren Bot.
+   *
+   * @throws IOException falls die FXML-Datei nicht geladen werden kann
+   */
+  @FXML
+  public void startGameHardBot() throws IOException {
+    FourConnectGameController controller = App.setRootAndGetController("FourConnectGame");
+    controller.handlePlayMode(Player.HUMAN, Player.HARDBOT);
+  }
 
-    /**
-     * Navigiert zurück zum Hauptmenü.
-     *
-     * @throws IOException falls die FXML-Datei nicht geladen werden kann
-     */
-    @FXML
-    public void backToMainMenu() throws IOException {
-        App.setRoot("MainMenu");
-    }
+  /**
+   * Navigiert zurück zum Hauptmenü.
+   *
+   * @throws IOException falls die FXML-Datei nicht geladen werden kann
+   */
+  @FXML
+  public void backToMainMenu() throws IOException {
+    App.setRoot("MainMenu");
+  }
 }

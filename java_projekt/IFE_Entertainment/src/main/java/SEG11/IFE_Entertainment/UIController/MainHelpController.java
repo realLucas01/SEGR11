@@ -16,28 +16,29 @@
  * SHALL NOT BE LIABLE FOR ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT
  * OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
  */
+
 package SEG11.IFE_Entertainment.UIController;
 
 import SEG11.IFE_Entertainment.App;
-import javafx.fxml.FXML;
 import java.io.IOException;
+import javafx.fxml.FXML;
 
 /**
  * Controller für die allgemeine Hilfe-Seite im Hauptmenü.
  *
  * <p>Stellt die Navigation zurück zum Hauptmenü bereit.
- * 
+ *
  * @author Truong Tan Long Nguyen
  */
 public class MainHelpController {
 
-    /**
-     * Navigiert zurück zum Hauptmenü.
-     *
-     * @throws IOException falls die FXML-Datei nicht geladen werden kann
-     */
-    @FXML
-    public void backToMainMenu() throws IOException {
-        App.setRoot("MainMenu");
-    }
+  /**
+   * Navigiert zurück zum Hauptmenü.
+   *
+   * @throws IOException falls die FXML-Datei nicht geladen werden kann
+   */
+  @FXML
+  public void backToMainMenu() throws IOException {
+    App.setRoot("MainMenu");
+  }
 }

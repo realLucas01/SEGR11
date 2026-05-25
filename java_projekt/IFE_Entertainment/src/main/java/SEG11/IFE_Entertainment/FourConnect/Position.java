@@ -21,7 +21,7 @@ import java.util.Objects;
 
 /**
  * Die Position, welche für das Spielfeld genutzt werden, um die Zellen darzustellen
- * 
+ *
  * @author Luca Tauscher
  */
 public class Position {
@@ -62,8 +62,9 @@ public class Position {
    *
    * <p>Überschrieben so, dass die Vergleichsfunktion auch für die Positionen innerhalb der Map
    * verwendbar ist.
-   * 
+   *
    * @param o, das Referenzobjekt mit dem es verglichen werden soll
+   *
    * @return true oder false
    */
   @Override

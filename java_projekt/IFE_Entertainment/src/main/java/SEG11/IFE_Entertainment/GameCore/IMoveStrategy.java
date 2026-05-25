@@ -20,17 +20,18 @@ package SEG11.IFE_Entertainment.GameCore;
 /**
  * Das Interface für die Logik der Bot Gegner
  *
- * <p>Ist für die Klasse zu implementieren, die die gesamte Logik für das autonome agieren eines Bot Gegners.
- * 
+ * <p>Ist für die Klasse zu implementieren, die die gesamte Logik für das autonome Agieren eines
+ * Botgegners.
+ *
  * @author Luca Tauscher
  */
 public interface IMoveStrategy {
-
-	/**
-     * Wählt anhand des übergebenen Spielfeldes einen Zug aus und spielt diesen.
-     *
-     * @param board, das aktuelle Spielfeld
-     * @return der Zustand, des Spieles nach dem Zug
-     */
-	GameState chooseMove(IPlayArea board);
+  /**
+   * Wählt anhand des übergebenen Spielfeldes einen Zug aus und spielt diesen.
+   *
+   * @param board, das aktuelle Spielfeld
+   *
+   * @return der Zustand, des Spieles nach dem Zug
+   */
+  GameState chooseMove(IPlayArea board);
 }

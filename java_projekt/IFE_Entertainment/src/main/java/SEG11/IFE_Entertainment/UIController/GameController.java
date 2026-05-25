@@ -25,11 +25,13 @@ import java.io.IOException;
  * Interface für den Gamecontroller
  *
  * <p>Definiert die Funktionen während des Spieles
- * 
+ *
  * @author Truong Tan Long Nguyen
  */
 public interface GameController {
-	void restartGame() throws IOException;
-	void backToMainMenu() throws IOException;
-	void openHelp() throws IOException;
+  void restartGame() throws IOException;
+
+  void backToMainMenu() throws IOException;
+
+  void openHelp() throws IOException;
 }
