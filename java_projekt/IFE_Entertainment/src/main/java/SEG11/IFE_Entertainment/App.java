@@ -19,6 +19,7 @@
 
 package SEG11.IFE_Entertainment;
 
+import SEG11.IFE_Entertainment.Infrastructure.LocalizationService;
 import SEG11.IFE_Entertainment.Infrastructure.BrandingService;
 import SEG11.IFE_Entertainment.Infrastructure.LocalizationService;
 import javafx.application.Application;
@@ -26,7 +27,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 import java.util.ResourceBundle;
 
@@ -83,18 +83,18 @@ public class App extends Application {
       "-theme-primary: " + branding.getPrimaryColor() + ";" + "-theme-secondary: " + branding.getSecondaryColor() + ";");
   }
 
-  /* Lädt, die angegebene JavaFX Datei und zeigt diese an.
-   *
-   * @param fxml, die Anzuzeigende Datei
-   * @return fxmlLoader.load()
-   * @throws IOException
-   */
-  private static Parent loadFXML(String fxml) throws IOException {
-    FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
-    fxmlLoader.setResources(ResourceBundle.getBundle("i18n.messages",
-      LocalizationService.getInstance().getCurrentLocale()));
-    return fxmlLoader.load();
-  }
+     /** Lädt, die angegebene JavaFX Datei und zeigt diese an.
+     *
+     * @param fxml, die Anzuzeigende Datei
+     * @return fxmlLoader.load()
+     * @throws IOException
+     */
+    private static Parent loadFXML(String fxml) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
+        fxmlLoader.setResources(ResourceBundle.getBundle("i18n.messages",
+                LocalizationService.getInstance().getCurrentLocale()));
+        return fxmlLoader.load();
+    }
 
   /**
    * Lädt eine FXML-Datei, setzt sie als Root der Scene und gibt den zugehörigen Controller zurück.
