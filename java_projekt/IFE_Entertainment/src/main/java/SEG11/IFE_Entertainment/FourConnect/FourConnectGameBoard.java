@@ -28,9 +28,9 @@ import java.util.Map;
  * @author Luca Tauscher
  */
 public class FourConnectGameBoard implements IPlayArea {
-  /** Die Anzahl der Zeilen, Standard: 6 */
+  /** Die Anzahl der Zeilen, Standard: 6. */
   private static final Integer ROW_COUNTS = 6;
-  /** Die Anzahl der Spalten, Standard: 7 */
+  /** Die Anzahl der Spalten, Standard: 7. */
   private static final Integer COLUM_COUNTS = 7;
   /**
    * Die map welches, das Spielfeld repräsentiert. Es speichert zu jeder Koordinate des Spielfeldes

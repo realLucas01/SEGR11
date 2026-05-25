@@ -83,7 +83,7 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
   }
 
   /**
-   * Implementierung der Interface Methode getStatus()
+   * Implementierung der Interface-Methode getStatus().
    *
    * <p>Wird genutzt, um den aktuellen Status des Spiels von außerhalb abzufragen
    *
@@ -97,7 +97,7 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
   }
 
   /**
-   * Implementierung der Interface Methode setStatus().
+   * Implementierung der Interface-Methode setStatus().
    *
    * <p>Wird genutzt, um den aktuellen Status des Spiels manuell von außerhalb zu
    * setzen
@@ -110,7 +110,7 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
   }
 
   /**
-   * Implementierung der Interface Methode getBoard().
+   * Implementierung der Interface-Methode getBoard().
    *
    * <p>Wird genutzt, um den aktuellen Zustand des Spielbretts von außerhalb
    * abzufragen
@@ -143,7 +143,7 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
   }
 
   /**
-   * Implementierung der Interfacemethode restart().
+   * Implementierung der Interface-Methode restart().
    *
    * <p>Startet das Spiel mit den aktuellen Spielern bzw. im aktuellen Spielmodus
    * neu. Wenn Spieler bzw Spielmodus gewechselt werden soll, dann muss dafür erst {@link #endGame}
@@ -204,7 +204,7 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
   }
 
   /**
-   * Get Funktion um das Mitspielen eines Botes abzufragen.
+   * Get Funktion um das Mitspielen eines Bots abzufragen.
    *
    * @return true, wenn ein Bot mitspielt false, wenn kein Bot mitspielt
    */
@@ -224,7 +224,7 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
   }
 
   /**
-   * Führt einen Zug des Botes aus.
+   * Führt einen Zug des Bots aus.
    *
    * @return den Spielzustand nach dem Zug
    */

@@ -129,7 +129,7 @@ public class FourConnectBotStrategy implements IMoveStrategy {
 
       //Zähle Bot und Gegner Scheiben im aktuellen Fenster
       for (Position pos : connects) {
-        final Player owner = board.getCellOwner(pos.getX(), pos.getY()).getType();
+        final Player owner = board.getCellOwner(pos.getxCord(), pos.getyCord()).getType();
         switch (owner) {
           case HUMAN -> playerOwningCount++;
           case HARDBOT -> botOwningCount++;
@@ -316,7 +316,7 @@ public class FourConnectBotStrategy implements IMoveStrategy {
 
         if (score > bestScore) {
           bestScore = score;
-          bestTurn = turn.getX();
+          bestTurn = turn.getxCord();
         }
       }
       return bestTurn;

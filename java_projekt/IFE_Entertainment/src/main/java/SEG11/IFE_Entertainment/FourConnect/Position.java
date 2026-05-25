@@ -25,18 +25,18 @@ import java.util.Objects;
  * @author Luca Tauscher
  */
 public class Position {
-  private final Integer x;
-  private final Integer y;
+  private final Integer xCord;
+  private final Integer yCord;
 
   /**
    * Konstruktor für Position.
    *
-   * @param x, die x-Achse
-   * @param y, die y-Achse
+   * @param xCord die x-Achse
+   * @param yCord die y-Achse
    */
-  public Position(Integer x, Integer y) {
-    this.x = x;
-    this.y = y;
+  public Position(Integer xCord, Integer yCord) {
+    this.xCord = xCord;
+    this.yCord = yCord;
   }
 
   /**
@@ -44,8 +44,8 @@ public class Position {
    *
    * @return den Integer Wert
    */
-  public Integer getX() {
-    return x;
+  public Integer getxCord() {
+    return xCord;
   }
 
   /**
@@ -53,8 +53,8 @@ public class Position {
    *
    * @return den Integer Wert
    */
-  public Integer getY() {
-    return y;
+  public Integer getyCord() {
+    return yCord;
   }
 
   /**
@@ -76,16 +76,16 @@ public class Position {
       return false;
     }
     final Position position = (Position) o;
-    return x.equals(position.x) && y.equals(position.y);
+    return xCord.equals(position.xCord) && yCord.equals(position.yCord);
   }
 
   /**
-   * <p>Gibt den HashCode des Objektes zurück.
+   * Gibt den HashCode des Objektes zurück.
    *
    * @return HashCode
    */
   @Override
   public int hashCode() {
-    return Objects.hash(x, y);
+    return Objects.hash(xCord, yCord);
   }
 }
