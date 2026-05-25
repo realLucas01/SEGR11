@@ -30,9 +30,11 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
-import javafx.util.Duration;
 
 import java.io.IOException;
+
+import javafx.util.Duration;
+
 
 /**
  * Controller für den Vier-Gewinnt-Spielscreen.
