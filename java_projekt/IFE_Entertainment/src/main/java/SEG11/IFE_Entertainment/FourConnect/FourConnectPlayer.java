@@ -19,7 +19,7 @@
 
 package SEG11.IFE_Entertainment.FourConnect;
 
-import SEG11.IFE_Entertainment.GameCore.IMoveStrategy;
+import SEG11.IFE_Entertainment.GameCore.MoveStrategy;
 
 /**
  * Der Vier gewinnt Spieler.
@@ -30,7 +30,7 @@ public class FourConnectPlayer {
   /** Der Typ des Spielers, siehe das enum {@link Player}. */
   private final Player type;
   /** Die verwendete Schwierigkeitsstufe des Bots. */
-  private final IMoveStrategy strategy;
+  private final MoveStrategy strategy;
   /** Die Farbe des Spielsteines. */
   private final String colour;
 
@@ -43,7 +43,7 @@ public class FourConnectPlayer {
    * @param strategy wenn es ein Bot ist, die zu verwendende Strategy/Schwierigkeitsstufe
    * @param colour   die Farbe des Spielsteines
    */
-  public FourConnectPlayer(Player type, IMoveStrategy strategy, String colour) {
+  public FourConnectPlayer(Player type, MoveStrategy strategy, String colour) {
     this.type = type;
     this.strategy = strategy;
     this.colour = colour;
@@ -63,7 +63,7 @@ public class FourConnectPlayer {
    *
    * @return die Bot Strategy
    */
-  public IMoveStrategy getStrategy() {
+  public MoveStrategy getStrategy() {
     return strategy;
   }
 

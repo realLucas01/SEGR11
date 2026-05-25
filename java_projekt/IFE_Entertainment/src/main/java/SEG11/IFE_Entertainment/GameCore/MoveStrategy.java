@@ -25,13 +25,13 @@ package SEG11.IFE_Entertainment.GameCore;
  *
  * @author Luca Tauscher
  */
-public interface IMoveStrategy {
+public interface MoveStrategy {
   /**
    * Wählt anhand des übergebenen Spielfeldes einen Zug aus und spielt diesen.
    *
-   * @param board, das aktuelle Spielfeld
+   * @param board das aktuelle Spielfeld
    *
    * @return der Zustand, des Spieles nach dem Zug
    */
-  GameState chooseMove(IPlayArea board);
+  GameState chooseMove(PlayArea board);
 }

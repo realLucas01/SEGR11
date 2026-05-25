@@ -20,8 +20,8 @@
 package SEG11.IFE_Entertainment.FourConnect;
 
 import SEG11.IFE_Entertainment.GameCore.GameState;
-import SEG11.IFE_Entertainment.GameCore.IMoveStrategy;
-import SEG11.IFE_Entertainment.GameCore.IPlayArea;
+import SEG11.IFE_Entertainment.GameCore.MoveStrategy;
+import SEG11.IFE_Entertainment.GameCore.PlayArea;
 
 import java.security.SecureRandom;
 import java.util.ArrayList;
@@ -32,21 +32,22 @@ import static java.lang.Math.max;
 import static java.lang.Math.min;
 
 /**
- * Implementiert {@link IMoveStrategy} und stellt zwei Bot strategien für das "Vier Gewinnt" Spiel
- * bereit:
+ * Implementiert {@link MoveStrategy} und stellt zwei Bot strategien für das "Vier Gewinnt" Spiel
+ * bereit.
  *
- * <p>{@link EasyBotStrategy} - wählt zufällig eine gültige Spalte
- * <p>{@link HardBotStrategy} - berechnet den besten Zug per MinMax
+ * <p>{@link EasyBotStrategy} - wählt zufällig eine gültige Spalte.
+ *
+ * <p>{@link HardBotStrategy} - berechnet den besten Zug per MinMax.
  *
  * @author Luca Tauscher
  */
-public class FourConnectBotStrategy implements IMoveStrategy {
+public class FourConnectBotStrategy implements MoveStrategy {
 
   /** Referenz auf das laufende Spiel wird zum Ausführen echter Züge benötigt. */
   FourConnectGame fcGame;
   /** Regelwerk, wird für Sieg- und Unentschieden Prüfung genutzt. */
   FourConnectRules fcRules;
-  /** Zufallsgenerator */
+  /** Zufallsgenerator. */
   private final Random randNum = new SecureRandom();
 
   // Bewertungsgewichte
@@ -87,7 +88,7 @@ public class FourConnectBotStrategy implements IMoveStrategy {
    * @return der Status des Spieles{@link GameState}.
    */
   @Override
-  public GameState chooseMove(IPlayArea board) {
+  public GameState chooseMove(PlayArea board) {
     // wird durch die inneren Strategieklassen überschrieben
     return null;
   }
@@ -129,7 +130,7 @@ public class FourConnectBotStrategy implements IMoveStrategy {
 
       //Zähle Bot und Gegner Scheiben im aktuellen Fenster
       for (Position pos : connects) {
-        final Player owner = board.getCellOwner(pos.getxCord(), pos.getyCord()).getType();
+        final Player owner = board.getCellOwner(pos.getXCord(), pos.getYCord()).getType();
         switch (owner) {
           case HUMAN -> playerOwningCount++;
           case HARDBOT -> botOwningCount++;
@@ -219,11 +220,11 @@ public class FourConnectBotStrategy implements IMoveStrategy {
 
   /**
    * Die innere Klasse, welche den einfachen Bot repräsentiert. Auch diese implementiert das
-   * Interface {@link IMoveStrategy}.
+   * Interface {@link MoveStrategy}.
    *
    * <p>Der einfache Bot wählt aus den verfügbaren, leeren Spalten zufällig eine aus.
    */
-  public class EasyBotStrategy implements IMoveStrategy {
+  public class EasyBotStrategy implements MoveStrategy {
 
     /**
      * Wählt zufällig eine Spalte aus und wirft dort eine Scheibe ein.
@@ -233,7 +234,7 @@ public class FourConnectBotStrategy implements IMoveStrategy {
      * @return der Status des Spieles{@link GameState}.
      */
     @Override
-    public GameState chooseMove(IPlayArea board) {
+    public GameState chooseMove(PlayArea board) {
       // Logik für zufälligen Zug
       final List<Integer> possibleColumns = new ArrayList<>();
             /* Es überprüft, welche Spalten noch frei sind. Anhand der freien Spalten wird eine
@@ -251,7 +252,7 @@ public class FourConnectBotStrategy implements IMoveStrategy {
 
   /**
    * Die innere Klasse, welche den schweren Bot repräsentiert. Auch diese implementiert das
-   * Interface {@link IMoveStrategy}.
+   * Interface {@link MoveStrategy}.
    *
    * <p>Er benutzt den MinMax Algorithmus zum Berechnen seines Zuges.
    *
@@ -262,10 +263,10 @@ public class FourConnectBotStrategy implements IMoveStrategy {
    * <p>aktueller Stand :
    * 43 : 1 für den Bot ... und 2 Unentschieden
    */
-  public class HardBotStrategy implements IMoveStrategy {
-    /* index für die playerList, um zu wissen, an welcher Stelle der Bot Spieler steht */ int
+  public class HardBotStrategy implements MoveStrategy {
+    /** index für die playerList, um zu wissen, an welcher Stelle der Bot Spieler steht. */ int
       botPlayerIndex;
-    /** die im {@link FourConnectGameBoard} initialisierte Spieler Liste */
+    /** die im {@link FourConnectGameBoard} initialisierte Spieler Liste. */
     FourConnectPlayer[] playerList;
 
     /**
@@ -278,7 +279,7 @@ public class FourConnectBotStrategy implements IMoveStrategy {
      * @return der Status des Spieles{@link GameState}.
      */
     @Override
-    public GameState chooseMove(IPlayArea board) {
+    public GameState chooseMove(PlayArea board) {
       // Spielfeld kopieren, damit der Originalzustand unverändert bleibt
       final FourConnectGameBoard boardCopy = new FourConnectGameBoard();
       boardCopy.copy((FourConnectGameBoard) board);
@@ -316,7 +317,7 @@ public class FourConnectBotStrategy implements IMoveStrategy {
 
         if (score > bestScore) {
           bestScore = score;
-          bestTurn = turn.getxCord();
+          bestTurn = turn.getXCord();
         }
       }
       return bestTurn;
@@ -341,8 +342,9 @@ public class FourConnectBotStrategy implements IMoveStrategy {
       int bestValue;
 
       // Abbruchbedingung: Tiefe 0, Sieg oder Unentschieden
-      if ((depth == 0) || (fcRules.checkWin(board,
-        playerList[(botPlayerIndex + (isMaximizing ? 1 : 0)) % 2])) || (fcRules.checkTie(board))) {
+      if ((depth == 0)
+          || (fcRules.checkWin(board, playerList[(botPlayerIndex + (isMaximizing ? 1 : 0)) % 2]))
+          || (fcRules.checkTie(board))) {
         return appraiseBoard(board);
       }
 
@@ -407,7 +409,7 @@ public class FourConnectBotStrategy implements IMoveStrategy {
      * @param currentFCPlayer der Spieler, dessen Scheibe gesetzt wird
      */
     private void playTestTurn(FourConnectGameBoard board, Position turn,
-      FourConnectPlayer currentFCPlayer) {
+        FourConnectPlayer currentFCPlayer) {
       board.setCellValue(turn, currentFCPlayer);
     }
 

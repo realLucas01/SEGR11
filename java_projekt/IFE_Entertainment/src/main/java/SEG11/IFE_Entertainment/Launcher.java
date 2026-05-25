@@ -20,7 +20,7 @@
 package SEG11.IFE_Entertainment;
 
 /**
- * Der Startpunkt des Projektes
+ * Der Startpunkt des Projektes.
  *
  * @author Luca Tauscher
  */

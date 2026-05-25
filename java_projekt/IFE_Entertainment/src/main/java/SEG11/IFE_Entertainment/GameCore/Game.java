@@ -26,12 +26,12 @@ package SEG11.IFE_Entertainment.GameCore;
  * und die Verwaltung des Spieles beherbergt, also in der neuen Spiele initialisiert werden, Züge
  * ausgeführt werden usw.
  *
- * @param <IPlayAreaT> Ist bei der Implementierung des Interface mit der eigenen Implementierung von
- *                     {@link IPlayArea} zu konkretisieren
+ * @param <PlayAreaT> Ist bei der Implementierung des Interface mit der eigenen Implementierung von
+ *   {@link PlayArea} zu konkretisieren
  *
  * @author Lucas Rumann
  */
-public interface IGame<IPlayAreaT> {
+public interface Game<PlayAreaT> {
 
   /**
    * Wird genutzt, um den aktuellen Status des Spiels von außerhalb abzufragen.
@@ -51,9 +51,9 @@ public interface IGame<IPlayAreaT> {
    * Wird genutzt, um den aktuellen Zustand des Spielbretts von außerhalb abzufragen.
    *
    * @return Den aktuellen Zustand des Spielbretts im Datentyp der eigenen Implementierung von
-   * {@link IPlayArea}
+   *   {@link PlayArea}
    */
-  IPlayAreaT getBoard();
+  PlayAreaT getBoard();
 
   /**
    * Funktion zum neu starten des Spiels unter gleichen Bedingungen.

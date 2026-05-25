@@ -18,8 +18,6 @@
  */
 
 package SEG11.IFE_Entertainment.UIController;
-//package SEG11.IFE_Entertainment.UIController;
-
 
 import java.io.IOException;
 

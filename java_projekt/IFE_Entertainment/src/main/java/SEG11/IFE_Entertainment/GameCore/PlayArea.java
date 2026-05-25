@@ -28,7 +28,7 @@ package SEG11.IFE_Entertainment.GameCore;
  *
  * @author Lucas Rumann
  */
-public interface IPlayArea {
+public interface PlayArea {
 
   /**
    * Funktion zum Überprüfen, ob das Spielfeld voll ist.
@@ -41,7 +41,7 @@ public interface IPlayArea {
    * Funktion zum leeren und neu-initialisieren des Spielbretts.
    *
    * @return Integer Wert zur Überprüfung, ob die Operation erfolgreich war. Bei einem Wert != 0 ist
-   * ein Fehler aufgetreten
+   *   ein Fehler aufgetreten
    */
   Integer clear();
 }

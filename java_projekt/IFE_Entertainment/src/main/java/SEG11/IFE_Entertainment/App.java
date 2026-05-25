@@ -80,7 +80,7 @@ public class App extends Application {
     BrandingService branding = BrandingService.getInstance();
 
     scene.getRoot().setStyle(
-      "-theme-primary: " + branding.getPrimaryColor() + ";" + "-theme-secondary: " +
+        "-theme-primary: " + branding.getPrimaryColor() + ";" + "-theme-secondary: " +
         branding.getSecondaryColor() + ";");
   }
 
@@ -91,9 +91,9 @@ public class App extends Application {
      * @throws IOException
      */
     private static Parent loadFXML(String fxml) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
-        fxmlLoader.setResources(ResourceBundle.getBundle("i18n.messages",
-                LocalizationService.getInstance().getCurrentLocale()));
+          FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
+          fxmlLoader.setResources(ResourceBundle.getBundle("i18n.messages",
+              LocalizationService.getInstance().getCurrentLocale()));
         return fxmlLoader.load();
     }
 
@@ -110,7 +110,7 @@ public class App extends Application {
   public static <T> T setRootAndGetController(String fxml) throws IOException {
     FXMLLoader loader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
     loader.setResources(ResourceBundle.getBundle("i18n.messages",
-      LocalizationService.getInstance().getCurrentLocale()));
+        LocalizationService.getInstance().getCurrentLocale()));
     scene.setRoot(loader.load());
     return loader.getController();
   }

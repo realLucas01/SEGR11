@@ -20,23 +20,23 @@
 package SEG11.IFE_Entertainment.FourConnect;
 
 import SEG11.IFE_Entertainment.GameCore.GameState;
-import SEG11.IFE_Entertainment.GameCore.IGame;
-import SEG11.IFE_Entertainment.GameCore.IPlayArea;
+import SEG11.IFE_Entertainment.GameCore.Game;
+import SEG11.IFE_Entertainment.GameCore.PlayArea;
 import SEG11.IFE_Entertainment.Infrastructure.BrandingService;
 
 
 /**
  * Klasse die für den eigentlichen Spielablauf zuständig ist.
  *
- * <p>Implementiert dabei {@link IGame} und seine Funktionen, und stellt
+ * <p>Implementiert dabei {@link Game} und seine Funktionen, und stellt
  * zusätzliche Funktionen für alle Phasen des Spielablaufs bereit.
  *
  * @param <FourConnectGameBoard> Der generische Datentyp wurde auf die von uns implementierte
- *                               Version des Interface {@link IPlayArea} konkretisiert.
+ *                               Version des Interface {@link PlayArea} konkretisiert.
  *
  * @author Lucas Rumann
  */
-public class FourConnectGame implements IGame<FourConnectGameBoard> {
+public class FourConnectGame implements Game<FourConnectGameBoard> {
   /** Speichern der Singleton Instanz der Klasse. */
   private static FourConnectGame INSTANCE;
   /** Aktueller Zustand des Spiels. */
@@ -89,7 +89,7 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
    *
    * @return Den aktuellen Status des Spiels im Datentyp des ENUM {@link GameState}
    *
-   * @see IGame
+   * @see Game
    */
   @Override
   public GameState getStatus() {
@@ -102,7 +102,7 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
    * <p>Wird genutzt, um den aktuellen Status des Spiels manuell von außerhalb zu
    * setzen
    *
-   * @see IGame
+   * @see Game
    */
   @Override
   public void setStatus(GameState inputState) {
@@ -117,7 +117,7 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
    *
    * @return Den aktuellen Zustand des Spielbretts im Datentyp {@link FourConnectGameBoard}
    *
-   * @see IGame
+   * @see Game
    */
   @Override
   public FourConnectGameBoard getBoard() {
@@ -149,7 +149,7 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
    * neu. Wenn Spieler bzw Spielmodus gewechselt werden soll, dann muss dafür erst {@link #endGame}
    * und dann {@link #initFourConnectGame} aufgerufen werden
    *
-   * @see IGame
+   * @see Game
    */
   @Override
   public void restart() {
@@ -241,8 +241,7 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
    * @param playerOne Der Typ von Spieler 1 im ENUM {@link Player}
    * @param playerTwo Der Typ von Spieler 2 im ENUM {@link Player}
    *
-   * @return Einen Integer wert der aussagt, ob die Operation erfolgreich war, bei einer Rückgabe !=
-   * 0 ist ein Fehler aufgetreten
+   * @return 0 bei erfolgreicher Operation, andernfalls ein Fehlercode != 0.
    */
   public Integer initFourConnectGame(Player playerOne, Player playerTwo) {
 

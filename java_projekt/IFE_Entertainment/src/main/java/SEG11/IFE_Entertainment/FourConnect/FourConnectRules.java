@@ -19,25 +19,25 @@
 
 package SEG11.IFE_Entertainment.FourConnect;
 
-import SEG11.IFE_Entertainment.GameCore.IPlayArea;
-import SEG11.IFE_Entertainment.GameCore.IRuleSet;
+import SEG11.IFE_Entertainment.GameCore.PlayArea;
+import SEG11.IFE_Entertainment.GameCore.RuleSet;
 
 /**
  * Klasse stellt grundlegende Funktionen für das Überprüfen des Regelwerks zur verfügung.
  *
- * <p>Implementiert dabei {@link IRuleSet} und seine Funktionen.
+ * <p>Implementiert dabei {@link RuleSet} und seine Funktionen.
  *
- * @param <FourConnectGameBoard> Der generische Datentyp {@link IRuleSet#IPlayAreaT} wurde auf die
- *                               von uns implementierte Version des Interface {@link IPlayArea}
+ * @param <FourConnectGameBoard> Der generische Datentyp {@link RuleSet#IPlayAreaT} wurde auf die
+ *                               von uns implementierte Version des Interface {@link PlayArea}
  *                               konkretisiert
- * @param <FourConnectPlayer>    Der generische Datentyp {@link IRuleSet PlayerT} wurde auf die von
+ * @param <FourConnectPlayer>    Der generische Datentyp {@link RuleSet PlayerT} wurde auf die von
  *                               unserem implementierung des Spielers konkretisiert
  *
  * @author Lucas Rumann
- * @see IPlayArea
+ * @see PlayArea
  * @see Player
  */
-public class FourConnectRules implements IRuleSet<FourConnectGameBoard, FourConnectPlayer> {
+public class FourConnectRules implements RuleSet<FourConnectGameBoard, FourConnectPlayer> {
 
   /**
    * Implementierung der Interface-Methode checkWin().
@@ -47,7 +47,7 @@ public class FourConnectRules implements IRuleSet<FourConnectGameBoard, FourConn
    * @param board  Aktueller Zustand des Spielbretts
    * @param player Spieler der den aktuellen Zug gemacht hat
    *
-   * @see IRuleSet
+   * @see RuleSet
    */
   @Override
   public boolean checkWin(FourConnectGameBoard board, FourConnectPlayer player) {
@@ -80,10 +80,10 @@ public class FourConnectRules implements IRuleSet<FourConnectGameBoard, FourConn
     // Aufeinanderfolge des aktuellen Spielers existieren
     for (int i = 0; i < board.getColumns() - 3; i++) {
       for (int j = 0; j < board.getRows() - 3; j++) {
-        if (board.getCellOwner(new Position(i, j)).equals(player) && board.getCellOwner(
-          new Position(i + 1, j + 1)).equals(player) && board.getCellOwner(
-          new Position(i + 2, j + 2)).equals(player) && board.getCellOwner(
-          new Position(i + 3, j + 3)).equals(player)) {
+        if (board.getCellOwner(new Position(i, j)).equals(player)
+            && board.getCellOwner(new Position(i + 1, j + 1)).equals(player)
+            && board.getCellOwner(new Position(i + 2, j + 2)).equals(player)
+            && board.getCellOwner(new Position(i + 3, j + 3)).equals(player)) {
           return true;
         }
       }
@@ -93,10 +93,10 @@ public class FourConnectRules implements IRuleSet<FourConnectGameBoard, FourConn
     // Aufeinanderfolge des aktuellen Spielers existieren
     for (int i = board.getColumns() - 1; i >= 3; i--) {
       for (int j = 0; j < board.getRows() - 3; j++) {
-        if (board.getCellOwner(new Position(i, j)).equals(player) && board.getCellOwner(
-          new Position(i - 1, j + 1)).equals(player) && board.getCellOwner(
-          new Position(i - 2, j + 2)).equals(player) && board.getCellOwner(
-          new Position(i - 3, j + 3)).equals(player)) {
+        if (board.getCellOwner(new Position(i, j)).equals(player)
+            && board.getCellOwner(new Position(i - 1, j + 1)).equals(player)
+            && board.getCellOwner(new Position(i - 2, j + 2)).equals(player)
+            && board.getCellOwner(new Position(i - 3, j + 3)).equals(player)) {
           return true;
         }
       }
@@ -111,7 +111,7 @@ public class FourConnectRules implements IRuleSet<FourConnectGameBoard, FourConn
    *
    * @param board aktueller Zustand des Spielbretts
    *
-   * @see IRuleSet
+   * @see RuleSet
    */
   @Override
   public boolean checkTie(FourConnectGameBoard board) {

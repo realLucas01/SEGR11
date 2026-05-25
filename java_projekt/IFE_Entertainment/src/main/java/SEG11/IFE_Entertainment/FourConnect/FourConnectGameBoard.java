@@ -18,7 +18,8 @@
 
 package SEG11.IFE_Entertainment.FourConnect;
 
-import SEG11.IFE_Entertainment.GameCore.IPlayArea;
+import SEG11.IFE_Entertainment.GameCore.PlayArea;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -27,7 +28,7 @@ import java.util.Map;
  *
  * @author Luca Tauscher
  */
-public class FourConnectGameBoard implements IPlayArea {
+public class FourConnectGameBoard implements PlayArea {
   /** Die Anzahl der Zeilen, Standard: 6. */
   private static final Integer ROW_COUNTS = 6;
   /** Die Anzahl der Spalten, Standard: 7. */

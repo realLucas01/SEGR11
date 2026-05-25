@@ -25,29 +25,29 @@ package SEG11.IFE_Entertainment.GameCore;
  * <p>Ist für die Klasse zu implementieren, die die gesammte Logik für die
  * Überprüfung der Spielzüge auf Konformität mit dem jeweiligen Regelwerk beherbergt
  *
- * @param <IPlayAreaT> Ist bei der Implementierung des Interface mit der eigenen Implementierung von
- *                     {@link IPlayArea} zu konkretisieren
+ * @param <PlayAreaT> Ist bei der Implementierung des Interface mit der eigenen Implementierung von
+ *                     {@link PlayArea} zu konkretisieren
  * @param <PlayerT>    Ist bei der Implementierung des Interface mit der eigenen Implementierung der
  *                     Klasse des Spielers zu konkretisieren
  *
  * @author Lucas Rumann
  */
-public interface IRuleSet<IPlayAreaT, PlayerT> {
+public interface RuleSet<PlayAreaT, PlayerT> {
   /**
    * Funktion zur Überprüfung, ob ein Sieg vorliegt.
    *
    * @param board  Den aktuellen Zustand des Spielbretts im Datentyp der eigenen Implementierung von
-   *               {@link IPlayArea}
+   *               {@link PlayArea}
    * @param player Spieler der den aktuellen Zug gemacht hat im Datentyp der eigenen Implementierung
    *               der Klasse des Spielers
    */
-  boolean checkWin(IPlayAreaT board, PlayerT player);
+  boolean checkWin(PlayAreaT board, PlayerT player);
 
   /**
    * Funktion zur Überprüfung, ob ein Unentschieden vorliegt.
    *
    * @param board Den aktuellen Zustand des Spielbretts im Datentyp der eigenen Implementierung von
-   *              {@link IPlayArea}
+   *              {@link PlayArea}
    */
-  boolean checkTie(IPlayAreaT board);
+  boolean checkTie(PlayAreaT board);
 }
