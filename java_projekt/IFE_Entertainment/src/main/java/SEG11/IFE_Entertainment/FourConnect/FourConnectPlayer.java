@@ -22,26 +22,26 @@ package SEG11.IFE_Entertainment.FourConnect;
 import SEG11.IFE_Entertainment.GameCore.IMoveStrategy;
 
 /**
- * Der Vier gewinnt Spieler
+ * Der Vier gewinnt Spieler.
  *
  * @author Luca Tauscher
  */
 public class FourConnectPlayer {
-  /** Der Typ des Spielers, siehe das enum {@link Player} */
+  /** Der Typ des Spielers, siehe das enum {@link Player}. */
   private final Player type;
-  /** Die verwendete Schwierigkeitsstufe des Bots */
+  /** Die verwendete Schwierigkeitsstufe des Bots. */
   private final IMoveStrategy strategy;
-  /** Die Farbe des Spielsteines */
+  /** Die Farbe des Spielsteines. */
   private final String colour;
 
   /**
    * Der Konstruktor um einen FCPlayer zu initialisieren.
    *
-   * <p>Initialisiert ein Spieler Objekt
+   * <p>Initialisiert ein Spieler Objekt.
    *
-   * @param type,     der Type des Spielers: Bot oder Mensch
-   * @param strategy, wenn es ein Bot ist, die zu verwendende Strategy/Schwierigkeitsstufe
-   * @param colour,   die Farbe des Spielsteines
+   * @param type     der Type des Spielers: Bot oder Mensch
+   * @param strategy wenn es ein Bot ist, die zu verwendende Strategy/Schwierigkeitsstufe
+   * @param colour   die Farbe des Spielsteines
    */
   public FourConnectPlayer(Player type, IMoveStrategy strategy, String colour) {
     this.type = type;
@@ -50,7 +50,7 @@ public class FourConnectPlayer {
   }
 
   /**
-   * Gibt den Typ des Spielers zurück
+   * Gibt den Typ des Spielers zurück.
    *
    * @return der Spieler
    */
@@ -59,7 +59,7 @@ public class FourConnectPlayer {
   }
 
   /**
-   * Wenn vorhanden, gibt es die verwendete Bot Strategy zurück
+   * Wenn vorhanden, gibt es die verwendete Bot Strategy zurück.
    *
    * @return die Bot Strategy
    */
@@ -68,7 +68,7 @@ public class FourConnectPlayer {
   }
 
   /**
-   * Gibt die Farbe für den Spieler zurück
+   * Gibt die Farbe für den Spieler zurück.
    *
    * @return die Farbe
    */

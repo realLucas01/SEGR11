@@ -20,33 +20,33 @@
 package SEG11.IFE_Entertainment.GameCore;
 
 /**
- * Enum zur Identifizierung des aktuellen Zustands des Spiels
+ * Enum zur Identifizierung des aktuellen Zustands des Spiels.
  *
  * @author Lucas Rumann
  */
 public enum GameState {
   /**
-   * Spiel nicht gestartet
+   * Spiel nicht gestartet.
    */
   NotStarted,
   /**
-   * Spiel gestartet
+   * Spiel gestartet.
    */
   Running,
   /**
-   * Spiel pausiert
+   * Spiel pausiert.
    */
   Paused,
   /**
-   * Spiel beendet
+   * Spiel beendet.
    */
   Finished,
   /**
-   * Spiel mit unentschieden ausgegangen
+   * Spiel mit unentschieden ausgegangen.
    */
   Tied,
   /**
-   * Spiel mit Sieg eines Spielers ausgegangen
+   * Spiel mit Sieg eines Spielers ausgegangen.
    */
   Won
 }

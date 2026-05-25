@@ -42,49 +42,49 @@ import static java.lang.Math.min;
  */
 public class FourConnectBotStrategy implements IMoveStrategy {
 
-  /** Referenz auf das laufende Spiel wird zum Ausführen echter Züge benötigt */
+  /** Referenz auf das laufende Spiel wird zum Ausführen echter Züge benötigt. */
   FourConnectGame fcGame;
-  /** Regelwerk, wird für Sieg- und Unentschieden Prüfung genutzt */
+  /** Regelwerk, wird für Sieg- und Unentschieden Prüfung genutzt. */
   FourConnectRules fcRules;
   /** Zufallsgenerator */
   private final Random randNum = new SecureRandom();
 
   // Bewertungsgewichte
 
-  /** Punktwert für einen vollständigen Vier-Gewinnt-Zug des Bots */
+  /** Punktwert für einen vollständigen Vier-Gewinnt-Zug des Bots. */
   private static final int SCORE_BOT_FOUR = 1000;
 
-  /** Punktwert für drei eigene Scheiben in einem freien Fenster */
+  /** Punktwert für drei eigene Scheiben in einem freien Fenster. */
   private static final int SCORE_BOT_THREE = 5;
 
-  /** Punktwert für zwei eigene Scheiben in einem freien Fenster */
+  /** Punktwert für zwei eigene Scheiben in einem freien Fenster. */
   private static final int SCORE_BOT_TWO = 2;
 
-  /** Punktwert für eine eigene Scheibe in einem freien Fenster */
+  /** Punktwert für eine eigene Scheibe in einem freien Fenster. */
   private static final int SCORE_BOT_ONE = 1;
 
-  /** Punktabzug für vier Gegner-Scheiben */
+  /** Punktabzug für vier Gegner-Scheiben. */
   private static final int SCORE_OPP_FOUR = -1000;
 
-  /** Punktabzug für drei Gegner-Scheiben in einem freien Fenster */
+  /** Punktabzug für drei Gegner-Scheiben in einem freien Fenster. */
   private static final int SCORE_OPP_THREE = -5;
 
-  /** Punktabzug für zwei Gegner-Scheiben in einem freien Fenster */
+  /** Punktabzug für zwei Gegner-Scheiben in einem freien Fenster. */
   private static final int SCORE_OPP_TWO = -2;
 
-  /** Punktwert für eine Gegner-Scheibe in einem freien Fenster */
+  /** Punktwert für eine Gegner-Scheibe in einem freien Fenster. */
   private static final int SCORE_OPP_ONE = -1;
 
-  /** Suchtiefe des MinMax-Algorithmus (höher = stärker, aber langsamer) */
+  /** Suchtiefe des MinMax-Algorithmus (höher = stärker, aber langsamer). */
   private static final int MINIMAX_DEPTH = 4;
 
   /**
    * Wird vom Spielrahmen aufgerufen, um den Bot einen Zug ausführen zu lassen. Die konkrete Logik
-   * liegt in den inneren Klassen {@link EasyBotStrategy} und {@link HardBotStrategy}
+   * liegt in den inneren Klassen {@link EasyBotStrategy} und {@link HardBotStrategy}.
    *
-   * @param board das aktuelle Spielfeld
+   * @param board das aktuelle Spielfeld.
    *
-   * @return der Status des Spieles{@link GameState}
+   * @return der Status des Spieles{@link GameState}.
    */
   @Override
   public GameState chooseMove(IPlayArea board) {
@@ -93,14 +93,14 @@ public class FourConnectBotStrategy implements IMoveStrategy {
   }
 
   /**
-   * Standardkonstruktor für die BotStrategy
+   * Standardkonstruktor für die BotStrategy.
    *
    * <p>Der Bot wird dann benutzt über:
    * FourConnectBotStrategy botStrategy = new FourConnectBotStrategy(game, rules); IMoveStrategy
    * hardBot = botStrategy.new HardBotStrategy(); hardBot.chooseMove(board);
    *
-   * @param game  die aktuelle Instanz des verwendeten Spiels
-   * @param rules die Instanz der regeln
+   * @param game  die aktuelle Instanz des verwendeten Spiels.
+   * @param rules die Instanz der regeln.
    */
   public FourConnectBotStrategy(FourConnectGame game, FourConnectRules rules) {
     this.fcGame = game;
@@ -113,11 +113,11 @@ public class FourConnectBotStrategy implements IMoveStrategy {
    * <p>Alle 69 möglichen Vier Felder Fenster werden analysiert. Enthält
    * ein Fenster ausschließlich Bot Scheiben und leere Felder, wird ein positiver Wert addiert.
    * Enthält es ausschließlich Gegner Scheiben, wird ein negativer Wert subtrahiert. Gemischte
-   * Fenster fließen nicht in die Bewertung ein, da sie für keinen Spieler mehr gewinnbar sind
+   * Fenster fließen nicht in die Bewertung ein, da sie für keinen Spieler mehr gewinnbar sind.
    *
-   * @param board das zu bewertende Spielfeld
+   * @param board das zu bewertende Spielfeld.
    *
-   * @return der Score: positiv: Bot ist im Vorteil, negativ: Gegner im Vorteil
+   * @return der Score: positiv: Bot ist im Vorteil, negativ: Gegner im Vorteil.
    */
   public Integer appraiseBoard(FourConnectGameBoard board) {
     int score = 0;
@@ -162,14 +162,14 @@ public class FourConnectBotStrategy implements IMoveStrategy {
   }
 
   /**
-   * Funktion, um alle Kombinationsmöglichkeiten für einen Sieg zu finden
+   * Funktion, um alle Kombinationsmöglichkeiten für einen Sieg zu finden.
    *
    * <p>Sucht in einem Standardspielfeld alle 69 Kombinationsmöglichkeiten welche einen Sieg
    * ermöglichen. Diese werden alle in einer Liste gespeichert und zurückgegeben.
    *
-   * @param board das Spielfeld
+   * @param board das Spielfeld.
    *
-   * @return die ArrayList mit allen Siegeskoordinaten
+   * @return die ArrayList mit allen Siegeskoordinaten.
    */
   public ArrayList<Position[]> allFourConnects(FourConnectGameBoard board) {
     final ArrayList<Position[]> connectsList = new ArrayList<>();
@@ -221,16 +221,16 @@ public class FourConnectBotStrategy implements IMoveStrategy {
    * Die innere Klasse, welche den einfachen Bot repräsentiert. Auch diese implementiert das
    * Interface {@link IMoveStrategy}.
    *
-   * <p>Der einfache Bot wählt aus den verfügbaren, leeren Spalten zufällig eine aus
+   * <p>Der einfache Bot wählt aus den verfügbaren, leeren Spalten zufällig eine aus.
    */
   public class EasyBotStrategy implements IMoveStrategy {
 
     /**
-     * Wählt zufällig eine Spalte aus und wirft dort eine Scheibe ein
+     * Wählt zufällig eine Spalte aus und wirft dort eine Scheibe ein.
      *
-     * @param board das aktuelle Spielfeld
+     * @param board das aktuelle Spielfeld.
      *
-     * @return der Status des Spieles{@link GameState}
+     * @return der Status des Spieles{@link GameState}.
      */
     @Override
     public GameState chooseMove(IPlayArea board) {
@@ -257,7 +257,7 @@ public class FourConnectBotStrategy implements IMoveStrategy {
    *
    * <p>Der Algorithmus durchsucht den Spielbaum bis zur Tiefe
    * {@value FourConnectBotStrategy#MINIMAX_DEPTH}, bewertet Blattknoten mit {@link #appraiseBoard}
-   * und wählt den Zug mit dem höchsten Score
+   * und wählt den Zug mit dem höchsten Score.
    *
    * <p>aktueller Stand :
    * 43 : 1 für den Bot ... und 2 Unentschieden
@@ -273,9 +273,9 @@ public class FourConnectBotStrategy implements IMoveStrategy {
      *
      * <p>Erstellt eine Kopie des Spielfelds, berechnet darauf den besten Zug und führt ihn aus.
      *
-     * @param board das aktuelle Spielfeld
+     * @param board das aktuelle Spielfeld.
      *
-     * @return der Status des Spieles{@link GameState}
+     * @return der Status des Spieles{@link GameState}.
      */
     @Override
     public GameState chooseMove(IPlayArea board) {
@@ -297,11 +297,11 @@ public class FourConnectBotStrategy implements IMoveStrategy {
      * <p>Jeder valide Zug wird simuliert, per {@link #minMax} bewertet und danach rückgängig
      * gemacht. Der Zug mit dem höchsten Score wird als Spaltenindex zurückgegeben.
      *
-     * @param boardC das (kopierte) Spielfeld
+     * @param boardC das (kopierte) Spielfeld.
      * @param depth  die maximale Suchtiefe, umso größer die Zahl, umso höher die Stärke und
-     *               Berechnungszeit 3-5 ist ein gutes Maß
+     *               Berechnungszeit 3-5 ist ein gutes Maß.
      *
-     * @return Spaltenindex des besten Zugs
+     * @return Spaltenindex des besten Zugs.
      */
     private Integer findBestTurn(FourConnectGameBoard boardC, int depth) {
       Integer bestScore = Integer.MIN_VALUE;
@@ -329,12 +329,12 @@ public class FourConnectBotStrategy implements IMoveStrategy {
      * * dem minimierenden (Gegner) Spieler. Terminiert wenn: * die maximale Tiefe erreicht ist, *
      * ein Spieler gewonnen hat, oder * das Spielfeld voll ist (Unentschieden).
      *
-     * @param board        das aktuell simulierte Spielfeld
-     * @param depth        verbleibende Suchtiefe
+     * @param board        das aktuell simulierte Spielfeld.
+     * @param depth        verbleibende Suchtiefe.
      * @param isMaximizing {@code true} wenn der Bot am Zug ist, {@code false} wenn der Gegner am
-     *                     Zug ist
+     *                     Zug ist.
      *
-     * @return heuristischer Score des besten erreichbaren Zustands
+     * @return heuristischer Score des besten erreichbaren Zustands.
      */
     private Integer minMax(FourConnectGameBoard board, int depth, boolean isMaximizing) {
       Integer value;
@@ -373,11 +373,11 @@ public class FourConnectBotStrategy implements IMoveStrategy {
 
 
     /**
-     * Hilfsfunktion um die Position, des Bot Spielers in der Spielliste zu finden
+     * Hilfsfunktion um die Position, des Bot Spielers in der Spielliste zu finden.
      *
-     * @param players Array mit den Spielern
+     * @param players Array mit den Spielern.
      *
-     * @return array Position des Botes -1, wenn der Bot nicht gefunden wurde
+     * @return array Position des Botes -1, wenn der Bot nicht gefunden wurde.
      */
     private Integer findBotPlayerPosition(FourConnectPlayer[] players) {
       for (int i = 0; i < players.length; i++) {
@@ -400,7 +400,7 @@ public class FourConnectBotStrategy implements IMoveStrategy {
     }
 
     /**
-     * Setzt eine Scheibe des angegebenen Spielers auf die Zielposition
+     * Setzt eine Scheibe des angegebenen Spielers auf die Zielposition.
      *
      * @param board           das Spielfeld
      * @param turn            die Zielposition der Scheibe

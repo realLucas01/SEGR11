@@ -23,9 +23,9 @@ import SEG11.IFE_Entertainment.GameCore.IPlayArea;
 import SEG11.IFE_Entertainment.GameCore.IRuleSet;
 
 /**
- * Klasse stellt grundlegende Funktionen für das Überprüfen des Regelwerks zur verfügung
+ * Klasse stellt grundlegende Funktionen für das Überprüfen des Regelwerks zur verfügung.
  *
- * <p>Implementiert dabei {@link IRuleSet} und seine Funktionen
+ * <p>Implementiert dabei {@link IRuleSet} und seine Funktionen.
  *
  * @param <FourConnectGameBoard> Der generische Datentyp {@link IRuleSet#IPlayAreaT} wurde auf die
  *                               von uns implementierte Version des Interface {@link IPlayArea}
@@ -40,9 +40,9 @@ import SEG11.IFE_Entertainment.GameCore.IRuleSet;
 public class FourConnectRules implements IRuleSet<FourConnectGameBoard, FourConnectPlayer> {
 
   /**
-   * Implementierung der Interface-Methode checkWin()
+   * Implementierung der Interface-Methode checkWin().
    *
-   * <p>Wird genutzt um zu überprüfen, ob ein Sieg vorliegt
+   * <p>Wird genutzt um zu überprüfen, ob ein Sieg vorliegt.
    *
    * @param board  Aktueller Zustand des Spielbretts
    * @param player Spieler der den aktuellen Zug gemacht hat
@@ -58,7 +58,7 @@ public class FourConnectRules implements IRuleSet<FourConnectGameBoard, FourConn
       for (int j = 0; j < board.getRows(); j++) {
         if (board.getCellOwner(new Position(i, j)).equals(player) && board.getCellOwner(
           new Position(i + 1, j)).equals(player) && board.getCellOwner(new Position(i + 2, j))
-          .equals(player) && board.getCellOwner(new Position(i + 3, j)).equals(player)) {
+            .equals(player) && board.getCellOwner(new Position(i + 3, j)).equals(player)) {
           return true;
         }
       }
@@ -70,7 +70,7 @@ public class FourConnectRules implements IRuleSet<FourConnectGameBoard, FourConn
       for (int j = 0; j < board.getRows() - 3; j++) {
         if (board.getCellOwner(new Position(i, j)).equals(player) && board.getCellOwner(
           new Position(i, j + 1)).equals(player) && board.getCellOwner(new Position(i, j + 2))
-          .equals(player) && board.getCellOwner(new Position(i, j + 3)).equals(player)) {
+            .equals(player) && board.getCellOwner(new Position(i, j + 3)).equals(player)) {
           return true;
         }
       }
@@ -105,9 +105,9 @@ public class FourConnectRules implements IRuleSet<FourConnectGameBoard, FourConn
   }
 
   /**
-   * Implementierung der Interfacemethode checkTie()
+   * Implementierung der Interfacemethode checkTie().
    *
-   * <p>Wird genutzt um zu überprüfen, ob ein Unentschieden vorliegt
+   * <p>Wird genutzt um zu überprüfen, ob ein Unentschieden vorliegt.
    *
    * @param board aktueller Zustand des Spielbretts
    *

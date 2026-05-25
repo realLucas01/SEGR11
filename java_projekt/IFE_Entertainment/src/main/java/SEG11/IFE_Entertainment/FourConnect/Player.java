@@ -26,19 +26,19 @@ package SEG11.IFE_Entertainment.FourConnect;
  */
 public enum Player {
   /**
-   * Menschlicher Spieler
+   * Menschlicher Spieler.
    */
   HUMAN,
   /**
-   * Simpler Bot Spieler
+   * Simpler Bot Spieler.
    */
   EASYBOT,
   /**
-   * Schwerer Bot Spieler
+   * Schwerer Bot Spieler.
    */
   HARDBOT,
   /**
-   * Leerer Spieler, zum init des Spielfeldes
+   * Leerer Spieler, zum init des Spielfeldes.
    */
   NONE
 }

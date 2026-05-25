@@ -18,7 +18,7 @@
 package SEG11.IFE_Entertainment.GameCore;
 
 /**
- * Das Interface für die Logik der Bot Gegner
+ * Das Interface für die Logik der Bot Gegner.
  *
  * <p>Ist für die Klasse zu implementieren, die die gesamte Logik für das autonome Agieren eines
  * Botgegners.

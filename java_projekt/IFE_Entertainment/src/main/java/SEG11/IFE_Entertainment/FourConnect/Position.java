@@ -20,7 +20,7 @@ package SEG11.IFE_Entertainment.FourConnect;
 import java.util.Objects;
 
 /**
- * Die Position, welche für das Spielfeld genutzt werden, um die Zellen darzustellen
+ * Die Position, welche für das Spielfeld genutzt werden, um die Zellen darzustellen.
  *
  * @author Luca Tauscher
  */
@@ -29,7 +29,7 @@ public class Position {
   private final Integer y;
 
   /**
-   * Konstruktor für Position
+   * Konstruktor für Position.
    *
    * @param x, die x-Achse
    * @param y, die y-Achse
@@ -40,7 +40,7 @@ public class Position {
   }
 
   /**
-   * Gibt die X Koordinate zurück
+   * Gibt die X Koordinate zurück.
    *
    * @return den Integer Wert
    */
@@ -49,7 +49,7 @@ public class Position {
   }
 
   /**
-   * Gibt die Y Koordinate zurück
+   * Gibt die Y Koordinate zurück.
    *
    * @return den Integer Wert
    */
@@ -58,12 +58,12 @@ public class Position {
   }
 
   /**
-   * Funktion um zwei Position Objekte zu vergleichen
+   * Funktion um zwei Position Objekte zu vergleichen.
    *
    * <p>Überschrieben so, dass die Vergleichsfunktion auch für die Positionen innerhalb der Map
    * verwendbar ist.
    *
-   * @param o, das Referenzobjekt mit dem es verglichen werden soll
+   * @param o das Referenzobjekt, mit dem es verglichen werden soll.
    *
    * @return true oder false
    */
@@ -80,7 +80,7 @@ public class Position {
   }
 
   /**
-   * <p>Gibt den HashCode des Objektes zurück
+   * <p>Gibt den HashCode des Objektes zurück.
    *
    * @return HashCode
    */

@@ -26,15 +26,15 @@ import SEG11.IFE_Entertainment.Infrastructure.BrandingService;
 
 
 /**
- * Klasse die für den eigentlichen Spielablauf zuständig ist
+ * Klasse die für den eigentlichen Spielablauf zuständig ist.
  *
  * <p>Implementiert dabei {@link IGame} und seine Funktionen, und stellt
  * zusätzliche Funktionen für alle Phasen des Spielablaufs bereit.
- * 
+ *
+ * @param <FourConnectGameBoard> Der generische Datentyp wurde auf die von uns implementierte
+ *                               Version des Interface {@link IPlayArea} konkretisiert.
+ *
  * @author Lucas Rumann
- * @param <FourConnectGameBoard> Der generische Datentyp wurde auf die von uns
- *                               implementierte Version des Interface
- *                               {@link IPlayArea} konkretisiert
  */
 public class FourConnectGame implements IGame<FourConnectGameBoard> {
   /** Speichern der Singleton Instanz der Klasse. */
@@ -52,16 +52,15 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
   /** Das Spielbrett auf dem das Spiel ausgetragen wird. */
   private FourConnectGameBoard gameBoard;
   /**
-   * Das aktuelle Branding der Software was für die Farben der Spieler verwendet
-   * wird.
+   * Das aktuelle Branding der Software, was für die Farben der Spieler verwendet wird.
    */
   private BrandingService currentbranding;
   /** true, wenn ein Bot im Spiel ist. false wenn kein Bot. */
   private boolean oneBotPlayer;
 
   /**
-   * Privater Konstruktor für die Klasse FourConnectGame mitsamt der Grundlegenden
-   * initialisierung aller wichtigen Variablen.
+   * Privater Konstruktor für die Klasse FourConnectGame mitsamt der Grundlegenden initialisierung
+   * aller wichtigen Variablen.
    */
   private FourConnectGame() {
     state = GameState.NotStarted;
@@ -116,8 +115,8 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
    * <p>Wird genutzt, um den aktuellen Zustand des Spielbretts von außerhalb
    * abzufragen
    *
-   * @return Den aktuellen Zustand des Spielbretts im Datentyp
-   *         {@link FourConnectGameBoard}
+   * @return Den aktuellen Zustand des Spielbretts im Datentyp {@link FourConnectGameBoard}
+   *
    * @see IGame
    */
   @Override
@@ -147,8 +146,8 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
    * Implementierung der Interfacemethode restart().
    *
    * <p>Startet das Spiel mit den aktuellen Spielern bzw. im aktuellen Spielmodus
-   * neu. Wenn Spieler bzw Spielmodus gewechselt werden soll, dann muss dafür erst
-   * {@link #endGame} und dann {@link #initFourConnectGame} aufgerufen werden
+   * neu. Wenn Spieler bzw Spielmodus gewechselt werden soll, dann muss dafür erst {@link #endGame}
+   * und dann {@link #initFourConnectGame} aufgerufen werden
    *
    * @see IGame
    */
@@ -174,10 +173,11 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
   }
 
   /**
-   * Die eigentliche Ausführung des Spielzuges bei dem die neue Scheibe in der
-   * jeweiligen Spalte "fallen gelassen" wird.
+   * Die eigentliche Ausführung des Spielzuges bei dem die neue Scheibe in der jeweiligen Spalte
+   * "fallen gelassen" wird.
    *
    * @param column Spalte in der die Scheibe fallen gelassen werden soll
+   *
    * @return den Spielstatus, nach dem Ausführen des Spielzuges
    */
   public GameState dropDisc(Integer column) {
@@ -240,8 +240,9 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
    *
    * @param playerOne Der Typ von Spieler 1 im ENUM {@link Player}
    * @param playerTwo Der Typ von Spieler 2 im ENUM {@link Player}
-   * @return Einen Integer wert der aussagt, ob die Operation erfolgreich war, bei
-   *         einer Rückgabe != 0 ist ein Fehler aufgetreten
+   *
+   * @return Einen Integer wert der aussagt, ob die Operation erfolgreich war, bei einer Rückgabe !=
+   * 0 ist ein Fehler aufgetreten
    */
   public Integer initFourConnectGame(Player playerOne, Player playerTwo) {
 
@@ -261,12 +262,12 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
         players[0] = new FourConnectPlayer(playerOne, null, currentbranding.getPrimaryColor());
       case EASYBOT -> {
         players[0] = new FourConnectPlayer(playerOne, botStrategy.new EasyBotStrategy(),
-            currentbranding.getPrimaryColor());
+          currentbranding.getPrimaryColor());
         oneBotPlayer = true;
       }
       case HARDBOT -> {
         players[0] = new FourConnectPlayer(playerOne, botStrategy.new HardBotStrategy(),
-            currentbranding.getPrimaryColor());
+          currentbranding.getPrimaryColor());
         oneBotPlayer = true;
       }
       default -> {
@@ -280,12 +281,12 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
         players[1] = new FourConnectPlayer(playerTwo, null, currentbranding.getSecondaryColor());
       case EASYBOT -> {
         players[1] = new FourConnectPlayer(playerTwo, botStrategy.new EasyBotStrategy(),
-            currentbranding.getSecondaryColor());
+          currentbranding.getSecondaryColor());
         oneBotPlayer = true;
       }
       case HARDBOT -> {
         players[1] = new FourConnectPlayer(playerTwo, botStrategy.new HardBotStrategy(),
-            currentbranding.getSecondaryColor());
+          currentbranding.getSecondaryColor());
         oneBotPlayer = true;
       }
       default -> {

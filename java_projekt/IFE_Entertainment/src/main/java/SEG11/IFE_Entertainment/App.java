@@ -19,19 +19,19 @@
 
 package SEG11.IFE_Entertainment;
 
-import SEG11.IFE_Entertainment.Infrastructure.LocalizationService;
 import SEG11.IFE_Entertainment.Infrastructure.BrandingService;
 import SEG11.IFE_Entertainment.Infrastructure.LocalizationService;
+import java.io.IOException;
+import java.util.ResourceBundle;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import java.io.IOException;
-import java.util.ResourceBundle;
+
 
 /**
- * JavaFX App
+ * JavaFX App.
  *
  * @author Lucas Rumann
  */
@@ -40,13 +40,13 @@ public class App extends Application {
   private static Scene scene;
 
   /**
-   * Start und erstellung der FX Szene
+   * Start und erstellung der FX Szene.
    *
    * @param stage die primäre stage, auf die die App Szene gesetzt wird. Die Anwendung, kann weitere
-   *              Szenen erstellen, diese sind dann aber nicht die primäre  the primary stage for
+   *              Szenen erstellen, diese sind dann aber nicht die primäre the primary stage for
    *              this application, onto which
    *
-   * @throws IOException
+   * @throws IOException falls die Szene nicht erstellt werden kann
    */
   @Override
   public void start(Stage stage) throws IOException {
@@ -80,7 +80,8 @@ public class App extends Application {
     BrandingService branding = BrandingService.getInstance();
 
     scene.getRoot().setStyle(
-      "-theme-primary: " + branding.getPrimaryColor() + ";" + "-theme-secondary: " + branding.getSecondaryColor() + ";");
+      "-theme-primary: " + branding.getPrimaryColor() + ";" + "-theme-secondary: " +
+        branding.getSecondaryColor() + ";");
   }
 
      /** Lädt, die angegebene JavaFX Datei und zeigt diese an.
