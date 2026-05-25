@@ -16,9 +16,8 @@
  * SHALL NOT BE LIABLE FOR ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT
  * OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
  */
-package SEG11.IFE_Entertainment.UIFourConnectController;
 
-import java.io.IOException;
+package SEG11.IFE_Entertainment.UIFourConnectController;
 
 import SEG11.IFE_Entertainment.App;
 import SEG11.IFE_Entertainment.FourConnect.FourConnectGame;
@@ -32,6 +31,8 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.util.Duration;
+
+import java.io.IOException;
 
 /**
  * Controller für den Vier-Gewinnt-Spielscreen.
