@@ -17,7 +17,7 @@
  * OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
  */
 
-package seg11.ife.entertainment.ui_controller;
+package seg11.ife.entertainment.uicontroller;
 
 import seg11.ife.entertainment.App;
 import seg11.ife.entertainment.infrastructure.LocalizationService;

@@ -1,5 +1,5 @@
 /*
- * 1.0 2026-04-28 Truong Tan Long Nguyen
+ * 1.0 2026-04-22 Luca Tauscher
  *
  * Copyright (c) 2025-2026 Gervithrall Systems GmbH. All Rights Reserved.
  *
@@ -17,35 +17,28 @@
  * OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
  */
 
-package seg11.ife.entertainment.ui_controller;
-
-import java.io.IOException;
+package seg11.ife.entertainment.fourconnect;
 
 /**
- * Interface für den EndScreen Controller.
+ * Das enum Player.
  *
- * <p>Definiert die Funktionen des EndScreens nach Spielende.
- *
- * @author Truong Tan Long Nguyen
+ * @author Luca Tauscher
  */
-public interface EndScreenController {
-
+public enum Player {
   /**
-   * Initialisiert den EndScreen.
+   * Menschlicher Spieler.
    */
-  void initialize();
-
+  HUMAN,
   /**
-   * Startet ein neues Spiel im selben Modus.
-   *
-   * @throws IOException falls die FXML-Datei nicht geladen werden kann
+   * Simpler Bot Spieler.
    */
-  void restartGame() throws IOException;
-
+  EASYBOT,
   /**
-   * Navigiert zurück zum Hauptmenü.
-   *
-   * @throws IOException falls die FXML-Datei nicht geladen werden kann
+   * Schwerer Bot Spieler.
    */
-  void backToMainMenu() throws IOException;
+  HARDBOT,
+  /**
+   * Leerer Spieler, zum init des Spielfeldes.
+   */
+  NONE
 }

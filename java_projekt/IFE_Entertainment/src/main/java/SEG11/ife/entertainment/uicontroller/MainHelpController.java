@@ -17,23 +17,28 @@
  * OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
  */
 
-package seg11.ife.entertainment.ui_controller;
+package seg11.ife.entertainment.uicontroller;
 
+import seg11.ife.entertainment.App;
 import java.io.IOException;
+import javafx.fxml.FXML;
 
 /**
- * Interface für den Hilfe-Screen Controller.
+ * Controller für die allgemeine Hilfe-Seite im Hauptmenü.
  *
- * <p>Definiert die Navigation vom Hilfe-Screen zurück zum vorherigen Screen.
+ * <p>Stellt die Navigation zurück zum Hauptmenü bereit.
  *
  * @author Truong Tan Long Nguyen
  */
-public interface HelpController {
+public class MainHelpController {
 
   /**
-   * Navigiert zurück zum vorherigen Screen.
+   * Navigiert zurück zum Hauptmenü.
    *
    * @throws IOException falls die FXML-Datei nicht geladen werden kann
    */
-  void backToGameScreen() throws IOException;
+  @FXML
+  public void backToMainMenu() throws IOException {
+    App.setRoot("MainMenu");
+  }
 }

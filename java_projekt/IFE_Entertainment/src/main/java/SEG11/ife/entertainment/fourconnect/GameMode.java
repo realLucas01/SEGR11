@@ -17,28 +17,20 @@
  * OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
  */
 
-package seg11.ife.entertainment.four_connect;
+package seg11.ife.entertainment.fourconnect;
 
 /**
- * Das enum Player.
+ * Das enum Game mode.
  *
  * @author Luca Tauscher
  */
-public enum Player {
+public enum GameMode {
   /**
-   * Menschlicher Spieler.
+   * Zwei Spieler game mode.
    */
-  HUMAN,
+  TWOPLAYER,
   /**
-   * Simpler Bot Spieler.
+   * Bot game mode.
    */
-  EASYBOT,
-  /**
-   * Schwerer Bot Spieler.
-   */
-  HARDBOT,
-  /**
-   * Leerer Spieler, zum init des Spielfeldes.
-   */
-  NONE
+  BOT
 }

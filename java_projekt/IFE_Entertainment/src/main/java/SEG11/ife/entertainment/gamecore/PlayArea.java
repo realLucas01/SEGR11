@@ -16,7 +16,7 @@
  */
 
 
-package seg11.ife.entertainment.game_core;
+package seg11.ife.entertainment.gamecore;
 
 /**
  * Interface für die Logik zur Verwaltung des Spielbretts.

@@ -15,7 +15,7 @@
  * DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
  */
 
-package seg11.ife.entertainment.four_connect;
+package seg11.ife.entertainment.fourconnect;
 
 import java.util.Objects;
 

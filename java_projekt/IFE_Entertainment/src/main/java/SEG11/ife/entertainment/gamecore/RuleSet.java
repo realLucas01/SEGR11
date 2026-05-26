@@ -17,7 +17,7 @@
  * OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
  */
 
-package seg11.ife.entertainment.game_core;
+package seg11.ife.entertainment.gamecore;
 
 /**
  * Interface für die Überprüfung/Einhaltung der Spielregeln.

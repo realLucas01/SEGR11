@@ -17,9 +17,9 @@
  * OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
  */
 
-package seg11.ife.entertainment.four_connect;
+package seg11.ife.entertainment.fourconnect;
 
-import seg11.ife.entertainment.game_core.MoveStrategy;
+import seg11.ife.entertainment.gamecore.MoveStrategy;
 
 /**
  * Der Vier gewinnt Spieler.

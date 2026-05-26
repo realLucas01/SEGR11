@@ -17,13 +17,13 @@
  * OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
  */
 
-package seg11.ife.entertainment.ui_four_connect_controller;
+package seg11.ife.entertainment.uifourconnectcontroller;
 
 import seg11.ife.entertainment.App;
-import seg11.ife.entertainment.four_connect.FourConnectGame;
-import seg11.ife.entertainment.four_connect.Player;
-import seg11.ife.entertainment.game_core.GameState;
-import seg11.ife.entertainment.ui_controller.GameController;
+import seg11.ife.entertainment.fourconnect.FourConnectGame;
+import seg11.ife.entertainment.fourconnect.Player;
+import seg11.ife.entertainment.gamecore.GameState;
+import seg11.ife.entertainment.uicontroller.GameController;
 import java.io.IOException;
 import javafx.animation.PauseTransition;
 import javafx.fxml.FXML;

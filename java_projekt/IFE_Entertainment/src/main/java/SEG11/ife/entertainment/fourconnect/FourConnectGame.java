@@ -17,11 +17,11 @@
  * OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
  */
 
-package seg11.ife.entertainment.four_connect;
+package seg11.ife.entertainment.fourconnect;
 
-import seg11.ife.entertainment.game_core.Game;
-import seg11.ife.entertainment.game_core.GameState;
-import seg11.ife.entertainment.game_core.PlayArea;
+import seg11.ife.entertainment.gamecore.Game;
+import seg11.ife.entertainment.gamecore.GameState;
+import seg11.ife.entertainment.gamecore.PlayArea;
 import seg11.ife.entertainment.infrastructure.BrandingService;
 
 

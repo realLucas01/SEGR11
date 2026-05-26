@@ -1,5 +1,5 @@
 /*
- * 1.0 2026-04-28 Truong Tan Long Nguyen
+ * 1.0 2026-04-22 Lucas Rumann
  *
  * Copyright (c) 2025-2026 Gervithrall Systems GmbH. All Rights Reserved.
  *
@@ -17,28 +17,36 @@
  * OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
  */
 
-package seg11.ife.entertainment.ui_controller;
-
-import seg11.ife.entertainment.App;
-import java.io.IOException;
-import javafx.fxml.FXML;
+package seg11.ife.entertainment.gamecore;
 
 /**
- * Controller für die allgemeine Hilfe-Seite im Hauptmenü.
+ * Enum zur Identifizierung des aktuellen Zustands des Spiels.
  *
- * <p>Stellt die Navigation zurück zum Hauptmenü bereit.
- *
- * @author Truong Tan Long Nguyen
+ * @author Lucas Rumann
  */
-public class MainHelpController {
-
+public enum GameState {
   /**
-   * Navigiert zurück zum Hauptmenü.
-   *
-   * @throws IOException falls die FXML-Datei nicht geladen werden kann
+   * Spiel nicht gestartet.
    */
-  @FXML
-  public void backToMainMenu() throws IOException {
-    App.setRoot("MainMenu");
-  }
+  NotStarted,
+  /**
+   * Spiel gestartet.
+   */
+  Running,
+  /**
+   * Spiel pausiert.
+   */
+  Paused,
+  /**
+   * Spiel beendet.
+   */
+  Finished,
+  /**
+   * Spiel mit unentschieden ausgegangen.
+   */
+  Tied,
+  /**
+   * Spiel mit Sieg eines Spielers ausgegangen.
+   */
+  Won
 }

@@ -1,5 +1,5 @@
 /*
- * 1.0 2026-04-22 Lucas Rumann
+ * 1.0 2026-04-28 Truong Tan Long Nguyen
  *
  * Copyright (c) 2025-2026 Gervithrall Systems GmbH. All Rights Reserved.
  *
@@ -17,36 +17,35 @@
  * OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
  */
 
-package seg11.ife.entertainment.game_core;
+package seg11.ife.entertainment.uicontroller;
+
+import java.io.IOException;
 
 /**
- * Enum zur Identifizierung des aktuellen Zustands des Spiels.
+ * Interface für den EndScreen Controller.
  *
- * @author Lucas Rumann
+ * <p>Definiert die Funktionen des EndScreens nach Spielende.
+ *
+ * @author Truong Tan Long Nguyen
  */
-public enum GameState {
+public interface EndScreenController {
+
   /**
-   * Spiel nicht gestartet.
+   * Initialisiert den EndScreen.
    */
-  NotStarted,
+  void initialize();
+
   /**
-   * Spiel gestartet.
+   * Startet ein neues Spiel im selben Modus.
+   *
+   * @throws IOException falls die FXML-Datei nicht geladen werden kann
    */
-  Running,
+  void restartGame() throws IOException;
+
   /**
-   * Spiel pausiert.
+   * Navigiert zurück zum Hauptmenü.
+   *
+   * @throws IOException falls die FXML-Datei nicht geladen werden kann
    */
-  Paused,
-  /**
-   * Spiel beendet.
-   */
-  Finished,
-  /**
-   * Spiel mit unentschieden ausgegangen.
-   */
-  Tied,
-  /**
-   * Spiel mit Sieg eines Spielers ausgegangen.
-   */
-  Won
+  void backToMainMenu() throws IOException;
 }

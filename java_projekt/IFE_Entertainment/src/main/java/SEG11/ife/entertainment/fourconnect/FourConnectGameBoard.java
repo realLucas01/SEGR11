@@ -16,9 +16,9 @@
  */
 
 
-package seg11.ife.entertainment.four_connect;
+package seg11.ife.entertainment.fourconnect;
 
-import seg11.ife.entertainment.game_core.PlayArea;
+import seg11.ife.entertainment.gamecore.PlayArea;
 import java.util.HashMap;
 import java.util.Map;
 
