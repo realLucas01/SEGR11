@@ -34,9 +34,12 @@ Modusmenu --> Gamemenu : Return to Gamemenu\n(AF-07)
 
 FourConnect --> FourConnect : New Game\n(AF-06)
 FourConnect --> HelpRules : Help\n(AF-05a)
-HelpRules --> FourConnect : Return to Gamemenu\n(AF-07)
-FourConnect --> Result : Show Result
-Result --> WinningHighlight : Win Detected\n(AF-08)
+HelpRules --> FourConnect : Return to 4-Connect
+
+FourConnect --> Result : Win / Draw
+
+Result --> WinningHighlight : Show Winning Move\n(AF-08)
+WinningHighlight --> Result : Back
 
 Result --> FourConnect : New Round\n(AF-04)
 Result --> Gamemenu : Return to Gamemenu\n(AF-07)

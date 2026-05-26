@@ -17,17 +17,25 @@ repeat
   :Spielzug eingeben;
   :Spielzug validieren;
 
-  if (Zug gültig?) then ([ja])
+  if ([Zug gültig?]) then ([ja])
     :Spielstein platzieren;
     :Spielbrett aktualisieren;
 
-    if (Gewinnbedingung erfüllt?) then ([ja])
-      :Gewinnkombination ermitteln;
-      :Gewinnbringende Spielsteine hervorheben;
+    if ([Gewinnbedingung erfüllt?]) then ([ja])
       :Ergebnis anzeigen;
+
+      if ([Gewinnzug anzeigen gewählt?]) then ([ja])
+        :Spielbrett erneut anzeigen;
+        :Gewinnkombination ermitteln;
+        :Gewinnbringende Spielsteine hervorheben;
+        :Zurück zum Hauptmenü;
+      else ([nein])
+      endif
+
       stop
+
     else ([nein])
-      if (Spielfeld voll?) then ([ja])
+      if ([Spielfeld voll?]) then ([ja])
         :Unentschieden anzeigen;
         stop
       else ([nein])
@@ -39,6 +47,6 @@ repeat
     :Fehlermeldung anzeigen;
   endif
 
-repeat while (Spiel nicht beendet?) is ([ja])
+repeat while ([Spiel nicht beendet?]) is ([ja])
 
 @enduml
