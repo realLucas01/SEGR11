@@ -18,9 +18,9 @@
 
 package segeleven.ife.entertainment.fourconnect;
 
-import segeleven.ife.entertainment.gamecore.PlayArea;
 import java.util.HashMap;
 import java.util.Map;
+import segeleven.ife.entertainment.gamecore.PlayArea;
 
 /**
  * Das "Vier Gewinnt" Spielfeld.

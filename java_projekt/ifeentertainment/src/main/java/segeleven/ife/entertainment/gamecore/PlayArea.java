@@ -41,7 +41,7 @@ public interface PlayArea {
    * Funktion zum leeren und neu-initialisieren des Spielbretts.
    *
    * @return Integer Wert zur Überprüfung, ob die Operation erfolgreich war. Bei einem Wert != 0 ist
-   * ein Fehler aufgetreten
+   *    ein Fehler aufgetreten
    */
   Integer clear();
 }

@@ -19,10 +19,10 @@
 
 package segeleven.ife.entertainment.uicontroller;
 
-import segeleven.ife.entertainment.App;
-import segeleven.ife.entertainment.uifourconnectcontroller.FourConnectGameController;
 import java.io.IOException;
 import javafx.fxml.FXML;
+import segeleven.ife.entertainment.App;
+import segeleven.ife.entertainment.uifourconnectcontroller.FourConnectGameController;
 
 /**
  * Controller für das Hauptmenü.

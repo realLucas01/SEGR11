@@ -19,11 +19,6 @@
 
 package segeleven.ife.entertainment.uifourconnectcontroller;
 
-import segeleven.ife.entertainment.App;
-import segeleven.ife.entertainment.fourconnect.FourConnectGame;
-import segeleven.ife.entertainment.fourconnect.Player;
-import segeleven.ife.entertainment.gamecore.GameState;
-import segeleven.ife.entertainment.uicontroller.GameController;
 import java.io.IOException;
 import javafx.animation.PauseTransition;
 import javafx.fxml.FXML;
@@ -32,6 +27,11 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.util.Duration;
+import segeleven.ife.entertainment.App;
+import segeleven.ife.entertainment.fourconnect.FourConnectGame;
+import segeleven.ife.entertainment.fourconnect.Player;
+import segeleven.ife.entertainment.gamecore.GameState;
+import segeleven.ife.entertainment.uicontroller.GameController;
 
 /**
  * Controller für den Vier-Gewinnt-Spielscreen.

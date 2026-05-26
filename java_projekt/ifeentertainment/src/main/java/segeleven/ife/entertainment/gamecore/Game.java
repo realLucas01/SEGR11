@@ -27,7 +27,7 @@ package segeleven.ife.entertainment.gamecore;
  * ausgeführt werden usw.
  *
  * @param <PlayAreaT> Ist bei der Implementierung des Interface mit der eigenen Implementierung von
- *   {@link PlayArea} zu konkretisieren
+ *    {@link PlayArea} zu konkretisieren
  *
  * @author Lucas Rumann
  */
@@ -51,7 +51,7 @@ public interface Game<PlayAreaT> {
    * Wird genutzt, um den aktuellen Zustand des Spielbretts von außerhalb abzufragen.
    *
    * @return Den aktuellen Zustand des Spielbretts im Datentyp der eigenen Implementierung von
-   * {@link PlayArea}
+   *    {@link PlayArea}
    */
   PlayAreaT getBoard();
 

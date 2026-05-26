@@ -19,12 +19,10 @@
 
 package segeleven.ife.entertainment.uifourconnectcontroller;
 
-import segeleven.ife.entertainment.App;
-import segeleven.ife.entertainment.uicontroller.HelpController;
-
 import java.io.IOException;
 import javafx.fxml.FXML;
-
+import segeleven.ife.entertainment.App;
+import segeleven.ife.entertainment.uicontroller.HelpController;
 
 /**
  * FourConnect-spezifische Implementierung des HelpControllers.

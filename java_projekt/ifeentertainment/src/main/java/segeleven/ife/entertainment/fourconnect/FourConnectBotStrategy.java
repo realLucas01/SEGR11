@@ -19,13 +19,13 @@
 
 package segeleven.ife.entertainment.fourconnect;
 
-import segeleven.ife.entertainment.gamecore.GameState;
-import segeleven.ife.entertainment.gamecore.MoveStrategy;
-import segeleven.ife.entertainment.gamecore.PlayArea;
 import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import segeleven.ife.entertainment.gamecore.GameState;
+import segeleven.ife.entertainment.gamecore.MoveStrategy;
+import segeleven.ife.entertainment.gamecore.PlayArea;
 
 import static java.lang.Math.max;
 import static java.lang.Math.min;

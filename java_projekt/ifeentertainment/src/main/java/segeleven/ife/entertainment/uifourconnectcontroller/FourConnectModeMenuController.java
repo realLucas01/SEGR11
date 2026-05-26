@@ -19,10 +19,10 @@
 
 package segeleven.ife.entertainment.uifourconnectcontroller;
 
-import segeleven.ife.entertainment.App;
-import segeleven.ife.entertainment.fourconnect.Player;
 import java.io.IOException;
 import javafx.fxml.FXML;
+import segeleven.ife.entertainment.App;
+import segeleven.ife.entertainment.fourconnect.Player;
 
 
 /**
