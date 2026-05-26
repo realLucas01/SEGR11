@@ -1,5 +1,5 @@
 /*
- * 1.0 2026-04-28 Truong Tan Long Nguyen
+ * 1.0 2026-04-22 Luca Tauscher
  *
  * Copyright (c) 2025-2026 Gervithrall Systems GmbH. All Rights Reserved.
  *
@@ -17,28 +17,20 @@
  * OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
  */
 
-package SEG11.IFE_Entertainment.UIController;
-
-import SEG11.IFE_Entertainment.App;
-import java.io.IOException;
-import javafx.fxml.FXML;
+package seg11.ife_entertainment.four_connect;
 
 /**
- * Controller für die allgemeine Hilfe-Seite im Hauptmenü.
+ * Das enum Game mode.
  *
- * <p>Stellt die Navigation zurück zum Hauptmenü bereit.
- *
- * @author Truong Tan Long Nguyen
+ * @author Luca Tauscher
  */
-public class MainHelpController {
-
+public enum GameMode {
   /**
-   * Navigiert zurück zum Hauptmenü.
-   *
-   * @throws IOException falls die FXML-Datei nicht geladen werden kann
+   * Zwei Spieler game mode.
    */
-  @FXML
-  public void backToMainMenu() throws IOException {
-    App.setRoot("MainMenu");
-  }
+  TWOPLAYER,
+  /**
+   * Bot game mode.
+   */
+  BOT
 }

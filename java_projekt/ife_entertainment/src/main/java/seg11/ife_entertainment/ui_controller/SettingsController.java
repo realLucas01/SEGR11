@@ -17,11 +17,11 @@
  * OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
  */
 
-package SEG11.IFE_Entertainment.UIController;
+package seg11.ife_entertainment.ui_controller;
 
-import SEG11.IFE_Entertainment.App;
-import SEG11.IFE_Entertainment.Infrastructure.BrandingService;
-import SEG11.IFE_Entertainment.Infrastructure.LocalizationService;
+import seg11.ife_entertainment.App;
+import seg11.ife_entertainment.infrastructure.BrandingService;
+import seg11.ife_entertainment.infrastructure.LocalizationService;
 import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;

@@ -17,21 +17,37 @@
  * OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
  */
 
-package SEG11.IFE_Entertainment.UIController;
+package seg11.ife_entertainment.ui_four_connect_controller;
 
+import seg11.ife_entertainment.App;
+import seg11.ife_entertainment.ui_controller.HelpController;
 import java.io.IOException;
+import javafx.fxml.FXML;
+
 
 /**
- * Interface für den Gamecontroller.
+ * FourConnect-spezifische Implementierung des HelpControllers.
  *
- * <p>Definiert die Funktionen während des Spieles
+ * <p>Navigiert zurück zum Spielfeld oder zum Hauptmenü
+ * abhängig davon woher der Hilfe-Screen geöffnet wurde.
  *
  * @author Truong Tan Long Nguyen
  */
-public interface GameController {
-  void restartGame() throws IOException;
+public class FourConnectHelpController implements HelpController {
 
-  void backToMainMenu() throws IOException;
-
-  void openHelp() throws IOException;
+  /**
+   * Navigiert zurück zum vorherigen Screen.
+   *
+   * @throws IOException falls die FXML-Datei nicht geladen werden kann
+   */
+  @Override
+  @FXML
+  public void backToGameScreen() throws IOException {
+    if (FourConnectGameController.previousScreen.equals("FourConnectGame")) {
+      FourConnectGameController controller = App.setRootAndGetController("FourConnectGame");
+      controller.resumeGame();
+    } else {
+      App.setRoot("MainMenu");
+    }
+  }
 }

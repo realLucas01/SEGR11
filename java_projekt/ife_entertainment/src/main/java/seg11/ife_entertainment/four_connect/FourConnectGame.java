@@ -17,12 +17,12 @@
  * OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
  */
 
-package SEG11.IFE_Entertainment.FourConnect;
+package seg11.ife_entertainment.four_connect;
 
-import SEG11.IFE_Entertainment.GameCore.GameState;
-import SEG11.IFE_Entertainment.GameCore.Game;
-import SEG11.IFE_Entertainment.GameCore.PlayArea;
-import SEG11.IFE_Entertainment.Infrastructure.BrandingService;
+import seg11.ife_entertainment.game_core.GameState;
+import seg11.ife_entertainment.game_core.Game;
+import seg11.ife_entertainment.game_core.PlayArea;
+import seg11.ife_entertainment.infrastructure.BrandingService;
 
 
 /**
@@ -220,7 +220,6 @@ public class FourConnectGame implements Game<FourConnectGameBoard> {
    */
   public void playerTurn() {
     currentPlayerIndex = currentPlayerIndex == 0 ? 1 : 0;
-
   }
 
   /**

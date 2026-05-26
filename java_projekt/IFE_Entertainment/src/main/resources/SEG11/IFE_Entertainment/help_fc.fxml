@@ -25,7 +25,7 @@ OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
 
 <BorderPane xmlns="http://javafx.com/javafx/21.0.2"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="SEG11.IFE_Entertainment.UIFourConnectController.FourConnectHelpController"
+            fx:controller="seg11.ife_entertainment.ui_four_connect_controller.FourConnectHelpController"
             stylesheets="@style.css">
 
 

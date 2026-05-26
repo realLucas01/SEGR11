@@ -1,5 +1,5 @@
 /*
- * 1.0 2026-04-22 Luca Tauscher
+ * 1.0 2026-04-22 Lucas Rumann
  *
  * Copyright (c) 2025-2026 Gervithrall Systems GmbH. All Rights Reserved.
  *
@@ -17,20 +17,36 @@
  * OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
  */
 
-package SEG11.IFE_Entertainment.FourConnect;
+package seg11.ife_entertainment.game_core;
 
 /**
- * Das enum Game mode.
+ * Enum zur Identifizierung des aktuellen Zustands des Spiels.
  *
- * @author Luca Tauscher
+ * @author Lucas Rumann
  */
-public enum GameMode {
+public enum GameState {
   /**
-   * Zwei Spieler game mode.
+   * Spiel nicht gestartet.
    */
-  TWOPLAYER,
+  NotStarted,
   /**
-   * Bot game mode.
+   * Spiel gestartet.
    */
-  BOT
+  Running,
+  /**
+   * Spiel pausiert.
+   */
+  Paused,
+  /**
+   * Spiel beendet.
+   */
+  Finished,
+  /**
+   * Spiel mit unentschieden ausgegangen.
+   */
+  Tied,
+  /**
+   * Spiel mit Sieg eines Spielers ausgegangen.
+   */
+  Won
 }

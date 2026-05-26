@@ -1,5 +1,5 @@
 /*
- * 1.0 2026-04-28 Truong Tan Long Nguyen
+ * 1.0 2026-04-22 Luca Tauscher
  *
  * Copyright (c) 2025-2026 Gervithrall Systems GmbH. All Rights Reserved.
  *
@@ -17,23 +17,28 @@
  * OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
  */
 
-package SEG11.IFE_Entertainment.UIController;
-
-import java.io.IOException;
+package seg11.ife_entertainment.four_connect;
 
 /**
- * Interface für den Hilfe-Screen Controller.
+ * Das enum Player.
  *
- * <p>Definiert die Navigation vom Hilfe-Screen zurück zum vorherigen Screen.
- *
- * @author Truong Tan Long Nguyen
+ * @author Luca Tauscher
  */
-public interface HelpController {
-
+public enum Player {
   /**
-   * Navigiert zurück zum vorherigen Screen.
-   *
-   * @throws IOException falls die FXML-Datei nicht geladen werden kann
+   * Menschlicher Spieler.
    */
-  void backToGameScreen() throws IOException;
+  HUMAN,
+  /**
+   * Simpler Bot Spieler.
+   */
+  EASYBOT,
+  /**
+   * Schwerer Bot Spieler.
+   */
+  HARDBOT,
+  /**
+   * Leerer Spieler, zum init des Spielfeldes.
+   */
+  NONE
 }

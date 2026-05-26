@@ -1,5 +1,5 @@
 /*
- * 1.0 2026-04-28 Luca Tauscher
+ * 1.0 2026-04-28 Lucas Rumann
  *
  * Copyright (c) 2025-2026 Gervithrall Systems GmbH. All Rights Reserved.
  *
@@ -15,23 +15,33 @@
  * DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
  */
 
-package SEG11.IFE_Entertainment.GameCore;
+
+package seg11.ife_entertainment.game_core;
 
 /**
- * Das Interface für die Logik der Bot Gegner.
+ * Interface für die Logik zur Verwaltung des Spielbretts.
  *
- * <p>Ist für die Klasse zu implementieren, die die gesamte Logik für das autonome Agieren eines
- * Botgegners.
+ * <p>Ist für die Klasse zu implementieren, die die gesamte Logik für die
+ * Verwaltung des Spielbretts beherbergt, also z.B.: das Initialisieren des Spielbretts und das zur
+ * verfügungsstellen von Funktionen um auf einzelne Zellen oder Werte zuzugreifen und diese zu
+ * verändern.
  *
- * @author Luca Tauscher
+ * @author Lucas Rumann
  */
-public interface MoveStrategy {
+public interface PlayArea {
+
   /**
-   * Wählt anhand des übergebenen Spielfeldes einen Zug aus und spielt diesen.
+   * Funktion zum Überprüfen, ob das Spielfeld voll ist.
    *
-   * @param board das aktuelle Spielfeld
-   *
-   * @return der Zustand, des Spieles nach dem Zug
+   * @return Booleschen Wert, der wahr ist, wenn das Spielfeld voll ist
    */
-  GameState chooseMove(PlayArea board);
+  Boolean isFull();
+
+  /**
+   * Funktion zum leeren und neu-initialisieren des Spielbretts.
+   *
+   * @return Integer Wert zur Überprüfung, ob die Operation erfolgreich war. Bei einem Wert != 0 ist
+   *   ein Fehler aufgetreten
+   */
+  Integer clear();
 }

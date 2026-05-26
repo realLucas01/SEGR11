@@ -17,7 +17,7 @@
  * OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
  */
 
-package SEG11.IFE_Entertainment.Infrastructure;
+package seg11.ife_entertainment.infrastructure;
 
 /**
  * Service zur Verwaltung des Airline-Brandings (CI-Anpassung).

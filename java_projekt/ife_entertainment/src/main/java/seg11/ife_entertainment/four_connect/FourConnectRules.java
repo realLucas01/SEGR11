@@ -17,10 +17,10 @@
  * OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
  */
 
-package SEG11.IFE_Entertainment.FourConnect;
+package seg11.ife_entertainment.four_connect;
 
-import SEG11.IFE_Entertainment.GameCore.PlayArea;
-import SEG11.IFE_Entertainment.GameCore.RuleSet;
+import seg11.ife_entertainment.game_core.PlayArea;
+import seg11.ife_entertainment.game_core.RuleSet;
 
 /**
  * Klasse stellt grundlegende Funktionen für das Überprüfen des Regelwerks zur verfügung.
@@ -105,7 +105,7 @@ public class FourConnectRules implements RuleSet<FourConnectGameBoard, FourConne
   }
 
   /**
-   * Implementierung der Interfacemethode checkTie().
+   * Implementierung der Interface methode checkTie().
    *
    * <p>Wird genutzt um zu überprüfen, ob ein Unentschieden vorliegt.
    *
