@@ -26,7 +26,7 @@ OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
 
 <BorderPane xmlns="http://javafx.com/javafx/21.0.2"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="seg11.ife_entertainment.ui_four_connect_controller.FourConnectModeMenuController"
+            fx:controller="ui_four_connect_controller.seg11.ife.entertainment.FourConnectModeMenuController"
             stylesheets="@style.css" styleClass="mode-menu-root">
 
 	<!-- Zeigt den Namen des gewählten Spiels an -->

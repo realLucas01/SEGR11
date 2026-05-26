@@ -75,7 +75,7 @@
                     <execution>
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>seg11.ife_entertainment.App</mainClass>
+                            <mainClass>seg11.ife.entertainment.App</mainClass>
                         </configuration>
                     </execution>
                 </executions>
@@ -97,7 +97,7 @@
                     <archive>
                         <manifest>
                             <!-- Einstiegspunkt der Anwendung -->
-                            <mainClass>seg11.ife_entertainment.Launcher</mainClass>
+                            <mainClass>seg11.ife.entertainment.Launcher</mainClass>
                             <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
                         </manifest>
                         <manifestEntries>
@@ -216,7 +216,7 @@
                             <shadedClassifierName>executable</shadedClassifierName>
                             <transformers>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>seg11.ife_entertainment.Launcher</mainClass>
+                                    <mainClass>seg11.ife.entertainment.Launcher</mainClass>
                                 </transformer>
                                 <!-- Wichtig für JavaFX/SPI -->
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
@@ -258,8 +258,8 @@
                         <option>-ignorewarnings</option> <!-- Ignoriert unwichtige JavaFX/JDK-Referenzfehler -->
                         <option>-keepattributes *Annotation*,Signature,EnclosingMethod,InnerClasses</option>
                         <!-- Schützt die Einstiegspunkte vor Umbenennung, sonst startet die App nicht -->
-                        <option>-keep public class seg11.ife_entertainment.Launcher { public static void main(java.lang.String[]); }</option>
-                        <option>-keep class seg11.ife_entertainment.App { *; }</option>
+                        <option>-keep public class seg11.ife.entertainment.Launcher { public static void main(java.lang.String[]); }</option>
+                        <option>-keep class seg11.ife.entertainment.App { *; }</option>
                         <option>-keep class * extends javafx.application.Application { *; }</option>
                         <!-- Schützt die eigenen Klassen  -->
                         <option>-keep class seg11.ife_entertainment.** { *; }</option>
