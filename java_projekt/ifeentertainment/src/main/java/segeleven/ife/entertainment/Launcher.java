@@ -17,7 +17,7 @@
  * OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
  */
 
-package seg11.ife.entertainment;
+package segeleven.ife.entertainment;
 
 /**
  * Der Startpunkt des Projektes.

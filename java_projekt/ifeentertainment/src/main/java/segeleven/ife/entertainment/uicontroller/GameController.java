@@ -17,7 +17,7 @@
  * OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
  */
 
-package seg11.ife.entertainment.uicontroller;
+package segeleven.ife.entertainment.uicontroller;
 
 import java.io.IOException;
 

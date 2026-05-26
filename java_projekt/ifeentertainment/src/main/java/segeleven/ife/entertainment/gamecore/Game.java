@@ -17,7 +17,7 @@
  * OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
  */
 
-package seg11.ife.entertainment.gamecore;
+package segeleven.ife.entertainment.gamecore;
 
 /**
  * Interface für die Logik des Spielablaufes.

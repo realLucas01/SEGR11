@@ -17,12 +17,12 @@
  * OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
  */
 
-package seg11.ife.entertainment.fourconnect;
+package segeleven.ife.entertainment.fourconnect;
 
-import seg11.ife.entertainment.gamecore.Game;
-import seg11.ife.entertainment.gamecore.GameState;
-import seg11.ife.entertainment.gamecore.PlayArea;
-import seg11.ife.entertainment.infrastructure.BrandingService;
+import segeleven.ife.entertainment.gamecore.Game;
+import segeleven.ife.entertainment.gamecore.GameState;
+import segeleven.ife.entertainment.gamecore.PlayArea;
+import segeleven.ife.entertainment.infrastructure.BrandingService;
 
 
 /**

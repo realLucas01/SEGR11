@@ -17,11 +17,11 @@
  * OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
  */
 
-package seg11.ife.entertainment.fourconnect;
+package segeleven.ife.entertainment.fourconnect;
 
-import seg11.ife.entertainment.gamecore.GameState;
-import seg11.ife.entertainment.gamecore.MoveStrategy;
-import seg11.ife.entertainment.gamecore.PlayArea;
+import segeleven.ife.entertainment.gamecore.GameState;
+import segeleven.ife.entertainment.gamecore.MoveStrategy;
+import segeleven.ife.entertainment.gamecore.PlayArea;
 import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.List;

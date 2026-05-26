@@ -17,10 +17,10 @@
  * OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
  */
 
-package seg11.ife.entertainment;
+package segeleven.ife.entertainment;
 
-import seg11.ife.entertainment.infrastructure.BrandingService;
-import seg11.ife.entertainment.infrastructure.LocalizationService;
+import segeleven.ife.entertainment.infrastructure.BrandingService;
+import segeleven.ife.entertainment.infrastructure.LocalizationService;
 import java.io.IOException;
 import java.util.ResourceBundle;
 import javafx.application.Application;

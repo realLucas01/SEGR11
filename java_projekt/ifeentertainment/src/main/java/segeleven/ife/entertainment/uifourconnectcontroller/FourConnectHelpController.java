@@ -17,10 +17,10 @@
  * OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
  */
 
-package seg11.ife.entertainment.uifourconnectcontroller;
+package segeleven.ife.entertainment.uifourconnectcontroller;
 
-import seg11.ife.entertainment.App;
-import seg11.ife.entertainment.uicontroller.HelpController;
+import segeleven.ife.entertainment.App;
+import segeleven.ife.entertainment.uicontroller.HelpController;
 
 import java.io.IOException;
 import javafx.fxml.FXML;

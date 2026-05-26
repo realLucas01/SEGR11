@@ -15,7 +15,7 @@
  * DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
  */
 
-package seg11.ife.entertainment.gamecore;
+package segeleven.ife.entertainment.gamecore;
 
 /**
  * Das Interface für die Logik der Bot Gegner.
