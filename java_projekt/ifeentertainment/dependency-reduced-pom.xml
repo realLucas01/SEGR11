@@ -26,7 +26,7 @@
           <execution>
             <id>default-cli</id>
             <configuration>
-              <mainClass>SEG11.IFE_Entertainment.App</mainClass>
+              <mainClass>seg11.ife.entertainment.App</mainClass>
             </configuration>
           </execution>
         </executions>
@@ -41,7 +41,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>SEG11.IFE_Entertainment.Launcher</mainClass>
+              <mainClass>seg11.ife.entertainment.Launcher</mainClass>
               <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
             </manifest>
             <manifestEntries>
@@ -162,7 +162,7 @@
               <shadedClassifierName>executable</shadedClassifierName>
               <transformers>
                 <transformer>
-                  <mainClass>SEG11.IFE_Entertainment.Launcher</mainClass>
+                  <mainClass>seg11.ife.entertainment.Launcher</mainClass>
                 </transformer>
                 <transformer />
               </transformers>
@@ -201,8 +201,8 @@
           <options>
             <option>-ignorewarnings</option>
             <option>-keepattributes *Annotation*,Signature,EnclosingMethod,InnerClasses</option>
-            <option>-keep public class SEG11.IFE_Entertainment.Launcher { public static void main(java.lang.String[]); }</option>
-            <option>-keep class SEG11.IFE_Entertainment.App { *; }</option>
+            <option>-keep public class seg11.ife.entertainment.Launcher { public static void main(java.lang.String[]); }</option>
+            <option>-keep class seg11.ife.entertainment.App { *; }</option>
             <option>-keep class * extends javafx.application.Application { *; }</option>
             <option>-keep class SEG11.IFE_Entertainment.** { *; }</option>
             <option>-keep class javafx.** { *; }</option>
