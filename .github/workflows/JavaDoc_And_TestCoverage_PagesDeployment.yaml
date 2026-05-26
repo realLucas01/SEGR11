@@ -11,6 +11,7 @@ on:
 permissions:
   contents: write
   pages: write
+  id-token: write
 
 jobs:
   build:
@@ -56,7 +57,7 @@ jobs:
 
           git add final/
           git commit -m "Update generated reports" || echo "No changes"
-          git push origin JavaDoc-and-TestCoverage
+          git push origin JavaDoc-and-TestCoverage --force
 
       - name: Prepare Pages
         run: |
