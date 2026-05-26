@@ -88,14 +88,14 @@ public class App extends Application {
   /**
    * Lädt, die angegebene JavaFX Datei und zeigt diese an.
    *
-   * @param fxml, die Anzuzeigende Datei
+   * @param fxml die Anzuzeigende Datei
    * @return fxmlLoader.load()
    * @throws IOException
    */
   private static Parent loadfxml(String fxml) throws IOException {
     FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
     fxmlLoader.setResources(ResourceBundle.getBundle("i18n.messages",
-      LocalizationService.getInstance().getCurrentLocale()));
+        LocalizationService.getInstance().getCurrentLocale()));
     return fxmlLoader.load();
   }
 

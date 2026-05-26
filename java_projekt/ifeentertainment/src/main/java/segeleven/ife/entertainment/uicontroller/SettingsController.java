@@ -23,8 +23,8 @@ import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import segeleven.ife.entertainment.App;
-import segeleven.ife.entertainment.infrastructure.LocalizationService;
 import segeleven.ife.entertainment.infrastructure.BrandingService;
+import segeleven.ife.entertainment.infrastructure.LocalizationService;
 
 /**
  * Controller für den Einstellungs-Screen.

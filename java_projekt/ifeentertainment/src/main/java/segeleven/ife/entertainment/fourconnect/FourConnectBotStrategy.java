@@ -19,6 +19,9 @@
 
 package segeleven.ife.entertainment.fourconnect;
 
+import static java.lang.Math.max;
+import static java.lang.Math.min;
+
 import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.List;
@@ -26,9 +29,6 @@ import java.util.Random;
 import segeleven.ife.entertainment.gamecore.GameState;
 import segeleven.ife.entertainment.gamecore.MoveStrategy;
 import segeleven.ife.entertainment.gamecore.PlayArea;
-
-import static java.lang.Math.max;
-import static java.lang.Math.min;
 
 /**
  * Implementiert {@link MoveStrategy} und stellt zwei Bot strategien für das "Vier Gewinnt" Spiel
@@ -129,7 +129,7 @@ public class FourConnectBotStrategy implements MoveStrategy {
 
       //Zähle Bot und Gegner Scheiben im aktuellen Fenster
       for (Position pos : connects) {
-        final Player owner = board.getCellOwner(pos.getXCord(), pos.getYCord()).getType();
+        final Player owner = board.getCellOwner(pos.getXcord(), pos.getyCord()).getType();
         switch (owner) {
           case HUMAN -> playerOwningCount++;
           case HARDBOT -> botOwningCount++;
@@ -236,8 +236,8 @@ public class FourConnectBotStrategy implements MoveStrategy {
     public GameState chooseMove(PlayArea board) {
       // Logik für zufälligen Zug
       final List<Integer> possibleColumns = new ArrayList<>();
-            /* Es überprüft, welche Spalten noch frei sind. Anhand der freien Spalten wird eine
-            zufällig ausgewählt und diese an dropDisc() weitergeleitet  */
+      /* Es überprüft, welche Spalten noch frei sind. Anhand der freien Spalten wird eine
+      zufällig ausgewählt und diese an dropDisc() weitergeleitet  */
       for (int col = 0; col < ((FourConnectGameBoard) board).getColumns(); col++) {
         if (((FourConnectGameBoard) board).getCellOwner(col, 0).getType() == Player.NONE) {
           possibleColumns.add(col);
@@ -263,8 +263,8 @@ public class FourConnectBotStrategy implements MoveStrategy {
    * 43 : 1 für den Bot ... und 2 Unentschieden
    */
   public class HardBotStrategy implements MoveStrategy {
-    /** index für die playerList, um zu wissen, an welcher Stelle der Bot Spieler steht. */ int
-      botPlayerIndex;
+    /** index für die playerList, um zu wissen, an welcher Stelle der Bot Spieler steht. */
+    int botPlayerIndex;
     /** die im {@link FourConnectGameBoard} initialisierte Spieler Liste. */
     FourConnectPlayer[] playerList;
 
@@ -316,7 +316,7 @@ public class FourConnectBotStrategy implements MoveStrategy {
 
         if (score > bestScore) {
           bestScore = score;
-          bestTurn = turn.getXCord();
+          bestTurn = turn.getXcord();
         }
       }
       return bestTurn;
@@ -372,7 +372,6 @@ public class FourConnectBotStrategy implements MoveStrategy {
       return bestValue;
     }
 
-
     /**
      * Hilfsfunktion um die Position, des Bot Spielers in der Spielliste zu finden.
      *
@@ -405,11 +404,11 @@ public class FourConnectBotStrategy implements MoveStrategy {
      *
      * @param board           das Spielfeld
      * @param turn            die Zielposition der Scheibe
-     * @param currentFCPlayer der Spieler, dessen Scheibe gesetzt wird
+     * @param currentfcplayer der Spieler, dessen Scheibe gesetzt wird
      */
     private void playTestTurn(FourConnectGameBoard board, Position turn,
-        FourConnectPlayer currentFCPlayer) {
-      board.setCellValue(turn, currentFCPlayer);
+        FourConnectPlayer currentfcplayer) {
+      board.setCellValue(turn, currentfcplayer);
     }
 
     /**
