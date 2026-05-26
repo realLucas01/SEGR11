@@ -35,6 +35,9 @@ import seg11.ife_entertainment.infrastructure.BrandingService;
  *                               Version des Interface {@link PlayArea} konkretisiert.
  *
  * @author Lucas Rumann
+ * @param <FourConnectGameBoard> Der generische Datentyp wurde auf die von uns
+ *                               implementierte Version des Interface
+ *                               {@link IPlayArea} konkretisiert
  */
 public class FourConnectGame implements Game<FourConnectGameBoard> {
   /** Speichern der Singleton Instanz der Klasse. */
@@ -71,7 +74,7 @@ public class FourConnectGame implements Game<FourConnectGameBoard> {
   }
 
   /**
-   * Funktion zum Erstellen bzw. Bekommen der Instanz der Klasse.
+   * Funktion zum erstellen bzw. bekommen der Instanz der Klasse.
    *
    * @return Den Pointer auf die einzige Instanz der Klasse
    */
@@ -206,7 +209,7 @@ public class FourConnectGame implements Game<FourConnectGameBoard> {
   /**
    * Get Funktion um das Mitspielen eines Bots abzufragen.
    *
-   * @return true, wenn ein Bot mitspielt false, wenn kein Bot mitspielt
+   * @return true, wenn ein Bot mitspielt, und false, wenn kein Bot mitspielt
    */
   public boolean getOneBotPlayer() {
     return oneBotPlayer;
@@ -251,7 +254,7 @@ public class FourConnectGame implements Game<FourConnectGameBoard> {
     currentbranding = BrandingService.getInstance();
 
     // Erstellen einer neuen Instanz von FourConnectBotStrategy um die Strategien
-    // für die schwierigkeitsstufen "laden" zu können
+    // für die Schwierigkeitsstufen "laden" zu können
     FourConnectBotStrategy botStrategy = new FourConnectBotStrategy(this, rules);
 
     // Erstellen von Spieler 1 abhängig seines übergebenen Typs
