@@ -54,8 +54,8 @@ public class SettingsController {
         languageBox.getItems().addAll("de", "en");
         languageBox.setValue(localizationService.getCurrentLocale().getLanguage());
 
-        themeBox.getItems().addAll("gervithrall", "lufthansa", "emirates", "ryanair");
-        themeBox.setValue("gervithrall");
+        themeBox.getItems().addAll("gervithrall", "lufthansa", "emirates", "ryanair", "singapore");
+        themeBox.setValue(brandingService.getCurrentThemeId());
 
     }
 
