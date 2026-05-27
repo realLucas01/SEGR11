@@ -24,7 +24,7 @@ repeat
     if ([Gewinnbedingung erfüllt?]) then ([ja])
       :Ergebnis anzeigen;
 
-      if ([Gewinnzug anzeigen gewählt?]) then ([ja])
+      if ([Gewinnkombination anzeigen gewählt?]) then ([ja])
         :Spielbrett erneut anzeigen;
         :Gewinnkombination ermitteln;
         :Gewinnbringende Spielsteine hervorheben;

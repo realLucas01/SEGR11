@@ -29,7 +29,7 @@ rectangle "4-Connect" {
   usecase "Sprache auswählen" as UC7
   usecase "Zurück zur Spielesammlung" as UC8
   usecase "Branding konfigurieren" as UC9
-  usecase "Gewinnzug hervorheben" as UC10
+  usecase "Gewinnkombination anzeigen" as UC10
 }
 
 Fluggast --> UC1
