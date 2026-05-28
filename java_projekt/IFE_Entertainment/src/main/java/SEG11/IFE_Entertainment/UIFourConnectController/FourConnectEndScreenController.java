@@ -26,6 +26,9 @@ import SEG11.IFE_Entertainment.GameCore.GameState;
 import SEG11.IFE_Entertainment.UIController.EndScreenController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import java.text.MessageFormat;
+import SEG11.IFE_Entertainment.FourConnect.FourConnectPlayer;
+import SEG11.IFE_Entertainment.Infrastructure.LocalizationService;
 
 /**
  * FourConnect-spezifische Implementierung des EndScreenControllers.
@@ -40,21 +43,42 @@ public class FourConnectEndScreenController implements EndScreenController {
     /** Label zur Anzeige des Spielergebnisses. */
     @FXML
     private Label resultLabel;
-
+    
+    private final LocalizationService localizationService = LocalizationService.getInstance();
+    
     /**
      * Initialisiert den EndScreen und zeigt das Spielergebnis an.
      */
     @Override
     @FXML
     public void initialize() {
-        GameState state = FourConnectGame.getInstance().getStatus();
-        if (state == GameState.Won) {
-            resultLabel.setText("Gewonnen!");
-        } else if (state == GameState.Tied) {
-            resultLabel.setText("Unentschieden!");
-        }
+      GameState state = FourConnectGame.getInstance().getStatus();
+
+      if (state == GameState.Won) {
+        resultLabel.setText(getWinnerText());
+      } else if (state == GameState.Tied) {
+        resultLabel.setText(localizationService.getText("game.draw"));
+      }
     }
 
+    /**
+     * Erstellt den Ergebnistext für den Gewinner der aktuellen Runde.
+     *
+     * @return lokalisierter Ergebnistext
+     */
+    private String getWinnerText() {
+      FourConnectGame game = FourConnectGame.getInstance();
+      int winnerIndex = game.getCurrentPlayerIndex();
+      FourConnectPlayer winner = game.getPlayers()[winnerIndex];
+
+      if (winner.getType() != Player.HUMAN) {
+        return localizationService.getText("game.botWin");
+      }
+
+      String winText = localizationService.getText("game.win");
+      return MessageFormat.format(winText, winnerIndex + 1);
+    }
+    
     /**
      * Startet ein neues Spiel im selben Modus.
      *
