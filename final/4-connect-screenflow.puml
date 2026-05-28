@@ -10,40 +10,40 @@ skinparam ranksep 200
 skinparam padding 20
 
 ' --- States ---
-state "        Gamemenu         " as Gamemenu
-state "        Modusmenu        " as Modusmenu
+state "        Hauptmenü        " as Gamemenu
+state "     Spielesammlung      " as Modusmenu
 state "        4-Connect        " as FourConnect
-state "      Help / Rules       " as HelpRules
-state "           Help          " as Help
-state "         Settings        " as Settings
+state "     Hilfe / Regeln      " as HelpRules
+state "     Hilfe Hauptmenü     " as Help
+state "      Einstellungen      " as Settings
 state "    Winning Highlight    " as WinningHighlight
-state "        Endscreen        " as Result
+state "    Gewinnkombination    " as Result
 
 [*] --> Gamemenu : Start
 
 
-Gamemenu --> Modusmenu : Select Game\n(AF-01)
-Gamemenu --> Help : Help\n(AF-05b)
-Gamemenu --> Settings : Settings
+Gamemenu --> Modusmenu : Spiel auswählen\n(AF-01)
+Gamemenu --> Help : Hilfe Hauptmenü aufrufen\n(AF-05b)
+Gamemenu --> Settings : Einstellungen
 
-Help --> Gamemenu : Return to Gamemenu\n(AF-07)
-Settings --> Gamemenu : Return to Gamemenu\n(AF-07)
+Help --> Gamemenu : Rückkehr zur Spielesammlung\n(AF-07)
+Settings --> Gamemenu : Rückkehr zur Spielesammlung\n(AF-07)
 
-Modusmenu --> FourConnect : Select Modus\n(AF-02)
-Modusmenu --> Gamemenu : Return to Gamemenu\n(AF-07)
+Modusmenu --> FourConnect : Spielmodus wählen\n(AF-02)
+Modusmenu --> Gamemenu : Rückkehr zur Spielesammlung\n(AF-07)
 
-FourConnect --> FourConnect : New Game\n(AF-06)
-FourConnect --> HelpRules : Help\n(AF-05a)
-HelpRules --> FourConnect : Return to 4-Connect
+FourConnect --> FourConnect : Spielfeld zurücksetzen\n(AF-06)
+FourConnect --> HelpRules : Spielhilfe aufrufen\n(AF-05a)
+HelpRules --> FourConnect : Zurück zum Spiel
 
-FourConnect --> Result : Win / Draw
+FourConnect --> Result : Gewonnen / Unentschieden
 
-Result --> WinningHighlight : Show Winning Move\n(AF-08)
-WinningHighlight --> Result : Back
+Result --> WinningHighlight : Gewinnkombination anzeigen\n(AF-08)
+WinningHighlight --> Result : Zurück
 
-Result --> FourConnect : New Round\n(AF-04)
-Result --> Gamemenu : Return to Gamemenu\n(AF-07)
+Result --> FourConnect : Neue Runde starten\n(AF-04)
+Result --> Gamemenu : Rückkehr zur Spielesammlung\n(AF-07)
 
-FourConnect --> Gamemenu : Return to Gamemenu\n(AF-07)
+FourConnect --> Gamemenu : Rückkehr zur Spielesammlung\n(AF-07)
 
 @enduml
