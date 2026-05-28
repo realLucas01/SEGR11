@@ -63,7 +63,7 @@ package "FourConnect"{
   class FourConnectRules{
     + checkWin(board : FourConnectGameBoard, player : FourConnectPlayer) : boolean
     + checkTie(board : FourConnectGameBoard) : boolean
-    + getWinningPositions(board : FourConnectGameBoard, player : FourConnectPlayer) : List<Position>
+    + determineWinningPositions(board : FourConnectGameBoard, player : FourConnectPlayer) : List<Position>
   }
 
   class FourConnectGame {
@@ -92,7 +92,6 @@ package "FourConnect"{
     + playBotTurn() : GameState
     + initFourConnectGame(playerOne : Player, playerTwo : Player) : Integer
     + getWinningPositions() : List<Position>
-    + setWinningPositions(positions : List<Position>) : void
   }
 
   class FourConnectGameBoard {
@@ -275,7 +274,6 @@ package "UIController" {
     + initialize() : void
     + restartGame() : void
     + backToMainMenu() : void
-    + showWinningMove() : void
   }
 
   }
