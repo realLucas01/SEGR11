@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  
+1.0 2026-05-28 Marc Müller
+
+Copyright (c) 2025-2026 Gervithrall Systems GmbH. All Rights Reserved.
+
+This software is the confidential and proprietary information of
+Gervithrall Systems GmbH ("Confidential Information"). You shall not
+disclose such Confidential Information and shall use it only in
+accordance with the terms of the license agreement you entered into
+with Gervithrall Systems GmbH.
+
+GERVITHRALL SYSTEMS GMBH MAKES NO REPRESENTATIONS OR WARRANTIES ABOUT
+THE SUITABILITY OF THE SOFTWARE, EITHER EXPRESS OR IMPLIED, INCLUDING
+BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. GERVITHRALL SYSTEMS GMBH
+SHALL NOT BE LIABLE FOR ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT
+OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
+-->
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21.0.2"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="SEG11.IFE_Entertainment.UIFourConnectController.FourConnectWinningMoveController"
+            stylesheets="@style.css"
+            styleClass="game-root">
+
+    <top>
+        <Label text="%menu.showWinningCombi"
+               styleClass="screen-title"
+               BorderPane.alignment="CENTER"/>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER" spacing="40">
+
+            <GridPane fx:id="gridPane"
+                      hgap="12"
+                      vgap="12"
+                      alignment="CENTER"
+                      styleClass="game-grid"/>
+
+            <Button text="%menu.backtogame"
+                    prefWidth="220"
+                    prefHeight="50"
+                    onAction="#backToEndScreen"
+                    styleClass="button-secondary"/>
+
+        </VBox>
+    </center>
+
+</BorderPane>

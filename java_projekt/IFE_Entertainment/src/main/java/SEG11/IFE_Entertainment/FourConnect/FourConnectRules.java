@@ -21,6 +21,8 @@ package SEG11.IFE_Entertainment.FourConnect;
 
 import SEG11.IFE_Entertainment.GameCore.IPlayArea;
 import SEG11.IFE_Entertainment.GameCore.IRuleSet;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Klasse stellt grundlegende Funktionen für das Überprüfen des Regelwerks zur
@@ -123,4 +125,78 @@ public class FourConnectRules implements IRuleSet<FourConnectGameBoard, FourConn
 		// Check ob Spielbrett voll
 		return board.isFull();
 	}
+	
+	/**
+	 * Ermittelt die vier Positionen, die zum Sieg des Spielers geführt haben.
+	 *
+	 * @param board aktueller Zustand des Spielbretts
+	 * @param player Spieler, dessen Gewinnkombination gesucht wird
+	 * @return Liste der vier Gewinnpositionen oder eine leere Liste
+	 */
+	public List<Position> getWinningPositions(FourConnectGameBoard board, FourConnectPlayer player) {
+	  List<Position> positions = new ArrayList<>();
+
+	  for (int x = 0; x < board.getColumns() - 3; x++) {
+	    for (int y = 0; y < board.getRows(); y++) {
+	      if (board.getCellOwner(new Position(x, y)).equals(player)
+	          && board.getCellOwner(new Position(x + 1, y)).equals(player)
+	          && board.getCellOwner(new Position(x + 2, y)).equals(player)
+	          && board.getCellOwner(new Position(x + 3, y)).equals(player)) {
+	        positions.add(new Position(x, y));
+	        positions.add(new Position(x + 1, y));
+	        positions.add(new Position(x + 2, y));
+	        positions.add(new Position(x + 3, y));
+	        return positions;
+	      }
+	    }
+	  }
+
+	  for (int x = 0; x < board.getColumns(); x++) {
+	    for (int y = 0; y < board.getRows() - 3; y++) {
+	      if (board.getCellOwner(new Position(x, y)).equals(player)
+	          && board.getCellOwner(new Position(x, y + 1)).equals(player)
+	          && board.getCellOwner(new Position(x, y + 2)).equals(player)
+	          && board.getCellOwner(new Position(x, y + 3)).equals(player)) {
+	        positions.add(new Position(x, y));
+	        positions.add(new Position(x, y + 1));
+	        positions.add(new Position(x, y + 2));
+	        positions.add(new Position(x, y + 3));
+	        return positions;
+	      }
+	    }
+	  }
+
+	  for (int x = 0; x < board.getColumns() - 3; x++) {
+	    for (int y = 0; y < board.getRows() - 3; y++) {
+	      if (board.getCellOwner(new Position(x, y)).equals(player)
+	          && board.getCellOwner(new Position(x + 1, y + 1)).equals(player)
+	          && board.getCellOwner(new Position(x + 2, y + 2)).equals(player)
+	          && board.getCellOwner(new Position(x + 3, y + 3)).equals(player)) {
+	        positions.add(new Position(x, y));
+	        positions.add(new Position(x + 1, y + 1));
+	        positions.add(new Position(x + 2, y + 2));
+	        positions.add(new Position(x + 3, y + 3));
+	        return positions;
+	      }
+	    }
+	  }
+
+	  for (int x = board.getColumns() - 1; x >= 3; x--) {
+	    for (int y = 0; y < board.getRows() - 3; y++) {
+	      if (board.getCellOwner(new Position(x, y)).equals(player)
+	          && board.getCellOwner(new Position(x - 1, y + 1)).equals(player)
+	          && board.getCellOwner(new Position(x - 2, y + 2)).equals(player)
+	          && board.getCellOwner(new Position(x - 3, y + 3)).equals(player)) {
+	        positions.add(new Position(x, y));
+	        positions.add(new Position(x - 1, y + 1));
+	        positions.add(new Position(x - 2, y + 2));
+	        positions.add(new Position(x - 3, y + 3));
+	        return positions;
+	      }
+	    }
+	  }
+
+	  return positions;
+	}
+	
 }

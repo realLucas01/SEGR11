@@ -32,6 +32,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.util.Duration;
 
+
 /**
  * Controller für den Vier-Gewinnt-Spielscreen.
  *
@@ -60,7 +61,7 @@ public class FourConnectGameController implements GameController {
     /** Variable um die Anwesenheit eines BotSpielers zu signalisieren. True = einer vorhanden */
     private boolean oneBotPlayer;
 
-
+    
     /**
      * Startet das Spiel neu mit demselben Spielmodus.
      *
@@ -139,7 +140,11 @@ public class FourConnectGameController implements GameController {
                         throw new RuntimeException(e);
                     }
                 } else if (botResult == GameState.Tied) {
-                    statusLabel.setText("Unentschieden!");
+                	try {
+                	    App.setRoot("EndScreen");
+                	} catch (IOException e) {
+                	    throw new RuntimeException(e);
+                	}
                 } else {
                     game.playerTurn();
                     updateStatus();

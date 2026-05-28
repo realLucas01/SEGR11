@@ -79,6 +79,11 @@ public class FourConnectEndScreenController implements EndScreenController {
       return MessageFormat.format(winText, winnerIndex + 1);
     }
     
+    @FXML
+    public void showWinningMove() throws IOException {
+      App.setRoot("FourConnectWinningMove");
+    }
+    
     /**
      * Startet ein neues Spiel im selben Modus.
      *
