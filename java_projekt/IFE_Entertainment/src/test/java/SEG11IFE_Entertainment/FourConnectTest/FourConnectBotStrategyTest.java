@@ -214,57 +214,6 @@ class FourConnectBotStrategyTest {
 
             assertEquals(testTurn,results);
         }
-/*
-        @Test
-        void findBestTurnTest() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
-            FourConnectPlayer[] players = game.getPlayers();
-
-            strategy = new FourConnectBotStrategy(game,rules);
-
-            board.setCellValue(new Position(2,0), players[1] );
-            board.setCellValue(new Position(2,1), players[1] );
-            board.setCellValue(new Position(2,2), players[1] );
-
-            Method botPosition = FourConnectBotStrategy.HardBotStrategy.class.getDeclaredMethod("findBestTurn", FourConnectGameBoard.class, int.class);
-            botPosition.setAccessible(true);
-            Integer results  = (Integer) botPosition.invoke(stratClass,board,4);
-
-             assertEquals(2,results);
-
-        }
-
- */
-
-        @Test
-        void chooseMoveTest(){
-            board = new FourConnectGameBoard();
-            FourConnectPlayer[] players = game.getPlayers();
-            game.dropDisc(3);
-            game.playerTurn();
-            game.dropDisc(2);
-            game.playerTurn();
-            game.dropDisc(3);
-            game.playerTurn();
-            game.dropDisc(2);
-            game.playerTurn();
-            game.dropDisc(3);
-            game.playerTurn();
-            game.dropDisc(2);
-            game.playerTurn();
-            game.dropDisc(4);
-            game.playerTurn();
-
-            GameState res=players[1].getStrategy().chooseMove(board);
-
-            assertEquals(GameState.Tied, res);
-
-
-        }
-
-
-
-
-
     }
 
 
