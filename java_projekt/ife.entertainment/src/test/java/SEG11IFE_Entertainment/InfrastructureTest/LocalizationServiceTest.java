@@ -1,6 +1,6 @@
 package SEG11IFE_Entertainment.InfrastructureTest;
 
-import segeleven.ife.entertainment.infrastructure.LocalizationService;
+import SEG11.IFE_Entertainment.Infrastructure.LocalizationService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import java.util.Locale;

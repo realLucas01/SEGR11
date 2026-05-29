@@ -1,8 +1,8 @@
 package SEG11IFE_Entertainment.FourConnectTest;
 
-import segeleven.ife.entertainment.fourconnect.*;
-import segeleven.ife.entertainment.gamecore.MoveStrategy;
-import segeleven.ife.entertainment.infrastructure.BrandingService;
+import SEG11.IFE_Entertainment.FourConnect.*;
+import SEG11.IFE_Entertainment.GameCore.IMoveStrategy;
+import SEG11.IFE_Entertainment.Infrastructure.BrandingService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

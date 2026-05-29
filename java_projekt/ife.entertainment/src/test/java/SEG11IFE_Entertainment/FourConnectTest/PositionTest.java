@@ -1,7 +1,7 @@
 package SEG11IFE_Entertainment.FourConnectTest;
 
-import segeleven.ife.entertainment.fourconnect.Player;
-import segeleven.ife.entertainment.fourconnect.Position;
+import SEG11.IFE_Entertainment.FourConnect.Player;
+import SEG11.IFE_Entertainment.FourConnect.Position;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -14,22 +14,22 @@ class PositionTest {
         Integer y = 7;
         Position testPos = new Position(x, y);
 
-        assertEquals(x, testPos.getXcord());
-        assertEquals(y, testPos.getyCord());
+        assertEquals(x, testPos.getX());
+        assertEquals(y, testPos.getY());
     }
 
     @Test
     void getXTest(){
         Integer x = 4;
         Position testPos = new Position(x,0);
-        Integer testPosX = testPos.getXcord();
+        Integer testPosX = testPos.getX();
         assertEquals(x,testPosX);
     }
     @Test
     void getYTest(){
         Integer y = 2;
         Position testPos = new Position(0,y);
-        Integer testPosY = testPos.getyCord();
+        Integer testPosY = testPos.getY();
         assertEquals(y,testPosY);
     }
 
