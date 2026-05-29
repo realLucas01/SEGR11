@@ -2,7 +2,7 @@ package SEG11IFE_Entertainment.FourConnectTest;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import SEG11.IFE_Entertainment.FourConnect.*;
+import segeleven.ife.entertainment.fourconnect.*;
 import org.junit.jupiter.api.Test;
 
 /**

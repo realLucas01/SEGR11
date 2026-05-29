@@ -1,6 +1,6 @@
 package SEG11IFE_Entertainment.FourConnectTest;
 
-import SEG11.IFE_Entertainment.FourConnect.*;
+import segeleven.ife.entertainment.fourconnect.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
