@@ -81,8 +81,8 @@ public class App extends Application {
     BrandingService branding = BrandingService.getInstance();
 
     scene.getRoot().setStyle(
-        "-theme-primary: " + branding.getPrimaryColor() + ";" + "-theme-secondary: " +
-        branding.getSecondaryColor() + ";");
+        "-theme-primary: " + branding.getPrimaryColor() + ";" + "-theme-secondary: "
+          + branding.getSecondaryColor() + ";");
   }
 
   /**
@@ -90,7 +90,7 @@ public class App extends Application {
    *
    * @param fxml die Anzuzeigende Datei
    * @return fxmlLoader.load()
-   * @throws IOException
+   * @throws IOException wirf bei Fehlschlag einen Fehler
    */
   private static Parent loadfxml(String fxml) throws IOException {
     FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));

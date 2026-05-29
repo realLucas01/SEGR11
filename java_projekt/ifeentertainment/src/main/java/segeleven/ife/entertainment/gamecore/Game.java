@@ -51,7 +51,7 @@ public interface Game<PlayAreaT> {
    * Wird genutzt, um den aktuellen Zustand des Spielbretts von außerhalb abzufragen.
    *
    * @return Den aktuellen Zustand des Spielbretts im Datentyp der eigenen Implementierung von
-   * {@link PlayArea}
+   *   {@link PlayArea}
    */
   PlayAreaT getBoard();
 
