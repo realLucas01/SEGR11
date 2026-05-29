@@ -102,7 +102,7 @@ public class FourConnectGameController implements GameController {
   @FXML
   public void openHelp() throws IOException {
     previousScreen = "FourConnectGame";
-    App.setRoot("help_fc");
+    App.setRoot("helpFc");
   }
 
   /**

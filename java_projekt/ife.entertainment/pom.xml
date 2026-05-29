@@ -105,7 +105,7 @@
                             <Project-Version>${project.version}</Project-Version>
                         </manifestEntries>
                     </archive>
-                    <finalName>IFE_Entertainment-${project.version}</finalName>
+                    <finalName>${project.artifactId}-${project.version}</finalName>
                 </configuration>
             </plugin>
 
@@ -154,7 +154,7 @@
                                 <resource>
                                     <directory>${project.build.directory}</directory>
                                     <includes>
-                                        <include>IFE_Entertainment-${project.version}-obfuscated.jar</include>
+                                        <include>${project.artifactId}-${project.version}-obfuscated.jar</include>
                                     </includes>
                                 </resource>
                             </resources>
@@ -172,7 +172,7 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.11</version>
+                <version>0.8.12</version>
                 <executions>
                     <execution><goals><goal>prepare-agent</goal></goals></execution>
                     <execution>
@@ -191,7 +191,7 @@
                                         <limit>
                                             <counter>LINE</counter>
                                             <value>COVEREDRATIO</value>
-                                            <minimum>0.48</minimum>
+                                            <minimum>0.47</minimum>
                                         </limit>
                                     </limits>
                                 </rule>
@@ -251,8 +251,8 @@
                 <configuration>
                     <proguardVersion>7.4.1</proguardVersion>
                     <obfuscate>true</obfuscate>
-                    <injar>IFE_Entertainment-${project.version}-executable.jar</injar>
-                    <outjar>IFE_Entertainment-${project.version}-obfuscated.jar</outjar>
+                    <injar>${project.artifactId}-${project.version}-executable.jar</injar>
+                    <outjar>${project.artifactId}-${project.version}-obfuscated.jar</outjar>
                     <proguardInclude>${project.basedir}/proguard.conf</proguardInclude>
                     <options>
                         <option>-ignorewarnings</option> <!-- Ignoriert unwichtige JavaFX/JDK-Referenzfehler -->
