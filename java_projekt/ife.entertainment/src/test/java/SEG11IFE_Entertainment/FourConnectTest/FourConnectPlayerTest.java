@@ -36,7 +36,7 @@ class FourConnectPlayerTest {
     @Test
     void getStrategyTest(){
         FourConnectBotStrategy botStrategy = new FourConnectBotStrategy(fcGame, fcRules);
-        MoveStrategy easyStrat = botStrategy.new EasyBotStrategy();
+        IMoveStrategy easyStrat = botStrategy.new EasyBotStrategy();
 
         FourConnectPlayer player = new FourConnectPlayer(Player.EASYBOT, easyStrat, null);
 
