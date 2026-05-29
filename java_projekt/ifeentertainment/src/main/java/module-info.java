@@ -1,19 +1,19 @@
-module segeleven.ifeentertainment {
+module segeleven.ife.entertainment {
     requires javafx.controls;
     requires javafx.fxml;
 
-    opens segeleven.ifeentertainment to javafx.fxml;
-    exports segeleven.ifeentertainment;
+    opens segeleven.ife.entertainment to javafx.fxml;
+    exports segeleven.ife.entertainment;
     
-    opens segeleven.ifeentertainment.uicontroller to javafx.fxml;
-    exports segeleven.ifeentertainment.UIController;
+    opens segeleven.ife.entertainment.uicontroller to javafx.fxml;
+    exports segeleven.ife.entertainment.uicontroller;
     
-    opens segeleven.ifeentertainment.uifourconnectcontroller to javafx.fxml;
-    exports segeleven.ifeentertainment.uifourconnectcontroller;
+    opens segeleven.ife.entertainment.uifourconnectcontroller to javafx.fxml;
+    exports segeleven.ife.entertainment.uifourconnectcontroller;
     
-    opens segeleven.ifeentertainment.infrastructure to javafx.fxml;
-    exports segeleven.ifeentertainment.infrastructure;
+    opens segeleven.ife.entertainment.infrastructure to javafx.fxml;
+    exports segeleven.ife.entertainment.infrastructure;
     
-    exports segeleven.ifeentertainment.gamecore;
-    exports segeleven.ifeentertainment.fourconnect;
+    exports segeleven.ife.entertainment.gamecore;
+    exports segeleven.ife.entertainment.fourconnect;
 }

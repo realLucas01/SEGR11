@@ -27,7 +27,7 @@ OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
 
 <BorderPane xmlns="http://javafx.com/javafx/21.0.2"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="ui_controller.seg11.ife.entertainment.SettingsController"
+            fx:controller="segeleven.ife.entertainment.uicontroller.SettingsController"
             stylesheets="@style.css" styleClass="settings-root">
 
             

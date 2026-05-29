@@ -262,7 +262,7 @@
                         <option>-keep class segeleven.ife.entertainment.App { *; }</option>
                         <option>-keep class * extends javafx.application.Application { *; }</option>
                         <!-- Schützt die eigenen Klassen  -->
-                        <option>-keep class segeleven.ife_entertainment.** { *; }</option>
+                        <option>-keep class segeleven.ife.entertainment.** { *; }</option>
                         <option>-keep class javafx.** { *; }</option>
                         <option>-keep class com.sun.javafx.** { *; }</option>
                         <option>-keep class com.sun.glass.** { *; }</option>
