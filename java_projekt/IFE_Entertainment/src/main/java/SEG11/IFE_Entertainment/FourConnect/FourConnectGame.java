@@ -192,10 +192,10 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
     if (rules.checkTie(gameBoard)) {
       state = GameState.Tied;
     }
-    // Überprüfen, ob gewonnen
+	// Überprüfen, ob gewonnen
     if (rules.checkWin(gameBoard, players[currentPlayerIndex])) {
-    	  winningPositions = rules.getWinningPositions(gameBoard, players[currentPlayerIndex]);
-    	  state = GameState.Won;
+      winningPositions = rules.getWinningPositions();
+      state = GameState.Won;
     }
     return state;
     
