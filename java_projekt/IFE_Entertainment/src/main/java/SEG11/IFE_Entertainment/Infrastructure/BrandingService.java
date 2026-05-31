@@ -35,17 +35,15 @@ public class BrandingService {
     private String secondaryColor;
     private String logoPath;
     private String airlineName;
+    private String currentThemeId;
 
     /**
      * Privater Konstruktor mit Standardwerten für das Default-Branding.
      */
     private BrandingService() {
-        this.primaryColor   = "#004761";
-        this.secondaryColor = "#e94560";
-        this.logoPath       = "/SEG11/IFE_Entertainment/images/logo_default.png";
-        this.airlineName    = "Default Airline";
+        setTheme("gervithrall");
     }
-
+    
     /**
      * Gibt die einzige Instanz des BrandingService zurück.
      *
@@ -95,6 +93,15 @@ public class BrandingService {
     }
 
     /**
+     * Gibt die ID der aktuellen Airline zurück.
+     *
+     * @return der Airline-ID
+     */
+    public String getCurrentThemeId() {
+        return currentThemeId;
+    }
+    
+    /**
      * Setzt die Primärfarbe.
      *
      * @param primaryColor die neue Primärfarbe als Hex-String
@@ -136,6 +143,8 @@ public class BrandingService {
      * @param themeId die ID des gewünschten Themes
      */
     public void setTheme(String themeId) {
+    	this.currentThemeId = themeId;
+    	
     	switch (themeId) {
 
     	case "gervithrall":
@@ -174,7 +183,8 @@ public class BrandingService {
             break;
 
         default:
-            this.primaryColor = "#004761";
+        	this.currentThemeId = "gervithrall";
+        	this.primaryColor = "#004761";
             this.secondaryColor = "#555756";
             this.airlineName = "Gervithrall Systems";
             this.logoPath = "/SEG11/IFE_Entertainment/images/logo_gervithrall-systems.png";
