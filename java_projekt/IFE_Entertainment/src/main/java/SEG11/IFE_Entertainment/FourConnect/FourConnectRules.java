@@ -21,6 +21,8 @@ package SEG11.IFE_Entertainment.FourConnect;
 
 import SEG11.IFE_Entertainment.GameCore.IPlayArea;
 import SEG11.IFE_Entertainment.GameCore.IRuleSet;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Klasse stellt grundlegende Funktionen für das Überprüfen des Regelwerks zur
@@ -42,6 +44,9 @@ import SEG11.IFE_Entertainment.GameCore.IRuleSet;
  */
 public class FourConnectRules implements IRuleSet<FourConnectGameBoard, FourConnectPlayer> {
 
+	/** Positionen der zuletzt ermittelten Gewinnkombination. */
+	private List<Position> winningPositions = new ArrayList<>();
+	
 	/**
 	 * Implementierung der Interface Methode checkWin()
 	 * 
@@ -54,6 +59,8 @@ public class FourConnectRules implements IRuleSet<FourConnectGameBoard, FourConn
 	 */
 	@Override
 	public boolean checkWin(FourConnectGameBoard board, FourConnectPlayer player) {
+		
+	    winningPositions.clear();
 
 		// Überprüfen ob 4 Scheiben in horizontaler Aufeinanderfolge des aktuellen
 		// Spielers existieren
@@ -63,6 +70,11 @@ public class FourConnectRules implements IRuleSet<FourConnectGameBoard, FourConn
 						&& board.getCellOwner(new Position(i + 1, j)).equals(player)
 						&& board.getCellOwner(new Position(i + 2, j)).equals(player)
 						&& board.getCellOwner(new Position(i + 3, j)).equals(player)) {
+					winningPositions = determineWinningPositions(
+						    new Position(i, j),
+						    new Position(i + 1, j),
+						    new Position(i + 2, j),
+						    new Position(i + 3, j));
 					return true;
 				}
 			}
@@ -76,6 +88,11 @@ public class FourConnectRules implements IRuleSet<FourConnectGameBoard, FourConn
 						&& board.getCellOwner(new Position(i, j + 1)).equals(player)
 						&& board.getCellOwner(new Position(i, j + 2)).equals(player)
 						&& board.getCellOwner(new Position(i, j + 3)).equals(player)) {
+					winningPositions = determineWinningPositions(
+						    new Position(i, j),
+						    new Position(i, j + 1),
+						    new Position(i, j + 2),
+						    new Position(i, j + 3));
 					return true;
 				}
 			}
@@ -89,6 +106,11 @@ public class FourConnectRules implements IRuleSet<FourConnectGameBoard, FourConn
 						&& board.getCellOwner(new Position(i + 1, j + 1)).equals(player)
 						&& board.getCellOwner(new Position(i + 2, j + 2)).equals(player)
 						&& board.getCellOwner(new Position(i + 3, j + 3)).equals(player)) {
+					winningPositions = determineWinningPositions(
+						    new Position(i, j),
+						    new Position(i + 1, j + 1),
+						    new Position(i + 2, j + 2),
+						    new Position(i + 3, j + 3));
 					return true;
 				}
 			}
@@ -102,6 +124,11 @@ public class FourConnectRules implements IRuleSet<FourConnectGameBoard, FourConn
 						&& board.getCellOwner(new Position(i - 1, j + 1)).equals(player)
 						&& board.getCellOwner(new Position(i - 2, j + 2)).equals(player)
 						&& board.getCellOwner(new Position(i - 3, j + 3)).equals(player)) {
+					winningPositions = determineWinningPositions(
+						    new Position(i, j),
+						    new Position(i - 1, j + 1),
+						    new Position(i - 2, j + 2),
+						    new Position(i - 3, j + 3));
 					return true;
 				}
 			}
@@ -123,4 +150,30 @@ public class FourConnectRules implements IRuleSet<FourConnectGameBoard, FourConn
 		// Check ob Spielbrett voll
 		return board.isFull();
 	}
+	
+	/**
+	* Gibt die zuletzt ermittelte Gewinnkombination zurück.
+	*
+	* @return Liste der vier Gewinnpositionen oder eine leere Liste
+	*/
+	public List<Position> getWinningPositions() {
+		return winningPositions;
+	}	
+	
+	/**
+	 * Ermittelt die vier Positionen, die zum Sieg des Spielers geführt haben.
+	 *
+	 * @param board aktueller Zustand des Spielbretts
+	 * @param player Spieler, dessen Gewinnkombination gesucht wird
+	 * @return Liste der vier Gewinnpositionen oder eine leere Liste
+	 */
+	private List<Position> determineWinningPositions(Position first, Position second, Position third, Position fourth) {
+		  List<Position> positions = new ArrayList<>();
+		  positions.add(first);
+		  positions.add(second);
+		  positions.add(third);
+		  positions.add(fourth);
+		  return positions;
+	}
+	
 }

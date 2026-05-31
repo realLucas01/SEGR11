@@ -50,8 +50,8 @@
 
     -theme-primary: #004761;
     -theme-secondary: #555756;
-    -theme-background: #EAF5F9;
-    -theme-text: #333333;
+    -theme-background: #333333;
+    -theme-text: #EAF5F9;
     -theme-button: #A5A5A5;
 }
 
@@ -68,29 +68,35 @@
 .screen-title {
     -fx-font-family: "Montserrat Bold";
     -fx-font-size: 48px;
-    -fx-text-fill: -theme-primary;
+    -fx-text-fill: -theme-text;
 }
 
 .section-title {
     -fx-font-size: 32px;
     -fx-font-family: "Montserrat SemiBold";
-    -fx-text-fill: -theme-primary;
+    -fx-text-fill: -theme-text;
 }
 
 .text {
     -fx-font-size: 16px;
     -fx-text-fill: -theme-text;
 }
+
 .turn-title {
-    -fx-font-size: 16px;
+    -fx-font-size: 24px;
     -fx-font-family: "Montserrat Bold";
+    -fx-text-fill: -theme-text;
+}
+.turn-value {
+    -fx-font-size: 24px;
+    -fx-font-family: "Montserrat";
     -fx-text-fill: -theme-text;
 }
 
 .button-secondary,
 .button-danger {
     -fx-background-color: -theme-button;
-    -fx-text-fill: white;
+    -fx-text-fill: -theme-text;
     -fx-font-size: 15px;
     -fx-font-family: "Montserrat SemiBold";
     -fx-background-radius: 6;
@@ -100,14 +106,14 @@
 
 .button-primary,
 .game-tile {
-    -fx-background-color: white;
-    -fx-border-color: -theme-primary;
+    -fx-background-color: -theme-primary;
+    -fx-border-color: -theme-text;
     -fx-border-width: 2;
     -fx-background-radius: 6;
     -fx-border-radius: 6;
     -fx-font-size: 32px;
     -fx-font-family: "Montserrat Bold";
-    -fx-text-fill: -theme-primary;
+    -fx-text-fill: -theme-text;
 }
 
 
@@ -121,8 +127,8 @@
    ========================= */
 
 .combo-box {
-    -fx-background-color: white;
-    -fx-border-color: -theme-primary;
+    -fx-background-color: -theme-primary;
+    -fx-border-color: -theme-text;
     -fx-border-width: 2;
     -fx-border-radius: 6;
     -fx-background-radius: 6;
@@ -132,27 +138,30 @@
 }
 
 .combo-box .list-cell {
-    -fx-text-fill: -theme-primary;
+    -fx-text-fill: -theme-text;
     -fx-font-size: 16px;
     -fx-padding: 8 12;
 }
 
 .combo-box .arrow {
-    -fx-background-color: -theme-primary;
+    -fx-background-color: -theme-text;
 }
 
 .combo-box .arrow-button {
     -fx-background-color: transparent;
 }
 
-.combo-box-popup .list-view {
+.combo-box-popup .list-cell {
     -fx-background-color: white;
-    -fx-border-color: -theme-primary;
+    -fx-text-fill: -theme-primary;
 }
 
 .combo-box-popup .list-cell:filled:selected {
-    -fx-background-color: -theme-primary;
-    -fx-text-fill: white;
+    -fx-background-color: -theme-text;
+    -fx-text-fill: -theme-primary;
 }
 
-
+.combo-box-popup .list-cell:hover {
+    -fx-background-color: white;
+    -fx-text-fill: -theme-primary;
+}

@@ -23,6 +23,8 @@ import SEG11.IFE_Entertainment.GameCore.GameState;
 import SEG11.IFE_Entertainment.GameCore.IGame;
 import SEG11.IFE_Entertainment.GameCore.IPlayArea;
 import SEG11.IFE_Entertainment.Infrastructure.BrandingService;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Klasse die für den eigentlichen Spielablauf zuständig ist.
@@ -58,6 +60,9 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
   /** true, wenn ein Bot im Spiel ist. false wenn kein Bot. */
   private boolean oneBotPlayer;
 
+  /** Positionen der gewinnbringenden Viererreihe. */
+  private List<Position> winningPositions = new ArrayList<>();
+  
   /**
    * Privater Konstruktor für die Klasse FourConnectGame mitsamt der grundlegenden
    * Initialisierung aller wichtigen Variablen.
@@ -161,6 +166,7 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
     players[1] = null;
     currentPlayerIndex = 0;
     gameBoard.clear();
+    winningPositions.clear();
   }
 
   /**
@@ -186,11 +192,22 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
     if (rules.checkTie(gameBoard)) {
       state = GameState.Tied;
     }
-    // Überprüfen, ob gewonnen
+	// Überprüfen, ob gewonnen
     if (rules.checkWin(gameBoard, players[currentPlayerIndex])) {
+      winningPositions = rules.getWinningPositions();
       state = GameState.Won;
     }
     return state;
+    
+  }
+  
+  /**
+   * Gibt die Positionen der gewinnbringenden Viererreihe zurück.
+   *
+   * @return Liste der Gewinnpositionen
+   */
+  public List<Position> getWinningPositions() {
+    return winningPositions;
   }
 
   /**
