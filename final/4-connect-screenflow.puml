@@ -1,0 +1,49 @@
+@startuml
+title 4-Connect UI - Screenflow
+
+skinparam linetype ortho
+skinparam defaultFontName Monospaced
+top to bottom direction
+
+skinparam nodesep 300
+skinparam ranksep 200
+skinparam padding 20
+
+' --- States ---
+state "        Hauptmenü        " as Gamemenu
+state "     Spielesammlung      " as Modusmenu
+state "        4-Connect        " as FourConnect
+state "     Hilfe / Regeln      " as HelpRules
+state "     Hilfe Hauptmenü     " as Help
+state "      Einstellungen      " as Settings
+state "    Winning Highlight    " as WinningHighlight
+state "    Gewinnkombination    " as Result
+
+[*] --> Gamemenu : Start
+
+
+Gamemenu --> Modusmenu : Spiel auswählen\n(AF-01)
+Gamemenu --> Help : Hilfe Hauptmenü aufrufen\n(AF-05b)
+Gamemenu --> Settings : Einstellungen
+
+Help --> Gamemenu : Rückkehr zur Spielesammlung\n(AF-07)
+Settings --> Gamemenu : Rückkehr zur Spielesammlung\n(AF-07)
+
+Modusmenu --> FourConnect : Spielmodus wählen\n(AF-02)
+Modusmenu --> Gamemenu : Rückkehr zur Spielesammlung\n(AF-07)
+
+FourConnect --> FourConnect : Spielfeld zurücksetzen\n(AF-06)
+FourConnect --> HelpRules : Spielhilfe aufrufen\n(AF-05a)
+HelpRules --> FourConnect : Zurück zum Spiel
+
+FourConnect --> Result : Gewonnen / Unentschieden
+
+Result --> WinningHighlight : Gewinnkombination anzeigen\n(AF-08)
+WinningHighlight --> Result : Zurück
+
+Result --> FourConnect : Neue Runde starten\n(AF-04)
+Result --> Gamemenu : Rückkehr zur Spielesammlung\n(AF-07)
+
+FourConnect --> Gamemenu : Rückkehr zur Spielesammlung\n(AF-07)
+
+@enduml

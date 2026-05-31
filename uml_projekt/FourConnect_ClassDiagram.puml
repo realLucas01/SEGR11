@@ -60,9 +60,10 @@ package "Infrastructure" {
 
 ' ──────────────────────────────────────────
 package "FourConnect"{
- class FourConnectRules{
-   + checkWin(board : FourConnectGameBoard, player : FourConnectPlayer) : boolean
-   + checkTie(board : FourConnectGameBoard) : boolean
+  class FourConnectRules{
+    + checkWin(board : FourConnectGameBoard, player : FourConnectPlayer) : boolean
+    + checkTie(board : FourConnectGameBoard) : boolean
+    + determineWinningPositions(board : FourConnectGameBoard, player : FourConnectPlayer) : List<Position>
   }
 
   class FourConnectGame {
@@ -74,6 +75,7 @@ package "FourConnect"{
     - gameBoard : FourConnectGameBoard
     - currentBranding : BrandingService
     - oneBotPlayer: boolean
+    - winningPositions : List<Position>
 
     - <<create>> FourConnectGame()
     + {static} getInstance() : FourConnectGame
@@ -89,6 +91,7 @@ package "FourConnect"{
     + playerTurn() : void
     + playBotTurn() : GameState
     + initFourConnectGame(playerOne : Player, playerTwo : Player) : Integer
+    + getWinningPositions() : List<Position>
   }
 
   class FourConnectGameBoard {
@@ -297,10 +300,13 @@ package "UIFourConnectController"{
     - initBoard() : void
     - updateBoard() : void
     - updateStatus() : void
+    - highlightWinningPositions(positions : List<Position>) : void
   }
   
   class FourConnectEndScreenController {
     - resultLabel : Label
+    - game : FourConnectGame
+    + showWinningMove() : void
   }
   
   class FourConnectHelpController {
@@ -319,6 +325,7 @@ package "UIFourConnectController"{
          FourConnectGameController ..> FourConnectGame       : «use»
          FourConnectEndScreenController ..|> EndScreenController
          FourConnectHelpController ..|> HelpController
+         FourConnectEndScreenController ..> FourConnectGame : «use»
  }
 
 

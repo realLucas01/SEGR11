@@ -2,9 +2,10 @@
 title 4-Connect - Aktivitätsdiagramm Spielrunde
 
 skinparam defaultFontName Monospaced
+skinparam linetype ortho
 skinparam nodesep 300
-skinparam ranksep 100
-skinparam padding 5
+skinparam ranksep 300
+skinparam padding 10
 
 start
 
@@ -16,26 +17,36 @@ repeat
   :Spielzug eingeben;
   :Spielzug validieren;
 
-  if (Zug gültig?) then (ja)
+  if ([Zug gültig?]) then ([ja])
     :Spielstein platzieren;
     :Spielbrett aktualisieren;
 
-    if (Gewinnbedingung erfüllt?) then (ja)
-      :Gewinner anzeigen;
+    if ([Gewinnbedingung erfüllt?]) then ([ja])
+      :Ergebnis anzeigen;
+
+      if ([Gewinnkombination anzeigen gewählt?]) then ([ja])
+        :Spielbrett erneut anzeigen;
+        :Gewinnkombination ermitteln;
+        :Gewinnbringende Spielsteine hervorheben;
+        :Zurück zum Hauptmenü;
+      else ([nein])
+      endif
+
       stop
-    else (nein)
-      if (Spielfeld voll?) then (ja)
+
+    else ([nein])
+      if ([Spielfeld voll?]) then ([ja])
         :Unentschieden anzeigen;
         stop
-      else (nein)
+      else ([nein])
         :Spieler wechseln;
       endif
     endif
 
-  else (nein)
+  else ([nein])
     :Fehlermeldung anzeigen;
   endif
 
-repeat while (Spiel nicht beendet?) is (ja)
+repeat while ([Spiel nicht beendet?]) is ([ja])
 
 @enduml
