@@ -1,0 +1,158 @@
+/*
+ * 1.0 2026-04-19 Marc Müller
+ *
+ * Copyright (c) 2025-2026 Gervithrall Systems GmbH. All Rights Reserved.
+ *
+ * This software is the confidential and proprietary information of
+ * Gervithrall Systems GmbH ("Confidential Information"). You shall not
+ * disclose such Confidential Information and shall use it only in
+ * accordance with the terms of the license agreement you entered into
+ * with Gervithrall Systems GmbH.
+ *
+ * GERVITHRALL SYSTEMS GMBH MAKES NO REPRESENTATIONS OR WARRANTIES ABOUT
+ * THE SUITABILITY OF THE SOFTWARE, EITHER EXPRESS OR IMPLIED, INCLUDING
+ * BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS
+ * FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. GERVITHRALL SYSTEMS GMBH
+ * SHALL NOT BE LIABLE FOR ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT
+ * OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
+ */
+
+/* =========================
+   Fonts
+   ========================= */
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("fonts/Montserrat-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat SemiBold";
+    src: url("fonts/Montserrat-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat Bold";
+    src: url("fonts/Montserrat-Bold.ttf");
+}
+
+/* =========================
+   
+   ========================= */
+
+
+
+
+
+
+.root {
+    -fx-font-family: "Montserrat";
+
+    -theme-primary: #004761;
+    -theme-secondary: #555756;
+    -theme-background: #EAF5F9;
+    -theme-text: #333333;
+    -theme-button: #A5A5A5;
+}
+
+.main-menu-root,
+.mode-menu-root,
+.settings-root,
+.help-root,
+.game-root,
+.end-screen-root {
+    -fx-background-color: -theme-background;
+    -fx-padding: 70 306;
+}
+
+.screen-title {
+    -fx-font-family: "Montserrat Bold";
+    -fx-font-size: 48px;
+    -fx-text-fill: -theme-primary;
+}
+
+.section-title {
+    -fx-font-size: 32px;
+    -fx-font-family: "Montserrat SemiBold";
+    -fx-text-fill: -theme-primary;
+}
+
+.text {
+    -fx-font-size: 16px;
+    -fx-text-fill: -theme-text;
+}
+.turn-title {
+    -fx-font-size: 16px;
+    -fx-font-family: "Montserrat Bold";
+    -fx-text-fill: -theme-text;
+}
+
+.button-secondary,
+.button-danger {
+    -fx-background-color: -theme-button;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-family: "Montserrat SemiBold";
+    -fx-background-radius: 6;
+    -fx-padding: 10 20;
+    -fx-cursor: hand;
+}
+
+.button-primary,
+.game-tile {
+    -fx-background-color: white;
+    -fx-border-color: -theme-primary;
+    -fx-border-width: 2;
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+    -fx-font-size: 32px;
+    -fx-font-family: "Montserrat Bold";
+    -fx-text-fill: -theme-primary;
+}
+
+
+
+
+
+
+
+/* =========================
+   Combo Box
+   ========================= */
+
+.combo-box {
+    -fx-background-color: white;
+    -fx-border-color: -theme-primary;
+    -fx-border-width: 2;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-font-size: 16px;
+    -fx-pref-width: 220;
+    -fx-pref-height: 42;
+}
+
+.combo-box .list-cell {
+    -fx-text-fill: -theme-primary;
+    -fx-font-size: 16px;
+    -fx-padding: 8 12;
+}
+
+.combo-box .arrow {
+    -fx-background-color: -theme-primary;
+}
+
+.combo-box .arrow-button {
+    -fx-background-color: transparent;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: white;
+    -fx-border-color: -theme-primary;
+}
+
+.combo-box-popup .list-cell:filled:selected {
+    -fx-background-color: -theme-primary;
+    -fx-text-fill: white;
+}
+
+

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  
+1.0 2026-04-22 Domenik Schütz
+
+Copyright (c) 2025-2026 Gervithrall Systems GmbH. All Rights Reserved.
+
+This software is the confidential and proprietary information of
+Gervithrall Systems GmbH ("Confidential Information"). You shall not
+disclose such Confidential Information and shall use it only in
+accordance with the terms of the license agreement you entered into
+with Gervithrall Systems GmbH.
+
+GERVITHRALL SYSTEMS GMBH MAKES NO REPRESENTATIONS OR WARRANTIES ABOUT
+THE SUITABILITY OF THE SOFTWARE, EITHER EXPRESS OR IMPLIED, INCLUDING
+BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. GERVITHRALL SYSTEMS GMBH
+SHALL NOT BE LIABLE FOR ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT
+OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
+-->
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21.0.2"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="segeleven.ife.entertainment.uifourconnectcontroller.FourConnectGameController"
+            stylesheets="@style.css" styleClass="game-root">
+
+	<top>
+		<Label text="%game.title" styleClass="screen-title" BorderPane.alignment="CENTER"/>
+	</top>
+
+	<center>
+		<HBox alignment="CENTER" spacing="150">
+		
+			<GridPane fx:id="gridPane" hgap="12" vgap="12" alignment="CENTER" styleClass="game-grid"/>
+			
+			
+		<VBox alignment="CENTER" spacing="50">
+			
+			<!-- Zeigt den aktuellen "Turn" an also wer gerade am Zug ist (aktuell drann ist) -->
+			<VBox fx:id="turnBox" spacing="10" alignment="TOP_LEFT" styleClass="turn-box">
+				<Label text="%game.turn" styleClass="turn-title"/>
+				<Label fx:id="statusLabel" text="" styleClass="turn-value"/>
+			</VBox>
+		
+			<VBox spacing="24" alignment="BOTTOM_LEFT" styleClass="game-button-bar">
+				<!-- Setzt das Grid zurück -->
+				<Button text="%menu.restart"
+            			prefWidth="150" prefHeight="50"
+				        onAction="#restartGame"
+				        styleClass="button-secondary"/>
+				<!-- Zeigt die Hilfe Seite an -->
+				<Button text="%menu.help"
+           		 		prefWidth="150" prefHeight="50"
+				        onAction="#openHelp"
+				        styleClass="button-secondary"/>
+				<!-- Kehrt zurück zum Hauptmenü zurück -->
+				<Button text="%menu.back"
+          		  		prefWidth="150" prefHeight="50"
+				        onAction="#backToMainMenu"
+				        styleClass="button-secondary"/>
+			</VBox>
+		</VBox>
+		
+		</HBox>
+	</center>
+
+
+
+</BorderPane>

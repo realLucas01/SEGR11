@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  
+1.0 2026-04-22 Domenik Schütz
+
+Copyright (c) 2025-2026 Gervithrall Systems GmbH. All Rights Reserved.
+
+This software is the confidential and proprietary information of
+Gervithrall Systems GmbH ("Confidential Information"). You shall not
+disclose such Confidential Information and shall use it only in
+accordance with the terms of the license agreement you entered into
+with Gervithrall Systems GmbH.
+
+GERVITHRALL SYSTEMS GMBH MAKES NO REPRESENTATIONS OR WARRANTIES ABOUT
+THE SUITABILITY OF THE SOFTWARE, EITHER EXPRESS OR IMPLIED, INCLUDING
+BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. GERVITHRALL SYSTEMS GMBH
+SHALL NOT BE LIABLE FOR ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT
+OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
+-->
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ComboBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21.0.2"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="segeleven.ife.entertainment.uicontroller.SettingsController"
+            stylesheets="@style.css" styleClass="settings-root">
+
+            
+            
+            
+    <top>
+        <Label text="%settings.title" styleClass="screen-title" BorderPane.alignment="CENTER"/>
+    </top>
+        
+            
+    <!-- Hier kann man die Sprache der Applikation verändern -->
+    <center>
+        <VBox alignment="CENTER" spacing="20">
+            
+            <ComboBox fx:id="languageBox"
+                      onAction="#changeLanguage"
+                      promptText="%settings.language"
+                      styleClass="combo-box"/>
+                      
+            <!--  Ändern des Aussehens der App, NUR DUMMY!!! -->
+            <ComboBox fx:id="themeBox" 
+            		  onAction="#changeTheme"
+            		  promptText="%settings.theme" 
+            		  styleClass="combo-box"/>           		  
+
+        </VBox>
+    </center>
+    
+        <bottom>
+    	<GridPane alignment="CENTER" hgap="30" vgap="30">
+    	
+            <Label prefWidth="150" prefHeight="50"
+                    GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                    
+            <Label prefWidth="150" prefHeight="50"
+                    GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+                    
+            <Label prefWidth="150" prefHeight="50"
+                    GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+                    
+			<Button text="%menu.back"
+            		prefWidth="150" prefHeight="50"
+                    onAction="#backToMainMenu"
+                    GridPane.rowIndex="0" GridPane.columnIndex="3"
+                    styleClass="button-secondary"/>          
+                                        
+        </GridPane>
+    </bottom>
+    
+</BorderPane>
