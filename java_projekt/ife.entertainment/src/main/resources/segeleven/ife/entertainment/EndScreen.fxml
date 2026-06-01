@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  
+1.0 2026-04-22 Domenik Schütz
+
+Copyright (c) 2025-2026 Gervithrall Systems GmbH. All Rights Reserved.
+
+This software is the confidential and proprietary information of
+Gervithrall Systems GmbH ("Confidential Information"). You shall not
+disclose such Confidential Information and shall use it only in
+accordance with the terms of the license agreement you entered into
+with Gervithrall Systems GmbH.
+
+GERVITHRALL SYSTEMS GMBH MAKES NO REPRESENTATIONS OR WARRANTIES ABOUT
+THE SUITABILITY OF THE SOFTWARE, EITHER EXPRESS OR IMPLIED, INCLUDING
+BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. GERVITHRALL SYSTEMS GMBH
+SHALL NOT BE LIABLE FOR ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT
+OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
+-->
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.GridPane?>
+
+
+<BorderPane xmlns="http://javafx.com/javafx/21.0.2"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="segeleven.ife.entertainment.uifourconnectcontroller.FourConnectEndScreenController"
+            stylesheets="@style.css" styleClass="end-screen-root">
+
+    <top>
+        <Label text="%end.title" styleClass="screen-title" BorderPane.alignment="CENTER"/>
+    </top>
+
+
+    <center>
+        <VBox alignment="CENTER" spacing="20">
+
+        	<!-- Label wer gewonnen hat: Zeigt an wer der Gewinner der Runde ist -->
+            <Label fx:id="resultLabel" styleClass="screen-title"/>
+       </VBox>
+    </center>
+    
+
+    <bottom>
+    	<GridPane alignment="CENTER" hgap="30" vgap="30">
+
+            <Button text="%menu.newRound"
+            		prefWidth="150" prefHeight="50"
+            		onAction="#restartGame"
+                    GridPane.rowIndex="0" GridPane.columnIndex="0"
+                    styleClass="button-secondary"/>
+
+            <Label prefWidth="150" prefHeight="50"
+                    GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+            <Label prefWidth="150" prefHeight="50"
+                    GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+
+			<Button text="%menu.back"
+            		prefWidth="150" prefHeight="50"
+                    onAction="#backToMainMenu"
+                    GridPane.rowIndex="0" GridPane.columnIndex="3"
+                    styleClass="button-secondary"/>
+
+        </GridPane>
+    </bottom>
+
+
+
+
+</BorderPane>
