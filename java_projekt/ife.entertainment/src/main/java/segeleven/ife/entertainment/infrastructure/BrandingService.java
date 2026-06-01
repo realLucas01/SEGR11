@@ -40,12 +40,7 @@ public class BrandingService {
   /**
    * Privater Konstruktor mit Standardwerten für das Default-Branding.
    */
-  private BrandingService() {
-    this.primaryColor = "#004761";
-    this.secondaryColor = "#e94560";
-    this.logoPath = "/segeleven/ife.entertainment/images/logo_default.png";
-    this.airlineName = "Default Airline";
-  }
+  private BrandingService() {setTheme("gervithrall");}
 
   /**
    * Gibt die einzige Instanz des BrandingService zurück.
@@ -94,6 +89,13 @@ public class BrandingService {
   public String getAirlineName() {
     return airlineName;
   }
+
+  /**
+   * Gibt die ID der aktuellen Airline zurück.
+   *
+   * @return der Airline-ID
+   */
+  public String getCurrentThemeId() { return currentThemeId;}
 
   /**
    * Setzt die Primärfarbe.
