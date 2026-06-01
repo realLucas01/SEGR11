@@ -16,8 +16,8 @@ state "        4-Connect        " as FourConnect
 state "     Hilfe / Regeln      " as HelpRules
 state "     Hilfe Hauptmenü     " as Help
 state "      Einstellungen      " as Settings
-state "    Winning Highlight    " as WinningHighlight
-state "    Gewinnkombination    " as Result
+state "    Gewinnkombination    " as WinningHighlight
+state "         Ergebnis        " as Result
 
 [*] --> Gamemenu : Start
 
