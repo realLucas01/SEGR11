@@ -194,7 +194,7 @@ public class FourConnectGame implements IGame<FourConnectGameBoard> {
     }
 	// Überprüfen, ob gewonnen
     if (rules.checkWin(gameBoard, players[currentPlayerIndex])) {
-      winningPositions = rules.getWinningPositions();
+      winningPositions = rules.getLastWinningPositions();
       state = GameState.Won;
     }
     return state;

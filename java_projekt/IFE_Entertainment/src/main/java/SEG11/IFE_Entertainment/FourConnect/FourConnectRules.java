@@ -152,13 +152,13 @@ public class FourConnectRules implements IRuleSet<FourConnectGameBoard, FourConn
 	}
 	
 	/**
-	* Gibt die zuletzt ermittelte Gewinnkombination zurück.
-	*
-	* @return Liste der vier Gewinnpositionen oder eine leere Liste
-	*/
-	public List<Position> getWinningPositions() {
-		return winningPositions;
-	}	
+	 * Gibt die zuletzt ermittelte Gewinnkombination zurück.
+	 *
+	 * @return Liste der vier Gewinnpositionen oder eine leere Liste
+	 */
+	public List<Position> getLastWinningPositions() {
+	  return winningPositions;
+	}
 	
 	/**
 	 * Ermittelt die vier Positionen, die zum Sieg des Spielers geführt haben.
