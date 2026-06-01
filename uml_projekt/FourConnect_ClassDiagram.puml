@@ -63,7 +63,8 @@ package "FourConnect"{
   class FourConnectRules{
     + checkWin(board : FourConnectGameBoard, player : FourConnectPlayer) : boolean
     + checkTie(board : FourConnectGameBoard) : boolean
-    + determineWinningPositions(board : FourConnectGameBoard, player : FourConnectPlayer) : List<Position>
+    + getLastWinningPositions() : List<Position>
+    - determineWinningPositions(first : Position, second : Position, third : Position, fourth : Position) : void
   }
 
   class FourConnectGame {
