@@ -70,13 +70,13 @@ public class FourConnectRules implements IRuleSet<FourConnectGameBoard, FourConn
 						&& board.getCellOwner(new Position(i + 1, j)).equals(player)
 						&& board.getCellOwner(new Position(i + 2, j)).equals(player)
 						&& board.getCellOwner(new Position(i + 3, j)).equals(player)) {
-					winningPositions = determineWinningPositions(
+					determineWinningPositions(
 						    new Position(i, j),
 						    new Position(i + 1, j),
 						    new Position(i + 2, j),
 						    new Position(i + 3, j));
 					return true;
-				}
+						}
 			}
 		}
 
@@ -88,7 +88,7 @@ public class FourConnectRules implements IRuleSet<FourConnectGameBoard, FourConn
 						&& board.getCellOwner(new Position(i, j + 1)).equals(player)
 						&& board.getCellOwner(new Position(i, j + 2)).equals(player)
 						&& board.getCellOwner(new Position(i, j + 3)).equals(player)) {
-					winningPositions = determineWinningPositions(
+					determineWinningPositions(
 						    new Position(i, j),
 						    new Position(i, j + 1),
 						    new Position(i, j + 2),
@@ -106,7 +106,7 @@ public class FourConnectRules implements IRuleSet<FourConnectGameBoard, FourConn
 						&& board.getCellOwner(new Position(i + 1, j + 1)).equals(player)
 						&& board.getCellOwner(new Position(i + 2, j + 2)).equals(player)
 						&& board.getCellOwner(new Position(i + 3, j + 3)).equals(player)) {
-					winningPositions = determineWinningPositions(
+					determineWinningPositions(
 						    new Position(i, j),
 						    new Position(i + 1, j + 1),
 						    new Position(i + 2, j + 2),
@@ -124,7 +124,7 @@ public class FourConnectRules implements IRuleSet<FourConnectGameBoard, FourConn
 						&& board.getCellOwner(new Position(i - 1, j + 1)).equals(player)
 						&& board.getCellOwner(new Position(i - 2, j + 2)).equals(player)
 						&& board.getCellOwner(new Position(i - 3, j + 3)).equals(player)) {
-					winningPositions = determineWinningPositions(
+					determineWinningPositions(
 						    new Position(i, j),
 						    new Position(i - 1, j + 1),
 						    new Position(i - 2, j + 2),
@@ -167,13 +167,17 @@ public class FourConnectRules implements IRuleSet<FourConnectGameBoard, FourConn
 	 * @param player Spieler, dessen Gewinnkombination gesucht wird
 	 * @return Liste der vier Gewinnpositionen oder eine leere Liste
 	 */
-	private List<Position> determineWinningPositions(Position first, Position second, Position third, Position fourth) {
-		  List<Position> positions = new ArrayList<>();
-		  positions.add(first);
-		  positions.add(second);
-		  positions.add(third);
-		  positions.add(fourth);
-		  return positions;
+	private void determineWinningPositions(
+		    Position first,
+		    Position second,
+		    Position third,
+		    Position fourth) {
+
+		  winningPositions.add(first);
+		  winningPositions.add(second);
+		  winningPositions.add(third);
+		  winningPositions.add(fourth);
 	}
+	
 	
 }
