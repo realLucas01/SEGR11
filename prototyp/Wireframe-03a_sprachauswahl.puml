@@ -1,4 +1,4 @@
-@startuml
+@startuml Sprachauswahl
 title 4-Connect - Sprachauswahl (Wireframe)
 
 skinparam defaultFontName Monospaced

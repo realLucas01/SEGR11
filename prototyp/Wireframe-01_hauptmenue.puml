@@ -1,4 +1,4 @@
-@startuml
+@startuml Hauptmenü
 title 4-Connect - Hauptmenü (Wireframe)
 
 skinparam defaultFontName Monospaced
@@ -7,12 +7,15 @@ salt
 {
   {+
     {^ **Hauptmenü** }
-    .
-    { **Spielauswahl** }
-    {[ 4-Connect ]}{[    Spiel 2    ]}{[ Spiel 3 ]}{[ Spiel 4 ]}
-    {[  Spiel 5  ]}{[    Spiel 6    ]}{[ Spiel 7 ]}{[ Spiel 8 ]}
-    .
-    {[    Help   ]}{[ Einstellungen ]}{         }{[ Beenden ]}
+.
+.
+    {[ Vier Gewinnt ]}{[ Spiel 2 ]}{[ Spiel 3 ]}{[   Spiel 4   ]}
+    {[   Spiel 5    ]}{[ Spiel 6 ]}{[ Spiel 7 ]}{[   Spiel 8   ]}
+.
+.
+.
+    {[Hilde / Regeln]}{[ Beenden ]}{           }{[Einstellungen]}
+.
   }
 }
 @enduml

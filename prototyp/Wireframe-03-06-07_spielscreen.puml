@@ -1,4 +1,4 @@
-@startuml
+@startuml Spielansicht
 title 4-Connect - Spielansicht (Wireframe)
 
 skinparam defaultFontName Monospaced
@@ -6,10 +6,9 @@ skinparam defaultFontName Monospaced
 salt
 {
   {+
-    {^ **4-Connect **}
-    .
-    { **Spielfeld (2D)** 
+    {^ **Vier Gewinnt**}
 .
+    {
     o o o o o o o
     o o o o o o o
     o o o o o o o
@@ -17,12 +16,12 @@ salt
     o o o o o o o
     o o o o o o o
     
-    } {}{}{}{}{} { 
+    } {} {} {} {} {} {} {} {} {} {} {} { 
       
       **Am Zug:** 
       < "Spieler 1" / "Spieler 2" >
       .
-      [  Neue Runde  ]
+      [ Zurücksetzen ]
       [Hilfe / Regeln]
       [   Hauptmenü  ]
     }
