@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  
+1.0 2026-04-22 Domenik Schütz
+
+Copyright (c) 2025-2026 Gervithrall Systems GmbH. All Rights Reserved.
+
+This software is the confidential and proprietary information of
+Gervithrall Systems GmbH ("Confidential Information"). You shall not
+disclose such Confidential Information and shall use it only in
+accordance with the terms of the license agreement you entered into
+with Gervithrall Systems GmbH.
+
+GERVITHRALL SYSTEMS GMBH MAKES NO REPRESENTATIONS OR WARRANTIES ABOUT
+THE SUITABILITY OF THE SOFTWARE, EITHER EXPRESS OR IMPLIED, INCLUDING
+BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. GERVITHRALL SYSTEMS GMBH
+SHALL NOT BE LIABLE FOR ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT
+OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
+-->
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21.0.2"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="segeleven.ife.entertainment.uifourconnectcontroller.FourConnectModeMenuController"
+            stylesheets="@style.css" styleClass="mode-menu-root">
+
+	<!-- Zeigt den Namen des gewählten Spiels an -->
+    <top>
+        <Label text="%mode.title" styleClass="screen-title" BorderPane.alignment="CENTER"/>
+    </top>
+
+
+    <center>
+        <GridPane alignment="CENTER" hgap="30" vgap="30">
+        
+            <Button text="%mode.twoPlayer"
+                    prefWidth="200" prefHeight="100"
+                    onAction="#startGame"
+                    GridPane.rowIndex="0" GridPane.columnIndex="0"
+                    styleClass="button-primary"/>
+                    
+            <Button text="%mode.easyBot"
+                    prefWidth="200" prefHeight="100"
+                    onAction="#startGameEasyBot"
+                    GridPane.rowIndex="0" GridPane.columnIndex="1"
+                    styleClass="button-primary"/>
+                    
+            <Button text="%mode.hardBot"
+                    prefWidth="200" prefHeight="100"
+                    onAction="#startGameHardBot"
+                    GridPane.rowIndex="0" GridPane.columnIndex="2"
+                    styleClass="button-primary"/>
+                    
+        </GridPane>
+     </center>
+
+
+    <bottom>
+    	<GridPane alignment="CENTER" hgap="30" vgap="30">
+    	
+            <Label prefWidth="150" prefHeight="50"
+                    GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                    
+            <Label prefWidth="150" prefHeight="50"
+                    GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+                    
+            <Label prefWidth="150" prefHeight="50"
+                    GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+                    
+			<Button text="%menu.back"
+            		prefWidth="150" prefHeight="50"
+                    onAction="#backToMainMenu"
+                    GridPane.rowIndex="0" GridPane.columnIndex="3"
+                    styleClass="button-secondary"/>          
+                                        
+        </GridPane>
+    </bottom>
+
+</BorderPane>
+
+<!--
+ Ich habe mir gedacht das man einfach, um nicht sinnlose fxml Datein anzulegen, einfach in die Mode Selection herein packen
+ kann Player vs Player und dann halt nicht Player vs Bot, sondern direkt als Option das man gegen einen einfachen
+ und schweren Bot spielen kann ...
+-->
