@@ -23,57 +23,78 @@ control "       FourConnectBotStrategy       " as Strategy
 |||
 control "       App       " as App
 
+
+
 Fluggast -> Controller : handleColumnInput(column)
-
-Controller -> Game : dropDisc(column)
-Game --> Controller : GameState
-
-Controller -> Controller : updateBoard()
 |||
-
-alt GameState == Won
-  Controller -> App : setRoot("EndScreen")
+alt game.getStatus() != GameState.Running
+  Controller --> Fluggast : return
 |||
-else GameState == Tied
-  Controller -> App : setRoot("EndScreen")
+else Spalte voll
+  Controller -> Game : getBoard()
+  Game --> Controller : FourConnectGameBoard
+  Controller -> Controller : statusLabel.setText("Spalte ist voll!")
+  Controller --> Fluggast : return
 |||
-else GameState == Running
-  Controller -> Game : playerTurn()
-  Controller -> Controller : updateStatus()
-|||
+else Zug möglich
+  Controller -> Game : dropDisc(column)
+  Game --> Controller : GameState
 
-  alt Bot-Spieler aktiv
+  Controller -> Controller : updateBoard()
+  |||
 
-    Controller -> Game : getPlayers()
-    Game --> Controller : FourConnectPlayer[]
+  alt GameState == Won
+    Controller -> App : setRoot("EndScreen")
+  |||
+  else GameState == Tied
+    Controller -> App : setRoot("EndScreen")
+  |||
+  else GameState == Running
+    Controller -> Game : playerTurn()
+    Controller -> Controller : updateStatus()
+  |||
+  end
+  |||
 
-    Controller -> Player : getStrategy()
-    Player --> Controller : strategy
+  alt oneBotPlayer == true
+    Controller -> Controller : gridPane.setDisable(true)
+    Controller -> Controller : botDelayTimer = new PauseTransition(Duration.seconds(1.0))
+    Controller -> Controller : botDelayTimer.setOnFinished(event)
 
-    Controller -> Strategy : chooseMove(board)
+    Controller -> Game : playBotTurn()
+    Game -> Player : getStrategy()
+    Player --> Game : MoveStrategy
+
+    Game -> Strategy : chooseMove(gameBoard)
     Strategy -> Game : dropDisc(botColumn)
     Game --> Strategy : GameState
-
-    Strategy--> Controller: GameState
+    Strategy --> Game : GameState
+    Game --> Controller : GameState
 
     Controller -> Controller : updateBoard()
+    Controller -> Controller : gridPane.setDisable(false)
     |||
+
     alt GameState == Won
       Controller -> App : setRoot("EndScreen")
     |||
     else GameState == Tied
+      Controller -> Controller : statusLabel.setText("Unentschieden!")
       Controller -> App : setRoot("EndScreen")
     |||
     else GameState == Running
       Controller -> Game : playerTurn()
       Controller -> Controller : updateStatus()
-      |||
+    |||
     end
     |||
+
+    Controller -> Controller : botDelayTimer.play()
+  else oneBotPlayer == false
+  |||
   end
   |||
 end
 |||
 |||
-
 @enduml
