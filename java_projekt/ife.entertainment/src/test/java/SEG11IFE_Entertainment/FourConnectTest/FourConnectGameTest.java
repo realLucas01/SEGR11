@@ -1,6 +1,8 @@
 package SEG11IFE_Entertainment.FourConnectTest;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -40,6 +42,7 @@ class FourConnectGameTest {
 
         assertEquals(0, result);
         assertEquals(GameState.Running, game.getStatus());
+        assertFalse(game.getOneBotPlayer());
 
         assertNotNull(game.getBoard());
         assertNotNull(game.getPlayers());
@@ -177,5 +180,19 @@ class FourConnectGameTest {
         game.playBotTurn();
 
         assertNotNull(game.getBoard());
+    }
+
+    /**
+     * Testet, dass nach Spielende kein Bot-Zug mehr ausgeführt wird.
+     */
+    @Test
+    void playBotTurnAfterGameEndedTest() {
+
+        game.initFourConnectGame(Player.HUMAN, Player.EASYBOT);
+        game.setStatus(GameState.Won);
+
+        GameState state = assertDoesNotThrow(() -> game.playBotTurn());
+
+        assertEquals(GameState.Won, state);
     }
 }
