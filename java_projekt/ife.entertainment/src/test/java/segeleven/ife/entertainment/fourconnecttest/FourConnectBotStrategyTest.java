@@ -1,4 +1,4 @@
-package segeleven.ife.entertainment.fourconnect;
+package segeleven.ife.entertainment.fourconnecttest;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;

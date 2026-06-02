@@ -1,4 +1,4 @@
-package segeleven.ife.entertainment.infrastructure;
+package segeleven.ife.entertainment.infrastructuretest;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertSame;

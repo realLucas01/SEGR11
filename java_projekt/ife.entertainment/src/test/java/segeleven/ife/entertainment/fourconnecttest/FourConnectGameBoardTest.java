@@ -1,4 +1,4 @@
-package segeleven.ife.entertainment.fourconnect;
+package segeleven.ife.entertainment.fourconnecttest;
 
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -209,7 +209,7 @@ class FourConnectGameBoardTest {
         for (int row = 0; row < board.getRows(); row++) {
           assertEquals(
           board.getCellOwner(col, row).getType(), copy.getCellOwner(col, row).getType()
-          );
+              );
         }
       }
     }
