@@ -18,9 +18,7 @@
  */
 
 package segeleven.ife.entertainment.uifourconnectcontroller;
-
 import java.io.IOException;
-
 import javafx.animation.PauseTransition;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -28,7 +26,6 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.util.Duration;
-
 import segeleven.ife.entertainment.App;
 import segeleven.ife.entertainment.fourconnect.FourConnectGame;
 import segeleven.ife.entertainment.fourconnect.Player;
