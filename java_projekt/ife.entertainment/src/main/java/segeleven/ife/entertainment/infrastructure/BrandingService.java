@@ -36,11 +36,14 @@ public class BrandingService {
   private String secondaryColor;
   private String logoPath;
   private String airlineName;
+  private String currentThemeId;
 
   /**
    * Privater Konstruktor mit Standardwerten für das Default-Branding.
    */
-  private BrandingService() {setTheme("gervithrall");}
+  private BrandingService() {
+    setTheme("gervithrall");
+  }
 
   /**
    * Gibt die einzige Instanz des BrandingService zurück.
@@ -95,7 +98,9 @@ public class BrandingService {
    *
    * @return der Airline-ID
    */
-  public String getCurrentThemeId() { return currentThemeId;}
+  public String getCurrentThemeId() {
+    return currentThemeId;
+  }
 
   /**
    * Setzt die Primärfarbe.
@@ -139,6 +144,7 @@ public class BrandingService {
    * @param themeId die ID des gewünschten Themes
    */
   public void setTheme(String themeId) {
+    this.currentThemeId = themeId;
     switch (themeId) {
 
       case "gervithrall":
@@ -177,6 +183,7 @@ public class BrandingService {
         break;
 
       default:
+        this.currentThemeId = "gervithrall";
         this.primaryColor = "#004761";
         this.secondaryColor = "#555756";
         this.airlineName = "Gervithrall Systems";
