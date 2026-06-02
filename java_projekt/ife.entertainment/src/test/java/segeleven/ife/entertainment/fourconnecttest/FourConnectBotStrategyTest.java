@@ -18,12 +18,11 @@ class FourConnectBotStrategyTest {
   private FourConnectGameBoard board;
 
   /**
-   * Setzt eine Scheibe direkt auf eine bestimmte Position (ohne Schwerkraft),
-   * um Testzustände schnell aufzubauen.
+   * Setzt eine Scheibe direkt auf eine bestimmte Position (ohne Schwerkraft), um
+   * Testzustände schnell aufzubauen.
    */
   private void placeAt(FourConnectGameBoard b, int col, int row, Player type) {
-    b.setCellValue(new Position(col, row),
-        new FourConnectPlayer(type, null, null));
+    b.setCellValue(new Position(col, row), new FourConnectPlayer(type, null, null));
   }
 
   @BeforeEach

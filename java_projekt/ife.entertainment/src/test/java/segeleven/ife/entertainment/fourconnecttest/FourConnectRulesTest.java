@@ -6,8 +6,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
 
 /**
- * Unit Tests für FourConnectRules
- * Fokus: vollständige Abdeckung aller Win-/Tie-Logiken inkl. Edge Cases
+ * Unit Tests für FourConnectRules Fokus: vollständige Abdeckung aller
+ * Win-/Tie-Logiken inkl. Edge Cases
  */
 class FourConnectRulesTest {
 
