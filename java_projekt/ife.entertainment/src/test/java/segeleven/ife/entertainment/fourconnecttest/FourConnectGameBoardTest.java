@@ -208,8 +208,8 @@ class FourConnectGameBoardTest {
       for (int col = 0; col < board.getColumns(); col++) {
         for (int row = 0; row < board.getRows(); row++) {
           assertEquals(
-              board.getCellOwner(col, row).getType(), copy.getCellOwner(col, row).getType()
-              );
+          board.getCellOwner(col, row).getType(), copy.getCellOwner(col, row).getType()
+          );
         }
       }
     }
