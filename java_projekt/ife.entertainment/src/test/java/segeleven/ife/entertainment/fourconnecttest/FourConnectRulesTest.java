@@ -38,7 +38,7 @@ class FourConnectRulesTest {
 
   @Test
   void horizontalWinDetected() {
-    FourConnectRules rules = new FourConnectRules();
+    final FourConnectRules rules = new FourConnectRules();
     FourConnectGameBoard board = createBoard();
     FourConnectPlayer p = human();
 
@@ -52,7 +52,7 @@ class FourConnectRulesTest {
 
   @Test
   void verticalWinDetected() {
-    FourConnectRules rules = new FourConnectRules();
+    final FourConnectRules rules = new FourConnectRules();
     FourConnectGameBoard board = createBoard();
     FourConnectPlayer p = human();
 
@@ -66,7 +66,7 @@ class FourConnectRulesTest {
 
   @Test
   void diagonalDownRightWinDetected() {
-    FourConnectRules rules = new FourConnectRules();
+    final FourConnectRules rules = new FourConnectRules();
     FourConnectGameBoard board = createBoard();
     FourConnectPlayer p = human();
 
@@ -80,7 +80,7 @@ class FourConnectRulesTest {
 
   @Test
   void diagonalDownLeftWinDetected() {
-    FourConnectRules rules = new FourConnectRules();
+    final FourConnectRules rules = new FourConnectRules();
     FourConnectGameBoard board = createBoard();
     FourConnectPlayer p = human();
 
@@ -98,7 +98,7 @@ class FourConnectRulesTest {
 
   @Test
   void noWinWhenInterruptedLine() {
-    FourConnectRules rules = new FourConnectRules();
+    final FourConnectRules rules = new FourConnectRules();
     FourConnectGameBoard board = createBoard();
     FourConnectPlayer p = human();
     FourConnectPlayer enemy = bot();
@@ -113,7 +113,7 @@ class FourConnectRulesTest {
 
   @Test
   void noWinInsufficientPieces() {
-    FourConnectRules rules = new FourConnectRules();
+    final FourConnectRules rules = new FourConnectRules();
     FourConnectGameBoard board = createBoard();
     FourConnectPlayer p = human();
 
@@ -130,7 +130,7 @@ class FourConnectRulesTest {
 
   @Test
   void tieDetectedWhenBoardFull() {
-    FourConnectRules rules = new FourConnectRules();
+    final FourConnectRules rules = new FourConnectRules();
     FourConnectGameBoard board = createBoard();
 
     FourConnectPlayer p1 = human();
@@ -147,7 +147,7 @@ class FourConnectRulesTest {
 
   @Test
   void tieFalseWhenBoardNotFull() {
-    FourConnectRules rules = new FourConnectRules();
+    final FourConnectRules rules = new FourConnectRules();
     FourConnectGameBoard board = createBoard();
 
     assertFalse(rules.checkTie(board));
