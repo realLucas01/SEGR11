@@ -155,4 +155,7 @@
     -fx-text-fill: white;
 }
 
-
+.combo-box-popup .list-cell:hover {
+    -fx-background-color: white;
+    -fx-text-fill: -theme-primary;
+}
