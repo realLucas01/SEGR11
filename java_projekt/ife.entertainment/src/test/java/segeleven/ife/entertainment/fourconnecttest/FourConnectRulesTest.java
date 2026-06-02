@@ -4,7 +4,6 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
-
 import segeleven.ife.entertainment.fourconnect.FourConnectGameBoard;
 import segeleven.ife.entertainment.fourconnect.FourConnectPlayer;
 import segeleven.ife.entertainment.fourconnect.FourConnectRules;

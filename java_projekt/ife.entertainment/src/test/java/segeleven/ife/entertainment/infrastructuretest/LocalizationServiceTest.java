@@ -6,7 +6,6 @@ import static org.junit.jupiter.api.Assertions.assertSame;
 import java.util.Locale;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import segeleven.ife.entertainment.infrastructure.LocalizationService;
 
 class LocalizationServiceTest {

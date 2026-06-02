@@ -9,7 +9,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import segeleven.ife.entertainment.fourconnect.FourConnectGame;
 import segeleven.ife.entertainment.fourconnect.Player;
 import segeleven.ife.entertainment.gamecore.GameState;
