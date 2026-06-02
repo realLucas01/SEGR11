@@ -17,7 +17,7 @@ skinparam linetype ortho
 
   Launcher -> App
 ' ──────────────────────────────────────────
-package "Infrastructure" {
+package "infrastructure" {
 
   class BrandingService {
     - {static} instance: BrandingService
@@ -59,7 +59,7 @@ package "Infrastructure" {
 }
 
 ' ──────────────────────────────────────────
-package "FourConnect"{
+package "fourconnect"{
   class FourConnectRules{
     + checkWin(board : FourConnectGameBoard, player : FourConnectPlayer) : boolean
     + checkTie(board : FourConnectGameBoard) : boolean
@@ -186,7 +186,7 @@ class FourConnectBotStrategy {
 
 
 
-package "Game Core" {
+package "gamecore" {
 
   interface IRuleSet <<interface>> {
     + checkWin(board : IPlayArea, player : PlayerT) : boolean
@@ -236,7 +236,7 @@ package "Game Core" {
 }
 
 ' ──────────────────────────────────────────
-package "UIController" {
+package "uicontroller" {
 
 
   class MainMenuController {
@@ -286,7 +286,7 @@ package "UIController" {
 
 
 
-package "UIFourConnectController"{
+package "uifourconnectcontroller"{
 
   class FourConnectGameController {
     - gridPane: GridPane
