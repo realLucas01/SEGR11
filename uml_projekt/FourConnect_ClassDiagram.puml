@@ -17,7 +17,7 @@ skinparam linetype ortho
 
   Launcher -> App
 ' ──────────────────────────────────────────
-package "infrastructure" {
+package "segeleven.ife.entertainment.infrastructure" {
 
   class BrandingService {
     - {static} instance: BrandingService
@@ -59,7 +59,7 @@ package "infrastructure" {
 }
 
 ' ──────────────────────────────────────────
-package "fourconnect"{
+package "segeleven.ife.entertainment.fourconnect"{
   class FourConnectRules{
     - winningPositions : List<Position>
     + checkWin(board : FourConnectGameBoard, player : FourConnectPlayer) : boolean
@@ -187,9 +187,9 @@ class FourConnectBotStrategy {
 
 
 
-package "gamecore" {
+package "segeleven.ife.entertainment.gamecore" {
 
-  interface IRuleSet <<interface>> {
+  interface RuleSet <<interface>> {
     + checkWin(board : IPlayArea, player : PlayerT) : boolean
     + checkTie(board : IPlayArea) : boolean
   }
@@ -203,16 +203,16 @@ package "gamecore" {
     Tied
   }
 
-  interface IPlayArea <<interface>> {
+  interface PlayArea <<interface>> {
     + isFull() : Boolean
     + clear() : Integer
   }
 
-  interface IMoveStrategy <<interface>> {
+  interface MoveStrategy <<interface>> {
     + chooseMove(board : IPlayArea) : GameState
   }
 
-  interface IGame <<interface>> {
+  interface Game <<interface>> {
     + getStatus() : GameState
     + setStatus(state : GameState) : void
     + getBoard() : IPlayArea
@@ -222,12 +222,12 @@ package "gamecore" {
 
 
   ' Realizations
-  FourConnectRules      ..|> IRuleSet
-  FourConnectGame       ..|> IGame
-  FourConnectGameBoard  ..|> IPlayArea
-  FourConnectBotStrategy ..|> IMoveStrategy
-  Easy ..|> IMoveStrategy
-  Hard ..|> IMoveStrategy
+  FourConnectRules      ..|> RuleSet
+  FourConnectGame       ..|> Game
+  FourConnectGameBoard  ..|> PlayArea
+  FourConnectBotStrategy ..|> MoveStrategy
+  Easy ..|> MoveStrategy
+  Hard ..|> MoveStrategy
 
   ' Compositions / associations inside Game Core
   FourConnectGame "1" *--> "*"    FourConnectPlayer
@@ -237,7 +237,7 @@ package "gamecore" {
 }
 
 ' ──────────────────────────────────────────
-package "uicontroller" {
+package "segeleven.ife.entertainment.uicontroller" {
 
 
   class MainMenuController {
@@ -286,7 +286,7 @@ package "uicontroller" {
 
 
 
-package "uifourconnectcontroller"{
+package "segeleven.ife.entertainment.uifourconnectcontroller"{
 
   class FourConnectGameController {
     - gridPane: GridPane
