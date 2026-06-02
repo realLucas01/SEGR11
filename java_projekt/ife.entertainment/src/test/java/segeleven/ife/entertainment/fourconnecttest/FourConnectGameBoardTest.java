@@ -17,8 +17,7 @@ class FourConnectGameBoardTest {
    * Hilfsmethode: setzt eine Scheibe direkt auf eine Position.
    */
   private void placeAt(int col, int row, Player type) {
-    board.setCellValue(new Position(col, row),
-        new FourConnectPlayer(type, null, null));
+    board.setCellValue(new Position(col, row), new FourConnectPlayer(type, null, null));
   }
 
   /**
@@ -83,7 +82,6 @@ class FourConnectGameBoardTest {
       assertEquals(Player.HARDBOT, board.getCellOwner(3, 5).getType());
     }
 
-
   }
 
   @Nested
@@ -147,8 +145,7 @@ class FourConnectGameBoardTest {
     void boardWithOneFreeCell() {
       fillBoard(Player.HUMAN);
       // Eine Zelle wieder leeren
-      board.setCellValue(new Position(0, 0),
-          new FourConnectPlayer(Player.NONE, null, null));
+      board.setCellValue(new Position(0, 0), new FourConnectPlayer(Player.NONE, null, null));
       assertFalse(board.isFull());
     }
 
@@ -174,8 +171,7 @@ class FourConnectGameBoardTest {
 
       for (int col = 0; col < board.getColumns(); col++) {
         for (int row = 0; row < board.getRows(); row++) {
-          assertEquals(Player.NONE,
-              board.getCellOwner(col, row).getType());
+          assertEquals(Player.NONE, board.getCellOwner(col, row).getType());
         }
       }
     }
@@ -211,9 +207,7 @@ class FourConnectGameBoardTest {
 
       for (int col = 0; col < board.getColumns(); col++) {
         for (int row = 0; row < board.getRows(); row++) {
-          assertEquals(
-              board.getCellOwner(col, row).getType(),
-              copy.getCellOwner(col, row).getType());
+          assertEquals(board.getCellOwner(col, row).getType(), copy.getCellOwner(col, row).getType());
         }
       }
     }
@@ -255,4 +249,3 @@ class FourConnectGameBoardTest {
     }
   }
 }
-
