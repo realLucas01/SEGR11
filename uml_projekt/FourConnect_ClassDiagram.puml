@@ -111,12 +111,12 @@ package "segeleven.ife.entertainment.fourconnect"{
   }
 
   class Position {
-    - x : Integer
-    - y : Integer
+    - columCord : Integer
+    - rowCord : Integer
 
-    + «create» Position(x : Integer, y : Integer)
-    + getX() : Integer
-    + getY() : Integer
+    + «create» Position(columCord : Integer, rowCord : Integer)
+    + getXCord() : Integer
+    + getYCord() : Integer
   }
 
   enum Player <<enumeration>> {
