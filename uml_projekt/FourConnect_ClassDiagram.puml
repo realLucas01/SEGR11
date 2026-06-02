@@ -28,7 +28,7 @@ package "infrastructure" {
 
     - <<create>> BrandingService()
     + setTheme(themeId : String) : void
-    + {static} getInstance(): brandingService
+    + {static} getInstance(): BrandingService
     + getPrimaryColor(): String
     + getSecondaryColor(): String
     + getLogoPath(): String
@@ -161,7 +161,7 @@ class FourConnectBotStrategy {
 
   class "HardBotStrategy" as Hard {
     + botPlayerIndex: int
-    + playerList FourConnectPlayer[]
+    + playerList : FourConnectPlayer[]
 
     + chooseMove(board : IPlayArea) : GameState
     - findBestTurn(board: FourConnectGameBoard, depth: int): Integer
@@ -271,7 +271,6 @@ package "uicontroller" {
   }
 
   interface EndScreenController <<interface>> {
-    - resultLabel : Label
     + initialize() : void
     + restartGame() : void
     + backToMainMenu() : void
