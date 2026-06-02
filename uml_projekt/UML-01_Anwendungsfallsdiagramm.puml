@@ -47,14 +47,14 @@ Airline --> UC9
 
 UC6 ..> UC7 : <<include>>
 
-UC3 ..> UC11 : <<extend>>\n[Spiel beendet]\nExtension Point: Endscreen
+UC3 --> UC11 : [Sieg oder Unentschieden erkannt]
 
 UC10 ..> UC11 : <<extend>>\n[Button ausgewählt]\nExtension Point: Endscreen
 
-UC3 ..> UC5 : <<extend>>\n[Hilfe ausgewählt]\nExtension Point: InGameMenu
+UC5 ..> UC3 : <<extend>>\n[Hilfe ausgewählt]\nExtension Point: InGameMenu
 
-UC3 ..> UC6 : <<extend>>\n[Einstellungen ausgewählt]\nExtension Point: InGameMenu
+UC6 ..> UC3 : <<extend>>\n[Einstellungen ausgewählt]\nExtension Point: InGameMenu
 
-UC3 ..> UC8 : <<extend>>\n[Spiel beendet oder Abbruch]\nExtension Point: Navigation
+UC8 ..> UC3 : <<extend>>\n[Spiel beendet oder Abbruch]\nExtension Point: Navigation
 
 @enduml
