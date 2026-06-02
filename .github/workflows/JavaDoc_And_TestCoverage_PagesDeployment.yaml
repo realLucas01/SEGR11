@@ -30,7 +30,7 @@ jobs:
           java-version: 21
 
       - name: Generate Javadoc and Coverage Report
-        working-directory: java_projekt/IFE_Entertainment
+        working-directory: java_projekt/ife.entertainment
         run: mvn clean site
 
       - name: Refresh Javadoc and Coverage Report in /final-Folder
@@ -41,8 +41,8 @@ jobs:
           mkdir -p final/JavaDoc
           mkdir -p final/Coverage
 
-          cp -r java_projekt/IFE_Entertainment/target/site/apidocs/* final/JavaDoc/
-          cp -r java_projekt/IFE_Entertainment/target/site/jacoco/* final/Coverage/
+          cp -r java_projekt/ife.entertainment/target/site/apidocs/* final/JavaDoc/
+          cp -r java_projekt/ife.entertainment/target/site/jacoco/* final/Coverage/
 
       - name: Config Git
         run: |
@@ -64,8 +64,8 @@ jobs:
           mkdir -p public/javadoc
           mkdir -p public/coverage
 
-          cp -r java_projekt/IFE_Entertainment/target/site/apidocs/* public/javadoc/
-          cp -r java_projekt/IFE_Entertainment/target/site/jacoco/* public/coverage/
+          cp -r java_projekt/ife.entertainment/target/site/apidocs/* public/javadoc/
+          cp -r java_projekt/ife.entertainment/target/site/jacoco/* public/coverage/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
