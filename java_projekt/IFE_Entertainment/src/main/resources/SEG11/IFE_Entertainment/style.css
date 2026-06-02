@@ -100,7 +100,7 @@
     -fx-font-size: 15px;
     -fx-font-family: "Montserrat SemiBold";
     -fx-background-radius: 6;
-    -fx-padding: 10 20;
+    -fx-padding: 10;
     -fx-cursor: hand;
 }
 
@@ -111,9 +111,13 @@
     -fx-border-width: 2;
     -fx-background-radius: 6;
     -fx-border-radius: 6;
+    
     -fx-font-size: 32px;
     -fx-font-family: "Montserrat Bold";
     -fx-text-fill: -theme-text;
+    
+    -fx-alignment: center;
+    -fx-text-alignment: center;
 }
 
 
