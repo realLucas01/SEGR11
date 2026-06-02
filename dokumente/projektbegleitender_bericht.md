@@ -21,9 +21,10 @@ Perlickstraße 1
 
 1. [Einleitung und Projektüberblick](1-einleitung-und-projektüberblick)
 2. [Projektplanung](2-projektplanung)
-3. [Bisherige Durchführung und aktueller Stand](3-bisherige-durchführung-und-aktueller-stand)
-4. [Arbeitsaufwand und Teamverteilung](4-arbeitsaufwand-und-teamverteilung)
-5. [Gantt-Diagramm](5-Gantt-Diagramm)
+3. [Durchführung seit Projektstart und Stand beim ersten Deplyoment des Prototypen](3-durchführung-seit-projektstart-und-stand-beim-ersten-deplyoment-des-prototypen)
+4. [Durchführung seit Deployment und Stand bei Projektabschluss](4-durchführung-seit-deployment-und-stand-bei-projektabschluss)
+5. [Arbeitsaufwand und Teamverteilung](5-arbeitsaufwand-und-teamverteilung)
+6. [Gantt-Diagramm](6-Gantt-Diagramm)
 
 ## 1. Einleitung und Projektüberblick  
 
@@ -36,28 +37,43 @@ Im Rahmen des Projekts wird eine offlinefähige und modular erweiterbare Spieles
 Die zeitliche Planung des Projekts erfolgt anhand eines Gantt-Diagramms, welches die einzelnen Arbeitspakete sowie deren zeitliche Abfolge darstellt. Die Arbeitspakete spiegeln hier die Kategorien aus dem Dokument [Kalkulation für die Entwicklung einer Entertainment-Erweiterung speziell für IFE](/final/kalkulation.pdf) wieder.  
 <sup> *(auch hier zu finden: `/final/kalkulation.pdf`)* </sup>  
 
-Das Gantt-Diagramm selber ist unter [Gantt-Diagramm](5-Gantt-Diagramm) bzw. in der PDF-Version, aufgrund seiner Größe, der letzten Seite zu finden.  
+Das Gantt-Diagramm selbst ist unter [Gantt-Diagramm](6-Gantt-Diagramm) bzw. in der PDF bzw. Druck-Version, aufgrund seiner Größe, der letzten Seite zu finden.  
 <sup> *(und als last-Resort auch hier: `/final/projekt-gantt.png`)* </sup>  
 
 Die Planung orientiert sich an einem iterativen Vorgehen, bei dem die Entwicklung in mehrere Phasen unterteilt wurde. Dazu zählen insbesondere die Konzeption, die Implementierung des Spielkerns, der Botgegner und des UI's sowie die anschließende Test- und Integrationsphase. Ziel dieser Planung war es, frühzeitig eine lauffähige Version der Anwendung zu erreichen, um diese in einer realen Umgebung testen zu können.  
 
-## 3. Bisherige Durchführung und aktueller Stand  
+## 3. Durchführung seit Projektstart und Stand beim ersten Deplyoment des Prototypen
 
-Die bisherige Projektdurchführung umfasste die Konzeption, die Erstellung eines technischen Grundgerüsts sowie die Implementierung zentraler Spielfunktionen. Insbesondere wurde die grundlegende Modularisierung von Spiellogik und Benutzeroberfläche umgesetzt, einschließlich des ersten Spiels in der Sammlung: "Vier-Gewinnt".  
+Die bisherige Projektdurchführung umfasste die Konzeption, die Erstellung eines technischen Grundgerüsts sowie die Implementierung zentraler Spielfunktionen. Insbesondere wurde die grundlegende Modularisierung von Spiellogik und Benutzeroberfläche umgesetzt, einschließlich des ersten Spiels in der Sammlung: Vier-Gewinnt.  
 
 Parallel dazu wurde die Benutzeroberfläche entwickelt, um eine intuitive Bedienung über Touch-Eingaben zu gewährleisten. Die Entwicklung erfolgte iterativ, sodass einzelne Funktionen schrittweise implementiert und getestet werden konnten.  
 
-Nach dem aktuellen Stand wurden alle Muss-Kriterien des Pflichtenhefts abgeschlossen, sowie die Kann-Kriterien KK100 "Anzeigesprache" und KK200 "Schwierigkeitsstufen". Das Kann-Kriterium KK101 "CI-Anpassung" wurde zwar begonnen aber konnte aufgrund von Ausfällen eines Teammitglieds in der Entwicklungsphase nicht fertiggestellt werden.  
+Nach dem aktuellen Stand wurden alle Muss-Kriterien des Pflichtenhefts abgeschlossen, sowie die Kann-Kriterien KK100 "Anzeigesprache" und KK200 "Schwierigkeitsstufen". Das Kann-Kriterium KK101 "CI-Anpassung" wurde zwar begonnen aber konnte aufgrund von Ausfällen eines Teammitgliedes in der Entwicklungsphase nicht fertiggestellt werden.  
 → Siehe [Pflichtenheft](/final/pflichtenheft.pdf)  
 <sup> *(auch hier zu finden: `/final/pflichtenheft.pdf`)* </sup>  
 
-## 4. Arbeitsaufwand und Teamverteilung  
+## 4. Durchführung seit Deployment und Stand bei Projektabschluss  
+
+Nach dem ersten Deployment des Prototyps beim Auftraggeber konnte die Anwendung erfolgreich in die Zielumgebung integriert werden. Die Bereitstellung verlief problemlos, da während der Entwicklung kontinuierlich auf dem bereitgestellten Dev-Kit getestet wurde. Im Rahmen der anschließenden Erprobung durch die Mitarbeitenden des Auftraggebers wurden einige kleinere Fehler identifiziert, die während der internen Testphasen nicht aufgefallen waren. Diese wurden dokumentiert, priorisiert und zeitnah behoben. Die Rückmeldungen des Auftraggebers wurden darüber hinaus genutzt, um weitere Optimierungen und Verbesserungen an der Anwendung vorzunehmen.  
+
+Zum Zeitpunkt der Projektabgabe sind sämtliche im Pflichtenheft definierten Muss-Kriterien vollständig umgesetzt. Auch die während der Projektlaufzeit zusätzlich durch den Auftraggeber definierte Anforderunge, MK208 "Gewinnkombination anzeigen", wurden erfolgreich umgesetzt und in die Anwendung integriert.  
+
+Das bei Deployment noch unfertige Kann-Kriterium KK101 "CI-Anpassung" ist nun vollständig implementiert und wird mit einigen Dummy-Daten ausgeliefert. Zur Erstellung eigener Themes wird auf die Sektion 6.1 "Branding (CI-Anpassung)" in der [Administratordokumentation](/final/admindoku.pdf) verwiesen. Darüber hinaus konnten die bereits zum Zeitpunkt des ersten Deployments erfüllten Kann-Kriterien weiter stabilisiert und vervollständigt werden. Damit sind alle Kann Kriterien, bis auf KK102 "Animationen" umgesetzt, dieses wird nach weiterer Evaluation im Rahmen dieses Projektes nicht implementiert.  
+→ Siehe [Pflichtenheft](/final/pflichtenheft.pdf)  
+<sup> *(auch hier zu finden: `/final/pflichtenheft.pdf`, und `/final/admindoku.pdf` für die Administratordokumentation)* </sup>  
+
+Neben der funktionalen Fertigstellung wurden die abschließenden Arbeiten in den Bereichen Testphase, Feinschliff, Dokumentation und Abnahmevorbereitung durchgeführt. Die Anwendung wurde umfassend getestet, dokumentiert und für die finale Übergabe vorbereitet. Damit sind sämtliche in der Kalkulation vorgesehenen Projektkategorien fachlich und arbeitstechnisch abgeschlossen.  
+
+Mit der erfolgreichen Projektabgabe steht dem Auftraggeber eine vollständig lauffähige, offlinefähige und modular erweiterbare Spielesammlung für den Einsatz innerhalb des Inflight-Entertainment-Systems zur Verfügung. Die entwickelte Architektur ermöglicht dabei die zukünftige Integration weiterer Spiele mit vergleichsweise geringem Entwicklungsaufwand.  
+
+
+## 5. Arbeitsaufwand und Teamverteilung  
 
 Zur Nachvollziehbarkeit des Projektaufwands wurde der zeitliche Einsatz der einzelnen Teammitglieder erfasst und den jeweiligen Projektkategorien zugeordnet. Die Kategorisierung orientiert sich dafür an der zuvor erstellten Kalkulation.  
 → Siehe [Kalkulation](/final/kalkulation.pdf)  
 <sup> *(auch hier zu finden: `/final/kalkulation.pdf`)* </sup>  
 
-Die folgende Tabelle zeigt, welches Teammitglied wie viele Stunden in den jeweiligen Kategorien geleistet hat, es ist zu beachten das aufgrund der begrenzten größe des Tabellenkopfes einige Kategorien im Namen etwas eingekürzt werden mussten:  
+Die folgende Tabelle zeigt, welches Teammitglied wie viele Stunden in den jeweiligen Kategorien geleistet hat :  
 |Teammitglied/Kat. nach Kalkulation |Konzeption           |Prototyp & Spielkern |Gameplay-Impl.       |Botgegner            |UI/UX                |Stabilisierung & Integration|Testphase & Feinschliff|Doku & Abnahme       |Risikomanagement     |Summe   |
 |-----------------------------------|---------------------|---------------------|---------------------|---------------------|---------------------|----------------------------|-----------------------|---------------------|---------------------|--------|
 |Dauer der Phase                    |16.12.2025-23.01.2026|16.03.2026-08.04.2026|09.04.2026-26.04.2026|09.04.2026-30.04.2026|15.04.2026-05.05.2026| -                          |28.04.2026-07.05.2026  |09.04.2026-07.05.2026|26.01.2026-07.05.2026| -      |
@@ -68,7 +84,7 @@ Die folgende Tabelle zeigt, welches Teammitglied wie viele Stunden in den jeweil
 |Marc Müller                        |8h30min              |9h30min              |-                    |-                    |6h                   | -                          |2h                     |8h                   | -                   |34h     |
 |Summe                              |66h                  |45h15min             |16h                  |13h15min             |48h15min             | -                          |35h30min               |41h                  |19h15min             |278h    |
 
-<sup> *(Es ist zu beachten, dass die bisher erfassten Stunden innerhalb der Tabelle, und in allen folgenden Referenzen auf die Tabelle, lediglich einen Zwischenstand darstellen, da sich das Projekt aktuell noch in der Entwicklungs- und Integrationsphase befindet. Weitere Aufwände, insbesondere im Bereich Testing, Optimierung und Anpassung basierend auf Feedback des Auftraggebers, sind zu erwarten.)* </sup>  
+<sup> *(es ist zu beachten das aufgrund der begrenzten Größe des Tabellenkopfes einige Kategorien im Namen etwas eingekürzt werden mussten)* </sup>  
 
 Insgesamt wurden im bisherigen Projektverlauf 278 Arbeitsstunden erfasst.  
 
@@ -86,7 +102,7 @@ Die Stundenverteilung orientiert sich dabei weitgehend an den zuvor definierten 
 
 Insgesamt entspricht die bisherige Aufgabenverteilung weitgehend der ursprünglich geplanten Rollenverteilung aus der Kalkulation.
 
-## 5 Gantt-Diagramm
+## 6 Gantt-Diagramm
 
 ![Gantt-Diagramm](/final/projekt-gantt.png)
 
