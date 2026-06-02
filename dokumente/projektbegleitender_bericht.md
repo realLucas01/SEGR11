@@ -28,13 +28,13 @@ Perlickstraße 1
 
 ## 1. Einleitung und Projektüberblick  
 
-Dieser projektbegleitende Bericht dokumentiert den aktuellen Stand des Projekts zur Entwicklung einer Entertainment-Erweiterung für ein Inflight-Entertainment-System. Ziel des Berichts ist es, den bisherigen Projektverlauf, die Aufgabenverteilung innerhalb des Teams sowie den aktuellen Entwicklungsstand darzustellen.  
+Dieser projektbegleitende Bericht dokumentiert den aktuellen Stand des Projektes zur Entwicklung einer Entertainment-Erweiterung für ein Inflight-Entertainment-System. Ziel des Berichts ist es, den bisherigen Projektverlauf, die Aufgabenverteilung innerhalb des Teams sowie den aktuellen Entwicklungsstand darzustellen.  
 
-Im Rahmen des Projekts wird eine offlinefähige und modular erweiterbare Spielesammlung entwickelt, die in ein bestehendes Inflight-Entertainment-System integriert werden soll. Als erster konkreter Anwendungsfall wird das Spiel "Vier-Gewinnt" umgesetzt, welches sowohl im Einzelspieler- als auch im lokalen Mehrspielermodus genutzt werden kann.  
+Im Rahmen des Projektes wird eine offlinefähige und modular erweiterbare Spielesammlung entwickelt, die in ein bestehendes Inflight-Entertainment-System integriert werden soll. Als erster konkreter Anwendungsfall wird das Spiel "Vier-Gewinnt" umgesetzt, welches sowohl im Einzelspieler- als auch im lokalen Mehrspielermodus genutzt werden kann.  
 
 ## 2. Projektplanung  
 
-Die zeitliche Planung des Projekts erfolgt anhand eines Gantt-Diagramms, welches die einzelnen Arbeitspakete sowie deren zeitliche Abfolge darstellt. Die Arbeitspakete spiegeln hier die Kategorien aus dem Dokument [Kalkulation für die Entwicklung einer Entertainment-Erweiterung speziell für IFE](/final/kalkulation.pdf) wieder.  
+Die zeitliche Planung des Projektes erfolgt anhand eines Gantt-Diagramms, welches die einzelnen Arbeitspakete sowie deren zeitliche Abfolge darstellt. Die Arbeitspakete spiegeln hier die Kategorien aus dem Dokument [Kalkulation für die Entwicklung einer Entertainment-Erweiterung speziell für IFE](/final/kalkulation.pdf) wieder.  
 <sup> *(auch hier zu finden: `/final/kalkulation.pdf`)* </sup>  
 
 Das Gantt-Diagramm selbst ist unter [Gantt-Diagramm](6-Gantt-Diagramm) bzw. in der PDF bzw. Druck-Version, aufgrund seiner Größe, der letzten Seite zu finden.  
@@ -58,7 +58,7 @@ Nach dem ersten Deployment des Prototyps beim Auftraggeber konnte die Anwendung 
 
 Zum Zeitpunkt der Projektabgabe sind sämtliche im Pflichtenheft definierten Muss-Kriterien vollständig umgesetzt. Auch die während der Projektlaufzeit zusätzlich durch den Auftraggeber definierte Anforderunge, MK208 "Gewinnkombination anzeigen", wurden erfolgreich umgesetzt und in die Anwendung integriert.  
 
-Das bei Deployment noch unfertige Kann-Kriterium KK101 "CI-Anpassung" ist nun vollständig implementiert und wird mit einigen Dummy-Daten ausgeliefert. Zur Erstellung eigener Themes wird auf die Sektion 6.1 "Branding (CI-Anpassung)" in der [Administratordokumentation](/final/admindoku.pdf) verwiesen. Darüber hinaus konnten die bereits zum Zeitpunkt des ersten Deployments erfüllten Kann-Kriterien weiter stabilisiert und vervollständigt werden. Damit sind alle Kann Kriterien, bis auf KK102 "Animationen" umgesetzt, dieses wird nach weiterer Evaluation im Rahmen dieses Projektes nicht implementiert.  
+Das bei Deployment noch unfertige Kann-Kriterium KK101 "CI-Anpassung" ist nun vollständig implementiert und wird mit einigen Dummy-Daten ausgeliefert. Zur Erstellung eigener Themes wird auf die Sektion 6.1 "Branding (CI-Anpassung)" in der [Administratordokumentation](/final/admindoku.pdf) verwiesen. Darüber hinaus konnten die bereits zum Zeitpunkt des ersten Deployments erfüllten Kann-Kriterien weiter stabilisiert und vervollständigt werden. Damit sind alle Kann-Kriterien, bis auf KK102 "Animationen" umgesetzt, dieses wird nach weiterer Evaluation im Rahmen dieses Projektes nicht implementiert.  
 → Siehe [Pflichtenheft](/final/pflichtenheft.pdf)  
 <sup> *(auch hier zu finden: `/final/pflichtenheft.pdf`, und `/final/admindoku.pdf` für die Administratordokumentation)* </sup>  
 
