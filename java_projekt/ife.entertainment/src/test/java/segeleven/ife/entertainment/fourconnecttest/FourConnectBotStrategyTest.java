@@ -8,7 +8,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
-
 import segeleven.ife.entertainment.fourconnect.FourConnectBotStrategy;
 import segeleven.ife.entertainment.fourconnect.FourConnectGame;
 import segeleven.ife.entertainment.fourconnect.FourConnectGameBoard;
@@ -103,7 +102,7 @@ class FourConnectBotStrategyTest {
     @Test
     void botScoreHigherThanOpponentSymmetrically() {
       FourConnectGameBoard botBoard = new FourConnectGameBoard();
-      FourConnectGameBoard oppBoard = new FourConnectGameBoard();
+      final FourConnectGameBoard oppBoard = new FourConnectGameBoard();
 
       placeAt(botBoard, 0, 5, Player.HARDBOT);
       placeAt(botBoard, 1, 5, Player.HARDBOT);

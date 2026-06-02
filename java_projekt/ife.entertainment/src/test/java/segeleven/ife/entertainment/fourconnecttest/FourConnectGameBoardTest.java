@@ -8,7 +8,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
-
 import segeleven.ife.entertainment.fourconnect.FourConnectGameBoard;
 import segeleven.ife.entertainment.fourconnect.FourConnectPlayer;
 import segeleven.ife.entertainment.fourconnect.Player;
