@@ -18,7 +18,6 @@
  */
 
 package segeleven.ife.entertainment.uifourconnectcontroller;
-
 import java.io.IOException;
 import javafx.animation.PauseTransition;
 import javafx.fxml.FXML;
@@ -125,15 +124,22 @@ public class FourConnectGameController implements GameController {
     updateBoard();
     if (result == GameState.Won || result == GameState.Tied) {
       App.setRoot("EndScreen");
-    } else {
-      game.playerTurn();
-      updateStatus();
+      return;
     }
+
+    game.playerTurn();
+    updateStatus();
+
     if (oneBotPlayer) {
       gridPane.setDisable(true);
 
       botDelayTimer = new PauseTransition(Duration.seconds(1.0));
       botDelayTimer.setOnFinished(event -> {
+        if (game.getStatus() != GameState.Running) {
+          gridPane.setDisable(false);
+          return;
+        }
+
         GameState botResult = game.playBotTurn();
 
         updateBoard();
@@ -153,7 +159,7 @@ public class FourConnectGameController implements GameController {
             throw new RuntimeException(e);
           }
 
-        } else {
+        } else if (botResult == GameState.Running) {
           game.playerTurn();
           updateStatus();
         }

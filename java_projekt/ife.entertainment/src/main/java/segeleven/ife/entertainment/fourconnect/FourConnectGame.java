@@ -21,6 +21,7 @@ package segeleven.ife.entertainment.fourconnect;
 
 import segeleven.ife.entertainment.gamecore.Game;
 import segeleven.ife.entertainment.gamecore.GameState;
+import segeleven.ife.entertainment.gamecore.MoveStrategy;
 import segeleven.ife.entertainment.gamecore.PlayArea;
 import segeleven.ife.entertainment.infrastructure.BrandingService;
 
@@ -231,7 +232,16 @@ public class FourConnectGame implements Game<FourConnectGameBoard> {
    * @return den Spielzustand nach dem Zug
    */
   public GameState playBotTurn() {
-    return players[currentPlayerIndex].getStrategy().chooseMove(gameBoard);
+    if (state != GameState.Running || players[currentPlayerIndex] == null) {
+      return state;
+    }
+
+    MoveStrategy strategy = players[currentPlayerIndex].getStrategy();
+    if (strategy == null) {
+      return state;
+    }
+
+    return strategy.chooseMove(gameBoard);
   }
 
   /**
@@ -249,6 +259,7 @@ public class FourConnectGame implements Game<FourConnectGameBoard> {
 
     // Initialisieren des Index für die Spielerliste
     currentPlayerIndex = 0;
+    oneBotPlayer = false;
 
     // Laden des aktuellen Brandings für die Farben
     currentbranding = BrandingService.getInstance();
