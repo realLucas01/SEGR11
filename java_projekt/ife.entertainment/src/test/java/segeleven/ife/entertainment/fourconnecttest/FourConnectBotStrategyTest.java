@@ -9,6 +9,14 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
+import segeleven.ife.entertainment.fourconnect.FourConnectBotStrategy;
+import segeleven.ife.entertainment.fourconnect.FourConnectGame;
+import segeleven.ife.entertainment.fourconnect.FourConnectGameBoard;
+import segeleven.ife.entertainment.fourconnect.FourConnectPlayer;
+import segeleven.ife.entertainment.fourconnect.FourConnectRules;
+import segeleven.ife.entertainment.fourconnect.Player;
+import segeleven.ife.entertainment.fourconnect.Position;
+
 @DisplayName("FourConnectBotStrategy Tests")
 class FourConnectBotStrategyTest {
 

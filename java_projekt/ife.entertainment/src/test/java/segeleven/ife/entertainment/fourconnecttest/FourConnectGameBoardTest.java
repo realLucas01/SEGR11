@@ -9,6 +9,11 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
+import segeleven.ife.entertainment.fourconnect.FourConnectGameBoard;
+import segeleven.ife.entertainment.fourconnect.FourConnectPlayer;
+import segeleven.ife.entertainment.fourconnect.Player;
+import segeleven.ife.entertainment.fourconnect.Position;
+
 class FourConnectGameBoardTest {
 
   private FourConnectGameBoard board;
@@ -207,7 +212,8 @@ class FourConnectGameBoardTest {
 
       for (int col = 0; col < board.getColumns(); col++) {
         for (int row = 0; row < board.getRows(); row++) {
-          assertEquals(board.getCellOwner(col, row).getType(), copy.getCellOwner(col, row).getType());
+          assertEquals(board.getCellOwner(col, row).getType(),
+              copy.getCellOwner(col, row).getType());
         }
       }
     }

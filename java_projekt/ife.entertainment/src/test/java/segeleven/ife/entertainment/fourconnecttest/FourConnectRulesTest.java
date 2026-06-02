@@ -5,6 +5,12 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
+import segeleven.ife.entertainment.fourconnect.FourConnectGameBoard;
+import segeleven.ife.entertainment.fourconnect.FourConnectPlayer;
+import segeleven.ife.entertainment.fourconnect.FourConnectRules;
+import segeleven.ife.entertainment.fourconnect.Player;
+import segeleven.ife.entertainment.fourconnect.Position;
+
 /**
  * Unit Tests für FourConnectRules Fokus: vollständige Abdeckung aller
  * Win-/Tie-Logiken inkl. Edge Cases

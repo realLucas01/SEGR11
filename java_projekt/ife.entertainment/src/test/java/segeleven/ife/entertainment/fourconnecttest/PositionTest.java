@@ -7,6 +7,9 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
+import segeleven.ife.entertainment.fourconnect.Player;
+import segeleven.ife.entertainment.fourconnect.Position;
+
 class PositionTest {
 
   @Test
@@ -15,23 +18,23 @@ class PositionTest {
     Integer y = 7;
     Position testPos = new Position(x, y);
 
-    assertEquals(x, testPos.getX());
-    assertEquals(y, testPos.getY());
+    assertEquals(x, testPos.getXcord());
+    assertEquals(y, testPos.getyCord());
   }
 
   @Test
-  void getXTest() {
+  void getXtest() {
     Integer x = 4;
     Position testPos = new Position(x, 0);
-    Integer testPosX = testPos.getX();
+    Integer testPosX = testPos.getXcord();
     assertEquals(x, testPosX);
   }
 
   @Test
-  void getYTest() {
+  void getYtest() {
     Integer y = 2;
     Position testPos = new Position(0, y);
-    Integer testPosY = testPos.getY();
+    Integer testPosY = testPos.getyCord();
     assertEquals(y, testPosY);
   }
 
