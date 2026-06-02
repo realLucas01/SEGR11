@@ -10,44 +10,43 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertSame;
 
 class FourConnectPlayerTest {
-    private BrandingService currentbranding;
-    private FourConnectRules fcRules;
-    private FourConnectGame fcGame;
+  private BrandingService currentbranding;
+  private FourConnectRules fcRules;
+  private FourConnectGame fcGame;
 
-    private FourConnectPlayer fcHumanPlayer;
-    private FourConnectPlayer fcHardPlayer;
+  private FourConnectPlayer fcHumanPlayer;
+  private FourConnectPlayer fcHardPlayer;
 
-    @BeforeEach
-    void setup(){
-        currentbranding = BrandingService.getInstance();
-        fcRules = new FourConnectRules();
-        fcGame = FourConnectGame.getInstance();
+  @BeforeEach
+  void setup() {
+    currentbranding = BrandingService.getInstance();
+    fcRules = new FourConnectRules();
+    fcGame = FourConnectGame.getInstance();
 
-        fcHumanPlayer = new FourConnectPlayer(Player.HUMAN,null, currentbranding.getPrimaryColor());
-        fcHardPlayer = new FourConnectPlayer(Player.HARDBOT,null, currentbranding.getSecondaryColor());
-    }
+    fcHumanPlayer = new FourConnectPlayer(Player.HUMAN, null, currentbranding.getPrimaryColor());
+    fcHardPlayer = new FourConnectPlayer(Player.HARDBOT, null, currentbranding.getSecondaryColor());
+  }
 
-    @Test
-    void getTypeTest(){
-        Player testType = fcHumanPlayer.getType();
-        assertEquals(Player.HUMAN, testType);
-    }
+  @Test
+  void getTypeTest() {
+    Player testType = fcHumanPlayer.getType();
+    assertEquals(Player.HUMAN, testType);
+  }
 
-    @Test
-    void getStrategyTest(){
-        FourConnectBotStrategy botStrategy = new FourConnectBotStrategy(fcGame, fcRules);
-        IMoveStrategy easyStrat = botStrategy.new EasyBotStrategy();
+  @Test
+  void getStrategyTest() {
+    FourConnectBotStrategy botStrategy = new FourConnectBotStrategy(fcGame, fcRules);
+    IMoveStrategy easyStrat = botStrategy.new EasyBotStrategy();
 
-        FourConnectPlayer player = new FourConnectPlayer(Player.EASYBOT, easyStrat, null);
+    FourConnectPlayer player = new FourConnectPlayer(Player.EASYBOT, easyStrat, null);
 
-        assertSame(easyStrat, player.getStrategy());
-    }
+    assertSame(easyStrat, player.getStrategy());
+  }
 
-    @Test
-    void getColourTest(){
-        String testColour = fcHardPlayer.getColour();
-        assertEquals(currentbranding.getSecondaryColor(), testColour);
-    }
-
+  @Test
+  void getColourTest() {
+    String testColour = fcHardPlayer.getColour();
+    assertEquals(currentbranding.getSecondaryColor(), testColour);
+  }
 
 }
