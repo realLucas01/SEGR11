@@ -9,9 +9,9 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import seg11.ife_entertainment.fourconnect.FourConnectGame;
-import seg11.ife_entertainment.fourconnect.Player;
-import seg11.ife_entertainment.gamecore.GameState;
+import segeleven.ife.entertainment.fourconnect.FourConnectGame;
+import segeleven.ife.entertainment.fourconnect.Player;
+import segeleven.ife.entertainment.gamecore.GameState;
 
 /**
  * Testklasse für FourConnectGame.
