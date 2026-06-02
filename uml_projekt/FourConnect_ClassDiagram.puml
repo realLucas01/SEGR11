@@ -61,6 +61,7 @@ package "infrastructure" {
 ' ──────────────────────────────────────────
 package "fourconnect"{
   class FourConnectRules{
+    - winningPositions : List<Position>
     + checkWin(board : FourConnectGameBoard, player : FourConnectPlayer) : boolean
     + checkTie(board : FourConnectGameBoard) : boolean
     + getLastWinningPositions() : List<Position>
@@ -319,13 +320,26 @@ package "uifourconnectcontroller"{
     + backToMainMenu() : void
   }
   
+  class FourConnectWinningMoveController {
+    - gridPane : GridPane
+    - game : FourConnectGame
+    - circles : Circle[][]
+
+    + initialize() : void
+    + backToEndScreen() : void
+    - initBoard() : void
+    - updateBoard() : void
+    - highlightWinningPositions(winningPositions : List<Position>) : void
+  }
   
      ' Cross-package dependencies
-         FourConnectGameController ..|> GameController
-         FourConnectGameController ..> FourConnectGame       : «use»
-         FourConnectEndScreenController ..|> EndScreenController
-         FourConnectHelpController ..|> HelpController
-         FourConnectEndScreenController ..> FourConnectGame : «use»
+        FourConnectGameController ..|> GameController
+        FourConnectGameController ..> FourConnectGame       : «use»
+        FourConnectEndScreenController ..|> EndScreenController
+        FourConnectHelpController ..|> HelpController
+        FourConnectEndScreenController ..> FourConnectGame : «use»
+        FourConnectWinningMoveController ..> FourConnectGame : «use»
+        FourConnectWinningMoveController ..> App
  }
 
 
