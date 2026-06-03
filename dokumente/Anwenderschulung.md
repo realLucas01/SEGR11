@@ -106,9 +106,9 @@ Die Anwendung wurde erfolgreich gestartet und ist spielbereit.
 
 Die Einstellungen können nur im Hauptmenü aufgerufen werden.
 
-## Vorgehnsweise
+## Vorgehensweise
 
-1. Schalfläche **"Einstellungen"** wählen.
+1. Schaltfläche **"Einstellungen"** wählen.
 2. Neuer Bildschirm erscheint. Hier kann man nun über die obere Schalfläche die Sprache und über die untere die Airline CI einstellen.
 3. Über den Button **"Hauptmenü"** kann man nun zum Hauptmenü zurückkehren.
 
@@ -182,7 +182,7 @@ Die Spielhilfe kann jederzeit während einer laufenden Partie geöffnet werden.
 
 1. Schaltfläche **„Hilfe / Regeln“** auswählen.
 2. Die Spielregeln werden angezeigt.
-3. Nach dem Lesen übern den Button **"Zurück**" zur Spielansicht zurückkehren.
+3. Nach dem Lesen übern den Button **"Zurück"** zur Spielansicht zurückkehren.
 
 ### Hinweis
 
