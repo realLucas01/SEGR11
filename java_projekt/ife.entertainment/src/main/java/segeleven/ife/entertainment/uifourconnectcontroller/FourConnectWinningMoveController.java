@@ -21,13 +21,13 @@ package segeleven.ife.entertainment.uifourconnectcontroller;
 
 import java.io.IOException;
 import java.util.List;
-import segeleven.ife.entertainment.App;
-import segeleven.ife.entertainment.fourconnect.FourConnectGame;
-import segeleven.ife.entertainment.fourconnect.Position;
 import javafx.fxml.FXML;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+import segeleven.ife.entertainment.App;
+import segeleven.ife.entertainment.fourconnect.FourConnectGame;
+import segeleven.ife.entertainment.fourconnect.Position;
 
 /**
  * Controller für die Anzeige des gewinnbringenden Spielzugs.

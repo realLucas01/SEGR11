@@ -19,14 +19,13 @@
 
 package segeleven.ife.entertainment.fourconnect;
 
+import java.util.ArrayList;
+import java.util.List;
 import segeleven.ife.entertainment.gamecore.Game;
 import segeleven.ife.entertainment.gamecore.GameState;
 import segeleven.ife.entertainment.gamecore.MoveStrategy;
 import segeleven.ife.entertainment.gamecore.PlayArea;
 import segeleven.ife.entertainment.infrastructure.BrandingService;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Klasse die für den eigentlichen Spielablauf zuständig ist.
@@ -205,7 +204,7 @@ public class FourConnectGame implements Game<FourConnectGameBoard> {
     if (rules.checkTie(gameBoard)) {
       state = GameState.Tied;
     }
-	// Überprüfen, ob gewonnen
+    // Überprüfen, ob gewonnen
     if (rules.checkWin(gameBoard, players[currentPlayerIndex])) {
       winningPositions = rules.getLastWinningPositions();
       state = GameState.Won;
