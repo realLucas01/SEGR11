@@ -7,12 +7,19 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
-import segeleven.ife.entertainment.fourconnect.*;
 import segeleven.ife.entertainment.gamecore.MoveStrategy;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
+import segeleven.ife.entertainment.fourconnect.FourConnectBotStrategy;
+import segeleven.ife.entertainment.fourconnect.FourConnectGame;
+import segeleven.ife.entertainment.fourconnect.FourConnectGameBoard;
+import segeleven.ife.entertainment.fourconnect.FourConnectPlayer;
+import segeleven.ife.entertainment.fourconnect.FourConnectRules;
+import segeleven.ife.entertainment.fourconnect.Player;
+import segeleven.ife.entertainment.fourconnect.Position;
+
 
 @DisplayName("FourConnectBotStrategy Tests")
 class FourConnectBotStrategyTest {
@@ -104,8 +111,8 @@ class FourConnectBotStrategyTest {
 
     @Test
     void botScoreHigherThanOpponentSymmetrically() {
-      FourConnectGameBoard botBoard = new FourConnectGameBoard();
-      FourConnectGameBoard oppBoard = new FourConnectGameBoard();
+      final FourConnectGameBoard botBoard = new FourConnectGameBoard();
+      final FourConnectGameBoard oppBoard = new FourConnectGameBoard();
 
       placeAt(botBoard, 0, 5, Player.HARDBOT);
       placeAt(botBoard, 1, 5, Player.HARDBOT);
@@ -136,11 +143,14 @@ class FourConnectBotStrategyTest {
   @Nested
   class HardBotTest {
     @Test
-    void playTestTurnTest() throws InvocationTargetException, IllegalAccessException, NoSuchMethodException {
+    void playTestTurnTest() throws InvocationTargetException, IllegalAccessException,
+            NoSuchMethodException {
 
       FourConnectPlayer hardBotPlayer = game.getPlayers()[1];
 
-      Method playTestTurnPublic = FourConnectBotStrategy.HardBotStrategy.class.getDeclaredMethod("playTestTurn", FourConnectGameBoard.class, Position.class, FourConnectPlayer.class);
+      Method playTestTurnPublic = FourConnectBotStrategy.HardBotStrategy.class
+              .getDeclaredMethod("playTestTurn", FourConnectGameBoard.class, Position.class,
+                      FourConnectPlayer.class);
       playTestTurnPublic.setAccessible(true);
       Position turn = new Position(0, 0);
 
@@ -150,8 +160,10 @@ class FourConnectBotStrategyTest {
     }
 
     @Test
-    void undoTestTurnTest() throws InvocationTargetException, IllegalAccessException, NoSuchMethodException {
-      Method undoTurn = FourConnectBotStrategy.HardBotStrategy.class.getDeclaredMethod("undoTestTurn", FourConnectGameBoard.class, Position.class);
+    void undoTestTurnTest() throws InvocationTargetException, IllegalAccessException,
+            NoSuchMethodException {
+      Method undoTurn = FourConnectBotStrategy.HardBotStrategy.class
+              .getDeclaredMethod("undoTestTurn", FourConnectGameBoard.class, Position.class);
       Position turn = new Position(0, 0);
 
       undoTurn.setAccessible(true);
@@ -161,11 +173,13 @@ class FourConnectBotStrategyTest {
     }
 
     @Test
-    void findBotPlayerPositionTest() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+    void findBotPlayerPositionTest() throws NoSuchMethodException, InvocationTargetException,
+            IllegalAccessException {
       FourConnectPlayer[] players = game.getPlayers();
 
 
-      Method botPosition = FourConnectBotStrategy.HardBotStrategy.class.getDeclaredMethod("findBotPlayerPosition", FourConnectPlayer[].class);
+      Method botPosition = FourConnectBotStrategy.HardBotStrategy.class
+              .getDeclaredMethod("findBotPlayerPosition", FourConnectPlayer[].class);
       botPosition.setAccessible(true);
       Integer result = (Integer) botPosition.invoke(stratClass, (Object) players);
 
@@ -173,14 +187,16 @@ class FourConnectBotStrategyTest {
     }
 
     @Test
-    void findBotPlayerPositionCoudntFindBot() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+    void findBotPlayerPositionCoudntFindBot() throws NoSuchMethodException,
+            InvocationTargetException, IllegalAccessException {
       FourConnectPlayer[] players = game.getPlayers();
 
       FourConnectPlayer human2 = new FourConnectPlayer(Player.HUMAN, null, null);
       players[1] = human2;
 
 
-      Method botPosition = FourConnectBotStrategy.HardBotStrategy.class.getDeclaredMethod("findBotPlayerPosition", FourConnectPlayer[].class);
+      Method botPosition = FourConnectBotStrategy.HardBotStrategy.class
+              .getDeclaredMethod("findBotPlayerPosition", FourConnectPlayer[].class);
       botPosition.setAccessible(true);
       Integer result = (Integer) botPosition.invoke(stratClass, (Object) players);
 
@@ -188,7 +204,8 @@ class FourConnectBotStrategyTest {
     }
 
     @Test
-    void findValideTurnsTest() throws InvocationTargetException, IllegalAccessException, NoSuchMethodException {
+    void findValideTurnsTest() throws InvocationTargetException, IllegalAccessException,
+            NoSuchMethodException {
       final FourConnectPlayer humanPlayer = new FourConnectPlayer(Player.HUMAN, null, null);
       for (int r = 0; r < 6; r++) {
         for (int c = 0; c < 7; c++) {
@@ -204,7 +221,8 @@ class FourConnectBotStrategyTest {
       testTurn.add(freePos);
       List<Position> results;
 
-      Method botPosition = FourConnectBotStrategy.HardBotStrategy.class.getDeclaredMethod("findValideTurns", FourConnectGameBoard.class);
+      Method botPosition = FourConnectBotStrategy.HardBotStrategy.class
+              .getDeclaredMethod("findValideTurns", FourConnectGameBoard.class);
       botPosition.setAccessible(true);
       results = (List<Position>) botPosition.invoke(stratClass, board);
 
