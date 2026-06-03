@@ -115,8 +115,8 @@ package "segeleven.ife.entertainment.fourconnect"{
     - rowCord : Integer
 
     + «create» Position(columCord : Integer, rowCord : Integer)
-    + getXCord() : Integer
-    + getYCord() : Integer
+    + getxCord() : Integer
+    + getyCord() : Integer
   }
 
   enum Player <<enumeration>> {
