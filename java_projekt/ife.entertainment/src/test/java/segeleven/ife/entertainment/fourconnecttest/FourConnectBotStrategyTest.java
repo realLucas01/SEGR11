@@ -3,14 +3,14 @@ package segeleven.ife.entertainment.fourconnecttest;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Nested;
-import org.junit.jupiter.api.Test;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Nested;
+import org.junit.jupiter.api.Test;
 import segeleven.ife.entertainment.fourconnect.FourConnectBotStrategy;
 import segeleven.ife.entertainment.fourconnect.FourConnectGame;
 import segeleven.ife.entertainment.fourconnect.FourConnectGameBoard;
