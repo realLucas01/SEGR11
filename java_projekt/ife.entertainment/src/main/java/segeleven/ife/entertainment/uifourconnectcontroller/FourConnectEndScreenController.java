@@ -21,10 +21,8 @@ package segeleven.ife.entertainment.uifourconnectcontroller;
 
 import java.io.IOException;
 import java.text.MessageFormat;
-
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
-
 import segeleven.ife.entertainment.App;
 import segeleven.ife.entertainment.fourconnect.FourConnectGame;
 import segeleven.ife.entertainment.fourconnect.FourConnectPlayer;
@@ -43,73 +41,73 @@ import segeleven.ife.entertainment.uicontroller.EndScreenController;
  */
 public class FourConnectEndScreenController implements EndScreenController {
 
-    /** Label zur Anzeige des Spielergebnisses. */
-    @FXML
-    private Label resultLabel;
+  /** Label zur Anzeige des Spielergebnisses. */
+  @FXML
+  private Label resultLabel;
 
-    private final LocalizationService localizationService = LocalizationService.getInstance();
+  private final LocalizationService localizationService = LocalizationService.getInstance();
 
-    /**
-     * Initialisiert den EndScreen und zeigt das Spielergebnis an.
-     */
-    @Override
-    @FXML
-    public void initialize() {
-      GameState state = FourConnectGame.getInstance().getStatus();
+  /**
+   * Initialisiert den EndScreen und zeigt das Spielergebnis an.
+   */
+  @Override
+  @FXML
+  public void initialize() {
+    GameState state = FourConnectGame.getInstance().getStatus();
 
-      if (state == GameState.Won) {
-        resultLabel.setText(getWinnerText());
-      } else if (state == GameState.Tied) {
-        resultLabel.setText(localizationService.getText("game.draw"));
-      }
+    if (state == GameState.Won) {
+      resultLabel.setText(getWinnerText());
+    } else if (state == GameState.Tied) {
+      resultLabel.setText(localizationService.getText("game.draw"));
+    }
+  }
+
+  /**
+   * Erstellt den Ergebnistext für den Gewinner der aktuellen Runde.
+   *
+   * @return lokalisierter Ergebnistext
+   */
+  private String getWinnerText() {
+    FourConnectGame game = FourConnectGame.getInstance();
+    int winnerIndex = game.getCurrentPlayerIndex();
+    FourConnectPlayer winner = game.getPlayers()[winnerIndex];
+
+    if (winner.getType() != Player.HUMAN) {
+      return localizationService.getText("game.botWin");
     }
 
-    /**
-     * Erstellt den Ergebnistext für den Gewinner der aktuellen Runde.
-     *
-     * @return lokalisierter Ergebnistext
-     */
-    private String getWinnerText() {
-      FourConnectGame game = FourConnectGame.getInstance();
-      int winnerIndex = game.getCurrentPlayerIndex();
-      FourConnectPlayer winner = game.getPlayers()[winnerIndex];
+    String winText = localizationService.getText("game.win");
+    return MessageFormat.format(winText, winnerIndex + 1);
+  }
 
-      if (winner.getType() != Player.HUMAN) {
-        return localizationService.getText("game.botWin");
-      }
+  @FXML
+  public void showWinningMove() throws IOException {
+    App.setRoot("FourConnectWinningMove");
+  }
 
-      String winText = localizationService.getText("game.win");
-      return MessageFormat.format(winText, winnerIndex + 1);
-    }
-    
-    @FXML
-    public void showWinningMove() throws IOException {
-      App.setRoot("FourConnectWinningMove");
-    }
-    
-    /**
-     * Startet ein neues Spiel im selben Modus.
-     *
-     * @throws IOException falls die FXML-Datei nicht geladen werden kann
-     */
-    @Override
-    @FXML
-    public void restartGame() throws IOException {
-        Player p1 = FourConnectGame.getInstance().getPlayers()[0].getType();
-        Player p2 = FourConnectGame.getInstance().getPlayers()[1].getType();
-        FourConnectGame.getInstance().endGame();
-        FourConnectGameController controller = App.setRootAndGetController("FourConnectGame");
-        controller.handlePlayMode(p1, p2);
-    }
+  /**
+   * Startet ein neues Spiel im selben Modus.
+   *
+   * @throws IOException falls die FXML-Datei nicht geladen werden kann
+   */
+  @Override
+  @FXML
+  public void restartGame() throws IOException {
+    Player p1 = FourConnectGame.getInstance().getPlayers()[0].getType();
+    Player p2 = FourConnectGame.getInstance().getPlayers()[1].getType();
+    FourConnectGame.getInstance().endGame();
+    FourConnectGameController controller = App.setRootAndGetController("FourConnectGame");
+    controller.handlePlayMode(p1, p2);
+  }
 
-    /**
-     * Navigiert zurück zum Hauptmenü.
-     *
-     * @throws IOException falls die FXML-Datei nicht geladen werden kann
-     */
-    @Override
-    @FXML
-    public void backToMainMenu() throws IOException {
-        App.setRoot("MainMenu");
-    }
+  /**
+   * Navigiert zurück zum Hauptmenü.
+   *
+   * @throws IOException falls die FXML-Datei nicht geladen werden kann
+   */
+  @Override
+  @FXML
+  public void backToMainMenu() throws IOException {
+    App.setRoot("MainMenu");
+  }
 }
