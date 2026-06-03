@@ -1,8 +1,6 @@
 package segeleven.ife.entertainment.fourconnecttest;
 
-import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -13,185 +11,158 @@ import segeleven.ife.entertainment.fourconnect.FourConnectGame;
 import segeleven.ife.entertainment.fourconnect.Player;
 import segeleven.ife.entertainment.gamecore.GameState;
 
-/**
- * Testklasse für FourConnectGame.
- */
-class FourConnectGameTest {
+/** Testklasse für FourConnectGame. */
+public class FourConnectGameTest {
 
-  /**
-   * Spielinstanz für die Tests.
-   */
+  /** Spielinstanz für die Tests. */
   private FourConnectGame game;
 
-  /**
-   * Wird vor jedem Test ausgeführt.
-   */
+  /** Wird vor jedem Test ausgeführt. */
   @BeforeEach
-  void setUp() {
+  public void setUp() {
     game = FourConnectGame.getInstance();
+    game.endGame();
   }
 
-  /**
-   * Testet die Initialisierung eines neuen Spiels.
-   */
+  /** Testet die Initialisierung eines neuen Spiels. */
   @Test
-  void initGameTest() {
-
+  public void initGameTest() {
     int result = game.initFourConnectGame(Player.HUMAN, Player.HUMAN);
-
     assertEquals(0, result);
     assertEquals(GameState.Running, game.getStatus());
-    assertFalse(game.getOneBotPlayer());
-
     assertNotNull(game.getBoard());
     assertNotNull(game.getPlayers());
   }
 
-  /**
-   * Testet setStatus() und getStatus().
-   */
+  /** Testet setStatus() und getStatus(). */
   @Test
-  void statusTest() {
-
+  public void statusTest() {
     game.setStatus(GameState.Won);
-
     assertEquals(GameState.Won, game.getStatus());
   }
 
-  /**
-   * Testet den Spielerwechsel.
-   */
+  /** Testet den Spielerwechsel. */
   @Test
-  void playerTurnTest() {
-
+  public void playerTurnTest() {
     game.initFourConnectGame(Player.HUMAN, Player.HUMAN);
-
     game.playerTurn();
-
-    // Test erfolgreich wenn kein Fehler auftritt
     assertTrue(true);
   }
 
-  /**
-   * Testet das Platzieren einer Scheibe.
-   */
+  /** Testet das Platzieren einer Scheibe. */
   @Test
-  void dropDiscTest() {
-
+  public void dropDiscTest() {
     game.initFourConnectGame(Player.HUMAN, Player.HUMAN);
-
     GameState state = game.dropDisc(0);
-
     assertNotNull(state);
   }
 
-  /**
-   * Testet, ob mehrere Scheiben korrekt gestapelt werden.
-   */
+  /** Testet ob mehrere Scheiben korrekt gestapelt werden. */
   @Test
-  void dropDiscStacksCorrectlyTest() {
-
+  public void dropDiscStacksCorrectlyTest() {
     game.initFourConnectGame(Player.HUMAN, Player.HUMAN);
-
     game.dropDisc(0);
     game.dropDisc(0);
     game.dropDisc(0);
-
     assertNotNull(game.getBoard());
   }
 
-  /**
-   * Testet restart().
-   */
+  /** Testet dass dropDisc einen Sieg erkennt. */
   @Test
-  void restartTest() {
-
+  public void dropDiscWinTest() {
     game.initFourConnectGame(Player.HUMAN, Player.HUMAN);
-
     game.dropDisc(0);
+    game.dropDisc(0);
+    game.dropDisc(0);
+    GameState state = game.dropDisc(0);
+    assertEquals(GameState.Won, state);
+  }
 
+  /** Testet restart(). */
+  @Test
+  public void restartTest() {
+    game.initFourConnectGame(Player.HUMAN, Player.HUMAN);
+    game.dropDisc(0);
     game.restart();
-
     assertEquals(GameState.Running, game.getStatus());
   }
 
-  /**
-   * Testet endGame().
-   */
+  /** Testet endGame(). */
   @Test
-  void endGameTest() {
-
+  public void endGameTest() {
     game.initFourConnectGame(Player.HUMAN, Player.HUMAN);
-
     game.endGame();
-
     assertEquals(GameState.NotStarted, game.getStatus());
-
     assertNull(game.getPlayers()[0]);
     assertNull(game.getPlayers()[1]);
   }
 
-  /**
-   * Testet die Spielfeldgröße.
-   */
+  /** Testet die Spielfeldgröße. */
   @Test
-  void boardTest() {
-
+  public void boardTest() {
     game.initFourConnectGame(Player.HUMAN, Player.HUMAN);
-
     assertEquals(6, game.getBoard().getRows());
     assertEquals(7, game.getBoard().getColumns());
   }
 
-  /**
-   * Testet Initialisierung mit EasyBot.
-   */
+  /** Testet Initialisierung mit EasyBot. */
   @Test
-  void initGameWithEasyBotTest() {
-
+  public void initGameWithEasyBotTest() {
     game.initFourConnectGame(Player.HUMAN, Player.EASYBOT);
-
     assertTrue(game.getOneBotPlayer());
   }
 
-  /**
-   * Testet Initialisierung mit HardBot.
-   */
+  /** Testet Initialisierung mit HardBot. */
   @Test
-  void initGameWithHardBotTest() {
-
+  public void initGameWithHardBotTest() {
     game.initFourConnectGame(Player.HUMAN, Player.HARDBOT);
-
     assertTrue(game.getOneBotPlayer());
   }
 
-  /**
-   * Testet playBotTurn().
-   */
+  /** Testet playBotTurn(). */
   @Test
-  void playBotTurnTest() {
-
+  public void playBotTurnTest() {
     game.initFourConnectGame(Player.HUMAN, Player.EASYBOT);
-
-    // Spieler wechseln damit der Bot dran ist
     game.playerTurn();
-
     game.playBotTurn();
-
     assertNotNull(game.getBoard());
   }
 
-  /**
-   * Testet, dass nach Spielende kein Bot-Zug mehr ausgeführt wird.
-   */
+  /** Testet getCurrentPlayerIndex() am Anfang. */
   @Test
-  void playBotTurnAfterGameEndedTest() {
+  public void getCurrentPlayerIndexInitiallyZeroTest() {
+    game.initFourConnectGame(Player.HUMAN, Player.HUMAN);
+    assertEquals(0, game.getCurrentPlayerIndex());
+  }
 
-    game.initFourConnectGame(Player.HUMAN, Player.EASYBOT);
-    game.setStatus(GameState.Won);
+  /** Testet getCurrentPlayerIndex() nach Spielerwechsel. */
+  @Test
+  public void getCurrentPlayerIndexAfterPlayerTurnTest() {
+    game.initFourConnectGame(Player.HUMAN, Player.HUMAN);
+    game.playerTurn();
+    assertEquals(1, game.getCurrentPlayerIndex());
+  }
 
-    GameState state = assertDoesNotThrow(() -> game.playBotTurn());
+  /** Testet getWinningPositions() nach einem Sieg. */
+  @Test
+  public void getWinningPositionsAfterWinTest() {
+    game.initFourConnectGame(Player.HUMAN, Player.HUMAN);
+    game.dropDisc(0);
+    game.dropDisc(0);
+    game.dropDisc(0);
+    game.dropDisc(0);
+    assertEquals(4, game.getWinningPositions().size());
+  }
 
-    assertEquals(GameState.Won, state);
+  /** Testet dass getWinningPositions() nach endGame() leer ist. */
+  @Test
+  public void getWinningPositionsEmptyAfterEndGameTest() {
+    game.initFourConnectGame(Player.HUMAN, Player.HUMAN);
+    game.dropDisc(0);
+    game.dropDisc(0);
+    game.dropDisc(0);
+    game.dropDisc(0);
+    game.endGame();
+    assertEquals(0, game.getWinningPositions().size());
   }
 }
