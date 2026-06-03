@@ -34,7 +34,9 @@ public class BrandingServiceTest {
   /** Testet die Rückgabe des Logo-Pfads. */
   @Test
   public void testGetLogoPath() {
-    assertEquals("/segeleven/ife.entertainment/images/logo_gervithrall-systems.png", service.getLogoPath());
+    assertEquals(
+            "/segeleven/ife.entertainment/images/logo_gervithrall-systems.png",
+            service.getLogoPath());
   }
 
   /** Testet die Rückgabe des Airline-Namens. */
@@ -91,7 +93,9 @@ public class BrandingServiceTest {
     assertEquals("#004761", service.getPrimaryColor());
     assertEquals("#555756", service.getSecondaryColor());
     assertEquals("Gervithrall Systems", service.getAirlineName());
-    assertEquals("/segeleven/ife.entertainment/images/logo_gervithrall-systems.png", service.getLogoPath());
+    assertEquals(
+            "/segeleven/ife.entertainment/images/logo_gervithrall-systems.png",
+            service.getLogoPath());
     assertEquals("gervithrall", service.getCurrentThemeId());
   }
 
@@ -102,7 +106,9 @@ public class BrandingServiceTest {
     assertEquals("#05164D", service.getPrimaryColor());
     assertEquals("#FFCC00", service.getSecondaryColor());
     assertEquals("Lufthansa", service.getAirlineName());
-    assertEquals("/segeleven/ife.entertainment/images/logo_lufthansa.png", service.getLogoPath());
+    assertEquals(
+            "/segeleven/ife.entertainment/images/logo_lufthansa.png",
+            service.getLogoPath());
     assertEquals("lufthansa", service.getCurrentThemeId());
   }
 
@@ -113,7 +119,9 @@ public class BrandingServiceTest {
     assertEquals("#D71920", service.getPrimaryColor());
     assertEquals("#333333", service.getSecondaryColor());
     assertEquals("Emirates", service.getAirlineName());
-    assertEquals("/segeleven/ife.entertainment/images/logo_emirates.png", service.getLogoPath());
+    assertEquals(
+            "/segeleven/ife.entertainment/images/logo_emirates.png",
+            service.getLogoPath());
     assertEquals("emirates", service.getCurrentThemeId());
   }
 
@@ -124,7 +132,9 @@ public class BrandingServiceTest {
     assertEquals("#073590", service.getPrimaryColor());
     assertEquals("#F1C933", service.getSecondaryColor());
     assertEquals("Ryanair", service.getAirlineName());
-    assertEquals("/segeleven/ife.entertainment/images/logo_ryanair.png", service.getLogoPath());
+    assertEquals(
+            "/segeleven/ife.entertainment/images/logo_ryanair.png",
+            service.getLogoPath());
     assertEquals("ryanair", service.getCurrentThemeId());
   }
 
@@ -135,7 +145,9 @@ public class BrandingServiceTest {
     assertEquals("#0F2E6D", service.getPrimaryColor());
     assertEquals("#F9B000", service.getSecondaryColor());
     assertEquals("Singapore Airlines", service.getAirlineName());
-    assertEquals("/segeleven/ife.entertainment/images/logo_singapore.png", service.getLogoPath());
+    assertEquals(
+            "/segeleven/ife.entertainment/images/logo_singapore.png",
+            service.getLogoPath());
     assertEquals("singapore", service.getCurrentThemeId());
   }
 
@@ -146,7 +158,9 @@ public class BrandingServiceTest {
     assertEquals("#004761", service.getPrimaryColor());
     assertEquals("#555756", service.getSecondaryColor());
     assertEquals("Gervithrall Systems", service.getAirlineName());
-    assertEquals("/segeleven/ife.entertainment/images/logo_gervithrall-systems.png", service.getLogoPath());
+    assertEquals(
+            "/segeleven/ife.entertainment/images/logo_gervithrall-systems.png",
+            service.getLogoPath());
     assertEquals("gervithrall", service.getCurrentThemeId());
   }
 }
