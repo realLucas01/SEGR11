@@ -1,5 +1,5 @@
 ## Entwicklung einer Entertainment-Erweiterung speziell für IFE
-**Stand:** 21.01.2025  
+**Stand:** 03.06.2026  
 
 **Auftraggeber:** Novaris Cabin Systems GmbH  
 Friedrich-List-Platz 1   
@@ -189,7 +189,7 @@ Der Screenflow zeigt die Navigation zwischen den einzelnen Bildschirmen.
 Die Wireframes skizzieren die grundlegende Anordnung und Funktion der Bedienelemente (Low-Fidelity) und definieren das Bedienkonzept, ohne ein finales Design festzulegen.
 
 **Abbildung:** Screenflow der Benutzeroberfläche  
-![Screenflow](/final/4-connect-screenflow_v2.svg)
+![Screenflow](/final/FourConnect_ScreenflowDiagramm.svg)
 
 |Anwendungsfall ID | AF-01|
 |-------|-------------|
@@ -209,7 +209,7 @@ Die Wireframes skizzieren die grundlegende Anordnung und Funktion der Bedienelem
 |------|-------------|
 |AF Name| Spielmodus wählen  |
 |Akteur| Fluggast    |
-|Vorbedingungen| Das Spiel "4Connect" wurde ausgewählt |
+|Vorbedingungen| Das Spiel "Vier Gewinnt" wurde ausgewählt |
 |Auslösendes Ereignis| Auswahl eines Spielmodus |
 |Nachbedingung Erfolg| Spiel wird initialisiert, Spielansicht wird angezeigt  |
 |Nachbedingung Fehlschlag| Spiel konnte nicht initialisiert werden, Rückkehr zum Hauptmenü  |
@@ -266,7 +266,7 @@ Die Wireframes skizzieren die grundlegende Anordnung und Funktion der Bedienelem
 |AF Name| Hilfe Hauptmenü aufrufen   |
 |Akteur| Fluggast    |
 |Vorbedingungen| Hauptmenü ist geöffnet    |
-|Auslösendes Ereignis| Auswahl "Hilfe"  |
+|Auslösendes Ereignis| Auswahl "Hilfe / Regeln"  |
 |Nachbedingung Erfolg| Allgemeine Information zur Bedienung wird angezeigt  |
 |Nachbedingung Fehlschlag| Hilfe Hauptmenü kann nicht angezeigt werden  |
 |Ablauf| - Auswahl der Hilfe im Hauptmenü <br/>- Anzeige der grundlegenden Bedienung      |
@@ -281,7 +281,7 @@ Die Wireframes skizzieren die grundlegende Anordnung und Funktion der Bedienelem
 |AF Name| Spielfeld zurücksetzen   |
 |Akteur| Fluggast    |
 |Vorbedingungen| Ein Spiel ist in Betrieb    |
-|Auslösendes Ereignis| Auswahl Schaltfläche "Neustart"  |
+|Auslösendes Ereignis| Auswahl Schaltfläche "Zurücksetzen"  |
 |Nachbedingung Erfolg| Das Spielfeld wird zurückgesetzt auf seinen Ausgangszustand  |
 |Nachbedingung Fehlschlag| Spielfeld wird nicht zurückgesetzt  |
 |Ablauf| - Auswahl der Schaltfläche "Neustart" <br/>- Spielfläche wird von den Spielsteinen geleert <br/>- Anzeige des neuen leeren Spielfeldes       |
@@ -295,10 +295,10 @@ Die Wireframes skizzieren die grundlegende Anordnung und Funktion der Bedienelem
 |AF Name| Rückkehr zur Spielesammlung   |
 |Akteur| Fluggast    |
 |Vorbedingungen| - Ein Spiel ist in Betrieb <brb/> - Ein Spiel ist beendet     |
-|Auslösendes Ereignis| Auswahl Schaltfläche "Spielesammlung"  |
+|Auslösendes Ereignis| Auswahl Schaltfläche "Hauptmenü"  |
 |Nachbedingung Erfolg| Die vorhandene Spielesammlung wird angezeigt |
 |Nachbedingung Fehlschlag| Das aktuelle Spiel wird weiter angezeigt  |
-|Ablauf| - Auswahl der Schaltfläche "Spielesammlung" <br/>- Anzeige der Spielesammlung  |
+|Ablauf| - Auswahl der Schaltfläche "Hauptmenü" <br/>- Anzeige der Spielesammlung  |
 |Benutzerschnittstelle| | 
 
 **Abbildung:** Wireframe – Spielansicht  
@@ -322,7 +322,7 @@ Die Wireframes skizzieren die grundlegende Anordnung und Funktion der Bedienelem
 ![Gewinnkombination anzeigen](/prototyp/Wireframe-08_gewinnmarkierung.svg)
 
 
-Das Aktivitätsdiagramm stellt den Ablauf einer Spielrunde einschließlich optionaler Aktionen (Spielhilfe, Sprachwahl) sowie der Behandlung von Spielende und Neustart dar.
+Das Aktivitätsdiagramm stellt den Ablauf einer Spielrunde einschließlich optionaler Aktionen (Spielhilfe, Sprachwahl) sowie der Behandlung von Spielende und Neustart dar.  
 **Abbildung:** Aktivitätsdiagramm – Spielrunde  
 ![Aktivitätsdiagramm Spielrunde](/final/uml-03-aktivitaetsdiagramm-spielrunde.svg)
 
@@ -446,11 +446,11 @@ Zusätzlich wird für Demo-, Test- und Abnahmezwecke eine vereinfachte Anwenderd
 **Inhalte:**
 - Projektüberblick und Systemarchitektur
 - Beschreibung der Package-Struktur:
-  - `FourConnect`
-  - `GameCore`
-  - `Infrastructure`
-  - `UIController`
-  - `UIFourConnectController`
+  - `fourconnect`
+  - `gamecore`
+  - `infrastructure`
+  - `uicontroller`
+  - `uifourconnectcontroller`
 - Trennung von Benutzeroberfläche, Controller und Spiellogik
 - Build- und Ausführungsprozess über Maven
 - Beschreibung der verwendeten Plugins und Frameworks:
@@ -728,12 +728,14 @@ Alle Diagramm-Artefakte werden in ihrer Endversion abgelegt unter:
 
 Beispiele für vorhandene Exporte:
 
-- `prototyp/01_hauptmenue.svg`
-- `prototyp/02_modusmenue.svg`
-- `prototyp/03-06-07_spielscreen.svg`
-- `prototyp/03a_sprachauswahl.svg`
-- `prototyp/04-07_ergebnis.svg`
-- `prototyp/05_hilfe.svg`
+- `prototyp/Wireframe-01_hauptmenue.svg`
+- `prototyp/Wireframe-02_modusmenue.svg`
+- `prototyp/Wireframe-03-06-07_spielscreen.svg`
+- `prototyp/Wireframe-03a_sprachauswahl.svg`
+- `prototyp/Wireframe-04-07_ergebnis.svg`
+- `prototyp/Wireframe-05-a_spielhilfe.svg`
+- `prototyp/Wireframe-05-b_hauptmenu-hilfe`
+- `prototyp/Wireframe-08_gewinnmarkierung`
 
 Die Exportdateien werden als SVG und teilweise zusätzlich als PDF bereitgestellt.
 
@@ -748,7 +750,7 @@ Die Exportdateien werden als SVG und teilweise zusätzlich als PDF bereitgestell
 ### 8.4 Build, Tests und Dokumentation
 
 #### 8.4.1 Build / Auslieferung
-Die Auslieferung erfolgt als ausführbares Fat-JAR-Datei für den Offline-Betrieb innerhalb des IFE-Systems.
+Die Auslieferung erfolgt als ausführbare Fat-JAR-Datei für den Offline-Betrieb innerhalb des IFE-Systems.
 
 Der Buildprozess basiert auf Maven und wird automatisiert über folgende Werkzeuge umgesetzt:
 - maven-compiler-plugin
