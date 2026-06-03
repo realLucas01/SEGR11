@@ -3,7 +3,10 @@ package segeleven.ife.entertainment.fourconnecttest;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
+import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
@@ -15,21 +18,25 @@ import segeleven.ife.entertainment.fourconnect.FourConnectPlayer;
 import segeleven.ife.entertainment.fourconnect.FourConnectRules;
 import segeleven.ife.entertainment.fourconnect.Player;
 import segeleven.ife.entertainment.fourconnect.Position;
+import segeleven.ife.entertainment.gamecore.MoveStrategy;
+
 
 @DisplayName("FourConnectBotStrategy Tests")
 class FourConnectBotStrategyTest {
 
-  private FourConnectGame game;
-  private FourConnectRules rules;
-  private FourConnectBotStrategy strategy;
-  private FourConnectGameBoard board;
+  public FourConnectGame game;
+  public FourConnectRules rules;
+  public FourConnectBotStrategy strategy;
+  public FourConnectGameBoard board;
+  public MoveStrategy stratClass;
 
   /**
-   * Setzt eine Scheibe direkt auf eine bestimmte Position (ohne Schwerkraft), um
-   * Testzustände schnell aufzubauen.
+   * Setzt eine Scheibe direkt auf eine bestimmte Position (ohne Schwerkraft),
+   * um Testzustände schnell aufzubauen.
    */
   private void placeAt(FourConnectGameBoard b, int col, int row, Player type) {
-    b.setCellValue(new Position(col, row), new FourConnectPlayer(type, null, null));
+    b.setCellValue(new Position(col, row),
+            new FourConnectPlayer(type, null, null));
   }
 
   @BeforeEach
@@ -39,8 +46,11 @@ class FourConnectBotStrategyTest {
     strategy = new FourConnectBotStrategy(game, rules);
     board = new FourConnectGameBoard();
 
-    game.initFourConnectGame(Player.HARDBOT, Player.HUMAN);
+
+    game.initFourConnectGame(Player.HUMAN, Player.HARDBOT);
     board = game.getBoard();
+
+    stratClass = strategy.new HardBotStrategy();
   }
 
   @Nested
@@ -101,7 +111,7 @@ class FourConnectBotStrategyTest {
 
     @Test
     void botScoreHigherThanOpponentSymmetrically() {
-      FourConnectGameBoard botBoard = new FourConnectGameBoard();
+      final FourConnectGameBoard botBoard = new FourConnectGameBoard();
       final FourConnectGameBoard oppBoard = new FourConnectGameBoard();
 
       placeAt(botBoard, 0, 5, Player.HARDBOT);
@@ -127,6 +137,96 @@ class FourConnectBotStrategyTest {
       placeAt(b, 1, 5, Player.HUMAN);
       int scoreAfterMix = strategy.appraiseBoard(b);
       assertTrue(scoreAfterMix < scoreBeforeMix);
+    }
+  }
+
+  @Nested
+  class HardBotTest {
+    @Test
+    void playTestTurnTest() throws InvocationTargetException, IllegalAccessException,
+            NoSuchMethodException {
+
+      FourConnectPlayer hardBotPlayer = game.getPlayers()[1];
+
+      Method playTestTurnPublic = FourConnectBotStrategy.HardBotStrategy.class
+              .getDeclaredMethod("playTestTurn", FourConnectGameBoard.class, Position.class,
+                      FourConnectPlayer.class);
+      playTestTurnPublic.setAccessible(true);
+      Position turn = new Position(0, 0);
+
+      //playTestTurnPublic.invoke( board,turn, hardBotPlayer);
+      playTestTurnPublic.invoke(stratClass, board, turn, hardBotPlayer);
+      assertEquals(hardBotPlayer, board.getCellOwner(0, 0));
+    }
+
+    @Test
+    void undoTestTurnTest() throws InvocationTargetException, IllegalAccessException,
+            NoSuchMethodException {
+      Method undoTurn = FourConnectBotStrategy.HardBotStrategy.class
+              .getDeclaredMethod("undoTestTurn", FourConnectGameBoard.class, Position.class);
+      Position turn = new Position(0, 0);
+
+      undoTurn.setAccessible(true);
+      undoTurn.invoke(stratClass, board, turn);
+
+      assertEquals(Player.NONE, board.getCellOwner(0, 0).getType());
+    }
+
+    @Test
+    void findBotPlayerPositionTest() throws NoSuchMethodException, InvocationTargetException,
+            IllegalAccessException {
+      FourConnectPlayer[] players = game.getPlayers();
+
+
+      Method botPosition = FourConnectBotStrategy.HardBotStrategy.class
+              .getDeclaredMethod("findBotPlayerPosition", FourConnectPlayer[].class);
+      botPosition.setAccessible(true);
+      Integer result = (Integer) botPosition.invoke(stratClass, (Object) players);
+
+      assertEquals(1, result);
+    }
+
+    @Test
+    void findBotPlayerPositionCoudntFindBot() throws NoSuchMethodException,
+            InvocationTargetException, IllegalAccessException {
+      FourConnectPlayer[] players = game.getPlayers();
+
+      FourConnectPlayer human2 = new FourConnectPlayer(Player.HUMAN, null, null);
+      players[1] = human2;
+
+
+      Method botPosition = FourConnectBotStrategy.HardBotStrategy.class
+              .getDeclaredMethod("findBotPlayerPosition", FourConnectPlayer[].class);
+      botPosition.setAccessible(true);
+      Integer result = (Integer) botPosition.invoke(stratClass, (Object) players);
+
+      assertEquals(-1, result);
+    }
+
+    @Test
+    void findValideTurnsTest() throws InvocationTargetException, IllegalAccessException,
+            NoSuchMethodException {
+      final FourConnectPlayer humanPlayer = new FourConnectPlayer(Player.HUMAN, null, null);
+      for (int r = 0; r < 6; r++) {
+        for (int c = 0; c < 7; c++) {
+          final Position position = new Position(c, r);
+          board.setCellValue(position, humanPlayer);
+        }
+      }
+      final Position freePos = new Position(3, 0);
+      final FourConnectPlayer nonePlayer = new FourConnectPlayer(Player.NONE, null, null);
+
+      board.setCellValue(freePos, nonePlayer);
+      final List<Position> testTurn = new ArrayList<>();
+      testTurn.add(freePos);
+      List<Position> results;
+
+      Method botPosition = FourConnectBotStrategy.HardBotStrategy.class
+              .getDeclaredMethod("findValideTurns", FourConnectGameBoard.class);
+      botPosition.setAccessible(true);
+      results = (List<Position>) botPosition.invoke(stratClass, board);
+
+      assertEquals(testTurn, results);
     }
   }
 }
