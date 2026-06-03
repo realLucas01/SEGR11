@@ -7,7 +7,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
-import segeleven.ife.entertainment.gamecore.MoveStrategy;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -19,6 +18,7 @@ import segeleven.ife.entertainment.fourconnect.FourConnectPlayer;
 import segeleven.ife.entertainment.fourconnect.FourConnectRules;
 import segeleven.ife.entertainment.fourconnect.Player;
 import segeleven.ife.entertainment.fourconnect.Position;
+import segeleven.ife.entertainment.gamecore.MoveStrategy;
 
 
 @DisplayName("FourConnectBotStrategy Tests")
