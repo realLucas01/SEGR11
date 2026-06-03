@@ -19,11 +19,11 @@ control "       FourConnectGame       " as Game
 |||
 entity "       FourConnectPlayer       " as Player
 |||
+control "       FourConnectRules       " as Rules
+|||
 control "       FourConnectBotStrategy       " as Strategy
 |||
 control "       App       " as App
-
-
 
 Fluggast -> Controller : handleColumnInput(column)
 |||
@@ -38,12 +38,30 @@ else Spalte voll
 |||
 else Zug möglich
   Controller -> Game : dropDisc(column)
+
+  Game -> Rules : checkTie(gameBoard)
+  Rules --> Game : boolean
+
+  Game -> Rules : checkWin(gameBoard, currentPlayer)
+  alt checkWin == true
+    Rules -> Rules : determineWinningPositions(...)
+    Rules --> Game : true
+
+    Game -> Rules : getLastWinningPositions()
+    Rules --> Game : List<Position>
+  |||
+  else checkWin == false
+    Rules --> Game : false
+  |||
+  end
+  |||
+
   Game --> Controller : GameState
 
   Controller -> Controller : updateBoard()
   |||
-
   alt GameState == Won
+  |||
     Controller -> App : setRoot("EndScreen")
   |||
   else GameState == Tied
@@ -52,48 +70,62 @@ else Zug möglich
   else GameState == Running
     Controller -> Game : playerTurn()
     Controller -> Controller : updateStatus()
-  |||
-  end
-  |||
-
-  alt oneBotPlayer == true
-    Controller -> Controller : gridPane.setDisable(true)
-    Controller -> Controller : botDelayTimer = new PauseTransition(Duration.seconds(1.0))
-    Controller -> Controller : botDelayTimer.setOnFinished(event)
-
-    Controller -> Game : playBotTurn()
-    Game -> Player : getStrategy()
-    Player --> Game : MoveStrategy
-
-    Game -> Strategy : chooseMove(gameBoard)
-    Strategy -> Game : dropDisc(botColumn)
-    Game --> Strategy : GameState
-    Strategy --> Game : GameState
-    Game --> Controller : GameState
-
-    Controller -> Controller : updateBoard()
-    Controller -> Controller : gridPane.setDisable(false)
     |||
+    alt oneBotPlayer == true
+    |||
+      Controller -> Controller : gridPane.setDisable(true)
+      Controller -> Controller : botDelayTimer = new PauseTransition(Duration.seconds(1.0))
+      Controller -> Controller : botDelayTimer.setOnFinished(event)
+      Controller -> Controller : botDelayTimer.play()
 
-    alt GameState == Won
-      Controller -> App : setRoot("EndScreen")
-    |||
-    else GameState == Tied
-      Controller -> Controller : statusLabel.setText("Unentschieden!")
-      Controller -> App : setRoot("EndScreen")
-    |||
-    else GameState == Running
-      Controller -> Game : playerTurn()
-      Controller -> Controller : updateStatus()
+
+      Controller -> Game : playBotTurn()
+      Game -> Player : getStrategy()
+      Player --> Game : MoveStrategy
+      Game -> Strategy : chooseMove(gameBoard)
+      Strategy -> Game : dropDisc(botColumn)
+      Game -> Rules : checkTie(gameBoard)
+      Rules --> Game : boolean
+      Game -> Rules : checkWin(gameBoard, currentPlayer)
+      |||
+      alt checkWin == true
+        Rules -> Rules : determineWinningPositions(...)
+        Rules --> Game : true
+
+        Game -> Rules : getLastWinningPositions()
+        Rules --> Game : List<Position>
+      |||
+      else checkWin == false
+        Rules --> Game : false
+      |||
+      end
+      |||
+      Game --> Strategy : GameState
+      Strategy --> Game : GameState
+      Game --> Controller : GameState
+
+      Controller -> Controller : updateBoard()
+      Controller -> Controller : gridPane.setDisable(false)
+      |||
+      alt GameState == Won
+        Controller -> App : setRoot("EndScreen")
+      |||
+      else GameState == Tied
+        Controller -> Controller : statusLabel.setText("Unentschieden!")
+        Controller -> App : setRoot("EndScreen")
+      |||
+      else GameState == Running
+        Controller -> Game : playerTurn()
+        Controller -> Controller : updateStatus()
+      |||
+      end
+      |||
+    else oneBotPlayer == false
     |||
     end
-    |||
-
-    Controller -> Controller : botDelayTimer.play()
-  else oneBotPlayer == false
   |||
   end
-  |||
+|||
 end
 |||
 |||
