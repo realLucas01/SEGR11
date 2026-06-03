@@ -16,13 +16,17 @@ Perlickstraße 1
 **E-Mail:** lucasr@gervithrall-systems.de   
 **Telefon:** 0351 6482642
 
+---
+
 # Inhaltsverzeichnis
 
-1. [Zweck der Anwendung](#1-zweck-der-anwendung)
+1. [Zweck der Anwendung](#1-zweck-der-anwendung)  
 2. [Start der Anwendung](#2-start-der-anwendung)
 3. [Steuerung](#3-steuerung)
 4. [Hauptmenü](#4-hauptmenü)
-5. [Hilfe](#5-hilfe--regeln-hauptmenü)
+5. [Hilfe/Regeln]()  
+   5.1 [Hauptmenü]()  
+   5.2 [Spielbetrieb]()  
 6. [Einstellungen](#6-einstellungen)
 7. [Vier Gewinnt / Spielmodus wählen](#7-vier-gewinnt--spielmodus-wählen)
 8. [Spielansicht und Funktionen](#8-spielansicht-und-funktionen)
@@ -70,7 +74,9 @@ Im Hauptmenü stehen folgende Funktionen zur Verfügung:
 
 ---
 
-## 5 Hilfe / Regeln (Hauptmenü)
+## 5 Hilfe / Regeln
+
+### 5.1 Hauptmenü
 
 Im Hauptmenü Hilfe-Bereich werden allgemeine Informationen und Hinweise zur Steuerung der Anwendung verständlich dargestellt.
 
@@ -79,9 +85,7 @@ Funktionen:
 - Anzeige allgemeiner Informationen
 - **Hauptmenü:** Rückkehr zum Hauptmenü
 
----
-
-## 5 Hilfe / Regeln (Spielbetrieb)
+### 5.2 Spielbetrieb
 
 Im Hilfe-Bereich werden die Spielregeln verständlich dargestellt.
 
