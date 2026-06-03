@@ -18,20 +18,20 @@ Perlickstraße 1
 
 # Inhaltsverzeichnis
 
-1. [Zweck der Anwendung](1-zweck-der-anwendung)
-2. [Start der Anwendung](2-start-der-anwendung)
-3. [Steuerung](3-steuerung)
-4. [Hauptmenü](4-hauptmenü)
-5. [Hilfe](5-hilfe)
-6. [Einstellungen](6-einstellungen)
-7. [Vier Gewinnt / Spielmodus wählen](vier-gewinnt-/-spielmodus-wählen)
-8. [Spielansicht und Funktionen](8-spielansicht-und-funktionen)
-9. [Spielablauf](9-spielablauf)
-10. [Spielsteuerung](10-spielsteuerung)
-11. [Spielregeln](11-spielregeln)
-12. [Spielende](12-spielende)
-13. [Nach dem Spiel](13-nach-dem-spiel)
-14. [Gewinnkombination](14-gewinnkombination)
+1. [Zweck der Anwendung](#1-zweck-der-anwendung)
+2. [Start der Anwendung](#2-start-der-anwendung)
+3. [Steuerung](#3-steuerung)
+4. [Hauptmenü](#4-hauptmenü)
+5. [Hilfe](#5-hilfe--regeln-hauptmenü)
+6. [Einstellungen](#6-einstellungen)
+7. [Vier Gewinnt / Spielmodus wählen](#7-vier-gewinnt--spielmodus-wählen)
+8. [Spielansicht und Funktionen](#8-spielansicht-und-funktionen)
+9. [Spielablauf](#9-spielablauf)
+10. [Spielsteuerung](#10-spielsteuerung)
+11. [Spielregeln](#11-spielregeln)
+12. [Spielende](#12-spielende)
+13. [Nach dem Spiel](#13-nach-dem-spiel)
+14. [Gewinnkombination](#14-gewinnkombination)
 
 ## 1 Zweck der Anwendung
 
