@@ -322,7 +322,3 @@ Mit **4-Connect** steht den Passagieren ein einfaches und intuitiv bedienbares U
 * Zur Spielesammlung zurückkehren
 
 Die Anwendung arbeitet vollständig offline und wurde speziell für den zuverlässigen Einsatz auf Sitzmonitoren innerhalb des IFE-Systems entwickelt.
-
----
-
-**Ende der Anwenderschulung**
