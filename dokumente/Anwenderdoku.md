@@ -13,17 +13,18 @@
 2. Überblick über die Anwendung
 3. Spielziel
 4. Anwendung starten
-5. Spielmodus auswählen
-6. Bedienung während des Spiels
-7. Spielhilfe aufrufen
-8. Spiel neu starten
-9. Spielende
-10. Gewinnkombination anzeigen
-11. Öffnen der Einstellungen
-12. Neue Runde starten
-13. Rückkehr zur Spielesammlung
-14. Häufige Situationen
-15. Zusammenfassung
+5. Öffnen der Einstellungen
+6. Applikationshilfe Aufrufen
+7. Spielmodus auswählen
+8. Bedienung während des Spiels
+9. Spielhilfe aufrufen
+10. Spiel neu starten
+11. Spielende
+12. Gewinnkombination anzeigen
+13. Neue Runde starten
+14. Rückkehr zur Spielesammlung
+15. Häufige Situationen
+16. Zusammenfassung
 
 ---
 
@@ -31,7 +32,7 @@
 
 ## Ziel der Schulung
 
-Diese Schulung vermittelt die Bedienung der Anwendung **4 Gewinnt** innerhalb des Inflight-Entertainment-Systems (IFE).
+Diese Schulung vermittelt die Bedienung der Anwendung **Vier Gewinnt** innerhalb des Inflight-Entertainment-Systems (IFE).
 
 Nach Abschluss der Schulung können die Teilnehmer:
 
@@ -101,7 +102,31 @@ Die Anwendung wurde erfolgreich gestartet und ist spielbereit.
 
 ---
 
-# 5. Spielmodus auswählen
+# 5. Öffnen der Einstellungen
+
+Die Einstellungen können nur im Hauptmenü aufgerufen werden.
+
+## Vorgehnsweise
+
+1. Schalfläche **"Einstellungen"** wählen.
+2. Neuer Bildschirm erscheint. Hier kann man nun über die obere Schalfläche die Sprache und über die untere die Airline CI einstellen.
+3. Über den Button **"Hauptmenü"** kann man nun zum Hauptmenü zurückkehren.
+
+---
+
+# 6. Applikationshilfe Aufrufen
+
+Die Applikationseinstellungen können nur im Hauptmenü aufgerufen werden. Für Spielhilfe bitte unter Punkt 9 Informieren.
+
+## Vorgehensweise
+
+1. Im Hauptmenü die Schalfläche **"Hilfe/Regeln"** wählen.
+2. Neuer Bildschirm erscheint. Hier werden nun allgemeine Infos und eine kurze Bedienungsanleitung angezeigt.
+3. Über den Button **"Hauptmenü"** kann man nun zum Hauptmenü zurückkehren.
+
+---
+
+# 7. Spielmodus auswählen
 
 Nach dem Start stehen **drei** Spielmodi zur Verfügung.
 
@@ -128,7 +153,7 @@ Nach dem Start stehen **drei** Spielmodi zur Verfügung.
 
 ---
 
-# 6. Bedienung während des Spiels
+# 8. Bedienung während des Spiels
 
 ## Spielstein setzen
 
@@ -149,7 +174,7 @@ Ist eine Spalte bereits vollständig gefüllt, kann dort kein weiterer Spielstei
 
 ---
 
-# 7. Spielhilfe aufrufen
+# 9. Spielhilfe aufrufen
 
 Die Spielhilfe kann jederzeit während einer laufenden Partie geöffnet werden.
 
@@ -165,7 +190,7 @@ Das aktuelle Spiel wird dabei nicht unterbrochen oder zurückgesetzt.
 
 ---
 
-# 8. Spiel neu starten
+# 10. Spiel neu starten
 
 Ein laufendes Spiel kann jederzeit zurückgesetzt werden.
 
@@ -181,7 +206,7 @@ Der bisherige Spielstand geht dabei verloren.
 
 ---
 
-# 9. Spielende
+# 11. Spielende
 
 Eine Spielrunde endet in einem der folgenden Fälle.
 
@@ -203,7 +228,7 @@ Der Ergebnisbildschirm wird angezeigt.
 
 ---
 
-# 10. Gewinnkombination anzeigen
+# 12. Gewinnkombination anzeigen
 
 Nach einem gewonnenen Spiel kann die Gewinnkombination dargestellt werden.
 
@@ -220,18 +245,7 @@ Die Gewinnsituation kann dadurch nachvollzogen und überprüft werden.
 
 ---
 
-# 11. Öffnen der Einstellungen
-
-Die Einstellungen können nur im Hauptmenü aufgerufen werden.
-
-## Vorgehnsweise
-
-1. Schalfläche **"Einstellungen"** wählen.
-2. Neuer Bildschirm erscheint. Hier kann man nun über die obere Schalfläche die Sprache und über die untere die Airline CI einstellen.
-3. Üben den Button **"Hauptmenü"** kann man nun zum Hauptmenü zurückkehren.
-
----
-# 11. Neue Runde starten
+# 13. Neue Runde starten
 
 Nach Abschluss einer Partie kann sofort eine neue Runde gestartet werden.
 
@@ -243,7 +257,7 @@ Nach Abschluss einer Partie kann sofort eine neue Runde gestartet werden.
 
 ---
 
-# 12. Rückkehr zur Spielesammlung
+# 14. Rückkehr zur Spielesammlung
 
 Die Anwendung kann jederzeit verlassen werden.
 
@@ -255,7 +269,7 @@ Die Anwendung kann jederzeit verlassen werden.
 
 ---
 
-# 13. Häufige Situationen
+# 15. Häufige Situationen
 
 ## Spielstein kann nicht gesetzt werden
 
@@ -291,7 +305,7 @@ Der vorherige Spielstand kann nicht wiederhergestellt werden.
 
 ---
 
-# 14. Zusammenfassung
+# 16. Zusammenfassung
 
 Mit **4-Connect** steht den Passagieren ein einfaches und intuitiv bedienbares Unterhaltungsspiel innerhalb des Inflight-Entertainment-Systems zur Verfügung.
 
@@ -301,6 +315,7 @@ Mit **4-Connect** steht den Passagieren ein einfaches und intuitiv bedienbares U
 * Spielmodus auswählen
 * Spielzüge durchführen
 * Hilfe und Regeln anzeigen
+* Einstellungen ändern und anzeigen
 * Spielfeld neu starten
 * Gewinnkombination anzeigen
 * Neue Runde beginnen
