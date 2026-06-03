@@ -24,9 +24,9 @@ Perlickstraße 1
 2. [Start der Anwendung](#2-start-der-anwendung)
 3. [Steuerung](#3-steuerung)
 4. [Hauptmenü](#4-hauptmenü)
-5. [Hilfe/Regeln]()  
-   5.1 [Hauptmenü]()  
-   5.2 [Spielbetrieb]()  
+5. [Hilfe/Regeln](#5-hilfe--regeln)  
+   5.1 [Hauptmenü](#51-hauptmenü)  
+   5.2 [Spielbetrieb](#52-spielbetrieb)  
 6. [Einstellungen](#6-einstellungen)
 7. [Vier Gewinnt / Spielmodus wählen](#7-vier-gewinnt--spielmodus-wählen)
 8. [Spielansicht und Funktionen](#8-spielansicht-und-funktionen)
@@ -36,6 +36,7 @@ Perlickstraße 1
 12. [Spielende](#12-spielende)
 13. [Nach dem Spiel](#13-nach-dem-spiel)
 14. [Gewinnkombination](#14-gewinnkombination)
+15. [Hinweise](#15-hinweise)
 
 ## 1 Zweck der Anwendung
 
@@ -210,7 +211,7 @@ Dadurch kehrt man zurück zum Ergebnisbildschirm.
 
 ---
 
-## 1.14 Hinweise
+## 15 Hinweise
 
 - Die Anwendung ist vollständig offline nutzbar
 - Es werden keine Daten gespeichert oder übertragen
