@@ -129,7 +129,7 @@ public class FourConnectBotStrategy implements MoveStrategy {
 
       //Zähle Bot und Gegner Scheiben im aktuellen Fenster
       for (Position pos : connects) {
-        final Player owner = board.getCellOwner(pos.getXcord(), pos.getyCord()).getType();
+        final Player owner = board.getCellOwner(pos.getXcord(), pos.getYcord()).getType();
         switch (owner) {
           case HUMAN -> playerOwningCount++;
           case HARDBOT -> botOwningCount++;

@@ -53,7 +53,7 @@ public class Position {
    *
    * @return den Integer Wert
    */
-  public Integer getyCord() {
+  public Integer getYcord() {
     return rowCord;
   }
 

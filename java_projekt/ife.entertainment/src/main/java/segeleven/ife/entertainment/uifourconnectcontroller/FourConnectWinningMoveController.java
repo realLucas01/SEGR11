@@ -108,7 +108,7 @@ public class FourConnectWinningMoveController {
    */
   private void highlightWinningPositions(List<Position> winningPositions) {
     for (Position position : winningPositions) {
-      Circle circle = circles[position.getyCord()][position.getXcord()];
+      Circle circle = circles[position.getYcord()][position.getXcord()];
       circle.setStroke(Color.WHITE);
       circle.setStrokeWidth(6);
     }
