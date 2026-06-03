@@ -20,23 +20,25 @@
 package segeleven.ife.entertainment.uifourconnectcontroller;
 
 import java.io.IOException;
+import java.text.MessageFormat;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
-import java.text.MessageFormat;
+
 import segeleven.ife.entertainment.App;
 import segeleven.ife.entertainment.fourconnect.FourConnectGame;
+import segeleven.ife.entertainment.fourconnect.FourConnectPlayer;
 import segeleven.ife.entertainment.fourconnect.Player;
 import segeleven.ife.entertainment.gamecore.GameState;
-import segeleven.ife.entertainment.uicontroller.EndScreenController;
 import segeleven.ife.entertainment.infrastructure.LocalizationService;
-import segeleven.ife.entertainment.fourconnect.FourConnectPlayer;
+import segeleven.ife.entertainment.uicontroller.EndScreenController;
 
 /**
  * FourConnect-spezifische Implementierung des EndScreenControllers.
  *
  * <p>Zeigt das Spielergebnis an und ermöglicht nach Spielende
  * die Navigation zurück zum Hauptmenü oder den Neustart des Spiels.
- * 
+ *
  * @author Truong Tan Long Nguyen
  */
 public class FourConnectEndScreenController implements EndScreenController {
@@ -44,9 +46,9 @@ public class FourConnectEndScreenController implements EndScreenController {
     /** Label zur Anzeige des Spielergebnisses. */
     @FXML
     private Label resultLabel;
-    
+
     private final LocalizationService localizationService = LocalizationService.getInstance();
-    
+
     /**
      * Initialisiert den EndScreen und zeigt das Spielergebnis an.
      */
