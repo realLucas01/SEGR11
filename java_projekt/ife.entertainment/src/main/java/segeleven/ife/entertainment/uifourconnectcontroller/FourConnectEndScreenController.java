@@ -20,12 +20,15 @@
 package segeleven.ife.entertainment.uifourconnectcontroller;
 
 import java.io.IOException;
+import java.text.MessageFormat;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import segeleven.ife.entertainment.App;
 import segeleven.ife.entertainment.fourconnect.FourConnectGame;
+import segeleven.ife.entertainment.fourconnect.FourConnectPlayer;
 import segeleven.ife.entertainment.fourconnect.Player;
 import segeleven.ife.entertainment.gamecore.GameState;
+import segeleven.ife.entertainment.infrastructure.LocalizationService;
 import segeleven.ife.entertainment.uicontroller.EndScreenController;
 
 /**
@@ -42,6 +45,8 @@ public class FourConnectEndScreenController implements EndScreenController {
   @FXML
   private Label resultLabel;
 
+  private final LocalizationService localizationService = LocalizationService.getInstance();
+
   /**
    * Initialisiert den EndScreen und zeigt das Spielergebnis an.
    */
@@ -49,11 +54,35 @@ public class FourConnectEndScreenController implements EndScreenController {
   @FXML
   public void initialize() {
     GameState state = FourConnectGame.getInstance().getStatus();
+
     if (state == GameState.Won) {
-      resultLabel.setText("Gewonnen!");
+      resultLabel.setText(getWinnerText());
     } else if (state == GameState.Tied) {
-      resultLabel.setText("Unentschieden!");
+      resultLabel.setText(localizationService.getText("game.draw"));
     }
+  }
+
+  /**
+   * Erstellt den Ergebnistext für den Gewinner der aktuellen Runde.
+   *
+   * @return lokalisierter Ergebnistext
+   */
+  private String getWinnerText() {
+    FourConnectGame game = FourConnectGame.getInstance();
+    int winnerIndex = game.getCurrentPlayerIndex();
+    FourConnectPlayer winner = game.getPlayers()[winnerIndex];
+
+    if (winner.getType() != Player.HUMAN) {
+      return localizationService.getText("game.botWin");
+    }
+
+    String winText = localizationService.getText("game.win");
+    return MessageFormat.format(winText, winnerIndex + 1);
+  }
+
+  @FXML
+  public void showWinningMove() throws IOException {
+    App.setRoot("FourConnectWinningMove");
   }
 
   /**

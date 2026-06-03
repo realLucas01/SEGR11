@@ -19,12 +19,13 @@
 
 package segeleven.ife.entertainment.fourconnect;
 
+import java.util.ArrayList;
+import java.util.List;
 import segeleven.ife.entertainment.gamecore.Game;
 import segeleven.ife.entertainment.gamecore.GameState;
 import segeleven.ife.entertainment.gamecore.MoveStrategy;
 import segeleven.ife.entertainment.gamecore.PlayArea;
 import segeleven.ife.entertainment.infrastructure.BrandingService;
-
 
 /**
  * Klasse die für den eigentlichen Spielablauf zuständig ist.
@@ -61,7 +62,9 @@ public class FourConnectGame implements Game<FourConnectGameBoard> {
   private BrandingService currentbranding;
   /** true, wenn ein Bot im Spiel ist. false wenn kein Bot. */
   private boolean oneBotPlayer;
-
+  /** Positionen der gewinnbringenden Viererreihe. */
+  private List<Position> winningPositions = new ArrayList<>();
+  
   /**
    * Privater Konstruktor für die Klasse FourConnectGame mitsamt der Grundlegenden initialisierung
    * aller wichtigen Variablen.
@@ -174,6 +177,7 @@ public class FourConnectGame implements Game<FourConnectGameBoard> {
     players[1] = null;
     currentPlayerIndex = 0;
     gameBoard.clear();
+    winningPositions.clear();
   }
 
   /**
@@ -202,9 +206,20 @@ public class FourConnectGame implements Game<FourConnectGameBoard> {
     }
     // Überprüfen, ob gewonnen
     if (rules.checkWin(gameBoard, players[currentPlayerIndex])) {
+      winningPositions = rules.getLastWinningPositions();
       state = GameState.Won;
     }
     return state;
+    
+  }
+  
+  /**
+   * Gibt die Positionen der gewinnbringenden Viererreihe zurück.
+   *
+   * @return Liste der Gewinnpositionen
+   */
+  public List<Position> getWinningPositions() {
+    return winningPositions;
   }
 
   /**

@@ -47,22 +47,22 @@ OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
     <bottom>
     	<GridPane alignment="CENTER" hgap="30" vgap="30">
 
+            <Button text="%menu.showWinningCombi"
+        			prefWidth="300" prefHeight="50"
+        			onAction="#showWinningMove"
+        			GridPane.rowIndex="0" GridPane.columnIndex="0"
+        			styleClass="button-secondary"/>
+            
             <Button text="%menu.newRound"
             		prefWidth="150" prefHeight="50"
             		onAction="#restartGame"
-                    GridPane.rowIndex="0" GridPane.columnIndex="0"
+                    GridPane.rowIndex="0" GridPane.columnIndex="1"
                     styleClass="button-secondary"/>
-
-            <Label prefWidth="150" prefHeight="50"
-                    GridPane.rowIndex="0" GridPane.columnIndex="1"/>
-
-            <Label prefWidth="150" prefHeight="50"
-                    GridPane.rowIndex="0" GridPane.columnIndex="2"/>
 
 			<Button text="%menu.back"
             		prefWidth="150" prefHeight="50"
                     onAction="#backToMainMenu"
-                    GridPane.rowIndex="0" GridPane.columnIndex="3"
+                    GridPane.rowIndex="0" GridPane.columnIndex="2"
                     styleClass="button-secondary"/>
 
         </GridPane>

@@ -44,7 +44,7 @@ OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
 
 				<VBox fx:id="turnBox" spacing="10" alignment="TOP_LEFT" styleClass="turn-box">
         			<Label text="%game.turn" styleClass="turn-title"/>
-        			<Label fx:id="statusLabel" text="" styleClass="turn-value"/>
+        			<Label fx:id="statusLabel" text="%game.playerTurn" styleClass="turn-value"/>
     			</VBox>
 
     			<Region VBox.vgrow="ALWAYS"/>

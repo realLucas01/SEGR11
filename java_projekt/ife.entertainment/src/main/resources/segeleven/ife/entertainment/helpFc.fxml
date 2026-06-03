@@ -39,7 +39,7 @@ OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
 
     <center>
         <VBox spacing="15" alignment="CENTER">
-            <Label text="%help.rules_game" wrapText="true"/>
+            <Label text="%help.rules_game" wrapText="true" styleClass="text"/>
         </VBox>
     </center>
 

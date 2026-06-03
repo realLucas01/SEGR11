@@ -18,7 +18,7 @@ class PositionTest {
     Position testPos = new Position(x, y);
 
     assertEquals(x, testPos.getXcord());
-    assertEquals(y, testPos.getyCord());
+    assertEquals(y, testPos.getYcord());
   }
 
   @Test
@@ -33,7 +33,7 @@ class PositionTest {
   void getYtest() {
     Integer y = 2;
     Position testPos = new Position(0, y);
-    Integer testPosY = testPos.getyCord();
+    Integer testPosY = testPos.getYcord();
     assertEquals(y, testPosY);
   }
 

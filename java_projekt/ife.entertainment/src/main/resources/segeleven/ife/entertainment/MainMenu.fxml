@@ -49,33 +49,33 @@ OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
                     onAction="#startGame"
                     GridPane.rowIndex="0" GridPane.columnIndex="0"
                     styleClass="game-tile"/>
-            <Button text="Game 2"
+            <Button text="%game.tile2"
                     prefWidth="150" prefHeight="150"
                     GridPane.rowIndex="0" GridPane.columnIndex="1"
                     styleClass="game-tile"/>
-            <Button text="Game 3"
+            <Button text="%game.tile3"
                     prefWidth="150" prefHeight="150"
                     GridPane.rowIndex="0" GridPane.columnIndex="2"
                     styleClass="game-tile"/>
-            <Button text="Game 4"
+            <Button text="%game.tile4"
                     prefWidth="150" prefHeight="150"
                     GridPane.rowIndex="0" GridPane.columnIndex="3"
                     styleClass="game-tile"/>
 
             <!-- 2te Reihe -->
-            <Button text="Game 5"
+            <Button text="%game.tile5"
                     prefWidth="150" prefHeight="150"
                     GridPane.rowIndex="1" GridPane.columnIndex="0"
                     styleClass="game-tile"/>
-            <Button text="Game 6"
+            <Button text="%game.tile6"
                     prefWidth="150" prefHeight="150"
                     GridPane.rowIndex="1" GridPane.columnIndex="1"
                     styleClass="game-tile"/>
-            <Button text="Game 7"
+            <Button text="%game.tile7"
                     prefWidth="150" prefHeight="150"
                     GridPane.rowIndex="1" GridPane.columnIndex="2"
                     styleClass="game-tile"/>
-            <Button text="Game 8"
+            <Button text="%game.tile8"
                     prefWidth="150" prefHeight="150"
                     GridPane.rowIndex="1" GridPane.columnIndex="3"
                     styleClass="game-tile"/>
