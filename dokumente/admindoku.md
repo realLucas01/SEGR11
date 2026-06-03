@@ -32,6 +32,7 @@ Perlickstraße 1
 9. [Fehlerbehebung](#9-fehlerbehebung)
 
 ---
+
 ## 1. Übersicht
 
 IFE Entertainment ist eine offlinefähige Spieleapplikation zur Erweiterung des Inflight-Entertainment-Systems (IFE) von Novaris Cabin Systems GmbH. Die Anwendung wird auf den Sitzmonitoren der Passagiere betrieben und bietet aktuell das Spiel "Vier Gewinnt" an.
@@ -45,6 +46,7 @@ IFE Entertainment ist eine offlinefähige Spieleapplikation zur Erweiterung des 
 - Maven 3.9.15
 - Keine Netzwerkverbindung erforderlich - vollständiger Offline-Betrieb
 - Keine zusätzliche Peripherie erforderlich - Touch oder Mausbedienung
+
 ---
 
 ## 3. Installation
@@ -55,6 +57,7 @@ Das Programm wird als ausführbare Fat-JAR-Datei ausgeliefert. Diese enthält de
 ```
 java -jar ife.entertainment-[Versionsnummer]-obfuscated.jar
 ```
+
 ---
 
 ## 4. Build aus dem Quellcode
@@ -72,13 +75,14 @@ Dieser Befehl führt folgende Schritte automatisch aus:
 3. **Fat-JAR** - Code und alle JavaFX-Bibliotheken werden zu einer ausführbaren JAR zusammengepackt
 4. **Auto Copy** - Die fertige JAR sowie JavaDocs und Coverage-Berichte werden automatisch in den `final/` Ordner kopiert
 
-
 **Ausgaben nach dem Build:**
 
 - Die fertige JAR-Datei liegt sowohl im `target/` Ordner als auch im `final/` Ordner
 - JavaDocs und Coverage-Berichte liegen ebenfalls im `final/` Ordner
 - Zum Öffnen der Berichte die jeweilige `index.html` im `final/` Ordner starten
+
 ---
+
 ## 5. Projektstruktur
 ```
 java_projekt/ife.entertainment/
@@ -92,12 +96,14 @@ java_projekt/ife.entertainment/
 │   │   │   └── uifourconnectcontroller/      - Controller spezifisch für Vier Gewinnt
 │   │   └── resources/
 │   │       ├── i18n/                        - Sprachdateien
-│   │       └── segeleven/ife.entertainment/ - FXML-Dateien und CSS
+│   │       └── segeleven/ife/entertainment/ - FXML-Dateien und CSS
 │   └── test/                                - Unit Tests
 ├── pom.xml
 └── proguard.config
 ```
+
 ---
+
 ## 6. Konfiguration
 
 ### 6.1 Branding (CI-Anpassung)
@@ -171,14 +177,19 @@ public Locale[] getAvailableLocales() {
 ```
 
 4. Neu bauen: `mvn clean site install`
+
 ---
+
 ## 7. Tests und Qualitätssicherung
 
 Unit Tests und Code Coverage werden bei jedem Build automatisch ausgeführt. Der Coverage-Bericht wird automatisch in den `final/` Ordner kopiert - zum Öffnen die `index.html` dort starten.
 
+---
+
 ## 8. Bekannte Einschränkungen
 
 - Die Logo-Pfad-Funktionalität in `BrandingService` ist aktuell nur vorbereitet und noch nicht aktiv eingebunden.
+
 ---
 
 ## 9. Fehlerbehebung
@@ -197,7 +208,7 @@ Unit Tests und Code Coverage werden bei jedem Build automatisch ausgeführt. Der
 - JDK 21 installiert?
 - `mvn clean install` erneut ausführen
 
-- ### Coverage-Bericht nicht sichtbar
+### Coverage-Bericht nicht sichtbar
 - `mvn clean site install` ausführen
 - `index.html` im konfigurierten Coverage-Ausgabeordner öffnen
 
