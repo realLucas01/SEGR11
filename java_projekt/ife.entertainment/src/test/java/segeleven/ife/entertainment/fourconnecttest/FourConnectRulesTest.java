@@ -38,7 +38,7 @@ public class FourConnectRulesTest {
   /** Testet ob ein horizontaler Sieg erkannt wird. */
   @Test
   public void horizontalWin_detected() {
-    FourConnectRules rules = new FourConnectRules();
+    final FourConnectRules rules = new FourConnectRules();
     FourConnectGameBoard board = createBoard();
     FourConnectPlayer p = human();
     place(board, 0, 0, p);
@@ -51,7 +51,7 @@ public class FourConnectRulesTest {
   /** Testet ob ein vertikaler Sieg erkannt wird. */
   @Test
   public void verticalWin_detected() {
-    FourConnectRules rules = new FourConnectRules();
+    final FourConnectRules rules = new FourConnectRules();
     FourConnectGameBoard board = createBoard();
     FourConnectPlayer p = human();
     place(board, 0, 0, p);
@@ -64,7 +64,7 @@ public class FourConnectRulesTest {
   /** Testet ob eine Diagonale links oben nach rechts unten erkannt wird. */
   @Test
   public void diagonalDownRightWin_detected() {
-    FourConnectRules rules = new FourConnectRules();
+    final FourConnectRules rules = new FourConnectRules();
     FourConnectGameBoard board = createBoard();
     FourConnectPlayer p = human();
     place(board, 0, 0, p);
@@ -77,7 +77,7 @@ public class FourConnectRulesTest {
   /** Testet ob eine Diagonale rechts oben nach links unten erkannt wird. */
   @Test
   public void diagonalDownLeftWin_detected() {
-    FourConnectRules rules = new FourConnectRules();
+    final FourConnectRules rules = new FourConnectRules();
     FourConnectGameBoard board = createBoard();
     FourConnectPlayer p = human();
     place(board, 3, 0, p);
@@ -90,7 +90,7 @@ public class FourConnectRulesTest {
   /** Testet dass kein Sieg erkannt wird wenn eine Linie unterbrochen ist. */
   @Test
   public void noWin_whenInterruptedLine() {
-    FourConnectRules rules = new FourConnectRules();
+    final FourConnectRules rules = new FourConnectRules();
     FourConnectGameBoard board = createBoard();
     FourConnectPlayer p = human();
     FourConnectPlayer enemy = bot();
@@ -104,7 +104,7 @@ public class FourConnectRulesTest {
   /** Testet dass kein Sieg erkannt wird wenn zu wenig Steine gesetzt sind. */
   @Test
   public void noWin_insufficientPieces() {
-    FourConnectRules rules = new FourConnectRules();
+    final FourConnectRules rules = new FourConnectRules();
     FourConnectGameBoard board = createBoard();
     FourConnectPlayer p = human();
     place(board, 0, 0, p);
@@ -116,7 +116,7 @@ public class FourConnectRulesTest {
   /** Testet ob Unentschieden erkannt wird wenn das Brett voll ist. */
   @Test
   public void tie_detected_whenBoardFull() {
-    FourConnectRules rules = new FourConnectRules();
+    final FourConnectRules rules = new FourConnectRules();
     FourConnectGameBoard board = createBoard();
     FourConnectPlayer p1 = human();
     FourConnectPlayer p2 = bot();
@@ -131,7 +131,7 @@ public class FourConnectRulesTest {
   /** Testet dass kein Unentschieden erkannt wird wenn das Brett nicht voll ist. */
   @Test
   public void tie_false_whenBoardNotFull() {
-    FourConnectRules rules = new FourConnectRules();
+    final FourConnectRules rules = new FourConnectRules();
     FourConnectGameBoard board = createBoard();
     assertFalse(rules.checkTie(board));
   }
@@ -139,7 +139,7 @@ public class FourConnectRulesTest {
   /** Testet getLastWinningPositions nach einem horizontalen Sieg. */
   @Test
   public void getLastWinningPositions_horizontalWin() {
-    FourConnectRules rules = new FourConnectRules();
+    final FourConnectRules rules = new FourConnectRules();
     FourConnectGameBoard board = createBoard();
     FourConnectPlayer p = human();
     place(board, 0, 0, p);
@@ -153,7 +153,7 @@ public class FourConnectRulesTest {
   /** Testet getLastWinningPositions nach einem vertikalen Sieg. */
   @Test
   public void getLastWinningPositions_verticalWin() {
-    FourConnectRules rules = new FourConnectRules();
+    final FourConnectRules rules = new FourConnectRules();
     FourConnectGameBoard board = createBoard();
     FourConnectPlayer p = human();
     place(board, 0, 0, p);
@@ -167,7 +167,7 @@ public class FourConnectRulesTest {
   /** Testet getLastWinningPositions nach einer Diagonale links oben nach rechts unten. */
   @Test
   public void getLastWinningPositions_diagonalDownRight() {
-    FourConnectRules rules = new FourConnectRules();
+    final FourConnectRules rules = new FourConnectRules();
     FourConnectGameBoard board = createBoard();
     FourConnectPlayer p = human();
     place(board, 0, 0, p);
@@ -181,7 +181,7 @@ public class FourConnectRulesTest {
   /** Testet getLastWinningPositions nach einer Diagonale rechts oben nach links unten. */
   @Test
   public void getLastWinningPositions_diagonalDownLeft() {
-    FourConnectRules rules = new FourConnectRules();
+    final FourConnectRules rules = new FourConnectRules();
     FourConnectGameBoard board = createBoard();
     FourConnectPlayer p = human();
     place(board, 3, 0, p);
@@ -195,7 +195,7 @@ public class FourConnectRulesTest {
   /** Testet dass getLastWinningPositions leer ist wenn kein Sieg vorliegt. */
   @Test
   public void getLastWinningPositions_emptyWhenNoWin() {
-    FourConnectRules rules = new FourConnectRules();
+    final FourConnectRules rules = new FourConnectRules();
     FourConnectGameBoard board = createBoard();
     FourConnectPlayer p = human();
     place(board, 0, 0, p);
