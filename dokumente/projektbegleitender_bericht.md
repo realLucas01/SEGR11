@@ -21,7 +21,7 @@ Perlickstraße 1
 
 1. [Einleitung und Projektüberblick](1-einleitung-und-projektüberblick)
 2. [Projektplanung](2-projektplanung)
-3. [Durchführung seit Projektstart und Stand beim ersten Deplyoment des Prototypen](3-durchführung-seit-projektstart-und-stand-beim-ersten-deplyoment-des-prototypen)
+3. [Durchführung seit Projektstart und Stand beim ersten Deployment des Prototypen](3-durchführung-seit-projektstart-und-stand-beim-ersten-deployment-des-prototypen)
 4. [Durchführung seit Deployment und Stand bei Projektabschluss](4-durchführung-seit-deployment-und-stand-bei-projektabschluss)
 5. [Arbeitsaufwand und Teamverteilung](5-arbeitsaufwand-und-teamverteilung)
 6. [Gantt-Diagramm](6-Gantt-Diagramm)
@@ -42,7 +42,7 @@ Das Gantt-Diagramm selbst ist unter [Gantt-Diagramm](6-Gantt-Diagramm) bzw. in d
 
 Die Planung orientiert sich an einem iterativen Vorgehen, bei dem die Entwicklung in mehrere Phasen unterteilt wurde. Dazu zählen insbesondere die Konzeption, die Implementierung des Spielkerns, der Botgegner und des UI's sowie die anschließende Test- und Integrationsphase. Ziel dieser Planung war es, frühzeitig eine lauffähige Version der Anwendung zu erreichen, um diese in einer realen Umgebung testen zu können.  
 
-## 3. Durchführung seit Projektstart und Stand beim ersten Deplyoment des Prototypen
+## 3. Durchführung seit Projektstart und Stand beim ersten Deployment des Prototypen
 
 Die bisherige Projektdurchführung umfasste die Konzeption, die Erstellung eines technischen Grundgerüsts sowie die Implementierung zentraler Spielfunktionen. Insbesondere wurde die grundlegende Modularisierung von Spiellogik und Benutzeroberfläche umgesetzt, einschließlich des ersten Spiels in der Sammlung: Vier-Gewinnt.  
 
