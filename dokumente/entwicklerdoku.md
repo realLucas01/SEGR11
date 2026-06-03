@@ -50,8 +50,8 @@ Detaillierte Informationen zur Ordnerstruktur sowie zu den konkreten Inhalten de
 ## 2. Versionen und Tools / Plugins
 
 Die Bewertungen und Begründungen für die Auswahl der 11 wichtigsten Werkzeuge können in folgendem Dokument gefunden werden:  
-[Entscheidung zur Entwicklungsumgebung und genutzten Tools für die Erstellung der Entertainment-Erweiterung für IFE](/final/toolvergleich.md)  
-<sub>*(auch zu finden unter: `/final/toolvergleich.md`)*</sub>
+[Entscheidung zur Entwicklungsumgebung und genutzten Tools für die Erstellung der Entertainment-Erweiterung für IFE](/final/toolvergleich.pdf)  
+<sub>*(auch zu finden unter: `/final/toolvergleich.pdf`)*</sub>
 
 ### 2.1 Grundlegende Entwicklungsumgebung
 
@@ -174,7 +174,7 @@ mvn clean site install
 ## 5. Code Conventions
 
 Im Projekt wird der Google Java Code Style verwendet, siehe: https://google.github.io/styleguide/javaguide.html  
-<sub>* (oder auch: `/final/Google Java Style Guide.pdf`) *</sub>  
+<sub>*(oder auch: `/final/Google Java Style Guide.pdf`)*</sub>  
 
 <ins>Zusätzlich gelten folgende Regeln:</ins>
 
@@ -231,7 +231,7 @@ Die grobe Funktionsweise des Buildscripts und seiner Plugins ist wie folgt:
   - proguard-maven-plugin → obfuscated JAR  
   
 - **Automatisches Kopieren** der Ausgabedateien(obfuscated JAR, JavaDoc und Test-Report) in das Zielverzeichnis `/final` durch das maven-resources-plugin.  
-   <sub>* (das Javadoc befindet sich unter `/final/JavaDoc` und der Test-Coverage-Report unter `/final/Coverage`. Es muss dann jeweils die index.html in einem Browser geöffnet werden) *</sub>  
+   <sub>*(das Javadoc befindet sich unter `/final/JavaDoc` und der Test-Coverage-Report unter `/final/Coverage`. Es muss dann jeweils die index.html in einem Browser geöffnet werden)*</sub>  
 
 ## 8. Informationen für weitere Entwicklung
 ### 8.1 Programmtrennung
