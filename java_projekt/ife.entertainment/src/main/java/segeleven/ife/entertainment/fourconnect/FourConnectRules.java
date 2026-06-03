@@ -19,10 +19,10 @@
 
 package segeleven.ife.entertainment.fourconnect;
 
-import segeleven.ife.entertainment.gamecore.PlayArea;
-import segeleven.ife.entertainment.gamecore.RuleSet;
 import java.util.ArrayList;
 import java.util.List;
+import segeleven.ife.entertainment.gamecore.PlayArea;
+import segeleven.ife.entertainment.gamecore.RuleSet;
 
 /**
  * Klasse stellt grundlegende Funktionen für das Überprüfen des Regelwerks zur verfügung.
@@ -162,15 +162,13 @@ public class FourConnectRules implements RuleSet<FourConnectGameBoard, FourConne
    * @return Liste der vier Gewinnpositionen oder eine leere Liste
    */
   private void determineWinningPositions(
-        Position first,
-        Position second,
-        Position third,
-        Position fourth) {
-
-      winningPositions.add(first);
-      winningPositions.add(second);
-      winningPositions.add(third);
-      winningPositions.add(fourth);
-  }
-  
+    Position first,
+    Position second,
+    Position third,
+    Position fourth) {
+    winningPositions.add(first);
+    winningPositions.add(second);
+    winningPositions.add(third);
+    winningPositions.add(fourth);
+    }
 }
