@@ -162,13 +162,13 @@ public class FourConnectRules implements RuleSet<FourConnectGameBoard, FourConne
    * @return Liste der vier Gewinnpositionen oder eine leere Liste
    */
   private void determineWinningPositions(
-    Position first,
-    Position second,
-    Position third,
-    Position fourth) {
+      Position first,
+      Position second,
+      Position third,
+      Position fourth) {
     winningPositions.add(first);
     winningPositions.add(second);
     winningPositions.add(third);
     winningPositions.add(fourth);
-    }
+  }
 }
