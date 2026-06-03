@@ -22,11 +22,14 @@ package segeleven.ife.entertainment.uifourconnectcontroller;
 import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import java.text.MessageFormat;
 import segeleven.ife.entertainment.App;
 import segeleven.ife.entertainment.fourconnect.FourConnectGame;
 import segeleven.ife.entertainment.fourconnect.Player;
 import segeleven.ife.entertainment.gamecore.GameState;
 import segeleven.ife.entertainment.uicontroller.EndScreenController;
+import segeleven.ife.entertainment.infrastructure.LocalizationService;
+import segeleven.ife.entertainment.fourconnect.FourConnectPlayer;
 
 /**
  * FourConnect-spezifische Implementierung des EndScreenControllers.

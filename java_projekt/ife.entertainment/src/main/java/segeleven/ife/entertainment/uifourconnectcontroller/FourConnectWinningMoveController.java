@@ -21,9 +21,9 @@ package segeleven.ife.entertainment.uifourconnectcontroller;
 
 import java.io.IOException;
 import java.util.List;
-import SEG11.IFE_Entertainment.App;
-import SEG11.IFE_Entertainment.FourConnect.FourConnectGame;
-import SEG11.IFE_Entertainment.FourConnect.Position;
+import segeleven.ife.entertainment.App;
+import segeleven.ife.entertainment.fourconnect.FourConnectGame;
+import segeleven.ife.entertainment.fourconnect.Position;
 import javafx.fxml.FXML;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
@@ -108,7 +108,7 @@ public class FourConnectWinningMoveController {
    */
   private void highlightWinningPositions(List<Position> winningPositions) {
     for (Position position : winningPositions) {
-      Circle circle = circles[position.getY()][position.getX()];
+      Circle circle = circles[position.getyCord()][position.getXcord()];
       circle.setStroke(Color.WHITE);
       circle.setStrokeWidth(6);
     }
