@@ -47,6 +47,23 @@ Starten des Programmes aus dem Quellcode:
 mvn clean javafx:run
 ```
 
+## JavaDoc, Test-Report und Pages
+Der aktuelle Stand der JavaDoc und des Test-Coverage Report auf dem main branch, werden nach jedem Commit auf einen eigenen Branch *`(JavaDoc-and-TestCoverage)`* gepusht, und dann auf jeweils eigene Github Pages deployed.  
+So kann man diese Dokumente einfacher öffnen und nutzen, ohne das man die Dokuemente manuell erzeugen muss, und dann bei einem Commit innerhalb der hunderten Dateien die Übersicht verliert. Ebenfalls muss bei einem Release so nicht mehr eine extrem unübersichtliche PR stattfinden, sondern man kann den Branch ohne Bedenken einfach auf main Mergen und hat den aktuellsten Stand.
+
+**JavaDoc Page:** https://reallucas01.github.io/SEGR11/javadoc  
+**Test-Report Page:** https://reallucas01.github.io/SEGR11/coverage
+
+## Automatische Überprüfung auf den Google Java Code Style
+
+Es wird nun in jeder PR die eine Änderung im Ordner **`java_projekt`** beeinhaltet, automatisch über eine Github Action überprüft ob der Goolge Java Style Guide korrekt eingehalten wurde. Den Fortschritt kann man dabei ganz unten im Repo sehen.  
+Sobald der Check abgeschlossen ist, und Fehler gefunden wurden, werden diese ein paar Sekunden nach Abschluss als Alert direkt in der PR angezeigt:  
+<img width="865" height="297" alt="image" src="https://github.com/user-attachments/assets/9bd6e582-436e-4a37-b722-02787620d3eb" />
+
+****Zu Beachten: Reviewdog kann nur 10 Sachen gleichzeitig anmerken. Das heißt falls ihr seht das ein Fehler dabei ist, der sich wiederholt, oder wie z.B.: die Einrückung vllt. überall falsch ist, fixt ihr den am besten direkt überall wo ihr was geändert habt. Sonst werdet ihr ja immer nur in 10er Schritten fixen, und das kann je nach dem was es ist etwas dauern.**** 
+
+Die Analyse erfolgt über [Checkstyle](https://github.com/checkstyle/checkstyle) und [ReviewDog](https://github.com/reviewdog).
+
 ## Ordnerstruktur
 
 ```
