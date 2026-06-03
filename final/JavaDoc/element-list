@@ -1,7 +1,7 @@
-module:SEG11.IFE_Entertainment
-SEG11.IFE_Entertainment
-SEG11.IFE_Entertainment.FourConnect
-SEG11.IFE_Entertainment.GameCore
-SEG11.IFE_Entertainment.Infrastructure
-SEG11.IFE_Entertainment.UIController
-SEG11.IFE_Entertainment.UIFourConnectController
+module:segeleven.ife.entertainment
+segeleven.ife.entertainment
+segeleven.ife.entertainment.fourconnect
+segeleven.ife.entertainment.gamecore
+segeleven.ife.entertainment.infrastructure
+segeleven.ife.entertainment.uicontroller
+segeleven.ife.entertainment.uifourconnectcontroller

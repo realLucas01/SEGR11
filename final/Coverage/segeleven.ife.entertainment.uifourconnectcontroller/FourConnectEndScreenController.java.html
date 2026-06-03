@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>FourConnectEndScreenController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ife.entertainment</a> &gt; <a href="index.source.html" class="el_package">segeleven.ife.entertainment.uifourconnectcontroller</a> &gt; <span class="el_source">FourConnectEndScreenController.java</span></div><h1>FourConnectEndScreenController.java</h1><pre class="source lang-java linenums">/*
+ * 1.0 2026-04-28 Truong Tan Long Nguyen
+ *
+ * Copyright (c) 2025-2026 Gervithrall Systems GmbH. All Rights Reserved.
+ *
+ * This software is the confidential and proprietary information of
+ * Gervithrall Systems GmbH (&quot;Confidential Information&quot;). You shall not
+ * disclose such Confidential Information and shall use it only in
+ * accordance with the terms of the license agreement you entered into
+ * with Gervithrall Systems GmbH.
+ *
+ * GERVITHRALL SYSTEMS GMBH MAKES NO REPRESENTATIONS OR WARRANTIES ABOUT
+ * THE SUITABILITY OF THE SOFTWARE, EITHER EXPRESS OR IMPLIED, INCLUDING
+ * BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS
+ * FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. GERVITHRALL SYSTEMS GMBH
+ * SHALL NOT BE LIABLE FOR ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT
+ * OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
+ */
+
+package segeleven.ife.entertainment.uifourconnectcontroller;
+
+import java.io.IOException;
+import java.text.MessageFormat;
+import javafx.fxml.FXML;
+import javafx.scene.control.Label;
+import segeleven.ife.entertainment.App;
+import segeleven.ife.entertainment.fourconnect.FourConnectGame;
+import segeleven.ife.entertainment.fourconnect.FourConnectPlayer;
+import segeleven.ife.entertainment.fourconnect.Player;
+import segeleven.ife.entertainment.gamecore.GameState;
+import segeleven.ife.entertainment.infrastructure.LocalizationService;
+import segeleven.ife.entertainment.uicontroller.EndScreenController;
+
+/**
+ * FourConnect-spezifische Implementierung des EndScreenControllers.
+ *
+ * &lt;p&gt;Zeigt das Spielergebnis an und ermöglicht nach Spielende
+ * die Navigation zurück zum Hauptmenü oder den Neustart des Spiels.
+ *
+ * @author Truong Tan Long Nguyen
+ */
+<span class="nc" id="L42">public class FourConnectEndScreenController implements EndScreenController {</span>
+
+  /** Label zur Anzeige des Spielergebnisses. */
+  @FXML
+  private Label resultLabel;
+
+<span class="nc" id="L48">  private final LocalizationService localizationService = LocalizationService.getInstance();</span>
+
+  /**
+   * Initialisiert den EndScreen und zeigt das Spielergebnis an.
+   */
+  @Override
+  @FXML
+  public void initialize() {
+<span class="nc" id="L56">    GameState state = FourConnectGame.getInstance().getStatus();</span>
+
+<span class="nc bnc" id="L58" title="All 2 branches missed.">    if (state == GameState.Won) {</span>
+<span class="nc" id="L59">      resultLabel.setText(getWinnerText());</span>
+<span class="nc bnc" id="L60" title="All 2 branches missed.">    } else if (state == GameState.Tied) {</span>
+<span class="nc" id="L61">      resultLabel.setText(localizationService.getText(&quot;game.draw&quot;));</span>
+    }
+<span class="nc" id="L63">  }</span>
+
+  /**
+   * Erstellt den Ergebnistext für den Gewinner der aktuellen Runde.
+   *
+   * @return lokalisierter Ergebnistext
+   */
+  private String getWinnerText() {
+<span class="nc" id="L71">    FourConnectGame game = FourConnectGame.getInstance();</span>
+<span class="nc" id="L72">    int winnerIndex = game.getCurrentPlayerIndex();</span>
+<span class="nc" id="L73">    FourConnectPlayer winner = game.getPlayers()[winnerIndex];</span>
+
+<span class="nc bnc" id="L75" title="All 2 branches missed.">    if (winner.getType() != Player.HUMAN) {</span>
+<span class="nc" id="L76">      return localizationService.getText(&quot;game.botWin&quot;);</span>
+    }
+
+<span class="nc" id="L79">    String winText = localizationService.getText(&quot;game.win&quot;);</span>
+<span class="nc" id="L80">    return MessageFormat.format(winText, winnerIndex + 1);</span>
+  }
+
+  @FXML
+  public void showWinningMove() throws IOException {
+<span class="nc" id="L85">    App.setRoot(&quot;FourConnectWinningMove&quot;);</span>
+<span class="nc" id="L86">  }</span>
+
+  /**
+   * Startet ein neues Spiel im selben Modus.
+   *
+   * @throws IOException falls die FXML-Datei nicht geladen werden kann
+   */
+  @Override
+  @FXML
+  public void restartGame() throws IOException {
+<span class="nc" id="L96">    Player p1 = FourConnectGame.getInstance().getPlayers()[0].getType();</span>
+<span class="nc" id="L97">    Player p2 = FourConnectGame.getInstance().getPlayers()[1].getType();</span>
+<span class="nc" id="L98">    FourConnectGame.getInstance().endGame();</span>
+<span class="nc" id="L99">    FourConnectGameController controller = App.setRootAndGetController(&quot;FourConnectGame&quot;);</span>
+<span class="nc" id="L100">    controller.handlePlayMode(p1, p2);</span>
+<span class="nc" id="L101">  }</span>
+
+  /**
+   * Navigiert zurück zum Hauptmenü.
+   *
+   * @throws IOException falls die FXML-Datei nicht geladen werden kann
+   */
+  @Override
+  @FXML
+  public void backToMainMenu() throws IOException {
+<span class="nc" id="L111">    App.setRoot(&quot;MainMenu&quot;);</span>
+<span class="nc" id="L112">  }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

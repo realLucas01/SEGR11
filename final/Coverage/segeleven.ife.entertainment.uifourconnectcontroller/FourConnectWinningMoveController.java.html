@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>FourConnectWinningMoveController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ife.entertainment</a> &gt; <a href="index.source.html" class="el_package">segeleven.ife.entertainment.uifourconnectcontroller</a> &gt; <span class="el_source">FourConnectWinningMoveController.java</span></div><h1>FourConnectWinningMoveController.java</h1><pre class="source lang-java linenums">/* 
+ * 1.0 2026-05-28 Marc Müller
+ * 
+ * Copyright (c) 2025-2026 Gervithrall Systems GmbH. All Rights Reserved.
+ * 
+ * This software is the confidential and proprietary information of
+ * Gervithrall Systems GmbH (&quot;Confidential Information&quot;). You shall not
+ * disclose such Confidential Information and shall use it only in
+ * accordance with the terms of the license agreement you entered into
+ * with Gervithrall Systems GmbH.
+ * 
+ * GERVITHRALL SYSTEMS GMBH MAKES NO REPRESENTATIONS OR WARRANTIES ABOUT
+ * THE SUITABILITY OF THE SOFTWARE, EITHER EXPRESS OR IMPLIED, INCLUDING
+ * BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS
+ * FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. GERVITHRALL SYSTEMS GMBH
+ * SHALL NOT BE LIABLE FOR ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT
+ * OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
+ */
+
+package segeleven.ife.entertainment.uifourconnectcontroller;
+
+import java.io.IOException;
+import java.util.List;
+import javafx.fxml.FXML;
+import javafx.scene.layout.GridPane;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
+import segeleven.ife.entertainment.App;
+import segeleven.ife.entertainment.fourconnect.FourConnectGame;
+import segeleven.ife.entertainment.fourconnect.Position;
+
+/**
+ * Controller für die Anzeige des gewinnbringenden Spielzugs.
+ *
+ * &lt;p&gt;Zeigt nach Spielende das Spielfeld erneut an und hebt die vier
+ * gewinnbringenden Spielsteine visuell hervor.
+ */
+<span class="nc" id="L38">public class FourConnectWinningMoveController {</span>
+
+  /** Das Spielfeld als GridPane. */
+  @FXML
+  private GridPane gridPane;
+
+  /** Aktuelles Four-Connect-Spiel. */
+<span class="nc" id="L45">  private final FourConnectGame game = FourConnectGame.getInstance();</span>
+
+  /** Kreise zur Darstellung der einzelnen Spielfeldzellen. */
+<span class="nc" id="L48">  private Circle[][] circles = new Circle[6][7];</span>
+
+  /**
+   * Initialisiert die Anzeige des Spielfelds und markiert den Gewinnzug.
+   */
+  @FXML
+  public void initialize() {
+<span class="nc" id="L55">    initBoard();</span>
+<span class="nc" id="L56">    updateBoard();</span>
+<span class="nc" id="L57">    highlightWinningPositions(game.getWinningPositions());</span>
+<span class="nc" id="L58">  }</span>
+
+  /**
+   * Navigiert zurück zum Ergebnisbildschirm.
+   *
+   * @throws IOException falls die FXML-Datei nicht geladen werden kann
+   */
+  @FXML
+  public void backToEndScreen() throws IOException {
+<span class="nc" id="L67">    App.setRoot(&quot;EndScreen&quot;);</span>
+<span class="nc" id="L68">  }</span>
+
+  /**
+   * Erstellt das Spielfeld als 6x7 Grid aus Kreisen.
+   */
+  private void initBoard() {
+<span class="nc" id="L74">    gridPane.getChildren().clear();</span>
+<span class="nc" id="L75">    circles = new Circle[6][7];</span>
+
+<span class="nc bnc" id="L77" title="All 2 branches missed.">    for (int row = 0; row &lt; 6; row++) {</span>
+<span class="nc bnc" id="L78" title="All 2 branches missed.">      for (int col = 0; col &lt; 7; col++) {</span>
+<span class="nc" id="L79">        Circle circle = new Circle(45);</span>
+<span class="nc" id="L80">        circle.setFill(Color.GRAY);</span>
+<span class="nc" id="L81">        circles[row][col] = circle;</span>
+<span class="nc" id="L82">        gridPane.add(circle, col, row);</span>
+      }
+    }
+<span class="nc" id="L85">  }</span>
+
+  /**
+   * Aktualisiert die Farben der Kreise basierend auf dem aktuellen Spielfeldzustand.
+   */
+  private void updateBoard() {
+<span class="nc bnc" id="L91" title="All 2 branches missed.">    for (int row = 0; row &lt; 6; row++) {</span>
+<span class="nc bnc" id="L92" title="All 2 branches missed.">      for (int col = 0; col &lt; 7; col++) {</span>
+<span class="nc" id="L93">        String colour = game.getBoard().getCellOwner(col, row).getColour();</span>
+
+<span class="nc bnc" id="L95" title="All 2 branches missed.">        if (colour != null) {</span>
+<span class="nc" id="L96">          circles[row][col].setFill(Color.web(colour));</span>
+        } else {
+<span class="nc" id="L98">          circles[row][col].setFill(Color.GRAY);</span>
+        }
+      }
+    }
+<span class="nc" id="L102">  }</span>
+
+  /**
+   * Hebt die gewinnbringenden Spielsteine visuell hervor.
+   *
+   * @param winningPositions Positionen der gewinnbringenden Spielsteine
+   */
+  private void highlightWinningPositions(List&lt;Position&gt; winningPositions) {
+<span class="nc bnc" id="L110" title="All 2 branches missed.">    for (Position position : winningPositions) {</span>
+<span class="nc" id="L111">      Circle circle = circles[position.getYcord()][position.getXcord()];</span>
+<span class="nc" id="L112">      circle.setStroke(Color.WHITE);</span>
+<span class="nc" id="L113">      circle.setStrokeWidth(6);</span>
+<span class="nc" id="L114">    }</span>
+<span class="nc" id="L115">  }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

@@ -1,1 +1,1 @@
-moduleSearchIndex = [{"l":"SEG11.IFE_Entertainment"}];updateSearchResults();
+moduleSearchIndex = [{"l":"segeleven.ife.entertainment"}];updateSearchResults();
