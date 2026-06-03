@@ -57,7 +57,7 @@ Diese Schulung richtet sich an:
 
 # 2. Überblick über die Anwendung
 
-**4 Gewinnt** ist eine digitale Umsetzung des bekannten Spiels *Vier Gewinnt*.
+**4-Connect** ist eine digitale Umsetzung des bekannten Spiels *Vier Gewinnt*.
 
 Die Anwendung wurde speziell für den Einsatz innerhalb eines Inflight-Entertainment-Systems entwickelt.
 
@@ -320,5 +320,4 @@ Mit **4-Connect** steht den Passagieren ein einfaches und intuitiv bedienbares U
 * Gewinnkombination anzeigen
 * Neue Runde beginnen
 * Zur Spielesammlung zurückkehren
-
-Die Anwendung arbeitet vollständig offline und wurde speziell für den zuverlässigen Einsatz auf Sitzmonitoren innerhalb des IFE-Systems entwickelt.
+* 
