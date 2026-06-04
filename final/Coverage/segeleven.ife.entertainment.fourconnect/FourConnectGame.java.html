@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>FourConnectGame.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ife.entertainment</a> &gt; <a href="index.source.html" class="el_package">segeleven.ife.entertainment.fourconnect</a> &gt; <span class="el_source">FourConnectGame.java</span></div><h1>FourConnectGame.java</h1><pre class="source lang-java linenums">/*
+ * 1.0 2026-04-22 Lucas Rumann
+ *
+ * Copyright (c) 2025-2026 Gervithrall Systems GmbH. All Rights Reserved.
+ *
+ * This software is the confidential and proprietary information of
+ * Gervithrall Systems GmbH (&quot;Confidential Information&quot;). You shall not
+ * disclose such Confidential Information and shall use it only in
+ * accordance with the terms of the license agreement you entered into
+ * with Gervithrall Systems GmbH.
+ *
+ * GERVITHRALL SYSTEMS GMBH MAKES NO REPRESENTATIONS OR WARRANTIES ABOUT
+ * THE SUITABILITY OF THE SOFTWARE, EITHER EXPRESS OR IMPLIED, INCLUDING
+ * BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS
+ * FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. GERVITHRALL SYSTEMS GMBH
+ * SHALL NOT BE LIABLE FOR ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT
+ * OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
+ */
+
+package segeleven.ife.entertainment.fourconnect;
+
+import java.util.ArrayList;
+import java.util.List;
+import segeleven.ife.entertainment.gamecore.Game;
+import segeleven.ife.entertainment.gamecore.GameState;
+import segeleven.ife.entertainment.gamecore.MoveStrategy;
+import segeleven.ife.entertainment.gamecore.PlayArea;
+import segeleven.ife.entertainment.infrastructure.BrandingService;
+
+/**
+ * Klasse die für den eigentlichen Spielablauf zuständig ist.
+ *
+ * &lt;p&gt;Implementiert dabei {@link Game} und seine Funktionen, und stellt
+ * zusätzliche Funktionen für alle Phasen des Spielablaufs bereit.
+ *
+ * @param &lt;FourConnectGameBoard&gt; Der generische Datentyp wurde auf die von uns implementierte
+ *                               Version des Interface {@link PlayArea} konkretisiert.
+ *
+ * @author Lucas Rumann
+ * @param &lt;FourConnectGameBoard&gt; Der generische Datentyp wurde auf die von uns
+ *                               implementierte Version des Interface
+ *                               {@link IPlayArea} konkretisiert
+ */
+public class FourConnectGame implements Game&lt;FourConnectGameBoard&gt; {
+  /** Speichern der Singleton Instanz der Klasse. */
+  private static FourConnectGame INSTANCE;
+  /** Aktueller Zustand des Spiels. */
+  private GameState state;
+  /** Liste der Spieler. */
+  private FourConnectPlayer[] players;
+  /**
+   * Indexvariable zum Finden des aktuellen Spielers in der Liste {@link #players}.
+   */
+  private int currentPlayerIndex;
+  /** Regelwerk das zur überprüfung der Sieg-Bedingungen genutzt wird. */
+  private FourConnectRules rules;
+  /** Das Spielbrett auf dem das Spiel ausgetragen wird. */
+  private FourConnectGameBoard gameBoard;
+  /**
+   * Das aktuelle Branding der Software, was für die Farben der Spieler verwendet wird.
+   */
+  private BrandingService currentbranding;
+  /** true, wenn ein Bot im Spiel ist. false wenn kein Bot. */
+  private boolean oneBotPlayer;
+  /** Positionen der gewinnbringenden Viererreihe. */
+<span class="fc" id="L66">  private List&lt;Position&gt; winningPositions = new ArrayList&lt;&gt;();</span>
+  
+  /**
+   * Privater Konstruktor für die Klasse FourConnectGame mitsamt der Grundlegenden initialisierung
+   * aller wichtigen Variablen.
+   */
+<span class="fc" id="L72">  private FourConnectGame() {</span>
+<span class="fc" id="L73">    state = GameState.NotStarted;</span>
+<span class="fc" id="L74">    players = new FourConnectPlayer[2];</span>
+<span class="fc" id="L75">    currentPlayerIndex = 0;</span>
+<span class="fc" id="L76">    rules = new FourConnectRules();</span>
+<span class="fc" id="L77">    gameBoard = new FourConnectGameBoard();</span>
+<span class="fc" id="L78">  }</span>
+
+  /**
+   * Funktion zum erstellen bzw. bekommen der Instanz der Klasse.
+   *
+   * @return Den Pointer auf die einzige Instanz der Klasse
+   */
+  public static FourConnectGame getInstance() {
+<span class="fc bfc" id="L86" title="All 2 branches covered.">    if (INSTANCE == null) {</span>
+<span class="fc" id="L87">      INSTANCE = new FourConnectGame();</span>
+    }
+<span class="fc" id="L89">    return INSTANCE;</span>
+  }
+
+  /**
+   * Implementierung der Interface-Methode getStatus().
+   *
+   * &lt;p&gt;Wird genutzt, um den aktuellen Status des Spiels von außerhalb abzufragen
+   *
+   * @return Den aktuellen Status des Spiels im Datentyp des ENUM {@link GameState}
+   *
+   * @see Game
+   */
+  @Override
+  public GameState getStatus() {
+<span class="fc" id="L103">    return state;</span>
+  }
+
+  /**
+   * Implementierung der Interface-Methode setStatus().
+   *
+   * &lt;p&gt;Wird genutzt, um den aktuellen Status des Spiels manuell von außerhalb zu
+   * setzen
+   *
+   * @see Game
+   */
+  @Override
+  public void setStatus(GameState inputState) {
+<span class="fc" id="L116">    state = inputState;</span>
+<span class="fc" id="L117">  }</span>
+
+  /**
+   * Implementierung der Interface-Methode getBoard().
+   *
+   * &lt;p&gt;Wird genutzt, um den aktuellen Zustand des Spielbretts von außerhalb
+   * abzufragen
+   *
+   * @return Den aktuellen Zustand des Spielbretts im Datentyp {@link FourConnectGameBoard}
+   *
+   * @see Game
+   */
+  @Override
+  public FourConnectGameBoard getBoard() {
+<span class="fc" id="L131">    return gameBoard;</span>
+  }
+
+  /**
+   * Gibt die Position des aktuellen Spielers im players Array zurück.
+   *
+   * @return 0 für &quot;Spieler 1&quot; und 1 für &quot;Spieler 2&quot;
+   */
+  public Integer getCurrentPlayerIndex() {
+<span class="fc" id="L140">    return currentPlayerIndex;</span>
+  }
+
+  /**
+   * Gibt alle aktuellen Spieler als Array zurück.
+   *
+   * @return Das Array der aktuellen Spieler im Datentyp FourConnectPlayer
+   */
+  public FourConnectPlayer[] getPlayers() {
+<span class="fc" id="L149">    return players;</span>
+  }
+
+  /**
+   * Implementierung der Interface-Methode restart().
+   *
+   * &lt;p&gt;Startet das Spiel mit den aktuellen Spielern bzw. im aktuellen Spielmodus
+   * neu. Wenn Spieler bzw Spielmodus gewechselt werden soll, dann muss dafür erst {@link #endGame}
+   * und dann {@link #initFourConnectGame} aufgerufen werden
+   *
+   * @see Game
+   */
+  @Override
+  public void restart() {
+    // kopieren der Spieler in ein neues Array da endGame() players null'ed
+<span class="fc" id="L164">    FourConnectPlayer[] playerClone = players.clone();</span>
+<span class="fc" id="L165">    endGame();</span>
+<span class="fc" id="L166">    initFourConnectGame(playerClone[0].getType(), playerClone[1].getType());</span>
+<span class="fc" id="L167">  }</span>
+
+  /**
+   * Beendet das aktuelle Spiel.
+   *
+   * &lt;p&gt;Beendet das aktuelle Spiel und setzt alle Variablen wieder auf saubere Werte
+   */
+  public void endGame() {
+<span class="fc" id="L175">    state = GameState.NotStarted;</span>
+<span class="fc" id="L176">    players[0] = null;</span>
+<span class="fc" id="L177">    players[1] = null;</span>
+<span class="fc" id="L178">    currentPlayerIndex = 0;</span>
+<span class="fc" id="L179">    gameBoard.clear();</span>
+<span class="fc" id="L180">    winningPositions.clear();</span>
+<span class="fc" id="L181">  }</span>
+
+  /**
+   * Die eigentliche Ausführung des Spielzuges bei dem die neue Scheibe in der jeweiligen Spalte
+   * &quot;fallen gelassen&quot; wird.
+   *
+   * @param column Spalte in der die Scheibe fallen gelassen werden soll
+   *
+   * @return den Spielstatus, nach dem Ausführen des Spielzuges
+   */
+  public GameState dropDisc(Integer column) {
+
+    // Scheibe auf niedrigst möglichen/freien Punkt in der Spalte fallen lassen
+<span class="pc bpc" id="L194" title="1 of 2 branches missed.">    for (int rows = 0; rows &lt; gameBoard.getRows(); rows++) {</span>
+<span class="fc bfc" id="L195" title="All 2 branches covered.">      if (gameBoard.getCellOwner(new Position(column, rows)).getType() != Player.NONE) {</span>
+<span class="fc" id="L196">        gameBoard.setCellValue(new Position(column, rows - 1), players[currentPlayerIndex]);</span>
+<span class="fc" id="L197">        break;</span>
+<span class="fc bfc" id="L198" title="All 2 branches covered.">      } else if (rows + 1 == gameBoard.getRows()) {</span>
+<span class="fc" id="L199">        gameBoard.setCellValue(new Position(column, rows), players[currentPlayerIndex]);</span>
+<span class="fc" id="L200">        break;</span>
+      }
+    }
+    // Überprüfen, ob unentschieden
+<span class="pc bpc" id="L204" title="1 of 2 branches missed.">    if (rules.checkTie(gameBoard)) {</span>
+<span class="nc" id="L205">      state = GameState.Tied;</span>
+    }
+    // Überprüfen, ob gewonnen
+<span class="fc bfc" id="L208" title="All 2 branches covered.">    if (rules.checkWin(gameBoard, players[currentPlayerIndex])) {</span>
+<span class="fc" id="L209">      winningPositions = rules.getLastWinningPositions();</span>
+<span class="fc" id="L210">      state = GameState.Won;</span>
+    }
+<span class="fc" id="L212">    return state;</span>
+    
+  }
+  
+  /**
+   * Gibt die Positionen der gewinnbringenden Viererreihe zurück.
+   *
+   * @return Liste der Gewinnpositionen
+   */
+  public List&lt;Position&gt; getWinningPositions() {
+<span class="fc" id="L222">    return winningPositions;</span>
+  }
+
+  /**
+   * Get Funktion um das Mitspielen eines Bots abzufragen.
+   *
+   * @return true, wenn ein Bot mitspielt, und false, wenn kein Bot mitspielt
+   */
+  public boolean getOneBotPlayer() {
+<span class="fc" id="L231">    return oneBotPlayer;</span>
+  }
+
+  /**
+   * Beendet den Zug eines Spielers.
+   *
+   * &lt;p&gt;Sie invertiert den Wert von currentPlayerIndex so das nun der andere Spieler
+   * über die Liste {@link #players} auffindbar ist
+   */
+  public void playerTurn() {
+<span class="pc bpc" id="L241" title="1 of 2 branches missed.">    currentPlayerIndex = currentPlayerIndex == 0 ? 1 : 0;</span>
+<span class="fc" id="L242">  }</span>
+
+  /**
+   * Führt einen Zug des Bots aus.
+   *
+   * @return den Spielzustand nach dem Zug
+   */
+  public GameState playBotTurn() {
+<span class="pc bpc" id="L250" title="2 of 4 branches missed.">    if (state != GameState.Running || players[currentPlayerIndex] == null) {</span>
+<span class="nc" id="L251">      return state;</span>
+    }
+
+<span class="fc" id="L254">    MoveStrategy strategy = players[currentPlayerIndex].getStrategy();</span>
+<span class="pc bpc" id="L255" title="1 of 2 branches missed.">    if (strategy == null) {</span>
+<span class="nc" id="L256">      return state;</span>
+    }
+
+<span class="fc" id="L259">    return strategy.chooseMove(gameBoard);</span>
+  }
+
+  /**
+   * Initialisierung eines neuen Spiels von &quot;Vier Gewinnt&quot;.
+   *
+   * &lt;p&gt;Dabei werden die neuen Spieler, so wie für mögliche Bots, deren Strategie
+   * initialisiert
+   *
+   * @param playerOne Der Typ von Spieler 1 im ENUM {@link Player}
+   * @param playerTwo Der Typ von Spieler 2 im ENUM {@link Player}
+   *
+   * @return 0 bei erfolgreicher Operation, andernfalls ein Fehlercode != 0.
+   */
+  public Integer initFourConnectGame(Player playerOne, Player playerTwo) {
+
+    // Initialisieren des Index für die Spielerliste
+<span class="fc" id="L276">    currentPlayerIndex = 0;</span>
+<span class="fc" id="L277">    oneBotPlayer = false;</span>
+
+    // Laden des aktuellen Brandings für die Farben
+<span class="fc" id="L280">    currentbranding = BrandingService.getInstance();</span>
+
+    // Erstellen einer neuen Instanz von FourConnectBotStrategy um die Strategien
+    // für die Schwierigkeitsstufen &quot;laden&quot; zu können
+<span class="fc" id="L284">    FourConnectBotStrategy botStrategy = new FourConnectBotStrategy(this, rules);</span>
+
+    // Erstellen von Spieler 1 abhängig seines übergebenen Typs
+<span class="pc bpc" id="L287" title="3 of 4 branches missed.">    switch (playerOne) {</span>
+      case HUMAN -&gt;
+<span class="fc" id="L289">        players[0] = new FourConnectPlayer(playerOne, null, currentbranding.getPrimaryColor());</span>
+      case EASYBOT -&gt; {
+<span class="nc" id="L291">        players[0] = new FourConnectPlayer(playerOne, botStrategy.new EasyBotStrategy(),</span>
+<span class="nc" id="L292">          currentbranding.getPrimaryColor());</span>
+<span class="nc" id="L293">        oneBotPlayer = true;</span>
+<span class="nc" id="L294">      }</span>
+      case HARDBOT -&gt; {
+<span class="nc" id="L296">        players[0] = new FourConnectPlayer(playerOne, botStrategy.new HardBotStrategy(),</span>
+<span class="nc" id="L297">          currentbranding.getPrimaryColor());</span>
+<span class="nc" id="L298">        oneBotPlayer = true;</span>
+<span class="nc" id="L299">      }</span>
+      default -&gt; {
+<span class="nc" id="L301">        return 1;</span>
+      }
+    }
+
+    // Erstellen von Spieler 2 abhängig seines übergebenen Typs
+<span class="pc bpc" id="L306" title="1 of 4 branches missed.">    switch (playerTwo) {</span>
+      case HUMAN -&gt;
+<span class="fc" id="L308">        players[1] = new FourConnectPlayer(playerTwo, null, currentbranding.getSecondaryColor());</span>
+      case EASYBOT -&gt; {
+<span class="fc" id="L310">        players[1] = new FourConnectPlayer(playerTwo, botStrategy.new EasyBotStrategy(),</span>
+<span class="fc" id="L311">          currentbranding.getSecondaryColor());</span>
+<span class="fc" id="L312">        oneBotPlayer = true;</span>
+<span class="fc" id="L313">      }</span>
+      case HARDBOT -&gt; {
+<span class="fc" id="L315">        players[1] = new FourConnectPlayer(playerTwo, botStrategy.new HardBotStrategy(),</span>
+<span class="fc" id="L316">          currentbranding.getSecondaryColor());</span>
+<span class="fc" id="L317">        oneBotPlayer = true;</span>
+<span class="fc" id="L318">      }</span>
+      default -&gt; {
+<span class="nc" id="L320">        return 1;</span>
+      }
+    }
+
+    // Status des Spiels aktualisieren
+<span class="fc" id="L325">    state = GameState.Running;</span>
+<span class="fc" id="L326">    return 0;</span>
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

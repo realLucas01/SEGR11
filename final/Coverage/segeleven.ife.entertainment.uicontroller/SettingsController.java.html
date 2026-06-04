@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>SettingsController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ife.entertainment</a> &gt; <a href="index.source.html" class="el_package">segeleven.ife.entertainment.uicontroller</a> &gt; <span class="el_source">SettingsController.java</span></div><h1>SettingsController.java</h1><pre class="source lang-java linenums">/*
+ * 1.0 2026-04-28 Truong Tan Long Nguyen
+ *
+ * Copyright (c) 2025-2026 Gervithrall Systems GmbH. All Rights Reserved.
+ *
+ * This software is the confidential and proprietary information of
+ * Gervithrall Systems GmbH (&quot;Confidential Information&quot;). You shall not
+ * disclose such Confidential Information and shall use it only in
+ * accordance with the terms of the license agreement you entered into
+ * with Gervithrall Systems GmbH.
+ *
+ * GERVITHRALL SYSTEMS GMBH MAKES NO REPRESENTATIONS OR WARRANTIES ABOUT
+ * THE SUITABILITY OF THE SOFTWARE, EITHER EXPRESS OR IMPLIED, INCLUDING
+ * BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS
+ * FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. GERVITHRALL SYSTEMS GMBH
+ * SHALL NOT BE LIABLE FOR ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT
+ * OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
+ */
+
+package segeleven.ife.entertainment.uicontroller;
+
+import java.io.IOException;
+import javafx.fxml.FXML;
+import javafx.scene.control.ComboBox;
+import segeleven.ife.entertainment.App;
+import segeleven.ife.entertainment.infrastructure.BrandingService;
+import segeleven.ife.entertainment.infrastructure.LocalizationService;
+
+/**
+ * Controller für den Einstellungs-Screen.
+ *
+ * &lt;p&gt;Ermöglicht die Anpassung der Sprache und des Themes der Anwendung.
+ *
+ * @author Truong Tan Long Nguyen
+ */
+<span class="nc" id="L36">public class SettingsController {</span>
+
+  /** Auswahlfeld für die Sprache. */
+  @FXML
+  private ComboBox&lt;String&gt; languageBox;
+
+  /** Auswahlfeld für das Theme. */
+  @FXML
+  private ComboBox&lt;String&gt; themeBox;
+
+<span class="nc" id="L46">  private final LocalizationService localizationService = LocalizationService.getInstance();</span>
+<span class="nc" id="L47">  private final BrandingService brandingService = BrandingService.getInstance();</span>
+
+  /**
+   * Initialisiert die ComboBox mit den verfügbaren Sprachen und setzt die aktuell gewählte
+   * Sprache.
+   */
+  @FXML
+  public void initialize() {
+<span class="nc" id="L55">    languageBox.getItems().addAll(&quot;de&quot;, &quot;en&quot;);</span>
+<span class="nc" id="L56">    languageBox.setValue(localizationService.getCurrentLocale().getLanguage());</span>
+
+<span class="nc" id="L58">    themeBox.getItems().addAll(&quot;gervithrall&quot;, &quot;lufthansa&quot;, &quot;emirates&quot;, &quot;ryanair&quot;, &quot;singapore&quot;);</span>
+<span class="nc" id="L59">    themeBox.setValue(brandingService.getCurrentThemeId());</span>
+<span class="nc" id="L60">  }</span>
+
+  /**
+   * Ändert die Anzeigesprache anhand der Auswahl in der ComboBox und lädt den Settings-Screen neu.
+   *
+   * @throws IOException falls die FXML-Datei nicht geladen werden kann
+   */
+  @FXML
+  public void changeLanguage() throws IOException {
+<span class="nc" id="L69">    String languageCode = languageBox.getValue();</span>
+<span class="nc bnc" id="L70" title="All 2 branches missed.">    if (languageCode != null) {</span>
+<span class="nc" id="L71">      localizationService.setLanguage(languageCode);</span>
+<span class="nc" id="L72">      App.setRoot(&quot;Settings&quot;);</span>
+    }
+<span class="nc" id="L74">  }</span>
+
+  /**
+   * Ändert das Theme der Anwendung.
+   * TODO: Themawahl implementieren (KANN-Kriterium)
+   */
+  @FXML
+  public void changeTheme() {
+<span class="nc" id="L82">    String selectedTheme = themeBox.getValue();</span>
+<span class="nc bnc" id="L83" title="All 2 branches missed.">    if (selectedTheme != null) {</span>
+<span class="nc" id="L84">      brandingService.setTheme(selectedTheme);</span>
+<span class="nc" id="L85">      App.applyBranding();</span>
+    }
+<span class="nc" id="L87">  }</span>
+
+  /**
+   * Navigiert zurück zum Hauptmenü.
+   *
+   * @throws IOException falls die FXML-Datei nicht geladen werden kann
+   */
+  @FXML
+  public void backToMainMenu() throws IOException {
+<span class="nc" id="L96">    App.setRoot(&quot;MainMenu&quot;);</span>
+<span class="nc" id="L97">  }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
