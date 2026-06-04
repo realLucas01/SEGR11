@@ -49,9 +49,9 @@ public class FourConnectEndScreenController implements EndScreenController {
   @FXML
   public void initialize() {
     GameState state = FourConnectGame.getInstance().getStatus();
-    if (state == GameState.WON) {
+    if (state == GameState.Won) {
       resultLabel.setText("Gewonnen!");
-    } else if (state == GameState.TIED) {
+    } else if (state == GameState.Tied) {
       resultLabel.setText("Unentschieden!");
     }
   }

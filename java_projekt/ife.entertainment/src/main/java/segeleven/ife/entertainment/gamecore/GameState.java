@@ -28,25 +28,25 @@ public enum GameState {
   /**
    * Spiel nicht gestartet.
    */
-  NOT_STARTED,
+  NotStarted,
   /**
    * Spiel gestartet.
    */
-  RUNNING,
+  Running,
   /**
    * Spiel pausiert.
    */
-  PAUSED,
+  Paused,
   /**
    * Spiel beendet.
    */
-  FINISHED,
+  Finished,
   /**
    * Spiel mit unentschieden ausgegangen.
    */
-  TIED,
+  Tied,
   /**
    * Spiel mit Sieg eines Spielers ausgegangen.
    */
-  WON
+  Won
 }
