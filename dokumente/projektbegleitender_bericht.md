@@ -74,33 +74,31 @@ Zur Nachvollziehbarkeit des Projektaufwands wurde der zeitliche Einsatz der einz
 <sup> *(auch hier zu finden: `/final/kalkulation.pdf`)* </sup>  
 
 Die folgende Tabelle zeigt, welches Teammitglied wie viele Stunden in den jeweiligen Kategorien geleistet hat :  
-|Teammitglied/Kat. nach Kalkulation |Konzeption           |Prototyp & Spielkern |Gameplay-Impl.       |Botgegner            |UI/UX                |Stabilisierung & Integration|Testphase & Feinschliff|Doku & Abnahme       |Risikomanagement     |Summe   |
-|-----------------------------------|---------------------|---------------------|---------------------|---------------------|---------------------|----------------------------|-----------------------|---------------------|---------------------|--------|
-|Dauer der Phase                    |16.12.2025-23.01.2026|16.03.2026-08.04.2026|09.04.2026-26.04.2026|09.04.2026-30.04.2026|15.04.2026-05.05.2026| -                          |28.04.2026-07.05.2026  |09.04.2026-07.05.2026|26.01.2026-07.05.2026| -      |
-|Luca Tauscher                      |14h                  |4h30min              |5h30min              |11h                  |4h30min              | -                          |8h30min                |16h30min             |2h30min              |67h     |
-|Domenik Schütz                     |9h                   |9h15min              |30min                |30min                |12h                  | -                          |10h                    |2h                   | -                   |43h15min|
-|Truong Tan Long Nguyen             |10h                  |7h                   |-                    |-                    |16h                  | -                          |10h30min               |3h30                 | -                   |47h     |
-|Lucas Rumann                       |18h                  |15h                  |10h                  |1h45min              |9h45min              | -                          |4h30min                |11h                  |16h45min             |86h45min|
-|Marc Müller                        |8h30min              |9h30min              |-                    |-                    |6h                   | -                          |2h                     |8h                   | -                   |34h     |
-|Summe                              |66h                  |45h15min             |16h                  |13h15min             |48h15min             | -                          |35h30min               |41h                  |19h15min             |278h    |
+|Teammitglied/Kat. nach Kalkulation |Konzeption           |Prototyp & Spielkern |Gameplay-Impl.       |Botgegner            |UI/UX                |Stabilisierung & Integration|Testphase & Feinschliff|Doku & Abnahme       |Risikomanagement     |Summe    |
+|-----------------------------------|---------------------|---------------------|---------------------|---------------------|---------------------|----------------------------|-----------------------|---------------------|---------------------|---------|
+|Dauer der Phase                    |16.12.2025-23.01.2026|16.03.2026-08.04.2026|09.04.2026-26.04.2026|09.04.2026-30.04.2026|15.04.2026-07.05.2026|08.05.2026-04.06.2026       |28.04.2026-04.06.2026  |09.04.2026-04.06.2026|26.01.2026-04.06.2026| -       |
+|Luca Tauscher                      |14h                  |4h30min              |5h30min              |11h                  |5h                   | 2h                         |17h30min               |21h30min             |3h30min              |84h30min |
+|Domenik Schütz                     |9h                   |9h15min              |30min                |30min                |12h                  | -                          |15h                    |8h                   | -                   |54h15min |
+|Truong Tan Long Nguyen             |10h                  |7h                   |-                    |-                    |16h30min             | -                          |20h                    |7h30min              | -                   |61h      |
+|Lucas Rumann                       |18h                  |15h                  |10h                  |1h45min              |9h45min              | 6h15min                    |16h30min               |15h15min             |25h                  |117h30min|
+|Marc Müller                        |8h30min              |9h30min              |-                    |-                    |6h                   | 11h30min                   |2h30min                |22h30min             | -                   |60h30min |
+|Summe                              |59h30min             |45h15min             |16h                  |13h15min             |49h15min             | 19h45min                   |71h30min               |74h45min             |28h30min             |377h45min|
 
 <sup> *(es ist zu beachten das aufgrund der begrenzten Größe des Tabellenkopfes einige Kategorien im Namen etwas eingekürzt werden mussten)* </sup>  
 
-Insgesamt wurden im bisherigen Projektverlauf 278 Arbeitsstunden erfasst.  
+Insgesamt wurden im Projektverlauf **377 Stunden und 45 Minuten** erfasst. Der größte Anteil entfiel auf die Bereiche **Dokumentation & Abnahme (74h45min)** sowie **Testphase & Feinschliff (71h30min)**. Dies verdeutlicht den hohen Aufwand, der gegen Ende des Projektes für Qualitätssicherung, Fehlerbehebung, Optimierungen sowie die Vorbereitung der Projektübergabe erforderlich war.
 
-Der größte Anteil entfällt aktuell auf die Konzeptionsphase (66h) sowie auf den Bereich Prototyp & Spielkern (45h15min). Dies zeigt, dass in den bisherigen Projektphasen insbesondere die technische Grundlage sowie die Projektstruktur im Fokus standen.  
+Auch die frühen Projektphasen nahmen einen bedeutenden Anteil ein. Für die **Konzeption (59h30min)** sowie den Bereich **Prototyp & Spielkern (45h15min)** wurden zusammen über 100 Arbeitsstunden aufgewendet. Dies unterstreicht die Bedeutung einer fundierten Planung und einer stabilen technischen Grundlage für den weiteren Projektverlauf.
 
-Für die Bereiche UI/UX Nutzerführung (48h15min), Testphase & Feinschliff (35h30min) sowie Dokumentation & Abnahme (41h) wurde ebenfalls bereits ein signifikanter Aufwand investiert. Die vergleichsweise geringeren Aufwände in den Bereichen Gameplay-Implementierungen (16h) und Botgegner (13h15min) ergeben sich daraus, dass diese Funktionen schrittweise iterativ erweitert werden.  
+Die Stundenverteilung orientiert sich insgesamt an den ursprünglich definierten Rollen aus der Kalkulation. 
+- **Lucas Rumann (Projektmanager)** übernahm mit **117h30min** den größten Anteil und war insbesondere für Konzeption, Projektkoordination, Risikomanagement sowie technische Unterstützung verantwortlich.
+- **Luca Tauscher (Senior Software Engineer)** leistete mit **84h30min** den größten Beitrag zur technischen Umsetzung und war maßgeblich an Entwicklung, Testing und Dokumentation beteiligt.
+- **Truong Tan Long Nguyen (Junior UX Engineer)** konzentrierte sich mit **61h** vor allem auf die Benutzerführung und die Testphase.
+- **Marc Müller (Designer)** brachte mit **60h30min** insbesondere gestalterische Leistungen sowie Beiträge zur Integration und Dokumentation ein.
+- **Domenik Schütz (Finances & Software Engineer)** unterstützte mit **54h15min** vor allem die technische Umsetzung sowie die Test- und Dokumentationsphase.
 
-Die Stundenverteilung orientiert sich dabei weitgehend an den zuvor definierten Rollen aus der Kalkulation:
+Insgesamt zeigt die Stundenverteilung, dass die Aufgaben größtenteils entsprechend der jeweiligen Projektrollen bearbeitet wurden. Die Unterschiede im zeitlichen Aufwand ergeben sich dabei aus verschiedenen Gründen, aber vorallem aus den unterschiedlichen Verantwortungsbereichen innerhalb des Projektes, sowie dem unterschiedlichen Erfahrungsstand der Projektmitglieder und den daraus resultierenden zusätzlichen Koordinations- und Unterstützungsaufgaben einzelner Teammitglieder.
 
-- **Lucas Rumann (Projektmanager):** übernimmt mit 86h45min den größten Anteil und ist hauptsächlich für konzeptionelle, organisatorische sowie koordinierende Aufgaben verantwortlich. Zusätzlich unterstützt er mehrere technische Bereiche.  
-- **Luca Tauscher (Senior Software Engineer):** leistet mit 67h einen wesentlichen Beitrag zur technischen Umsetzung der Spiellogik sowie der Kernfunktionen.  
-- **Truong Tan Long Nguyen (Junior UX Engineer):** ist mit 47h überwiegend in den Bereichen UI/UX & Benutzerführung sowie Testing tätig.
-- **Domenik Schütz (Finances & Software Engineer):** unterstützt mit 43h15min insbesondere in den Bereichen Prototypentwicklung, UI/UX sowie Testing.
-- **Marc Müller (Designer):** bringt mit 34h hauptsächlich gestalterische und konzeptionelle Leistungen in das Projekt ein.
-
-Insgesamt entspricht die bisherige Aufgabenverteilung weitgehend der ursprünglich geplanten Rollenverteilung aus der Kalkulation.
 
 ## 6 Gantt-Diagramm
 
