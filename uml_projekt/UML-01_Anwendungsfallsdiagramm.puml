@@ -20,35 +20,55 @@ actor "   Fluggast   " as Fluggast
 actor "   Fluggesellschaft   " as Airline
 
 rectangle "4-Connect" {
-  usecase "Spiel starten" as UC1
+  usecase "Spiel auswählen" as UC1
   usecase "Spielmodus wählen" as UC2
   usecase "Spiel spielen" as UC3
   usecase "Neue Runde starten" as UC4
-  usecase "Spielhilfe anzeigen" as UC5
+  usecase "Hilfe Hauptmenü öffnen" as UC12
+  usecase "Spielhilfe öffnen" as UC5
   usecase "Einstellungen öffnen" as UC6
   usecase "Sprache auswählen" as UC7
-  usecase "Zurück zur Spielesammlung" as UC8
+  usecase "Zurück zum Hauptmenü" as UC8
   usecase "Branding konfigurieren" as UC9
-  usecase "Gewinnkombination anzeigen" as UC10
+  usecase "Ergebnis anzeigen" as UC10
+  usecase "Gewinnkombination anzeigen" as UC11
 }
 
+
 Fluggast --> UC1
-Fluggast --> UC2
-Fluggast --> UC3
-Fluggast --> UC4
-Fluggast --> UC5
+Fluggast --> UC12
 Fluggast --> UC6
-Fluggast --> UC7
-Fluggast --> UC8
+
 
 Airline --> UC9
 
 
+UC1 ..> UC2 : <<include>>
+
+UC2 ..> UC3 : <<include>>
+
 UC6 ..> UC7 : <<include>>
-UC3 ..> UC4 : <<extend>>\n[Spiel beendet]\nExtension Point: Endscreen
-UC3 ..> UC5 : <<extend>>\n[Hilfe ausgewählt]\nExtension Point: InGameMenu
-UC3 ..> UC6 : <<extend>>\n[Einstellungen ausgewählt]\nExtension Point: InGameMenu
-UC3 ..> UC8 : <<extend>>\n[Spiel beendet oder Abbruch]\nExtension Point: Navigation
-UC3 ..> UC10 : <<extend>>\n[Gewinn erkannt]\nExtension Point: GameFinished
+
+
+UC3 --> UC10 : [Sieg oder Unentschieden erkannt]
+
+UC4 ..> UC3 : <<extend>>\n[Während des Spiels ausgewählt]\nExtension Point: InGameMenu
+
+UC4 ..> UC10 : <<extend>>\n[Im Ergebnis ausgewählt]\nExtension Point: Endscreen
+
+UC5 ..> UC3 : <<extend>>\n[Hilfe ausgewählt]\nExtension Point: InGameMenu
+
+UC8 ..> UC12 : <<extend>>\n[Hauptmenü ausgewählt]\nExtension Point: Navigation
+
+UC8 ..> UC6 : <<extend>>\n[Hauptmenü ausgewählt]\nExtension Point: Navigation
+
+UC8 ..> UC2 : <<extend>>\n[Hauptmenü ausgewählt]\nExtension Point: Navigation
+
+UC8 ..> UC3 : <<extend>>\n[Hauptmenü ausgewählt]\nExtension Point: Navigation
+
+UC8 ..> UC10 : <<extend>>\n[Hauptmenü ausgewählt]\nExtension Point: Endscreen
+
+UC11 ..> UC10 : <<extend>>\n[Button ausgewählt]\nExtension Point: Endscreen
+
 
 @enduml

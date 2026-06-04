@@ -22,25 +22,44 @@ repeat
     :Spielbrett aktualisieren;
 
     if ([Gewinnbedingung erfüllt?]) then ([ja])
-      :Ergebnis anzeigen;
 
-      if ([Gewinnkombination anzeigen gewählt?]) then ([ja])
-        :Spielbrett erneut anzeigen;
-        :Gewinnkombination ermitteln;
-        :Gewinnbringende Spielsteine hervorheben;
-        :Zurück zum Hauptmenü;
-      else ([nein])
-      endif
+      repeat
+        :Ergebnis anzeigen;
 
-      stop
+        if ([Gewinnkombination anzeigen gewählt?]) then ([ja])
+          :Spielbrett erneut anzeigen;
+          :Gespeicherte Gewinnkombination laden;
+          :Gewinnbringende Spielsteine hervorheben;
+          :Zurück zum Ergebnis;
+        elseif ([Neue Runde gewählt?]) then ([ja])
+          :Spielzustand neu initialisieren;
+          :Spielbrett anzeigen;
+          stop
+        else ([Hauptmenü gewählt])
+          :Zurück zur Spielesammlung;
+          stop
+        endif
+
+      repeat while ([Weitere Aktion im Endscreen?]) is ([ja])
 
     else ([nein])
+
       if ([Spielfeld voll?]) then ([ja])
         :Unentschieden anzeigen;
-        stop
+
+        if ([Neue Runde gewählt?]) then ([ja])
+          :Spielzustand neu initialisieren;
+          :Spielbrett anzeigen;
+          stop
+        else ([Hauptmenü gewählt])
+          :Zurück zur Spielesammlung;
+          stop
+        endif
+
       else ([nein])
         :Spieler wechseln;
       endif
+
     endif
 
   else ([nein])

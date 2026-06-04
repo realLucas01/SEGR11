@@ -1,6 +1,6 @@
 ## Anwenderdokumentation der Entertainment-Erweiterung für IFE  
 
-**Stand:** 05.05.2026, durch Gervithrall Systems  
+**Stand:** 03.06.2026, durch Gervithrall Systems  
 
 **Auftraggeber:** Novaris Cabin Systems GmbH  
 Friedrich-List-Platz 1   
@@ -16,21 +16,27 @@ Perlickstraße 1
 **E-Mail:** lucasr@gervithrall-systems.de   
 **Telefon:** 0351 6482642
 
+---
+
 # Inhaltsverzeichnis
 
-1. [Zweck der Anwendung](1-zweck-der-anwendung)
-2. [Start der Anwendung](2-start-der-anwendung)
-3. [Steuerung](3-steuerung)
-4. [Hauptmenü](4-hauptmenü)
-5. [Hilfe](5-hilfe)
-6. [Einstellungen](6-einstellungen)
-7. [Spiel starten / Spielmodus wählen](7-spiel-starten-/-spielmodus-wählen)
-8. [Spielansicht und Funktionen](8-spielansicht-und-funktionen)
-9. [Spielablauf](9-spielablauf)
-10. [Spielsteuerung](10-spielsteuerung)
-11. [Spielregeln](11-spielregeln)
-12. [Spielende](12-spielende)
-13. [Nach dem Spiel](13-nach-dem-spiel)
+1. [Zweck der Anwendung](#1-zweck-der-anwendung)  
+2. [Start der Anwendung](#2-start-der-anwendung)
+3. [Steuerung](#3-steuerung)
+4. [Hauptmenü](#4-hauptmenü)
+5. [Hilfe/Regeln](#5-hilfe--regeln)  
+   5.1 [Hauptmenü](#51-hauptmenü)  
+   5.2 [Spielbetrieb](#52-spielbetrieb)  
+6. [Einstellungen](#6-einstellungen)
+7. [Vier Gewinnt / Spielmodus wählen](#7-vier-gewinnt--spielmodus-wählen)
+8. [Spielansicht und Funktionen](#8-spielansicht-und-funktionen)
+9. [Spielablauf](#9-spielablauf)
+10. [Spielsteuerung](#10-spielsteuerung)
+11. [Spielregeln](#11-spielregeln)
+12. [Spielende](#12-spielende)
+13. [Nach dem Spiel](#13-nach-dem-spiel)
+14. [Gewinnkombination](#14-gewinnkombination)
+15. [Hinweise](#15-hinweise)
 
 ## 1 Zweck der Anwendung
 
@@ -62,21 +68,32 @@ Die gesamte Bedienung erfolgt über eine grafische Benutzeroberfläche mit klar 
 
 Im Hauptmenü stehen folgende Funktionen zur Verfügung:
 
-- **Spiel starten:** Öffnet die Auswahl der Spielmodi
-- **Hilfe:** Öffnet eine Seite mit den Spielregeln
+- **Vier Gewinnt:** Öffnet die Auswahl der Spielmodi
+- **Hilfe / Regeln:** Öffnet eine Seite mit allgemeinen Informationen zur Anwendung
 - **Einstellungen:** Öffnet das Einstellungsmenü
-- **Exit:** Beendet die Anwendung und kehrt zum IFE-Menü zurück
+- **Beenden:** Beendet die Anwendung und kehrt zum IFE-Menü zurück
 
 ---
 
-## 5 Hilfe
+## 5 Hilfe / Regeln
+
+### 5.1 Hauptmenü
+
+Im Hauptmenü Hilfe-Bereich werden allgemeine Informationen und Hinweise zur Steuerung der Anwendung verständlich dargestellt.
+
+Funktionen:
+
+- Anzeige allgemeiner Informationen
+- **Hauptmenü:** Rückkehr zum Hauptmenü
+
+### 5.2 Spielbetrieb
 
 Im Hilfe-Bereich werden die Spielregeln verständlich dargestellt.
 
 Funktionen:
 
 - Anzeige der Spielregeln
-- **Back:** Rückkehr zum Hauptmenü
+- **Zurück:** Rückkehr zum aktiven Spiel
 
 ---
 
@@ -85,18 +102,18 @@ Funktionen:
 Im Einstellungsmenü stehen folgende Optionen zur Verfügung:
 
 - **Sprache (Language):** Auswahl der Anzeigesprache über ein Dropdown-Menü
-- **Theme ändern (optional):** Anpassung von Farben und visuellen Elementen (Kann-Kriterium)
-- **Back:** Rückkehr zum Hauptmenü
+- **Theme ändern:** Anpassung von Farben
+- **Hauptmenü:** Rückkehr zum Hauptmenü
 
 ---
 
-## 7 Spiel starten / Spielmodus wählen
+## 7 Vier Gewinnt / Spielmodus wählen
 
-Nach Auswahl von „Spiel starten“ wird der gewünschte Spielmodus gewählt:
+Nach Auswahl von „Vier Gewinnt“ wird der gewünschte Spielmodus gewählt:
 
-- **Spieler gegen Spieler (PvP):** Zwei Passagiere spielen abwechselnd am selben Gerät
-- **Spieler gegen Computer – Einfach:** Spiel gegen einen einfachen Bot
-- **Spieler gegen Computer – Schwer:** Spiel gegen einen stärkeren Bot
+- **Zwei Spieler:** Zwei Passagiere spielen abwechselnd am selben Gerät
+- **Gegen einfachen Bot:** Spiel gegen einen einfachen Bot
+- **Gegen schweren Bot:** Spiel gegen einen stärkeren Bot
 
 Nach der Auswahl startet das Spiel automatisch.
 
@@ -108,9 +125,9 @@ Während des Spiels stehen folgende Funktionen zur Verfügung:
 
 - **Spielstein setzen:** Durch Tippen oder Klicken auf eine Spalte wird ein Spielstein platziert
 - **Spieleranzeige:** Anzeige, welcher Spieler aktuell am Zug ist
-- **Restart:** Setzt das Spielfeld zurück und startet eine neue Runde
-- **Help:** Öffnet die Spielregeln während des Spiels
-- **Back:** Rückkehr zum Hauptmenü
+- **Zurücksetzen:** Setzt das Spielfeld zurück und startet eine neue Runde
+- **Hilfe / Regeln:** Öffnet die Spielregeln während des Spiels
+- **Hauptmenü:** Rückkehr zum Hauptmenü
 
 ---
 
@@ -142,14 +159,14 @@ Alle Eingaben werden direkt und ohne Verzögerung verarbeitet.
 
 Zusätzliche Funktionen:
 
-- **Restart:** Setzt das Spielfeld zurück
-- **Back:** Rückkehr zum Hauptmenü
+- **Zurücksetzen:** Setzt das Spielfeld zurück
+- **Hauptmenü:** Rückkehr zum Hauptmenü
 
 ---
 
 ## 11 Spielregeln
 
-Die Spielregeln können jederzeit über den Menüpunkt Hilfe aufgerufen werden.
+Die Spielregeln können jederzeit über den Button "Hilfe / Regeln" aufgerufen werden.
 
 Inhalt:
 
@@ -175,14 +192,26 @@ Nach Spielende wird ein Ergebnisbildschirm angezeigt.
 
 Nach Abschluss einer Runde stehen folgende Optionen zur Verfügung:
 
+- Gewinnkombination anzeigen
 - Neue Runde starten
-- Zur Spielesammlung zurückkehren
+- Zum Hauptmenü zurückkehren
 
 Ein Neustart setzt das Spielfeld vollständig zurück.
 
 ---
 
-## 1.14 Hinweise
+## 14 Gewinnkombination
+
+Das Spielfeld wird erneut angezeigt und die Gewinnkombination wird optisch hervorgehoben.
+In diesem Bereich hat man folgende Möglichkeiten:
+
+- Zurück
+
+Dadurch kehrt man zurück zum Ergebnisbildschirm.
+
+---
+
+## 15 Hinweise
 
 - Die Anwendung ist vollständig offline nutzbar
 - Es werden keine Daten gespeichert oder übertragen

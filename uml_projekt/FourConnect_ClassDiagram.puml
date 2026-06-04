@@ -17,7 +17,7 @@ skinparam linetype ortho
 
   Launcher -> App
 ' ──────────────────────────────────────────
-package "Infrastructure" {
+package "segeleven.ife.entertainment.infrastructure" {
 
   class BrandingService {
     - {static} instance: BrandingService
@@ -28,7 +28,7 @@ package "Infrastructure" {
 
     - <<create>> BrandingService()
     + setTheme(themeId : String) : void
-    + {static} getInstance(): brandingService
+    + {static} getInstance(): BrandingService
     + getPrimaryColor(): String
     + getSecondaryColor(): String
     + getLogoPath(): String
@@ -59,11 +59,13 @@ package "Infrastructure" {
 }
 
 ' ──────────────────────────────────────────
-package "FourConnect"{
+package "segeleven.ife.entertainment.fourconnect"{
   class FourConnectRules{
+    - winningPositions : List<Position>
     + checkWin(board : FourConnectGameBoard, player : FourConnectPlayer) : boolean
     + checkTie(board : FourConnectGameBoard) : boolean
-    + determineWinningPositions(board : FourConnectGameBoard, player : FourConnectPlayer) : List<Position>
+    + getLastWinningPositions() : List<Position>
+    - determineWinningPositions(first : Position, second : Position, third : Position, fourth : Position) : void
   }
 
   class FourConnectGame {
@@ -109,12 +111,12 @@ package "FourConnect"{
   }
 
   class Position {
-    - x : Integer
-    - y : Integer
+    - columCord : Integer
+    - rowCord : Integer
 
-    + «create» Position(x : Integer, y : Integer)
-    + getX() : Integer
-    + getY() : Integer
+    + «create» Position(columCord : Integer, rowCord : Integer)
+    + getxCord() : Integer
+    + getyCord() : Integer
   }
 
   enum Player <<enumeration>> {
@@ -160,7 +162,7 @@ class FourConnectBotStrategy {
 
   class "HardBotStrategy" as Hard {
     + botPlayerIndex: int
-    + playerList FourConnectPlayer[]
+    + playerList : FourConnectPlayer[]
 
     + chooseMove(board : IPlayArea) : GameState
     - findBestTurn(board: FourConnectGameBoard, depth: int): Integer
@@ -185,9 +187,9 @@ class FourConnectBotStrategy {
 
 
 
-package "Game Core" {
+package "segeleven.ife.entertainment.gamecore" {
 
-  interface IRuleSet <<interface>> {
+  interface RuleSet <<interface>> {
     + checkWin(board : IPlayArea, player : PlayerT) : boolean
     + checkTie(board : IPlayArea) : boolean
   }
@@ -201,16 +203,16 @@ package "Game Core" {
     Tied
   }
 
-  interface IPlayArea <<interface>> {
+  interface PlayArea <<interface>> {
     + isFull() : Boolean
     + clear() : Integer
   }
 
-  interface IMoveStrategy <<interface>> {
+  interface MoveStrategy <<interface>> {
     + chooseMove(board : IPlayArea) : GameState
   }
 
-  interface IGame <<interface>> {
+  interface Game <<interface>> {
     + getStatus() : GameState
     + setStatus(state : GameState) : void
     + getBoard() : IPlayArea
@@ -220,12 +222,12 @@ package "Game Core" {
 
 
   ' Realizations
-  FourConnectRules      ..|> IRuleSet
-  FourConnectGame       ..|> IGame
-  FourConnectGameBoard  ..|> IPlayArea
-  FourConnectBotStrategy ..|> IMoveStrategy
-  Easy ..|> IMoveStrategy
-  Hard ..|> IMoveStrategy
+  FourConnectRules      ..|> RuleSet
+  FourConnectGame       ..|> Game
+  FourConnectGameBoard  ..|> PlayArea
+  FourConnectBotStrategy ..|> MoveStrategy
+  Easy ..|> MoveStrategy
+  Hard ..|> MoveStrategy
 
   ' Compositions / associations inside Game Core
   FourConnectGame "1" *--> "*"    FourConnectPlayer
@@ -235,7 +237,7 @@ package "Game Core" {
 }
 
 ' ──────────────────────────────────────────
-package "UIController" {
+package "segeleven.ife.entertainment.uicontroller" {
 
 
   class MainMenuController {
@@ -270,7 +272,6 @@ package "UIController" {
   }
 
   interface EndScreenController <<interface>> {
-    - resultLabel : Label
     + initialize() : void
     + restartGame() : void
     + backToMainMenu() : void
@@ -285,7 +286,7 @@ package "UIController" {
 
 
 
-package "UIFourConnectController"{
+package "segeleven.ife.entertainment.uifourconnectcontroller"{
 
   class FourConnectGameController {
     - gridPane: GridPane
@@ -319,13 +320,26 @@ package "UIFourConnectController"{
     + backToMainMenu() : void
   }
   
+  class FourConnectWinningMoveController {
+    - gridPane : GridPane
+    - game : FourConnectGame
+    - circles : Circle[][]
+
+    + initialize() : void
+    + backToEndScreen() : void
+    - initBoard() : void
+    - updateBoard() : void
+    - highlightWinningPositions(winningPositions : List<Position>) : void
+  }
   
      ' Cross-package dependencies
-         FourConnectGameController ..|> GameController
-         FourConnectGameController ..> FourConnectGame       : «use»
-         FourConnectEndScreenController ..|> EndScreenController
-         FourConnectHelpController ..|> HelpController
-         FourConnectEndScreenController ..> FourConnectGame : «use»
+        FourConnectGameController ..|> GameController
+        FourConnectGameController ..> FourConnectGame       : «use»
+        FourConnectEndScreenController ..|> EndScreenController
+        FourConnectHelpController ..|> HelpController
+        FourConnectEndScreenController ..> FourConnectGame : «use»
+        FourConnectWinningMoveController ..> FourConnectGame : «use»
+        FourConnectWinningMoveController ..> App
  }
 
 

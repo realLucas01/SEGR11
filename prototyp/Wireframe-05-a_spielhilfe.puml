@@ -1,4 +1,4 @@
-@startuml
+@startuml Spielhilfe
 title 4-Connect - Spielhilfe (Wireframe)
 
 skinparam defaultFontName Monospaced
@@ -7,7 +7,7 @@ salt
 {
   {+
     { **Hilfe / Regeln** }
-    .
+.
     {Kurzbeschreibung der Bedienung und Spielregeln
 .
     „4-Connect“ ist eine digitale Umsetzung des Spiels „Vier Gewinnt“.
@@ -25,9 +25,10 @@ salt
     Die Bedienung erfolgt vollständig über eine einfache grafische Oberfläche. Alle Aktionen wie Spielzug, 
     Neustart oder Rückkehr ins Menü werden über deutlich gekennzeichnete Schaltflächen ausgeführt und 
     benötigen keine zusätzlichen Eingaben.}
-    .
-    .
+.
+.
     {[ Zurück ]}
+.
   }
 }
 @enduml

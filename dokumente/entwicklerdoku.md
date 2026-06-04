@@ -1,6 +1,6 @@
 ## Entwicklerdokumentation der Entertainment-Erweiterung für IFE  
 
-**Stand:** 05.05.2026, durch Gervithrall Systems  
+**Stand:** 03.06.2026, durch Gervithrall Systems  
 
 **Auftraggeber:** Novaris Cabin Systems GmbH  
 Friedrich-List-Platz 1   
@@ -20,23 +20,23 @@ Perlickstraße 1
 
 # Inhaltsverzeichnis
 
-1. [Einführung](1-einführung)  
-2. [Versionen und Tools / Plugins](2-versionen-und-tools-/-plugins)  
-   2.1 [Grundlegende Entwicklungsumgebung](21-grundlegende-entwicklungsumgebung)  
-   2.2 [Verwendete Plugins und Abhängigkeiten](22-verwendete-plugins-und-abhängigkeiten)  
-   2.3 [Externe Tools](23-externe-tools)  
-3. [Projektstruktur und Inhalt](3-projektstruktur-und-inhalt)  
-   3.1 [Ordnerbaum und wichtigste Ordner](31-ordnerbaum-und-wichtigste-ordner)  
-   3.2 [Klassendiagramm](32-klassendiagramm)  
-   3.3 [JavaDoc](33-javadoc)  
-4. [Wichtigste Befehle für Build und Deployment](4-wichtigste-befehle-für-build-und-deployment)  
-5. [Code Conventions](5-code-conventions)  
-6. [Tests](6-tests)  
-7. [Buildscript](7-buildscript)  
-8. [Informationen für weitere Entwicklung](8-informationen-für-weitere-entwicklung)  
-   8.1 [Programmtrennung](81-Programmtrennung)  
-   8.2 [Vorgehensweise für die Erstellung eines weiteren Spiels](82-vorgehensweise-für-die-erstellung-eines-weiteren-spiels)  
-   8.3 [Hinzufügen von neuen Sprachen oder CI-Themes](83-hinzufügen-von-neuen-sprachen-oder-ci-themes)  
+1. [Einführung](#1-einführung)
+2. [Versionen und Tools / Plugins](#2-versionen-und-tools--plugins)  
+   2.1 [Grundlegende Entwicklungsumgebung](#21-grundlegende-entwicklungsumgebung)  
+   2.2 [Verwendete Plugins und Abhängigkeiten](#22-verwendete-plugins-und-abhängigkeiten)  
+   2.3 [Externe Tools](#23-externe-tools)  
+3. [Projektstruktur und Inhalt](#3-projektstruktur-und-inhalt)  
+   3.1 [Ordnerbaum und wichtigste Ordner](#31-ordnerbaum-und-wichtigste-ordner)  
+   3.2 [Klassendiagramm](#32-klassendiagramm)  
+   3.3 [JavaDoc](#33-javadoc)  
+4. [Wichtigste Befehle für Build und Deployment](#4-wichtigste-befehle-für-build-und-deployment)
+5. [Code Conventions](#5-code-conventions)
+6. [Tests](#6-tests)
+7. [Buildscript](#7-buildscript)
+8. [Informationen für weitere Entwicklung](#8-informationen-für-weitere-entwicklung)  
+   8.1 [Programmtrennung](#81-programmtrennung)  
+   8.2 [Vorgehensweise für die Erstellung eines weiteren Spiels](#82-vorgehensweise-für-die-erstellung-eines-weiteren-spiels)  
+   8.3 [Hinzufügen von neuen Sprachen oder CI-Themes](#83-hinzufügen-von-neuen-sprachen-oder-ci-themes)  
 
 ## 1. Einführung
 
@@ -50,8 +50,8 @@ Detaillierte Informationen zur Ordnerstruktur sowie zu den konkreten Inhalten de
 ## 2. Versionen und Tools / Plugins
 
 Die Bewertungen und Begründungen für die Auswahl der 11 wichtigsten Werkzeuge können in folgendem Dokument gefunden werden:  
-[Entscheidung zur Entwicklungsumgebung und genutzten Tools für die Erstellung der Entertainment-Erweiterung für IFE](/final/toolvergleich.md)  
-<sub>*(auch zu finden unter: `/final/toolvergleich.md`)*</sub>
+[Entscheidung zur Entwicklungsumgebung und genutzten Tools für die Erstellung der Entertainment-Erweiterung für IFE](/final/toolvergleich.pdf)  
+<sub>*(auch zu finden unter: `/final/toolvergleich.pdf`)*</sub>
 
 ### 2.1 Grundlegende Entwicklungsumgebung
 
@@ -102,13 +102,13 @@ Die Bewertungen und Begründungen für die Auswahl der 11 wichtigsten Werkzeuge 
 Das Projekt wird über Git versioniert und auf GitHub verwaltet. Git ermöglicht Versionskontrolle, Branching sowie Zusammenarbeit im Team.  
 Link zum Repo: https://github.com/realLucas01/SEGR11
 
-- Adobe XD Version XD 58
-Wird für die Erstellung von UI-Wireframes und Design-Prototypen verwendet.
+- Adobe XD Version XD 58  
+Wird für die Erstellung von Design-Prototypen verwendet.
 
-- PlantUML Version 2.18.1 
-Tool zur Erstellung von UML-Diagrammen in textbasierter Form, die versionierbar im Repository abgelegt werden.
+- PlantUML Version 2.18.1  
+Tool zur Erstellung von UML-Diagrammen und UI-Wireframes in textbasierter Form, die versionierbar im Repository abgelegt werden.
 
-- IDE
+- IDE  
 Die Wahl der Entwicklungsumgebung ist freigestellt. Im Projekt wurden verwendet:  
   - Eclipse IDE Version 2025-09  
   - IntelliJ IDEA Version 2025.2.6.x  
@@ -117,22 +117,22 @@ Die Wahl der Entwicklungsumgebung ist freigestellt. Im Projekt wurden verwendet:
 ### 3.1 Ordnerbaum und wichtigste Ordner  
 
 ```
-java_projekt/IFE_Entertainment/  
+java_projekt/ife.entertainment/  
 ├── src/  
 │   ├── main/  
-│   │   ├── java/SEG11/IFE_Entertainment/  
-│   │   │   ├── FourConnect/             - Spiellogik für Vier Gewinnt  
-│   │   │   ├── GameCore/                - Allgemeine Spiel-Interfaces  
-│   │   │   ├── Infrastructure/          - Sprachen und Theme-Verwaltung
-│   │   │   ├── UIController/            - Allgemeine UI Controller und Interfaces  
-│   │   │   └── UIFourConnectController/ - Controller spezifisch für Vier Gewinnt  
+│   │   ├── java/segeleven/ife/entertainment/  
+│   │   │   ├── fourconnect/                 - Spiellogik für Vier Gewinnt  
+│   │   │   ├── gamecore/                    - Allgemeine Spiel-Interfaces  
+│   │   │   ├── infrastructure/              - Sprachen und Theme-Verwaltung
+│   │   │   ├── uicontroller/                - Allgemeine UI Controller und Interfaces  
+│   │   │   └── uifourconnectcontroller/     - Controller spezifisch für Vier Gewinnt  
 │   │   └── resources/  
-│   │       ├── i18n/                    - Sprachdateien  
-│   │       └── SEG11/IFE_Entertainment/ - FXML-Dateien und CSS  
-│   └── test/                            - Unit Tests  
-├── target/                              - Speicherort für Build-Artefakte (.jar, Reports)  
-├── pom.xml                              - Maven Build-Konfiguration  
-└── proguard.config                      - Konfiguration für Obfuscation
+│   │       ├── i18n/                        - Sprachdateien  
+│   │       └── segeleven/ife/entertainment/ - FXML-Dateien und CSS  
+│   └── test/                                - Unit Tests  
+├── target/                                  - Speicherort für Build-Artefakte (.jar, Reports)  
+├── pom.xml                                  - Maven Build-Konfiguration  
+└── proguard.config                          - Konfiguration für Obfuscation
 ```
 
 Die Struktur folgt dem klassischen Maven-Standard und trennt klar zwischen Quellcode, Ressourcen und Tests.
@@ -161,11 +161,11 @@ Sie enthält detaillierte Beschreibungen aller Klassen, Methoden und Schnittstel
 
 Start des Programms aus der Konsole:
 ```
-java -jar IFE_Entertainment-[Versionsnummer]-obfuscated.jar
+java -jar ife.entertainment-[Versionsnummer]-obfuscated.jar
 ```
 
 Das Programm ist mit einem automatischen Buildscript ausgestattet, das automatisch alte Builds löscht und die .jar, so wie alle 
-dazugehörigen Dokumente (JavaDoc und Test-Coverage Report) generiert. Die genauere Funktionsweise dieses Scriptes ist in disem Dokument, unter Punkt 7 - [Buildscript](#7-buildscript), erklärt.  
+dazugehörigen Dokumente (JavaDoc und Test-Coverage Report) generiert. Die genauere Funktionsweise dieses Scriptes ist in diesem Dokument, unter Punkt 7 - [Buildscript](#7-buildscript), erklärt.  
 Es wird mit folgendem Befehl eingesetzt:  
 ```
 mvn clean site install
@@ -174,9 +174,9 @@ mvn clean site install
 ## 5. Code Conventions
 
 Im Projekt wird der Google Java Code Style verwendet, siehe: https://google.github.io/styleguide/javaguide.html  
-<sub>* (oder auch: `/final/Google Java Style Guide.pdf`) *</sub>  
+<sub>*(oder auch: `/final/Google Java Style Guide.pdf`)*</sub>  
 
-<ins>Zusätzlich gelten folgende Regeln:<ins>
+<ins>Zusätzlich gelten folgende Regeln:</ins>
 
 - Funktions-, Klassen- und Variablennamen sind in Englisch zu schreiben  
 - JavaDoc und Kommentare sind in Deutsch zu verfassen  
@@ -209,11 +209,11 @@ mvn clean site install
 ```
 und generiert dabei hauptsächlich 3 Artefakte:
 
-- die Ausführbare .jar mitsamt allen Dependencies, unter `/final/IFE_Entertainment-[Versionsnummer]-obfuscated.jar`
+- die Ausführbare .jar mitsamt allen Dependencies, unter `/final/ife.entertainment-[Versionsnummer]-obfuscated.jar`
 - das Javadoc, unter `/final/JavaDoc`
 - Den Bericht für die Testabdeckung von JaCoCo, unter `/final/Coverage`  
 
-Hinweis: Diese Artefakte befinden sich nach Ausführen des Buildscripts ebenfalls in `\java_projekt\IFE_Entertainment\target`.Zusätzlich sind in diesem Ordner dann auch die `IFE_Entertainment-[Versionsnummer].jar`(ohne JavaFX Bibliotheken) und die `IFE_Entertainment-[Versionsnummer]-executable.jar`(nicht obfuscated) zu finden.
+Hinweis: Diese Artefakte befinden sich nach Ausführen des Buildscripts ebenfalls in `/java_projekt/ife.entertainment/target`.Zusätzlich sind in diesem Ordner dann auch die `ife.entertainment-[Versionsnummer].jar`(ohne JavaFX Bibliotheken) und die `ife.entertainment-[Versionsnummer]-executable.jar`(nicht obfuscated) zu finden.
 
 ---
 
@@ -227,24 +227,24 @@ Die grobe Funktionsweise des Buildscripts und seiner Plugins ist wie folgt:
 
 - **Packaging:**  
   - maven-jar-plugin → Standard-JAR mit Main-Class  
-  - maven-shade-plugin → Fat-JAR, also inkl. aller Dependencies
-    aufgrund dessen das JavaFX kein Teil der SDK mehr ist  
+  - maven-shade-plugin → Fat-JAR, also inkl. aller Dependencies aufgrund dessen das JavaFX kein Teil der SDK mehr ist  
   - proguard-maven-plugin → obfuscated JAR  
   
 - **Automatisches Kopieren** der Ausgabedateien(obfuscated JAR, JavaDoc und Test-Report) in das Zielverzeichnis `/final` durch das maven-resources-plugin.  
-   <sub>* (das Javadoc befindet sich unter `/final/JavaDoc` und der Test-Coverage-Report unter `/final/Coverage`. Es muss dann jeweils die index.html in einem Browser geöffnet werden) *</sub>  
+   <sub>*(das Javadoc befindet sich unter `/final/JavaDoc` und der Test-Coverage-Report unter `/final/Coverage`. Es muss dann jeweils die index.html in einem Browser geöffnet werden)*</sub>  
 
 ## 8. Informationen für weitere Entwicklung
 ### 8.1 Programmtrennung
 
-**Die Anwendung folgt einer klaren Trennung der Verantwortlichkeiten:**
-FXML & CSS
-→ ausschließlich für die Darstellung der Benutzeroberfläche
-Controller
-→ Verarbeitung von Benutzereingaben und Steuerung der UI
-Backend bzw. GameCore
-→ Enthält die komplette Spiellogik und ist unabhängig von der UI
+Die Anwendung folgt einer klaren Trennung der Verantwortlichkeiten:
+- **FXML & CSS**  
+  Ausschließlich für die Darstellung der Benutzeroberfläche
 
+- **Controller**  
+  Verarbeitung von Benutzereingaben und Steuerung der UI
+
+- **Backend / GameCore**  
+  Enthält die komplette Spiellogik und ist unabhängig von der UI
 Diese Trennung ermöglicht eine bessere Wartbarkeit und erleichtert die Erweiterung des Systems.
 
 ### 8.2 Vorgehensweise für die Erstellung eines weiteren Spiels
@@ -254,9 +254,9 @@ Diese Trennung ermöglicht eine bessere Wartbarkeit und erleichtert die Erweiter
     - {Spielname}, für die eigene Implementierung des Backends  
     <sub>*Der Inhalt der geschweiften Klammern ist durch den Namen des eigenen Spiels zu ersetzen.*</sub>  
 2. Implementieren aller Interfaces aus den Modularen Packages:  
-    - Für die Controller sind die Interfaces aus UIController zu implementieren.  
-    - Für die Klassen des Backends sind die Interfaces aus GameCore zu implementieren.  
-    <sub> ***Ausnahme:** Das Interface IMoveStrategy aus GameCore, dieses muss nur implementiert  
+    - Für die Controller sind die Interfaces aus uicontroller zu implementieren.  
+    - Für die Klassen des Backends sind die Interfaces aus gamecore zu implementieren.  
+    <sub> ***Ausnahme:** Das Interface IMoveStrategy aus gamecore, dieses muss nur implementiert  
     werden, wenn es einen automatisierten bzw. Bot-Spieler gibt.* </sub>  
 3. Hinzufügen und Implementieren von weiteren Klassen die Spezifisch nur für das eigene Spiel gebraucht werden.
 4. Erstellen der benötigten .fxml für das UI

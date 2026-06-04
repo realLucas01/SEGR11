@@ -1,5 +1,5 @@
 # Administratordokumentation der Entertainment-Erweiterung für IFE
-**Stand:** 06.05.2026, durch Gervithrall Systems
+**Stand:** 03.06.2026, durch Gervithrall Systems
 
 **Auftraggeber:** Novaris Cabin Systems GmbH  
 Friedrich-List-Platz 1   
@@ -32,6 +32,7 @@ Perlickstraße 1
 9. [Fehlerbehebung](#9-fehlerbehebung)
 
 ---
+
 ## 1. Übersicht
 
 IFE Entertainment ist eine offlinefähige Spieleapplikation zur Erweiterung des Inflight-Entertainment-Systems (IFE) von Novaris Cabin Systems GmbH. Die Anwendung wird auf den Sitzmonitoren der Passagiere betrieben und bietet aktuell das Spiel "Vier Gewinnt" an.
@@ -45,6 +46,7 @@ IFE Entertainment ist eine offlinefähige Spieleapplikation zur Erweiterung des 
 - Maven 3.9.15
 - Keine Netzwerkverbindung erforderlich - vollständiger Offline-Betrieb
 - Keine zusätzliche Peripherie erforderlich - Touch oder Mausbedienung
+
 ---
 
 ## 3. Installation
@@ -53,8 +55,9 @@ Das Programm wird als ausführbare Fat-JAR-Datei ausgeliefert. Diese enthält de
 
 ### Programmstart
 ```
-java -jar IFE_Entertainment-[Versionsnummer]-obfuscated.jar
+java -jar ife.entertainment-[Versionsnummer]-obfuscated.jar
 ```
+
 ---
 
 ## 4. Build aus dem Quellcode
@@ -72,32 +75,35 @@ Dieser Befehl führt folgende Schritte automatisch aus:
 3. **Fat-JAR** - Code und alle JavaFX-Bibliotheken werden zu einer ausführbaren JAR zusammengepackt
 4. **Auto Copy** - Die fertige JAR sowie JavaDocs und Coverage-Berichte werden automatisch in den `final/` Ordner kopiert
 
-
 **Ausgaben nach dem Build:**
 
 - Die fertige JAR-Datei liegt sowohl im `target/` Ordner als auch im `final/` Ordner
 - JavaDocs und Coverage-Berichte liegen ebenfalls im `final/` Ordner
 - Zum Öffnen der Berichte die jeweilige `index.html` im `final/` Ordner starten
+
 ---
+
 ## 5. Projektstruktur
 ```
-java_projekt/IFE_Entertainment/
+java_projekt/ife.entertainment/
 ├── src/
 │   ├── main/
-│   │   ├── java/SEG11/IFE_Entertainment/
-│   │   │   ├── FourConnect/             - Spiellogik für Vier Gewinnt
-│   │   │   ├── GameCore/                - Allgemeine Spiel-Interfaces
-│   │   │   ├── Infrastructure/          - BrandingService, LocalizationService
-│   │   │   ├── UIController/            - Allgemeine UI Controller und Interfaces
-│   │   │   └── UIFourConnectController/ - Controller spezifisch für Vier Gewinnt
+│   │   ├── java/segeleven/ife/entertainment/
+│   │   │   ├── fourconnect/                  - Spiellogik für Vier Gewinnt
+│   │   │   ├── gamecore/                     - Allgemeine Spiel-Interfaces
+│   │   │   ├── infrastructure/               - BrandingService, LocalizationService
+│   │   │   ├── uicontroller/                 - Allgemeine UI Controller und Interfaces
+│   │   │   └── uifourconnectcontroller/      - Controller spezifisch für Vier Gewinnt
 │   │   └── resources/
-│   │       ├── i18n/                    - Sprachdateien
-│   │       └── SEG11/IFE_Entertainment/ - FXML-Dateien und CSS
-│   └── test/                            - Unit Tests
-├──  pom.xml
-└──proguard.config
+│   │       ├── i18n/                        - Sprachdateien
+│   │       └── segeleven/ife/entertainment/ - FXML-Dateien und CSS
+│   └── test/                                - Unit Tests
+├── pom.xml
+└── proguard.config
 ```
+
 ---
+
 ## 6. Konfiguration
 
 ### 6.1 Branding (CI-Anpassung)
@@ -111,33 +117,33 @@ Folgende Eigenschaften können pro Theme definiert werden:
 |---|---|
 | Primärfarbe | `#004761` |
 | Sekundärfarbe | `#555756` |
-| Logo-Pfad | `/SEG11/IFE_Entertainment/images/logo-gervithrall-systems.png` |
-| Airline-Name | `Gervithrall Systems` |
+| Logo-Pfad | `/segeleven/ife.entertainment/images/logo_default.png` |
+| Airline-Name | `Default Airline` |
 
-Die Themes werden innerhalb der Methode `setTheme(String themeId)` in `BrandingService.java` (Zeile 122) definiert.
+Die Themes werden innerhalb der Methode `setTheme(String themeId)` in `BrandingService.java` (Zeile 139) definiert.
 
 ```
 switch (themeId) {
 
-        case "gervithrall":
+      case "gervithrall":
         this.primaryColor = "#004761";
         this.secondaryColor = "#555756";
-        this.logoPath       = "/pfad/zum/logo.png";   // nur vorbereitet, keine Funktionalität
         this.airlineName = "Gervithrall Systems";
+        this.logoPath = "/segeleven/ife.entertainment/images/logo_gervithrall-systems.png";
         break;
 
-        case "lufthansa":
+      case "lufthansa":
         this.primaryColor = "#05164D";
-        this.secondaryColor = "#FFD100";
-        this.logoPath       = "/pfad/zum/logo.png";   // nur vorbereitet, keine Funktionalität
+        this.secondaryColor = "#FFCC00";
         this.airlineName = "Lufthansa";
+        this.logoPath = "/segeleven/ife.entertainment/images/logo_lufthansa.png";
         break;
 
-default:
+      default:
         this.primaryColor = "#004761";
         this.secondaryColor = "#555756";
-        this.logoPath       = "/pfad/zum/logo.png";   // nur vorbereitet, keine Funktionalität
         this.airlineName = "Gervithrall Systems";
+        this.logoPath = "/segeleven/ife.entertainment/images/logo_gervithrall-systems.png";
         break;
         }
 ```
@@ -171,14 +177,19 @@ public Locale[] getAvailableLocales() {
 ```
 
 4. Neu bauen: `mvn clean site install`
+
 ---
+
 ## 7. Tests und Qualitätssicherung
 
 Unit Tests und Code Coverage werden bei jedem Build automatisch ausgeführt. Der Coverage-Bericht wird automatisch in den `final/` Ordner kopiert - zum Öffnen die `index.html` dort starten.
 
+---
+
 ## 8. Bekannte Einschränkungen
 
-- Die `setTheme()` Methode in `BrandingService` ist noch nicht implementiert
+- Die Logo-Pfad-Funktionalität in `BrandingService` ist aktuell nur vorbereitet und noch nicht aktiv eingebunden.
+
 ---
 
 ## 9. Fehlerbehebung
@@ -197,7 +208,7 @@ Unit Tests und Code Coverage werden bei jedem Build automatisch ausgeführt. Der
 - JDK 21 installiert?
 - `mvn clean install` erneut ausführen
 
-- ### Coverage-Bericht nicht sichtbar
+### Coverage-Bericht nicht sichtbar
 - `mvn clean site install` ausführen
 - `index.html` im konfigurierten Coverage-Ausgabeordner öffnen
 

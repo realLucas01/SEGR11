@@ -19,61 +19,114 @@ control "       FourConnectGame       " as Game
 |||
 entity "       FourConnectPlayer       " as Player
 |||
+control "       FourConnectRules       " as Rules
+|||
 control "       FourConnectBotStrategy       " as Strategy
 |||
 control "       App       " as App
 
 Fluggast -> Controller : handleColumnInput(column)
-
-Controller -> Game : dropDisc(column)
-Game --> Controller : GameState
-
-Controller -> Controller : updateBoard()
 |||
-
-alt GameState == Won
-  Controller -> App : setRoot("EndScreen")
+alt game.getStatus() != GameState.Running
+  Controller --> Fluggast : return
 |||
-else GameState == Tied
-  Controller -> App : setRoot("EndScreen")
+else Spalte voll
+  Controller -> Game : getBoard()
+  Game --> Controller : FourConnectGameBoard
+  Controller -> Controller : statusLabel.setText("Spalte ist voll!")
+  Controller --> Fluggast : return
 |||
-else GameState == Running
-  Controller -> Game : playerTurn()
-  Controller -> Controller : updateStatus()
-|||
+else Zug möglich
+  Controller -> Game : dropDisc(column)
 
-  alt Bot-Spieler aktiv
+  Game -> Rules : checkTie(gameBoard)
+  Rules --> Game : boolean
 
-    Controller -> Game : getPlayers()
-    Game --> Controller : FourConnectPlayer[]
+  Game -> Rules : checkWin(gameBoard, currentPlayer)
+  alt checkWin == true
+    Rules -> Rules : determineWinningPositions(...)
+    Rules --> Game : true
 
-    Controller -> Player : getStrategy()
-    Player --> Controller : strategy
-
-    Controller -> Strategy : chooseMove(board)
-    Strategy -> Game : dropDisc(botColumn)
-    Game --> Strategy : GameState
-
-    Strategy--> Controller: GameState
-
-    Controller -> Controller : updateBoard()
-    |||
-    alt GameState == Won
-      Controller -> App : setRoot("EndScreen")
-    |||
-    else GameState == Tied
-      Controller -> App : setRoot("EndScreen")
-    |||
-    else GameState == Running
-      Controller -> Game : playerTurn()
-      Controller -> Controller : updateStatus()
-      |||
-    end
-    |||
+    Game -> Rules : getLastWinningPositions()
+    Rules --> Game : List<Position>
+  |||
+  else checkWin == false
+    Rules --> Game : false
+  |||
   end
   |||
+
+  Game --> Controller : GameState
+
+  Controller -> Controller : updateBoard()
+  |||
+  alt GameState == Won
+  |||
+    Controller -> App : setRoot("EndScreen")
+  |||
+  else GameState == Tied
+    Controller -> App : setRoot("EndScreen")
+  |||
+  else GameState == Running
+    Controller -> Game : playerTurn()
+    Controller -> Controller : updateStatus()
+    |||
+    alt oneBotPlayer == true
+    |||
+      Controller -> Controller : gridPane.setDisable(true)
+      Controller -> Controller : botDelayTimer = new PauseTransition(Duration.seconds(1.0))
+      Controller -> Controller : botDelayTimer.setOnFinished(event)
+      Controller -> Controller : botDelayTimer.play()
+
+
+      Controller -> Game : playBotTurn()
+      Game -> Player : getStrategy()
+      Player --> Game : MoveStrategy
+      Game -> Strategy : chooseMove(gameBoard)
+      Strategy -> Game : dropDisc(botColumn)
+      Game -> Rules : checkTie(gameBoard)
+      Rules --> Game : boolean
+      Game -> Rules : checkWin(gameBoard, currentPlayer)
+      |||
+      alt checkWin == true
+        Rules -> Rules : determineWinningPositions(...)
+        Rules --> Game : true
+
+        Game -> Rules : getLastWinningPositions()
+        Rules --> Game : List<Position>
+      |||
+      else checkWin == false
+        Rules --> Game : false
+      |||
+      end
+      |||
+      Game --> Strategy : GameState
+      Strategy --> Game : GameState
+      Game --> Controller : GameState
+
+      Controller -> Controller : updateBoard()
+      Controller -> Controller : gridPane.setDisable(false)
+      |||
+      alt GameState == Won
+        Controller -> App : setRoot("EndScreen")
+      |||
+      else GameState == Tied
+        Controller -> Controller : statusLabel.setText("Unentschieden!")
+        Controller -> App : setRoot("EndScreen")
+      |||
+      else GameState == Running
+        Controller -> Game : playerTurn()
+        Controller -> Controller : updateStatus()
+      |||
+      end
+      |||
+    else oneBotPlayer == false
+    |||
+    end
+  |||
+  end
+|||
 end
 |||
 |||
-
 @enduml

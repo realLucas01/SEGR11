@@ -1,4 +1,4 @@
-@startuml
+@startuml Ergebnis
 title 4-Connect - Ergebnis (Wireframe)
 
 skinparam defaultFontName Monospaced
@@ -7,11 +7,14 @@ salt
 {
   {+
     { **Ergebnis** }
-    .
-    { **Der Gewinner ist:** }
-    { < "Spieler 1" / "Spieler 2" / "Bot" / "Unentschieden" > }
-    .
-    {[Ergebnis anzeigen] | [  Neue Runde  ] | [  Hauptmenü  ]}
+.
+.
+    { **< "Spieler 1 gewinnt" / "Spieler 2 gewinnt" / "Bot gewinnt" / "Unentschieden" >** }
+.
+.
+.
+    {[Gewinnkombination anzeigen] | [Neue Runde] | [Hauptmenü]}
+.
   }
 }
 @enduml

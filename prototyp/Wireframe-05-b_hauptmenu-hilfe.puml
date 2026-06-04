@@ -1,4 +1,4 @@
-@startuml
+@startuml Hauptmenü Hilfe
 title 4-Connect - Hauptmenü Hilfe (Wireframe)
 
 skinparam defaultFontName Monospaced
@@ -6,8 +6,8 @@ skinparam defaultFontName Monospaced
 salt
 {
   {+
-    { **Hilfe** }
-    .
+    { **Hilfe / Regeln** }
+.
     {Dieses System dient zur Auswahl und Nutzung verschiedener Spiele 
     innerhalb des Inflight-Entertainment-Systems.
 .
@@ -24,7 +24,9 @@ salt
     Je nach Spiel können zusätzliche Menüs oder Optionen erscheinen, 
     z. B. zur Auswahl des Spielmodus.}
 .
+.
     {[ Hauptmenü ]}
+.
   }
 }
 @enduml
