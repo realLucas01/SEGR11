@@ -315,7 +315,7 @@ Die Wireframes skizzieren die grundlegende Anordnung und Funktion der Bedienelem
 |Auslösendes Ereignis| Auswahl der Schaltfläche "Gewinnkombination anzeigen" |
 |Nachbedingung Erfolg| Das Spielfeld wird mit markierter Gewinnkombination angezeigt |
 |Nachbedingung Fehlschlag| Der Ergebnisbildschirm bleibt angezeigt |
-|Ablauf| - Ergebnisbildschirm wird angezeigt <br/>- Fluggast wählt "Gewinnkombination anzeigen" <br/>- Spielfeld wird erneut geöffnet <br/>- Die vier gewinnbringenden Spielsteine werden markiert |
+|Ablauf| - Ergebnisbildschirm wird angezeigt <br/>  - Fluggast wählt "Gewinnkombination anzeigen" <br/>  - Spielfeld wird erneut geöffnet <br/>  - Die vier gewinnbringenden Spielsteine werden markiert |
 |Benutzerschnittstelle| |
 
 **Abbildung:** Wireframe – Gewinnkombination anzeigen
@@ -515,19 +515,19 @@ Der Entwicklungsprozess umfasst insbesondere:
 
 Die Umsetzung wird in Arbeitspakete gegliedert, die sich an der Kalkulation und den Anforderungen orientieren. Die folgenden Pakete dienen als Struktur für Planung und Umsetzung:
 
-- **Konzeption**
+**Konzeption**
   - Finalisierung Spielidee und Regeln
- - Berücksichtigung IFE-Rahmenbedingungen
+  - Berücksichtigung IFE-Rahmenbedingungen
     - Offline-Betrieb
     - Eingabe über Touch/Maus
   - Definition der Spielmodi (PvP / PvE) und grundlegendes Bedienkonzept
 
-- **Prototyp & Spielkern**
+**Prototyp & Spielkern**
   - Technisches Grundgerüst und Projektstruktur
   - Trennung von Spiellogik und UI
   - Grundlegende UI-Struktur sowie Eingabe-/Zustandsverwaltung
 
-- **Gameplay-Implementierung**
+**Gameplay-Implementierung**
   - Regelkonforme Verarbeitung von Spielzügen
   - Gewinn-/Unentschieden-Erkennung
   - Rundenverwaltung
@@ -535,11 +535,11 @@ Die Umsetzung wird in Arbeitspakete gegliedert, die sich an der Kalkulation und 
     - Abbruch
     - Rückkehr zur Spielesammlung
 
-- **Botgegner und optionale Erweiterungen**
+**Botgegner und optionale Erweiterungen**
   - Implementierung einer Bot-Grundlogik für den Einzelspielermodus
   - Schwierigkeitsstufen werden als optionale Erweiterung betrachtet
 
-- **UI/UX Nutzerführung**
+**UI/UX Nutzerführung**
   - Start- und Modusauswahl
   - In-Game UI
     - Spielbrett
@@ -547,13 +547,13 @@ Die Umsetzung wird in Arbeitspakete gegliedert, die sich an der Kalkulation und 
   - Ergebnisdarstellung
 
 
-- **Stabilisierung & Integration**
+**Stabilisierung & Integration**
   - Prüfung von Performance und Stabilität auf der Zielumgebung
   - Robustheit bei wiederholter/fehlerhafter Eingabe
   - Packaging als JAR-Datei und Einbindung in die vorgesehene IFE-Start-/Beendenavigation
   - Fehlerbehandlung im Sinne einer stabilen Laufzeit
 
-- **Testphase, Feinschliff & Dokumentation**
+**Testphase, Feinschliff & Dokumentation**
   - Funktionstests, Regressionstests und Fehlerkorrekturen
   - Bugfixes erfolgen fortlaufend
   - Finalisierung der Dokumentationsartefakte
