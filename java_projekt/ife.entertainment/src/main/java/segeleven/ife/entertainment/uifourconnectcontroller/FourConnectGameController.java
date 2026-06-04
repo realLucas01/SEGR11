@@ -114,7 +114,7 @@ public class FourConnectGameController implements GameController {
    * @throws IOException falls die FXML-Datei nicht geladen werden kann
    */
   public void handleColumnInput(Integer column) throws IOException {
-    if (game.getStatus() != GameState.RUNNING) {
+    if (game.getStatus() != GameState.Running) {
       return;
     }
     if (game.getBoard().getCellOwner(column, 0).getType() != Player.NONE) {
@@ -123,7 +123,7 @@ public class FourConnectGameController implements GameController {
     }
     GameState result = game.dropDisc(column);
     updateBoard();
-    if (result == GameState.WON || result == GameState.TIED) {
+    if (result == GameState.Won || result == GameState.Tied) {
       App.setRoot("EndScreen");
     } else {
       game.playerTurn();
@@ -139,13 +139,13 @@ public class FourConnectGameController implements GameController {
         updateBoard();
         gridPane.setDisable(false);
 
-        if (botResult == GameState.WON) {
+        if (botResult == GameState.Won) {
           try {
             App.setRoot("EndScreen");
           } catch (IOException e) {
             throw new RuntimeException(e);
           }
-        } else if (botResult == GameState.TIED) {
+        } else if (botResult == GameState.Tied) {
           statusLabel.setText("Unentschieden!");
           try {
             App.setRoot("EndScreen");
@@ -235,12 +235,12 @@ public class FourConnectGameController implements GameController {
   private void updateStatus() {
     GameState state = game.getStatus();
     switch (state) {
-      case RUNNING -> {
+      case Running -> {
         int playerIndex = game.getCurrentPlayerIndex();
         statusLabel.setText("Spieler " + (playerIndex + 1));
       }
-      case WON -> statusLabel.setText("Gewonnen!");
-      case TIED -> statusLabel.setText("Unentschieden!");
+      case Won -> statusLabel.setText("Gewonnen!");
+      case Tied -> statusLabel.setText("Unentschieden!");
       default -> statusLabel.setText("");
     }
   }

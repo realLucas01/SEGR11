@@ -11,7 +11,6 @@ import org.junit.jupiter.api.Test;
 import SEG11.IFE_Entertainment.FourConnect.FourConnectGame;
 import SEG11.IFE_Entertainment.FourConnect.Player;
 import SEG11.IFE_Entertainment.GameCore.GameState;
-import segeleven.ife.entertainment.gamecore.GameState;
 
 /**
  * Testklasse für FourConnectGame.
@@ -40,7 +39,7 @@ class FourConnectGameTest {
         int result = game.initFourConnectGame(Player.HUMAN, Player.HUMAN);
 
         assertEquals(0, result);
-        assertEquals(GameState.RUNNING, game.getStatus());
+        assertEquals(GameState.Running, game.getStatus());
 
         assertNotNull(game.getBoard());
         assertNotNull(game.getPlayers());
@@ -52,9 +51,9 @@ class FourConnectGameTest {
     @Test
     void statusTest() {
 
-        game.setStatus(GameState.WON);
+        game.setStatus(GameState.Won);
 
-        assertEquals(GameState.WON, game.getStatus());
+        assertEquals(GameState.Won, game.getStatus());
     }
 
     /**
@@ -124,7 +123,7 @@ class FourConnectGameTest {
 
         game.endGame();
 
-        assertEquals(GameState.NOT_STARTED, game.getStatus());
+        assertEquals(GameState.NotStarted, game.getStatus());
 
         assertNull(game.getPlayers()[0]);
         assertNull(game.getPlayers()[1]);

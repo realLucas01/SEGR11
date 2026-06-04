@@ -195,12 +195,12 @@ package "segeleven.ife.entertainment.gamecore" {
   }
 
   enum GameState <<enumeration>> {
-    NOT_STARTED
-    RUNNING
-    PAUSED
-    FINISHED
-    WON
-    TIED
+    NotStarted
+    Running
+    Paused
+    Finished
+    Won
+    Tied
   }
 
   interface PlayArea <<interface>> {
