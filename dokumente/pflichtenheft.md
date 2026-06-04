@@ -668,6 +668,8 @@ An die Hardware und Orgware der Zielumgebung bestehen keine besonderen Anforderu
 
 Die Anwendung läuft innerhalb der vom IFE vorgegebenen Java-21-LTS-Runtime.
 
+Für die Entwicklung und Gestaltung der Benutzeroberfläche wird von einem Display im Format 16:9 mit einer Auflösung von mindestens 1920 × 1080 Pixel ausgegangen. Sämtliche Wireframes, Prototypen und UI-Komponenten werden für diese Zielauflösung entworfen und optimiert. Die Anpassung an andere Seitenverhältnisse oder geringere Auflösungen ist nicht Bestandteil des Projekts.
+
 ### 8.2 Tooling- und Versionsübersicht
 
 Die folgenden Werkzeuge werden im Projekt eingesetzt.
