@@ -318,7 +318,7 @@ Die Wireframes skizzieren die grundlegende Anordnung und Funktion der Bedienelem
 |Ablauf| - Ergebnisbildschirm wird angezeigt <br/>  - Fluggast wählt "Gewinnkombination anzeigen" <br/>  - Spielfeld wird erneut geöffnet <br/>  - Die vier gewinnbringenden Spielsteine werden markiert |
 |Benutzerschnittstelle| |
 
-**Abbildung:** Wireframe – Gewinnkombination anzeigen
+**Abbildung:** Wireframe – Gewinnkombination anzeigen  
 ![Gewinnkombination anzeigen](/prototyp/Wireframe-08_gewinnmarkierung.svg)
 
 
