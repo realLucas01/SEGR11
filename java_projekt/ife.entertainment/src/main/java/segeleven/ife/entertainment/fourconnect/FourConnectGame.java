@@ -66,7 +66,7 @@ public class FourConnectGame implements Game<FourConnectGameBoard> {
    * aller wichtigen Variablen.
    */
   private FourConnectGame() {
-    state = GameState.NotStarted;
+    state = GameState.NOT_STARTED;
     players = new FourConnectPlayer[2];
     currentPlayerIndex = 0;
     rules = new FourConnectRules();
@@ -168,7 +168,7 @@ public class FourConnectGame implements Game<FourConnectGameBoard> {
    * <p>Beendet das aktuelle Spiel und setzt alle Variablen wieder auf saubere Werte
    */
   public void endGame() {
-    state = GameState.NotStarted;
+    state = GameState.NOT_STARTED;
     players[0] = null;
     players[1] = null;
     currentPlayerIndex = 0;
@@ -197,11 +197,11 @@ public class FourConnectGame implements Game<FourConnectGameBoard> {
     }
     // Überprüfen, ob unentschieden
     if (rules.checkTie(gameBoard)) {
-      state = GameState.Tied;
+      state = GameState.TIED;
     }
     // Überprüfen, ob gewonnen
     if (rules.checkWin(gameBoard, players[currentPlayerIndex])) {
-      state = GameState.Won;
+      state = GameState.WON;
     }
     return state;
   }
@@ -296,7 +296,7 @@ public class FourConnectGame implements Game<FourConnectGameBoard> {
     }
 
     // Status des Spiels aktualisieren
-    state = GameState.Running;
+    state = GameState.RUNNING;
     return 0;
   }
 }
