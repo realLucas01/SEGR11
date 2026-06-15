@@ -55,9 +55,9 @@ public class FourConnectEndScreenController implements EndScreenController {
   public void initialize() {
     GameState state = FourConnectGame.getInstance().getStatus();
 
-    if (state == GameState.Won) {
+    if (state == GameState.WON) {
       resultLabel.setText(getWinnerText());
-    } else if (state == GameState.Tied) {
+    } else if (state == GameState.TIED) {
       resultLabel.setText(localizationService.getText("game.draw"));
     }
   }
