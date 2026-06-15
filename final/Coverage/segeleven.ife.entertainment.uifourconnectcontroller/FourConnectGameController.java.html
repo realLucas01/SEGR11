@@ -114,7 +114,7 @@ import segeleven.ife.entertainment.uicontroller.GameController;
    * @throws IOException falls die FXML-Datei nicht geladen werden kann
    */
   public void handleColumnInput(Integer column) throws IOException {
-<span class="nc bnc" id="L117" title="All 2 branches missed.">    if (game.getStatus() != GameState.Running) {</span>
+<span class="nc bnc" id="L117" title="All 2 branches missed.">    if (game.getStatus() != GameState.RUNNING) {</span>
 <span class="nc" id="L118">      return;</span>
     }
 <span class="nc bnc" id="L120" title="All 2 branches missed.">    if (game.getBoard().getCellOwner(column, 0).getType() != Player.NONE) {</span>
@@ -123,7 +123,7 @@ import segeleven.ife.entertainment.uicontroller.GameController;
     }
 <span class="nc" id="L124">    GameState result = game.dropDisc(column);</span>
 <span class="nc" id="L125">    updateBoard();</span>
-<span class="nc bnc" id="L126" title="All 4 branches missed.">    if (result == GameState.Won || result == GameState.Tied) {</span>
+<span class="nc bnc" id="L126" title="All 4 branches missed.">    if (result == GameState.WON || result == GameState.TIED) {</span>
 <span class="nc" id="L127">      App.setRoot(&quot;EndScreen&quot;);</span>
 <span class="nc" id="L128">      return;</span>
     }
@@ -136,7 +136,7 @@ import segeleven.ife.entertainment.uicontroller.GameController;
 
 <span class="nc" id="L137">      botDelayTimer = new PauseTransition(Duration.seconds(1.0));</span>
 <span class="nc" id="L138">      botDelayTimer.setOnFinished(event -&gt; {</span>
-<span class="nc bnc" id="L139" title="All 2 branches missed.">        if (game.getStatus() != GameState.Running) {</span>
+<span class="nc bnc" id="L139" title="All 2 branches missed.">        if (game.getStatus() != GameState.RUNNING) {</span>
 <span class="nc" id="L140">          gridPane.setDisable(false);</span>
 <span class="nc" id="L141">          return;</span>
         }
@@ -146,13 +146,13 @@ import segeleven.ife.entertainment.uicontroller.GameController;
 <span class="nc" id="L146">        updateBoard();</span>
 <span class="nc" id="L147">        gridPane.setDisable(false);</span>
 
-<span class="nc bnc" id="L149" title="All 2 branches missed.">        if (botResult == GameState.Won) {</span>
+<span class="nc bnc" id="L149" title="All 2 branches missed.">        if (botResult == GameState.WON) {</span>
           try {
 <span class="nc" id="L151">            App.setRoot(&quot;EndScreen&quot;);</span>
 <span class="nc" id="L152">          } catch (IOException e) {</span>
 <span class="nc" id="L153">            throw new RuntimeException(e);</span>
 <span class="nc" id="L154">          }</span>
-<span class="nc bnc" id="L155" title="All 2 branches missed.">        } else if (botResult == GameState.Tied) {</span>
+<span class="nc bnc" id="L155" title="All 2 branches missed.">        } else if (botResult == GameState.TIED) {</span>
 <span class="nc" id="L156">          statusLabel.setText(&quot;Unentschieden!&quot;);</span>
           try {
 <span class="nc" id="L158">            App.setRoot(&quot;EndScreen&quot;);</span>
@@ -160,7 +160,7 @@ import segeleven.ife.entertainment.uicontroller.GameController;
 <span class="nc" id="L160">            throw new RuntimeException(e);</span>
 <span class="nc" id="L161">          }</span>
 
-<span class="nc bnc" id="L163" title="All 2 branches missed.">        } else if (botResult == GameState.Running) {</span>
+<span class="nc bnc" id="L163" title="All 2 branches missed.">        } else if (botResult == GameState.RUNNING) {</span>
 <span class="nc" id="L164">          game.playerTurn();</span>
 <span class="nc" id="L165">          updateStatus();</span>
         }
@@ -242,12 +242,12 @@ import segeleven.ife.entertainment.uicontroller.GameController;
   private void updateStatus() {
 <span class="nc" id="L243">    GameState state = game.getStatus();</span>
 <span class="nc bnc" id="L244" title="All 4 branches missed.">    switch (state) {</span>
-      case Running -&gt; {
+      case RUNNING -&gt; {
 <span class="nc" id="L246">        int playerIndex = game.getCurrentPlayerIndex();</span>
 <span class="nc" id="L247">        statusLabel.setText(&quot;Spieler &quot; + (playerIndex + 1));</span>
 <span class="nc" id="L248">      }</span>
-<span class="nc" id="L249">      case Won -&gt; statusLabel.setText(&quot;Gewonnen!&quot;);</span>
-<span class="nc" id="L250">      case Tied -&gt; statusLabel.setText(&quot;Unentschieden!&quot;);</span>
+<span class="nc" id="L249">      case WON -&gt; statusLabel.setText(&quot;Gewonnen!&quot;);</span>
+<span class="nc" id="L250">      case TIED -&gt; statusLabel.setText(&quot;Unentschieden!&quot;);</span>
 <span class="nc" id="L251">      default -&gt; statusLabel.setText(&quot;&quot;);</span>
     }
 <span class="nc" id="L253">  }</span>

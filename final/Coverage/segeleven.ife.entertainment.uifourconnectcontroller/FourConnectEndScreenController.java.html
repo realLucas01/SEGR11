@@ -55,9 +55,9 @@ import segeleven.ife.entertainment.uicontroller.EndScreenController;
   public void initialize() {
 <span class="nc" id="L56">    GameState state = FourConnectGame.getInstance().getStatus();</span>
 
-<span class="nc bnc" id="L58" title="All 2 branches missed.">    if (state == GameState.Won) {</span>
+<span class="nc bnc" id="L58" title="All 2 branches missed.">    if (state == GameState.WON) {</span>
 <span class="nc" id="L59">      resultLabel.setText(getWinnerText());</span>
-<span class="nc bnc" id="L60" title="All 2 branches missed.">    } else if (state == GameState.Tied) {</span>
+<span class="nc bnc" id="L60" title="All 2 branches missed.">    } else if (state == GameState.TIED) {</span>
 <span class="nc" id="L61">      resultLabel.setText(localizationService.getText(&quot;game.draw&quot;));</span>
     }
 <span class="nc" id="L63">  }</span>
