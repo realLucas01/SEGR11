@@ -29,7 +29,7 @@ public class FourConnectGameTest {
   public void initGameTest() {
     int result = game.initFourConnectGame(Player.HUMAN, Player.HUMAN);
     assertEquals(0, result);
-    assertEquals(GameState.Running, game.getStatus());
+    assertEquals(GameState.RUNNING, game.getStatus());
     assertNotNull(game.getBoard());
     assertNotNull(game.getPlayers());
   }
@@ -37,8 +37,8 @@ public class FourConnectGameTest {
   /** Testet setStatus() und getStatus(). */
   @Test
   public void statusTest() {
-    game.setStatus(GameState.Won);
-    assertEquals(GameState.Won, game.getStatus());
+    game.setStatus(GameState.WON);
+    assertEquals(GameState.WON, game.getStatus());
   }
 
   /** Testet den Spielerwechsel. */
@@ -75,7 +75,7 @@ public class FourConnectGameTest {
     game.dropDisc(0);
     game.dropDisc(0);
     GameState state = game.dropDisc(0);
-    assertEquals(GameState.Won, state);
+    assertEquals(GameState.WON, state);
   }
 
   /** Testet restart(). */
@@ -84,7 +84,7 @@ public class FourConnectGameTest {
     game.initFourConnectGame(Player.HUMAN, Player.HUMAN);
     game.dropDisc(0);
     game.restart();
-    assertEquals(GameState.Running, game.getStatus());
+    assertEquals(GameState.RUNNING, game.getStatus());
   }
 
   /** Testet endGame(). */
@@ -92,7 +92,7 @@ public class FourConnectGameTest {
   public void endGameTest() {
     game.initFourConnectGame(Player.HUMAN, Player.HUMAN);
     game.endGame();
-    assertEquals(GameState.NotStarted, game.getStatus());
+    assertEquals(GameState.NOT_STARTED, game.getStatus());
     assertNull(game.getPlayers()[0]);
     assertNull(game.getPlayers()[1]);
   }
