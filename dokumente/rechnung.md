@@ -1,4 +1,4 @@
-# Kostenangebot
+# Rechnung
 
 ## Entwicklung einer Entertainment-Erweiterung speziell für IFE
 17.06.2026
