@@ -80,6 +80,6 @@ Gewinnaufschlag: 33,3 %
 | **Gesamtbetrag (Brutto)** | **121.421,04 €** |
 
 
-
+(Steuern, Rechtliches) , (Stunden rausstreichen, Kategorien aus Angebot, Positionsliste)
 Leipzig, den 17.06.2026
 gez. Keller
