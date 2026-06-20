@@ -1,5 +1,6 @@
 # Rechnung
 
+Gervithrall Systems GmbH
 ## Entwicklung einer Entertainment-Erweiterung speziell für IFE
 17.06.2026
 
@@ -39,11 +40,11 @@ Friedrich-List-Platz 1
 
 
 
-| Position                  |           Betrag |
-| ------------------------- | ---------------: |
-| Zwischensumme             |     102.034,49 € |
-| zzgl. 19 % Umsatzsteuer   |      19.386,55 € |
-| **Gesamtbetrag (Brutto)** | **121.421,04 €** |
+
+
+Zwischensumme: 102.034,49 € 
+zzgl. 19 % Umsatzsteuer: 19.386,55 € 
+**Gesamtbetrag (Brutto)**: **121.421,04 €**
 
 
 
