@@ -12,7 +12,7 @@
 
 | Rechnungsdaten                                      | Zahlungsinformationen                                          |
 | --------------------------------------------------- | -------------------------------------------------------------- |
-| Rechnungs-Nr.: **2026-4586**<br>Kunden-Nr.: **293** | Rechnungsdatum: **17.06.2026**<br>Zahlungsziel: **11.07.2026** |
+| Rechnungs-Nr.: **2026-4586**<br>Kunden-Nr.: **293** | Rechnungsdatum: **17.06.2026**<br>Zahlungsziel des Restbetrags: **09.07.2026** |
 
 ---
 
